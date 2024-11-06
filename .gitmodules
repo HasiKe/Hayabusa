@@ -1,0 +1,3 @@
+[submodule "speeduino"]
+	path = speeduino
+	url = https://github.com/speeduino/speeduino.git
