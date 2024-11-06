@@ -1,0 +1,12 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "teensy")(type "Legacy")(uri "/home/kevin/Downloads/teensy_library/teensy.lib")(options "")(descr ""))
+  (lib (name "teensy4.0")(type "EAGLE")(uri "${KIPRJMOD}/lib/teensy4.0.lbr")(options "")(descr ""))
+  (lib (name "teensy4.1")(type "EAGLE")(uri "${KIPRJMOD}/lib/teensy4.1.lbr")(options "")(descr ""))
+  (lib (name "cache")(type "Legacy")(uri "${KIPRJMOD}/lib/cache.lib")(options "")(descr ""))
+  (lib (name "rescue")(type "Legacy")(uri "${KIPRJMOD}/lib/rescue.lib")(options "")(descr ""))
+  (lib (name "Connector_Automotive")(type "Legacy")(uri "${KIPRJMOD}/lib/Connector_Automotive/Connector_Automotive.lib")(options "")(descr ""))
+  (lib (name "IC_Automotive")(type "Legacy")(uri "${KIPRJMOD}/lib/IC_Automotive/IC_Automotive.lib")(options "")(descr ""))
+  (lib (name "Misc")(type "Legacy")(uri "${KIPRJMOD}/lib/Misc/Misc.lib")(options "")(descr ""))
+  (lib (name "Shields")(type "Legacy")(uri "${KIPRJMOD}/lib/Shields/Shields.lib")(options "")(descr ""))
+)
