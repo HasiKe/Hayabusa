@@ -84,8 +84,8 @@
 					)
 				)
 				(rectangle
-					(start -1.524 1.016)
-					(end 1.524 0.508)
+					(start -1.5748 1.1938)
+					(end 1.4732 0.6858)
 					(stroke
 						(width 0)
 						(type default)
@@ -120,7 +120,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.762 3.048) (xy 1.778 3.048)
+						(xy 0.508 3.429) (xy 1.524 3.429)
 					)
 					(stroke
 						(width 0.254)
@@ -132,7 +132,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 3.556) (xy 1.27 2.54)
+						(xy 1.016 3.937) (xy 1.016 2.921)
 					)
 					(stroke
 						(width 0.254)
@@ -2271,10 +2271,10 @@
 		)
 	)
 	(junction
-		(at 62.23 26.67)
+		(at 54.61 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "86bf392d-d352-4df8-9c66-ca8755c0140e")
+		(uuid "65130256-df7f-47f5-8bf4-34faac647574")
 	)
 	(wire
 		(pts
@@ -2335,6 +2335,16 @@
 			(type default)
 		)
 		(uuid "2800c2ea-81dd-45d6-9c0d-9bc7fe5641f4")
+	)
+	(wire
+		(pts
+			(xy 43.18 54.61) (xy 44.45 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d93e963-6b4d-410c-8d04-4bcf05350826")
 	)
 	(wire
 		(pts
@@ -2528,6 +2538,16 @@
 	)
 	(wire
 		(pts
+			(xy 54.61 62.23) (xy 54.61 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e3bd50e-d489-411a-b266-6025faf85b07")
+	)
+	(wire
+		(pts
 			(xy 195.58 43.18) (xy 199.39 43.18)
 		)
 		(stroke
@@ -2535,6 +2555,16 @@
 			(type default)
 		)
 		(uuid "7ede6958-5c40-47bb-be47-ba57367b8643")
+	)
+	(wire
+		(pts
+			(xy 52.07 54.61) (xy 54.61 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "808f1cb3-0057-4f9c-9555-307149885161")
 	)
 	(wire
 		(pts
@@ -2618,16 +2648,6 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 26.67) (xy 62.23 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "95addbff-b865-417e-bcf5-9e476d517941")
-	)
-	(wire
-		(pts
 			(xy 223.52 58.42) (xy 220.98 58.42)
 		)
 		(stroke
@@ -2658,13 +2678,13 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 22.86) (xy 62.23 26.67)
+			(xy 34.29 54.61) (xy 35.56 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "aaf3f476-a9c0-4250-a936-0dd3116dfc69")
+		(uuid "a8c28ec1-0a70-4ecb-9a80-915e63c498fa")
 	)
 	(wire
 		(pts
@@ -2758,6 +2778,16 @@
 	)
 	(wire
 		(pts
+			(xy 54.61 52.07) (xy 54.61 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d42615a8-65fd-4bf7-863b-9b9a40ed27ba")
+	)
+	(wire
+		(pts
 			(xy 195.58 71.12) (xy 199.39 71.12)
 		)
 		(stroke
@@ -2768,16 +2798,6 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 26.67) (xy 35.56 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "deb98325-dc86-4261-9b29-02ce594917b1")
-	)
-	(wire
-		(pts
 			(xy 135.89 120.65) (xy 139.7 120.65)
 		)
 		(stroke
@@ -2785,26 +2805,6 @@
 			(type default)
 		)
 		(uuid "df7232c9-1c46-466e-a294-7d626746c470")
-	)
-	(wire
-		(pts
-			(xy 62.23 34.29) (xy 62.23 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e030d4fc-f7ea-4004-b395-67497468c542")
-	)
-	(wire
-		(pts
-			(xy 43.18 26.67) (xy 49.53 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e387c7c5-1a8d-4221-96d0-f0b580a37002")
 	)
 	(wire
 		(pts
@@ -3244,6 +3244,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VBat"
+		(shape input)
+		(at 54.61 52.07 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "72fc01a4-556b-4947-a766-07735b49a55f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 54.61 44.8515 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -3798,28 +3820,6 @@
 			)
 		)
 	)
-	(global_label "VBat"
-		(shape input)
-		(at 62.23 22.86 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d27e4419-efa4-46d3-a37d-36f37064166e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 62.23 16.3751 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "MCU-A16"
 		(shape input)
 		(at 199.39 91.44 0)
@@ -4129,74 +4129,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Schottky")
-		(at 39.37 26.67 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "13b003bb-16af-4d27-85c7-710c091f5b48")
-		(property "Reference" "D38"
-			(at 39.6875 20.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D_Schottky"
-			(at 39.6875 22.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 39.37 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 39.37 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Schottky diode"
-			(at 39.37 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1c8f97c3-42e6-4c70-9457-b725d8fd8ef7")
-		)
-		(pin "2"
-			(uuid "be3db18b-52a0-4dd9-a0e3-d8db26ccc092")
-		)
-		(instances
-			(project ""
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035"
-					(reference "D38")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VDD")
 		(at 199.39 43.18 270)
 		(unit 1)
@@ -4461,26 +4393,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 29.21 26.67 90)
+		(lib_id "Device:Battery_Cell")
+		(at 54.61 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "57b74919-0d28-4080-a8df-adad5800801a")
-		(property "Reference" "#PWR02"
-			(at 33.02 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 25.4 26.6699 90)
+		(uuid "5691e5a4-d3f5-413a-8127-b8128c248ce0")
+		(property "Reference" "BT1"
+			(at 57.6072 57.2516 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4488,8 +4410,17 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 29.21 26.67 0)
+		(property "Value" "Battery_Cell"
+			(at 57.6072 59.563 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "2999:BAT_2999"
+			(at 54.61 58.166 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4497,8 +4428,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 29.21 26.67 0)
+		(property "Datasheet" "~"
+			(at 54.61 58.166 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4506,8 +4437,44 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 29.21 26.67 0)
+		(property "Description" ""
+			(at 54.61 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "36-2999-ND"
+			(at 54.61 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Keystone"
+			(at 54.61 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "2999"
+			(at 54.61 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.digikey.com.au/product-detail/en/keystone-electronics/2999/36-2999-ND/2137863"
+			(at 54.61 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4516,12 +4483,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "9d714ea3-7222-4984-938e-1d2b6c45e08c")
+			(uuid "5f06d410-0a3e-48d6-a9ae-e99ae09bdb4b")
+		)
+		(pin "2"
+			(uuid "08b622f8-4e1d-49a3-b537-79b57f65d174")
 		)
 		(instances
-			(project ""
+			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035"
-					(reference "#PWR02")
+					(reference "BT1")
 					(unit 1)
 				)
 			)
@@ -4594,6 +4564,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 39.37 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5e0db100-acf1-487e-88e7-f54903e75e71")
+		(property "Reference" "D37"
+			(at 39.0525 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_Schottky"
+			(at 39.0525 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_PowerDI-123"
+			(at 39.37 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 39.37 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 39.37 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "20d75196-fd37-4ada-8030-38eb0a04330d")
+		)
+		(pin "1"
+			(uuid "f63a9561-35e8-4094-aa9d-2f428f2979dc")
+		)
+		(instances
+			(project ""
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035"
+					(reference "D37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 135.89 123.19 270)
 		(unit 1)
@@ -4660,17 +4698,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 62.23 36.83 0)
+		(lib_id "power:+3V3")
+		(at 34.29 54.61 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "81a0a90b-9c9b-4b80-a713-f25f8f0d81e0")
-		(property "Reference" "#PWR01"
-			(at 62.23 43.18 0)
+		(uuid "92219bbf-4e91-431b-a312-0fa938f418ad")
+		(property "Reference" "#PWR0131"
+			(at 38.1 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4678,16 +4715,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 62.23 41.91 0)
+		(property "Value" "+3V3"
+			(at 31.0388 54.229 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 62.23 36.83 0)
+			(at 34.29 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4696,7 +4734,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 36.83 0)
+			(at 34.29 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4704,75 +4742,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 62.23 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "246dfdd5-f9be-4fa8-a264-f9289013c652")
-		)
-		(instances
-			(project ""
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035"
-					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Battery_Cell")
-		(at 62.23 31.75 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "85cf3c23-07cd-4292-8d5f-52dbd5c60fa1")
-		(property "Reference" "BT1"
-			(at 66.04 28.6384 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Battery_Cell"
-			(at 66.04 31.1784 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 62.23 30.226 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 62.23 30.226 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Single-cell battery"
-			(at 62.23 31.75 0)
+		(property "Description" ""
+			(at 34.29 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4781,15 +4752,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "db6f7977-c6ed-41f8-a61c-cb09c4e82594")
-		)
-		(pin "2"
-			(uuid "ecbcd0a3-a71b-42a0-b81c-dd7cde839b4d")
+			(uuid "81f840bd-6353-4994-9031-f76c3366bf42")
 		)
 		(instances
-			(project ""
+			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035"
-					(reference "BT1")
+					(reference "#PWR0131")
 					(unit 1)
 				)
 			)
@@ -4862,6 +4830,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 54.61 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a4fed329-de80-40d9-8304-07cb1ef1798a")
+		(property "Reference" "#PWR02"
+			(at 54.61 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 54.737 66.7512 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 54.61 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 54.61 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "70792a22-3f24-494b-bd60-5ddda4407660")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 199.39 48.26 270)
 		(unit 1)
@@ -4928,6 +4962,110 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 48.26 54.61 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bd1fc049-ebe6-4381-8e84-95008e09cd8a")
+		(property "Reference" "R69"
+			(at 48.26 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 48.26 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 48.26 56.388 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 48.26 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "311-1.00KCRCT-ND"
+			(at 48.26 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Yageo"
+			(at 48.26 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RC0805FR-071KL"
+			(at 48.26 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.digikey.com/product-detail/en/yageo/RC0805FR-071KL/311-1.00KCRCT-ND/730391"
+			(at 48.26 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fe8e5f4d-da38-463c-8599-a5bf720784b2")
+		)
+		(pin "2"
+			(uuid "b50d6d1c-41ba-4b99-8f48-cfc18277594e")
+		)
+		(instances
+			(project ""
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035"
+					(reference "R69")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "teensy:Teensy4.1")
 		(at 167.64 97.79 0)
 		(unit 1)
@@ -4953,7 +5091,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "kicad:Teensy41"
 			(at 157.48 87.63 0)
 			(effects
 				(font
@@ -5185,74 +5323,6 @@
 			(project ""
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035"
 					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 53.34 26.67 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f06b0e28-96e9-4e40-ab34-64d8fba42cfd")
-		(property "Reference" "R69"
-			(at 53.34 20.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 53.34 22.86 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 28.448 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 53.34 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 53.34 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0eaa775a-bc1e-4a7d-a531-b00fb5d89180")
-		)
-		(pin "2"
-			(uuid "a5f5350e-963d-403c-86f1-557027ac953a")
-		)
-		(instances
-			(project ""
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035"
-					(reference "R69")
 					(unit 1)
 				)
 			)

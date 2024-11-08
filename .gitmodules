@@ -1,3 +1,6 @@
 [submodule "speeduino"]
 	path = speeduino
 	url = https://github.com/speeduino/speeduino.git
+[submodule "Hardware/ECU/lib/teensy.pretty"]
+	path = Hardware/ECU/lib/teensy.pretty
+	url = https://github.com/blackketter/teensy.pretty.git

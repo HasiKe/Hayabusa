@@ -2990,7 +2990,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 97.028 144.78 90)
 			(effects
 				(font
@@ -3762,7 +3762,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6ed4620b-cfb9-4744-9441-43babd3f10b3")
-		(property "Reference" "U1"
+		(property "Reference" "U17"
 			(at 62.23 51.2826 0)
 			(effects
 				(font
@@ -3868,7 +3868,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/7d18358f-5866-4651-8656-b451f5c8ca1d"
-					(reference "U1")
+					(reference "U17")
 					(unit 1)
 				)
 			)
@@ -4605,7 +4605,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 66.548 156.21 90)
 			(effects
 				(font

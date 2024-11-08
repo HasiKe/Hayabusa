@@ -44,6 +44,45 @@
 		(58 "User.9" user)
 	)
 	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 1.51)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(pcbplotparams
@@ -85,15 +124,23 @@
 		)
 	)
 	(net 0 "")
-	(gr_rect
-		(start 139 52.5)
-		(end 274 142.5)
+	(gr_text_box "B 135\nL 90\nH 40"
+		(start 266.5 20.5)
+		(end 277.5 28.5)
+		(layer "F.Cu")
+		(uuid "79c10b0b-9903-4981-9811-58c697434dec")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(border yes)
 		(stroke
 			(width 0.2)
-			(type default)
+			(type solid)
 		)
-		(fill none)
-		(layer "F.Cu")
-		(uuid "9281b335-05b4-4c76-be12-a422af6ccdb9")
 	)
 )

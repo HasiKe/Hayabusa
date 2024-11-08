@@ -3270,7 +3270,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 194.818 110.49 90)
 			(effects
 				(font
@@ -3373,7 +3373,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 186.69 116.332 90)
 			(effects
 				(font
@@ -3478,7 +3478,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 50.038 57.15 90)
 			(effects
 				(font
@@ -3753,7 +3753,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 194.818 130.81 90)
 			(effects
 				(font
@@ -3961,7 +3961,7 @@
 				)
 			)
 		)
-		(property "Footprint" "IC_Automotive:Diodes_SM8"
+		(property "Footprint" "ZXMS6006DT8TA:SOT153P700X170-8N"
 			(at 236.22 41.91 0)
 			(effects
 				(font
@@ -4305,7 +4305,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 41.91 42.672 90)
 			(effects
 				(font
@@ -4475,7 +4475,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 196.088 36.83 90)
 			(effects
 				(font
@@ -4643,7 +4643,7 @@
 				)
 			)
 		)
-		(property "Footprint" "IC_Automotive:Diodes_SM8"
+		(property "Footprint" "ZXMS6006DT8TA:SOT153P700X170-8N"
 			(at 234.95 115.57 0)
 			(effects
 				(font
@@ -4909,7 +4909,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 41.91 47.752 90)
 			(effects
 				(font
@@ -5079,7 +5079,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 187.96 42.672 90)
 			(effects
 				(font
@@ -5421,7 +5421,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 50.038 36.83 90)
 			(effects
 				(font
@@ -5524,7 +5524,7 @@
 				)
 			)
 		)
-		(property "Footprint" "IC_Automotive:Diodes_SM8"
+		(property "Footprint" "ZXMS6006DT8TA:SOT153P700X170-8N"
 			(at 90.17 41.91 0)
 			(effects
 				(font
@@ -5971,7 +5971,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 186.69 121.412 90)
 			(effects
 				(font
@@ -6689,7 +6689,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 196.088 57.15 90)
 			(effects
 				(font
@@ -6857,7 +6857,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 187.96 47.752 90)
 			(effects
 				(font
