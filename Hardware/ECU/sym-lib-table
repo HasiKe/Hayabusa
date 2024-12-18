@@ -9,4 +9,6 @@
   (lib (name "IC_Automotive")(type "Legacy")(uri "${KIPRJMOD}/lib/IC_Automotive/IC_Automotive.lib")(options "")(descr ""))
   (lib (name "Misc")(type "Legacy")(uri "${KIPRJMOD}/lib/Misc/Misc.lib")(options "")(descr ""))
   (lib (name "Shields")(type "Legacy")(uri "${KIPRJMOD}/lib/Shields/Shields.lib")(options "")(descr ""))
+  (lib (name "New_Library")(type "KiCad")(uri "${KIPRJMOD}/lib/connector/New_Library.kicad_sym")(options "")(descr ""))
+  (lib (name "connector")(type "KiCad")(uri "${KIPRJMOD}/lib/connector/connector.kicad_sym")(options "")(descr ""))
 )
