@@ -1,0 +1,324 @@
+Starting on MOB-0014
+TunerStudio 3.2.05 started on Fri Nov 08 14:37:11 CET 2024
+JRE 21.0.4, Linux 5.15.153.1-microsoft-standard-WSL2, amd64
+java.library.path=lib/alternateLinuxDrivers/x86_64-linux:lib
+TunerStudioMS.jar
+java.lang.reflect.InaccessibleObjectException: Unable to make field private static java.nio.charset.Charset java.nio.charset.Charset.defaultCharset accessible: module java.base does not "opens java.nio.charset" to unnamed module @5b8bc155
+	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:391)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:367)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:315)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+	at TunerStudio.main(Unknown Source)
+Look:Metal, ClassName:'javax.swing.plaf.metal.MetalLookAndFeel'
+Look:Nimbus, ClassName:'javax.swing.plaf.nimbus.NimbusLookAndFeel'
+Look:CDE/Motif, ClassName:'com.sun.java.swing.plaf.motif.MotifLookAndFeel'
+Look:GTK+, ClassName:'com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+Look:Night Shade, ClassName:'de.muntjak.tinylookandfeel.TinyLookAndFeel'
+Setting Look & Feel to:javax.swing.plaf.metal.MetalLookAndFeel
+ScrollBar.width
+11/8/24, 2:37:11 PM :Debug: no update:defaultFont
+11/8/24, 2:37:12 PM :Info: Initializing File Dialogs.
+11/8/24, 2:37:12 PM :Info: Loading Language Content.
+11/8/24, 2:37:14 PM :Debug: Command Non-VolatileBytes for F resolved to: x46                                                                   F
+11/8/24, 2:37:14 PM :Debug: Command Non-VolatileBytes for I resolved to: x49                                                                   I
+11/8/24, 2:37:14 PM :Debug: Command Non-VolatileBytes for f resolved to: x66                                                                   f
+11/8/24, 2:37:14 PM :Info: Initializing Help.
+11/8/24, 2:37:14 PM :Info: Initializing Edition Features.
+11/8/24, 2:37:14 PM :Info: Initializing App Events.
+11/8/24, 2:37:14 PM :Debug: App Name:TunerStudio, appEdition:MS Lite!
+11/8/24, 2:37:14 PM :Debug: Dummy Function Factory Created.
+11/8/24, 2:37:14 PM :Info: Initializing User Interface
+11/8/24, 2:37:16 PM :Info: Loading Font list.
+11/8/24, 2:37:16 PM :Debug: Time to retreive font name list: 121 ms.
+11/8/24, 2:37:16 PM :Info: 
+11/8/24, 2:37:16 PM :Info: Initializing UI Components.
+11/8/24, 2:37:16 PM :Info: Ready
+11/8/24, 2:37:17 PM :Info: IncUpdate: No updates available.
+11/8/24, 2:37:17 PM :Info: IniUpdate: No updates available.
+MSmain: No check, last update check=Fri Nov 08 14:17:24 CET 2024
+11/8/24, 2:37:19 PM :Info: Opening Project ...
+11/8/24, 2:37:19 PM :Debug: Opening project: /home/kevin/Hayabusa/tune/Hayabusa-R1
+11/8/24, 2:37:19 PM :Debug: Reading translation file as plain text
+11/8/24, 2:37:19 PM :Info: Supported iniSpecVersion=3.77
+11/8/24, 2:37:19 PM :Debug: Filtered ConfigurationOptionGroup in 14ms.
+11/8/24, 2:37:19 PM :Info: Supported iniSpecVersion=3.77
+11/8/24, 2:37:19 PM :Info: Read file canPcVariables.ini: 0.579304ms
+11/8/24, 2:37:19 PM :Info: Filtered ini: 0.055201ms
+11/8/24, 2:37:19 PM :Info: No iniVersion defined
+11/8/24, 2:37:19 PM :Info: Loading Trigger Wheels
+11/8/24, 2:37:19 PM :Info: Loaded All known ini sections
+11/8/24, 2:37:19 PM :Info: Parsed and validated ini "canPcVariables.ini" in : 14ms.
+11/8/24, 2:37:19 PM :Info: Read file mainController.ini: 7.416256ms
+11/8/24, 2:37:19 PM :Info: Filtered ini: 4.939737ms
+11/8/24, 2:37:19 PM :Info: No iniVersion defined
+11/8/24, 2:37:19 PM :Debug: ini signature: speeduino 202402
+11/8/24, 2:37:20 PM :Info: Loading Trigger Wheels
+11/8/24, 2:37:20 PM :Info: Loading Depricated ini section [UserDefined], use [UiDialogs]
+11/8/24, 2:37:20 PM :Info: Loaded All known ini sections
+11/8/24, 2:37:20 PM :Info: Parsed and validated ini "mainController.ini" in : 494ms.
+11/8/24, 2:37:20 PM :Info: Not Loading default Tools because they were already loaded from the project ini(s)
+11/8/24, 2:37:20 PM :Info: Time to load primary config: 592.7043ms. used cached config: false
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+11/8/24, 2:37:20 PM :Debug: set baud to 9600
+11/8/24, 2:37:20 PM :Info: Setting connection to: RS232: Port:COM11, Baud:9600
+11/8/24, 2:37:20 PM :Debug: Adding Configuration: Hayabusa-R1
+11/8/24, 2:37:20 PM :Debug: Activating Event Trigger: TriggeredPage0 Refresh:  vssRefresh > 0 
+11/8/24, 2:37:20 PM :Debug: Fill Constants: 13
+11/8/24, 2:37:20 PM :Info: Tune opened, 3282 bytes updated. File:/home/kevin/Hayabusa/tune/Hayabusa-R1/CurrentTune.msq
+[Duplicate entry] received 2 times: Info: Tune opened, 3282 bytes updated. File:/home/kevin/Hayabusa/tune/Hayabusa-R1/CurrentTune.msq
+11/8/24, 2:37:20 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:37:20 PM :Debug: Flush lasted: 71ms.
+11/8/24, 2:37:20 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:37:20 PM :Debug: Flush lasted: 71ms.
+11/8/24, 2:37:20 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:37:20 PM :Info: !!! Loaded config in 923
+11/8/24, 2:37:20 PM :Info: !!! Activated Project 1137
+11/8/24, 2:37:20 PM :Info: Opening Gauge Cluster..
+11/8/24, 2:37:21 PM :Debug: High Speed Paint: true
+11/8/24, 2:37:21 PM :Info: 
+11/8/24, 2:37:21 PM :Info: Com Thread created: COMM Thread29786.73373575782
+11/8/24, 2:37:21 PM :Info: endModalBlock called, but Root Pane is not a ProgressPane.
+11/8/24, 2:37:21 PM :Info: Comm Manager for Hayabusa-R1 Started, thread ID: COMM Thread29786.73373575782
+11/8/24, 2:37:21 PM :Debug: !!! Opened Dash 1820
+11/8/24, 2:37:21 PM :Info: Connecting to controller on: RS232: Port:COM11, Baud:9600
+11/8/24, 2:37:21 PM :Info: Hayabusa-R1 Ready
+11/8/24, 2:37:21 PM :Debug: Port not valid: Unable to open port: COM11
+Please check your Communications Settings. 
+11/8/24, 2:37:21 PM :Debug: Tuning View Files loaded in 0.121001ms.
+11/8/24, 2:37:21 PM :Info: No Persistor set, not activating persisted triggers.
+MSad: No check, last update check=Fri Nov 08 14:17:31 CET 2024
+11/8/24, 2:38:00 PM :Info: Initiating read page 1 : 91:34
+11/8/24, 2:38:00 PM :Info: Initiating read page 4 : 108:12
+11/8/24, 2:38:00 PM :Info: Initiating read page 6 : 64:40
+11/8/24, 2:38:00 PM :Info: Initiating read page 9 : 155:1
+11/8/24, 2:38:03 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:38:03 PM :Debug: Flush lasted: 71ms.
+11/8/24, 2:38:03 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:38:06 PM :Info: Initiating read page 1 : 83:8
+11/8/24, 2:38:14 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:38:14 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:38:14 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:38:37 PM :Info: Initiating read page 1 : 3:117
+11/8/24, 2:38:37 PM :Info: Initiating read page 6 : 14:1
+11/8/24, 2:38:57 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:38:57 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:38:57 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:39:01 PM :Debug: High Speed Paint: true
+11/8/24, 2:39:03 PM :Info: Time to load non-cached dashboard: 118.131485 ms. file:lambdaTable1Map.dash
+11/8/24, 2:39:03 PM :Debug: Time to save dashboard: 119.1888ms. file: /home/kevin/Hayabusa/tune/Hayabusa-R1//dashboard/lambdaTable1Map.dash
+11/8/24, 2:39:03 PM :Debug: Closing Dashboard lambdaTable1Map_Cluster
+11/8/24, 2:39:04 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:39:04 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:39:04 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:39:05 PM :Debug: High Speed Paint: true
+11/8/24, 2:39:07 PM :Info: Time to load non-cached dashboard: 18.441893 ms. file:stagingMap.dash
+11/8/24, 2:39:07 PM :Debug: Time to save dashboard: 19.313597ms. file: /home/kevin/Hayabusa/tune/Hayabusa-R1//dashboard/stagingMap.dash
+11/8/24, 2:39:07 PM :Debug: Closing Dashboard stagingMap_Cluster
+11/8/24, 2:39:07 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:39:07 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:39:07 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:39:10 PM :Info: Initiating read page 1 : 70:1
+11/8/24, 2:39:10 PM :Info: Initiating read page 6 : 120:4
+11/8/24, 2:39:10 PM :Info: Initiating read page 9 : 153:1
+11/8/24, 2:39:59 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:39:59 PM :Debug: Flush lasted: 71ms.
+11/8/24, 2:39:59 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:40:02 PM :Info: Initiating read page 6 : 48:16
+11/8/24, 2:40:02 PM :Info: Initiating read page 10 : 32:1
+11/8/24, 2:40:54 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:40:54 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:40:54 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:41:02 PM :Info: Initiating read page 10 : 135:6
+11/8/24, 2:41:07 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:41:07 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:41:07 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:41:09 PM :Info: Initiating read page 15 : 83:15
+11/8/24, 2:41:11 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:41:11 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:41:11 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:41:14 PM :Info: Initiating read page 1 : 102:25
+11/8/24, 2:41:59 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:41:59 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:41:59 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:42:01 PM :Info: Initiating read page 1 : 43:21
+11/8/24, 2:42:01 PM :Info: Initiating read page 4 : 12:1
+11/8/24, 2:42:01 PM :Info: Initiating read page 6 : 0:60
+11/8/24, 2:42:01 PM :Info: Initiating read page 9 : 153:9
+11/8/24, 2:42:01 PM :Info: Initiating read page 10 : 25:3
+11/8/24, 2:42:01 PM :Info: Initiating read page 15 : 80:3
+11/8/24, 2:42:14 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:42:14 PM :Debug: Flush lasted: 71ms.
+11/8/24, 2:42:14 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:42:19 PM :Info: Initiating read page 1 : 3:117
+11/8/24, 2:42:19 PM :Info: Initiating read page 6 : 14:1
+11/8/24, 2:42:25 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:42:25 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:42:25 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:42:35 PM :Info: Initiating read page 9 : 0:121
+11/8/24, 2:43:10 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:43:10 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:43:10 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:43:14 PM :Info: Initiating read page 1 : 126:1
+11/8/24, 2:43:25 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:43:25 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:43:25 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:43:29 PM :Info: Initiating read page 9 : 1:153
+11/8/24, 2:43:55 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:43:55 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:43:55 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:43:57 PM :Info: Initiating read page 9 : 1:153
+11/8/24, 2:44:02 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:44:03 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:44:03 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:44:08 PM :Info: Initiating read page 1 : 0:83
+11/8/24, 2:44:12 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:44:12 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:44:12 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:44:14 PM :Info: Initiating read page 4 : 71:12
+11/8/24, 2:44:17 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:44:18 PM :Debug: Flush lasted: 71ms.
+11/8/24, 2:44:18 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:44:22 PM :Info: Initiating read page 3 : 0:288
+11/8/24, 2:44:25 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:44:25 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:44:25 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:44:27 PM :Info: Initiating read page 1 : 70:1
+11/8/24, 2:44:27 PM :Info: Initiating read page 4 : 7:35
+11/8/24, 2:44:33 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:44:33 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:44:33 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:44:36 PM :Info: Initiating read page 1 : 126:1
+11/8/24, 2:44:36 PM :Info: Initiating read page 6 : 0:13
+11/8/24, 2:44:36 PM :Info: Initiating read page 9 : 112:2
+11/8/24, 2:45:16 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:45:16 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:45:16 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:45:26 PM :Info: Initiating read page 10 : 135:56
+11/8/24, 2:45:32 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:45:32 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:45:32 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:45:34 PM :Debug: High Speed Paint: true
+[Duplicate entry] received 2 times: Debug: High Speed Paint: true
+11/8/24, 2:45:34 PM :Debug: Deactivated fast paint null
+11/8/24, 2:45:49 PM :Info: Initiating read page 6 : 60:1
+11/8/24, 2:45:49 PM :Info: Initiating read page 8 : 0:192
+11/8/24, 2:46:15 PM :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+11/8/24, 2:46:15 PM :Debug: Flush lasted: 70ms.
+11/8/24, 2:46:15 PM :Debug: Skip Burn, last write page: -2
+11/8/24, 2:46:42 PM :Debug: goOffline Starting, Time:0
+11/8/24, 2:46:42 PM :Info: Deactivated Turbo Baud, goOffline
+11/8/24, 2:46:42 PM :Debug: goOffline about to stopProcessing, Time:0
+11/8/24, 2:46:42 PM :Debug: goOffline Starting, Time:0
+11/8/24, 2:46:42 PM :Info: Deactivated Turbo Baud, goOffline
+11/8/24, 2:46:42 PM :Debug: goOffline about to stopProcessing, Time:0
+11/8/24, 2:46:42 PM :Debug: goOffline closed port, Time:0
+11/8/24, 2:46:42 PM :Debug: goOffline closed port, Time:1
+11/8/24, 2:46:42 PM :Debug: set baud to 9600
+[Duplicate entry] received 2 times: Debug: set baud to 9600
+11/8/24, 2:46:42 PM :Info: Hayabusa-R1 ComThread stopped COMM Thread29786.73373575782
+11/8/24, 2:46:43 PM :Debug: goOffline comm thread stopped, Time:251
+11/8/24, 2:46:43 PM :Debug: No Remaining Queue Write instructions
+11/8/24, 2:46:43 PM :Debug: goOffline comm thread stopped, Time:501
+11/8/24, 2:46:43 PM :Debug: No Remaining Queue Write instructions
+11/8/24, 2:46:48 PM :Debug: High Speed Paint: true
+11/8/24, 2:46:58 PM :Info: file:CurrentTune.msq is not Monitored, cannot pause Monitoring of it.
+11/8/24, 2:46:58 PM :Info: Time to save msq: 25.401169
+11/8/24, 2:46:58 PM :Info: file:CurrentTune.msq is not Monitored, cannot unpause Monitoring of it.
+11/8/24, 2:46:58 PM :Info: closeApp Called
+11/8/24, 2:46:58 PM :Debug: TuneLog Editor set text
+11/8/24, 2:46:58 PM :Info: file:CurrentTune.msq is not Monitored, cannot pause Monitoring of it.
+11/8/24, 2:46:58 PM :Info: Time to save msq: 13.229036
+11/8/24, 2:46:58 PM :Info: file:CurrentTune.msq is not Monitored, cannot unpause Monitoring of it.
+11/8/24, 2:46:58 PM :Debug: goOffline Starting, Time:0
+11/8/24, 2:46:58 PM :Info: Deactivated Turbo Baud, goOffline
+11/8/24, 2:46:58 PM :Debug: goOffline about to stopProcessing, Time:1
+11/8/24, 2:46:58 PM :Debug: goOffline closed port, Time:1
+11/8/24, 2:46:59 PM :Debug: goOffline comm thread stopped, Time:501
+11/8/24, 2:46:59 PM :Debug: No Remaining Queue Write instructions
+11/8/24, 2:46:59 PM :Debug: removing Configuration: Hayabusa-R1
+11/8/24, 2:46:59 PM :Info: No Persistor set, not saving active triggers.
+11/8/24, 2:46:59 PM :Debug: ############################################# Save Project Backup ##########################################
+11/8/24, 2:46:59 PM :Info: Finalizing Sensors
+Saved user properties successfully
+Starting on MOB-0014
+TunerStudio 3.2.05 started on Fri Nov 08 15:59:11 CET 2024
+JRE 21.0.4, Linux 5.15.153.1-microsoft-standard-WSL2, amd64
+java.library.path=lib/alternateLinuxDrivers/x86_64-linux:lib
+TunerStudioMS.jar
+java.lang.reflect.InaccessibleObjectException: Unable to make field private static java.nio.charset.Charset java.nio.charset.Charset.defaultCharset accessible: module java.base does not "opens java.nio.charset" to unnamed module @5b8bc155
+	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(AccessibleObject.java:391)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:367)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:315)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:183)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:177)
+	at TunerStudio.main(Unknown Source)
+Look:Metal, ClassName:'javax.swing.plaf.metal.MetalLookAndFeel'
+Look:Nimbus, ClassName:'javax.swing.plaf.nimbus.NimbusLookAndFeel'
+Look:CDE/Motif, ClassName:'com.sun.java.swing.plaf.motif.MotifLookAndFeel'
+Look:GTK+, ClassName:'com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+Look:Night Shade, ClassName:'de.muntjak.tinylookandfeel.TinyLookAndFeel'
+Setting Look & Feel to:javax.swing.plaf.metal.MetalLookAndFeel
+ScrollBar.width
+11/8/24, 3:59:11 PM :Debug: no update:defaultFont
+11/8/24, 3:59:12 PM :Info: Initializing File Dialogs.
+11/8/24, 3:59:12 PM :Info: Loading Language Content.
+11/8/24, 3:59:14 PM :Debug: Command Non-VolatileBytes for F resolved to: x46                                                                   F
+11/8/24, 3:59:14 PM :Debug: Command Non-VolatileBytes for I resolved to: x49                                                                   I
+11/8/24, 3:59:14 PM :Debug: Command Non-VolatileBytes for f resolved to: x66                                                                   f
+11/8/24, 3:59:14 PM :Info: Initializing Help.
+11/8/24, 3:59:14 PM :Info: Initializing Edition Features.
+11/8/24, 3:59:14 PM :Info: Initializing App Events.
+11/8/24, 3:59:14 PM :Debug: App Name:TunerStudio, appEdition:MS Lite!
+11/8/24, 3:59:14 PM :Debug: Dummy Function Factory Created.
+11/8/24, 3:59:14 PM :Info: Initializing User Interface
+11/8/24, 3:59:16 PM :Info: Loading Font list.
+11/8/24, 3:59:16 PM :Debug: Time to retreive font name list: 216 ms.
+11/8/24, 3:59:16 PM :Info: 
+11/8/24, 3:59:16 PM :Info: Initializing UI Components.
+11/8/24, 3:59:16 PM :Info: Ready
+11/8/24, 3:59:17 PM :Info: IniUpdate: No updates available.
+11/8/24, 3:59:17 PM :Info: IncUpdate: No updates available.
+MSmain: No check, last update check=Fri Nov 08 14:17:24 CET 2024
+MSad: No check, last update check=Fri Nov 08 14:17:31 CET 2024
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+11/8/24, 3:59:28 PM :Debug: set baud to 115200
+[Duplicate entry] received 2 times: Debug: set baud to 115200
+11/8/24, 3:59:30 PM :Debug: Cancel Wizard
+11/8/24, 3:59:32 PM :Info: Checking for updates
+Saved user properties successfully
+11/8/24, 3:59:34 PM :Info: No updates available.
+Saved user properties successfully
+11/8/24, 4:01:08 PM :Info: Opening URL: file:////home/kevin/TunerStudioMS/./help/learnMore.html
+11/8/24, 4:11:34 PM :Info: closeApp Called
+11/8/24, 4:11:34 PM :Info: Finalizing Sensors
+Saved user properties successfully

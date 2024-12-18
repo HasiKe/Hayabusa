@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ZXMS6006DT8TA
+D MOSFET 60V Dual N-Ch Mosfet 100mOhm 2.8A 210mJ
+K
+F https://www.diodes.com//assets/Datasheets/ZXMS6006DT8.pdf
+$ENDCMP
+#
+#End Doc Library

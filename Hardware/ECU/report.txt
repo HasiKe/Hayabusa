@@ -1,0 +1,2739 @@
+Info: Processing symbol 'U1:kicad:Teensy41'.
+Info: Processing symbol 'SW1:Misc:AYZ0202AGRLC'.
+Info: Processing symbol 'SW2:Misc:AYZ0202AGRLC'.
+Info: Processing symbol 'D16:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'SW3:Button_Switch_SMD:SW_DIP_SPSTx02_Slide_9.78x7.26mm_W8.61mm_P2.54mm'.
+Info: Processing symbol 'D15:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'SW4:Misc:AYZ0202AGRLC'.
+Info: Processing symbol 'D14:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'D13:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'SW5:Misc:AYZ0202AGRLC'.
+Info: Processing symbol 'D12:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'D17:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'D11:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'D10:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'D9:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'D8:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'D7:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'D6:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'D5:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'D4:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'D3:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'D2:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'R65:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R60:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'D27:Diode_SMD:D_PowerDI-123'.
+Info: Processing symbol 'R61:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'D26:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'R62:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'D25:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'R63:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'D24:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'R64:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'D23:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'U2:Package_SO:SOIC-8_3.9x4.9mm_P1.27mm'.
+Info: Processing symbol 'D22:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'R66:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'D21:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'R67:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'D20:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'R68:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'D19:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'R69:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'D18:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'C18:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C26:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C25:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C24:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C23:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C22:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'U9:Package_SO:SOIC-8_3.9x4.9mm_P1.27mm'.
+Info: Processing symbol 'C21:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C20:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'U10:Package_SO:SOIC-8_3.9x4.9mm_P1.27mm'.
+Info: Processing symbol 'C19:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'U8:IC_Automotive:SOIC32-P0.65-33N'.
+Info: Processing symbol 'U11:Misc:KP234'.
+Info: Processing symbol 'C17:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'U12:Package_SO:SOIC-14_3.9x8.7mm_P1.27mm'.
+Info: Processing symbol 'C16:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C15:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'U13:Package_SO:SOIC-16_3.9x9.9mm_P1.27mm'.
+Info: Processing symbol 'C14:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C13:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C12:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'U14:Package_SO:SOIC-14_3.9x8.7mm_P1.27mm'.
+Info: Processing symbol 'U6:Package_SO:SOIC-8_3.9x4.9mm_P1.27mm'.
+Info: Processing symbol 'D1:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'U3:Package_TO_SOT_SMD:SOT-353_SC-70-5'.
+Info: Processing symbol 'C40:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C39:Capacitor_SMD:CP_Elec_6.3x7.7'.
+Info: Processing symbol 'U4:Package_LGA:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y'.
+Info: Processing symbol 'C38:Capacitor_SMD:CP_Elec_6.3x7.7'.
+Info: Processing symbol 'C37:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'U5:Package_SO:SOIC-8_3.9x4.9mm_P1.27mm'.
+Info: Processing symbol 'C36:Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B'.
+Info: Processing symbol 'C35:Capacitor_SMD:CP_Elec_4x5.4'.
+Info: Processing symbol 'D28:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'C34:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C33:Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B'.
+Info: Processing symbol 'U7:IC_Automotive:SOIC32-P0.65-33N'.
+Info: Processing symbol 'C32:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C31:Capacitor_SMD:CP_Elec_6.3x7.7'.
+Info: Processing symbol 'C30:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C29:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C28:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C27:Capacitor_SMD:C_1206_3216Metric'.
+Info: Processing symbol 'JP4:Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm'.
+Info: Processing symbol 'R23:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R1:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R24:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'Q3:Package_TO_SOT_SMD:SOT-223-3_TabPin2'.
+Info: Processing symbol 'R25:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R26:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'Q2:Package_TO_SOT_SMD:SOT-363_SC-70-6'.
+Info: Processing symbol 'R27:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'Q1:Package_TO_SOT_SMD:SOT-363_SC-70-6'.
+Info: Processing symbol 'R28:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R2:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R29:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'JP3:Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm'.
+Info: Processing symbol 'R30:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'JP2:Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm'.
+Info: Processing symbol 'R31:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'JP1:Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm'.
+Info: Processing symbol 'R32:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R33:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'J4:Misc:EBC05DRXN'.
+Info: Processing symbol 'R34:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R18:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R13:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R12:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R14:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R11:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R15:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R10:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R16:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R9:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R17:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R8:Resistor_SMD:R_1206_3216Metric'.
+Info: Processing symbol 'R35:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R7:Resistor_SMD:R_1206_3216Metric'.
+Info: Processing symbol 'R6:Resistor_SMD:R_1206_3216Metric'.
+Info: Processing symbol 'R19:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R5:Resistor_SMD:R_1206_3216Metric'.
+Info: Processing symbol 'R20:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R4:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R21:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R3:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R22:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'D34:LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder'.
+Info: Processing symbol 'F2:Fuse:Fuse_0603_1608Metric'.
+Info: Processing symbol 'R50:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'F1:Fuse:Fuse_1812_4532Metric'.
+Info: Processing symbol 'R51:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'D37:Diode_SMD:D_PowerDI-123'.
+Info: Processing symbol 'R52:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'D36:LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder'.
+Info: Processing symbol 'R53:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'D35:LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder'.
+Info: Processing symbol 'R54:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R49:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'D33:Diode_SMD:D_SMA_Handsoldering'.
+Info: Processing symbol 'R55:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'D32:Diode_SMD:D_SMB'.
+Info: Processing symbol 'R56:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'D31:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'R57:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'D30:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'R58:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'D29:Diode_SMD:D_SOD-323'.
+Info: Processing symbol 'R59:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R43:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R36:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R37:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'J3:Connector_Automotive:Delphi_Sicma_24_Black'.
+Info: Processing symbol 'R38:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R39:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R40:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'J2:Connector_Automotive:Delphi_Sicma_24_Grey'.
+Info: Processing symbol 'R41:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'J1:Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical'.
+Info: Processing symbol 'R42:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'A1:Module:Pololu_Breakout-16_15.2x20.3mm'.
+Info: Processing symbol 'IC4:ZXMS6006DT8TA:SOT153P700X170-8N'.
+Info: Processing symbol 'R44:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'IC3:ZXMS6006DT8TA:SOT153P700X170-8N'.
+Info: Processing symbol 'R45:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'IC2:ZXMS6006DT8TA:SOT153P700X170-8N'.
+Info: Processing symbol 'R46:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R47:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R48:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'IC1:Package_SO:QSOP-16_3.9x4.9mm_P0.635mm'.
+Info: Processing symbol 'BT1:IC_Automotive:BAT_2999'.
+Info: Processing symbol 'C10:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C7:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'U16:Package_SO:SOIC-8_3.9x4.9mm_P1.27mm'.
+Info: Processing symbol 'C11:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C2:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C4:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C3:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'U17:Package_SO:SOIC-8_5.23x5.23mm_P1.27mm'.
+Info: Processing symbol 'C1:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C9:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C5:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'U15:Package_QFP:LQFP-48-1EP_7x7mm_P0.5mm_EP3.6x3.6mm_ThermalVias'.
+Info: Processing symbol 'C6:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C8:Capacitor_SMD:C_0805_2012Metric'.
+Updated R47 sheetname to 'Inputs 2'.
+Updated R45 sheetname to 'Inputs'.
+Updated R45 fields.
+Added R47 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R47.
+Changed R47 value from R_0805_2012Metric to 1k.
+Updated R47 symbol association from  to /208a416e-a5c2-4c6c-835c-57e49c0491be/52716296-4791-4946-8f2e-c8be8a1480e2.
+Updated R47 fields.
+Updated R45 footprint filters to 'R_*'.
+Updated R45 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/28e08cf4-52bd-4da9-96c7-cc65c47cc053.
+Updated R48 symbol association from  to /208a416e-a5c2-4c6c-835c-57e49c0491be/a0c31565-df20-407a-b642-0d81a94afe3d.
+Updated R47 sheetfile to 'Inputs2.kicad_sch'.
+Updated R47 footprint filters to 'R_*'.
+Connected R47 pin 1 to MCU-A9.
+Connected R47 pin 2 to +3V3.
+Connected U15 pin 5 to unconnected-(U15-O2HSENSN-Pad5).
+Updated R45 sheetfile to 'Inputs.kicad_sch'.
+Added R46 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Connected R45 pin 1 to GND.
+Connected R46 pin 2 to Net-(U12D-+).
+Connected R46 pin 1 to GND.
+Updated R46 footprint filters to 'R_*'.
+Updated R46 sheetfile to 'Inputs.kicad_sch'.
+Updated R46 sheetname to 'Inputs'.
+Updated R46 fields.
+Connected R45 pin 2 to Net-(U12B-+).
+Connected U15 pin 36 to Net-(U15-RIN1).
+Updated R46 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/7592e9a8-7cfa-402f-89fa-8b1ca0d5a6da.
+Changed R46 value from R_0805_2012Metric to 348k.
+Add net Net-(U15-RIN1).
+Changed REF** reference designator to R46.
+Updated R50 symbol association from  to /208a416e-a5c2-4c6c-835c-57e49c0491be/261a2986-c452-49bd-bbef-1b82c7a1a64c.
+Updated R49 sheetfile to 'Inputs2.kicad_sch'.
+Updated R49 footprint filters to 'R_*'.
+Connected R49 pin 1 to GND.
+Connected R49 pin 2 to Net-(U14A-+).
+Add net unconnected-(U15-O2HSENSP-Pad6).
+Added R50 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R50.
+Connected U15 pin 49 to GND.
+Changed R50 value from R_0805_2012Metric to 1k.
+Updated R49 sheetname to 'Inputs 2'.
+Updated R50 fields.
+Updated R50 sheetname to 'Inputs 2'.
+Updated R50 sheetfile to 'Inputs2.kicad_sch'.
+Updated R50 footprint filters to 'R_*'.
+Connected R50 pin 2 to +3V3.
+Connected R50 pin 1 to MCU-A8.
+Connected U15 pin 49 to GND.
+Added R51 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R51.
+Add net Net-(U14A-+).
+Changed REF** reference designator to R48.
+Changed R48 value from R_0805_2012Metric to 180k.
+Added R45 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Add net unconnected-(U15-O2HSENSN-Pad5).
+Updated R48 fields.
+Updated R48 sheetname to 'Inputs 2'.
+Updated R48 sheetfile to 'Inputs2.kicad_sch'.
+Updated R48 footprint filters to 'R_*'.
+Connected R48 pin 2 to SPARE1_Sensor.
+Added R48 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Connected R48 pin 1 to Net-(U14A-+).
+Connected U15 pin 10 to MC33814-CS.
+Added R49 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R49.
+Connected U15 pin 6 to unconnected-(U15-O2HSENSP-Pad6).
+Changed R49 value from R_0805_2012Metric to 348k.
+Updated R49 symbol association from  to /208a416e-a5c2-4c6c-835c-57e49c0491be/52865413-9986-4a68-b51d-df0ecdbce5f2.
+Updated R49 fields.
+Updated R41 fields.
+Updated R40 sheetfile to 'Inputs.kicad_sch'.
+Updated R40 footprint filters to 'R_*'.
+Connected R40 pin 2 to Net-(U12A-+).
+Connected R40 pin 1 to GND.
+Connected U15 pin 29 to unconnected-(U15-BATSW-Pad29).
+Added R41 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R41.
+Changed R41 value from R_0805_2012Metric to 348k.
+Updated R41 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/2bb5ce5d-e589-4d35-9dec-4f340e64af25.
+Updated R40 sheetname to 'Inputs'.
+Updated R41 sheetname to 'Inputs'.
+Add net unconnected-(U15-BATSW-Pad29).
+Updated R41 sheetfile to 'Inputs.kicad_sch'.
+Updated R41 footprint filters to 'R_*'.
+Connected R41 pin 2 to Net-(U12C-+).
+Connected R41 pin 1 to GND.
+Connected U15 pin 16 to MISO.
+Added R42 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R42.
+Connected R39 pin 2 to O2-5V.
+Connected U15 pin 42 to GND.
+Added R39 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R39.
+Changed R39 value from R_0805_2012Metric to 180k.
+Updated R39 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/4a35e7cc-d94f-4103-a178-2ed08c0b4736.
+Updated R39 fields.
+Updated R39 sheetname to 'Inputs'.
+Updated R39 sheetfile to 'Inputs.kicad_sch'.
+Updated R39 footprint filters to 'R_*'.
+Changed R42 value from R_0805_2012Metric to 470R.
+Add net Net-(U12C-+).
+Connected R39 pin 1 to Net-(U12C-+).
+Connected U15 pin 49 to GND.
+Added R40 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R40.
+Changed R40 value from R_0805_2012Metric to 348k.
+Updated R40 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/608a6d2c-1c49-4094-80b0-da6f57954957.
+Updated R40 fields.
+Updated R44 sheetname to 'Inputs'.
+Add net MAP-5V.
+Connected R43 pin 2 to MAP-5V.
+Add net unconnected-(U15-IGNFB1-Pad45).
+Added R44 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R44.
+Changed R44 value from R_0805_2012Metric to 180k.
+Updated R44 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/124a37e6-0275-4554-ac3c-bdab322a0c34.
+Updated R44 fields.
+Connected U15 pin 49 to GND.
+Connected R43 pin 1 to Net-(U12B-+).
+Updated R44 sheetfile to 'Inputs.kicad_sch'.
+Updated R44 footprint filters to 'R_*'.
+Add net Net-(U12D-+).
+Connected R44 pin 1 to Net-(U12D-+).
+Connected R44 pin 2 to TPS-5V.
+Connected U15 pin 14 to VPPREF.
+Updated R51 fields.
+Changed REF** reference designator to R45.
+Connected U15 pin 45 to unconnected-(U15-IGNFB1-Pad45).
+Updated R42 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/c4ba3661-9167-44b8-8560-ad10a5460e17.
+Updated R42 fields.
+Updated R42 sheetname to 'Inputs'.
+Updated R42 sheetfile to 'Inputs.kicad_sch'.
+Updated R42 footprint filters to 'R_*'.
+Connected R42 pin 1 to TPS-5V.
+Connected R42 pin 2 to TPS_Sensor.
+Connected U15 pin 23 to ROUT2.
+Added R43 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed R45 value from R_0805_2012Metric to 348k.
+Changed REF** reference designator to R43.
+Changed R43 value from R_0805_2012Metric to 180k.
+Updated R43 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/5a98aa52-c34e-43e7-9c23-343e145aa647.
+Updated R43 fields.
+Updated R43 sheetname to 'Inputs'.
+Updated R43 sheetfile to 'Inputs.kicad_sch'.
+Updated R43 footprint filters to 'R_*'.
+Add net Net-(U12B-+).
+Add net MCU-D28.
+Added R59 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Changed REF** reference designator to R59.
+Changed R59 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 1k.
+Updated R59 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/d2582c41-1959-4d4e-81db-8aa83a0a72c6.
+Updated R59 fields.
+Connected U15 pin 18 to VPPSENS.
+Updated R59 sheetname to 'Outputs'.
+Updated R59 sheetfile to 'Outputs.kicad_sch'.
+Updated R59 footprint filters to 'R_*'.
+Connected R58 pin 2 to MCU-D29.
+Connected R59 pin 2 to MCU-D28.
+Connected R59 pin 1 to Net-(IC3-INPUT_2).
+Connected U15 pin 49 to GND.
+Added R60 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Changed REF** reference designator to R60.
+Changed R60 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 1k.
+Connected U15 pin 7 to unconnected-(U15-VRSOUT-Pad7).
+Updated R60 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/95011210-6833-4769-8723-303acd8faa66.
+Updated R60 fields.
+Changed R58 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 1k.
+Updated R57 sheetname to 'Outputs'.
+Connected U15 pin 27 to unconnected-(U15-MRX-Pad27).
+Updated R57 sheetfile to 'Outputs.kicad_sch'.
+Updated R57 footprint filters to 'R_*'.
+Connected R57 pin 1 to ROUT2.
+Connected R57 pin 2 to 12V-SW.
+Add net unconnected-(U15-MRX-Pad27).
+Added R58 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Changed REF** reference designator to R58.
+Updated R60 sheetname to 'Outputs'.
+Updated R58 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/0e12e986-a6da-43ca-a039-51afcbb0f920.
+Updated R58 fields.
+Updated R58 sheetname to 'Outputs'.
+Connected U15 pin 13 to MOSI.
+Updated R58 sheetfile to 'Outputs.kicad_sch'.
+Updated R58 footprint filters to 'R_*'.
+Connected R58 pin 1 to Net-(IC3-INPUT_1).
+Add net MCU-D29.
+Connected R62 pin 1 to Net-(IC3-INPUT_1).
+Add net unconnected-(U15-TACHOUT-Pad26).
+Added R62 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Changed REF** reference designator to R62.
+Changed R62 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 100k.
+Updated R62 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/00505396-6b42-4491-b7a1-6675ae228bd0.
+Updated R62 fields.
+Updated R62 sheetname to 'Outputs'.
+Updated R62 sheetfile to 'Outputs.kicad_sch'.
+Updated R62 footprint filters to 'R_*'.
+Connected U15 pin 26 to unconnected-(U15-TACHOUT-Pad26).
+Connected R62 pin 2 to GND.
+Connected U15 pin 31 to unconnected-(U15-INJIN1-Pad31).
+Add net unconnected-(U15-INJIN1-Pad31).
+Added R63 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Changed REF** reference designator to R63.
+Changed R63 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 100k.
+Updated R63 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/40a64089-4895-4cb9-86df-6032080eee4b.
+Updated R63 fields.
+Changed R61 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 1k.
+Updated R60 sheetfile to 'Outputs.kicad_sch'.
+Updated R60 footprint filters to 'R_*'.
+Add net MCU-D25.
+Connected R60 pin 2 to MCU-D25.
+Connected R60 pin 1 to Net-(IC4-INPUT_1).
+Add net unconnected-(U15-VRSOUT-Pad7).
+Added R61 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Connected U15 pin 22 to GND.
+Changed REF** reference designator to R61.
+Updated R57 fields.
+Updated R61 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/f8057a02-565e-43a0-b8d3-daaaffc69c25.
+Updated R61 fields.
+Updated R61 sheetname to 'Outputs'.
+Updated R61 sheetfile to 'Outputs.kicad_sch'.
+Updated R61 footprint filters to 'R_*'.
+Connected R61 pin 1 to Net-(IC4-INPUT_2).
+Add net MCU-D24.
+Connected R61 pin 2 to MCU-D24.
+Updated R53 sheetfile to 'Outputs.kicad_sch'.
+Connected R52 pin 2 to Net-(U14B-+).
+Connected R52 pin 1 to GND.
+Connected U15 pin 49 to GND.
+Added R53 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Changed REF** reference designator to R53.
+Changed R53 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 1k.
+Updated R53 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/5a987217-5657-4325-ae1f-8cb52d8a6c53.
+Updated R53 fields.
+Updated R53 sheetname to 'Outputs'.
+Updated R52 footprint filters to 'R_*'.
+Updated R53 footprint filters to 'R_*'.
+Add net MCU-D27.
+Connected R53 pin 2 to MCU-D27.
+Connected R53 pin 1 to Net-(IC2-INPUT_1).
+Connected U15 pin 38 to GND.
+Connected U15 pin 2 to unconnected-(U15-O2HOUT-Pad2).
+Added R54 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Changed REF** reference designator to R54.
+Changed R54 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 1k.
+Connected U15 pin 48 to unconnected-(U15-IGNOUT2-Pad48).
+Changed R51 value from R_0805_2012Metric to 180k.
+Updated R51 symbol association from  to /208a416e-a5c2-4c6c-835c-57e49c0491be/80853842-3c7a-410f-b5d1-249058366b59.
+Updated R38 sheetfile to 'Inputs.kicad_sch'.
+Updated R51 sheetname to 'Inputs 2'.
+Updated R51 sheetfile to 'Inputs2.kicad_sch'.
+Updated R51 footprint filters to 'R_*'.
+Add net Net-(U14B-+).
+Connected R51 pin 1 to Net-(U14B-+).
+Connected R51 pin 2 to SPARE2_Sensor.
+Updated R54 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/82d69f86-57a5-444b-aa61-3ea048a53b91.
+Added R52 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Add net unconnected-(U15-IGNOUT2-Pad48).
+Changed REF** reference designator to R52.
+Changed R52 value from R_0805_2012Metric to 348k.
+Updated R52 symbol association from  to /208a416e-a5c2-4c6c-835c-57e49c0491be/1023e928-3f35-4078-8fe2-38b896bfc01b.
+Updated R52 fields.
+Updated R52 sheetname to 'Inputs 2'.
+Updated R52 sheetfile to 'Inputs2.kicad_sch'.
+Connected U15 pin 25 to unconnected-(U15-NC-Pad25).
+Connected R55 pin 1 to Net-(IC2-INPUT_1).
+Connected U15 pin 40 to GND.
+Added R56 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Changed REF** reference designator to R56.
+Changed R56 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 100k.
+Updated R56 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/18371c16-e984-40af-8d00-4c57fc92db2e.
+Updated R56 fields.
+Updated R56 sheetname to 'Outputs'.
+Updated R56 sheetfile to 'Outputs.kicad_sch'.
+Connected R55 pin 2 to GND.
+Updated R56 footprint filters to 'R_*'.
+Connected R56 pin 1 to GND.
+Connected R56 pin 2 to Net-(IC2-INPUT_2).
+Add net unconnected-(U15-NC-Pad25).
+Added R57 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R57.
+Changed R57 value from R_0805_2012Metric to 10k.
+Updated R57 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/445971bb-cddb-4db6-832c-a2e42aea11b4.
+Added R55 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Updated R54 fields.
+Updated R54 sheetname to 'Outputs'.
+Updated R54 sheetfile to 'Outputs.kicad_sch'.
+Updated R54 footprint filters to 'R_*'.
+Connected R54 pin 1 to Net-(IC2-INPUT_2).
+Add net MCU-D26.
+Add net unconnected-(U15-O2HOUT-Pad2).
+Connected R54 pin 2 to MCU-D26.
+Connected U15 pin 28 to unconnected-(U15-MTX-Pad28).
+Connected U15 pin 20 to Net-(U15-VPROT).
+Changed REF** reference designator to R55.
+Changed R55 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 100k.
+Updated R55 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/b8e87761-7311-4a25-b060-2b2f94ee7610.
+Updated R55 fields.
+Updated R55 sheetname to 'Outputs'.
+Updated R55 sheetfile to 'Outputs.kicad_sch'.
+Updated R55 footprint filters to 'R_*'.
+Add net unconnected-(U15-MTX-Pad28).
+Updated R21 sheetname to 'Drivers'.
+Updated R20 footprint filters to 'R_*'.
+Connected R20 pin 1 to Net-(D18-A).
+Added U17 (footprint 'Package_SO:SOIC-8_5.23x5.23mm_P1.27mm').
+Connected R20 pin 2 to 12V-SW.
+Added R21 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R21.
+Changed R21 value from R_0805_2012Metric to 1k.
+Updated R21 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/46a7b843-b896-45a3-887b-6caa88ed8e0e.
+Updated R21 fields.
+Updated R20 sheetfile to 'Drivers.kicad_sch'.
+Updated R21 sheetfile to 'Drivers.kicad_sch'.
+Updated R21 footprint filters to 'R_*'.
+Connected U16 pin 1 to unconnected-(U16-NC-Pad1).
+Connected R21 pin 1 to Net-(D19-A).
+Connected R21 pin 2 to 12V-SW.
+Add net unconnected-(U16-NC-Pad1).
+Added R22 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R22.
+Changed R22 value from R_0805_2012Metric to 1k.
+Connected R19 pin 2 to 12V-SW.
+Added R19 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R19.
+Changed R19 value from R_0805_2012Metric to 1k.
+Updated R19 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/555f5120-a151-4224-ac90-d55aabc6af8b.
+Updated R19 fields.
+Updated R19 sheetname to 'Drivers'.
+Updated R19 sheetfile to 'Drivers.kicad_sch'.
+Updated R19 footprint filters to 'R_*'.
+Connected R19 pin 1 to Net-(D17-A).
+Updated R22 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/d8a9e9ba-2c25-44af-994c-d315b819f640.
+Changed U17 value from SOIC-8_5.23x5.23mm_P1.27mm to W25Q32JVSS.
+Changed REF** reference designator to U17.
+Added R20 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R20.
+Changed R20 value from R_0805_2012Metric to 1k.
+Updated R20 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/17a5a770-a86b-4828-bc81-4dda1c307825.
+Updated R20 fields.
+Updated R20 sheetname to 'Drivers'.
+Connected U16 pin 5 to Net-(U15-RIN1).
+Add net unconnected-(U16-NC-Pad8).
+Added R24 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R24.
+Changed R24 value from R_0805_2012Metric to 1k.
+Updated R24 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/e5ff941d-3884-48f7-8b8c-4bfccfda4e24.
+Updated R24 fields.
+Updated R24 sheetname to 'Drivers'.
+Updated R24 sheetfile to 'Drivers.kicad_sch'.
+Updated R24 footprint filters to 'R_*'.
+Connected R23 pin 1 to Net-(D21-A).
+Connected R24 pin 1 to Net-(D22-A).
+Connected R24 pin 2 to IGN4.
+Connected U16 pin 6 to +5V.
+Added R25 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R25.
+Changed R25 value from R_0805_2012Metric to 1k.
+Updated R25 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/db422ba6-449f-4c49-8403-ec0d663c79cd.
+Updated R25 fields.
+Updated R25 sheetname to 'Drivers'.
+Changed REF** reference designator to R23.
+Updated R22 fields.
+Updated R22 sheetname to 'Drivers'.
+Updated R22 sheetfile to 'Drivers.kicad_sch'.
+Connected U16 pin 4 to MCU-D8.
+Updated R22 footprint filters to 'R_*'.
+Connected R22 pin 2 to 12V-SW.
+Connected R22 pin 1 to Net-(D20-A).
+Connected U16 pin 7 to Net-(U15-RIN2).
+Added R23 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Updated U17 symbol association from  to /7d18358f-5866-4651-8656-b451f5c8ca1d/6ed4620b-cfb9-4744-9441-43babd3f10b3.
+Changed R23 value from R_0805_2012Metric to 1k.
+Updated R23 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/3e01a655-d0e2-46d2-b394-99580f7e4945.
+Updated R23 fields.
+Updated R23 sheetname to 'Drivers'.
+Updated R23 sheetfile to 'Drivers.kicad_sch'.
+Connected U16 pin 8 to unconnected-(U16-NC-Pad8).
+Updated R23 footprint filters to 'R_*'.
+Connected R23 pin 2 to IGN3.
+Changed R15 value from R_0805_2012Metric to 1k.
+Connected U17 pin 4 to GND.
+Updated R14 sheetname to 'Drivers'.
+Updated R14 sheetfile to 'Drivers.kicad_sch'.
+Updated R14 footprint filters to 'R_*'.
+Connected R14 pin 1 to 12V-SW.
+Connected R14 pin 2 to Net-(D6-A).
+Connected U17 pin 8 to +3V3.
+Added R15 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R15.
+Updated R14 fields.
+Updated R15 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/a91d1e16-d175-4146-86a1-2f8d42584bf1.
+Connected U17 pin 3 to +3V3.
+Updated R15 fields.
+Updated R15 sheetname to 'Drivers'.
+Updated R15 sheetfile to 'Drivers.kicad_sch'.
+Updated R15 footprint filters to 'R_*'.
+Connected R15 pin 2 to Net-(D7-A).
+Connected R15 pin 1 to 12V-SW.
+Connected U17 pin 2 to MISO.
+Updated R13 sheetfile to 'Drivers.kicad_sch'.
+Connected R12 pin 2 to IGN6.
+Added A1 (footprint 'Module:Pololu_Breakout-16_15.2x20.3mm').
+Added R13 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R13.
+Changed R13 value from R_0805_2012Metric to 1k.
+Updated R13 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/19025afa-a11c-405d-bc02-1abb183b2df5.
+Updated R13 fields.
+Updated R13 sheetname to 'Drivers'.
+Connected U17 pin 6 to SCLK.
+Added R16 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Updated R13 footprint filters to 'R_*'.
+Connected R13 pin 1 to 12V-SW.
+Connected R13 pin 2 to Net-(D5-A).
+Connected U17 pin 1 to MCU-D6.
+Added R14 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R14.
+Changed R14 value from R_0805_2012Metric to 1k.
+Updated R14 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/0767b16d-9dde-4a1c-87d1-2fdeba71ad66.
+Updated R18 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/964c0228-3f02-4c8e-bd31-eaf51d4c0cbe.
+Updated R17 footprint filters to 'R_*'.
+Add net OUTEN_1.
+Connected R17 pin 1 to OUTEN_1.
+Connected R17 pin 2 to GND.
+Updated U17 sheetfile to 'Comms.kicad_sch'.
+Added R18 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Updated U17 sheetname to 'Comms'.
+Changed REF** reference designator to R18.
+Changed R18 value from R_0805_2012Metric to 10k.
+Updated R17 sheetfile to 'Drivers.kicad_sch'.
+Updated R18 fields.
+Updated R18 sheetname to 'Drivers'.
+Updated R18 sheetfile to 'Drivers.kicad_sch'.
+Updated R18 footprint filters to 'R_*'.
+Add net OUTEN_2.
+Connected R18 pin 1 to OUTEN_2.
+Connected R18 pin 2 to GND.
+Updated U17 fields.
+Connected R16 pin 1 to 12V-SW.
+Changed REF** reference designator to R16.
+Changed R16 value from R_0805_2012Metric to 1k.
+Connected U17 pin 7 to +3V3.
+Updated R16 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/4b94f6bb-a407-44a1-86af-8e849b9d550f.
+Updated R16 fields.
+Updated R16 sheetname to 'Drivers'.
+Updated R16 sheetfile to 'Drivers.kicad_sch'.
+Updated R16 footprint filters to 'R_*'.
+Connected R16 pin 2 to Net-(D8-A).
+Updated R25 sheetfile to 'Drivers.kicad_sch'.
+Connected U17 pin 5 to MOSI.
+Added R17 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R17.
+Changed R17 value from R_0805_2012Metric to 10k.
+Updated U17 footprint filters to 'SOIC*5.23x5.23mm*P1.27mm*'.
+Updated R17 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/10a7cd35-e18e-47bd-8f6d-0c62f702d460.
+Updated R17 fields.
+Updated R17 sheetname to 'Drivers'.
+Connected R34 pin 2 to +3V3.
+Add net unconnected-(U15-IGNOUT1-Pad46).
+Added R34 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R34.
+Changed R34 value from R_0805_2012Metric to 2.49k.
+Updated R34 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/340f7725-23f1-4d6e-b01d-386709fb1d9f.
+Updated R34 fields.
+Updated R34 sheetname to 'Inputs'.
+Updated R34 sheetfile to 'Inputs.kicad_sch'.
+Updated R34 footprint filters to 'R_*'.
+Connected R33 pin 2 to +3V3.
+Connected R34 pin 1 to CLT_Sensor.
+Connected U15 pin 12 to SCLK.
+Added R35 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R35.
+Changed R35 value from R_0805_2012Metric to 470R.
+Updated R35 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/58dd07d0-d982-453a-9b5c-37a533cb3cd9.
+Updated R35 fields.
+Updated R35 sheetname to 'Inputs'.
+Updated R35 sheetfile to 'Inputs.kicad_sch'.
+Connected U15 pin 46 to unconnected-(U15-IGNOUT1-Pad46).
+Updated R32 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/84584d70-6cba-4ff6-b6c4-06c40e4a8139.
+Updated R32 fields.
+Updated R32 sheetname to 'Inputs'.
+Updated R32 sheetfile to 'Inputs.kicad_sch'.
+Updated R32 footprint filters to 'R_*'.
+Connected R32 pin 1 to ADC-Clamp-6.
+Connected R32 pin 2 to +3V3.
+Connected U15 pin 49 to GND.
+Added R33 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Updated R35 footprint filters to 'R_*'.
+Changed REF** reference designator to R33.
+Changed R33 value from R_0805_2012Metric to 2.49k.
+Updated R33 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/1c32a044-d286-4760-b82e-9f30d388e452.
+Updated R33 fields.
+Updated R33 sheetname to 'Inputs'.
+Updated R33 sheetfile to 'Inputs.kicad_sch'.
+Updated R33 footprint filters to 'R_*'.
+Connected R33 pin 1 to IAT_Sensor.
+Changed REF** reference designator to R38.
+Updated R37 fields.
+Updated R37 sheetname to 'Inputs'.
+Updated R37 sheetfile to 'Inputs.kicad_sch'.
+Updated R37 footprint filters to 'R_*'.
+Connected R37 pin 2 to BARO-5V.
+Add net Net-(U11-Vout).
+Connected R37 pin 1 to Net-(U11-Vout).
+Add net unconnected-(U15-INJIN2-Pad30).
+Added R38 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Updated R37 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/dabfa2d4-dd52-47f1-83b4-1e852f4503e9.
+Changed R38 value from R_0805_2012Metric to 180k.
+Updated R38 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/e347cd98-aca9-4a3b-a113-9dc473c1fb08.
+Updated R38 fields.
+Updated R38 sheetname to 'Inputs'.
+Connected R63 pin 1 to GND.
+Updated R38 footprint filters to 'R_*'.
+Connected R38 pin 2 to BARO-5V.
+Add net Net-(U12A-+).
+Updated R36 sheetfile to 'Inputs.kicad_sch'.
+Connected R35 pin 2 to IAT_Sensor.
+Connected R35 pin 1 to ADC-Clamp-11.
+Connected U15 pin 3 to unconnected-(U15-IGNSENSP-Pad3).
+Added R36 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R36.
+Changed R36 value from R_0805_2012Metric to 470R.
+Updated R36 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/4e96a4dd-ae88-40c6-b16d-3c0e20e678d9.
+Updated R36 fields.
+Updated R36 sheetname to 'Inputs'.
+Changed R32 value from R_0805_2012Metric to 1k.
+Updated R36 footprint filters to 'R_*'.
+Connected R36 pin 1 to ADC-Clamp-12.
+Connected R36 pin 2 to CLT_Sensor.
+Add net unconnected-(U15-IGNSENSP-Pad3).
+Added R37 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Connected U15 pin 30 to unconnected-(U15-INJIN2-Pad30).
+Changed REF** reference designator to R37.
+Changed R37 value from R_0805_2012Metric to 0.
+Added R28 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Updated U16 sheetname to 'Power Regulator'.
+Updated R27 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/35175dbd-4bef-47c6-b805-f874fd13e75f.
+Updated R27 fields.
+Updated R27 sheetname to 'Inputs'.
+Updated R27 sheetfile to 'Inputs.kicad_sch'.
+Updated R27 footprint filters to 'R_*'.
+Connected R27 pin 1 to GND.
+Connected R27 pin 2 to Net-(C14-Pad1).
+Updated U16 fields.
+Changed R27 value from R_0805_2012Metric to 604R.
+Changed REF** reference designator to R28.
+Updated U16 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/0a26f91b-efbd-4dcc-97da-6ab6c42001f1.
+Changed R28 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 3.88k.
+Updated R28 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/c5730335-9400-40e9-84fc-2212dcec1a12.
+Updated R28 fields.
+Updated R28 sheetname to 'Inputs'.
+Updated R28 sheetfile to 'Inputs.kicad_sch'.
+Updated R28 footprint filters to 'R_*'.
+Connected R28 pin 2 to 12V-SW.
+Updated R26 fields.
+Updated R25 footprint filters to 'R_*'.
+Connected R25 pin 2 to IGN7.
+Connected R25 pin 1 to Net-(D23-A).
+Connected U16 pin 3 to GND.
+Connected U16 pin 2 to MCU-D5.
+Added R26 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R26.
+Changed R26 value from R_0805_2012Metric to 1k.
+Updated R26 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/1121b1c8-b9d2-4797-b603-2c7560fd94a3.
+Connected R28 pin 1 to Net-(C14-Pad1).
+Updated R26 sheetname to 'Drivers'.
+Updated R26 sheetfile to 'Drivers.kicad_sch'.
+Updated R26 footprint filters to 'R_*'.
+Connected R26 pin 1 to Net-(D24-A).
+Connected R26 pin 2 to IGN8.
+Updated U16 sheetfile to 'Power-Regulator.kicad_sch'.
+Added R27 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R27.
+Updated R31 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/50a792c0-cf92-4e5b-b56b-a7bf493ccdca.
+Updated R30 sheetfile to 'Inputs.kicad_sch'.
+Updated R30 footprint filters to 'R_*'.
+Connected R30 pin 2 to ADC-Clamp-5.
+Connected R30 pin 1 to +3V3.
+Connected U15 pin 1 to unconnected-(U15-O2HFB-Pad1).
+Added R31 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R31.
+Add net unconnected-(U15-O2HFB-Pad1).
+Changed R31 value from R_0805_2012Metric to 470R.
+Updated R30 sheetname to 'Inputs'.
+Updated R31 fields.
+Updated R31 sheetname to 'Inputs'.
+Updated R31 sheetfile to 'Inputs.kicad_sch'.
+Updated R31 footprint filters to 'R_*'.
+Connected R31 pin 1 to ADC-Clamp-7.
+Connected R31 pin 2 to Net-(C14-Pad1).
+Added R32 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R32.
+Updated R29 footprint filters to 'R_*'.
+Changed U16 value from SOIC-8_3.9x4.9mm_P1.27mm to TC4424A.
+Added R29 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R29.
+Changed REF** reference designator to U16.
+Changed R29 value from R_0805_2012Metric to 470R.
+Updated R29 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/ba7d90c1-a49f-4da3-8453-e17e8cf0f2c4.
+Updated R29 fields.
+Updated R29 sheetname to 'Inputs'.
+Updated R29 sheetfile to 'Inputs.kicad_sch'.
+Connected R38 pin 1 to Net-(U12A-+).
+Connected R29 pin 1 to O2-5V.
+Connected R29 pin 2 to O2_Sensor.
+Added U16 (footprint 'Package_SO:SOIC-8_3.9x4.9mm_P1.27mm').
+Added R30 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R30.
+Changed R30 value from R_0805_2012Metric to 2.4k.
+Updated R30 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/3c53f05c-7f9e-4a0a-a4ec-0dcca469e597.
+Updated R30 fields.
+Connected U7 pin 5 to SCLK.
+Connected U7 pin 33 to GND.
+Connected U7 pin 8 to +3V3.
+Connected U7 pin 25 to +5V.
+Add net unconnected-(U7-FB1-Pad15).
+Connected U14 pin 12 to unconnected-(U14D-+-Pad12).
+Connected U7 pin 15 to unconnected-(U7-FB1-Pad15).
+Connected U7 pin 9 to OUTEN_1.
+Connected U7 pin 7 to MISO.
+Connected U7 pin 17 to INJ1.
+Connected U7 pin 14 to Net-(U5-IN_A).
+Add net unconnected-(U7-FB2-Pad31).
+Connected U7 pin 31 to unconnected-(U7-FB2-Pad31).
+Add net unconnected-(U7-GIN2-Pad22).
+Connected U7 pin 22 to unconnected-(U7-GIN2-Pad22).
+Add net unconnected-(U7-RSN-Pad27).
+Connected U7 pin 27 to unconnected-(U7-RSN-Pad27).
+Add net unconnected-(U14D-+-Pad12).
+Add net unconnected-(U7-FB0-Pad2).
+Connected U7 pin 2 to unconnected-(U7-FB0-Pad2).
+Connected U7 pin 10 to unconnected-(U7-DIN0-Pad10).
+Connected U14 pin 1 to ADC-Clamp-4.
+Connected U7 pin 4 to MC33810_1-CS.
+Add net unconnected-(U7-GIN0-Pad24).
+Connected U7 pin 24 to unconnected-(U7-GIN0-Pad24).
+Add net unconnected-(U7-RSP-Pad26).
+Connected U7 pin 26 to unconnected-(U7-RSP-Pad26).
+Add net Net-(U7-GD3).
+Connected U7 pin 19 to Net-(U7-GD3).
+Add net unconnected-(U7-DIN0-Pad10).
+Add net unconnected-(U7-GIN1-Pad23).
+Connected U7 pin 1 to INJ3.
+Add net unconnected-(U7-DIN1-Pad11).
+Connected U7 pin 11 to unconnected-(U7-DIN1-Pad11).
+Add net unconnected-(U7-MAXI-Pad29).
+Connected U7 pin 29 to unconnected-(U7-MAXI-Pad29).
+Connected U7 pin 6 to MOSI.
+Add net unconnected-(U7-DIN2-Pad12).
+Connected U7 pin 12 to unconnected-(U7-DIN2-Pad12).
+Connected U8 pin 24 to unconnected-(U8-GIN0-Pad24).
+Connected U14 pin 13 to Net-(U14D--).
+Add net Net-(U10-IN_A).
+Connected U8 pin 30 to Net-(U10-IN_A).
+Add net unconnected-(U8-DIN2-Pad12).
+Connected U8 pin 12 to unconnected-(U8-DIN2-Pad12).
+Add net unconnected-(U8-DIN0-Pad10).
+Connected U8 pin 10 to unconnected-(U8-DIN0-Pad10).
+Connected U8 pin 8 to +3V3.
+Add net unconnected-(U8-GIN0-Pad24).
+Updated U8 sheetfile to 'Drivers.kicad_sch'.
+Add net unconnected-(U8-MAXI-Pad29).
+Connected U8 pin 29 to unconnected-(U8-MAXI-Pad29).
+Connected U14 pin 3 to Net-(U14A-+).
+Add net unconnected-(U8-RSP-Pad26).
+Connected U8 pin 26 to unconnected-(U8-RSP-Pad26).
+Connected U8 pin 9 to OUTEN_2.
+Connected U8 pin 1 to INJ7.
+Add net Net-(U10-IN_B).
+Add net unconnected-(U7-GIN3-Pad21).
+Connected U7 pin 23 to unconnected-(U7-GIN1-Pad23).
+Add net unconnected-(U7-FB3-Pad18).
+Connected U7 pin 18 to unconnected-(U7-FB3-Pad18).
+Connected U7 pin 16 to INJ2.
+Add net unconnected-(U7-SPKDUR-Pad20).
+Connected U7 pin 20 to unconnected-(U7-SPKDUR-Pad20).
+Add net unconnected-(U7-DIN3-Pad13).
+Connected U14 pin 4 to VDDA.
+Connected U7 pin 13 to unconnected-(U7-DIN3-Pad13).
+Connected U7 pin 30 to Net-(U7-GD2).
+Connected U7 pin 21 to unconnected-(U7-GIN3-Pad21).
+Connected U14 pin 8 to Net-(U14C--).
+Added U8 (footprint 'IC_Automotive:SOIC32-P0.65-33N').
+Changed SOIC65P1030X245-33N reference designator to U8.
+Changed U8 value from SOIC32-P0.65-33N to MC33810.
+Updated U8 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/d7f848dd-8029-40d2-8d1a-a47b4c8f3873.
+Updated U8 fields.
+Updated U8 sheetname to 'Drivers'.
+Connected U5 pin 3 to GND.
+Updated U15 sheetname to 'Power Regulator'.
+Added U5 (footprint 'Package_SO:SOIC-8_3.9x4.9mm_P1.27mm').
+Updated U15 fields.
+Changed REF** reference designator to U5.
+Changed U5 value from SOIC-8_3.9x4.9mm_P1.27mm to TC4424A.
+Updated U5 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/503dc228-181a-4c27-b8b3-076cb3341ba9.
+Updated U5 fields.
+Updated U5 sheetname to 'Drivers'.
+Updated U5 sheetfile to 'Drivers.kicad_sch'.
+Connected U4 pin 13 to Net-(U4-SDA/SDI/SDIO).
+Add net Net-(U5-IN_A).
+Connected U5 pin 2 to Net-(U5-IN_A).
+Connected U5 pin 7 to IGN2.
+Connected U5 pin 5 to IGN1.
+Updated U15 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/0ecb6408-d94e-4d12-bb01-67ef8b6df4a3.
+Add net unconnected-(U5-NC-Pad1).
+Connected U5 pin 1 to unconnected-(U5-NC-Pad1).
+Add net Net-(U5-IN_B).
+Connected U5 pin 4 to Net-(U5-IN_B).
+Connected U4 pin 10 to unconnected-(U4-NC-Pad10).
+Connected U4 pin 6 to +3V3.
+Connected U4 pin 5 to GND.
+Add net unconnected-(U4-INT1-Pad8).
+Connected U4 pin 8 to unconnected-(U4-INT1-Pad8).
+Add net unconnected-(U4-RES-Pad3).
+Connected U4 pin 3 to unconnected-(U4-RES-Pad3).
+Add net unconnected-(U4-RES-Pad11).
+Connected U4 pin 11 to unconnected-(U4-RES-Pad11).
+Add net unconnected-(U4-NC-Pad10).
+Add net unconnected-(U5-NC-Pad8).
+Updated U15 sheetfile to 'Power-Regulator.kicad_sch'.
+Add net unconnected-(U4-INT2-Pad9).
+Connected U4 pin 9 to unconnected-(U4-INT2-Pad9).
+Connected U4 pin 2 to GND.
+Connected U4 pin 1 to +3V3.
+Connected U4 pin 7 to MCU-D7.
+Connected U4 pin 4 to GND.
+Connected U4 pin 12 to MISO.
+Updated U7 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/da6ef901-e3c3-4836-8bda-bde45d4ecbdb.
+Connected U6 pin 2 to Net-(U6-IN_A).
+Add net unconnected-(U6-NC-Pad1).
+Connected U6 pin 1 to unconnected-(U6-NC-Pad1).
+Connected U6 pin 3 to GND.
+Connected U6 pin 5 to IGN5.
+Added U7 (footprint 'IC_Automotive:SOIC32-P0.65-33N').
+Changed SOIC65P1030X245-33N reference designator to U7.
+Changed U7 value from SOIC32-P0.65-33N to MC33810.
+Connected U14 pin 6 to ADC-Clamp-3.
+Add net Net-(U6-IN_A).
+Updated U7 fields.
+Updated U7 sheetname to 'Drivers'.
+Updated U7 sheetfile to 'Drivers.kicad_sch'.
+Connected U7 pin 32 to INJ4.
+Connected U7 pin 3 to Net-(U5-IN_B).
+Add net unconnected-(U7-NOMI-Pad28).
+Connected U7 pin 28 to unconnected-(U7-NOMI-Pad28).
+Add net Net-(U7-GD2).
+Updated U6 sheetname to 'Drivers'.
+Connected U5 pin 8 to unconnected-(U5-NC-Pad8).
+Connected U5 pin 6 to IGN_V+.
+Changed U15 value from LQFP-48-1EP_7x7mm_P0.5mm_EP3.6x3.6mm_ThermalVias to MC33814.
+Added U6 (footprint 'Package_SO:SOIC-8_3.9x4.9mm_P1.27mm').
+Changed REF** reference designator to U6.
+Changed U6 value from SOIC-8_3.9x4.9mm_P1.27mm to TC4424A.
+Changed REF** reference designator to U15.
+Updated U6 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/cecd49a9-3fe4-43ac-a377-a043ea7b23df.
+Updated U6 fields.
+Connected U8 pin 19 to Net-(U10-IN_B).
+Updated U6 sheetfile to 'Drivers.kicad_sch'.
+Connected U6 pin 7 to IGN6.
+Add net Net-(U6-IN_B).
+Connected U6 pin 4 to Net-(U6-IN_B).
+Connected U6 pin 6 to IGN_V+.
+Add net unconnected-(U6-NC-Pad8).
+Connected U6 pin 8 to unconnected-(U6-NC-Pad8).
+Added U15 (footprint 'Package_QFP:LQFP-48-1EP_7x7mm_P0.5mm_EP3.6x3.6mm_ThermalVias').
+Connected U12 pin 9 to ADC-Clamp-13.
+Added U12 (footprint 'Package_SO:SOIC-14_3.9x8.7mm_P1.27mm').
+Changed REF** reference designator to U12.
+Changed U12 value from SOIC-14_3.9x8.7mm_P1.27mm to LMV324LIDT.
+Updated U14 sheetfile to 'Inputs2.kicad_sch'.
+Updated U12 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/e0e0df3d-f549-4657-a45d-34e2b08d201f.
+Updated U12 fields.
+Updated U12 sheetname to 'Inputs'.
+Updated U12 sheetfile to 'Inputs.kicad_sch'.
+Updated U12 footprint filters to 'SOIC*3.9x8.7mm*P1.27mm* DIP*W7.62mm* TSSOP*4.4x5mm*P0.65mm* SSOP*5.3x6.2mm*P0.65mm* MSOP*3x3mm*P0.5mm*'.
+Updated U14 footprint filters to 'SOIC*3.9x8.7mm*P1.27mm* DIP*W7.62mm* TSSOP*4.4x5mm*P0.65mm* SSOP*5.3x6.2mm*P0.65mm* MSOP*3x3mm*P0.5mm*'.
+Connected U12 pin 1 to MCU-A0.
+Connected U12 pin 13 to ADC-Clamp-14.
+Connected U12 pin 12 to Net-(U12D-+).
+Connected U12 pin 8 to ADC-Clamp-13.
+Connected U12 pin 7 to MCU-A1.
+Updated U14 sheetname to 'Inputs 2'.
+Connected U12 pin 10 to Net-(U12C-+).
+Connected U12 pin 14 to ADC-Clamp-14.
+Connected U12 pin 2 to MCU-A0.
+Connected U11 pin 7 to Net-(U11-Vout).
+Connected U14 pin 2 to ADC-Clamp-4.
+Added U11 (footprint 'Misc:KP234').
+Changed REF** reference designator to U11.
+Updated U11 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/d22dae66-956c-44a7-bbde-1c491ef4eb52.
+Updated U11 fields.
+Updated U11 sheetname to 'Inputs'.
+Updated U11 sheetfile to 'Inputs.kicad_sch'.
+Add net unconnected-(U11-NC-Pad4).
+Connected U11 pin 4 to unconnected-(U11-NC-Pad4).
+Connected U12 pin 11 to GND.
+Connected U14 pin 11 to GND.
+Connected U11 pin 5 to VDDA.
+Connected U11 pin 8 to GND.
+Add net unconnected-(U11-NC-Pad1).
+Connected U11 pin 1 to unconnected-(U11-NC-Pad1).
+Add net unconnected-(U11-NC-Pad2).
+Connected U11 pin 2 to unconnected-(U11-NC-Pad2).
+Connected U11 pin 6 to GND.
+Connected U13 pin 13 to ADC-Clamp-12.
+Add net ADC-Clamp-9.
+Connected U13 pin 10 to ADC-Clamp-9.
+Connected U13 pin 14 to ADC-Clamp-13.
+Add net ADC-Clamp-8.
+Connected U13 pin 9 to ADC-Clamp-8.
+Connected U13 pin 8 to GND.
+Connected U13 pin 12 to ADC-Clamp-11.
+Add net ADC-Clamp-10.
+Connected U13 pin 11 to ADC-Clamp-10.
+Updated U14 symbol association from  to /208a416e-a5c2-4c6c-835c-57e49c0491be/a78744bd-bab9-4d2b-b054-a2fc3aef5c24.
+Changed U14 value from SOIC-14_3.9x8.7mm_P1.27mm to LMV324LIDT.
+Connected U13 pin 6 to ADC-Clamp-6.
+Connected U13 pin 3 to ADC-Clamp-3.
+Connected U13 pin 7 to ADC-Clamp-7.
+Connected U13 pin 16 to +3V3.
+Connected U13 pin 4 to ADC-Clamp-4.
+Connected U13 pin 15 to ADC-Clamp-14.
+Changed REF** reference designator to U14.
+Updated U13 fields.
+Connected U12 pin 3 to Net-(U12A-+).
+Connected U12 pin 4 to VDDA.
+Connected U12 pin 5 to Net-(U12B-+).
+Connected U12 pin 6 to MCU-A1.
+Updated U14 fields.
+Added U13 (footprint 'Package_SO:SOIC-16_3.9x9.9mm_P1.27mm').
+Changed REF** reference designator to U13.
+Changed U13 value from SOIC-16_3.9x9.9mm_P1.27mm to SP720.
+Updated U13 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/2a86d609-f39b-467c-8475-204b28721cc8.
+Connected U10 pin 4 to Net-(U10-IN_B).
+Updated U13 sheetname to 'Inputs'.
+Updated U13 sheetfile to 'Inputs.kicad_sch'.
+Updated U13 footprint filters to 'DIP*W7.62mm* SOIC*3.9x9.9mm*P1.27mm* SSOP*4.4x5.2mm*P0.65mm* TSSOP*4.4x5mm*P0.65mm* SOIC*W*5.3x10.2mm*P1.27mm*'.
+Add net ADC-Clamp-2.
+Connected U13 pin 2 to ADC-Clamp-2.
+Connected U13 pin 5 to ADC-Clamp-5.
+Add net ADC-Clamp-1.
+Connected U13 pin 1 to ADC-Clamp-1.
+Connected U14 pin 14 to Net-(U14D--).
+Connected U8 pin 21 to unconnected-(U8-GIN3-Pad21).
+Add net unconnected-(U8-FB2-Pad31).
+Connected U8 pin 31 to unconnected-(U8-FB2-Pad31).
+Connected U8 pin 6 to MOSI.
+Add net unconnected-(U8-FB1-Pad15).
+Connected U8 pin 15 to unconnected-(U8-FB1-Pad15).
+Add net unconnected-(U8-GIN2-Pad22).
+Connected U8 pin 22 to unconnected-(U8-GIN2-Pad22).
+Add net unconnected-(U8-SPKDUR-Pad20).
+Add net unconnected-(U8-GIN3-Pad21).
+Connected U8 pin 20 to unconnected-(U8-SPKDUR-Pad20).
+Add net unconnected-(U8-FB3-Pad18).
+Connected U8 pin 18 to unconnected-(U8-FB3-Pad18).
+Connected U8 pin 3 to Net-(U6-IN_B).
+Connected U8 pin 4 to MC33810_2-CS.
+Connected U8 pin 14 to Net-(U6-IN_A).
+Connected U8 pin 32 to INJ8.
+Add net unconnected-(U8-FB0-Pad2).
+Connected U8 pin 2 to unconnected-(U8-FB0-Pad2).
+Connected U8 pin 28 to unconnected-(U8-NOMI-Pad28).
+Add net unconnected-(U8-DIN1-Pad11).
+Connected U8 pin 11 to unconnected-(U8-DIN1-Pad11).
+Connected U8 pin 16 to INJ6.
+Add net unconnected-(U8-DIN3-Pad13).
+Connected U8 pin 13 to unconnected-(U8-DIN3-Pad13).
+Connected U14 pin 7 to ADC-Clamp-3.
+Connected U8 pin 33 to GND.
+Connected U8 pin 25 to +5V.
+Add net unconnected-(U8-NOMI-Pad28).
+Add net Net-(U14D--).
+Connected U8 pin 5 to SCLK.
+Connected U8 pin 17 to INJ5.
+Add net unconnected-(U8-RSN-Pad27).
+Connected U8 pin 27 to unconnected-(U8-RSN-Pad27).
+Add net unconnected-(U8-GIN1-Pad23).
+Connected U8 pin 23 to unconnected-(U8-GIN1-Pad23).
+Connected U8 pin 7 to MISO.
+Connected U14 pin 5 to Net-(U14B-+).
+Connected U10 pin 8 to unconnected-(U10-NC-Pad8).
+Added U10 (footprint 'Package_SO:SOIC-8_3.9x4.9mm_P1.27mm').
+Changed REF** reference designator to U10.
+Changed U10 value from SOIC-8_3.9x4.9mm_P1.27mm to TC4424A.
+Updated U10 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/7559144b-cd55-4c82-8ee8-77078d7de260.
+Updated U10 fields.
+Connected U14 pin 9 to Net-(U14C--).
+Updated U10 sheetname to 'Drivers'.
+Updated U10 sheetfile to 'Drivers.kicad_sch'.
+Add net unconnected-(U10-NC-Pad8).
+Add net unconnected-(U14C-+-Pad10).
+Add net unconnected-(U10-NC-Pad1).
+Connected U10 pin 1 to unconnected-(U10-NC-Pad1).
+Connected U10 pin 5 to IGN8.
+Connected U10 pin 3 to GND.
+Connected U10 pin 6 to IGN_V+.
+Connected U10 pin 7 to IGN7.
+Connected U10 pin 2 to Net-(U10-IN_A).
+Add net Net-(U14C--).
+Connected U9 pin 6 to IGN_V+.
+Added U9 (footprint 'Package_SO:SOIC-8_3.9x4.9mm_P1.27mm').
+Changed REF** reference designator to U9.
+Changed U9 value from SOIC-8_3.9x4.9mm_P1.27mm to TC4424A.
+Updated U9 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/68efe6bc-898e-48aa-a1f1-555cd49fb6ab.
+Updated U9 fields.
+Updated U9 sheetname to 'Drivers'.
+Updated U9 sheetfile to 'Drivers.kicad_sch'.
+Connected U9 pin 3 to GND.
+Connected U9 pin 5 to IGN4.
+Connected U15 pin 49 to GND.
+Connected U9 pin 2 to Net-(U7-GD2).
+Add net unconnected-(U9-NC-Pad1).
+Connected U14 pin 10 to unconnected-(U14C-+-Pad10).
+Connected U9 pin 1 to unconnected-(U9-NC-Pad1).
+Connected U9 pin 4 to Net-(U7-GD3).
+Add net unconnected-(U9-NC-Pad8).
+Connected U9 pin 8 to unconnected-(U9-NC-Pad8).
+Connected U9 pin 7 to IGN3.
+Updated SW3 fields.
+Connected SW2 pin 2 to CAM-IN+.
+Connected SW2 pin 1 to Net-(JP3-B).
+Connected SW2 pin 3 to VR2-IN+.
+Add net unconnected-(U15-INJOUT2-Pad39).
+Added SW3 (footprint 'Button_Switch_SMD:SW_DIP_SPSTx02_Slide_9.78x7.26mm_W8.61mm_P2.54mm').
+Connected U15 pin 34 to unconnected-(U15-O2HIN-Pad34).
+Changed REF** reference designator to SW3.
+Changed SW3 value from SW_DIP_SPSTx02_Slide_9.78x7.26mm_W8.61mm_P2.54mm to SW_DIP_x02.
+Updated SW3 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/aaa080e0-2959-4495-8b77-b5ce782247a8.
+Updated SW2 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated SW3 sheetname to 'Crank and Cam'.
+Updated SW3 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated SW3 footprint filters to 'SW?DIP?x2*'.
+Connected SW3 pin 1 to Net-(C5-Pad1).
+Connected SW3 pin 2 to Net-(C4-Pad2).
+Connected SW3 pin 4 to MCU-A5.
+Connected SW3 pin 3 to MCU-A5.
+Add net unconnected-(U15-O2HIN-Pad34).
+Connected U15 pin 41 to FUELPUMP-OUT.
+Connected SW1 pin 3 to VR1-IN+.
+Add net unconnected-(U15-IGNIN1-Pad33).
+Added SW1 (footprint 'Misc:AYZ0202AGRLC').
+Changed S** reference designator to SW1.
+Changed SW1 value from AYZ0202AGRLC to SW_DPDT_x2.
+Updated SW1 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/9ade7545-f76e-4c27-9b8f-f8a4ed4245f1.
+Updated SW1 fields.
+Updated SW1 sheetname to 'Crank and Cam'.
+Updated SW1 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Connected SW1 pin 1 to Net-(JP2-A).
+Added SW4 (footprint 'Misc:AYZ0202AGRLC').
+Connected SW1 pin 2 to CRANK-IN+.
+Connected U15 pin 39 to unconnected-(U15-INJOUT2-Pad39).
+Added SW2 (footprint 'Misc:AYZ0202AGRLC').
+Changed S** reference designator to SW2.
+Changed SW2 value from AYZ0202AGRLC to SW_DPDT_x2.
+Updated SW2 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/386049a1-3c84-4e84-92fb-39b078d07207.
+Updated SW2 fields.
+Updated SW2 sheetname to 'Crank and Cam'.
+Connected U15 pin 9 to unconnected-(U15-VRSN-Pad9).
+Updated SW5 sheetname to 'Inputs'.
+Updated SW5 sheetfile to 'Inputs.kicad_sch'.
+Connected SW5 pin 4 to MAP_External.
+Connected SW5 pin 6 to Net-(SW5-NO_1).
+Add net unconnected-(U15-ISO9141-Pad44).
+Connected SW5 pin 3 to Net-(SW5-NO_1).
+Connected SW5 pin 2 to MAP-5V.
+Connected SW5 pin 1 to MAP_External.
+Connected SW5 pin 5 to MAP-5V.
+Updated SW5 fields.
+Added U1 (footprint 'kicad:Teensy41').
+Changed REF** reference designator to U1.
+Changed U1 value from Teensy 4.1 to Teensy4.1.
+Updated U1 symbol association from  to /bdd66fb3-db91-4f62-b712-e9433b866401.
+Updated U1 sheetname to 'Root'.
+Updated U1 sheetfile to 'ECU.kicad_sch'.
+Add net unconnected-(U15-VRSN-Pad9).
+Add net ADC-Clamp-14.
+Connected SW4 pin 5 to IGN_V+.
+Changed S** reference designator to SW4.
+Changed SW4 value from AYZ0202AGRLC to SW_DPDT_x2.
+Updated SW4 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/643feeb5-ec18-4093-862a-8c32b45dfaf1.
+Updated SW4 fields.
+Updated SW4 sheetname to 'Drivers'.
+Updated SW4 sheetfile to 'Drivers.kicad_sch'.
+Connected SW4 pin 3 to Net-(SW4-NO_1).
+Connected SW4 pin 4 to 12V-SW.
+Connected SW4 pin 2 to IGN_V+.
+Connected U15 pin 33 to unconnected-(U15-IGNIN1-Pad33).
+Connected SW4 pin 6 to Net-(SW4-NO_1).
+Connected U15 pin 17 to +5V.
+Connected SW4 pin 1 to 12V-SW.
+Connected U15 pin 44 to unconnected-(U15-ISO9141-Pad44).
+Added SW5 (footprint 'Misc:AYZ0202AGRLC').
+Changed S** reference designator to SW5.
+Changed SW5 value from AYZ0202AGRLC to SW_DPDT_x2.
+Updated SW5 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/f1337f2a-70d1-4b5b-b31d-ac0b8ce49e34.
+Add net Net-(U15-RIN2).
+Changed R65 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 100k.
+Updated R65 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/f1338b4b-f76b-4f27-b35b-a0ccb355285d.
+Updated R65 fields.
+Updated R65 sheetname to 'Outputs'.
+Updated R65 sheetfile to 'Outputs.kicad_sch'.
+Updated R65 footprint filters to 'R_*'.
+Connected R65 pin 1 to GND.
+Connected R65 pin 2 to Net-(IC4-INPUT_2).
+Connected U15 pin 35 to Net-(U15-RIN2).
+Changed REF** reference designator to R65.
+Added R66 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R66.
+Changed R66 value from R_0805_2012Metric to 1k.
+Updated R66 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/0fc106e9-c127-4274-ad1a-a0cf5d41672a.
+Updated R66 fields.
+Updated R66 sheetname to 'Power Regulator'.
+Updated R66 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated R66 footprint filters to 'R_*'.
+Connected R66 pin 1 to 12V-SW.
+Updated R64 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/5e35dd23-fae5-4bc0-922e-439de0c5b19b.
+Updated R63 sheetfile to 'Outputs.kicad_sch'.
+Updated R63 footprint filters to 'R_*'.
+Connected R63 pin 2 to Net-(IC3-INPUT_2).
+Added U14 (footprint 'Package_SO:SOIC-14_3.9x8.7mm_P1.27mm').
+Connected U15 pin 47 to unconnected-(U15-IGNFB2-Pad47).
+Add net unconnected-(U15-IGNFB2-Pad47).
+Added R64 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Changed REF** reference designator to R64.
+Changed R64 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 100k.
+Connected R66 pin 2 to Net-(D34-A).
+Updated R64 fields.
+Updated R64 sheetname to 'Outputs'.
+Updated R64 sheetfile to 'Outputs.kicad_sch'.
+Updated R64 footprint filters to 'R_*'.
+Connected R64 pin 2 to GND.
+Connected R64 pin 1 to Net-(IC4-INPUT_1).
+Connected U15 pin 37 to 12V-PROT.
+Added R65 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Changed R69 value from R_0805_2012Metric to 1k.
+Updated R68 sheetname to 'Power Regulator'.
+Updated R68 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated R68 footprint filters to 'R_*'.
+Connected R68 pin 2 to Net-(D36-A).
+Connected R68 pin 1 to VDDA.
+Add net unconnected-(U15-IGNIN2-Pad32).
+Connected U15 pin 49 to GND.
+Added R69 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R69.
+Updated R68 fields.
+Updated R69 symbol association from  to /bd1fc049-ebe6-4381-8e84-95008e09cd8a.
+Updated R69 fields.
+Updated R69 sheetname to 'Root'.
+Updated R69 sheetfile to 'ECU.kicad_sch'.
+Updated R69 footprint filters to 'R_*'.
+Add net VBat.
+Connected R69 pin 2 to VBat.
+Connected R69 pin 1 to Net-(D37-A).
+Updated R67 footprint filters to 'R_*'.
+Connected U15 pin 15 to GND.
+Connected U15 pin 49 to GND.
+Added R67 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R67.
+Changed R67 value from R_0805_2012Metric to 470R.
+Updated R67 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/46c3d45b-a09d-4f14-9366-92f8268d1369.
+Updated R67 fields.
+Updated R67 sheetname to 'Power Regulator'.
+Updated R67 sheetfile to 'Power-Regulator.kicad_sch'.
+Connected U1 pin 39 to ADC-Clamp-14.
+Connected R67 pin 1 to +5V.
+Connected R67 pin 2 to Net-(D35-A).
+Connected U15 pin 11 to 12V-PROT.
+Connected U15 pin 32 to unconnected-(U15-IGNIN2-Pad32).
+Added R68 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R68.
+Changed R68 value from R_0805_2012Metric to 470R.
+Updated R68 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/8df308f9-200e-470c-bd12-5cae40dd45a7.
+Add net unconnected-(U1-35_TX8-Pad27).
+Connected U15 pin 49 to GND.
+Connected U1 pin 23 to MCU-D31.
+Connected U1 pin 50 to VBat.
+Add net MCU-A1.
+Connected U1 pin 41 to MCU-A1.
+Connected U1 pin 20 to MCU-D28.
+Add net unconnected-(U1-R--Pad65).
+Connected U1 pin 65 to unconnected-(U1-R--Pad65).
+Connected U1 pin 28 to ADC-Clamp-6.
+Connected U1 pin 40 to MCU-A0.
+Connected U1 pin 27 to unconnected-(U1-35_TX8-Pad27).
+Connected U1 pin 45 to MCU-A9.
+Connected U15 pin 8 to unconnected-(U15-VRSP-Pad8).
+Add net unconnected-(U15-VRSP-Pad8).
+Added U2 (footprint 'Package_SO:SOIC-8_3.9x4.9mm_P1.27mm').
+Changed REF** reference designator to U2.
+Changed U2 value from SOIC-8_3.9x4.9mm_P1.27mm to MCP2562-E-SN.
+Updated U2 symbol association from  to /7d18358f-5866-4651-8656-b451f5c8ca1d/03faae1e-f150-4898-a594-d618482f634c.
+Updated U2 fields.
+Connected U1 pin 34 to GND.
+Connected U1 pin 63 to unconnected-(U1-T+-Pad63).
+Add net unconnected-(U1-LED-Pad61).
+Connected U1 pin 61 to unconnected-(U1-LED-Pad61).
+Connected U1 pin 46 to +3V3.
+Connected U1 pin 24 to MCU-D32.
+Add net MCU-D3.
+Connected U1 pin 5 to MCU-D3.
+Add net unconnected-(U15-NC-Pad24).
+Connected U1 pin 58 to GND.
+Updated U2 sheetname to 'Comms'.
+Add net MCU-D6.
+Connected U1 pin 8 to MCU-D6.
+Add net MCU-D5.
+Connected U1 pin 7 to MCU-D5.
+Connected U1 pin 16 to MCU-D24.
+Add net unconnected-(U1-D+-Pad57).
+Connected U1 pin 57 to unconnected-(U1-D+-Pad57).
+Add net MCU-A0.
+Added U4 (footprint 'Package_LGA:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y').
+Updated U3 sheetfile to 'Comms.kicad_sch'.
+Updated U3 footprint filters to 'SOT* SG-*'.
+Connected U3 pin 3 to GND.
+Connected U3 pin 5 to +3V3.
+Connected U3 pin 1 to MOSI.
+Connected U3 pin 2 to MCU-D7.
+Add net Net-(U4-SDA/SDI/SDIO).
+Connected U3 pin 4 to Net-(U4-SDA/SDI/SDIO).
+Add net unconnected-(U15-IGNSENSN-Pad4).
+Updated U3 sheetname to 'Comms'.
+Changed REF** reference designator to U4.
+Changed U4 value from LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y to ADXL343.
+Updated U4 symbol association from  to /7d18358f-5866-4651-8656-b451f5c8ca1d/b45b03e8-e6ae-46a6-8948-d4fea365559e.
+Updated U4 fields.
+Updated U4 sheetname to 'Comms'.
+Updated U4 sheetfile to 'Comms.kicad_sch'.
+Updated U4 footprint filters to '*LGA*3x5mm*P0.8mm*'.
+Connected U4 pin 14 to SCLK.
+Connected U2 pin 2 to GND.
+Updated U2 sheetfile to 'Comms.kicad_sch'.
+Updated U2 footprint filters to 'SOIC*3.9x4.9mm*P1.27mm*'.
+Connected U2 pin 8 to Net-(U2-STBY).
+Connected U2 pin 7 to CAN_H.
+Connected U15 pin 43 to unconnected-(U15-INJOUT1-Pad43).
+Connected U2 pin 1 to MCU-D3.
+Connected U2 pin 4 to MCU-D4.
+Connected U2 pin 3 to +5V.
+Connected U2 pin 6 to CAN_L.
+Add net unconnected-(U1-T+-Pad63).
+Connected U2 pin 5 to +3V3.
+Add net unconnected-(U15-INJOUT1-Pad43).
+Added U3 (footprint 'Package_TO_SOT_SMD:SOT-353_SC-70-5').
+Changed REF** reference designator to U3.
+Changed U3 value from SOT-353_SC-70-5 to 74AHC1G32.
+Connected U15 pin 4 to unconnected-(U15-IGNSENSN-Pad4).
+Updated U3 symbol association from  to /7d18358f-5866-4651-8656-b451f5c8ca1d/1a0cd32f-90ad-4ec8-8bd7-d3deeea8c3fd.
+Updated U3 fields.
+Connected U1 pin 14 to MISO.
+Connected U1 pin 19 to MCU-D27.
+Add net unconnected-(U1-34_RX8-Pad26).
+Add net LAMPOUT.
+Connected U1 pin 26 to unconnected-(U1-34_RX8-Pad26).
+Add net unconnected-(U1-R+-Pad60).
+Connected U1 pin 60 to unconnected-(U1-R+-Pad60).
+Add net ADC-Clamp-3.
+Connected U1 pin 33 to ADC-Clamp-3.
+Add net MISO.
+Connected U1 pin 53 to PROG.
+Connected U1 pin 15 to +3V3.
+Add net MCU-D4.
+Connected U1 pin 6 to MCU-D4.
+Connected U1 pin 2 to MCU-D0.
+Add net MC33814-CS.
+Connected U1 pin 4 to MC33814-CS.
+Add net unconnected-(U1-D--Pad56).
+Connected U1 pin 56 to unconnected-(U1-D--Pad56).
+Add net ADC-Clamp-13.
+Connected U15 pin 21 to LAMPOUT.
+Connected U1 pin 21 to MCU-D29.
+Add net unconnected-(U1-VUSB-Pad49).
+Connected U1 pin 49 to unconnected-(U1-VUSB-Pad49).
+Connected U1 pin 59 to GND.
+Add net unconnected-(U1-T--Pad62).
+Connected U1 pin 62 to unconnected-(U1-T--Pad62).
+Add net SCLK.
+Connected U1 pin 35 to SCLK.
+Connected U1 pin 31 to ADC-Clamp-7.
+Connected U1 pin 38 to ADC-Clamp-13.
+Add net RESET.
+Connected U1 pin 54 to RESET.
+Connected U1 pin 17 to MCU-D25.
+Add net unconnected-(U1-D+-Pad67).
+Connected U1 pin 67 to unconnected-(U1-D+-Pad67).
+Add net MCU-D7.
+Connected U1 pin 9 to MCU-D7.
+Add net PROG.
+Connected U1 pin 51 to +3V3.
+Add net unconnected-(U1-GND-Pad64).
+Add net unconnected-(U15-RESETB-Pad19).
+Connected U1 pin 64 to unconnected-(U1-GND-Pad64).
+Connected U1 pin 37 to ADC-Clamp-12.
+Add net unconnected-(U1-5V-Pad55).
+Connected U1 pin 55 to unconnected-(U1-5V-Pad55).
+Connected U1 pin 52 to GND.
+Connected U1 pin 36 to ADC-Clamp-11.
+Connected U1 pin 29 to ADC-Clamp-5.
+Connected U1 pin 47 to GNDA.
+Add net MC33810_1-CS.
+Connected U1 pin 12 to MC33810_1-CS.
+Connected U1 pin 48 to +5V.
+Connected U1 pin 43 to MCU-A5.
+Connected U15 pin 24 to unconnected-(U15-NC-Pad24).
+Connected U1 pin 44 to MCU-A8.
+Add net MC33810_2-CS.
+Connected U1 pin 11 to MC33810_2-CS.
+Connected U1 pin 30 to unconnected-(U1-38_CS1_IN1-Pad30).
+Add net unconnected-(U1-D--Pad66).
+Connected U1 pin 66 to unconnected-(U1-D--Pad66).
+Add net ADC-Clamp-4.
+Connected U1 pin 32 to ADC-Clamp-4.
+Connected U1 pin 3 to MCU-D1.
+Connected U1 pin 22 to MCU-D30.
+Connected U1 pin 18 to MCU-D26.
+Connected U15 pin 19 to unconnected-(U15-RESETB-Pad19).
+Add net unconnected-(U1-38_CS1_IN1-Pad30).
+Updated R63 sheetname to 'Outputs'.
+Add net unconnected-(U1-33_MCLK2-Pad25).
+Connected U1 pin 25 to unconnected-(U1-33_MCLK2-Pad25).
+Connected U1 pin 42 to MCU-A4.
+Add net MCU-D8.
+Connected U1 pin 10 to MCU-D8.
+Connected U1 pin 1 to GND.
+Add net MOSI.
+Connected U1 pin 13 to MOSI.
+Add net 12V-PROT.
+Connected C37 pin 1 to VPPSENS.
+Added C38 (footprint 'Capacitor_SMD:CP_Elec_6.3x7.7').
+Changed REF** reference designator to C38.
+Changed C38 value from CP_Elec_6.3x7.7 to 33uF.
+Updated C38 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/fa56962b-005b-403b-9006-57a2570f35a8.
+Updated C38 fields.
+Updated C38 sheetname to 'Power Regulator'.
+Updated C38 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated C38 footprint filters to 'CP_*'.
+Connected C38 pin 2 to GND.
+Connected C37 pin 2 to GND.
+Connected C38 pin 1 to 12V-PROT.
+Added C39 (footprint 'Capacitor_SMD:CP_Elec_6.3x7.7').
+Changed REF** reference designator to C39.
+Changed C39 value from CP_Elec_6.3x7.7 to 33uF.
+Updated C39 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/427b1fed-ffc8-4922-8f6c-ef64aa1ab1a9.
+Updated C39 fields.
+Updated C39 sheetname to 'Power Regulator'.
+Updated C39 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated C39 footprint filters to 'CP_*'.
+Connected C36 pin 2 to GND.
+Connected C35 pin 2 to GND.
+Added C36 (footprint 'Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B').
+Changed REF** reference designator to C36.
+Changed C36 value from CP_EIA-3528-21_Kemet-B to 47uF.
+Updated C36 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/804af6ca-0885-485c-85db-b8a492713e4e.
+Updated C36 fields.
+Updated C36 sheetname to 'Power Regulator'.
+Updated C36 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated C36 footprint filters to 'CP_*'.
+Connected C39 pin 2 to GND.
+Connected C36 pin 1 to Net-(U15-VPROT).
+Added C37 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C37.
+Changed C37 value from C_0805_2012Metric to 0.1uF.
+Updated C37 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/2ffd755d-3e99-4dee-9e10-22d4365a6eb4.
+Updated C37 fields.
+Updated C37 sheetname to 'Power Regulator'.
+Updated C37 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated C37 footprint filters to 'C_*'.
+Add net Net-(D2-A).
+Connected D1 pin 2 to Net-(D1-A).
+Connected D1 pin 1 to GND.
+Added D2 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D2.
+Changed D2 value from LED_0805_2012Metric to LED.
+Updated D2 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/c6a9b0e9-ecc5-4a1b-8cbd-8ca4a523a8c7.
+Updated D2 fields.
+Updated D2 sheetname to 'Drivers'.
+Updated D2 sheetfile to 'Drivers.kicad_sch'.
+Updated D2 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Add net Net-(D1-A).
+Connected D2 pin 2 to Net-(D2-A).
+Connected D2 pin 1 to GND.
+Added D3 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D3.
+Changed D3 value from LED_0805_2012Metric to LED.
+Updated D3 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/3b4f424f-0fd8-40b8-bd64-25581a9294f0.
+Updated D3 fields.
+Updated D3 sheetname to 'Drivers'.
+Updated D3 sheetfile to 'Drivers.kicad_sch'.
+Connected C40 pin 1 to 12V-PROT.
+Connected C39 pin 1 to 12V-PROT.
+Added C40 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C40.
+Changed C40 value from C_0805_2012Metric to 0.1uF.
+Updated C40 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/ceddaff9-98c8-473e-9f7b-29db40548c41.
+Updated C40 fields.
+Updated C40 sheetname to 'Power Regulator'.
+Updated C40 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated C40 footprint filters to 'C_*'.
+Connected C35 pin 1 to VPPSENS.
+Connected C40 pin 2 to GND.
+Added D1 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D1.
+Changed D1 value from LED_0805_2012Metric to LED.
+Updated D1 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/3547b342-9f7b-4d84-bcec-754fbb8ae649.
+Updated D1 fields.
+Updated D1 sheetname to 'Drivers'.
+Updated D1 sheetfile to 'Drivers.kicad_sch'.
+Updated D1 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Added C31 (footprint 'Capacitor_SMD:CP_Elec_6.3x7.7').
+Changed REF** reference designator to C30.
+Changed C30 value from C_0805_2012Metric to 0.01uF.
+Updated C30 symbol association from  to /208a416e-a5c2-4c6c-835c-57e49c0491be/1db4287f-f0cc-487b-a8fb-1ee17e3b39f6.
+Updated C30 fields.
+Updated C30 sheetname to 'Inputs 2'.
+Updated C30 sheetfile to 'Inputs2.kicad_sch'.
+Updated C30 footprint filters to 'C_*'.
+Connected C30 pin 1 to GND.
+Add net MCU-A8.
+Connected C30 pin 2 to MCU-A8.
+Added C30 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C31.
+Changed C31 value from CP_Elec_6.3x7.7 to 100uF.
+Updated C31 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/c4a4f857-03d3-4be1-a5f2-2ede1ec867f2.
+Updated C31 fields.
+Updated C31 sheetname to 'Outputs'.
+Updated C31 sheetfile to 'Outputs.kicad_sch'.
+Updated C31 footprint filters to 'CP_*'.
+Connected C31 pin 2 to GND.
+Connected C31 pin 1 to Net-(A1-VMOT).
+Changed REF** reference designator to C29.
+Updated C28 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/3fe47f5a-4b2d-4a15-af8a-4b088c9e7b56.
+Updated C28 fields.
+Updated C28 sheetname to 'Inputs'.
+Updated C28 sheetfile to 'Inputs.kicad_sch'.
+Updated C28 footprint filters to 'C_*'.
+Add net TPS-5V.
+Connected C28 pin 1 to TPS-5V.
+Connected C28 pin 2 to GND.
+Added C29 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Added C32 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed C29 value from C_0805_2012Metric to 0.01uF.
+Updated C29 symbol association from  to /208a416e-a5c2-4c6c-835c-57e49c0491be/89109934-76dd-4ca5-ad46-c9246ed9880a.
+Updated C29 fields.
+Updated C29 sheetname to 'Inputs 2'.
+Updated C29 sheetfile to 'Inputs2.kicad_sch'.
+Updated C29 footprint filters to 'C_*'.
+Connected C29 pin 1 to GND.
+Add net MCU-A9.
+Connected C29 pin 2 to MCU-A9.
+Connected C34 pin 1 to Net-(U15-VPROT).
+Changed REF** reference designator to C34.
+Changed C34 value from C_0805_2012Metric to 0.1uF.
+Updated C34 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/7ea6c96c-d707-4252-8ae2-d4749f0b7e95.
+Updated C34 fields.
+Updated C34 sheetname to 'Power Regulator'.
+Updated C34 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated C34 footprint filters to 'C_*'.
+Connected C34 pin 2 to GND.
+Add net Net-(U15-VPROT).
+Added C34 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Added C35 (footprint 'Capacitor_SMD:CP_Elec_4x5.4').
+Changed REF** reference designator to C35.
+Changed C35 value from CP_Elec_4x5.4 to 22uF.
+Updated C35 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/ca945862-dd38-4b64-9d1b-bc22382c1f34.
+Updated C35 fields.
+Updated C35 sheetname to 'Power Regulator'.
+Updated C35 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated C35 footprint filters to 'CP_*'.
+Add net VPPSENS.
+Added C33 (footprint 'Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B').
+Changed REF** reference designator to C32.
+Changed C32 value from C_0805_2012Metric to 0.1uF.
+Updated C32 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/abb8dcae-04ac-4277-9ca3-33d3927d8526.
+Updated C32 fields.
+Updated C32 sheetname to 'Power Regulator'.
+Updated C32 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated C32 footprint filters to 'C_*'.
+Connected C32 pin 2 to GND.
+Connected C32 pin 1 to +5V.
+Updated D3 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Changed REF** reference designator to C33.
+Changed C33 value from CP_EIA-3528-21_Kemet-B to 47uF.
+Updated C33 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/699a7793-1ace-4869-af7a-84925799fa01.
+Updated C33 fields.
+Updated C33 sheetname to 'Power Regulator'.
+Updated C33 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated C33 footprint filters to 'CP_*'.
+Connected C33 pin 2 to GND.
+Connected C33 pin 1 to +5V.
+Updated D13 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/68763040-a24a-4397-828f-723a5fa171cf.
+Updated D12 fields.
+Updated D12 sheetname to 'Drivers'.
+Updated D12 sheetfile to 'Drivers.kicad_sch'.
+Updated D12 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Add net INJ7.
+Connected D12 pin 1 to INJ7.
+Connected D12 pin 2 to Net-(D12-A).
+Added D13 (footprint 'Diode_SMD:D_SOD-323').
+Changed REF** reference designator to D13.
+Changed D13 value from D_SOD-323 to D.
+Updated D12 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/8127b853-0afb-424e-8271-40f534c5409d.
+Connected A1 pin 12 to unconnected-(A1-M2-Pad12).
+Updated D13 fields.
+Add net unconnected-(A1-M2-Pad12).
+Updated D13 sheetname to 'Drivers'.
+Updated D13 sheetfile to 'Drivers.kicad_sch'.
+Updated D13 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Add net INJ1.
+Connected D13 pin 1 to INJ1.
+Add net Net-(D13-A).
+Updated D11 sheetfile to 'Drivers.kicad_sch'.
+Add net INJ6.
+Connected D10 pin 1 to INJ6.
+Connected D10 pin 2 to Net-(D10-A).
+Added D11 (footprint 'Diode_SMD:D_SOD-323').
+Changed REF** reference designator to D11.
+Changed D11 value from D_SOD-323 to D.
+Updated D11 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/56b7620e-3c27-458a-ab6e-7d52bda87851.
+Updated D11 fields.
+Updated D11 sheetname to 'Drivers'.
+Connected D13 pin 2 to Net-(D13-A).
+Updated D11 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Add net INJ3.
+Connected A1 pin 15 to MCU-D31.
+Connected D11 pin 1 to INJ3.
+Connected D11 pin 2 to Net-(D11-A).
+Added D12 (footprint 'Diode_SMD:D_SOD-323').
+Add net MCU-D31.
+Changed REF** reference designator to D12.
+Changed D12 value from D_SOD-323 to D.
+Connected R12 pin 1 to Net-(D4-A).
+Updated A1 sheetname to 'Outputs'.
+Updated D15 fields.
+Updated D15 sheetname to 'Drivers'.
+Updated D15 sheetfile to 'Drivers.kicad_sch'.
+Updated D15 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Add net INJ4.
+Connected D15 pin 1 to INJ4.
+Add net Net-(D15-A).
+Connected D15 pin 2 to Net-(D15-A).
+Added D16 (footprint 'Diode_SMD:D_SOD-323').
+Updated A1 sheetfile to 'Outputs.kicad_sch'.
+Changed REF** reference designator to D16.
+Updated A1 fields.
+Updated A1 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/e81f2054-0518-46fc-9953-851d4679917f.
+Changed D16 value from D_SOD-323 to D.
+Updated D16 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/07e81a2e-9019-4ff5-b29f-d74ce59baff3.
+Changed A1 value from Pololu_Breakout-16_15.2x20.3mm to Pololu_Breakout_DRV8825.
+Changed REF** reference designator to A1.
+Updated D16 fields.
+Updated D16 sheetname to 'Drivers'.
+Connected D14 pin 2 to Net-(D14-A).
+Added D14 (footprint 'Diode_SMD:D_SOD-323').
+Changed REF** reference designator to D14.
+Changed D14 value from D_SOD-323 to D.
+Updated D14 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/8d81ab8e-84dd-4679-a931-2e2a32f03df9.
+Updated D14 fields.
+Updated D14 sheetname to 'Drivers'.
+Updated D14 sheetfile to 'Drivers.kicad_sch'.
+Updated D14 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Add net Net-(D14-A).
+Updated D10 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Add net INJ5.
+Connected D14 pin 1 to INJ5.
+Added D15 (footprint 'Diode_SMD:D_SOD-323').
+Changed REF** reference designator to D15.
+Connected A1 pin 14 to +3V3.
+Add net +3V3.
+Changed D15 value from D_SOD-323 to D.
+Updated D15 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/d2d1cf45-ec2b-4a85-a3af-a77c56514644.
+Updated A1 footprint filters to 'Pololu*Breakout*15.2x20.3mm*'.
+Updated D6 fields.
+Updated D5 sheetfile to 'Drivers.kicad_sch'.
+Updated D5 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Add net Net-(D5-K).
+Connected D5 pin 1 to Net-(D5-K).
+Add net Net-(D5-A).
+Connected D5 pin 2 to Net-(D5-A).
+Added D6 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D6.
+Changed D6 value from LED_0805_2012Metric to LED.
+Updated D6 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/f21473ff-737e-4982-8478-59251592281d.
+Updated D5 sheetname to 'Drivers'.
+Updated D6 sheetname to 'Drivers'.
+Updated D6 sheetfile to 'Drivers.kicad_sch'.
+Updated D6 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Add net Net-(D10-A).
+Connected D6 pin 1 to Net-(D10-A).
+Add net Net-(D6-A).
+Connected D6 pin 2 to Net-(D6-A).
+Added D7 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D7.
+Updated D4 sheetfile to 'Drivers.kicad_sch'.
+Connected D3 pin 1 to GND.
+Add net Net-(D3-A).
+Connected D3 pin 2 to Net-(D3-A).
+Added D4 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D4.
+Changed D4 value from LED_0805_2012Metric to LED.
+Updated D4 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/84865ec1-48d1-4785-9c73-67cab3ca2261.
+Updated D4 fields.
+Updated D4 sheetname to 'Drivers'.
+Changed D7 value from LED_0805_2012Metric to LED.
+Updated D4 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Connected D4 pin 1 to GND.
+Add net Net-(D4-A).
+Connected D4 pin 2 to Net-(D4-A).
+Added D5 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D5.
+Changed D5 value from LED_0805_2012Metric to LED.
+Updated D5 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/21aea55f-1b5c-40a5-a5b4-c3b55c648966.
+Updated D5 fields.
+Add net INJ2.
+Connected D8 pin 2 to Net-(D8-A).
+Added D9 (footprint 'Diode_SMD:D_SOD-323').
+Changed REF** reference designator to D9.
+Changed D9 value from D_SOD-323 to D.
+Updated D9 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/9268d217-b6a1-45cd-8f25-a7e0ae6ab64e.
+Updated D9 fields.
+Updated D9 sheetname to 'Drivers'.
+Updated D9 sheetfile to 'Drivers.kicad_sch'.
+Updated D9 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Add net Net-(D8-A).
+Connected D9 pin 1 to INJ2.
+Connected D9 pin 2 to Net-(D5-K).
+Added D10 (footprint 'Diode_SMD:D_SOD-323').
+Changed REF** reference designator to D10.
+Changed D10 value from D_SOD-323 to D.
+Updated D10 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/5db98e78-5a8f-497b-b8cb-b956e5a7f3fb.
+Updated D10 fields.
+Updated D10 sheetname to 'Drivers'.
+Updated D10 sheetfile to 'Drivers.kicad_sch'.
+Added D8 (footprint 'LED_SMD:LED_0805_2012Metric').
+Updated D7 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/3c970c0f-0e8e-4ed9-984c-e54d874813d9.
+Updated D7 fields.
+Updated D7 sheetname to 'Drivers'.
+Updated D7 sheetfile to 'Drivers.kicad_sch'.
+Updated D7 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Add net Net-(D11-A).
+Connected D7 pin 1 to Net-(D11-A).
+Add net Net-(D7-A).
+Connected D7 pin 2 to Net-(D7-A).
+Changed C28 value from C_0805_2012Metric to 0.22uF.
+Changed REF** reference designator to D8.
+Changed D8 value from LED_0805_2012Metric to LED.
+Updated D8 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/8cf53f69-76fb-422e-9940-2d93e407b135.
+Updated D8 fields.
+Updated D8 sheetname to 'Drivers'.
+Updated D8 sheetfile to 'Drivers.kicad_sch'.
+Updated D8 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Add net Net-(D12-A).
+Connected D8 pin 1 to Net-(D12-A).
+Updated C8 sheetname to 'Crank and Cam'.
+Updated C7 sheetname to 'Crank and Cam'.
+Updated C7 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated C7 footprint filters to 'C_*'.
+Connected C7 pin 1 to +5V.
+Connected C7 pin 2 to GND.
+Added C8 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C8.
+Changed C8 value from C_0805_2012Metric to 1nF.
+Updated C8 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/20eff38e-e1bd-4175-863d-046bc8ab6758.
+Updated C8 fields.
+Updated C7 fields.
+Updated C8 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated C8 footprint filters to 'C_*'.
+Add net Net-(IC1-IN2+).
+Connected C8 pin 2 to Net-(IC1-IN2+).
+Add net Net-(IC1-IN2-).
+Connected C8 pin 1 to Net-(IC1-IN2-).
+Added C9 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C9.
+Changed C9 value from C_0805_2012Metric to 0.1uF.
+Updated C6 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Add net Net-(C5-Pad1).
+Connected C5 pin 1 to Net-(C5-Pad1).
+Connected C5 pin 2 to GND.
+Added C6 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C6.
+Changed C6 value from C_0805_2012Metric to 1nF.
+Updated C6 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/d89f452d-0f0b-486a-8304-95b3c68e509c.
+Updated C6 fields.
+Updated C6 sheetname to 'Crank and Cam'.
+Updated C9 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/154c2f05-85be-4525-b16f-6406561bf6e9.
+Updated C6 footprint filters to 'C_*'.
+Add net Net-(IC1-IN1+).
+Connected C6 pin 1 to Net-(IC1-IN1+).
+Add net Net-(IC1-IN1-).
+Connected C6 pin 2 to Net-(IC1-IN1-).
+Added C7 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C7.
+Changed C7 value from C_0805_2012Metric to 0.01uF.
+Updated C7 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/bce43d8a-9d76-46e1-a225-16f038b0d775.
+Updated C12 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/90602d4e-8dff-4ee3-9144-2b4799e1276b.
+Updated C11 fields.
+Updated C11 sheetname to 'Drivers'.
+Updated C11 sheetfile to 'Drivers.kicad_sch'.
+Updated C11 footprint filters to 'C_*'.
+Connected C11 pin 2 to GND.
+Add net IGN_V+.
+Connected C11 pin 1 to IGN_V+.
+Added C12 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C12.
+Changed C12 value from C_0805_2012Metric to 0.1uF.
+Updated C11 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/4946a7bf-f18a-43f2-99f2-e4ea4ac81ae4.
+Updated C12 fields.
+Updated C12 sheetname to 'Drivers'.
+Updated C12 sheetfile to 'Drivers.kicad_sch'.
+Updated C12 footprint filters to 'C_*'.
+Connected C12 pin 2 to GND.
+Connected C12 pin 1 to IGN_V+.
+Added C13 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C13.
+Changed C13 value from C_0805_2012Metric to 0.1uF.
+Updated C10 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/c941c859-4ef0-4ede-a3a7-e53b63aeea26.
+Updated C9 fields.
+Updated C9 sheetname to 'Crank and Cam'.
+Updated C9 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated C9 footprint filters to 'C_*'.
+Connected C9 pin 2 to GND.
+Connected C9 pin 1 to +5V.
+Added C10 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C10.
+Changed C10 value from C_0805_2012Metric to 1uF.
+Updated C5 footprint filters to 'C_*'.
+Updated C10 fields.
+Updated C10 sheetname to 'Crank and Cam'.
+Updated C10 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated C10 footprint filters to 'C_*'.
+Connected C10 pin 2 to GND.
+Connected C10 pin 1 to +5V.
+Added C11 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C11.
+Changed C11 value from C_0805_2012Metric to 1uF.
+Added C1 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Added BT1 (footprint 'IC_Automotive:BAT_2999').
+Changed REF** reference designator to BT1.
+Changed BT1 value from BAT_2999 to Battery_Cell.
+Updated BT1 symbol association from  to /5691e5a4-d3f5-413a-8127-b8128c248ce0.
+Updated BT1 fields.
+Updated BT1 sheetname to 'Root'.
+Updated BT1 sheetfile to 'ECU.kicad_sch'.
+Connected A1 pin 9 to MCU-D30.
+Add net MCU-D30.
+Connected A1 pin 2 to unconnected-(A1-~{FLT}-Pad2).
+Connected A1 pin 7 to GND.
+Changed REF** reference designator to C1.
+Changed C1 value from C_0805_2012Metric to 0.1uF.
+Updated C1 symbol association from  to /7d18358f-5866-4651-8656-b451f5c8ca1d/81d6700c-579c-478c-aba2-d7043f062e8b.
+Updated C1 fields.
+Updated C1 sheetname to 'Comms'.
+Updated C1 sheetfile to 'Comms.kicad_sch'.
+Updated C1 footprint filters to 'C_*'.
+Connected C1 pin 1 to +3V3.
+Connected C1 pin 2 to GND.
+Add net GND.
+Add net Net-(A1-VMOT).
+Connected A1 pin 8 to Net-(A1-VMOT).
+Add net unconnected-(A1-M0-Pad10).
+Connected A1 pin 10 to unconnected-(A1-M0-Pad10).
+Connected A1 pin 13 to +3V3.
+Add net SPARE2-OUT.
+Connected A1 pin 6 to SPARE2-OUT.
+Add net STEPPER-A1.
+Connected A1 pin 4 to STEPPER-A1.
+Added C2 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Connected A1 pin 1 to GND.
+Add net SPARE1-OUT.
+Connected A1 pin 3 to SPARE1-OUT.
+Add net MCU-D32.
+Connected A1 pin 16 to MCU-D32.
+Add net unconnected-(A1-M1-Pad11).
+Connected A1 pin 11 to unconnected-(A1-M1-Pad11).
+Add net IDLE-OUT.
+Connected A1 pin 5 to IDLE-OUT.
+Add net Net-(C4-Pad2).
+Connected C3 pin 2 to MCU-A4.
+Added C4 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C4.
+Changed C4 value from C_0805_2012Metric to 0.01uF.
+Updated C4 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/cfaf705c-c179-4732-8130-e32b871e66b7.
+Updated C4 fields.
+Updated C4 sheetname to 'Crank and Cam'.
+Updated C4 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated C4 footprint filters to 'C_*'.
+Add net MCU-A4.
+Connected C4 pin 2 to Net-(C4-Pad2).
+Connected C4 pin 1 to GND.
+Added C5 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C5.
+Changed C5 value from C_0805_2012Metric to 4700pF.
+Updated C5 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/14715379-5794-419d-9af8-6ba59e6a3988.
+Updated C5 fields.
+Updated C5 sheetname to 'Crank and Cam'.
+Updated C5 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Connected C2 pin 2 to +5V.
+Changed REF** reference designator to C2.
+Changed C2 value from C_0805_2012Metric to 0.1uF.
+Updated C2 symbol association from  to /7d18358f-5866-4651-8656-b451f5c8ca1d/2c7b1587-1040-4c61-a5b0-a1c7438d408e.
+Updated C2 fields.
+Updated C2 sheetname to 'Comms'.
+Updated C2 sheetfile to 'Comms.kicad_sch'.
+Updated C2 footprint filters to 'C_*'.
+Connected C2 pin 1 to GND.
+Add net +5V.
+Updated C13 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/203f9d48-f11c-4b2f-b2e8-335e3f3328df.
+Added C3 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C3.
+Changed C3 value from C_0805_2012Metric to 0.1uF.
+Updated C3 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/30547f28-506c-4ab3-b907-b12fe1613437.
+Updated C3 fields.
+Updated C3 sheetname to 'Crank and Cam'.
+Updated C3 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated C3 footprint filters to 'C_*'.
+Connected C3 pin 1 to GND.
+Updated C23 sheetname to 'Inputs'.
+Updated C22 sheetname to 'Inputs'.
+Updated C22 sheetfile to 'Inputs.kicad_sch'.
+Updated C22 footprint filters to 'C_*'.
+Connected C22 pin 2 to VDDA.
+Connected C22 pin 1 to GND.
+Added C23 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C23.
+Changed C23 value from C_0805_2012Metric to 0.1uF.
+Updated C23 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/314239a8-853b-429d-930b-7c110dfb8cd9.
+Updated C23 fields.
+Updated C22 fields.
+Updated C23 sheetfile to 'Inputs.kicad_sch'.
+Updated C23 footprint filters to 'C_*'.
+Connected C23 pin 1 to GND.
+Add net BARO-5V.
+Connected C23 pin 2 to BARO-5V.
+Added C24 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C24.
+Changed C24 value from C_0805_2012Metric to 0.22uF.
+Updated C24 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/0592b161-3a98-4921-b1f0-840b39c18fb4.
+Updated C21 sheetname to 'Inputs'.
+Updated C20 footprint filters to 'C_*'.
+Add net IAT_Sensor.
+Connected C20 pin 1 to IAT_Sensor.
+Connected C20 pin 2 to GND.
+Added C21 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C21.
+Changed C21 value from C_0805_2012Metric to 0.1uF.
+Updated C21 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/145fc439-0678-40c4-be9e-500a89bf403b.
+Updated C21 fields.
+Updated C24 fields.
+Updated C21 sheetfile to 'Inputs.kicad_sch'.
+Updated C21 footprint filters to 'C_*'.
+Add net CLT_Sensor.
+Connected C21 pin 1 to CLT_Sensor.
+Connected C21 pin 2 to GND.
+Added C22 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C22.
+Changed C22 value from C_0805_2012Metric to 1uF.
+Updated C22 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/fad316ed-c9d3-43e1-b363-31b02df6e0bc.
+Changed C27 value from C_1206_3216Metric to 100uF.
+Updated C26 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/5d9ce8d1-6abd-40e8-a15e-1478424e0384.
+Updated C26 fields.
+Updated C26 sheetname to 'Inputs'.
+Updated C26 sheetfile to 'Inputs.kicad_sch'.
+Updated C26 footprint filters to 'C_*'.
+Add net TPS_Sensor.
+Connected C26 pin 1 to TPS_Sensor.
+Connected C26 pin 2 to GND.
+Added C27 (footprint 'Capacitor_SMD:C_1206_3216Metric').
+Changed REF** reference designator to C27.
+Changed C26 value from C_0805_2012Metric to 0.1uF.
+Updated C27 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/c01c2da8-1762-4d3a-9594-adbe99664136.
+Updated C27 fields.
+Updated C27 sheetname to 'Inputs'.
+Updated C27 sheetfile to 'Inputs.kicad_sch'.
+Updated C27 footprint filters to 'C_*'.
+Connected C27 pin 2 to +3V3.
+Connected C27 pin 1 to GND.
+Added C28 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C28.
+Updated C25 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/35fb653d-10b2-4509-98a1-071ae3c872ef.
+Updated C24 sheetname to 'Inputs'.
+Updated C24 sheetfile to 'Inputs.kicad_sch'.
+Updated C24 footprint filters to 'C_*'.
+Add net ADC-Clamp-11.
+Connected C24 pin 1 to ADC-Clamp-11.
+Connected C24 pin 2 to GND.
+Added C25 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C25.
+Changed C25 value from C_0805_2012Metric to 0.22uF.
+Updated C20 sheetfile to 'Inputs.kicad_sch'.
+Updated C25 fields.
+Updated C25 sheetname to 'Inputs'.
+Updated C25 sheetfile to 'Inputs.kicad_sch'.
+Updated C25 footprint filters to 'C_*'.
+Connected C25 pin 2 to GND.
+Add net ADC-Clamp-12.
+Connected C25 pin 1 to ADC-Clamp-12.
+Added C26 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C26.
+Changed REF** reference designator to C16.
+Changed C15 value from C_0805_2012Metric to 270nF.
+Updated C15 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/6f60ea07-6a22-4b38-94a9-bc8d0d38da52.
+Updated C15 fields.
+Updated C15 sheetname to 'Inputs'.
+Updated C15 sheetfile to 'Inputs.kicad_sch'.
+Updated C15 footprint filters to 'C_*'.
+Connected C15 pin 2 to GND.
+Add net ADC-Clamp-5.
+Connected C15 pin 1 to ADC-Clamp-5.
+Added C16 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C15.
+Changed C16 value from C_0805_2012Metric to 0.22uF.
+Updated C16 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/a3b699f1-f9c8-49ee-a3bd-5a6942ff87ef.
+Updated C16 fields.
+Updated C16 sheetname to 'Inputs'.
+Updated C16 sheetfile to 'Inputs.kicad_sch'.
+Updated C16 footprint filters to 'C_*'.
+Add net O2-5V.
+Connected C16 pin 1 to O2-5V.
+Add net unconnected-(A1-~{FLT}-Pad2).
+Changed C14 value from C_0805_2012Metric to 0.1uF.
+Updated C13 fields.
+Updated C13 sheetname to 'Inputs'.
+Updated C13 sheetfile to 'Inputs.kicad_sch'.
+Updated C13 footprint filters to 'C_*'.
+Connected C13 pin 2 to GND.
+Add net O2_Sensor.
+Connected C13 pin 1 to O2_Sensor.
+Added C14 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C14.
+Connected C16 pin 2 to GND.
+Updated C14 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/14a9c0a3-a8ea-45ad-870e-c26215a866f8.
+Updated C14 fields.
+Updated C14 sheetname to 'Inputs'.
+Updated C14 sheetfile to 'Inputs.kicad_sch'.
+Updated C14 footprint filters to 'C_*'.
+Add net Net-(C14-Pad1).
+Connected C14 pin 1 to Net-(C14-Pad1).
+Connected C14 pin 2 to GND.
+Added C15 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Updated C19 footprint filters to 'C_*'.
+Connected C18 pin 1 to ADC-Clamp-6.
+Connected C18 pin 2 to GND.
+Added C19 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C19.
+Changed C19 value from C_0805_2012Metric to 0.01uF.
+Updated C19 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/3eefbd0c-5ed5-4d71-93d2-edb0ed0c1251.
+Updated C19 fields.
+Updated C19 sheetname to 'Inputs'.
+Updated C19 sheetfile to 'Inputs.kicad_sch'.
+Add net ADC-Clamp-6.
+Connected C19 pin 1 to GND.
+Add net VDDA.
+Connected C19 pin 2 to VDDA.
+Added C20 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C20.
+Changed C20 value from C_0805_2012Metric to 0.1uF.
+Updated C20 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/2d8ddd49-61f4-467f-b62b-531511e9ab09.
+Updated C20 fields.
+Updated C20 sheetname to 'Inputs'.
+Add net ADC-Clamp-7.
+Added C17 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C17.
+Changed C17 value from C_0805_2012Metric to 0.22uF.
+Updated C17 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/ff20a684-93b7-4976-9c30-5ded6248d6a8.
+Updated C17 fields.
+Updated C17 sheetname to 'Inputs'.
+Updated C17 sheetfile to 'Inputs.kicad_sch'.
+Updated C17 footprint filters to 'C_*'.
+Connected C17 pin 2 to GND.
+Updated D16 sheetfile to 'Drivers.kicad_sch'.
+Connected C17 pin 1 to ADC-Clamp-7.
+Added C18 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C18.
+Changed C18 value from C_0805_2012Metric to 270nF.
+Updated C18 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/9162b058-065b-45dc-8d0e-f3ecb640db36.
+Updated C18 fields.
+Updated C18 sheetname to 'Inputs'.
+Updated C18 sheetfile to 'Inputs.kicad_sch'.
+Updated C18 footprint filters to 'C_*'.
+Connected J4 pin B3 to VDDA.
+Changed J** reference designator to J4.
+Updated J4 symbol association from  to /6dc40af5-f3aa-4e23-baf5-2c7690c42731/ab45d12f-942a-4d4e-a6c7-ae2666efd306.
+Updated J4 fields.
+Updated J4 sheetname to 'Inputs'.
+Updated J4 sheetfile to 'Inputs.kicad_sch'.
+Add net unconnected-(J4-PadA5).
+Connected J4 pin A5 to unconnected-(J4-PadA5).
+Connected J4 pin A2 to GND.
+Add net Net-(SW5-NO_1).
+Connected J4 pin A1 to Net-(SW5-NO_1).
+Added J4 (footprint 'Misc:EBC05DRXN').
+Connected J4 pin B1 to Net-(SW5-NO_1).
+Add net unconnected-(J4-PadB5).
+Connected J4 pin B5 to unconnected-(J4-PadB5).
+Add net unconnected-(J4-PadA4).
+Connected J4 pin A4 to unconnected-(J4-PadA4).
+Add net unconnected-(J4-PadB4).
+Connected J4 pin B4 to unconnected-(J4-PadB4).
+Connected J4 pin A3 to VDDA.
+Connected J4 pin B2 to GND.
+Add net CAN_L.
+Connected J3 pin A1 to 12V-SW.
+Add net unconnected-(J3-PadA4).
+Connected J3 pin A4 to unconnected-(J3-PadA4).
+Connected J3 pin A8 to GND.
+Add net SPARE1-Digital.
+Connected J3 pin B6 to SPARE1-Digital.
+Add net MAP_External.
+Connected J3 pin C8 to MAP_External.
+Connected J3 pin C4 to O2_Sensor.
+Added JP1 (footprint 'Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm').
+Connected J3 pin A6 to CAN_L.
+Connected J3 pin A3 to VDDA.
+Add net CRANK-IN+.
+Connected J3 pin B2 to CRANK-IN+.
+Connected J3 pin A2 to GND.
+Connected J3 pin B7 to ADC-Clamp-6.
+Connected J3 pin B8 to ADC-Clamp-5.
+Add net SPARE1_Sensor.
+Connected J3 pin C2 to SPARE1_Sensor.
+Add net Net-(JP3-B).
+Connected JP2 pin 2 to MCU-A5.
+Added JP3 (footprint 'Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm').
+Changed REF** reference designator to JP3.
+Changed JP3 value from SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm to Jumper_2_Open.
+Updated JP3 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/84e8bc38-fadc-487b-8682-06e9ad0d1a19.
+Updated JP3 sheetname to 'Crank and Cam'.
+Updated JP3 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated JP3 footprint filters to 'Jumper* TestPoint*2Pads* TestPoint*Bridge*'.
+Removed JP3 'exclude from BOM' fabrication attribute.
+Connected JP3 pin 1 to MCU-A4.
+Connected JP2 pin 1 to Net-(JP2-A).
+Connected JP3 pin 2 to Net-(JP3-B).
+Added JP4 (footprint 'Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm').
+Changed REF** reference designator to JP4.
+Changed JP4 value from SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm to Jumper_2_Open.
+Updated JP4 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/0c0a23c4-b248-42cb-bfcb-72a70cacf068.
+Updated JP4 sheetname to 'Power Regulator'.
+Updated JP4 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated JP4 footprint filters to 'Jumper* TestPoint*2Pads* TestPoint*Bridge*'.
+Removed JP4 'exclude from BOM' fabrication attribute.
+Connected JP1 pin 2 to Net-(JP1-Pad2).
+Changed REF** reference designator to JP1.
+Changed JP1 value from SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm to Jumper_NO_Small.
+Updated JP1 symbol association from  to /7d18358f-5866-4651-8656-b451f5c8ca1d/e7b87ec9-433f-4ca3-b651-212769e9256c.
+Updated JP1 sheetname to 'Comms'.
+Updated JP1 sheetfile to 'Comms.kicad_sch'.
+Updated JP1 footprint filters to 'SolderJumper*Open* Jumper* TestPoint*2Pads* TestPoint*Bridge*'.
+Removed JP1 'exclude from BOM' fabrication attribute.
+Connected JP1 pin 1 to CAN_H.
+Add net Net-(JP1-Pad2).
+Connected J3 pin C7 to TPS_Sensor.
+Added JP2 (footprint 'Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm').
+Changed REF** reference designator to JP2.
+Changed JP2 value from SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm to Jumper_2_Open.
+Updated JP2 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/fb277564-3fec-4561-a25c-ae19b24a99e8.
+Updated JP2 sheetname to 'Crank and Cam'.
+Updated JP2 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated JP2 footprint filters to 'Jumper* TestPoint*2Pads* TestPoint*Bridge*'.
+Removed JP2 'exclude from BOM' fabrication attribute.
+Add net Net-(JP2-A).
+Connected J2 pin A8 to INJ8.
+Updated J2 symbol association from  to /a9903762-e61d-4762-913c-0f836ea1045d/1e2ef174-0c2e-4a89-8767-d1cd93c4a311.
+Updated J2 sheetname to 'Conntectors'.
+Updated J2 sheetfile to 'Conntectors.kicad_sch'.
+Connected J2 pin A7 to INJ7.
+Connected J2 pin A5 to INJ5.
+Add net IGN4.
+Connected J2 pin B4 to IGN4.
+Connected J2 pin C2 to FAN-OUT.
+Add net IGN8.
+Connected J2 pin B8 to IGN8.
+Changed J2 value from Delphi_Sicma_24_Grey to Delphi_Sicma_24.
+Connected J2 pin A6 to INJ6.
+Connected J2 pin C4 to IDLE-OUT.
+Add net FUELPUMP-OUT.
+Connected J2 pin C7 to FUELPUMP-OUT.
+Connected J2 pin A4 to INJ4.
+Add net IGN6.
+Connected J2 pin B6 to IGN6.
+Connected J2 pin A2 to INJ2.
+Add net IGN1.
+Updated J1 sheetfile to 'Comms.kicad_sch'.
+Add net Net-(IC4-INPUT_2).
+Connected IC4 pin 3 to Net-(IC4-INPUT_2).
+Connected IC4 pin 4 to GND.
+Connected IC4 pin 6 to BOOST-OUT.
+Added J1 (footprint 'Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical').
+Changed REF** reference designator to J1.
+Changed J1 value from PinHeader_1x04_P2.54mm_Vertical to Conn_01x04.
+Updated J1 symbol association from  to /7d18358f-5866-4651-8656-b451f5c8ca1d/5b80ba6f-8516-467b-b230-7a40d5af3ba1.
+Updated J1 sheetname to 'Comms'.
+Connected J2 pin B1 to IGN1.
+Updated J1 footprint filters to 'Connector*:*_1x??_*'.
+Connected J1 pin 1 to +5V.
+Add net MCU-D1.
+Connected J1 pin 4 to MCU-D1.
+Add net MCU-D0.
+Connected J1 pin 3 to MCU-D0.
+Connected J1 pin 2 to GND.
+Added J2 (footprint 'Connector_Automotive:Delphi_Sicma_24_Grey').
+Changed REF** reference designator to J2.
+Connected J3 pin C3 to SPARE2_Sensor.
+Updated J3 sheetfile to 'Conntectors.kicad_sch'.
+Add net CRANK-IN-.
+Connected J3 pin B3 to CRANK-IN-.
+Add net CAM-IN+.
+Connected J3 pin B4 to CAM-IN+.
+Add net CAN_H.
+Connected J3 pin A7 to CAN_H.
+Connected J3 pin C5 to CLT_Sensor.
+Add net SPARE2_Sensor.
+Updated J3 sheetname to 'Conntectors'.
+Add net ROUT2.
+Connected J3 pin B1 to ROUT2.
+Connected J3 pin C6 to IAT_Sensor.
+Add net GNDA.
+Connected J3 pin C1 to GNDA.
+Add net SPARE2-Digital.
+Connected J3 pin A5 to SPARE2-Digital.
+Add net CAM-IN-.
+Connected J3 pin B5 to CAM-IN-.
+Connected J2 pin B5 to IGN5.
+Connected J2 pin C5 to STEPPER-A1.
+Connected J2 pin C8 to GND.
+Add net IGN3.
+Connected J2 pin B3 to IGN3.
+Connected J2 pin C6 to SPARE1-OUT.
+Connected J2 pin A1 to INJ1.
+Connected J2 pin A3 to INJ3.
+Connected J2 pin C3 to SPARE2-OUT.
+Add net IGN5.
+Connected JP4 pin 2 to VDDA.
+Add net IGN7.
+Connected J2 pin B7 to IGN7.
+Connected J2 pin C1 to BOOST-OUT.
+Add net IGN2.
+Connected J2 pin B2 to IGN2.
+Added J3 (footprint 'Connector_Automotive:Delphi_Sicma_24_Black').
+Changed REF** reference designator to J3.
+Changed J3 value from Delphi_Sicma_24_Black to Delphi_Sicma_24.
+Updated J3 symbol association from  to /a9903762-e61d-4762-913c-0f836ea1045d/95b376c7-0ef1-49ce-b317-7421e8155d8b.
+Connected R7 pin 2 to Net-(IC1-IN2-).
+Connected R6 pin 1 to CRANK-IN-.
+Connected R6 pin 2 to Net-(IC1-IN1-).
+Added R7 (footprint 'Resistor_SMD:R_1206_3216Metric').
+Changed REF** reference designator to R7.
+Changed R7 value from R_1206_3216Metric to 10k.
+Updated R7 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/b88bd5f0-4b13-4fdd-9c95-035203d47b8b.
+Updated R7 fields.
+Updated R7 sheetname to 'Crank and Cam'.
+Updated R7 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated R7 footprint filters to 'R_*'.
+Updated R6 footprint filters to 'R_*'.
+Connected R7 pin 1 to CAM-IN-.
+Added R8 (footprint 'Resistor_SMD:R_1206_3216Metric').
+Changed REF** reference designator to R8.
+Changed R8 value from R_1206_3216Metric to 10k.
+Updated R8 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/f64f6a69-da5d-474f-92b5-688f2c7ec4d9.
+Updated R8 fields.
+Updated R8 sheetname to 'Crank and Cam'.
+Updated R8 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated R8 footprint filters to 'R_*'.
+Add net VR1-IN+.
+Connected R4 pin 1 to +3V3.
+Added R5 (footprint 'Resistor_SMD:R_1206_3216Metric').
+Changed REF** reference designator to R5.
+Changed R5 value from R_1206_3216Metric to 10k.
+Updated R5 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/3d49f44b-5a92-459c-a732-e1048b856c55.
+Updated R5 fields.
+Updated R5 sheetname to 'Crank and Cam'.
+Updated R5 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated R5 footprint filters to 'R_*'.
+Connected R8 pin 2 to Net-(IC1-IN2+).
+Connected R5 pin 1 to VR1-IN+.
+Connected R5 pin 2 to Net-(IC1-IN1+).
+Added R6 (footprint 'Resistor_SMD:R_1206_3216Metric').
+Changed REF** reference designator to R6.
+Changed R6 value from R_1206_3216Metric to 10k.
+Updated R6 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/8e9d9523-7e90-40a7-815a-d562e95cf372.
+Updated R6 fields.
+Updated R6 sheetname to 'Crank and Cam'.
+Updated R6 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Connected R11 pin 1 to Net-(D3-A).
+Connected R10 pin 1 to Net-(D2-A).
+Connected R10 pin 2 to IGN2.
+Added R11 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R11.
+Changed R11 value from R_0805_2012Metric to 1k.
+Updated R11 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/6930ebc0-1f59-4312-87d3-6cebb1372185.
+Updated R11 fields.
+Updated R11 sheetname to 'Drivers'.
+Updated R11 sheetfile to 'Drivers.kicad_sch'.
+Updated R11 footprint filters to 'R_*'.
+Updated R10 footprint filters to 'R_*'.
+Connected R11 pin 2 to IGN5.
+Added R12 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R12.
+Changed R12 value from R_0805_2012Metric to 1k.
+Updated R12 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/51106b95-9f39-48b4-ab2e-2635fd45cb68.
+Updated R12 fields.
+Updated R12 sheetname to 'Drivers'.
+Updated R12 sheetfile to 'Drivers.kicad_sch'.
+Updated R12 footprint filters to 'R_*'.
+Updated R9 footprint filters to 'R_*'.
+Add net VR2-IN+.
+Connected R8 pin 1 to VR2-IN+.
+Added R9 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R9.
+Changed R9 value from R_0805_2012Metric to 1k.
+Updated R9 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/0e085e12-d126-4bc6-a249-7050237eaa93.
+Updated R9 fields.
+Updated R9 sheetname to 'Drivers'.
+Updated R9 sheetfile to 'Drivers.kicad_sch'.
+Connected R4 pin 2 to MCU-A4.
+Connected R9 pin 2 to IGN1.
+Connected R9 pin 1 to Net-(D1-A).
+Added R10 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R10.
+Changed R10 value from R_0805_2012Metric to 1k.
+Updated R10 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/6d8ec400-0db9-46a2-bd21-36ae0ae01dfc.
+Updated R10 fields.
+Updated R10 sheetname to 'Drivers'.
+Updated R10 sheetfile to 'Drivers.kicad_sch'.
+Changed REF** reference designator to Q3.
+Updated Q2 sheetname to 'Inputs 2'.
+Updated Q2 sheetfile to 'Inputs2.kicad_sch'.
+Updated Q2 footprint filters to 'TSOP* SC?70* SC?88* SOT?363*'.
+Connected Q2 pin 4 to MCU-A8.
+Connected Q2 pin 1 to MCU-A9.
+Connected Q2 pin 2 to +3V3.
+Connected Q2 pin 3 to SPARE2-Digital.
+Connected Q2 pin 5 to +3V3.
+Connected Q2 pin 6 to SPARE1-Digital.
+Added Q3 (footprint 'Package_TO_SOT_SMD:SOT-223-3_TabPin2').
+Updated Q2 fields.
+Changed Q3 value from SOT-223-3_TabPin2 to Q_PNP_BCEC.
+Updated Q3 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/33be7756-a6d2-4ca9-a9a9-3a0b0f2b3017.
+Updated Q3 fields.
+Updated Q3 sheetname to 'Power Regulator'.
+Updated Q3 sheetfile to 'Power-Regulator.kicad_sch'.
+Connected Q3 pin 2 to VPPSENS.
+Add net VPPREF.
+Connected Q3 pin 1 to VPPREF.
+Connected Q3 pin 3 to 12V-PROT.
+Connected Q1 pin 1 to MCU-A5.
+Connected JP4 pin 1 to +5V.
+Added Q1 (footprint 'Package_TO_SOT_SMD:SOT-363_SC-70-6').
+Changed REF** reference designator to Q1.
+Changed Q1 value from SOT-363_SC-70-6 to Q_DUAL_NMOS_S1G1D2S2G2D1.
+Updated Q1 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/9cd87464-a314-44f7-a7e5-16b187ee3811.
+Updated Q1 fields.
+Updated Q1 sheetname to 'Crank and Cam'.
+Updated Q1 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated Q1 footprint filters to 'TSOP* SC?70* SC?88* SOT?363*'.
+Connected Q3 pin 2 to VPPSENS.
+Connected Q1 pin 2 to +3V3.
+Connected Q1 pin 4 to MCU-A4.
+Connected Q1 pin 6 to Net-(JP2-A).
+Connected Q1 pin 5 to +3V3.
+Connected Q1 pin 3 to Net-(JP3-B).
+Added Q2 (footprint 'Package_TO_SOT_SMD:SOT-363_SC-70-6').
+Changed REF** reference designator to Q2.
+Changed Q2 value from SOT-363_SC-70-6 to Q_DUAL_NMOS_S1G1D2S2G2D1.
+Updated Q2 symbol association from  to /208a416e-a5c2-4c6c-835c-57e49c0491be/9f0bae11-a6b3-4f40-bdf8-79cc9675d607.
+Connected R3 pin 2 to +3V3.
+Connected R2 pin 2 to Net-(JP1-Pad2).
+Added R3 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R3.
+Changed R3 value from R_0805_2012Metric to 1k.
+Updated R3 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/4922ccf5-d97f-4fb9-9671-011f1eaa4f84.
+Updated R3 fields.
+Updated R3 sheetname to 'Crank and Cam'.
+Updated R3 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated R3 footprint filters to 'R_*'.
+Connected R2 pin 1 to CAN_L.
+Connected R3 pin 1 to MCU-A5.
+Added R4 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R4.
+Changed R4 value from R_0805_2012Metric to 1k.
+Updated R4 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/f8117498-508e-4644-addf-bc047321ecbd.
+Updated R4 fields.
+Updated R4 sheetname to 'Crank and Cam'.
+Updated R4 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Updated R4 footprint filters to 'R_*'.
+Add net Net-(U2-STBY).
+Added R1 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Changed REF** reference designator to R1.
+Changed R1 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 0R.
+Updated R1 symbol association from  to /7d18358f-5866-4651-8656-b451f5c8ca1d/e77eba05-7d9e-4386-a64c-8745e4f30ded.
+Updated R1 fields.
+Updated R1 sheetname to 'Comms'.
+Updated R1 sheetfile to 'Comms.kicad_sch'.
+Updated R1 footprint filters to 'R_*'.
+Connected R1 pin 1 to GND.
+Connected IC4 pin 5 to BOOST-OUT.
+Connected R1 pin 2 to Net-(U2-STBY).
+Added R2 (footprint 'Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder').
+Changed REF** reference designator to R2.
+Changed R2 value from R_0805_2012Metric_Pad1.20x1.40mm_HandSolder to 120R.
+Updated R2 symbol association from  to /7d18358f-5866-4651-8656-b451f5c8ca1d/076da79c-155c-4a15-9b02-25d414ba8b1b.
+Updated R2 fields.
+Updated R2 sheetname to 'Comms'.
+Updated R2 sheetfile to 'Comms.kicad_sch'.
+Updated R2 footprint filters to 'R_*'.
+Updated D26 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Connected D25 pin 2 to IDLE-OUT.
+Add net 12V-SW.
+Connected D25 pin 1 to 12V-SW.
+Added D26 (footprint 'Diode_SMD:D_SOD-323').
+Changed REF** reference designator to D26.
+Changed D26 value from D_SOD-323 to D.
+Updated D26 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/a82c980b-8837-41c1-927a-b373cc7a5e56.
+Updated D26 fields.
+Updated D26 sheetname to 'Outputs'.
+Updated D26 sheetfile to 'Outputs.kicad_sch'.
+Updated D25 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Connected D26 pin 1 to 12V-SW.
+Connected D26 pin 2 to SPARE2-OUT.
+Added D27 (footprint 'Diode_SMD:D_PowerDI-123').
+Changed REF** reference designator to D27.
+Changed D27 value from D_PowerDI-123 to D_Schottky.
+Updated D27 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/cb08c4a9-6651-454c-a5e2-96dd831a3ae0.
+Updated D27 fields.
+Updated D27 sheetname to 'Outputs'.
+Updated D27 sheetfile to 'Outputs.kicad_sch'.
+Add net Net-(D24-A).
+Connected D23 pin 1 to GND.
+Added D24 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D24.
+Changed D24 value from LED_0805_2012Metric to LED.
+Updated D24 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/bb32d224-3825-48ec-8edf-fa718ce0d397.
+Updated D24 fields.
+Updated D24 sheetname to 'Drivers'.
+Updated D24 sheetfile to 'Drivers.kicad_sch'.
+Updated D24 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Updated D27 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Connected D24 pin 2 to Net-(D24-A).
+Connected D24 pin 1 to GND.
+Added D25 (footprint 'Diode_SMD:D_SOD-323').
+Changed REF** reference designator to D25.
+Changed D25 value from D_SOD-323 to D.
+Updated D25 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/50c9dd76-571d-492a-b15e-55fea9c17113.
+Updated D25 fields.
+Updated D25 sheetname to 'Outputs'.
+Updated D25 sheetfile to 'Outputs.kicad_sch'.
+Updated D30 sheetfile to 'Outputs.kicad_sch'.
+Updated D29 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Add net BOOST-OUT.
+Connected D29 pin 2 to BOOST-OUT.
+Connected D29 pin 1 to 12V-SW.
+Added D30 (footprint 'Diode_SMD:D_SOD-323').
+Changed REF** reference designator to D30.
+Changed D30 value from D_SOD-323 to D.
+Updated D30 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/d9beb5e3-e00b-49fa-a4fd-8ca013e4392d.
+Updated D30 fields.
+Updated D30 sheetname to 'Outputs'.
+Updated D29 sheetfile to 'Outputs.kicad_sch'.
+Updated D30 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Connected D30 pin 2 to SPARE1-OUT.
+Connected D30 pin 1 to 12V-SW.
+Added D31 (footprint 'Diode_SMD:D_SOD-323').
+Changed REF** reference designator to D31.
+Changed D31 value from D_SOD-323 to D.
+Updated D31 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/cd2f499c-78b8-4a1b-bac1-59dc1dba4011.
+Updated D31 fields.
+Updated D31 sheetname to 'Outputs'.
+Updated D28 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Connected D27 pin 2 to 12V-SW.
+Connected D27 pin 1 to Net-(A1-VMOT).
+Added D28 (footprint 'Diode_SMD:D_SOD-323').
+Changed REF** reference designator to D28.
+Changed D28 value from D_SOD-323 to D.
+Updated D28 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/4f809d34-6c99-40e4-aaee-00097f4042eb.
+Updated D28 fields.
+Updated D28 sheetname to 'Outputs'.
+Updated D28 sheetfile to 'Outputs.kicad_sch'.
+Connected D23 pin 2 to Net-(D23-A).
+Connected D28 pin 1 to 12V-SW.
+Add net FAN-OUT.
+Connected D28 pin 2 to FAN-OUT.
+Added D29 (footprint 'Diode_SMD:D_SOD-323').
+Changed REF** reference designator to D29.
+Changed D29 value from D_SOD-323 to D.
+Updated D29 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/3f31b60d-3be2-4b98-ba59-875cffdf43de.
+Updated D29 fields.
+Updated D29 sheetname to 'Outputs'.
+Updated D19 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/14b19194-ae5d-4a60-b180-2f5cb99cb2c4.
+Updated D18 fields.
+Updated D18 sheetname to 'Drivers'.
+Updated D18 sheetfile to 'Drivers.kicad_sch'.
+Updated D18 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Add net Net-(D18-A).
+Connected D18 pin 2 to Net-(D18-A).
+Connected D18 pin 1 to Net-(D13-A).
+Added D19 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D19.
+Changed D19 value from LED_0805_2012Metric to LED.
+Updated D18 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/35965f9b-df20-4611-a509-112fa56ea728.
+Updated D19 fields.
+Updated D19 sheetname to 'Drivers'.
+Updated D19 sheetfile to 'Drivers.kicad_sch'.
+Updated D19 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Add net Net-(D19-A).
+Connected D19 pin 2 to Net-(D19-A).
+Connected D19 pin 1 to Net-(D15-A).
+Added D20 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D20.
+Updated D17 fields.
+Updated D16 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Add net Net-(D16-A).
+Connected D16 pin 2 to Net-(D16-A).
+Add net INJ8.
+Connected D16 pin 1 to INJ8.
+Added D17 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D17.
+Changed D17 value from LED_0805_2012Metric to LED.
+Updated D17 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/7e2824b3-f3be-4c64-8eeb-0f00822d1c33.
+Changed D20 value from LED_0805_2012Metric to LED.
+Updated D17 sheetname to 'Drivers'.
+Updated D17 sheetfile to 'Drivers.kicad_sch'.
+Updated D17 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Add net Net-(D17-A).
+Connected D17 pin 2 to Net-(D17-A).
+Connected D17 pin 1 to Net-(D14-A).
+Added D18 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D18.
+Changed D18 value from LED_0805_2012Metric to LED.
+Connected D22 pin 1 to GND.
+Changed REF** reference designator to D22.
+Changed D22 value from LED_0805_2012Metric to LED.
+Updated D22 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/41b8f65e-5c94-46a5-afaa-c2fe24517bf8.
+Updated D22 fields.
+Updated D22 sheetname to 'Drivers'.
+Updated D22 sheetfile to 'Drivers.kicad_sch'.
+Updated D22 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Add net Net-(D22-A).
+Connected D22 pin 2 to Net-(D22-A).
+Added D22 (footprint 'LED_SMD:LED_0805_2012Metric').
+Added D23 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D23.
+Changed D23 value from LED_0805_2012Metric to LED.
+Updated D23 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/ea93c7f7-cb89-4d52-9bc8-e0f88668457c.
+Updated D23 fields.
+Updated D23 sheetname to 'Drivers'.
+Updated D23 sheetfile to 'Drivers.kicad_sch'.
+Updated D23 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Add net Net-(D23-A).
+Changed REF** reference designator to D21.
+Updated D20 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/3306501a-87fd-4b50-b46e-7de30ce1253c.
+Updated D20 fields.
+Updated D20 sheetname to 'Drivers'.
+Updated D20 sheetfile to 'Drivers.kicad_sch'.
+Updated D20 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Add net Net-(D20-A).
+Connected D20 pin 2 to Net-(D20-A).
+Connected D20 pin 1 to Net-(D16-A).
+Added D21 (footprint 'LED_SMD:LED_0805_2012Metric').
+Updated D31 sheetfile to 'Outputs.kicad_sch'.
+Changed D21 value from LED_0805_2012Metric to LED.
+Updated D21 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/9cc576dc-bb85-4c73-9bd4-1ea1a52fdc92.
+Updated D21 fields.
+Updated D21 sheetname to 'Drivers'.
+Updated D21 sheetfile to 'Drivers.kicad_sch'.
+Updated D21 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Add net Net-(D21-A).
+Connected D21 pin 2 to Net-(D21-A).
+Connected D21 pin 1 to GND.
+Connected IC1 pin 12 to unconnected-(IC1-DIRN-Pad12).
+Connected IC1 pin 13 to GND.
+Add net MCU-A5.
+Connected IC1 pin 4 to MCU-A5.
+Connected IC1 pin 3 to GND.
+Connected IC1 pin 16 to Net-(IC1-IN1+).
+Connected IC1 pin 9 to Net-(IC1-IN2+).
+Connected IC1 pin 6 to GND.
+Connected IC1 pin 14 to +5V.
+Connected IC1 pin 10 to Net-(IC1-IN2-).
+Add net unconnected-(IC1-DIRN-Pad12).
+Connected IC1 pin 7 to unconnected-(IC1-EXT2-Pad7).
+Add net unconnected-(IC1-EXT1-Pad2).
+Connected IC1 pin 2 to unconnected-(IC1-EXT1-Pad2).
+Connected IC1 pin 11 to GND.
+Added IC2 (footprint 'ZXMS6006DT8TA:SOT153P700X170-8N').
+Changed IC** reference designator to IC2.
+Changed IC2 value from SOT153P700X170-8N to ZXMS6006DT8.
+Updated IC2 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/bdd0b064-d799-4726-95c4-02f701482a50.
+Updated IC2 fields.
+Updated IC2 sheetname to 'Outputs'.
+Changed IC1 value from QSOP-16_3.9x4.9mm_P0.635mm to MAX9926UAEE_V+.
+Updated F2 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/5dc48feb-5cd4-4763-94bd-82da42eb2170.
+Updated F2 fields.
+Updated F2 sheetname to 'Power Regulator'.
+Updated F2 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated F2 footprint filters to '*Fuse*'.
+Connected F2 pin 2 to VDDA.
+Connected F2 pin 1 to Net-(U15-VPROT).
+Added IC1 (footprint 'Package_SO:QSOP-16_3.9x4.9mm_P0.635mm').
+Changed REF** reference designator to IC1.
+Updated IC2 sheetfile to 'Outputs.kicad_sch'.
+Updated IC1 symbol association from  to /34d8184b-485a-4241-8a68-5c8e24cc7ad9/87d6bae6-4f96-4f3b-9b8b-68e9d0be73f1.
+Updated IC1 fields.
+Updated IC1 sheetname to 'Crank and Cam'.
+Updated IC1 sheetfile to 'Crank-and-Cam.kicad_sch'.
+Connected IC1 pin 1 to GND.
+Connected IC1 pin 5 to MCU-A4.
+Connected IC1 pin 8 to GND.
+Connected IC1 pin 15 to Net-(IC1-IN1-).
+Add net unconnected-(IC1-EXT2-Pad7).
+Changed IC4 value from SOT153P700X170-8N to ZXMS6006DT8.
+Add net Net-(IC3-INPUT_2).
+Connected IC3 pin 3 to Net-(IC3-INPUT_2).
+Connected IC3 pin 4 to GND.
+Connected IC3 pin 8 to SPARE1-OUT.
+Add net Net-(IC3-INPUT_1).
+Connected IC3 pin 1 to Net-(IC3-INPUT_1).
+Connected IC3 pin 6 to STEPPER-A1.
+Added IC4 (footprint 'ZXMS6006DT8TA:SOT153P700X170-8N').
+Changed IC** reference designator to IC4.
+Connected IC3 pin 2 to GND.
+Updated IC4 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/4c74f2c8-e6ba-4e8f-837f-db6fc94e2839.
+Updated IC4 fields.
+Updated IC4 sheetname to 'Outputs'.
+Updated IC4 sheetfile to 'Outputs.kicad_sch'.
+Connected IC4 pin 7 to FAN-OUT.
+Connected IC4 pin 8 to FAN-OUT.
+Connected IC4 pin 2 to GND.
+Add net Net-(IC4-INPUT_1).
+Connected IC4 pin 1 to Net-(IC4-INPUT_1).
+Connected IC2 pin 8 to IDLE-OUT.
+Connected IC2 pin 4 to GND.
+Connected IC2 pin 6 to SPARE2-OUT.
+Add net Net-(IC2-INPUT_2).
+Connected IC2 pin 3 to Net-(IC2-INPUT_2).
+Connected IC2 pin 5 to SPARE2-OUT.
+Add net Net-(IC2-INPUT_1).
+Connected IC2 pin 1 to Net-(IC2-INPUT_1).
+Connected IC2 pin 2 to GND.
+Connected IC2 pin 7 to IDLE-OUT.
+Changed F2 value from Fuse_0603_1608Metric to Polyfuse.
+Added IC3 (footprint 'ZXMS6006DT8TA:SOT153P700X170-8N').
+Changed IC** reference designator to IC3.
+Changed IC3 value from SOT153P700X170-8N to ZXMS6006DT8.
+Updated IC3 symbol association from  to /fd75070f-6deb-45ad-a5b7-fb7ab02f43b4/697cfb9f-1796-47b5-9fc8-d5178ea5b2da.
+Updated IC3 fields.
+Updated IC3 sheetname to 'Outputs'.
+Updated IC3 sheetfile to 'Outputs.kicad_sch'.
+Connected IC3 pin 7 to SPARE1-OUT.
+Connected IC3 pin 5 to STEPPER-A1.
+Updated D34 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Updated D33 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Connected D33 pin 1 to 12V-PROT.
+Connected D33 pin 2 to 12V-SW.
+Added D34 (footprint 'LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder').
+Changed REF** reference designator to D34.
+Changed D34 value from LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder to LED.
+Updated D34 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/b07b449c-6351-479a-b0c6-89f46281190f.
+Updated D34 fields.
+Updated D34 sheetname to 'Power Regulator'.
+Updated D34 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated D33 sheetfile to 'Power-Regulator.kicad_sch'.
+Connected D34 pin 1 to GND.
+Add net Net-(D34-A).
+Connected D34 pin 2 to Net-(D34-A).
+Added D35 (footprint 'LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder').
+Changed REF** reference designator to D35.
+Changed D35 value from LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder to LED.
+Updated D35 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/89d8ee2e-8daf-4493-bd84-6ca0848fcc6f.
+Updated D35 fields.
+Updated D35 sheetname to 'Power Regulator'.
+Updated D32 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated D31 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Connected D31 pin 2 to STEPPER-A1.
+Connected D31 pin 1 to 12V-SW.
+Added D32 (footprint 'Diode_SMD:D_SMB').
+Changed REF** reference designator to D32.
+Changed D32 value from D_SMB to D_TVS.
+Updated D32 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/6597f8cb-cc97-44df-acb3-f67db68193af.
+Updated D32 fields.
+Updated D32 sheetname to 'Power Regulator'.
+Updated D35 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated D32 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Connected D32 pin 2 to GND.
+Connected D32 pin 1 to 12V-PROT.
+Added D33 (footprint 'Diode_SMD:D_SMA_Handsoldering').
+Changed REF** reference designator to D33.
+Changed D33 value from D_SMA_Handsoldering to D_Schottky.
+Updated D33 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/7f4eabe1-cfa7-4dec-916e-0c6cf042f959.
+Updated D33 fields.
+Updated D33 sheetname to 'Power Regulator'.
+Updated F1 symbol association from  to /f946f5bb-d38b-4a5d-aa49-1c969ed1447f/174e7e0b-d920-48fb-8d6d-0ba13cd2c7b4.
+Updated D37 sheetname to 'Root'.
+Updated D37 sheetfile to 'ECU.kicad_sch'.
+Updated D37 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Connected D37 pin 1 to +3V3.
+Add net Net-(D37-A).
+Connected D37 pin 2 to Net-(D37-A).
+Added F1 (footprint 'Fuse:Fuse_1812_4532Metric').
+Changed REF** reference designator to F1.
+Changed F1 value from Fuse_1812_4532Metric to Polyfuse.
+Updated D37 fields.
+Updated F1 fields.
+Updated F1 sheetname to 'Drivers'.
+Updated F1 sheetfile to 'Drivers.kicad_sch'.
+Updated F1 footprint filters to '*polyfuse* *PTC*'.
+Add net Net-(SW4-NO_1).
+Connected F1 pin 1 to Net-(SW4-NO_1).
+Connected F1 pin 2 to +5V.
+Added F2 (footprint 'Fuse:Fuse_0603_1608Metric').
+Changed REF** reference designator to F2.
+Updated D36 sheetname to 'Power Regulator'.
+Updated D35 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Connected D35 pin 1 to GND.
+Add net Net-(D35-A).
+Connected D35 pin 2 to Net-(D35-A).
+Added D36 (footprint 'LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder').
+Changed REF** reference designator to D36.
+Changed D36 value from LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder to LED.
+Updated D36 symbol association from  to /2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb/17ce006f-a79c-43e6-864c-adadbe21e8c2.
+Updated D36 fields.
+Updated D36 sheetfile to 'Power-Regulator.kicad_sch'.
+Updated D36 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Add net Net-(D36-A).
+Connected D36 pin 2 to Net-(D36-A).
+Connected D36 pin 1 to GND.
+Added D37 (footprint 'Diode_SMD:D_PowerDI-123').
+Changed REF** reference designator to D37.
+Changed D37 value from D_PowerDI-123 to D_Schottky.
+Updated D37 symbol association from  to /5e0db100-acf1-487e-88e7-f54903e75e71.
+Warning: No net found for component SW1 pad 6 (no pin 6 in symbol).
+Warning: No net found for component BT1 pad P1 (no pin P1 in symbol).
+Warning: No net found for component SW1 pad 5 (no pin 5 in symbol).
+Warning: No net found for component SW1 pad 4 (no pin 4 in symbol).
+Warning: No net found for component SW1 pad MH1 (no pin MH1 in symbol).
+Warning: No net found for component SW1 pad MH2 (no pin MH2 in symbol).
+Warning: No net found for component SW2 pad 6 (no pin 6 in symbol).
+Warning: No net found for component SW2 pad 4 (no pin 4 in symbol).
+Warning: No net found for component SW2 pad MH2 (no pin MH2 in symbol).
+Warning: No net found for component SW2 pad MH1 (no pin MH1 in symbol).
+Warning: No net found for component SW2 pad 5 (no pin 5 in symbol).
+Warning: No net found for component SW4 pad MH1 (no pin MH1 in symbol).
+Warning: No net found for component SW4 pad MH2 (no pin MH2 in symbol).
+Warning: No net found for component SW5 pad MH1 (no pin MH1 in symbol).
+Warning: No net found for component SW5 pad MH2 (no pin MH2 in symbol).
+Warning: No net found for component U11 pad 3 (no pin 3 in symbol).
+Warning: No net found for component BT1 pad P2 (no pin P2 in symbol).
+Warning: No net found for component BT1 pad N (no pin N in symbol).
+Error: BT1 pad 2 not found in IC_Automotive:BAT_2999.
+Error: BT1 pad 1 not found in IC_Automotive:BAT_2999.
+Error: Q3 pad 4 not found in Package_TO_SOT_SMD:SOT-223-3_TabPin2.
+
+
+Info: Total warnings: 18, errors: 3.
