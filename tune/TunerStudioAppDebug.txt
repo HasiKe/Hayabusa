@@ -322,3 +322,251 @@ Saved user properties successfully
 11/8/24, 4:11:34 PM :Info: closeApp Called
 11/8/24, 4:11:34 PM :Info: Finalizing Sensors
 Saved user properties successfully
+Starting on KEVIN-PC
+TunerStudio 3.2.05 started on Sun Jan 05 15:36:43 CET 2025
+JRE 1.8.0_382, Windows 11 10.0, x86
+java.library.path=./lib
+TunerStudioMS.jar
+Look:Metal, ClassName:'javax.swing.plaf.metal.MetalLookAndFeel'
+Look:Nimbus, ClassName:'javax.swing.plaf.nimbus.NimbusLookAndFeel'
+Look:CDE/Motif, ClassName:'com.sun.java.swing.plaf.motif.MotifLookAndFeel'
+Look:Windows, ClassName:'com.sun.java.swing.plaf.windows.WindowsLookAndFeel'
+Look:Windows Classic, ClassName:'com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel'
+Look:Night Shade, ClassName:'de.muntjak.tinylookandfeel.TinyLookAndFeel'
+Setting Look & Feel to:javax.swing.plaf.metal.MetalLookAndFeel
+ScrollBar.width
+05.01.25 15:36:43 :Debug: no update:defaultFont
+05.01.25 15:36:44 :Debug: hid: 433.0144
+05.01.25 15:36:44 :Info: Initializing File Dialogs.
+05.01.25 15:36:45 :Info: Updating ai & t
+05.01.25 15:36:46 :Info: Loading Language Content.
+05.01.25 15:36:48 :Debug: Command Non-VolatileBytes for F resolved to: x46                                                                   F
+05.01.25 15:36:48 :Debug: Command Non-VolatileBytes for I resolved to: x49                                                                   I
+05.01.25 15:36:48 :Debug: Command Non-VolatileBytes for f resolved to: x66                                                                   f
+05.01.25 15:36:48 :Info: Initializing Plugin Services.
+05.01.25 15:36:48 :Info: Loading Plugins.
+05.01.25 15:36:48 :Info: Initializing Help.
+05.01.25 15:36:48 :Info: Initializing Edition Features.
+05.01.25 15:36:48 :Info: Initializing App Events.
+05.01.25 15:36:48 :Debug: App Name:TunerStudio, appEdition:MS Ultra
+05.01.25 15:36:48 :Info: Initializing Log Viewer Components.
+05.01.25 15:36:48 :Info: Initializing User Interface
+05.01.25 15:36:48 :Warning: Unable to set Main cluster for title:
+05.01.25 15:36:49 :Info: Checking for updates
+05.01.25 15:36:50 :Info: Loading Font list.
+05.01.25 15:36:50 :Debug: Time to retreive font name list: 8 ms.
+05.01.25 15:36:50 :Info: 
+05.01.25 15:36:50 :Info: Initializing UI Components.
+05.01.25 15:36:50 :Debug: EventTrigger cltTempWarning Reset. expression: coolant < 200
+05.01.25 15:36:50 :Info: Ready
+05.01.25 15:36:52 :Info: Opening Project ...
+05.01.25 15:36:52 :Debug: Opening project: \\wsl.localhost\Ubuntu-22.04\home\kevin\Hayabusa\tune\Hayabusa-R1
+05.01.25 15:36:52 :Debug: EventTrigger cltTempWarning Reset. expression: coolant < 200
+05.01.25 15:36:52 :Debug: EventTrigger Data log Reset. expression: 
+05.01.25 15:36:52 :Debug: EventTrigger cltTempWarning Reset. expression: coolant < 200
+05.01.25 15:36:52 :Debug: EventTrigger Stop Data log Reset. expression: 
+05.01.25 15:36:52 :Debug: EventTrigger cltTempWarning Reset. expression: coolant < 200
+05.01.25 15:36:52 :Debug: Reading translation file as plain text
+Saved user properties successfully
+05.01.25 15:36:52 :Info: IniUpdate: No updates available.
+05.01.25 15:36:52 :Info: IncUpdate: No updates available.
+05.01.25 15:36:52 :Info: Supported iniSpecVersion=3.77
+05.01.25 15:36:52 :Debug: Filtered ConfigurationOptionGroup in 32ms.
+05.01.25 15:36:52 :Info: Supported iniSpecVersion=3.77
+05.01.25 15:36:52 :Info: Read file canPcVariables.ini: 0.8486ms
+05.01.25 15:36:52 :Info: Filtered ini: 0.036ms
+05.01.25 15:36:52 :Info: No iniVersion defined
+05.01.25 15:36:52 :Info: Loading Trigger Wheels
+05.01.25 15:36:52 :Info: Loaded All known ini sections
+05.01.25 15:36:52 :Info: Parsed and validated ini "canPcVariables.ini" in : 15ms.
+05.01.25 15:36:52 :Info: Read file mainController.ini: 23.023ms
+05.01.25 15:36:52 :Info: Filtered ini: 4.3512ms
+05.01.25 15:36:52 :Info: No iniVersion defined
+05.01.25 15:36:52 :Debug: ini signature: speeduino 202402
+Saved user properties successfully
+05.01.25 15:36:52 :Info: Update Check Completed
+Saved user properties successfully
+05.01.25 15:36:52 :Info: Loading Trigger Wheels
+05.01.25 15:36:52 :Info: Loading Depricated ini section [UserDefined], use [UiDialogs]
+05.01.25 15:36:53 :Info: Loaded All known ini sections
+05.01.25 15:36:53 :Info: Parsed and validated ini "mainController.ini" in : 472ms.
+05.01.25 15:36:53 :Info: Supported iniSpecVersion=3.77
+05.01.25 15:36:53 :Info: Read file speeduinoSupplement.ecu: 7.1712ms
+05.01.25 15:36:53 :Info: Filtered ini: 0.0407ms
+05.01.25 15:36:53 :Info: No iniVersion defined
+05.01.25 15:36:53 :Info: Loading Trigger Wheels
+05.01.25 15:36:53 :Info: Loading Depricated ini section [UserDefined], use [UiDialogs]
+05.01.25 15:36:53 :Info: Validate Expressions disabled.
+05.01.25 15:36:53 :Info: Loaded All known ini sections
+05.01.25 15:36:53 :Info: Parsed ini "speeduinoSupplement.ecu" in : 16ms.
+05.01.25 15:36:53 :Info: Not Loading default Tools because they were already loaded from the project ini(s)
+05.01.25 15:36:53 :Info: Time to load primary config: 610.11304ms. used cached config: false
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+05.01.25 15:36:53 :Debug: set baud to 9600
+05.01.25 15:36:53 :Info: Setting connection to: RS232: Port:COM11, Baud:9600
+05.01.25 15:36:53 :Debug: Adding Configuration: Hayabusa-R1
+05.01.25 15:36:53 :Debug: Activating Event Trigger: TriggeredPage0 Refresh:  vssRefresh > 0 
+05.01.25 15:36:53 :Debug: Fill Constants: 7
+05.01.25 15:36:53 :Info: Tune opened, 3287 bytes updated. File:\\wsl.localhost\Ubuntu-22.04\home\kevin\Hayabusa\tune\Hayabusa-R1\CurrentTune.msq
+[Duplicate entry] received 2 times: Info: Tune opened, 3287 bytes updated. File:\\wsl.localhost\Ubuntu-22.04\home\kevin\Hayabusa\tune\Hayabusa-R1\CurrentTune.msq
+05.01.25 15:36:53 :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+05.01.25 15:36:53 :Debug: Flush lasted: 72ms.
+05.01.25 15:36:53 :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+05.01.25 15:36:53 :Debug: Flush lasted: 71ms.
+05.01.25 15:36:53 :Debug: Skip Burn, last write page: -2
+05.01.25 15:36:53 :Info: !!! Loaded config in 926
+05.01.25 15:36:53 :Info: !!! Activated Project 1145
+05.01.25 15:36:53 :Info: Opening Gauge Cluster..
+05.01.25 15:36:53 :Info: Time to load uncached dash: 114.68671ms, file: dashboard.dash
+05.01.25 15:36:53 :Debug: High Speed Paint: true
+05.01.25 15:36:54 :Info: 
+05.01.25 15:36:54 :Info: Com Thread created: COMM Thread85657.2973609921
+05.01.25 15:36:54 :Info: endModalBlock called, but Root Pane is not a ProgressPane.
+05.01.25 15:36:54 :Info: Comm Manager for Hayabusa-R1 Started, thread ID: COMM Thread85657.2973609921
+05.01.25 15:36:54 :Info: Connecting to controller on: RS232: Port:COM11, Baud:9600
+05.01.25 15:36:54 :Debug: Port not valid: Unable to open port: COM11
+Please check your Communications Settings. 
+05.01.25 15:36:54 :Info: Time to load uncached dash: 161.1617ms, file: Acceleration_Performance.dash
+05.01.25 15:36:54 :Debug: High Speed Paint: false
+05.01.25 15:36:54 :Debug: EventTrigger cltTempWarning Reset. expression: coolant < 200
+05.01.25 15:36:54 :Debug: Activating Event Trigger: cltTempWarning
+05.01.25 15:36:54 :Debug: Deactivating Event Trigger: cltTempWarning
+05.01.25 15:36:54 :Debug: Activating Event Trigger: cltTempWarning
+05.01.25 15:36:54 :Info: EventTrigger: Hayabusa-R1.cltTempWarning loaded and activated.
+05.01.25 15:36:54 :Debug: !!! Opened Dash 1935
+05.01.25 15:36:54 :Info: Hayabusa-R1 Ready
+05.01.25 15:36:54 :Debug: Tuning View Files loaded in 1.9652ms.
+Saved user properties successfully
+05.01.25 15:37:18 :Info: Initiating read page 6 : 48:16
+05.01.25 15:37:18 :Info: Initiating read page 10 : 32:1
+05.01.25 15:37:37 :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+05.01.25 15:37:37 :Debug: Flush lasted: 71ms.
+05.01.25 15:37:37 :Debug: Skip Burn, last write page: -2
+05.01.25 15:37:43 :Info: Initiating read page 1 : 49:1
+05.01.25 15:37:43 :Info: Initiating read page 4 : 6:1
+05.01.25 15:37:44 :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+05.01.25 15:37:44 :Debug: Flush lasted: 70ms.
+05.01.25 15:37:44 :Debug: Skip Burn, last write page: -2
+05.01.25 15:37:55 :Info: Initiating read page 1 : 102:25
+05.01.25 15:38:14 :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+05.01.25 15:38:14 :Debug: Flush lasted: 70ms.
+05.01.25 15:38:14 :Debug: Skip Burn, last write page: -2
+05.01.25 15:38:18 :Info: Initiating read page 1 : 3:117
+05.01.25 15:38:18 :Info: Initiating read page 6 : 14:1
+05.01.25 15:38:44 :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+05.01.25 15:38:45 :Debug: Flush lasted: 71ms.
+05.01.25 15:38:45 :Debug: Skip Burn, last write page: -2
+05.01.25 15:39:16 :Info: Initiating read page 1 : 26:13
+05.01.25 15:39:16 :Info: Initiating read page 4 : 2:122
+05.01.25 15:39:21 :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+05.01.25 15:39:21 :Debug: Flush lasted: 70ms.
+05.01.25 15:39:21 :Debug: Skip Burn, last write page: -2
+05.01.25 15:39:28 :Info: Initiating read page 1 : 61:62
+05.01.25 15:39:28 :Info: Initiating read page 6 : 47:73
+05.01.25 15:39:28 :Info: Initiating read page 9 : 153:2
+05.01.25 15:39:33 :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+05.01.25 15:39:33 :Debug: Flush lasted: 70ms.
+05.01.25 15:39:33 :Debug: Skip Burn, last write page: -2
+05.01.25 15:40:02 :Info: Initiating read page 1 : 38:32
+05.01.25 15:40:02 :Info: Initiating read page 6 : 13:48
+05.01.25 15:40:02 :Info: Initiating read page 10 : 8:1
+05.01.25 15:40:04 :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+05.01.25 15:40:05 :Debug: Flush lasted: 70ms.
+05.01.25 15:40:05 :Debug: Skip Burn, last write page: -2
+05.01.25 15:40:44 :Info: Initiating read page 13 : 0:90
+05.01.25 15:40:52 :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+05.01.25 15:40:52 :Debug: Flush lasted: 70ms.
+05.01.25 15:40:52 :Debug: Skip Burn, last write page: -2
+05.01.25 15:41:12 :Info: Initiating read page 6 : 48:16
+05.01.25 15:41:12 :Info: Initiating read page 10 : 32:1
+05.01.25 16:00:12 :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+05.01.25 16:00:12 :Debug: Flush lasted: 70ms.
+05.01.25 16:00:12 :Debug: Skip Burn, last write page: -2
+05.01.25 16:00:23 :Info: Initiating read page 1 : 26:13
+05.01.25 16:00:23 :Info: Initiating read page 4 : 2:122
+05.01.25 16:00:28 :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+05.01.25 16:00:28 :Debug: Flush lasted: 70ms.
+05.01.25 16:00:28 :Debug: Skip Burn, last write page: -2
+05.01.25 16:00:48 :Debug: TuneViewPanel Activated.
+05.01.25 16:00:49 :Info: Time to load uncached dash: 62.0804ms, file: 1.40583347799935E93598779771281284096tempDash
+05.01.25 16:00:49 :Debug: High Speed Paint: true
+05.01.25 16:00:49 :Info: Time to read TuneView_000.tuneView: 231.941ms.
+05.01.25 16:00:49 :Debug: Closing TuneViewPanel Main Fuel
+05.01.25 16:00:49 :Debug: Deactivated fast paint null
+05.01.25 16:00:49 :Info: Loaded TuningView Components for Main Fuel in 253.83022ms.
+05.01.25 16:00:50 :Debug: TuneViewPanel Deactivated.
+05.01.25 16:00:50 :Debug: Activate Logging Tabs
+05.01.25 16:00:50 :Debug: Time to notify update: 0
+05.01.25 16:00:50 :Debug: Activate Analysis Tabs
+05.01.25 16:00:50 :Debug: Waiting to enable Buttons.
+05.01.25 16:00:51 :Debug: Deactivate Analysis Tabs
+05.01.25 16:00:51 :Info: Logger Processor stopped.
+[Duplicate entry] received 4 times: Info: Logger Processor stopped.
+05.01.25 16:00:51 :Debug: High Speed Paint: true
+05.01.25 16:00:51 :Debug: Deactivated fast paint IgnitionLoggerCluster
+05.01.25 16:00:53 :Debug: High Speed Paint: true
+[Duplicate entry] received 4 times: Debug: High Speed Paint: true
+05.01.25 16:00:55 :Debug: TuneLog Editor set text
+05.01.25 16:01:11 :Info: Initiating read page 9 : 1:153
+05.01.25 16:01:22 :Info: dirtyData.size(): 0
+[Duplicate entry] received 2 times: Info: dirtyData.size(): 0
+05.01.25 16:01:22 :Debug: Flush lasted: 71ms.
+05.01.25 16:01:22 :Debug: Skip Burn, last write page: -2
+05.01.25 16:01:35 :Info: Opening URL: https://www.tunerstudio.com/index.php/support/manuals/79-creating-tunerstudio-plugins
+05.01.25 16:01:44 :Debug: TuneLog Editor set text
+[Duplicate entry] received 2 times: Debug: TuneLog Editor set text
+05.01.25 17:52:37 :Info: Time to save msq: 79.85249
+05.01.25 17:52:37 :Info: closeApp Called
+05.01.25 17:52:37 :Debug: TuneLog Editor set text
+05.01.25 17:52:37 :Debug: Closing TuneViewPanel Main Fuel
+05.01.25 17:52:37 :Debug: Closing Dashboard null
+[Duplicate entry] received 2 times: Debug: Closing Dashboard null
+05.01.25 17:52:37 :Warning: Unable to set Main cluster for title:
+05.01.25 17:52:37 :Debug: File does not exist, creating new:
+\\wsl.localhost\Ubuntu-22.04\home\kevin\Hayabusa\tune\Hayabusa-R1\restorePoints\Hayabusa-R1_2025-01-05_17.52.37.msq
+05.01.25 17:52:37 :Info: Time to save msq: 18.407
+05.01.25 17:52:37 :Info: Hayabusa-R1 Restore point saved
+05.01.25 17:52:37 :Info: Hayabusa-R1 Restore point saved to: Hayabusa-R1_2025-01-05_17.52.37.msq
+05.01.25 17:52:37 :Info: Time to save msq: 10.0664
+05.01.25 17:52:37 :Debug: goOffline Starting, Time:0
+05.01.25 17:52:37 :Info: Deactivated Turbo Baud, goOffline
+05.01.25 17:52:37 :Debug: goOffline about to stopProcessing, Time:1
+05.01.25 17:52:37 :Debug: goOffline closed port, Time:1
+05.01.25 17:52:37 :Info: Hayabusa-R1 ComThread stopped COMM Thread85657.2973609921
+05.01.25 17:52:37 :Debug: goOffline comm thread stopped, Time:304
+05.01.25 17:52:37 :Debug: No Remaining Queue Write instructions
+05.01.25 17:52:37 :Debug: removing Configuration: Hayabusa-R1
+05.01.25 17:52:37 :Debug: Graph Selection not changed.
+05.01.25 17:52:37 :Debug: DataSet Set!! size: 0
+[Duplicate entry] received 2 times: Debug: DataSet Set!! size: 0
+05.01.25 17:52:37 :Debug: Save user properties backup failed rename, try again.
+05.01.25 17:52:38 :Debug: Saved user log settings.
+05.01.25 17:52:38 :Info: Time to load non-cached dashboard: 20.3587 ms. file:IgnitionLoggerCluster.dash
+05.01.25 17:52:38 :Debug: Time to save dashboard: 21.4835ms. file: \\wsl.localhost\Ubuntu-22.04\home\kevin\Hayabusa\tune\Hayabusa-R1\\dashboard\IgnitionLoggerCluster.dash
+05.01.25 17:52:38 :Info: Time to load non-cached dashboard: 33.3868 ms. file:veAnalyze_veTable1Tbl.dash
+05.01.25 17:52:38 :Debug: Time to save dashboard: 34.3778ms. file: \\wsl.localhost\Ubuntu-22.04\home\kevin\Hayabusa\tune\Hayabusa-R1\\dashboard\veAnalyze_veTable1Tbl.dash
+05.01.25 17:52:38 :Info: Time to load non-cached dashboard: 7.909 ms. file:veAnalyze_veTable1Tbl_histogram.dash
+05.01.25 17:52:38 :Debug: Time to save dashboard: 9.1531ms. file: \\wsl.localhost\Ubuntu-22.04\home\kevin\Hayabusa\tune\Hayabusa-R1\\dashboard\veAnalyze_veTable1Tbl_histogram.dash
+05.01.25 17:52:38 :Info: Time to load non-cached dashboard: 24.5253 ms. file:wueAnalyze_warmup_analyzer_curve.dash
+05.01.25 17:52:38 :Debug: Time to save dashboard: 25.486ms. file: \\wsl.localhost\Ubuntu-22.04\home\kevin\Hayabusa\tune\Hayabusa-R1\\dashboard\wueAnalyze_warmup_analyzer_curve.dash
+05.01.25 17:52:38 :Info: Time to load non-cached dashboard: 7.2013 ms. file:wueAnalyze_warmup_analyzer_curve_histogram.dash
+05.01.25 17:52:38 :Debug: Time to save dashboard: 8.3923ms. file: \\wsl.localhost\Ubuntu-22.04\home\kevin\Hayabusa\tune\Hayabusa-R1\\dashboard\wueAnalyze_warmup_analyzer_curve_histogram.dash
+05.01.25 17:52:38 :Debug: ############################################# Save Project Backup ##########################################
+05.01.25 17:52:38 :Info: Finalizing Sensors
+Saved user properties successfully
+05.01.25 17:52:38 :Debug: Save user properties backup failed rename, try again.
+05.01.25 17:52:38 :Debug: Saved user log settings.
