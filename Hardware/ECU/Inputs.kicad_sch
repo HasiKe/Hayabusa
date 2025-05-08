@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "4bf7fe9e-ab1b-4c2b-91f6-fa5854d25934")
 	(paper "A4")
 	(lib_symbols
@@ -96,17 +96,17 @@
 						(type background)
 					)
 				)
-				(pin output line
-					(at 7.62 0 180)
+				(pin input line
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "~"
+					(name "+"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -132,17 +132,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at -7.62 2.54 0)
+				(pin output line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "+"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -250,24 +250,6 @@
 						)
 					)
 				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -7.62 -2.54 0)
 					(length 2.54)
@@ -279,6 +261,24 @@
 						)
 					)
 					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -357,24 +357,6 @@
 			)
 			(symbol "LMV324_5_1"
 				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "V-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
 					(at -2.54 7.62 270)
 					(length 3.81)
 					(name "V+"
@@ -392,10 +374,31 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -468,7 +471,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -480,7 +483,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -529,9 +532,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -650,6 +656,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "IC_Automotive:SP720"
 			(exclude_from_sim no)
@@ -742,132 +749,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 -7.62 180)
-					(length 2.54)
-					(name "I9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 -5.08 180)
-					(length 2.54)
-					(name "I10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 -2.54 180)
-					(length 2.54)
-					(name "I11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "I12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin open_collector line
-					(at 10.16 2.54 180)
-					(length 2.54)
-					(name "I13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 5.08 180)
-					(length 2.54)
-					(name "I14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 10.16 10.16 180)
-					(length 2.54)
-					(name "V+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1001,6 +882,132 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at 10.16 10.16 180)
+					(length 2.54)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "I14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "I13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "I12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "I11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(name "I10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -7.62 180)
+					(length 2.54)
+					(name "I9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin input line
 					(at 10.16 -10.16 180)
 					(length 2.54)
@@ -1020,6 +1027,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Misc:AYZ0202AGRLC"
 			(pin_names
@@ -1250,6 +1258,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Misc:EBC05DRXN"
 			(pin_names
@@ -1542,6 +1551,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Misc:KP234"
 			(exclude_from_sim no)
@@ -1601,23 +1611,23 @@
 				)
 			)
 			(symbol "KP234_0_1"
-				(circle
-					(center -5.842 1.524)
-					(radius 2.6162)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(polyline
 					(pts
 						(xy -7.112 0.254) (xy -4.572 2.794)
 					)
 					(stroke
 						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -5.842 1.524)
+					(radius 2.6162)
+					(stroke
+						(width 0.508)
 						(type default)
 					)
 					(fill
@@ -1662,26 +1672,9 @@
 			)
 			(symbol "KP234_1_1"
 				(pin no_connect line
-					(at 5.08 -5.08 90)
-					(length 2.54) hide
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
 					(at -7.62 -5.08 90)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -1697,9 +1690,28 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at -5.08 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin no_connect line
 					(at -2.54 -5.08 90)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -1734,7 +1746,7 @@
 					)
 				)
 				(pin power_in line
-					(at -5.08 -7.62 90)
+					(at 0 -7.62 90)
 					(length 2.54)
 					(name "GND"
 						(effects
@@ -1743,7 +1755,45 @@
 							)
 						)
 					)
-					(number "6"
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 5.08 -5.08 90)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1769,43 +1819,8 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 2.54 -5.08 90)
-					(length 2.54) hide
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3V3"
 			(power)
@@ -1883,7 +1898,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1895,7 +1910,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1909,7 +1924,8 @@
 			(symbol "+3V3_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+3V3"
 						(effects
 							(font
@@ -1926,6 +1942,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -2005,7 +2022,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -2022,6 +2040,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:VDDA"
 			(power)
@@ -2099,7 +2118,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -2111,7 +2130,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -2125,7 +2144,8 @@
 			(symbol "VDDA_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "VDDA"
 						(effects
 							(font
@@ -2142,7 +2162,118 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "Baro Sensor"
+		(exclude_from_sim no)
+		(at 133.35 20.32 0)
+		(effects
+			(font
+				(size 1.8796 1.8796)
+			)
+			(justify left bottom)
+		)
+		(uuid "2530c85e-f2a1-49f5-8130-6a2bdd8bb41f")
+	)
+	(text "Battery reference voltage"
+		(exclude_from_sim no)
+		(at 40.64 109.22 0)
+		(effects
+			(font
+				(size 1.8796 1.8796)
+			)
+			(justify left bottom)
+		)
+		(uuid "67f13755-8228-457f-a141-12a5317bc2ad")
+	)
+	(text "Coolant Temperature Sensor"
+		(exclude_from_sim no)
+		(at 129.54 111.76 0)
+		(effects
+			(font
+				(size 1.8796 1.8796)
+			)
+			(justify left bottom)
+		)
+		(uuid "8c1ac0b2-cb10-40c3-be88-e69fa7a4ada7")
+	)
+	(text "Clutch Input"
+		(exclude_from_sim no)
+		(at 90.17 162.56 0)
+		(effects
+			(font
+				(size 1.8796 1.8796)
+			)
+			(justify left bottom)
+		)
+		(uuid "92e2506d-0734-4408-8a61-1de6c2a01a89")
+	)
+	(text "Inlet Air Temperature Sensor"
+		(exclude_from_sim no)
+		(at 128.27 64.77 0)
+		(effects
+			(font
+				(size 1.8796 1.8796)
+			)
+			(justify left bottom)
+		)
+		(uuid "a87e8c7e-928d-4349-a553-a6148fea7c5f")
+	)
+	(text "Flex Sensor Input"
+		(exclude_from_sim no)
+		(at 30.48 158.75 0)
+		(effects
+			(font
+				(size 1.8796 1.8796)
+			)
+			(justify left bottom)
+		)
+		(uuid "b179b85b-f5a5-4d21-a932-48c646fbef77")
+	)
+	(text "MAP Sensor"
+		(exclude_from_sim no)
+		(at 46.99 21.59 0)
+		(effects
+			(font
+				(size 1.8796 1.8796)
+			)
+			(justify left bottom)
+		)
+		(uuid "d1c3b7ae-bc17-4f36-99fc-667fbf8d3a33")
+	)
+	(text "O2 Sensor"
+		(exclude_from_sim no)
+		(at 46.99 64.77 0)
+		(effects
+			(font
+				(size 1.8796 1.8796)
+			)
+			(justify left bottom)
+		)
+		(uuid "eb0ddf07-6475-470b-a055-e13004e7be1c")
+	)
+	(text "5v to 3.3v Opamp"
+		(exclude_from_sim no)
+		(at 223.52 64.77 0)
+		(effects
+			(font
+				(size 1.8796 1.8796)
+			)
+			(justify left bottom)
+		)
+		(uuid "ed765002-317e-4e64-b62d-1949de05187c")
+	)
+	(text "Throttle Position Sensor"
+		(exclude_from_sim no)
+		(at 215.9 130.81 0)
+		(effects
+			(font
+				(size 1.8796 1.8796)
+			)
+			(justify left bottom)
+		)
+		(uuid "f208451a-cc15-4378-9636-6f1e208e0b97")
 	)
 	(junction
 		(at 217.17 139.7)
@@ -4191,116 +4322,6 @@
 			(type default)
 		)
 		(uuid "ffaeb970-bd47-4790-8384-c0b9c40426ec")
-	)
-	(text "Baro Sensor"
-		(exclude_from_sim no)
-		(at 133.35 20.32 0)
-		(effects
-			(font
-				(size 1.8796 1.8796)
-			)
-			(justify left bottom)
-		)
-		(uuid "2530c85e-f2a1-49f5-8130-6a2bdd8bb41f")
-	)
-	(text "Battery reference voltage"
-		(exclude_from_sim no)
-		(at 40.64 109.22 0)
-		(effects
-			(font
-				(size 1.8796 1.8796)
-			)
-			(justify left bottom)
-		)
-		(uuid "67f13755-8228-457f-a141-12a5317bc2ad")
-	)
-	(text "Coolant Temperature Sensor"
-		(exclude_from_sim no)
-		(at 129.54 111.76 0)
-		(effects
-			(font
-				(size 1.8796 1.8796)
-			)
-			(justify left bottom)
-		)
-		(uuid "8c1ac0b2-cb10-40c3-be88-e69fa7a4ada7")
-	)
-	(text "Clutch Input"
-		(exclude_from_sim no)
-		(at 90.17 162.56 0)
-		(effects
-			(font
-				(size 1.8796 1.8796)
-			)
-			(justify left bottom)
-		)
-		(uuid "92e2506d-0734-4408-8a61-1de6c2a01a89")
-	)
-	(text "Inlet Air Temperature Sensor"
-		(exclude_from_sim no)
-		(at 128.27 64.77 0)
-		(effects
-			(font
-				(size 1.8796 1.8796)
-			)
-			(justify left bottom)
-		)
-		(uuid "a87e8c7e-928d-4349-a553-a6148fea7c5f")
-	)
-	(text "Flex Sensor Input"
-		(exclude_from_sim no)
-		(at 30.48 158.75 0)
-		(effects
-			(font
-				(size 1.8796 1.8796)
-			)
-			(justify left bottom)
-		)
-		(uuid "b179b85b-f5a5-4d21-a932-48c646fbef77")
-	)
-	(text "MAP Sensor"
-		(exclude_from_sim no)
-		(at 46.99 21.59 0)
-		(effects
-			(font
-				(size 1.8796 1.8796)
-			)
-			(justify left bottom)
-		)
-		(uuid "d1c3b7ae-bc17-4f36-99fc-667fbf8d3a33")
-	)
-	(text "O2 Sensor"
-		(exclude_from_sim no)
-		(at 46.99 64.77 0)
-		(effects
-			(font
-				(size 1.8796 1.8796)
-			)
-			(justify left bottom)
-		)
-		(uuid "eb0ddf07-6475-470b-a055-e13004e7be1c")
-	)
-	(text "5v to 3.3v Opamp"
-		(exclude_from_sim no)
-		(at 223.52 64.77 0)
-		(effects
-			(font
-				(size 1.8796 1.8796)
-			)
-			(justify left bottom)
-		)
-		(uuid "ed765002-317e-4e64-b62d-1949de05187c")
-	)
-	(text "Throttle Position Sensor"
-		(exclude_from_sim no)
-		(at 215.9 130.81 0)
-		(effects
-			(font
-				(size 1.8796 1.8796)
-			)
-			(justify left bottom)
-		)
-		(uuid "f208451a-cc15-4378-9636-6f1e208e0b97")
 	)
 	(global_label "MCU-A16"
 		(shape input)

@@ -1,12 +1,14 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "30c85f06-65e9-42d0-9f8d-ac5eec3e7d89")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Device:CP"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -153,11 +155,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:D"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -237,10 +244,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
 					)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -249,10 +256,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -298,11 +305,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:D_Schottky"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -370,10 +382,10 @@
 			(symbol "D_Schottky_0_1"
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
 					)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -394,10 +406,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -443,9 +455,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -564,6 +579,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Driver_Motor:Pololu_Breakout_DRV8825"
 			(exclude_from_sim no)
@@ -647,17 +663,107 @@
 				)
 			)
 			(symbol "Pololu_Breakout_DRV8825_1_1"
-				(pin power_in line
-					(at 0 -20.32 90)
+				(pin output line
+					(at -10.16 10.16 0)
 					(length 2.54)
-					(name "GND"
+					(name "~{FLT}"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 7.62 0)
+					(length 2.54)
+					(name "~{RST}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 5.08 0)
+					(length 2.54)
+					(name "~{SLP}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "~{EN}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "STEP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "DIR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -719,17 +825,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at -10.16 7.62 0)
+				(pin power_in line
+					(at 0 15.24 270)
 					(length 2.54)
-					(name "~{RST}"
+					(name "VMOT"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "13"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -737,17 +843,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at -10.16 5.08 0)
+				(pin power_in line
+					(at 0 -20.32 90)
 					(length 2.54)
-					(name "~{SLP}"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "14"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -755,71 +861,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at -10.16 -2.54 0)
+				(pin power_in line
+					(at 2.54 -20.32 90)
 					(length 2.54)
-					(name "STEP"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -5.08 0)
-					(length 2.54)
-					(name "DIR"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -10.16 10.16 0)
-					(length 2.54)
-					(name "~{FLT}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -838,6 +890,24 @@
 						)
 					)
 					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -881,61 +951,8 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 2.54 -20.32 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 15.24 270)
-					(length 2.54)
-					(name "VMOT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 0 0)
-					(length 2.54)
-					(name "~{EN}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "IC_Automotive:ZXMS6006DT8"
 			(pin_names
@@ -1085,34 +1102,16 @@
 					)
 				)
 				(pin passive line
-					(at 40.64 -7.62 180)
+					(at 40.64 0 180)
 					(length 5.08)
-					(name "DRAIN_2_1"
+					(name "DRAIN_1_2"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 40.64 -5.08 180)
-					(length 5.08)
-					(name "DRAIN_2_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1139,16 +1138,34 @@
 					)
 				)
 				(pin passive line
-					(at 40.64 0 180)
+					(at 40.64 -5.08 180)
 					(length 5.08)
-					(name "DRAIN_1_2"
+					(name "DRAIN_2_2"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "8"
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 40.64 -7.62 180)
+					(length 5.08)
+					(name "DRAIN_2_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1171,6 +1188,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3V3"
 			(power)
@@ -1248,7 +1266,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1260,7 +1278,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1274,7 +1292,8 @@
 			(symbol "+3V3_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+3V3"
 						(effects
 							(font
@@ -1291,6 +1310,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -1370,7 +1390,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -1387,7 +1408,74 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "VVT and Spare 1"
+		(exclude_from_sim no)
+		(at 203.2 93.98 0)
+		(effects
+			(font
+				(size 1.9812 1.9812)
+			)
+			(justify left bottom)
+		)
+		(uuid "1746737f-51d1-47f2-a50b-1029d5f4c726")
+	)
+	(text "Stepper Driver (DRV8825)"
+		(exclude_from_sim no)
+		(at 66.04 139.7 0)
+		(effects
+			(font
+				(size 1.9812 1.9812)
+			)
+			(justify left bottom)
+		)
+		(uuid "3d7fe253-1964-45a1-acd2-09af18404f01")
+	)
+	(text "Tacho output"
+		(exclude_from_sim no)
+		(at 55.88 90.17 0)
+		(effects
+			(font
+				(size 1.9812 1.9812)
+			)
+			(justify left bottom)
+		)
+		(uuid "4c8c7364-4095-405b-b83d-65d4e951ed82")
+	)
+	(text "PWM Idle and Spare 2 outputs"
+		(exclude_from_sim no)
+		(at 48.26 24.13 0)
+		(effects
+			(font
+				(size 1.9812 1.9812)
+			)
+			(justify left bottom)
+		)
+		(uuid "5eb28ffe-002d-40df-b58c-e3d833d3a37f")
+	)
+	(text "Fan and Boost outputs"
+		(exclude_from_sim no)
+		(at 203.2 24.13 0)
+		(effects
+			(font
+				(size 1.9812 1.9812)
+			)
+			(justify left bottom)
+		)
+		(uuid "9281f3c8-dce5-4928-9411-0f6200c0f35d")
+	)
+	(text "Fuel pump relay"
+		(exclude_from_sim no)
+		(at 114.3 90.17 0)
+		(effects
+			(font
+				(size 1.9812 1.9812)
+			)
+			(justify left bottom)
+		)
+		(uuid "f4ba0d6b-b3f4-4931-b20d-d10487ae2a8e")
 	)
 	(junction
 		(at 255.27 118.11)
@@ -2494,72 +2582,6 @@
 			(type default)
 		)
 		(uuid "fe70d02a-32f2-46b8-9773-66b896dd09ce")
-	)
-	(text "VVT and Spare 1"
-		(exclude_from_sim no)
-		(at 203.2 93.98 0)
-		(effects
-			(font
-				(size 1.9812 1.9812)
-			)
-			(justify left bottom)
-		)
-		(uuid "1746737f-51d1-47f2-a50b-1029d5f4c726")
-	)
-	(text "Stepper Driver (DRV8825)"
-		(exclude_from_sim no)
-		(at 66.04 139.7 0)
-		(effects
-			(font
-				(size 1.9812 1.9812)
-			)
-			(justify left bottom)
-		)
-		(uuid "3d7fe253-1964-45a1-acd2-09af18404f01")
-	)
-	(text "Tacho output"
-		(exclude_from_sim no)
-		(at 55.88 90.17 0)
-		(effects
-			(font
-				(size 1.9812 1.9812)
-			)
-			(justify left bottom)
-		)
-		(uuid "4c8c7364-4095-405b-b83d-65d4e951ed82")
-	)
-	(text "PWM Idle and Spare 2 outputs"
-		(exclude_from_sim no)
-		(at 48.26 24.13 0)
-		(effects
-			(font
-				(size 1.9812 1.9812)
-			)
-			(justify left bottom)
-		)
-		(uuid "5eb28ffe-002d-40df-b58c-e3d833d3a37f")
-	)
-	(text "Fan and Boost outputs"
-		(exclude_from_sim no)
-		(at 203.2 24.13 0)
-		(effects
-			(font
-				(size 1.9812 1.9812)
-			)
-			(justify left bottom)
-		)
-		(uuid "9281f3c8-dce5-4928-9411-0f6200c0f35d")
-	)
-	(text "Fuel pump relay"
-		(exclude_from_sim no)
-		(at 114.3 90.17 0)
-		(effects
-			(font
-				(size 1.9812 1.9812)
-			)
-			(justify left bottom)
-		)
-		(uuid "f4ba0d6b-b3f4-4931-b20d-d10487ae2a8e")
 	)
 	(global_label "SPARE1-OUT"
 		(shape input)
