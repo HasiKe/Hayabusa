@@ -1029,799 +1029,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Misc:AYZ0202AGRLC"
-			(pin_names
-				(offset 0.762)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "S"
-				(at 24.13 7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "AYZ0202AGRLC"
-				(at 24.13 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "AYZ0202AGRLC"
-				(at 24.13 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://uk.rs-online.com/web/p/products/7931504P"
-				(at 24.13 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Description" "AYZ0202AGRLC (Slide Switches)"
-				(at 24.13 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "RS Part Number" "7931504P"
-				(at 24.13 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "RS Price/Stock" "http://uk.rs-online.com/web/p/products/7931504P"
-				(at 24.13 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Name" "C & K COMPONENTS"
-				(at 24.13 -12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Part_Number" "AYZ0202AGRLC"
-				(at 24.13 -15.24 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Allied_Number" "70417470"
-				(at 24.13 -17.78 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(symbol "AYZ0202AGRLC_0_0"
-				(pin bidirectional line
-					(at 0 0 0)
-					(length 5.08)
-					(name "NC_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "C_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 0 -5.08 0)
-					(length 5.08)
-					(name "NO_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 27.94 0 180)
-					(length 5.08)
-					(name "NC_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 27.94 -2.54 180)
-					(length 5.08)
-					(name "C_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 27.94 -5.08 180)
-					(length 5.08)
-					(name "NO_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "AYZ0202AGRLC_0_1"
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 22.86 2.54) (xy 22.86 -7.62) (xy 5.08 -7.62) (xy 5.08 2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Misc:EBC05DRXN"
-			(pin_names
-				(offset 0.762)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 19.05 7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "EBC05DRXN"
-				(at 19.05 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "EBC05DRXN"
-				(at 19.05 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://datasheet.datasheetarchive.com/originals/dk/DKDS42/DSANUWW0040354.pdf"
-				(at 19.05 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Description" "CONN EDGE DUAL FMALE 10POS 0.100"
-				(at 19.05 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Height" "10.95"
-				(at 19.05 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Name" "Sullins"
-				(at 19.05 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Part_Number" "EBC05DRXN"
-				(at 19.05 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Arrow Part Number" "EBC05DRXN"
-				(at 19.05 -12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(symbol "EBC05DRXN_0_0"
-				(pin passive line
-					(at 0 0 0)
-					(length 5.08)
-					(name "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 0)
-					(length 5.08)
-					(name "A3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -7.62 0)
-					(length 5.08)
-					(name "A4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -10.16 0)
-					(length 5.08)
-					(name "A5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 22.86 0 180)
-					(length 5.08)
-					(name "B1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 22.86 -2.54 180)
-					(length 5.08)
-					(name "B2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 22.86 -5.08 180)
-					(length 5.08)
-					(name "B3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 22.86 -7.62 180)
-					(length 5.08)
-					(name "B4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 22.86 -10.16 180)
-					(length 5.08)
-					(name "B5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "EBC05DRXN_0_1"
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 17.78 2.54) (xy 17.78 -12.7) (xy 5.08 -12.7) (xy 5.08 2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Misc:KP234"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -10.16 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "KP234"
-				(at 1.27 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Misc:KP234"
-				(at -12.7 -8.89 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 15.24 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Absolute pressure sensor, 15 to 115kPa, analog output, integrated signal conditioning, temperature compensated, SO package"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "absolute pressure sensor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "KP234_0_1"
-				(polyline
-					(pts
-						(xy -7.112 0.254) (xy -4.572 2.794)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -5.842 1.524)
-					(radius 2.6162)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.842 -1.27) (xy -5.842 -3.81)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -4.572 2.794) (xy -4.826 1.778) (xy -5.588 2.54) (xy -4.572 2.794)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 7.62 5.08)
-					(end -10.16 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "KP234_1_1"
-				(pin no_connect line
-					(at -7.62 -5.08 90)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -5.08 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -2.54 -5.08 90)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 7.62 270)
-					(length 2.54)
-					(name "Vcc"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 5.08 -5.08 90)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "Vout"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+3V3"
 			(power)
 			(pin_names
@@ -2231,7 +1438,7 @@
 		)
 		(uuid "b179b85b-f5a5-4d21-a932-48c646fbef77")
 	)
-	(text "MAP Sensor"
+	(text "Static Air"
 		(exclude_from_sim no)
 		(at 46.99 21.59 0)
 		(effects
@@ -2282,13 +1489,7 @@
 		(uuid "13e04523-5b75-47d6-897e-d8e4b171cf90")
 	)
 	(junction
-		(at 134.62 29.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "17ee56d9-1b2a-4a55-8248-9ead6d7bcb41")
-	)
-	(junction
-		(at 156.21 46.99)
+		(at 148.59 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1c240a4e-6455-412d-8afc-7e6d1dccb5ab")
@@ -2354,28 +1555,10 @@
 		(uuid "4e533620-f200-4cab-81bf-180aad2cd7f2")
 	)
 	(junction
-		(at 81.28 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4ee615d6-7179-41dd-a809-36c15a550663")
-	)
-	(junction
-		(at 134.62 38.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4fb38d08-b5a8-4ada-94a4-a3d23e722e4a")
-	)
-	(junction
 		(at 64.77 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "52b75df9-642b-45d4-a818-9b2dcea29eb4")
-	)
-	(junction
-		(at 34.29 46.99)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "54e6fcd2-016e-4e42-9bf0-86218069dad8")
 	)
 	(junction
 		(at 210.82 72.39)
@@ -2402,22 +1585,16 @@
 		(uuid "67f04bf3-ef40-492b-95b6-7bf56253d96c")
 	)
 	(junction
-		(at 130.81 38.1)
+		(at 54.61 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "796bd0e8-b9b5-4b01-a961-64d1c8478105")
+		(uuid "6bc8f51a-0e65-4d17-86bb-07fe2e0625fc")
 	)
 	(junction
 		(at 90.17 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7d8b7cbd-7eb9-446f-8d98-c7da04d3e5db")
-	)
-	(junction
-		(at 129.54 54.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8c573896-3749-4dea-b992-7ea15878bc46")
 	)
 	(junction
 		(at 210.82 97.79)
@@ -2462,34 +1639,10 @@
 		(uuid "ade943d7-a291-43dc-901c-0291376cd4c0")
 	)
 	(junction
-		(at 36.83 46.99)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b504400d-3d32-4ca5-825d-f9d406e1215d")
-	)
-	(junction
 		(at 40.64 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b5d2b078-08a5-41bc-b387-a1ab88752877")
-	)
-	(junction
-		(at 53.34 43.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c0766398-a85b-4872-a0b7-4a5dad0b52a8")
-	)
-	(junction
-		(at 31.75 46.99)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c2effe33-8bb5-40c0-bbe5-51ab06346d81")
-	)
-	(junction
-		(at 53.34 48.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "da2769d3-9603-4da2-9d1c-78227e35b375")
 	)
 	(junction
 		(at 158.75 125.73)
@@ -2555,16 +1708,6 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 46.99) (xy 36.83 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "01e72662-52b7-47bd-964b-10ae88efd30a")
-	)
-	(wire
-		(pts
 			(xy 217.17 39.37) (xy 213.36 39.37)
 		)
 		(stroke
@@ -2605,13 +1748,13 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 24.13) (xy 34.29 46.99)
+			(xy 50.8 43.18) (xy 54.61 43.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "08432e41-a03d-4482-b4b9-e5bfaffc1d66")
+		(uuid "09be71df-528b-4145-ac69-a384e389e8b5")
 	)
 	(wire
 		(pts
@@ -2652,16 +1795,6 @@
 			(type default)
 		)
 		(uuid "10960d07-0fd3-4bc5-967c-f38cca9004c7")
-	)
-	(wire
-		(pts
-			(xy 130.81 29.21) (xy 134.62 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11042ece-dd73-4d47-a465-1914a6b6d283")
 	)
 	(wire
 		(pts
@@ -2802,6 +1935,16 @@
 			(type default)
 		)
 		(uuid "1e70a8c6-5052-4593-aa3d-e012b8dd5c18")
+	)
+	(wire
+		(pts
+			(xy 54.61 43.18) (xy 58.42 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fc3399a-f7f4-4025-ba5a-61467d8a0fa0")
 	)
 	(wire
 		(pts
@@ -2965,16 +2108,6 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 48.26) (xy 81.28 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2fe4eaa4-e40e-4cc2-8e30-47810e434514")
-	)
-	(wire
-		(pts
 			(xy 237.49 44.45) (xy 241.3 44.45)
 		)
 		(stroke
@@ -3065,6 +2198,16 @@
 	)
 	(wire
 		(pts
+			(xy 39.37 43.18) (xy 43.18 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4521b5df-38ea-4b6d-b212-2e34cffadf40")
+	)
+	(wire
+		(pts
 			(xy 243.84 152.4) (xy 243.84 156.21)
 		)
 		(stroke
@@ -3125,16 +2268,6 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 38.1) (xy 134.62 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5308f42f-a061-4d19-be76-5a1a1690331c")
-	)
-	(wire
-		(pts
 			(xy 256.54 74.93) (xy 252.73 74.93)
 		)
 		(stroke
@@ -3145,7 +2278,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 46.99) (xy 162.56 46.99)
+			(xy 148.59 46.99) (xy 154.94 46.99)
 		)
 		(stroke
 			(width 0)
@@ -3192,16 +2325,6 @@
 			(type default)
 		)
 		(uuid "5febbfc4-755e-497d-a559-1b0f3dff3bde")
-	)
-	(wire
-		(pts
-			(xy 134.62 29.21) (xy 134.62 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "60c8fab8-9c42-4875-89ed-b4f4c33bd6c5")
 	)
 	(wire
 		(pts
@@ -3335,6 +2458,16 @@
 	)
 	(wire
 		(pts
+			(xy 54.61 30.48) (xy 54.61 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "708fd0cf-a57e-4345-99ab-20f6803aa572")
+	)
+	(wire
+		(pts
 			(xy 210.82 97.79) (xy 213.36 97.79)
 		)
 		(stroke
@@ -3342,6 +2475,26 @@
 			(type default)
 		)
 		(uuid "7093b5c1-01f3-46a3-899d-6d533a3c5a17")
+	)
+	(wire
+		(pts
+			(xy 132.08 46.99) (xy 137.16 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72390dd6-483c-426e-a639-f68700b2342c")
+	)
+	(wire
+		(pts
+			(xy 54.61 43.18) (xy 54.61 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72a8ec29-1f0e-4f90-8c7f-7a2f8de71355")
 	)
 	(wire
 		(pts
@@ -3385,7 +2538,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 46.99) (xy 156.21 46.99)
+			(xy 144.78 46.99) (xy 148.59 46.99)
 		)
 		(stroke
 			(width 0)
@@ -3505,16 +2658,6 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 24.13) (xy 31.75 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "93b7a3a5-536a-4683-a0bf-ee3ad7b850c5")
-	)
-	(wire
-		(pts
 			(xy 43.18 128.27) (xy 43.18 123.19)
 		)
 		(stroke
@@ -3565,16 +2708,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 29.21) (xy 138.43 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97ffee07-b3ef-4b7c-8283-c1405a47887a")
-	)
-	(wire
-		(pts
 			(xy 217.17 144.78) (xy 217.17 139.7)
 		)
 		(stroke
@@ -3582,16 +2715,6 @@
 			(type default)
 		)
 		(uuid "99ec47c1-923d-4f4e-aea0-56a329a29457")
-	)
-	(wire
-		(pts
-			(xy 134.62 38.1) (xy 134.62 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a84f674-0a9b-4997-8cb8-34dd48c9cb04")
 	)
 	(wire
 		(pts
@@ -3645,16 +2768,6 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 38.1) (xy 134.62 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5a397fe-d531-4ffc-a68f-c97210974752")
-	)
-	(wire
-		(pts
 			(xy 210.82 97.79) (xy 208.28 97.79)
 		)
 		(stroke
@@ -3665,16 +2778,6 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 54.61) (xy 129.54 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a9082d9d-d176-4ba1-b179-2aa9e625462e")
-	)
-	(wire
-		(pts
 			(xy 213.36 46.99) (xy 217.17 46.99)
 		)
 		(stroke
@@ -3682,16 +2785,6 @@
 			(type default)
 		)
 		(uuid "a956e112-3c59-4f35-99e0-c26bacdfbe5e")
-	)
-	(wire
-		(pts
-			(xy 129.54 54.61) (xy 134.62 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad8dfea5-c3bf-439f-abe5-562cfd19e33c")
 	)
 	(wire
 		(pts
@@ -3712,16 +2805,6 @@
 			(type default)
 		)
 		(uuid "b038f833-adfb-41a9-851e-b4a1308ad88f")
-	)
-	(wire
-		(pts
-			(xy 36.83 24.13) (xy 36.83 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b17d55a6-fc79-4b21-99a3-c7f2bff3bdb0")
 	)
 	(wire
 		(pts
@@ -3775,7 +2858,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 46.99) (xy 156.21 44.45)
+			(xy 148.59 46.99) (xy 148.59 44.45)
 		)
 		(stroke
 			(width 0)
@@ -3792,16 +2875,6 @@
 			(type default)
 		)
 		(uuid "bed30ba2-c219-43ab-88d3-9c9cab4c7004")
-	)
-	(wire
-		(pts
-			(xy 34.29 49.53) (xy 34.29 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0709fdf-f64e-4290-892c-42822c24e519")
 	)
 	(wire
 		(pts
@@ -3862,16 +2935,6 @@
 			(type default)
 		)
 		(uuid "cdb2781c-c986-4c8a-a7e7-0f848179deb2")
-	)
-	(wire
-		(pts
-			(xy 53.34 45.72) (xy 81.28 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce3f066c-2d55-4451-805c-50fccb16838e")
 	)
 	(wire
 		(pts
@@ -3942,16 +3005,6 @@
 			(type default)
 		)
 		(uuid "d65fb7bb-bc2b-497e-b146-4a999878c8e5")
-	)
-	(wire
-		(pts
-			(xy 124.46 38.1) (xy 130.81 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6cb644a-3d7d-4e09-bd8d-5616a29d2be6")
 	)
 	(wire
 		(pts
@@ -4045,16 +3098,6 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 36.83) (xy 53.34 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e55760a8-4e4a-4077-9438-0cf0130c9b70")
-	)
-	(wire
-		(pts
 			(xy 213.36 36.83) (xy 217.17 36.83)
 		)
 		(stroke
@@ -4062,16 +3105,6 @@
 			(type default)
 		)
 		(uuid "e66e8cbc-8ecf-48bd-8305-aa59c6dffa7a")
-	)
-	(wire
-		(pts
-			(xy 81.28 45.72) (xy 99.06 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e76b0c1c-2bc3-493b-9fca-d17d37239221")
 	)
 	(wire
 		(pts
@@ -4115,33 +3148,13 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 34.29) (xy 156.21 36.83)
+			(xy 148.59 34.29) (xy 148.59 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "eadd201e-6b56-459d-9934-bfdee4ef2b98")
-	)
-	(wire
-		(pts
-			(xy 138.43 36.83) (xy 138.43 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec12badf-035d-43cf-88d5-a5a57b76fb9a")
-	)
-	(wire
-		(pts
-			(xy 53.34 43.18) (xy 81.28 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eced288f-81f5-4fc1-8788-02c9a9992419")
 	)
 	(wire
 		(pts
@@ -4172,16 +3185,6 @@
 			(type default)
 		)
 		(uuid "eeafb3fe-8568-48a2-891b-b82f21a122fb")
-	)
-	(wire
-		(pts
-			(xy 130.81 36.83) (xy 130.81 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "efeda1e9-0292-4637-a7f3-ce4406fdd094")
 	)
 	(wire
 		(pts
@@ -4235,16 +3238,6 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 46.99) (xy 31.75 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5f3c629-d4e4-4fda-a73e-76b5f44a3aba")
-	)
-	(wire
-		(pts
 			(xy 252.73 90.17) (xy 259.08 90.17)
 		)
 		(stroke
@@ -4272,16 +3265,6 @@
 			(type default)
 		)
 		(uuid "fa25ab0c-4926-418b-ade6-093cffd13c1f")
-	)
-	(wire
-		(pts
-			(xy 36.83 48.26) (xy 53.34 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fb916f3e-6492-434b-bb65-bd1d017d6c3c")
 	)
 	(wire
 		(pts
@@ -4457,7 +3440,7 @@
 	)
 	(global_label "MAP-5V"
 		(shape input)
-		(at 99.06 45.72 0)
+		(at 58.42 43.18 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4467,7 +3450,7 @@
 		)
 		(uuid "1564d7e4-4f6c-4cf1-8722-4bef09a0ad34")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 108.9921 45.72 0)
+			(at 68.3521 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4501,7 +3484,7 @@
 	)
 	(global_label "BARO-5V"
 		(shape input)
-		(at 162.56 46.99 0)
+		(at 154.94 46.99 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4511,12 +3494,34 @@
 		)
 		(uuid "16400cf9-e69a-4a8f-b47a-25ff25ef0c70")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 173.6412 46.99 0)
+			(at 166.0212 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Baro_Sensor"
+		(shape input)
+		(at 132.08 46.99 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1945c6b9-6be3-472a-a82f-7c0c60c8d2fb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 117.3626 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -5226,24 +4231,24 @@
 			)
 		)
 	)
-	(global_label "MAP_External"
+	(global_label "Static_Air"
 		(shape input)
-		(at 53.34 36.83 90)
+		(at 39.37 43.18 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "d6fcd09d-574c-4ef9-9824-3f5b66bdee28")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 53.34 22.06 90)
+			(at 27.4343 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -6083,7 +5088,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 156.21 34.29 180)
+		(at 148.59 34.29 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6091,7 +5096,7 @@
 		(dnp no)
 		(uuid "164f6323-d495-4680-8376-e05c6a954154")
 		(property "Reference" "#PWR064"
-			(at 156.21 27.94 0)
+			(at 148.59 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6100,7 +5105,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 156.083 29.8958 0)
+			(at 148.463 29.8958 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6108,7 +5113,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 156.21 34.29 0)
+			(at 148.59 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6117,7 +5122,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 156.21 34.29 0)
+			(at 148.59 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6126,7 +5131,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 156.21 34.29 0)
+			(at 148.59 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6424,72 +5429,6 @@
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
 					(reference "#PWR071")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 34.29 49.53 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "24e1edbd-d841-44ab-b049-fd98ac27f747")
-		(property "Reference" "#PWR052"
-			(at 34.29 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 34.417 52.7812 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 34.29 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 34.29 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 34.29 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b4acae72-f082-4ee5-82bc-7e5e4e4c6bf0")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
-					(reference "#PWR052")
 					(unit 1)
 				)
 			)
@@ -7302,7 +6241,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 156.21 40.64 0)
+		(at 148.59 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7310,7 +6249,7 @@
 		(dnp no)
 		(uuid "314239a8-853b-429d-930b-7c110dfb8cd9")
 		(property "Reference" "C23"
-			(at 159.131 39.4716 0)
+			(at 151.511 39.4716 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7319,7 +6258,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 159.131 41.783 0)
+			(at 151.511 41.783 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7328,7 +6267,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 157.1752 44.45 0)
+			(at 149.5552 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7337,7 +6276,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 156.21 40.64 0)
+			(at 148.59 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7346,7 +6285,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 156.21 40.64 0)
+			(at 148.59 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7355,7 +6294,7 @@
 			)
 		)
 		(property "Digikey Part Number" "311-1140-1-ND"
-			(at 156.21 40.64 0)
+			(at 148.59 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7364,7 +6303,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Yageo"
-			(at 156.21 40.64 0)
+			(at 148.59 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7373,7 +6312,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CC0805KRX7R9BB104"
-			(at 156.21 40.64 0)
+			(at 148.59 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7382,7 +6321,7 @@
 			)
 		)
 		(property "URL" "https://www.digikey.com.au/product-detail/en/yageo/CC0805KRX7R9BB104/311-1140-1-ND/303050"
-			(at 156.21 40.64 0)
+			(at 148.59 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7832,111 +6771,6 @@
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
 					(reference "R30")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 130.81 33.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3eefbd0c-5ed5-4d71-93d2-edb0ed0c1251")
-		(property "Reference" "C19"
-			(at 125.73 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.01uF"
-			(at 123.19 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 131.7752 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 130.81 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 130.81 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "311-1136-1-ND"
-			(at 130.81 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Yageo"
-			(at 130.81 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "CC0805KRX7R9BB103"
-			(at 130.81 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "URL" "https://www.digikey.com/product-detail/en/yageo/CC0805KRX7R9BB103/311-1136-1-ND/303046"
-			(at 130.81 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "05d9d240-81ec-423e-923d-d637f6c69c84")
-		)
-		(pin "2"
-			(uuid "877a8a37-31dc-4937-8e49-c97cbb2fdf05")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
-					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -8488,72 +7322,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VDDA")
-		(at 124.46 38.1 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "513d130d-7a5f-4384-8549-8d7e208d002a")
-		(property "Reference" "#PWR059"
-			(at 128.27 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VDDA"
-			(at 121.2088 37.6428 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 124.46 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 124.46 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 124.46 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "44e0c684-b7c6-45aa-bc4d-9ac30946f23b")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
-					(reference "#PWR059")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 95.25 182.88 0)
 		(unit 1)
@@ -8825,6 +7593,109 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 46.99 43.18 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5c805459-f6ee-4371-9630-a1f83399d784")
+		(property "Reference" "R70"
+			(at 46.99 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 46.99 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 46.99 44.958 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 46.99 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 46.99 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "P0.0ACT-ND"
+			(at 46.99 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Panasonic"
+			(at 46.99 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ERJ-6GEY0R00V"
+			(at 46.99 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.digikey.com.au/product-detail/en/panasonic-electronic-components/ERJ-6GEY0R00V/P0-0ACT-ND/82955"
+			(at 46.99 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c3d943ec-c3ab-4127-b5e1-bb62b70e8ad8")
+		)
+		(pin "2"
+			(uuid "47ab15ad-5694-4e5e-9a16-c730553a3d54")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
+					(reference "R70")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 217.17 148.59 0)
 		(unit 1)
@@ -9034,71 +7905,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 134.62 27.94 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "63d84a5e-9581-4642-bd46-049a86770755")
-		(property "Reference" "#PWR061"
-			(at 134.62 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 134.493 23.5458 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 134.62 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 134.62 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 134.62 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3729347f-e3e7-43c7-9e8c-f6de5d4939a8")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
-					(reference "#PWR061")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 273.05 72.39 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9263,72 +8069,6 @@
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
 					(reference "C15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VDDA")
-		(at 31.75 49.53 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "740c2c41-175e-4a14-a715-34c39cc98f93")
-		(property "Reference" "#PWR051"
-			(at 31.75 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VDDA"
-			(at 31.2928 52.7812 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 31.75 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 31.75 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 31.75 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ff6e7daf-85b0-4b14-818f-4246dda3ab8a")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
-					(reference "#PWR051")
 					(unit 1)
 				)
 			)
@@ -10014,134 +8754,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Misc:EBC05DRXN")
-		(at 36.83 24.13 270)
+		(lib_id "power:GND")
+		(at 54.61 30.48 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ab45d12f-942a-4d4e-a6c7-ae2666efd306")
-		(property "Reference" "J4"
-			(at 52.07 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "EBC05DRXN"
-			(at 41.91 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Misc:EBC05DRXN"
-			(at 44.45 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://drawings-pdf.s3.amazonaws.com/C10881.pdf"
-			(at 41.91 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "CONN EDGE DUAL FMALE 10POS 0.100"
-			(at 39.37 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Height" "11.45"
-			(at 36.83 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Sullins"
-			(at 34.29 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "EBC05DRXN"
-			(at 31.75 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Arrow Part Number" "EBC05DRXN"
-			(at 29.21 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Arrow Price/Stock" ""
-			(at 26.67 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 24.13 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 21.59 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "S9641-ND"
-			(at 36.83 24.13 0)
+		(uuid "a659026e-e83b-4d8e-9b3e-19bf8f3f9a6e")
+		(property "Reference" "#PWR0133"
+			(at 54.61 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10149,8 +8771,16 @@
 				(hide yes)
 			)
 		)
-		(property "URL" "https://www.digikey.com.au/product-detail/en/sullins-connector-solutions/EBC05DRXN/S9641-ND/1318485"
-			(at 36.83 24.13 0)
+		(property "Value" "GND"
+			(at 54.483 26.0858 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 54.61 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10158,40 +8788,136 @@
 				(hide yes)
 			)
 		)
-		(pin "A1"
-			(uuid "ffcd72e1-3ff8-4e43-8d46-394ee6ceda6b")
+		(property "Datasheet" ""
+			(at 54.61 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
-		(pin "A2"
-			(uuid "8d4ba83f-2f60-4037-869e-0fbe681cd6eb")
+		(property "Description" ""
+			(at 54.61 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
-		(pin "A3"
-			(uuid "69200292-f7fa-4352-a426-840dcb65e9ad")
-		)
-		(pin "A4"
-			(uuid "982c6c88-c0a5-4dfb-9179-d9ae45461f3e")
-		)
-		(pin "A5"
-			(uuid "0c39a8ca-443c-4704-84fc-b8ad4f284026")
-		)
-		(pin "B1"
-			(uuid "0235196d-f998-4698-bb11-145f1a61b994")
-		)
-		(pin "B2"
-			(uuid "1f0140dd-576c-4aba-83b1-0777dda506ce")
-		)
-		(pin "B3"
-			(uuid "17b187b7-d0cb-4f4b-bea7-af0ede69fa60")
-		)
-		(pin "B4"
-			(uuid "b733d7c4-73b5-4ea8-95ef-e4ee562805b8")
-		)
-		(pin "B5"
-			(uuid "8bb7161f-b030-4a6d-b121-598307fd47f8")
+		(pin "1"
+			(uuid "24f25fb6-182f-4796-99fc-3a253fa63aa6")
 		)
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
-					(reference "J4")
+					(reference "#PWR0133")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 54.61 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a7aad9ed-3cc9-4bf9-a06b-e539868fd290")
+		(property "Reference" "C41"
+			(at 57.531 35.6616 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 57.531 37.973 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 55.5752 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 54.61 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 54.61 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "311-1140-1-ND"
+			(at 54.61 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Yageo"
+			(at 54.61 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CC0805KRX7R9BB104"
+			(at 54.61 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.digikey.com.au/product-detail/en/yageo/CC0805KRX7R9BB104/311-1140-1-ND/303050"
+			(at 54.61 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9a699ac1-8d8a-430c-af82-22b8aed886fe")
+		)
+		(pin "2"
+			(uuid "598ea0cd-caa4-43fc-a967-42eade6c8ae4")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
+					(reference "C41")
 					(unit 1)
 				)
 			)
@@ -10893,129 +9619,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Misc:KP234")
-		(at 134.62 46.99 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d22dae66-956c-44a7-bbde-1c491ef4eb52")
-		(property "Reference" "U11"
-			(at 123.7234 44.6786 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "KP234"
-			(at 123.7234 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Misc:KP234"
-			(at 123.7234 49.3014 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Datasheet" ""
-			(at 134.62 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 134.62 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "448-KP234XTMA1CT-ND"
-			(at 134.62 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Infineon"
-			(at 134.62 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "KP234XTMA1"
-			(at 134.62 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "URL" "https://www.digikey.com.au/product-detail/en/infineon-technologies/KP234XTMA1/448-KP234XTMA1CT-ND/12718428"
-			(at 134.62 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c2e25052-0464-4b8f-b834-5cb82e3eadd6")
-		)
-		(pin "2"
-			(uuid "6cbc99ab-3c2e-4e8f-a731-6b1b5d8d934f")
-		)
-		(pin "4"
-			(uuid "79790b34-f071-4cb4-9b55-dfb0a95174b4")
-		)
-		(pin "5"
-			(uuid "d5aa735f-5165-4f17-929c-11ce1cdb6ffd")
-		)
-		(pin "6"
-			(uuid "34a34f35-1950-45d5-ac60-827bcab446dc")
-		)
-		(pin "7"
-			(uuid "5d38f79a-befd-4cce-81ef-cb8b74563c45")
-		)
-		(pin "8"
-			(uuid "dac212ae-599d-4c3d-9e92-3cdda2e90407")
-		)
-		(pin "8"
-			(uuid "55da3616-2218-4c56-a594-7086da9991f7")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
-					(reference "U11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Amplifier_Operational:LMV324")
 		(at 259.08 107.95 270)
 		(unit 4)
@@ -11158,7 +9761,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 148.59 46.99 90)
+		(at 140.97 46.99 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11166,7 +9769,7 @@
 		(dnp no)
 		(uuid "dabfa2d4-dd52-47f1-83b4-1e852f4503e9")
 		(property "Reference" "R37"
-			(at 148.59 41.91 90)
+			(at 140.97 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11174,7 +9777,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 148.59 44.45 90)
+			(at 140.97 44.45 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11182,7 +9785,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 148.59 48.768 90)
+			(at 140.97 48.768 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11191,7 +9794,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 148.59 46.99 0)
+			(at 140.97 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11200,7 +9803,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 148.59 46.99 0)
+			(at 140.97 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11209,7 +9812,7 @@
 			)
 		)
 		(property "Digikey Part Number" "P0.0ACT-ND"
-			(at 148.59 46.99 0)
+			(at 140.97 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11218,7 +9821,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Panasonic"
-			(at 148.59 46.99 0)
+			(at 140.97 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11227,7 +9830,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "ERJ-6GEY0R00V"
-			(at 148.59 46.99 0)
+			(at 140.97 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11236,7 +9839,7 @@
 			)
 		)
 		(property "URL" "https://www.digikey.com.au/product-detail/en/panasonic-electronic-components/ERJ-6GEY0R00V/P0-0ACT-ND/82955"
-			(at 148.59 46.99 0)
+			(at 140.97 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11693,327 +10296,6 @@
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
 					(reference "R38")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 128.27 54.61 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ebf588e5-f946-47a8-aa6a-86f085386d1a")
-		(property "Reference" "#PWR060"
-			(at 121.92 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 125.0188 54.737 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 128.27 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 128.27 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 128.27 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a850cb35-3c4f-46f6-88bd-09c6746075b1")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
-					(reference "#PWR060")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Misc:AYZ0202AGRLC")
-		(at 53.34 43.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f1337f2a-70d1-4b5b-b31d-ac0b8ce49e34")
-		(property "Reference" "SW5"
-			(at 67.31 36.449 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_DPDT_x2"
-			(at 67.31 38.7604 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Misc:AYZ0202AGRLC"
-			(at 77.47 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://uk.rs-online.com/web/p/products/7931504P"
-			(at 77.47 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "AYZ0202AGRLC (Slide Switches)"
-			(at 77.47 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "RS Part Number" "7931504P"
-			(at 77.47 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "RS Price/Stock" "http://uk.rs-online.com/web/p/products/7931504P"
-			(at 77.47 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "C & K COMPONENTS"
-			(at 77.47 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "AYZ0202AGRLC"
-			(at 77.47 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Allied_Number" "70417470"
-			(at 77.47 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "401-2013-1-ND"
-			(at 53.34 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "URL" "https://www.digikey.com.au/product-detail/en/c-k/AYZ0202AGRLC/401-2013-1-ND/1640122"
-			(at 53.34 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "86586b96-794b-4c70-bbbc-6cf767ba270c")
-		)
-		(pin "2"
-			(uuid "4410fc56-cc41-4c6f-b665-9478781062c4")
-		)
-		(pin "3"
-			(uuid "ea6089b1-2fc0-42e2-8e9c-a73fd8237313")
-		)
-		(pin "4"
-			(uuid "72099ae4-fa47-4fc0-bc17-477b048c054f")
-		)
-		(pin "5"
-			(uuid "c7a51b92-cc42-420d-babc-1f16c61faa58")
-		)
-		(pin "6"
-			(uuid "9b0749e8-c8af-451f-8bc4-1e6f870da202")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
-					(reference "SW5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 138.43 33.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fad316ed-c9d3-43e1-b363-31b02df6e0bc")
-		(property "Reference" "C22"
-			(at 141.351 31.8516 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF"
-			(at 141.351 34.163 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 139.3952 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 138.43 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 138.43 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "311-1365-1-ND"
-			(at 138.43 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Yageo"
-			(at 138.43 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "CC0805KKX7R7BB105"
-			(at 138.43 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "URL" "https://www.digikey.com/product-detail/en/yageo/CC0805KKX7R7BB105/311-1365-1-ND/2103149"
-			(at 138.43 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b0481377-4837-4a8a-8d68-65a3d5d3c223")
-		)
-		(pin "2"
-			(uuid "5f60872b-2e56-4a21-9096-11948cabf1e3")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
-					(reference "C22")
 					(unit 1)
 				)
 			)

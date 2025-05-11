@@ -5418,7 +5418,8 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 48.26 36.83 180)
+		(at 48.26 36.83 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5426,7 +5427,7 @@
 		(dnp no)
 		(uuid "b8e87761-7311-4a25-b060-2b2f94ee7610")
 		(property "Reference" "R55"
-			(at 50.038 35.6616 0)
+			(at 50.038 37.9984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5435,7 +5436,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 50.038 37.973 0)
+			(at 50.038 35.687 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5471,7 +5472,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Yageo"
-			(at 99.06 1.27 0)
+			(at 99.06 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5480,7 +5481,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "RC0805FR-07100KL"
-			(at 99.06 1.27 0)
+			(at 99.06 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5489,7 +5490,7 @@
 			)
 		)
 		(property "URL" "https://www.digikey.com/product-detail/en/yageo/RC0805FR-07100KL/311-100KCRCT-ND/730491"
-			(at 99.06 1.27 0)
+			(at 99.06 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5498,7 +5499,7 @@
 			)
 		)
 		(property "Digikey Part Number" "311-100KCRCT-ND"
-			(at 99.06 1.27 0)
+			(at 99.06 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)

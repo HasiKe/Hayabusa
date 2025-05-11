@@ -1344,7 +1344,7 @@
 	)
 	(text "Spare digital inputs"
 		(exclude_from_sim no)
-		(at 128.27 118.11 0)
+		(at 154.686 124.46 0)
 		(effects
 			(font
 				(size 1.8796 1.8796)
@@ -1374,6 +1374,17 @@
 			(justify left bottom)
 		)
 		(uuid "77464eff-4285-4952-a29e-f232425465ee")
+	)
+	(text "Tip Over Sensor"
+		(exclude_from_sim no)
+		(at 97.536 124.714 0)
+		(effects
+			(font
+				(size 1.8796 1.8796)
+			)
+			(justify left bottom)
+		)
+		(uuid "ddaec694-fc61-4b8e-b04a-0973bcad0b15")
 	)
 	(junction
 		(at 115.57 92.71)
@@ -2003,7 +2014,7 @@
 			)
 		)
 	)
-	(global_label "SPARE1-Digital"
+	(global_label "Tip Over Sensor"
 		(shape input)
 		(at 120.65 147.32 0)
 		(fields_autoplaced yes)
@@ -2015,7 +2026,7 @@
 		)
 		(uuid "9f7f7317-0dc2-42ed-a4ea-9365647ac88d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 137.8391 147.32 0)
+			(at 138.8751 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
