@@ -5109,13 +5109,13 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 48.26 54.61 90)
+		(at 48.26 54.61 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "bd1fc049-ebe6-4381-8e84-95008e09cd8a")
 		(property "Reference" "R69"
 			(at 48.26 48.26 90)
