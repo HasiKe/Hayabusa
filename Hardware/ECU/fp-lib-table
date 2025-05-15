@@ -8,4 +8,5 @@
   (lib (name "ZXMS6006DT8TA")(type "KiCad")(uri "${KIPRJMOD}/lib/ZXMS6006DT8TA")(options "")(descr ""))
   (lib (name "2999")(type "KiCad")(uri "${KIPRJMOD}/lib/2999")(options "")(descr ""))
   (lib (name "connector")(type "KiCad")(uri "${KIPRJMOD}/lib/connector/connector.pretty")(options "")(descr ""))
+  (lib (name "LIB_IRFB4110PBF")(type "KiCad")(uri "${KIPRJMOD}/lib/LIB_IRFB4110PBF")(options "")(descr ""))
 )
