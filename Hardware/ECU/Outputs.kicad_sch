@@ -2595,7 +2595,7 @@
 		)
 		(uuid "00ae4759-5ad1-49fc-b167-7e166de91833")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 276.2692 118.11 0)
+			(at 277.0028 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3221,7 +3221,7 @@
 			)
 		)
 	)
-	(global_label "VVT-OUT"
+	(global_label "SPARE2_OUT"
 		(shape input)
 		(at 261.62 125.73 0)
 		(fields_autoplaced yes)
@@ -3233,7 +3233,7 @@
 		)
 		(uuid "db1b678f-a07b-4d7d-90f0-496d8661eeed")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 272.2174 125.73 0)
+			(at 276.398 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)

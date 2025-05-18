@@ -1904,7 +1904,7 @@
 			)
 		)
 	)
-	(global_label "SPARE1_Sensor"
+	(global_label "Gear_Position"
 		(shape input)
 		(at 105.41 49.53 180)
 		(fields_autoplaced yes)
@@ -1916,7 +1916,7 @@
 		)
 		(uuid "39892589-5e7f-4d1d-b6fc-9a8b5d1110e9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 88.5838 49.53 0)
+			(at 89.483 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)

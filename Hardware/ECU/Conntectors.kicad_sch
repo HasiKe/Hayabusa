@@ -1469,16 +1469,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Spannungsteiler mit pulldown\nteiler 22kohm 10kohm ? 3,4V\npulldown 100kohm"
-		(exclude_from_sim no)
-		(at 59.69 66.294 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "f4445c63-4fd8-4ff7-9d01-fecd9c4d481c")
-	)
 	(wire
 		(pts
 			(xy 171.45 104.14) (xy 176.53 104.14)
@@ -1621,16 +1611,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 68.58) (xy 143.51 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ea19379-7a57-4917-9e92-ca33a0d858b8")
-	)
-	(wire
-		(pts
 			(xy 149.86 119.38) (xy 149.86 124.46)
 		)
 		(stroke
@@ -1668,26 +1648,6 @@
 			(type default)
 		)
 		(uuid "32abb0c0-e4a4-4795-acf7-2611df9f1291")
-	)
-	(wire
-		(pts
-			(xy 250.19 52.07) (xy 247.65 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3582e2ea-401e-42c5-b6f7-2701d10e3df7")
-	)
-	(wire
-		(pts
-			(xy 247.65 57.15) (xy 245.11 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3827a434-61fb-4781-a158-834d92a4cb2e")
 	)
 	(wire
 		(pts
@@ -1971,6 +1931,16 @@
 	)
 	(wire
 		(pts
+			(xy 138.43 68.58) (xy 143.51 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7c6eda3-2aee-4994-ad69-0bd8326b08b2")
+	)
+	(wire
+		(pts
 			(xy 132.08 119.38) (xy 132.08 123.19)
 		)
 		(stroke
@@ -2081,16 +2051,6 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 49.53) (xy 251.46 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7860f0a-5ed5-4e00-b34f-6feff71d53f8")
-	)
-	(wire
-		(pts
 			(xy 118.11 66.04) (xy 144.78 66.04)
 		)
 		(stroke
@@ -2098,16 +2058,6 @@
 			(type default)
 		)
 		(uuid "ef184a64-8c83-45b1-aea9-c1224d65631f")
-	)
-	(wire
-		(pts
-			(xy 246.38 54.61) (xy 248.92 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "efebb5b7-9224-47c6-8e95-d6b5a65b6c5c")
 	)
 	(wire
 		(pts
@@ -2208,16 +2158,6 @@
 			(justify right bottom)
 		)
 		(uuid "47b3fafd-0fd7-4ae1-95a7-7b72a9483b45")
-	)
-	(label "Starter Relay Input"
-		(at 109.22 68.58 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "51a9ba84-fd95-458c-8c59-7e5ad357cf8a")
 	)
 	(label "NC"
 		(at 157.48 120.65 270)
@@ -2485,28 +2425,6 @@
 			)
 		)
 	)
-	(global_label "IGN8"
-		(shape input)
-		(at 266.7 137.16 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "31d8e5d8-bf7d-4af2-9817-aa54c6d8ac65")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 274.1 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "IDLE-OUT"
 		(shape input)
 		(at 124.46 96.52 180)
@@ -2595,28 +2513,6 @@
 			)
 		)
 	)
-	(global_label "INJ7"
-		(shape input)
-		(at 248.92 54.61 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "50de85ec-8107-4b29-8c20-c536e67225ce")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 256.0176 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "CAM-IN+"
 		(shape input)
 		(at 177.8 106.68 0)
@@ -2630,28 +2526,6 @@
 		(uuid "59014621-c325-4d5c-aec6-17f014a60076")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 189.6753 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "IGN7"
-		(shape input)
-		(at 266.7 139.7 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5c1dd722-ac5b-46a6-a4f1-322e2d69113f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 274.1 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2969,28 +2843,6 @@
 			)
 		)
 	)
-	(global_label "INJ5"
-		(shape input)
-		(at 251.46 49.53 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "89f5ec6e-e0eb-4f2d-ae1d-33baa7e6ff72")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 258.5576 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SPARE2_Sensor"
 		(shape input)
 		(at 142.24 124.46 270)
@@ -3026,28 +2878,6 @@
 		(uuid "8fdf847e-5ed5-4448-8639-563376d3dc3d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 178.6003 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "INJ8"
-		(shape input)
-		(at 247.65 57.15 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9ad4e485-4485-4a3d-a9e1-418d23078992")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 254.7476 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3167,7 +2997,7 @@
 			)
 		)
 	)
-	(global_label "SPARE1_Sensor"
+	(global_label "Gear_Position"
 		(shape input)
 		(at 132.08 123.19 270)
 		(fields_autoplaced yes)
@@ -3179,7 +3009,7 @@
 		)
 		(uuid "bd1a157c-6ad2-4783-a90d-42735aaee274")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 132.08 140.7498 90)
+			(at 132.08 139.117 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3277,28 +3107,6 @@
 			)
 		)
 	)
-	(global_label "IGN5"
-		(shape input)
-		(at 266.7 144.78 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d6edf447-34f6-4c70-9629-110ddce83d71")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 274.1 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "O2-Heater"
 		(shape input)
 		(at 162.56 124.46 270)
@@ -3387,31 +3195,9 @@
 			)
 		)
 	)
-	(global_label "INJ6"
-		(shape input)
-		(at 250.19 52.07 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e4fd4e35-e371-42f9-981b-63df26904c6c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 257.2876 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "Clutch_in"
 		(shape input)
-		(at 87.63 67.31 180)
+		(at 138.43 68.58 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3421,7 +3207,7 @@
 		)
 		(uuid "e8dc02b4-d700-4d59-9562-db96b71172db")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 75.8759 67.31 0)
+			(at 126.6759 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3449,28 +3235,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "IGN6"
-		(shape input)
-		(at 266.7 142.24 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "fc5626ee-0f65-4829-964d-43d53e5902fb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 274.1 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)

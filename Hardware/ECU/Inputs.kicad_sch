@@ -658,6 +658,173 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Diode:1N4148WT"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1N4148WT"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SOD-523"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30396.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "75V 0.15A Fast switching Diode, SOD-523"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*SOD?523*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "1N4148WT_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1N4148WT_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "IC_Automotive:SP720"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1549,7 +1716,7 @@
 		(uuid "4736655f-3ed1-483b-ac7e-a2c82b4fec8a")
 	)
 	(junction
-		(at 95.25 172.72)
+		(at 99.06 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4e533620-f200-4cab-81bf-180aad2cd7f2")
@@ -1735,6 +1902,16 @@
 			(type default)
 		)
 		(uuid "05d9c48b-9701-4619-acf9-09a998ecc92f")
+	)
+	(wire
+		(pts
+			(xy 90.17 181.61) (xy 90.17 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "064161ea-e114-434e-95c5-fc80365a3ae1")
 	)
 	(wire
 		(pts
@@ -2188,6 +2365,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 181.61) (xy 90.17 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "431c1c61-9fad-427e-b9fb-f33eeb0704e1")
+	)
+	(wire
+		(pts
 			(xy 251.46 156.21) (xy 251.46 158.75)
 		)
 		(stroke
@@ -2338,7 +2525,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 172.72) (xy 109.22 172.72)
+			(xy 110.49 172.72) (xy 113.03 172.72)
 		)
 		(stroke
 			(width 0)
@@ -2548,7 +2735,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 181.61) (xy 95.25 182.88)
+			(xy 99.06 181.61) (xy 99.06 182.88)
 		)
 		(stroke
 			(width 0)
@@ -2908,7 +3095,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 172.72) (xy 95.25 172.72)
+			(xy 90.17 172.72) (xy 99.06 172.72)
 		)
 		(stroke
 			(width 0)
@@ -2935,16 +3122,6 @@
 			(type default)
 		)
 		(uuid "cdb2781c-c986-4c8a-a7e7-0f848179deb2")
-	)
-	(wire
-		(pts
-			(xy 90.17 181.61) (xy 90.17 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce89be9d-aa63-4bb5-8aaf-82b762ec2c77")
 	)
 	(wire
 		(pts
@@ -3055,16 +3232,6 @@
 			(type default)
 		)
 		(uuid "de7cf895-7095-4ff2-aee6-efbeb00bbda0")
-	)
-	(wire
-		(pts
-			(xy 86.36 181.61) (xy 90.17 181.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "df1f9f7c-ad59-4387-a75e-747e738e2a43")
 	)
 	(wire
 		(pts
@@ -3258,7 +3425,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 172.72) (xy 99.06 172.72)
+			(xy 99.06 172.72) (xy 102.87 172.72)
 		)
 		(stroke
 			(width 0)
@@ -3278,7 +3445,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 173.99) (xy 95.25 172.72)
+			(xy 99.06 173.99) (xy 99.06 172.72)
 		)
 		(stroke
 			(width 0)
@@ -4448,7 +4615,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 109.22 172.72 270)
+		(at 113.03 172.72 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4456,7 +4623,7 @@
 		(dnp no)
 		(uuid "091cc9c8-abcc-410e-8605-dcdd4e6b2178")
 		(property "Reference" "#PWR058"
-			(at 105.41 172.72 0)
+			(at 109.22 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4465,7 +4632,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 112.4712 173.101 90)
+			(at 116.2812 173.101 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4474,7 +4641,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 109.22 172.72 0)
+			(at 113.03 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4483,7 +4650,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 109.22 172.72 0)
+			(at 113.03 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4492,7 +4659,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 109.22 172.72 0)
+			(at 113.03 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7323,7 +7490,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 95.25 182.88 0)
+		(at 99.06 182.88 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7331,7 +7498,7 @@
 		(dnp no)
 		(uuid "54e425b3-9333-4274-a64e-4fc216abc639")
 		(property "Reference" "#PWR057"
-			(at 95.25 189.23 0)
+			(at 99.06 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7340,7 +7507,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 95.377 187.2742 0)
+			(at 99.187 187.2742 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7348,7 +7515,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 182.88 0)
+			(at 99.06 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7357,7 +7524,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 182.88 0)
+			(at 99.06 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7366,7 +7533,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 95.25 182.88 0)
+			(at 99.06 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8178,8 +8345,95 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:1N4148WT")
+		(at 90.17 176.53 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "844f7b6d-09d9-4946-a3c4-f8f8f5fdfa6a")
+		(property "Reference" "D3"
+			(at 91.948 175.514 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1N4148WT"
+			(at 78.232 177.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-523"
+			(at 94.615 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30396.pdf"
+			(at 90.17 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "75V 0.15A Fast switching Diode, SOD-523"
+			(at 90.17 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 90.17 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 90.17 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f2003ba4-40ba-43a9-a756-ec93c2aaf2b0")
+		)
+		(pin "1"
+			(uuid "a12f3305-e976-46fb-8010-c1ccc5593d29")
+		)
+		(instances
+			(project ""
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/6dc40af5-f3aa-4e23-baf5-2c7690c42731"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
-		(at 102.87 172.72 90)
+		(at 106.68 172.72 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8187,7 +8441,7 @@
 		(dnp no)
 		(uuid "84584d70-6cba-4ff6-b6c4-06c40e4a8139")
 		(property "Reference" "R32"
-			(at 102.87 167.64 90)
+			(at 106.68 167.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8195,7 +8449,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 102.87 170.18 90)
+			(at 106.68 170.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8203,7 +8457,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 102.87 174.498 90)
+			(at 106.68 174.498 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8212,7 +8466,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 102.87 172.72 0)
+			(at 106.68 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8221,7 +8475,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 102.87 172.72 0)
+			(at 106.68 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8230,7 +8484,7 @@
 			)
 		)
 		(property "Digikey Part Number" "311-1.00KCRCT-ND"
-			(at 102.87 172.72 0)
+			(at 106.68 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8239,7 +8493,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Yageo"
-			(at 102.87 172.72 0)
+			(at 106.68 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8248,7 +8502,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "RC0805FR-071KL"
-			(at 102.87 172.72 0)
+			(at 106.68 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8257,7 +8511,7 @@
 			)
 		)
 		(property "URL" "https://www.digikey.com/product-detail/en/yageo/RC0805FR-071KL/311-1.00KCRCT-ND/730391"
-			(at 102.87 172.72 0)
+			(at 106.68 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8413,7 +8667,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 95.25 177.8 0)
+		(at 99.06 177.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8421,7 +8675,7 @@
 		(dnp no)
 		(uuid "9162b058-065b-45dc-8d0e-f3ecb640db36")
 		(property "Reference" "C18"
-			(at 98.171 176.6316 0)
+			(at 101.981 176.6316 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8430,7 +8684,7 @@
 			)
 		)
 		(property "Value" "270nF"
-			(at 98.171 178.943 0)
+			(at 101.981 178.943 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8439,7 +8693,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 96.2152 181.61 0)
+			(at 100.0252 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8448,7 +8702,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 95.25 177.8 0)
+			(at 99.06 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8457,7 +8711,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 95.25 177.8 0)
+			(at 99.06 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8466,7 +8720,7 @@
 			)
 		)
 		(property "Digikey Part Number" "311-4268-1-ND"
-			(at 95.25 177.8 0)
+			(at 99.06 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8475,7 +8729,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Yageo"
-			(at 95.25 177.8 0)
+			(at 99.06 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8484,7 +8738,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CC0805JRX7R7BB274"
-			(at 95.25 177.8 0)
+			(at 99.06 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8493,7 +8747,7 @@
 			)
 		)
 		(property "URL" "https://www.digikey.com.au/product-detail/en/yageo/CC0805JRX7R7BB274/311-4268-1-ND/8025357"
-			(at 95.25 177.8 0)
+			(at 99.06 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)

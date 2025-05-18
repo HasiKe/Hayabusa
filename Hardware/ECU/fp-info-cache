@@ -1,11 +1,11 @@
-25672635059335656
+25674384727279527
 2999
 BAT_2999
 
 
 0
 3
-3
+2
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -67948,6 +67948,13 @@ Yellow 5381 Series LED
 0
 2
 2
+LIB_IRFB4110PBF
+TO254P483X1016X1994-3P
+TO-220AB
+MOSFET (N-Channel)
+0
+3
+3
 Misc
 AYZ0202AGRLC
 AYZ0202AGRLC
