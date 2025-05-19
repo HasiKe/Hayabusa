@@ -1605,7 +1605,7 @@
 		)
 		(uuid "b179b85b-f5a5-4d21-a932-48c646fbef77")
 	)
-	(text "Static Air"
+	(text "Map Sensor"
 		(exclude_from_sim no)
 		(at 46.99 21.59 0)
 		(effects
@@ -4398,7 +4398,7 @@
 			)
 		)
 	)
-	(global_label "Static_Air"
+	(global_label "Map_Sensor"
 		(shape input)
 		(at 39.37 43.18 180)
 		(fields_autoplaced yes)
@@ -4410,7 +4410,7 @@
 		)
 		(uuid "d6fcd09d-574c-4ef9-9824-3f5b66bdee28")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 27.4343 43.18 0)
+			(at 25.2574 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -1501,26 +1501,6 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 119.38) (xy 144.78 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0adf536d-a78e-47f7-a5ea-e331bdc63a11")
-	)
-	(wire
-		(pts
-			(xy 132.08 83.82) (xy 135.89 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e0c3274-e11c-421f-b53a-8bf4205d6f71")
-	)
-	(wire
-		(pts
 			(xy 173.99 109.22) (xy 179.07 109.22)
 		)
 		(stroke
@@ -1621,26 +1601,6 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 119.38) (xy 172.72 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3169ac55-ddd9-4110-9850-8b2be979ee6a")
-	)
-	(wire
-		(pts
-			(xy 176.53 114.3) (xy 177.8 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31846653-1551-494b-bc4a-5bafe3f9b273")
-	)
-	(wire
-		(pts
 			(xy 134.62 119.38) (xy 134.62 148.59)
 		)
 		(stroke
@@ -1648,16 +1608,6 @@
 			(type default)
 		)
 		(uuid "32abb0c0-e4a4-4795-acf7-2611df9f1291")
-	)
-	(wire
-		(pts
-			(xy 167.64 96.52) (xy 168.91 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "393d87cb-4b8e-4e66-be1c-a16012766678")
 	)
 	(wire
 		(pts
@@ -1678,16 +1628,6 @@
 			(type default)
 		)
 		(uuid "47766ad9-006e-4cb6-a9c1-0c20e11eb2db")
-	)
-	(wire
-		(pts
-			(xy 130.81 86.36) (xy 134.62 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "48ec26ba-f5c3-4593-9178-7495d4682667")
 	)
 	(wire
 		(pts
@@ -1721,6 +1661,16 @@
 	)
 	(wire
 		(pts
+			(xy 129.54 119.38) (xy 129.54 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5861cacd-eabd-480a-9b6c-fbb4169da42e")
+	)
+	(wire
+		(pts
 			(xy 139.7 119.38) (xy 139.7 124.46)
 		)
 		(stroke
@@ -1728,16 +1678,6 @@
 			(type default)
 		)
 		(uuid "5b6dcbfa-2699-4072-b568-a483a32b15f0")
-	)
-	(wire
-		(pts
-			(xy 160.02 119.38) (xy 160.02 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5eb939ee-5926-4b96-918b-6d4ae4a048e6")
 	)
 	(wire
 		(pts
@@ -1768,16 +1708,6 @@
 			(type default)
 		)
 		(uuid "6d1aa141-036b-47f4-b618-85a392c73f25")
-	)
-	(wire
-		(pts
-			(xy 129.54 88.9) (xy 133.35 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6ee97b24-c65b-4db3-8ba9-cb490a26fc6d")
 	)
 	(wire
 		(pts
@@ -1851,16 +1781,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 119.38) (xy 129.54 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9c71fbfe-d229-4370-9cf2-367e46f55d10")
-	)
-	(wire
-		(pts
 			(xy 121.92 101.6) (xy 127 101.6)
 		)
 		(stroke
@@ -1918,16 +1838,6 @@
 			(type default)
 		)
 		(uuid "b128271b-8b6f-4e35-84d4-a731bd2465b6")
-	)
-	(wire
-		(pts
-			(xy 168.91 99.06) (xy 173.99 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b15d82c7-58fb-4f28-ac58-502636bd20fc")
 	)
 	(wire
 		(pts
@@ -2021,16 +1931,6 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 119.38) (xy 157.48 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "df94d13e-bd06-449f-be29-492b7c3490de")
-	)
-	(wire
-		(pts
 			(xy 137.16 71.12) (xy 142.24 71.12)
 		)
 		(stroke
@@ -2068,6 +1968,16 @@
 			(type default)
 		)
 		(uuid "f24fc90c-23d8-42a7-8096-d678c0c3d91d")
+	)
+	(wire
+		(pts
+			(xy 144.78 119.38) (xy 144.78 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4547dc6-a695-44f7-8990-d09f66825a0d")
 	)
 	(wire
 		(pts
@@ -2129,7 +2039,7 @@
 		)
 		(uuid "1440d7c0-9117-4974-ba97-18f2f04993bf")
 	)
-	(label "Fuel pump FB"
+	(label "FI FB"
 		(at 170.18 139.7 270)
 		(effects
 			(font
@@ -2491,9 +2401,9 @@
 			)
 		)
 	)
-	(global_label "Static_Air"
+	(global_label "Map_Sensor"
 		(shape input)
-		(at 144.78 124.46 270)
+		(at 129.54 123.19 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2503,7 +2413,7 @@
 		)
 		(uuid "50b51f43-262c-4b91-8a0a-e31fe9e3b97f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.78 136.3957 90)
+			(at 129.54 137.3026 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3219,7 +3129,7 @@
 	)
 	(global_label "Baro_Sensor"
 		(shape input)
-		(at 129.54 123.19 270)
+		(at 144.78 124.46 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3229,7 +3139,7 @@
 		)
 		(uuid "f36f7f2e-9d85-4b1e-84a2-3ac224d4e039")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 129.54 137.9074 90)
+			(at 144.78 139.1774 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3657,7 +3567,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "BL"
 			(at 148.59 88.9 0)
 			(effects
 				(font

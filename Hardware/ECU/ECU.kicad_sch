@@ -5264,6 +5264,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Library" "lib\\teensy4.1.lbr"
+			(at 167.64 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "33"
 			(uuid "d1254868-2d7a-4e3e-bafa-35e6dc115a52")
 		)
