@@ -2945,16 +2945,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 116.84) (xy 41.91 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b9b36ff-c2b2-44b2-be99-9418da907cde")
-	)
-	(wire
-		(pts
 			(xy 90.17 29.21) (xy 90.17 40.64)
 		)
 		(stroke
@@ -3961,28 +3951,6 @@
 			)
 		)
 	)
-	(global_label "MC33810_2-CS"
-		(shape input)
-		(at 41.91 116.84 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b778ba09-dc11-4de2-bedb-833030b134b6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 24.6605 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "12V-SW"
 		(shape input)
 		(at 105.41 71.12 180)
@@ -4106,28 +4074,6 @@
 		(uuid "e879bd38-ae3c-461e-bfe0-5c975ef301ae")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 107.7825 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "MCU-D9"
-		(shape input)
-		(at 50.8 116.84 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f1e6fa98-4e6b-43e7-b06b-507928a21ae3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 61.1554 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)

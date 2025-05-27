@@ -11,4 +11,5 @@
   (lib (name "Shields")(type "Legacy")(uri "${KIPRJMOD}/lib/Shields/Shields.lib")(options "")(descr ""))
   (lib (name "connector")(type "KiCad")(uri "${KIPRJMOD}/lib/connector/connector.kicad_sym")(options "")(descr ""))
   (lib (name "LIB_IRFB4110PBF")(type "KiCad")(uri "${KIPRJMOD}/lib/LIB_IRFB4110PBF/IRFB4110PBF.kicad_sym")(options "")(descr ""))
+  (lib (name "SamacSys_Parts")(type "KiCad")(uri "${KIPRJMOD}/lib/SamacSys_Parts.kicad_sym")(options "")(descr ""))
 )
