@@ -1167,234 +1167,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_DIP_x02"
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "SW"
-				(at 0 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SW_DIP_x02"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "2x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "dip switch"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SW?DIP?x2*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SW_DIP_x02_0_0"
-				(circle
-					(center -2.032 2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 2.667) (xy 2.3622 3.7084)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 0.127) (xy 2.3622 1.1684)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 2.54)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SW_DIP_x02_0_1"
-				(rectangle
-					(start -3.81 5.08)
-					(end 3.81 -2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "SW_DIP_x02_1_1"
-				(pin passive line
-					(at -7.62 2.54 0)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -7.62 0 0)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 2.54 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Switch:SW_SPDT"
 			(pin_names
 				(offset 0)
@@ -2018,7 +1790,7 @@
 		(at 120.65 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "9d497fae-000f-4d34-add7-1ec2d8291ab1")
+		(uuid "8ace3e7f-6e71-40f1-9bdb-5136124e681c")
 	)
 	(junction
 		(at 100.33 83.82)
@@ -2096,7 +1868,7 @@
 		(at 118.11 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "db7f9e98-711a-4e28-86bc-489a4231d53f")
+		(uuid "d9b90eb0-b9ec-41bc-8991-5db9d32bc73e")
 	)
 	(junction
 		(at 119.38 60.96)
@@ -2172,7 +1944,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 83.82) (xy 128.27 83.82)
+			(xy 107.95 83.82) (xy 118.11 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2208,7 +1980,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "221b059f-1dec-40ea-befd-d3bfe238b252")
+		(uuid "1dce8bc1-fbdf-4519-8c8f-9ff781d1c44b")
 	)
 	(wire
 		(pts
@@ -2249,6 +2021,16 @@
 			(type default)
 		)
 		(uuid "25d440cd-5900-4fc4-b9b1-16a7ce2188e3")
+	)
+	(wire
+		(pts
+			(xy 118.11 68.58) (xy 118.11 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "293a11fa-487e-4549-b768-70e4578a067c")
 	)
 	(wire
 		(pts
@@ -2402,6 +2184,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 83.82) (xy 128.27 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a05c835-5f7c-4712-8e45-404e42baddd4")
+	)
+	(wire
+		(pts
 			(xy 53.34 81.28) (xy 53.34 77.47)
 		)
 		(stroke
@@ -2459,16 +2251,6 @@
 			(type default)
 		)
 		(uuid "70821ed4-6e74-4e08-8c11-55a3f9b32b22")
-	)
-	(wire
-		(pts
-			(xy 107.95 83.82) (xy 118.11 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "804e74e3-0803-49e5-a7be-bca733218644")
 	)
 	(wire
 		(pts
@@ -2639,6 +2421,16 @@
 			(type default)
 		)
 		(uuid "b0080a86-9580-4b4e-a9af-3c5a809f989f")
+	)
+	(wire
+		(pts
+			(xy 120.65 81.28) (xy 120.65 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b25ae1a6-38f0-4703-b3dc-eabe99543f53")
 	)
 	(wire
 		(pts
@@ -2862,6 +2654,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 68.58) (xy 120.65 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da248387-9bbb-4eb1-98d1-581f507ec4f4")
+	)
+	(wire
+		(pts
 			(xy 96.52 72.39) (xy 96.52 73.66)
 		)
 		(stroke
@@ -2969,6 +2771,16 @@
 			(type default)
 		)
 		(uuid "ec3e6e76-695d-407f-8955-45dffb592ec1")
+	)
+	(wire
+		(pts
+			(xy 118.11 81.28) (xy 118.11 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0157695-0132-42fa-a173-2193787fcdb5")
 	)
 	(wire
 		(pts
@@ -4180,6 +3992,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 120.65 76.2 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4305788a-6ccd-44db-95a0-32695679ce7c")
+		(property "Reference" "JP5"
+			(at 126.619 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Jumper_2_Open"
+			(at 124.3076 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 120.65 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "30cdda33-5acf-407a-a427-29c21d7df8a0")
+		)
+		(pin "2"
+			(uuid "b00b990c-9845-4573-a393-8a816b72c640")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/34d8184b-485a-4241-8a68-5c8e24cc7ad9"
+					(reference "JP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 100.33 80.01 180)
 		(unit 1)
@@ -4914,118 +4794,6 @@
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/34d8184b-485a-4241-8a68-5c8e24cc7ad9"
 					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_DIP_x02")
-		(at 118.11 76.2 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "aaa080e0-2959-4495-8b77-b5ce782247a8")
-		(property "Reference" "SW3"
-			(at 123.952 75.0316 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SW_DIP_x02"
-			(at 123.952 77.343 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:SW_DIP_SPSTx02_Slide_9.78x7.26mm_W8.61mm_P2.54mm"
-			(at 123.952 78.5114 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 118.11 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 118.11 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "679-3566-1-ND"
-			(at 118.11 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "APEM Inc."
-			(at 118.11 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "IKN0204000"
-			(at 118.11 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "URL" "https://www.digikey.com.au/product-detail/en/apem-inc/IKN0204000/679-3566-1-ND/4384369"
-			(at 118.11 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2dcc1809-2fb0-4edd-a9ff-7dfa365c7b11")
-		)
-		(pin "2"
-			(uuid "5588abe5-db48-4cdb-983a-e849ef7dbea3")
-		)
-		(pin "3"
-			(uuid "890e88e8-354a-44f9-b4e3-0218fe9ae313")
-		)
-		(pin "4"
-			(uuid "5b24bae4-8304-48d9-b84b-859ba1e04000")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/34d8184b-485a-4241-8a68-5c8e24cc7ad9"
-					(reference "SW3")
 					(unit 1)
 				)
 			)
@@ -6217,6 +5985,73 @@
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/34d8184b-485a-4241-8a68-5c8e24cc7ad9"
 					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 118.11 76.2 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fc41db2e-26cf-40c6-8316-1b0913df06fb")
+		(property "Reference" "JP1"
+			(at 112.141 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Jumper_2_Open"
+			(at 114.4524 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 118.11 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 118.11 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3a4ddeaa-0b08-4c45-a402-88b4d26d560e")
+		)
+		(pin "2"
+			(uuid "5efa6d66-e1cd-4dee-b6a3-3b9278e613c2")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/34d8184b-485a-4241-8a68-5c8e24cc7ad9"
+					(reference "JP1")
 					(unit 1)
 				)
 			)
