@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dsh xmlns="http://www.EFIAnalytics.com/:dsh">
-<bibliography author="TunerStudio 3.3.00 - EFI Analytics - support@efianalytics.com" company="EFI Analytics, © 2007 - 2025, All Rights Reserved." writeDate="Tue Sep 23 23:14:19 CEST 2025"/>
+<bibliography author="TunerStudio 3.3.00 - EFI Analytics - support@efianalytics.com" company="EFI Analytics, © 2007 - 2025, All Rights Reserved." writeDate="Tue Sep 23 22:08:47 CEST 2025"/>
 <versionInfo fileFormat="3.0" firmwareSignature="speeduino 202501"/>
-<gaugeCluster antiAliasing="true" backgroundDitherColor="-8355712" clusterBackgroundColor="-16777216" clusterBackgroundImageFileName="" clusterBackgroundImageStyle="Tile" forceAspect="false" forceAspectHeight="9.0" forceAspectWidth="16.0">
+<gaugeCluster antiAliasing="true" backgroundDitherColor="" clusterBackgroundColor="-16777216" clusterBackgroundImageFileName="" clusterBackgroundImageStyle="Tile" forceAspect="false" forceAspectHeight="9.0" forceAspectWidth="16.0">
 <dashComp type="Gauge">
 <Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
@@ -12,18 +12,18 @@
 <RunDemo type="boolean">false</RunDemo>
 <FontColor alpha="255" blue="255" green="255" red="255" type="Color">-1</FontColor>
 <GaugeStyle type="String">Line Graph</GaugeStyle>
-<HighWarning type="double">NaN</HighWarning>
+<HighWarning type="double">9000.0</HighWarning>
 <HistoryDelay type="int">15000</HistoryDelay>
 <LowCriticalVP type="ValueProvider">300.0</LowCriticalVP>
 <FaceAngle type="int">360</FaceAngle>
-<HighCritical type="double">NaN</HighCritical>
+<HighCritical type="double">10800.0</HighCritical>
 <LabelDigits type="int">0</LabelDigits>
 <LowCritical type="double">300.0</LowCritical>
 <DisplayValue type="String">0</DisplayValue>
 <BorderWidth type="int">1</BorderWidth>
 <CriticalColor alpha="255" blue="0" green="0" red="255" type="Color">-65536</CriticalColor>
 <BackColor alpha="0" blue="0" green="0" red="0" type="Color">0</BackColor>
-<DefaultMax type="double">100.0</DefaultMax>
+<DefaultMax type="double">12000.0</DefaultMax>
 <HighWarningVP type="ValueProvider">rpmwarn</HighWarningVP>
 <LowWarning type="double">600.0</LowWarning>
 <DefaultMin type="double">0.0</DefaultMin>
@@ -35,7 +35,7 @@
 <WarnColor alpha="255" blue="0" green="255" red="255" type="Color">-256</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">0</ValueDigits>
-<ShortestSize type="int">101</ShortestSize>
+<ShortestSize type="int">65</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
 <SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
@@ -52,13 +52,13 @@
 <HistoricalPeakValue type="double">0.0</HistoricalPeakValue>
 <DisplayValueAt180 type="boolean">false</DisplayValueAt180>
 <ShapeLockedToAspect type="boolean">false</ShapeLockedToAspect>
-<Max type="double">100.0</Max>
+<Max type="double">12000.0</Max>
 <MaxVP type="ValueProvider">rpmhigh</MaxVP>
 <Min type="double">0.0</Min>
 <MinVP type="ValueProvider">0.0</MinVP>
 <Units type="String">RPM</Units>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">45890657</GroupId>
+<GroupId type="int">950134196</GroupId>
 <Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">rpm</OutputChannel>
@@ -87,18 +87,18 @@
 <RunDemo type="boolean">false</RunDemo>
 <FontColor alpha="255" blue="255" green="255" red="255" type="Color">-1</FontColor>
 <GaugeStyle type="String">Basic Readout</GaugeStyle>
-<HighWarning type="double">NaN</HighWarning>
+<HighWarning type="double">9000.0</HighWarning>
 <HistoryDelay type="int">15000</HistoryDelay>
 <LowCriticalVP type="ValueProvider">300.0</LowCriticalVP>
 <FaceAngle type="int">360</FaceAngle>
-<HighCritical type="double">NaN</HighCritical>
+<HighCritical type="double">10800.0</HighCritical>
 <LabelDigits type="int">0</LabelDigits>
 <LowCritical type="double">300.0</LowCritical>
 <DisplayValue type="String">0</DisplayValue>
 <BorderWidth type="int">0</BorderWidth>
 <CriticalColor alpha="0" blue="0" green="0" red="0" type="Color">0</CriticalColor>
 <BackColor alpha="0" blue="0" green="0" red="0" type="Color">0</BackColor>
-<DefaultMax type="double">100.0</DefaultMax>
+<DefaultMax type="double">12000.0</DefaultMax>
 <HighWarningVP type="ValueProvider">rpmwarn</HighWarningVP>
 <LowWarning type="double">600.0</LowWarning>
 <DefaultMin type="double">0.0</DefaultMin>
@@ -110,7 +110,7 @@
 <WarnColor alpha="0" blue="0" green="0" red="0" type="Color">0</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">0</ValueDigits>
-<ShortestSize type="int">20</ShortestSize>
+<ShortestSize type="int">13</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
 <SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
@@ -127,13 +127,13 @@
 <HistoricalPeakValue type="double">0.0</HistoricalPeakValue>
 <DisplayValueAt180 type="boolean">false</DisplayValueAt180>
 <ShapeLockedToAspect type="boolean">false</ShapeLockedToAspect>
-<Max type="double">100.0</Max>
+<Max type="double">12000.0</Max>
 <MaxVP type="ValueProvider">rpmhigh</MaxVP>
 <Min type="double">0.0</Min>
 <MinVP type="ValueProvider">0.0</MinVP>
 <Units type="String"/>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">45890657</GroupId>
+<GroupId type="int">950134196</GroupId>
 <Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">rpm</OutputChannel>
@@ -185,7 +185,7 @@
 <WarnColor alpha="255" blue="0" green="255" red="255" type="Color">-256</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">1</ValueDigits>
-<ShortestSize type="int">101</ShortestSize>
+<ShortestSize type="int">65</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
 <SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
@@ -208,7 +208,7 @@
 <MinVP type="ValueProvider">0.0</MinVP>
 <Units type="String">%TPS</Units>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">583306573</GroupId>
+<GroupId type="int">1343706430</GroupId>
 <Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">throttle</OutputChannel>
@@ -260,7 +260,7 @@
 <WarnColor alpha="0" blue="0" green="0" red="0" type="Color">0</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">1</ValueDigits>
-<ShortestSize type="int">20</ShortestSize>
+<ShortestSize type="int">13</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
 <SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
@@ -283,7 +283,7 @@
 <MinVP type="ValueProvider">0.0</MinVP>
 <Units type="String"/>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">583306573</GroupId>
+<GroupId type="int">1343706430</GroupId>
 <Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">throttle</OutputChannel>
@@ -335,7 +335,7 @@
 <WarnColor alpha="255" blue="0" green="255" red="255" type="Color">-256</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">3</ValueDigits>
-<ShortestSize type="int">101</ShortestSize>
+<ShortestSize type="int">65</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
 <SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
@@ -358,7 +358,7 @@
 <MinVP type="ValueProvider">0.0</MinVP>
 <Units type="String">mSec</Units>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">953251851</GroupId>
+<GroupId type="int">52238678</GroupId>
 <Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">pulseWidth</OutputChannel>
@@ -410,7 +410,7 @@
 <WarnColor alpha="0" blue="0" green="0" red="0" type="Color">0</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">3</ValueDigits>
-<ShortestSize type="int">20</ShortestSize>
+<ShortestSize type="int">13</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
 <SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
@@ -433,7 +433,7 @@
 <MinVP type="ValueProvider">0.0</MinVP>
 <Units type="String"/>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">953251851</GroupId>
+<GroupId type="int">52238678</GroupId>
 <Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">pulseWidth</OutputChannel>
@@ -485,7 +485,7 @@
 <WarnColor alpha="255" blue="0" green="255" red="255" type="Color">-256</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">1</ValueDigits>
-<ShortestSize type="int">101</ShortestSize>
+<ShortestSize type="int">65</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
 <SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
@@ -508,7 +508,7 @@
 <MinVP type="ValueProvider">0.0</MinVP>
 <Units type="String">%</Units>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">728894503</GroupId>
+<GroupId type="int">1561689293</GroupId>
 <Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">dutyCycle</OutputChannel>
@@ -560,7 +560,7 @@
 <WarnColor alpha="0" blue="0" green="0" red="0" type="Color">0</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">1</ValueDigits>
-<ShortestSize type="int">20</ShortestSize>
+<ShortestSize type="int">13</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
 <SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
@@ -583,7 +583,7 @@
 <MinVP type="ValueProvider">0.0</MinVP>
 <Units type="String"/>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">728894503</GroupId>
+<GroupId type="int">1561689293</GroupId>
 <Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">dutyCycle</OutputChannel>
@@ -604,7 +604,7 @@
 <RelativeHeight type="double">0.025</RelativeHeight>
 </dashComp>
 <dashComp type="Gauge">
-<Value type="double">19.81305637982196</Value>
+<Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <BackgroundImageFileName type="String">null</BackgroundImageFileName>
 <Title type="String">Engine MAP</Title>
@@ -612,18 +612,18 @@
 <RunDemo type="boolean">false</RunDemo>
 <FontColor alpha="255" blue="255" green="255" red="255" type="Color">-1</FontColor>
 <GaugeStyle type="String">Line Graph</GaugeStyle>
-<HighWarning type="double">NaN</HighWarning>
+<HighWarning type="double">200.0</HighWarning>
 <HistoryDelay type="int">15000</HistoryDelay>
 <LowCriticalVP type="ValueProvider">0.0</LowCriticalVP>
 <FaceAngle type="int">360</FaceAngle>
-<HighCritical type="double">NaN</HighCritical>
+<HighCritical type="double">245.0</HighCritical>
 <LabelDigits type="int">0</LabelDigits>
 <LowCritical type="double">0.0</LowCritical>
-<DisplayValue type="String">20</DisplayValue>
+<DisplayValue type="String">0</DisplayValue>
 <BorderWidth type="int">1</BorderWidth>
 <CriticalColor alpha="255" blue="0" green="0" red="255" type="Color">-65536</CriticalColor>
 <BackColor alpha="0" blue="0" green="0" red="0" type="Color">0</BackColor>
-<DefaultMax type="double">100.0</DefaultMax>
+<DefaultMax type="double">255.0</DefaultMax>
 <HighWarningVP type="ValueProvider">mapwarn</HighWarningVP>
 <LowWarning type="double">20.0</LowWarning>
 <DefaultMin type="double">0.0</DefaultMin>
@@ -635,9 +635,9 @@
 <WarnColor alpha="255" blue="0" green="255" red="255" type="Color">-256</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">0</ValueDigits>
-<ShortestSize type="int">101</ShortestSize>
+<ShortestSize type="int">65</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
-<SmoothedValue type="double">19.81305637982196</SmoothedValue>
+<SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
 <LowWarningVP type="ValueProvider">20.0</LowWarningVP>
 <MinorTicks type="double">-1.0</MinorTicks>
@@ -649,17 +649,17 @@
 <RelativeBorderWidth2 type="double">NaN</RelativeBorderWidth2>
 <SweepBeginDegree type="int">300</SweepBeginDegree>
 <CounterClockwise type="boolean">false</CounterClockwise>
-<HistoricalPeakValue type="double">21.0</HistoricalPeakValue>
+<HistoricalPeakValue type="double">0.0</HistoricalPeakValue>
 <DisplayValueAt180 type="boolean">false</DisplayValueAt180>
 <ShapeLockedToAspect type="boolean">false</ShapeLockedToAspect>
-<Max type="double">100.0</Max>
+<Max type="double">255.0</Max>
 <MaxVP type="ValueProvider">maphigh</MaxVP>
 <Min type="double">0.0</Min>
 <MinVP type="ValueProvider">0.0</MinVP>
 <Units type="String">kPa</Units>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">1131457509</GroupId>
-<Value type="double">19.81305637982196</Value>
+<GroupId type="int">563173373</GroupId>
+<Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">map</OutputChannel>
 <ShortClickAction type="String">null</ShortClickAction>
@@ -679,7 +679,7 @@
 <RelativeHeight type="double">0.125</RelativeHeight>
 </dashComp>
 <dashComp type="Gauge">
-<Value type="double">19.81305637982196</Value>
+<Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <BackgroundImageFileName type="String">null</BackgroundImageFileName>
 <Title type="String"/>
@@ -687,18 +687,18 @@
 <RunDemo type="boolean">false</RunDemo>
 <FontColor alpha="255" blue="255" green="255" red="255" type="Color">-1</FontColor>
 <GaugeStyle type="String">Basic Readout</GaugeStyle>
-<HighWarning type="double">NaN</HighWarning>
+<HighWarning type="double">200.0</HighWarning>
 <HistoryDelay type="int">15000</HistoryDelay>
 <LowCriticalVP type="ValueProvider">0.0</LowCriticalVP>
 <FaceAngle type="int">360</FaceAngle>
-<HighCritical type="double">NaN</HighCritical>
+<HighCritical type="double">245.0</HighCritical>
 <LabelDigits type="int">0</LabelDigits>
 <LowCritical type="double">0.0</LowCritical>
-<DisplayValue type="String">20</DisplayValue>
+<DisplayValue type="String">0</DisplayValue>
 <BorderWidth type="int">0</BorderWidth>
 <CriticalColor alpha="0" blue="0" green="0" red="0" type="Color">0</CriticalColor>
 <BackColor alpha="0" blue="0" green="0" red="0" type="Color">0</BackColor>
-<DefaultMax type="double">100.0</DefaultMax>
+<DefaultMax type="double">255.0</DefaultMax>
 <HighWarningVP type="ValueProvider">mapwarn</HighWarningVP>
 <LowWarning type="double">20.0</LowWarning>
 <DefaultMin type="double">0.0</DefaultMin>
@@ -710,9 +710,9 @@
 <WarnColor alpha="0" blue="0" green="0" red="0" type="Color">0</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">0</ValueDigits>
-<ShortestSize type="int">20</ShortestSize>
+<ShortestSize type="int">13</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
-<SmoothedValue type="double">19.81305637982196</SmoothedValue>
+<SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
 <LowWarningVP type="ValueProvider">20.0</LowWarningVP>
 <MinorTicks type="double">-1.0</MinorTicks>
@@ -724,17 +724,17 @@
 <RelativeBorderWidth2 type="double">NaN</RelativeBorderWidth2>
 <SweepBeginDegree type="int">300</SweepBeginDegree>
 <CounterClockwise type="boolean">false</CounterClockwise>
-<HistoricalPeakValue type="double">21.0</HistoricalPeakValue>
+<HistoricalPeakValue type="double">0.0</HistoricalPeakValue>
 <DisplayValueAt180 type="boolean">false</DisplayValueAt180>
 <ShapeLockedToAspect type="boolean">false</ShapeLockedToAspect>
-<Max type="double">100.0</Max>
+<Max type="double">255.0</Max>
 <MaxVP type="ValueProvider">maphigh</MaxVP>
 <Min type="double">0.0</Min>
 <MinVP type="ValueProvider">0.0</MinVP>
 <Units type="String"/>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">1131457509</GroupId>
-<Value type="double">19.81305637982196</Value>
+<GroupId type="int">563173373</GroupId>
+<Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">map</OutputChannel>
 <ShortClickAction type="String">null</ShortClickAction>
@@ -754,7 +754,7 @@
 <RelativeHeight type="double">0.025</RelativeHeight>
 </dashComp>
 <dashComp type="Gauge">
-<Value type="double">18.759299781181618</Value>
+<Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <BackgroundImageFileName type="String">null</BackgroundImageFileName>
 <Title type="String">Inlet Air Temp</Title>
@@ -769,7 +769,7 @@
 <HighCritical type="double">100.0</HighCritical>
 <LabelDigits type="int">0</LabelDigits>
 <LowCritical type="double">-15.0</LowCritical>
-<DisplayValue type="String">19</DisplayValue>
+<DisplayValue type="String">0</DisplayValue>
 <BorderWidth type="int">1</BorderWidth>
 <CriticalColor alpha="255" blue="0" green="0" red="255" type="Color">-65536</CriticalColor>
 <BackColor alpha="0" blue="0" green="0" red="0" type="Color">0</BackColor>
@@ -785,9 +785,9 @@
 <WarnColor alpha="255" blue="0" green="255" red="255" type="Color">-256</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">0</ValueDigits>
-<ShortestSize type="int">101</ShortestSize>
+<ShortestSize type="int">65</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
-<SmoothedValue type="double">18.759299781181618</SmoothedValue>
+<SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
 <LowWarningVP type="ValueProvider">0.0</LowWarningVP>
 <MinorTicks type="double">-1.0</MinorTicks>
@@ -799,7 +799,7 @@
 <RelativeBorderWidth2 type="double">NaN</RelativeBorderWidth2>
 <SweepBeginDegree type="int">300</SweepBeginDegree>
 <CounterClockwise type="boolean">false</CounterClockwise>
-<HistoricalPeakValue type="double">21.0</HistoricalPeakValue>
+<HistoricalPeakValue type="double">0.0</HistoricalPeakValue>
 <DisplayValueAt180 type="boolean">false</DisplayValueAt180>
 <ShapeLockedToAspect type="boolean">false</ShapeLockedToAspect>
 <Max type="double">120.0</Max>
@@ -808,8 +808,8 @@
 <MinVP type="ValueProvider">-40.0</MinVP>
 <Units type="String">TEMP</Units>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">406743854</GroupId>
-<Value type="double">18.759299781181618</Value>
+<GroupId type="int">1159966849</GroupId>
+<Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">iat</OutputChannel>
 <ShortClickAction type="String">null</ShortClickAction>
@@ -829,7 +829,7 @@
 <RelativeHeight type="double">0.125</RelativeHeight>
 </dashComp>
 <dashComp type="Gauge">
-<Value type="double">18.759299781181618</Value>
+<Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <BackgroundImageFileName type="String">null</BackgroundImageFileName>
 <Title type="String"/>
@@ -844,7 +844,7 @@
 <HighCritical type="double">100.0</HighCritical>
 <LabelDigits type="int">0</LabelDigits>
 <LowCritical type="double">-15.0</LowCritical>
-<DisplayValue type="String">19</DisplayValue>
+<DisplayValue type="String">0</DisplayValue>
 <BorderWidth type="int">0</BorderWidth>
 <CriticalColor alpha="0" blue="0" green="0" red="0" type="Color">0</CriticalColor>
 <BackColor alpha="0" blue="0" green="0" red="0" type="Color">0</BackColor>
@@ -860,9 +860,9 @@
 <WarnColor alpha="0" blue="0" green="0" red="0" type="Color">0</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">0</ValueDigits>
-<ShortestSize type="int">20</ShortestSize>
+<ShortestSize type="int">13</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
-<SmoothedValue type="double">18.759299781181618</SmoothedValue>
+<SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
 <LowWarningVP type="ValueProvider">0.0</LowWarningVP>
 <MinorTicks type="double">-1.0</MinorTicks>
@@ -874,7 +874,7 @@
 <RelativeBorderWidth2 type="double">NaN</RelativeBorderWidth2>
 <SweepBeginDegree type="int">300</SweepBeginDegree>
 <CounterClockwise type="boolean">false</CounterClockwise>
-<HistoricalPeakValue type="double">21.0</HistoricalPeakValue>
+<HistoricalPeakValue type="double">0.0</HistoricalPeakValue>
 <DisplayValueAt180 type="boolean">false</DisplayValueAt180>
 <ShapeLockedToAspect type="boolean">false</ShapeLockedToAspect>
 <Max type="double">120.0</Max>
@@ -883,8 +883,8 @@
 <MinVP type="ValueProvider">-40.0</MinVP>
 <Units type="String"/>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">406743854</GroupId>
-<Value type="double">18.759299781181618</Value>
+<GroupId type="int">1159966849</GroupId>
+<Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">iat</OutputChannel>
 <ShortClickAction type="String">null</ShortClickAction>
@@ -935,7 +935,7 @@
 <WarnColor alpha="255" blue="0" green="255" red="255" type="Color">-256</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">0</ValueDigits>
-<ShortestSize type="int">101</ShortestSize>
+<ShortestSize type="int">65</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
 <SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
@@ -949,7 +949,7 @@
 <RelativeBorderWidth2 type="double">NaN</RelativeBorderWidth2>
 <SweepBeginDegree type="int">300</SweepBeginDegree>
 <CounterClockwise type="boolean">false</CounterClockwise>
-<HistoricalPeakValue type="double">-17.0</HistoricalPeakValue>
+<HistoricalPeakValue type="double">0.0</HistoricalPeakValue>
 <DisplayValueAt180 type="boolean">false</DisplayValueAt180>
 <ShapeLockedToAspect type="boolean">false</ShapeLockedToAspect>
 <Max type="double">120.0</Max>
@@ -958,7 +958,7 @@
 <MinVP type="ValueProvider">-40.0</MinVP>
 <Units type="String">TEMP</Units>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">1584639807</GroupId>
+<GroupId type="int">230202441</GroupId>
 <Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">coolant</OutputChannel>
@@ -1010,7 +1010,7 @@
 <WarnColor alpha="0" blue="0" green="0" red="0" type="Color">0</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">0</ValueDigits>
-<ShortestSize type="int">20</ShortestSize>
+<ShortestSize type="int">13</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
 <SmoothedValue type="double">0.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
@@ -1024,7 +1024,7 @@
 <RelativeBorderWidth2 type="double">NaN</RelativeBorderWidth2>
 <SweepBeginDegree type="int">300</SweepBeginDegree>
 <CounterClockwise type="boolean">false</CounterClockwise>
-<HistoricalPeakValue type="double">-17.0</HistoricalPeakValue>
+<HistoricalPeakValue type="double">0.0</HistoricalPeakValue>
 <DisplayValueAt180 type="boolean">false</DisplayValueAt180>
 <ShapeLockedToAspect type="boolean">false</ShapeLockedToAspect>
 <Max type="double">120.0</Max>
@@ -1033,7 +1033,7 @@
 <MinVP type="ValueProvider">-40.0</MinVP>
 <Units type="String"/>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">1584639807</GroupId>
+<GroupId type="int">230202441</GroupId>
 <Value type="double">0.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">coolant</OutputChannel>
@@ -1085,7 +1085,7 @@
 <WarnColor alpha="255" blue="0" green="255" red="255" type="Color">-256</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">0</ValueDigits>
-<ShortestSize type="int">101</ShortestSize>
+<ShortestSize type="int">65</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
 <SmoothedValue type="double">50.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
@@ -1108,7 +1108,7 @@
 <MinVP type="ValueProvider">50.0</MinVP>
 <Units type="String">%</Units>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">515145188</GroupId>
+<GroupId type="int">1433175090</GroupId>
 <Value type="double">50.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">gammaEnrich</OutputChannel>
@@ -1160,7 +1160,7 @@
 <WarnColor alpha="0" blue="0" green="0" red="0" type="Color">0</WarnColor>
 <StartAngle type="int">0</StartAngle>
 <ValueDigits type="int">0</ValueDigits>
-<ShortestSize type="int">20</ShortestSize>
+<ShortestSize type="int">13</ShortestSize>
 <PegLimits type="boolean">true</PegLimits>
 <SmoothedValue type="double">50.0</SmoothedValue>
 <TrimColor alpha="255" blue="122" green="105" red="105" type="Color">-9868934</TrimColor>
@@ -1183,7 +1183,7 @@
 <MinVP type="ValueProvider">50.0</MinVP>
 <Units type="String"/>
 <GoingDead type="boolean">false</GoingDead>
-<GroupId type="int">515145188</GroupId>
+<GroupId type="int">1433175090</GroupId>
 <Value type="double">50.0</Value>
 <Dirty type="boolean">true</Dirty>
 <OutputChannel type="String">gammaEnrich</OutputChannel>

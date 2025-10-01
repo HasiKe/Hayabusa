@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <msq xmlns="http://www.msefi.com/:msq">
-<bibliography author="TunerStudio MS Ultra 3.3.00 - EFI Analytics, Inc." tuneComment="" writeDate="Sat Sep 27 14:07:52 CEST 2025"/>
+<bibliography author="TunerStudio MS Ultra 3.3.00 - EFI Analytics, Inc." tuneComment="&lt;html&gt;Restore Point: User Requested Save of Settings - &lt;br&gt;" writeDate="Tue Sep 23 23:11:52 CEST 2025"/>
 <versionInfo fileFormat="5.0" firmwareInfo="Speeduino+2025.01.4" nPages="15" signature="speeduino 202501"/>
 <page>
 <pcVariable name="tsCanId">"CAN ID 0"</pcVariable>
@@ -906,7 +906,6 @@
 <constant name="vvt2PWMdir">"Advance"</constant>
 <constant name="inj4CylPairing">"1+4 &amp; 2+3"</constant>
 <constant name="dwellErrCorrect">"On"</constant>
-<constant name="CANBroadcastProt">"Off"</constant>
 <constant name="unusedBits4_123">"1"</constant>
 <constant digits="0" name="ANGLEFILTER_VVT" units="%">0.0</constant>
 <constant digits="0" name="FILTER_FLEX" units="%">0.0</constant>
