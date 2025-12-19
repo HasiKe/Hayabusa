@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <msq xmlns="http://www.msefi.com/:msq">
-<bibliography author="TunerStudio MS Ultra 3.3.00 - EFI Analytics, Inc." tuneComment="" writeDate="Sat Dec 13 14:56:56 CET 2025"/>
-<versionInfo fileFormat="5.0" firmwareInfo="Speeduino+2025.01.4" nPages="15" signature="speeduino 202501"/>
+<bibliography author="TunerStudio MS Ultra 3.3.01 - EFI Analytics, Inc." tuneComment="" writeDate="Mon Dec 15 22:56:22 CET 2025"/>
+<versionInfo fileFormat="5.0" firmwareInfo="Speeduino+2025.04-dev" nPages="15" signature="speeduino 202504-dev"/>
 <page>
-<pcVariable name="tsCanId">"CAN ID 0"</pcVariable>
-<pcVariable digits="0" name="rpmhigh" units="rpm">12000.0</pcVariable>
-<pcVariable digits="0" name="rpmwarn" units="rpm">9000.0</pcVariable>
-<pcVariable digits="0" name="rpmdang" units="rpm">10800.0</pcVariable>
+<pcVariable digits="0" name="rpmhigh" units="rpm">8000.0</pcVariable>
+<pcVariable digits="0" name="rpmwarn" units="rpm">3000.0</pcVariable>
+<pcVariable digits="0" name="rpmdang" units="rpm">5000.0</pcVariable>
 <pcVariable digits="0" name="maphigh" units="kPa">255.0</pcVariable>
 <pcVariable digits="0" name="mapwarn" units="kPa">200.0</pcVariable>
 <pcVariable digits="0" name="mapdang" units="kPa">245.0</pcVariable>
 <pcVariable digits="1" name="batlow" units="Volts">11.8</pcVariable>
 <pcVariable digits="1" name="bathigh" units="Volts">15.0</pcVariable>
 <pcVariable cols="1" digits="1" name="wueAFR" rows="10" units="AFR">
-         0.0 
-         0.0 
-         0.0 
-         0.0 
-         0.0 
-         0.0 
-         0.0 
-         0.0 
-         0.0 
+         -2.0 
+         -1.5 
+         -1.2 
+         -1.0 
+         -0.8 
+         -0.6 
+         -0.4 
+         -0.2 
+         -0.1 
          0.0 
       </pcVariable>
 <pcVariable cols="1" digits="0" name="wueRecommended" rows="10" units="%">
@@ -51,6 +50,7 @@
          4.0 
          4.0 
          4.0 
+         8.0 
          4.0 
          4.0 
          4.0 
@@ -67,8 +67,7 @@
          4.0 
          4.0 
          4.0 
-         4.0 
-         6.0 
+         8.0 
          4.0 
          4.0 
          4.0 
@@ -181,6 +180,7 @@
          4.0 
          4.0 
          4.0 
+         8.0 
          4.0 
          4.0 
          4.0 
@@ -197,8 +197,7 @@
          4.0 
          4.0 
          4.0 
-         4.0 
-         6.0 
+         8.0 
          4.0 
          4.0 
          4.0 
@@ -311,6 +310,7 @@
          0.0 
          0.0 
          0.0 
+         8.0 
          0.0 
          0.0 
          0.0 
@@ -327,8 +327,7 @@
          0.0 
          0.0 
          0.0 
-         0.0 
-         6.0 
+         1.0 
          0.0 
          0.0 
          0.0 
@@ -436,13 +435,10 @@
          100.0 
          100.0 
       </pcVariable>
-<pcVariable name="prgm_out_selection">"1"</pcVariable>
 <pcVariable digits="0" name="fuelLoadMax">255.0</pcVariable>
 <pcVariable digits="0" name="ignLoadMax">255.0</pcVariable>
 <pcVariable digits="0" name="fuel2LoadMax">255.0</pcVariable>
 <pcVariable digits="0" name="ign2LoadMax">255.0</pcVariable>
-<pcVariable name="AUXin00Alias">Aux0</pcVariable>
-<pcVariable name="prgm_out00Alias">PrgmOut0</pcVariable>
 <pcVariable name="tsSpeedSource">"GPS Speed"</pcVariable>
 <pcVariable digits="0" name="tsPrimaryInjectorSize">0.0</pcVariable>
 <pcVariable name="tsInjSizeConstant">"cc/min"</pcVariable>
@@ -466,7 +462,7 @@
 <constant digits="0" name="aeColdPct" units="%">100.0</constant>
 <constant digits="0" name="aeColdTaperMin" units="C">0.0</constant>
 <constant name="aeMode">"TPS"</constant>
-<constant name="battVCorMode">"Whole PW"</constant>
+<constant name="unused1_3_2">"Whole PW"</constant>
 <constant name="SoftLimitMode">"Fixed"</constant>
 <constant name="useTachoSweep">"Off"</constant>
 <constant name="aeApplyMode">"PW Adder"</constant>
@@ -512,7 +508,7 @@
       </constant>
 <constant name="mapSample">"Cycle Average"</constant>
 <constant name="twoStroke">"Four-stroke"</constant>
-<constant name="injType">"Port"</constant>
+<constant name="injType">"Throttle Body"</constant>
 <constant name="nCylinders">"4"</constant>
 <constant name="algorithm">"TPS"</constant>
 <constant name="fixAngEnable">"On"</constant>
@@ -2268,7 +2264,7 @@
 <constant digits="2" name="onboard_log_tr4_thr_off" units="V">0.0</constant>
 <constant name="unused13_125_2">";"</constant>
 <constant digits="0" name="hwTestIgnDuration" units="ms">0.0</constant>
-<constant digits="0" name="hwTestInjDuration" units="ms">0.0</constant>
+<constant digits="0" name="hwTestInjDuration" units="ms">2.0</constant>
 </page>
 <page number="13" size="288">
 <constant cols="16" digits="0" name="advTable2" rows="16" units="deg">
@@ -2553,15 +2549,12 @@
       </constant>
 </page>
 <settings Comment="These setting are only used if this msq is opened without a project.">
-<setting name="enablehardware_test_OFF" value="enablehardware_test_OFF"/>
 <setting name="pressure_bar" value="pressure_bar"/>
 <setting name="mcu_teensy" value="mcu_teensy"/>
+<setting name="enablehardware_test" value="enablehardware_test"/>
 <setting name="CELSIUS" value="CELSIUS"/>
 <setting name="resetcontrol_standard" value="resetcontrol_standard"/>
 <setting name="AFR" value="AFR"/>
 </settings>
-<userComments Comment="These are user comments that can be related to a particular setting or dialog.">
-<userComment name="advTable1" value=""/>
-<userComment name="fuelPumpPin" value=""/>
-</userComments>
+<userComments Comment="These are user comments that can be related to a particular setting or dialog."/>
 </msq>
