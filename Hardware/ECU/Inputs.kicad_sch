@@ -3473,7 +3473,7 @@
 		)
 		(uuid "ffaeb970-bd47-4790-8384-c0b9c40426ec")
 	)
-	(global_label "MCU-A16"
+	(global_label "MCU-A14"
 		(shape input)
 		(at 36.83 163.83 180)
 		(fields_autoplaced yes)
@@ -3485,7 +3485,7 @@
 		)
 		(uuid "014ddf0a-dcb9-44c9-b7b0-794d6ae73b53")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 25.4465 163.83 0)
+			(at 24.7129 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3561,7 +3561,7 @@
 			)
 		)
 	)
-	(global_label "MCU-A21"
+	(global_label "MCU-A2"
 		(shape input)
 		(at 210.82 115.57 0)
 		(fields_autoplaced yes)
@@ -3573,7 +3573,7 @@
 		)
 		(uuid "0d597047-5e8f-48e4-9444-849b6c2a8b55")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 222.2035 115.57 0)
+			(at 221.7276 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3715,7 +3715,7 @@
 			)
 		)
 	)
-	(global_label "MCU-A1"
+	(global_label "MCU-A5"
 		(shape input)
 		(at 261.62 90.17 0)
 		(fields_autoplaced yes)
@@ -3727,7 +3727,7 @@
 		)
 		(uuid "2aeec2a3-aad3-4107-8994-7eb58ffd6ddb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 271.794 90.17 0)
+			(at 272.5276 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3759,7 +3759,7 @@
 			)
 		)
 	)
-	(global_label "MCU-A22"
+	(global_label "MCU-A3"
 		(shape input)
 		(at 262.89 115.57 0)
 		(fields_autoplaced yes)
@@ -3771,7 +3771,7 @@
 		)
 		(uuid "30f599f5-0ebb-4daa-8808-060accc284c3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 274.2735 115.57 0)
+			(at 273.7976 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3869,7 +3869,7 @@
 			)
 		)
 	)
-	(global_label "MCU-A0"
+	(global_label "MCU-A4"
 		(shape input)
 		(at 210.82 90.17 0)
 		(fields_autoplaced yes)
@@ -3881,7 +3881,7 @@
 		)
 		(uuid "52d2fe0b-deb9-4473-a808-76301e477635")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 220.994 90.17 0)
+			(at 221.7276 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4155,7 +4155,7 @@
 			)
 		)
 	)
-	(global_label "MCU-A15"
+	(global_label "MCU-D36"
 		(shape input)
 		(at 86.36 163.83 180)
 		(fields_autoplaced yes)
@@ -4167,7 +4167,7 @@
 		)
 		(uuid "8fd4160e-e181-441d-8d93-23730dd1a0a4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 74.9765 163.83 0)
+			(at 74.0615 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4331,7 +4331,7 @@
 			)
 		)
 	)
-	(global_label "MCU-A14"
+	(global_label "MCU-A15"
 		(shape input)
 		(at 74.93 123.19 0)
 		(fields_autoplaced yes)
@@ -4344,7 +4344,7 @@
 		)
 		(uuid "c11f90c0-4436-4084-b508-8508844056d4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 86.3135 123.19 0)
+			(at 87.0471 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4464,7 +4464,7 @@
 			)
 		)
 	)
-	(global_label "MCU-A19"
+	(global_label "MCU-A0"
 		(shape input)
 		(at 162.56 78.74 0)
 		(fields_autoplaced yes)
@@ -4476,7 +4476,7 @@
 		)
 		(uuid "dcffb0cd-7d6a-4714-bb00-de5728260aa6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 173.9435 78.74 0)
+			(at 173.4676 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4486,7 +4486,7 @@
 			)
 		)
 	)
-	(global_label "MCU-A20"
+	(global_label "MCU-A1"
 		(shape input)
 		(at 163.83 125.73 0)
 		(fields_autoplaced yes)
@@ -4498,7 +4498,7 @@
 		)
 		(uuid "ed2502bb-da61-4c69-bcd4-23958ae112f1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 175.2135 125.73 0)
+			(at 174.7376 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)

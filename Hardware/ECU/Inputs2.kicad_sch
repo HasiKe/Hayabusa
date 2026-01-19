@@ -2063,7 +2063,7 @@
 			)
 		)
 	)
-	(global_label "MCU-A17"
+	(global_label "MCU-A16"
 		(shape input)
 		(at 118.11 67.31 0)
 		(fields_autoplaced yes)
@@ -2075,7 +2075,7 @@
 		)
 		(uuid "6ad2b93c-b5dc-4a4c-89a5-6d68e43355d4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 129.4935 67.31 0)
+			(at 130.2271 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2085,7 +2085,7 @@
 			)
 		)
 	)
-	(global_label "MCU-A18"
+	(global_label "MCU-A17"
 		(shape input)
 		(at 168.91 67.31 0)
 		(fields_autoplaced yes)
@@ -2097,7 +2097,7 @@
 		)
 		(uuid "8502d9f3-88c5-4751-b328-be89495d91f6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.2935 67.31 0)
+			(at 181.0271 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
