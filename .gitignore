@@ -1,0 +1,88 @@
+# Compiled files
+*.hex
+*.bin
+*.elf
+*.map
+
+# Build directories
+speeduino/.pio/
+speeduino/build/
+speeduino/dist/
+
+# IDE files
+.vscode/
+*.code-workspace
+.idea/
+*.sublime-*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# TunerStudio files
+*.msq.bak
+*.tsl
+tune/**/datalog_*.csv
+tune/**/TunerStudioAppDebug.txt
+tune/**/*.tmp
+
+# KiCad backup files
+Hardware/ECU/*-backups/
+Hardware/ECU/*.bak
+Hardware/ECU/*.bck
+Hardware/ECU/*~
+Hardware/ECU/fp-info-cache
+Hardware/ECU/*.kicad_pcb-bak
+Hardware/ECU/*.kicad_sch-bak
+Hardware/ECU/*.kicad_prl
+
+# CAD temporary files
+Hardware/**/*.tmp
+Hardware/**/*.bak
+Hardware/**/*.~*
+Hardware/**/*.log
+
+# Log files
+*.log
+*.out
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Documentation build files
+docs/_build/
+docs/.doctrees/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node modules (if any web interfaces)
+node_modules/
+
+# Sensitive data
+passwords.txt
+api_keys.txt
+*.key
+*.pem
+
+# Large media files (already in git, but ignore future additions)
+*.iso
+*.dmg
+*.tar
+*.zip
+*.rar
+*.7z
+
+# Lock files
+*.lck
+~*.docx
+~*.xlsx
