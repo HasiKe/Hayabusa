@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'ATTINY85_20PU'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT", "TJ", "MTBF", "POWER", "SLOPE", "SUBTYPE", "PACKAGE", "RJA", "VCC_MAX", "VCC_MIN", "IOUT_MAX", "IOUT_MIN", "ICC", "IGND", "RCA", "RJC", "ICCQ", "TECHNOLOGY";
+{========================================================================================}
+ "Microchip", "ATTINY85-20PU" (!) = "", "DIP781W56P254L950H533Q8N", "Dual-In-Line Packages", "556-ATTINY85-20PU", "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATTINY85-20PU?qs=8jWQYweyg6NCiiaOb5GI9Q%3D%3D", "ATTINY85-20PU", "https://www.arrow.com/en/products/attiny85-20pu/microchip-technology?utm_currency=USD&region=nac", "MICROCHIP - ATTINY85-20PU - MICROCONTROLLER MCU, 8 BIT, ATTINY, 20MHZ, DIP-8", "https://componentsearchengine.com/Datasheets/2/ATTINY85-20PU.pdf", "5.334 mm", "125", "", "", "", "MCU THROUGH HOLE", "PDIP-8", "", "6", "", "", "", "200m", "200m", "", "", "", ""
+END_PART
+
+END.

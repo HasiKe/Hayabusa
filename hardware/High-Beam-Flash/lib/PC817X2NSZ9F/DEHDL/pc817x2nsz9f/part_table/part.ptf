@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'PC817X2NSZ9F'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Sharp Microelectronics", "PC817X2NSZ9F" (!) = "", "DIP762W60P254L460H450Q4N", "Dual-In-Line Packages", "852-PC817X2NSZ9F", "https://www.mouser.co.uk/ProductDetail/Sharp-Microelectronics/PC817X2NSZ9F?qs=rrS6PyfT74ehABo1g8zXHw%3D%3D", "", "", "Transistor Output Optocouplers Photocoupler", "http://www.socle-tech.com/doc/IC%20Channel%20Product/Optoelectronic%20Components/Photocoupler/PC817X_NSZ9FSeries_SPEC.pdf", "4.5 mm"
+END_PART
+
+END.

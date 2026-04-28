@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ATTINY85-20PU
+D MICROCHIP - ATTINY85-20PU - MICROCONTROLLER MCU, 8 BIT, ATTINY, 20MHZ, DIP-8
+K
+F https://componentsearchengine.com/Datasheets/2/ATTINY85-20PU.pdf
+$ENDCMP
+#
+#End Doc Library

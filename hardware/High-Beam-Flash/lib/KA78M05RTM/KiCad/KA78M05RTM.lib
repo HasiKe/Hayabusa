@@ -1,0 +1,26 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model KA78M05RTM
+#/975835/1530872/2.50/3/3/Integrated Circuit
+DEF KA78M05RTM IC 0 30 Y Y 1 F N
+F0 "IC" 1150 300 50 H V L CNN
+F1 "KA78M05RTM" 1150 200 50 H V L CNN
+F2 "KA78M05RTM" 1150 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/KA78M05RTM.pdf" 1150 0 50 H I L CNN
+F4 "IC REG LINEAR 5V 500MA DPAK" 1150 -100 50 H I L CNN "Description"
+F5 "2.527" 1150 -200 50 H I L CNN "Height"
+F6 "onsemi" 1150 -300 50 H I L CNN "Manufacturer_Name"
+F7 "KA78M05RTM" 1150 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "512-KA78M05RTM" 1150 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/KA78M05RTM?qs=SpPkH8nd0tby1gymq1mGIg%3D%3D" 1150 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "KA78M05RTM" 1150 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/ka78m05rtm/on-semiconductor" 1150 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X INPUT 1 0 0 200 R 50 50 0 0 P
+X GND 2 0 -100 200 R 50 50 0 0 P
+X OUTPUT 3 1300 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1100 100 1100 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

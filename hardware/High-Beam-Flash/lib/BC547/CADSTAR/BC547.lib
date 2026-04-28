@@ -1,0 +1,18 @@
+.BC547 :1 ;NPN Epitaxial Silicon Transistor, To-92, 100mA, 6V
+BC547
+*STM Q
+*NGS
+*PLB 1="C" 2="B" 3="E"
+*MXP 3
+*DFN BC547
+~!Manufacturer_Name (Rochester Electronics)
+~!Manufacturer_Part_Number (BC547)
+~!Mouser Part Number (-)
+~!Mouser Price/Stock (-)
+~!Arrow Part Number (-)
+~!Arrow Price/Stock (-)
+~!Link Datasheet (-)
+~!Height (4.78mm)
+~!3D_Model (BC547)
+BC547
+1.1!U 2.1!U 3.1!U 

@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "KA78M05RTM"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2022-08-18-05:30:00)
+    (mountForm default
+        (footprintRef "KA78M05RTM")
+        (spec "System")
+    )
+)

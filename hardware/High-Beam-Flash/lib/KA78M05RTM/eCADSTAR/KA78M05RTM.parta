@@ -1,0 +1,72 @@
+(Japanese_coding: sjis)
+(function "ECS_975835"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2022-08-18-05:30:00)
+    (utime 2023-03-07-16:10:32)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+        (port "3" (symbPinId 3) (portType INOUT))
+    )
+    (property "symbolName" "KA78M05RTM")
+)
+
+
+(pinAssign "ECS_975835"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2022-08-18-05:30:00)
+    (utime 2023-03-07-16:10:32)
+    (interface
+        (port "1" (symbPinId 1) (portName "INPUT") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "GND") (portType INOUT))
+        (port "3" (symbPinId 3) (portName "OUTPUT") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_975835")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+                (port "3" (match "3"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "KA78M05RTM")
+)
+
+
+(part "KA78M05RTM"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2022-08-18-05:30:00)
+    (utime 2023-03-07-16:10:32)
+    (packageRef "KA78M05RTM")
+    (pinAssignRef "ECS_975835")
+    (interface
+        (port "1" (symbPinId 1) (portName "INPUT") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "GND") (portType INOUT))
+        (port "3" (symbPinId 3) (portName "OUTPUT") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "YES")
+    (property "refDesPrefix" "IC")
+    (property "description" "IC REG LINEAR 5V 500MA DPAK")
+    (property "Manufacturer_Name" "onsemi")
+    (property "Manufacturer_Part_Number" "KA78M05RTM")
+    (property "Mouser_Part_Number" "512-KA78M05RTM")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/KA78M05RTM?qs=SpPkH8nd0tby1gymq1mGIg%3D%3D")
+    (property "Arrow_Part_Number" "KA78M05RTM")
+    (property "Arrow_Price/Stock" "https://www.arrow.com/en/products/ka78m05rtm/on-semiconductor")
+    (property "Datasheet_Link" "https://componentsearchengine.com/Datasheets/1/KA78M05RTM.pdf")
+    (property "compAreaTopHeight" 2.527)
+)
+
+

@@ -1,0 +1,112 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "KA78M05RTM"
+   (description "IC REG LINEAR 5V 500MA DPAK")
+   (family "ANA")
+   (package "KA78M05RTM")
+   (attribute "Datasheet Link" "https://componentsearchengine.com/Datasheets/1/KA78M05RTM.pdf")
+   (attribute "Geometry.Height" "2.527mm")
+   (attribute "Manufacturer_Name" "onsemi")
+   (attribute "Manufacturer_Part_Number" "KA78M05RTM")
+   (attribute "Mouser Part Number" "512-KA78M05RTM")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/KA78M05RTM?qs=SpPkH8nd0tby1gymq1mGIg%3D%3D")
+   (attribute "Arrow Part Number" "KA78M05RTM")
+   (attribute "Arrow Price/Stock" "https://www.arrow.com/en/products/ka78m05rtm/on-semiconductor")
+   (gate
+    (symbol "KA78M05RTM")
+    (pin "INPUT" 1 PS)
+    (pin "GND" 2 PS)
+    (pin "OUTPUT" 3 PS)
+   )
+  )
+  (symbol "KA78M05RTM"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 1100 100) (pt 1100 -200) (pt 200 -200) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1300 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "KA78M05RTM"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -3.3 -3.05)
+      (pt 3.3 -3.05)
+      (pt 3.3 3.05)
+      (pt -3.3 3.05)
+      (pt -3.3 -3.05))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -4.3 5.175)
+      (pt 4.3 5.175)
+      (pt 4.3 -7.9)
+      (pt -4.3 -7.9)
+      (pt -4.3 5.175))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -3.3 -2.6)
+      (pt -3.3 -3)
+      (pt -3.3 -3.05)
+      (pt 3.3 -3.05)
+      (pt 3.3 -2.6))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2.28 -7.5)
+      (arc (pt -2.280 -7.500) (pt -2.330 -7.500) (pt -2.230 -7.400) (start 180.0) (sweep -90.0))
+      (pt -2.28 -7.4)
+      (arc (pt -2.280 -7.400) (pt -2.330 -7.500) (pt -2.230 -7.400) (start 180.0) (sweep 90.0))
+      (pt -2.28 -7.5))))
+   (leg 1 (pt -2.280 -5.475) (padstack 0))
+   (leg 2 (pt 2.280 -5.475) (padstack 0))
+   (leg 3 (pt 0.000 0.925) (padstack 3))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 1.250 2.850 0 0 90.000))
+   )
+   (padstack 3
+    (plated false)
+    (pad (layer TCOP) (rectf 5.550 6.500 0 0 90.000))
+   )
+  )
+ )
+)

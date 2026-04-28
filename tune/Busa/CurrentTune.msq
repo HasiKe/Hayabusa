@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <msq xmlns="http://www.msefi.com/:msq">
-<bibliography author="TunerStudio MS Ultra 3.3.01 - EFI Analytics, Inc." tuneComment="" writeDate="Mon Dec 15 22:56:22 CET 2025"/>
+<bibliography author="TunerStudio MS Ultra 3.3.01 - EFI Analytics, Inc." tuneComment="" writeDate="Mon Feb 02 16:00:38 CET 2026"/>
 <versionInfo fileFormat="5.0" firmwareInfo="Speeduino+2025.04-dev" nPages="15" signature="speeduino 202504-dev"/>
 <page>
 <pcVariable digits="0" name="rpmhigh" units="rpm">8000.0</pcVariable>
@@ -435,6 +435,7 @@
          100.0 
          100.0 
       </pcVariable>
+<pcVariable name="prgm_out_selection">"4"</pcVariable>
 <pcVariable digits="0" name="fuelLoadMax">255.0</pcVariable>
 <pcVariable digits="0" name="ignLoadMax">255.0</pcVariable>
 <pcVariable digits="0" name="fuel2LoadMax">255.0</pcVariable>
@@ -442,16 +443,16 @@
 <pcVariable name="tsSpeedSource">"GPS Speed"</pcVariable>
 <pcVariable digits="0" name="tsPrimaryInjectorSize">0.0</pcVariable>
 <pcVariable name="tsInjSizeConstant">"cc/min"</pcVariable>
-<pcVariable name="tsLogPowerFields">"Log HP &amp; Tq"</pcVariable>
+<pcVariable name="tsLogPowerFields">"Log HP, Tq &amp; Drag"</pcVariable>
 <pcVariable name="tsLogPerfFields">"Off"</pcVariable>
-<pcVariable name="tsFuelConsumptionUnits">"US Gallons"</pcVariable>
-<pcVariable name="tsDistanceUnits">"Miles Per Hour"</pcVariable>
+<pcVariable name="tsFuelConsumptionUnits">"Liters"</pcVariable>
+<pcVariable name="tsDistanceUnits">"Kilometers Per Hour"</pcVariable>
 <pcVariable digits="0" name="tsVehicleWeight">3450.0</pcVariable>
-<pcVariable name="tsWeightUnits">"lbs"</pcVariable>
+<pcVariable name="tsWeightUnits">"kg"</pcVariable>
 <pcVariable digits="2" name="tsVehicleDragCoef">0.34</pcVariable>
 <pcVariable digits="0" name="tsTirePressure" units="psi">32.0</pcVariable>
 <pcVariable digits="1" name="tsFrontalArea">19.3</pcVariable>
-<pcVariable name="tsFrontalUnits">"sqft"</pcVariable>
+<pcVariable name="tsFrontalUnits">"m^2"</pcVariable>
 <pcVariable digits="1" name="tsTireDiameter" units="in">25.5</pcVariable>
 <pcVariable digits="2" name="tsTransGearRatio" units=":1">1.0</pcVariable>
 <pcVariable digits="2" name="tsFinalDriveRatio" units=":1">3.7</pcVariable>
@@ -480,7 +481,7 @@
          0.0 
       </constant>
 <constant digits="0" name="crankingPct" units="%">0.0</constant>
-<constant name="pinLayout">"Drop Bear"</constant>
+<constant name="pinLayout">"Hayabusa Gen1"</constant>
 <constant name="tachoPin">"Board Default"</constant>
 <constant name="tachoDiv">"Half"</constant>
 <constant digits="0" name="tachoDuration" units="ms">3.0</constant>

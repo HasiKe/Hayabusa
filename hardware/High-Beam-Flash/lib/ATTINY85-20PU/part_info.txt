@@ -1,0 +1,9 @@
+Manufacturer=Microchip
+PartNumber=ATTINY85-20PU
+PartCategory=Integrated Circuit
+PackageCategory=Dual-In-Line Packages
+PinCount=8
+Version=2.1
+Released=2017-06-25 19:20:11
+Downloaded=2026-02-04 07:04:16
+3D=Y

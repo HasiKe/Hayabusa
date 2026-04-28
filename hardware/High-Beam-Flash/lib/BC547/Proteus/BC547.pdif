@@ -1,0 +1,150 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "BC547"
+   (description "NPN Epitaxial Silicon Transistor, To-92, 100mA, 6V")
+   (family "TRX")
+   (package "BC547")
+   (attribute "Datasheet Link" "")
+   (attribute "Geometry.Height" "4.78mm")
+   (attribute "Manufacturer_Name" "Rochester Electronics")
+   (attribute "Manufacturer_Part_Number" "BC547")
+   (attribute "Mouser Part Number" "")
+   (attribute "Mouser Price/Stock" "")
+   (attribute "Arrow Part Number" "")
+   (attribute "Arrow Price/Stock" "")
+   (gate
+    (symbol "BC547")
+    (pin "B" 2 PS)
+    (pin "E" 3 PS)
+    (pin "C" 1 PS)
+   )
+  )
+  (symbol "BC547"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (circle (pt 400 150) (pt 300 -150))
+   )
+   (graphic
+    (stroke 20)
+    (path (pt 300 100) (pt 300 -100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 300 50) (pt 400 150))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 300 -50) (pt 400 -150))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 400 -150) (pt 400 -200))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 400 150) (pt 400 200))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 100 0) (pt 300 0))
+   )
+   (graphic
+    (stroke 10)
+    (path (closed true) (pt 330 -100) (pt 350 -80) (pt 370 -120) (pt 330 -100))
+   )
+   (terminal
+    (body (symbol "PINSHORT") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 0 -20) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 20) (rot 0) (just BOTTOM LEFT) (visible true)))
+   (terminal
+    (body (symbol "PINSHORT") (pt 400 -300) (rot 90) (mir 0) (visible true))
+    (name (pt 0 -20) (rot 90) (just TOP RIGHT) (visible false))
+    (number (pt 0 20) (rot 90) (just TOP LEFT) (visible true)))
+   (terminal
+    (body (symbol "PINSHORT") (pt 400 300) (rot 90) (mir X) (visible true))
+    (name (pt 0 -20) (rot 90) (just TOP RIGHT) (visible false))
+    (number (pt 0 20) (rot 90) (just TOP LEFT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "BC547"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2.201 -2.21)
+      (pt 4.741 -2.21)
+      (pt 4.741 4.398)
+      (pt -2.201 4.398)
+      (pt -2.201 -2.21))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -1.02 0)
+      (pt -0.53 -1.21)
+      (pt 3.07 -1.21)
+      (pt 3.56 0)
+      (arc (pt 3.560 0.000) (pt -1.201 -1.543) (pt 3.741 3.398) (start 224.1) (sweep -22.0))
+      (pt -1.02 0))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -0.53 -1.21)
+      (pt 3.07 -1.21))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -1.8 0)
+      (arc (pt -1.800 0.000) (pt -1.800 -0.050) (pt -1.700 0.050) (start 180.0) (sweep -180.0))
+      (pt -1.7 0)
+      (arc (pt -1.700 0.000) (pt -1.800 -0.050) (pt -1.700 0.050) (start 180.0) (sweep .0))
+      (pt -1.8 0)
+      (arc (pt -1.800 0.000) (pt -1.800 -0.050) (pt -1.700 0.050) (start 180.0) (sweep -180.0))
+      (pt -1.7 0))))
+   (leg 1 (pt 0.000 0.000) (padstack 1))
+   (leg 2 (pt 1.270 1.270) (padstack 0))
+   (leg 3 (pt 2.540 0.000) (padstack 0))
+   (padstack 0
+    (hole 0.8)
+    (plated true)
+    (pad (layer TCOP) (round 1.300))
+    (pad (layer INNER) (round 1.300))
+    (pad (layer BCOP) (round 1.300))
+   )
+   (padstack 1
+    (hole 0.8)
+    (plated true)
+    (pad (layer TCOP) (square 1.300))
+    (pad (layer INNER) (round 1.300))
+    (pad (layer BCOP) (square 1.300))
+   )
+   (model "BC547.stp"
+    (euler 90 0 0)
+    (offset 1.2699999809265137 0.20000000298023224 6)
+   )
+  )
+ )
+)

@@ -1,0 +1,9 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ATTINY85-20PU")(type "KiCad")(uri "${KIPRJMOD}/lib/ATTINY85-20PU/KiCad/ATTINY85-20PU.kicad_sym")(options "")(descr ""))
+  (lib (name "IRLZ44N")(type "KiCad")(uri "${KIPRJMOD}/lib/IRLZ44N/KiCad/IRLZ44N.kicad_sym")(options "")(descr ""))
+  (lib (name "PC817X2NSZ9F")(type "KiCad")(uri "${KIPRJMOD}/lib/PC817X2NSZ9F/KiCad/PC817X2NSZ9F.kicad_sym")(options "")(descr ""))
+  (lib (name "KA78M05RTM")(type "KiCad")(uri "${KIPRJMOD}/lib/KA78M05RTM/KiCad/KA78M05RTM.kicad_sym")(options "")(descr ""))
+  (lib (name "IRF4905")(type "KiCad")(uri "${KIPRJMOD}/lib/IRF4905/KiCad/IRF4905.kicad_sym")(options "")(descr ""))
+  (lib (name "BC547")(type "KiCad")(uri "${KIPRJMOD}/lib/BC547/KiCad/BC547.kicad_sym")(options "")(descr ""))
+)

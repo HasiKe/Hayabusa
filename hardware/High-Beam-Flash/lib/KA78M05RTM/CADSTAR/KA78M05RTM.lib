@@ -1,0 +1,17 @@
+.KA78M05RTM :1 ;IC REG LINEAR 5V 500MA DPAK
+KA78M05RTM
+*STM IC
+*NGS
+*PLB 1="INPUT" 2="GND" 3="OUTPUT"
+*MXP 3
+*DFN KA78M05RTM
+~!Manufacturer_Name (onsemi)
+~!Manufacturer_Part_Number (KA78M05RTM)
+~!Mouser Part Number (512-KA78M05RTM)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/KA78M05RTM?qs=SpPkH8nd0tby1gymq1mGIg%3D%3D)
+~!Arrow Part Number (KA78M05RTM)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/ka78m05rtm/on-semiconductor)
+~!Link Datasheet (https://componentsearchengine.com/Datasheets/1/KA78M05RTM.pdf)
+~!Height (2.527mm)
+KA78M05RTM
+1.1!U 2.1!U 3.1!U 

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP KA78M05RTM
+D IC REG LINEAR 5V 500MA DPAK
+K
+F https://componentsearchengine.com/Datasheets/1/KA78M05RTM.pdf
+$ENDCMP
+#
+#End Doc Library
