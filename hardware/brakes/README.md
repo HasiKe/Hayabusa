@@ -1,8 +1,8 @@
 # Brembo Bremsen Upgrade - Hayabusa Gen 1
 
 **Status:** Geplant  
-**Priorität:** Mittel (Performance & Safety)  
-**Budget:** ~600-800€
+**Priorität:** Mittel (Performance & Safety)
+**Budget:** ~1600-1800€
 
 ---
 
@@ -11,9 +11,9 @@
 | Komponente | Aktuell | Status |
 |------------|---------|--------|
 | Bremspumpe | Brembo RCS 19 (Radial) | ✅ Bereits verbaut |
-| Bremsbeläge | Original Suzuki | ⚠️ Upgrade nötig |
-| Bremsscheiben | Original 320mm | Prüfen auf Warping/Verschleiß |
-| Bremsschläuche | Original | Ggf. Stahlflex upgrade |
+| Bremsbeläge | Brembo Bremsbeläge Sintermetall | ✅ Bereits verbaut |
+| Bremsscheiben | Brembo Bremsscheiben Schwimmend 320mm | ✅ Bereits verbaut |
+| Bremsschläuche | Stahlflex upgrade | ✅ Bereits verbaut |
 | Bremssättel | Original Tokico 6-Kolben | ❌ Upgrade geplant |
 
 ---
