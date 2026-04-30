@@ -1,180 +1,112 @@
 # Hayabusa ECU Projekt
 
-Ein umfassendes Engine Management System (ECU) Projekt für Suzuki Hayabusa Motorräder basierend auf der Speeduino Plattform.
+Ein Open-Source Engine Management System für Suzuki Hayabusa Motorräder, basierend auf der Speeduino-Plattform.
 
-## 🏍️ Projektübersicht
+## Projektübersicht
 
-Dieses Projekt umfasst die komplette Entwicklung einer kundenspezifischen ECU für Suzuki Hayabusa Motorräder. Es beinhaltet Hardware-Design, Firmware, Tuning-Konfigurationen und mechanische Komponenten.
+Dieses Repository enthält die komplette Entwicklung einer Custom-ECU für Suzuki Hayabusa Motorräder der ersten Generation (1999-2007). Das Projekt umfasst Hardware-Design, Firmware-Integration, Tuning-Konfigurationen und begleitende mechanische Komponenten.
 
-### Hauptkomponenten:
-- **Custom ECU Hardware** - KiCad PCB Design mit professionellen Automotive-Komponenten
-- **Speeduino Firmware** - Open-source Engine Management Software
-- **Tuning Konfigurationen** - TunerStudio Setups für verschiedene Hayabusa Varianten
-- **Mechanische Teile** - 3D-Design für Luftboxen, Dichtungen und Zubehör
+### Hauptkomponenten
 
-## 📋 Projektstruktur
+| Komponente | Beschreibung |
+|------------|--------------|
+| **ECU Hardware** | 4-Layer PCB Design in KiCad mit Automotive-grade Komponenten |
+| **Speeduino Firmware** | Open-Source Engine Management auf Basis des HasiKe-Forks |
+| **Tuning** | TunerStudio-Konfigurationen für verschiedene Hayabusa-Varianten |
+| **Mechanik** | Airbox, Ram-Air-Dichtungen, Wireless Charging Case |
+
+## Projektstruktur
 
 ```
-Hayabusa/
-├── Hardware/              # Hardware Design & Mechanik
-│   ├── ECU/              # KiCad PCB Design für ECU
-│   ├── Airbox/           # Luftbox Design & Kühlung
-│   ├── Ram-Air-Seal/     # Ram-Air Dichtungen
-│   ├── Abgasstopfen/     # Auspuff-Stopfen
-│   └── wireless charging/ # Wireless Charging Case
-├── speeduino/            # Speeduino Firmware (Submodule)
-├── tune/                 # TunerStudio Konfigurationen
-│   ├── Busa/            # Standard Hayabusa Tune
-│   ├── Hayabusa-R1/     # R1 Hybrid Konfiguration
-│   └── setup/           # Setup-Dokumentation
-├── docs/                 # Projekt Dokumentation
-├── TÜV/                 # TÜV-Gutachten & Zertifikate
-└── README.md            # Diese Datei
+hayabusa/
+├── hardware/                 # Hardware-Design und mechanische Komponenten
+│   ├── ECU/                  # KiCad PCB-Design der ECU
+│   ├── Airbox/               # Luftbox mit integrierter Kühlung
+│   ├── Ram-Air-Seal/         # Ram-Air Dichtungssystem
+│   └── ...                   # Weitere mechanische Projekte
+├── speeduino/                # Speeduino Firmware (Git Submodule)
+├── tune/                     # TunerStudio Konfigurationen
+│   ├── Busa/                 # Standard Hayabusa Tune
+│   └── Hayabusa-R1/          # R1 Hybrid Konfiguration
+├── docs/                     # Projektdokumentation
+└── TÜV/                      # TÜV-Gutachten und Zertifikate
 ```
 
-## 🔧 Hardware
+## Hardware
 
-### ECU Board
-- **Plattform**: Arduino Mega 2560 / Teensy 4.1
-- **Design Tool**: KiCad
-- **Features**: 
-  - Automotive-grade Komponenten
-  - CAN Bus Unterstützung
-  - Umfangreiche I/O für Sensoren und Aktuatoren
-  - Professionelle PCB mit Gerber-Dateien
+### ECU-Spezifikationen
 
-### Mechanische Komponenten
-- **Airbox System** mit integrierter Kühlung
-- **Ram-Air Dichtungen** für optimierte Luftzufuhr
-- **Wireless Charging Case** für moderne Konnektivität
+| Parameter | Wert |
+|-----------|------|
+| Mikrocontroller | Teensy 4.1 |
+| Injector-Ausgänge | 4x Low-Side mit Flyback-Protection |
+| Zündungsausgänge | 4x IGBT-Treiber |
+| Analog-Eingänge | TPS, MAP, CLT, IAT, O2, Batterie |
+| Digital-Eingänge | Crank, Cam (36-1 Trigger) |
+| Kommunikation | USB, CAN Bus |
+| PCB | 4-Layer, 100x80mm |
 
-## ⚙️ Software
+Detaillierte Hardware-Dokumentation: [docs/HARDWARE.md](docs/HARDWARE.md)
+
+## Software
 
 ### Speeduino Firmware
-- **Version**: Latest (Submodule)
-- **Platform**: PlatformIO
-- **Unterstützte Boards**: AVR2560, STM32, Teensy 3.5/4.1
-- **Features**: Vollständiges EMS mit:
-  - Fuel injection control
-  - Ignition timing
-  - Idle control
-  - Launch control
-  - Datenlogger
 
-### Tuning
-- **Software**: TunerStudio
-- **Konfigurationen**:
-  - Standard Hayabusa (alle Generationen)
-  - Hayabusa-R1 Hybrid Setup
-- **Dashboards**: Umfangreiche Analyse-Tools
+Das Projekt verwendet den [HasiKe Speeduino Fork](https://github.com/HasiKe/speeduino) als Git-Submodule.
 
-## 📐 Installation & Setup
+**Unterstützte Funktionen:**
+- Sequential Fuel Injection
+- Wasted Spark Ignition
+- Closed-Loop Idle Control
+- Launch Control / Rev Limiter
+- CAN Bus Kommunikation
+- SD-Card Datenlogger
 
-### Hardware Setup
-1. **ECU Montage**:
-   ```bash
-   # Siehe docs/installation.md für detaillierte Anweisungen
-   ```
 
-2. **Verkabelung**:
-   - Siehe `docs/Kabelplan.png` für vollständigen Schaltplan
-   - Pinout-Referenz in `Hardware/ECU/docs/Pinout.ods`
+## Installation
 
-### Firmware Installation
-```bash
-cd speeduino
-# PlatformIO verwenden für Compilation und Upload
-pio run -t upload
-```
+Eine vollständige Installationsanleitung mit Pinout-Mapping, Sensor-Kalibrierung und Inbetriebnahme-Checkliste findet sich unter: [docs/INSTALLATION.md](docs/INSTALLATION.md)
 
-### Tuning Setup
-1. TunerStudio öffnen
-2. Projekt aus `tune/Busa/` oder `tune/Hayabusa-R1/` laden
-3. Base Maps entsprechend Motor-Setup verwenden
+## Tuning
 
-## 🔬 Testing & Validation
+Base-Maps und Tuning-Anleitungen für TunerStudio: [docs/TUNING.md](docs/TUNING.md)
 
-### Hardware Tests
-- **PCB Validation**: Alle Schaltkreise getestet
-- **Automotive Standards**: EMV-Compliance
-- **Umgebungstests**: Vibration, Temperatur
+## Projektstatus
 
-### Software Tests
-```bash
-cd speeduino
-# Unit Tests ausführen
-pio test
-```
+| Phase | Status |
+|-------|--------|
+| ECU Hardware Design | ✓ Abgeschlossen |
+| Speeduino Integration | ✓ Abgeschlossen |
+| Base Tune | In Arbeit |
+| Fahrzeugintegration | In Arbeit |
 
-## 📊 Performance
+## Dokumentation
 
-### Aktuelle Spezifikationen:
-- **Injection Timing**: ±0.1ms Präzision
-- **RPM Range**: 0-15,000 RPM
-- **Sensor Support**: MAP, MAF, TPS, CLT, IAT, O2
-- **Output Channels**: 8x Injector, 8x Ignition
+| Dokument | Inhalt |
+|----------|--------|
+| [HARDWARE.md](docs/HARDWARE.md) | PCB-Design, Steckerbelegung, mechanische Spezifikationen |
+| [SOFTWARE.md](docs/SOFTWARE.md) | Firmware-Architektur, Build-System, Code-Struktur |
+| [INSTALLATION.md](docs/INSTALLATION.md) | Einbau, Verkabelung, Inbetriebnahme |
+| [TUNING.md](docs/TUNING.md) | Kennfelder, Kalibrierung, Optimierung |
+| [CHANGELOG.md](CHANGELOG.md) | Versionshistorie |
 
-## 🛡️ Zertifizierungen
+## Ressourcen
 
-### TÜV Gutachten
-- Philips LED Scheinwerfer (siehe `TÜV/`)
-- Brembo RCS Bremsen
-- Metzeler Reifen Freigaben
+- [Speeduino Wiki](https://wiki.speeduino.com)
+- [Speeduino Forum](https://speeduino.com/forum)
+- [TunerStudio](http://tunerstudio.com)
 
-## 🚀 Roadmap
+## Lizenz
 
-### Phase 1 - Hardware ✅
-- [x] ECU PCB Design
-- [x] Mechanische Komponenten
-- [x] Prototyp Tests
-
-### Phase 2 - Software ✅
-- [x] Speeduino Integration
-- [x] Base Tune Development
-- [x] Dashboard Creation
-
-### Phase 3 - Integration 🔄
-- [ ] Vollständige Fahrzeug Integration
-- [ ] Straßentests
-- [ ] Performance Optimierung
-
-### Phase 4 - Documentation 📝
-- [ ] Vollständige Installations-Anleitung
-- [ ] Video Tutorials
-- [ ] Community Support
-
-## 🤝 Beitragen
-
-Contributions sind willkommen! Bitte beachte:
-
-1. **Hardware Änderungen**: Vollständige Simulation und Tests erforderlich
-2. **Software**: Speeduino Coding Standards befolgen
-3. **Dokumentation**: Deutsch/Englisch
-4. **Testing**: Alle Änderungen müssen getestet werden
-
-## 📞 Support
-
-### Community
-- **Discord**: [Speeduino Discord](https://discord.gg/YWCEexaNDe)
-- **Forum**: [Speeduino Forum](https://speeduino.com/forum)
-
-### Technische Unterstützung
-- **Hardware**: Siehe Schaltpläne in `Hardware/ECU/docs/`
-- **Software**: [Speeduino Wiki](https://wiki.speeduino.com)
-- **Tuning**: TunerStudio Dokumentation
-
-## 📄 Lizenz
-
-- **Hardware**: Open Source (siehe einzelne Komponenten-Lizenzen)
+- **Hardware**: Open Source (siehe Komponenten-Lizenzen)
 - **Speeduino**: GPL v3
 - **Dokumentation**: CC BY-SA 4.0
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
-Dieses Projekt ist für Bildungs- und Enthusiasten-Zwecke. Eigenverantwortliche Nutzung. Alle Modifikationen müssen den lokalen Gesetzen und Vorschriften entsprechen.
+Dieses Projekt dient Bildungs- und Enthusiasten-Zwecken. Die Nutzung erfolgt auf eigene Verantwortung. Alle Modifikationen müssen den lokalen Gesetzen und Vorschriften entsprechen.
 
 ---
 
-**Projekt Status**: 🟢 Aktive Entwicklung  
-**Letzte Aktualisierung**: Dezember 2025  
-**Version**: 2.0-dev
+**Version**: 2.0
+**Stand**: April 2026

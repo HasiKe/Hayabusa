@@ -1,375 +1,167 @@
-# Project Structure - Hayabusa ECU
+# Projektstruktur
 
-## 📁 Ordnerstruktur
+## Verzeichnisübersicht
 
 ```
-Hayabusa/
-├── README.md                    # Haupt-Projektdokumentation
-├── CHANGELOG.md                 # Versionshistorie
-├── .gitignore                   # Git ignore rules
+hayabusa/
+├── README.md                     # Haupt-Projektdokumentation
+├── CHANGELOG.md                  # Versionshistorie
+├── .gitmodules                   # Git Submodule-Konfiguration
 │
-├── docs/                        # Dokumentation
-│   ├── HARDWARE.md              # Hardware-Dokumentation
-│   ├── SOFTWARE.md              # Software-Dokumentation
-│   ├── INSTALLATION.md          # Installations-Guide
-│   ├── TUNING.md                # Tuning-Guide
-│   ├── PROJECT_STRUCTURE.md     # Diese Datei
-│   ├── Kabelplan.png           # Verkabelungsdiagramm
-│   ├── Kabelplan.pdn           # Paint.NET Quelldatei
-│   ├── Speeduino_manual.pdf    # Speeduino Handbuch
-│   └── *.jpg                   # Referenzbilder
+├── docs/                         # Dokumentation
+│   ├── HARDWARE.md               # Hardware-Dokumentation
+│   ├── SOFTWARE.md               # Software-Dokumentation
+│   ├── INSTALLATION.md           # Installationsanleitung
+│   ├── TUNING.md                 # Tuning-Guide
+│   ├── PROJECT_STRUCTURE.md      # Diese Datei
+│   └── Kabelplan.png             # Verkabelungsdiagramm
 │
-├── Hardware/                    # Hardware Design & CAD
-│   ├── ECU/                    # ECU Elektronik Design
-│   │   ├── *.kicad_*           # KiCad Projekt Dateien
-│   │   ├── lib/                # KiCad Bibliotheken
-│   │   ├── docs/               # Hardware Dokumentation
-│   │   ├── output/             # Produktionsdateien
-│   │   │   ├── gerber files/   # Gerber für PCB Produktion
-│   │   │   ├── cut files/      # Schneidedateien
-│   │   │   ├── *.pdf           # Schaltpläne & PCB
-│   │   │   └── *.csv           # Bill of Materials
-│   │   └── ECU-backups/        # Automatische Backups
-│   │
-│   ├── Airbox/                 # Luftbox System
-│   │   ├── *.stp               # CAD Dateien (STEP)
-│   │   ├── aircooler/          # Kühlsystem Komponenten
-│   │   └── *.jpg               # Referenzfotos
-│   │
-│   ├── Ram-Air-Seal/           # Ram-Air Dichtungen
-│   │   ├── *.SLDPRT            # SolidWorks Parts
-│   │   ├── *.x_t               # Parasolid Exchange
-│   │   └── suzuki-*/           # Original Referenzen
-│   │
-│   ├── Abgasstopfen/           # Auspuff-Stopfen
-│   │   ├── *.step              # CAD Dateien
-│   │   ├── *.dxf               # 2D Zeichnungen
-│   │   └── *.png               # Skizzen
-│   │
-│   ├── wireless charging/      # Wireless Charging Case
-│   │   └── *.step              # CAD Dateien
-│   │
-│   └── Parts & Cost.ods        # Teile & Kostenübersicht
+├── hardware/                     # Hardware Design
+│   ├── ECU/                      # ECU Elektronik
+│   │   ├── *.kicad_*             # KiCad Projektdateien
+│   │   ├── lib/                  # KiCad Bibliotheken
+│   │   ├── docs/                 # Hardware-Dokumentation
+│   │   └── output/               # Produktionsdateien (Gerber, BOM)
+│   ├── Airbox/                   # Luftbox mit Kühlung
+│   ├── Ram-Air-Seal/             # Ram-Air Dichtungen
+│   └── ...                       # Weitere mechanische Projekte
 │
-├── speeduino/                   # Speeduino Firmware (Git Submodule)
-│   ├── speeduino/              # Haupt-Firmware
-│   │   ├── speeduino.ino       # Main Arduino Sketch
-│   │   ├── *.cpp               # C++ Source Files
-│   │   ├── *.h                 # Header Files
-│   │   └── src/                # Externe Bibliotheken
-│   ├── test/                   # Unit Tests
-│   ├── platformio.ini          # PlatformIO Konfiguration
-│   ├── reference/              # Referenz-Dateien
-│   └── README.md               # Speeduino Dokumentation
+├── speeduino/                    # Speeduino Firmware (Git Submodule)
+│   ├── speeduino/                # Haupt-Firmware
+│   ├── test/                     # Unit Tests
+│   └── platformio.ini            # Build-Konfiguration
 │
-├── tune/                       # TunerStudio Konfigurationen
-│   ├── *.ini                   # Speeduino INI Dateien
-│   │
-│   ├── Busa/                   # Standard Hayabusa Tune
-│   │   ├── CurrentTune.msq     # Aktuelle Tune-Datei
-│   │   ├── projectCfg/         # TunerStudio Projektkonfiguration
-│   │   ├── dashboard/          # Custom Dashboards
-│   │   ├── restorePoints/      # Backup Tunes
-│   │   ├── DataLogs/          # Datenlogger Aufzeichnungen
-│   │   └── TuneView/          # TuneView Dateien
-│   │
-│   ├── Hayabusa-R1/           # R1 Hybrid Konfiguration
-│   │   ├── CurrentTune.msq     # R1 Tune-Datei
-│   │   ├── projectCfg/         # R1 Projektkonfiguration
-│   │   ├── dashboard/          # R1-spezifische Dashboards
-│   │   ├── restorePoints/      # R1 Backup Tunes
-│   │   └── DataLogs/          # R1 Datenlogger
-│   │
-│   ├── setup/                  # Setup Dokumentation
-│   │   ├── maps.ods           # Kennfeld-Übersicht
-│   │   └── sensor setup.url   # Sensor Setup Referenz
-│   │
-│   ├── online/                 # Online Tune Archive
-│   └── TunerStudioAppDebug.txt # TS Debug Log
+├── tune/                         # TunerStudio Konfigurationen
+│   ├── Busa/                     # Standard Hayabusa
+│   │   ├── CurrentTune.msq       # Aktuelle Tune-Datei
+│   │   ├── dashboard/            # Custom Dashboards
+│   │   └── DataLogs/             # Datenlogger-Aufzeichnungen
+│   └── Hayabusa-R1/              # R1 Hybrid Konfiguration
 │
-└── TÜV/                        # TÜV Gutachten & Zertifikate
-    ├── *_ABG_*.pdf            # Allgemeine Betriebserlaubnis
-    ├── *_abe.pdf              # Teilegutachten
-    └── *.pdf                  # Weitere Zertifikate
+└── TÜV/                          # TÜV-Gutachten und Zertifikate
 ```
 
-## 🏗️ Architektur-Übersicht
+## Architektur
 
-### Hardware-Architektur
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                         HARDWARE LAYER                          │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌──────────────┐ │
-│  │   Sensors       │    │   ECU Board     │    │  Actuators   │ │
-│  │                 │    │                 │    │              │ │
-│  │ • TPS           │◄──►│ Arduino Mega    │◄──►│ • Injectors  │ │
-│  │ • MAP           │    │ Speeduino FW    │    │ • Ignition   │ │
-│  │ • CLT/IAT       │    │ CAN Interface   │    │ • Fuel Pump  │ │
-│  │ • O2 Sensor     │    │ I/O Drivers     │    │ • Idle Valve │ │
-│  │ • RPM/Cam       │    │                 │    │              │ │
-│  └─────────────────┘    └─────────────────┘    └──────────────┘ │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+### Hardware
 
-### Software-Architektur
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                         SOFTWARE STACK                          │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌──────────────┐ │
-│  │  TunerStudio    │    │   Speeduino     │    │   Hardware   │ │
-│  │                 │    │   Firmware      │    │   Drivers    │ │
-│  │ • GUI Interface │◄──►│ • Engine Logic  │◄──►│ • PWM/ADC    │ │
-│  │ • Tuning Maps   │    │ • Calculations  │    │ • Interrupts │ │
-│  │ • Data Logging  │    │ • Scheduling    │    │ • Timers     │ │
-│  │ • Real-time     │    │ • Corrections   │    │ • Serial I/O │ │
-│  │   Monitoring    │    │ • Safety        │    │ • Storage    │ │
-│  └─────────────────┘    └─────────────────┘    └──────────────┘ │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                        HARDWARE                              │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐      │
+│  │  Sensoren   │    │  ECU Board  │    │  Aktuatoren │      │
+│  │             │    │             │    │             │      │
+│  │  TPS        │◄──►│  Arduino    │◄──►│  Injektoren │      │
+│  │  MAP        │    │  Speeduino  │    │  Zündung    │      │
+│  │  CLT/IAT    │    │  CAN        │    │  Kraftstoff │      │
+│  │  O2         │    │  I/O        │    │  Leerlauf   │      │
+│  │  RPM/Cam    │    │             │    │             │      │
+│  └─────────────┘    └─────────────┘    └─────────────┘      │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-## 📋 Dateitypen & Verwendung
+### Software
 
-### Hardware Files
-
-#### KiCad Projekt (.kicad_pro, .kicad_sch, .kicad_pcb)
-- **Zweck**: PCB Design und Schaltpläne
-- **Software**: KiCad EDA Suite
-- **Bearbeitung**: Erfordert KiCad Installation
-- **Version Control**: Text-basiert, Git-friendly
-
-#### Gerber Files (.gbr, .drl)
-- **Zweck**: PCB Produktion
-- **Verwendung**: Direkt an PCB-Hersteller
-- **Format**: Industrie-Standard
-- **Viewer**: GerbView, Online Gerber Viewer
-
-#### CAD Files (.step, .stp, .SLDPRT)
-- **Zweck**: 3D mechanische Komponenten
-- **Software**: SolidWorks, Fusion 360, FreeCAD
-- **Austausch**: STEP universeller als SLDPRT
-- **3D Druck**: STL Export erforderlich
-
-### Software Files
-
-#### Arduino Sketch (.ino)
-- **Zweck**: Haupt-Firmware Entry Point
-- **Compiler**: Arduino IDE oder PlatformIO
-- **Sprache**: C++ (Arduino Framework)
-- **Dependencies**: Externe Libraries in src/
-
-#### TunerStudio Files (.msq, .ini)
-- **MSQ**: Tune-Datei mit Maps und Einstellungen
-- **INI**: ECU Definition und Interface
-- **Kompatibilität**: TunerStudio MS versions
-- **Backup**: Automatisch durch TunerStudio
-
-#### Dashboard Files (.dash)
-- **Zweck**: Custom TunerStudio Dashboards
-- **Format**: XML-basiert
-- **Anpassung**: TunerStudio Dashboard Editor
-- **Sharing**: Zwischen Projekten kopierbar
-
-### Dokumentation Files
-
-#### Markdown (.md)
-- **Zweck**: Dokumentation und README
-- **Syntax**: GitHub Flavored Markdown
-- **Viewing**: GitHub, VS Code, oder Markdown Viewer
-- **Version Control**: Diff-friendly
-
-#### Spreadsheets (.ods)
-- **Zweck**: Kalkulationen, BOMs, Listen
-- **Software**: LibreOffice Calc, Excel
-- **Format**: Open Document Standard
-- **Export**: PDF, CSV, XLSX möglich
-
-## 🔄 Workflow & Build Process
-
-### Hardware Development Workflow
-```bash
-1. Schematic Design (KiCad)
-   ├── Component Selection
-   ├── Electrical Rules Check (ERC)
-   └── Netlist Generation
-
-2. PCB Layout (KiCad) 
-   ├── Component Placement
-   ├── Routing (Auto + Manual)
-   ├── Design Rules Check (DRC)
-   └── 3D Visualization
-
-3. Production Files
-   ├── Gerber Generation
-   ├── Drill Files
-   ├── Pick & Place
-   └── BOM Export
-
-4. Assembly & Test
-   ├── PCB Manufacturing
-   ├── Component Assembly  
-   ├── Functional Test
-   └── Integration Test
+```
+┌─────────────────────────────────────────────────────────────┐
+│                      SOFTWARE STACK                          │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐      │
+│  │ TunerStudio │    │  Speeduino  │    │  Hardware   │      │
+│  │             │    │  Firmware   │    │  Treiber    │      │
+│  │  GUI        │◄──►│  Engine     │◄──►│  PWM/ADC    │      │
+│  │  Maps       │    │  Logic      │    │  Interrupts │      │
+│  │  Logging    │    │  Scheduler  │    │  Timer      │      │
+│  │  Monitoring │    │  Safety     │    │  Serial     │      │
+│  └─────────────┘    └─────────────┘    └─────────────┘      │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-### Software Development Workflow
-```bash
-1. Firmware Development
-   ├── speeduino/ (Git Submodule)
-   ├── Local modifications
-   ├── PlatformIO Build
-   └── Upload to ECU
+## Dateitypen
 
-2. Tuning Development
-   ├── Base Map Creation
-   ├── TunerStudio Project Setup
-   ├── Dashboard Design
-   └── Validation Testing
+### Hardware
 
-3. Documentation
-   ├── Markdown Writing
-   ├── Screenshot Generation
-   ├── Diagram Creation
-   └── Review & Update
-```
+| Typ | Beschreibung | Software |
+|-----|--------------|----------|
+| .kicad_pro, .kicad_sch, .kicad_pcb | PCB Design | KiCad |
+| .gbr, .drl | Gerber/Drill für Produktion | GerbView |
+| .step, .stp | 3D CAD | FreeCAD, SolidWorks |
 
-### Release Process
-```bash
-1. Version Increment
-   ├── Update CHANGELOG.md
-   ├── Tag Git Release
-   └── Update Documentation
+### Software
 
-2. Hardware Release
-   ├── Finalize Gerber Files
-   ├── Validate BOM
-   ├── Assembly Instructions
-   └── Test Procedures
+| Typ | Beschreibung | Software |
+|-----|--------------|----------|
+| .ino | Arduino Sketch | PlatformIO, Arduino IDE |
+| .msq | TunerStudio Tune | TunerStudio |
+| .ini | ECU Definition | TunerStudio |
+| .dash | Dashboard | TunerStudio |
 
-3. Software Release
-   ├── Firmware Compilation
-   ├── Tune File Packaging
-   ├── Documentation Update
-   └── Distribution
-```
+### Dokumentation
 
-## 🔧 Development Setup
+| Typ | Beschreibung |
+|-----|--------------|
+| .md | Markdown Dokumentation |
+| .ods | Kalkulationen, BOMs |
+| .pdf | Handbücher, Datenblätter |
 
-### Required Software
+## Entwicklung
 
-#### Hardware Development
-```bash
-# PCB Design
-- KiCad 7.0+ (Free)
-- KiCad Library Management
+### Voraussetzungen
 
-# 3D CAD  
-- FreeCAD (Free) OR
-- SolidWorks (Commercial) OR
-- Fusion 360 (Commercial/Free for personal)
+**Hardware:**
+- KiCad 7.0+
+- FreeCAD oder SolidWorks
 
-# Viewers
-- GerbView (included with KiCad)
-- FreeCAD for STEP files
-```
-
-#### Software Development  
-```bash
-# Firmware Development
+**Software:**
 - PlatformIO (VS Code Extension)
-- Arduino IDE (Alternative)
-- Git (Version Control)
+- TunerStudio MS
+- Git
 
-# Tuning Software
-- TunerStudio MS (Commercial)
-- MegaLogViewer (Data analysis)
+### Repository klonen
 
-# Documentation
-- VS Code with Markdown extensions
-- LibreOffice (Spreadsheets)
-```
-
-### Git Workflow
-
-#### Repository Setup
 ```bash
-# Clone with submodules
-git clone --recursive https://github.com/user/Hayabusa.git
+# Mit Submodules
+git clone --recursive https://github.com/user/hayabusa.git
 
-# Update submodules
+# Submodules aktualisieren
 git submodule update --init --recursive
 
-# Pull latest changes including submodules  
+# Pull mit Submodules
 git pull --recurse-submodules
 ```
 
-#### Branch Strategy
+### Build-Prozess
+
 ```bash
-main/          # Production-ready releases
-├── develop/   # Integration branch
-├── feature/*  # New features
-├── hotfix/*   # Critical fixes
-└── release/*  # Release preparation
+# Firmware kompilieren
+cd speeduino
+pio run -e megaatmega2560
+
+# Firmware hochladen
+pio run -e megaatmega2560 -t upload
+
+# Tests ausführen
+pio test
 ```
 
-#### Commit Guidelines
-```bash
-# Format: type(scope): description
-feat(hardware): add CAN bus interface
-fix(firmware): correct trigger timing calculation  
-docs(install): update wiring diagram
-style(tuning): reformat fuel maps
-test(ecu): add sensor validation tests
+## Commit-Konventionen
+
+```
+feat(hardware): CAN Bus Interface hinzugefügt
+fix(firmware): Trigger-Timing korrigiert
+docs(install): Verkabelungsdiagramm aktualisiert
 ```
 
-## 📚 Documentation Standards
-
-### File Naming
-```bash
-# Descriptive, lowercase, hyphen-separated
-hardware-specs.md       ✓ Good
-HARDWARE_SPECS.md      ✗ Avoid
-hardwareSpecs.md       ✗ Avoid
-
-# Version in filename if needed
-tune-v2.1-hayabusa.msq  ✓ Good
-CurrentTune.msq         ✓ Acceptable for latest
-```
-
-### Documentation Structure
-```markdown
-# Title (H1 - One per document)
-## Major Section (H2)  
-### Subsection (H3)
-#### Details (H4)
-
-- Use bullet points for lists
-- **Bold** for emphasis
-- `code` for technical terms
-- [Links](url) for references
-```
-
-### Code Documentation
-```cpp
-/**
- * Brief description of function
- * @param param1 Description of parameter
- * @param param2 Description of parameter  
- * @return Description of return value
- */
-int calculateFuel(int map, int rpm) {
-    // Detailed comments for complex logic
-    return fuelMap[map][rpm];
-}
-```
+| Präfix | Verwendung |
+|--------|------------|
+| feat | Neue Features |
+| fix | Bugfixes |
+| docs | Dokumentation |
+| style | Formatierung |
+| test | Tests |
 
 ---
 
-**Maintained by**: Kevin  
-**Last Updated**: Dezember 2025  
 **Version**: 2.0
+**Stand**: April 2026

@@ -1,499 +1,327 @@
-# Installation Guide - Hayabusa ECU
+# Installationsanleitung
 
-## 🛠️ Installationsanleitung
+## Sicherheitshinweise
 
-### ⚠️ Wichtige Sicherheitshinweise
+**Warnung**: Die Installation einer Aftermarket-ECU erfordert umfangreiche Kenntnisse in Elektronik und Motorentechnik. Unsachgemäße Installation kann zu schweren Motor- oder Fahrzeugschäden führen.
 
-**WARNUNG**: Die Installation einer Aftermarket-ECU erfordert umfangreiche Kenntnisse in Elektronik und Motorentechnik. Unsachgemäße Installation kann zu schweren Motor- oder Fahrzeugschäden führen.
-
-**Vor der Installation**:
-- Vollständige Sicherung der Original-ECU und aller Kalibrierungen
-- Werkstatthandbuch für spezifisches Hayabusa Modelljahr verfügbar
+**Vor der Installation:**
+- Vollständige Sicherung der Original-ECU
+- Werkstatthandbuch für das spezifische Modelljahr verfügbar
 - Professionelle Diagnose-Ausrüstung vorhanden
 - Erfahrung mit Hochspannungs-Zündsystemen
 
-### 📋 Benötigte Werkzeuge
+## Werkzeuge
 
-#### Spezialwerkzeug
-- **Multimeter** (True RMS, min. 10MΩ Eingangswiderstand)
-- **Oszilloskop** (2-Kanal, min. 100MHz)
-- **CAN Bus Tester** (optional)
-- **Drehmomentschlüssel** (0.5-25 Nm)
+### Spezialwerkzeuge
+- Multimeter (True RMS, min. 10 MΩ Eingangswiderstand)
+- Oszilloskop (2-Kanal, min. 100 MHz)
+- Drehmomentschlüssel (0,5-25 Nm)
+- CAN Bus Tester (optional)
 
-#### Standard Werkzeug
-- **Steckschlüsselsatz** (8-17mm)
-- **Schraubendreher** (Phillips, Schlitz, Torx)
-- **Abisolierzange** mit Crimper
-- **Lötstation** (temperaturregelt)
-- **Heißluftfön** für Schrumpfschläuche
+### Standardwerkzeuge
+- Steckschlüsselsatz (8-17 mm)
+- Schraubendreher (Phillips, Schlitz, Torx)
+- Abisolierzange mit Crimper
+- Lötstation (temperaturgeregelt)
 
-#### Verbrauchsmaterial
-- **Lötzinn** (60/40, 0.6mm)
-- **Schrumpfschläuche** (verschiedene Größen)
-- **Kabelbinder**
-- **Isolierband**
-- **Kontaktspray**
-- **Dielektrisches Fett**
+### Verbrauchsmaterial
+- Lötzinn (60/40, 0,6 mm)
+- Schrumpfschläuche
+- Kabelbinder
+- Dielektrisches Fett
 
-### 🔌 ECU Installation
+## ECU Installation
 
-#### Schritt 1: Vorbereitung
+### Schritt 1: Vorbereitung
 
-##### Original-ECU auslesen
-```bash
-# TunerStudio mit Original-ECU verbinden
-# Vollständigen Read der Original-Kalibrierung
-File → Read From ECU → Save as "Original_Backup.msq"
-
-# Flash-Backup (falls verfügbar)
-Tools → Flash Backup → "Original_Flash.hex"
+#### Original-ECU auslesen
+```
+TunerStudio → File → Read From ECU → Save as "Original_Backup.msq"
 ```
 
-##### Fahrzeug vorbereiten
-1. **Motor abkühlen** lassen (min. 30min)
-2. **Batterie abklemmen** (Masse zuerst)
-3. **Kraftstoffdruck** ablassen
-4. **Zündung aus**, Schlüssel abziehen
-5. **Arbeitsplatz** gut beleuchten und sauber
+#### Fahrzeug vorbereiten
+1. Motor abkühlen lassen (min. 30 min)
+2. Batterie abklemmen (Masse zuerst)
+3. Kraftstoffdruck ablassen
+4. Zündung aus, Schlüssel abziehen
 
-#### Schritt 2: Original-ECU entfernen
+### Schritt 2: Original-ECU entfernen
 
-##### Zugang zur ECU
-```
-Hayabusa Gen 1 (1999-2007):
-- ECU unter Sitz, rechte Seite
-- Sitzbank entfernen
-- Seitenverkleidung lösen
+#### ECU-Position nach Generation
 
-Hayabusa Gen 2 (2008-2020):  
-- ECU unter Tank, zentral
-- Tank anheben (nicht entfernen)
-- Luftfilterkasten teilweise demontieren
+| Generation | Position | Zugang |
+|------------|----------|--------|
+| Gen 1 (1999-2007) | Unter Sitz, rechte Seite | Sitzbank und Seitenverkleidung entfernen |
+| Gen 2 (2008-2020) | Unter Tank, zentral | Tank anheben, Luftfilterkasten teildemontieren |
+| Gen 3 (2021+) | Hinter linker Verkleidung | Verkleidung komplett entfernen |
 
-Hayabusa Gen 3 (2021+):
-- ECU hinter linker Seitenverkleidung  
-- Verkleidung komplett entfernen
-- CAN Bus Stecker beachten
-```
+#### Steckverbinder
 
-##### Stecker-Identifikation
-```
-Gen 1: 3x Stecker
-- A: 32-pin Haupt-Harness (grau)
-- B: 16-pin Sensor-Harness (schwarz) 
-- C: 8-pin Diagnose/CAN (blau)
+| Generation | Stecker |
+|------------|---------|
+| Gen 1 | 3x: 32-Pin Haupt (grau), 16-Pin Sensor (schwarz), 8-Pin CAN (blau) |
+| Gen 2 | 2x: 48-Pin Haupt (grau/schwarz), 12-Pin CAN (blau) |
+| Gen 3 | 1x: 64-Pin Gesamt (schwarz) |
 
-Gen 2: 2x Stecker  
-- A: 48-pin Haupt-Harness (grau/schwarz)
-- B: 12-pin CAN/Diagnose (blau)
+### Schritt 3: Dropbear v2 ECU installieren
 
-Gen 3: 1x Stecker
-- A: 64-pin Gesamt-Harness (schwarz)
-```
-
-##### Entfernung
-```bash
-# Dokumentation vor Entfernung
-1. Fotos aller Steckverbindungen
-2. Etikettierung der Kabel
-3. Messung aller Spannungen (Zündung AN)
-4. Widerstandsmessung aller Sensoren
-
-# Entfernung
-1. Stecker vorsichtig lösen (Verriegelung beachten)
-2. ECU-Befestigung lösen (meist 3x 8mm Schrauben)
-3. ECU vorsichtig entnehmen
-```
-
-#### Schritt 3: Speeduino ECU installieren
-
-##### Mechanische Installation
-```bash
-# ECU-Montage
+#### Mechanische Installation
 1. Original-Befestigungspunkte verwenden
 2. Drehmoment: 8 Nm (M6 Schrauben)
 3. Vibrationsdämpfer prüfen
 4. Gehäuse-Erdung sicherstellen
 
-# Kabelführung
-1. Original-Kabelwege beibehalten
-2. Abstand zu heißen Oberflächen >5cm
-3. Keine scharfen Kanten
-4. Bewegliche Teile vermeiden
+#### Kabelführung
+- Original-Kabelwege beibehalten
+- Abstand zu heißen Oberflächen > 5 cm
+- Keine scharfen Kanten
+- Bewegliche Teile vermeiden
+
+### Schritt 4: Pinout-Mapping (Gen 1)
+
+#### Stromversorgung
+| Original Pin | Dropbear v2 |
+|--------------|-------------|
+| 1 (+12V Battery) | VIN |
+| 2 (+12V Switched) | VIN_SW |
+| 3 (Ground) | GND |
+| 4 (Analog Ground) | AGND |
+
+#### Sensoren
+| Original Pin | Dropbear v2 |
+|--------------|-------------|
+| 5 (TPS Signal) | TPS |
+| 6 (MAP Signal) | MAP |
+| 7 (CLT Signal) | CLT |
+| 8 (IAT Signal) | IAT |
+| 9 (O2 Signal) | O2 |
+| 10 (Battery V) | VBAT |
+
+#### Trigger
+| Original Pin | Dropbear v2 |
+|--------------|-------------|
+| 15 (Crank Signal) | CRANK |
+| 16 (Cam Signal) | CAM |
+
+#### Einspritzung
+| Original Pin | Dropbear v2 |
+|--------------|-------------|
+| 20-23 (Injector 1-4) | INJ1-4 |
+
+#### Zündung
+| Original Pin | Dropbear v2 |
+|--------------|-------------|
+| 25-28 (Ignition 1-4) | IGN1-4 |
+
+#### CAN Bus (Native auf Teensy 4.1)
+| Original Pin | Dropbear v2 |
+|--------------|-------------|
+| 45 (CAN High) | CAN_H |
+| 46 (CAN Low) | CAN_L |
+
+#### Klopfsensor (geplant)
+| Signal | Dropbear v2 |
+|--------|-------------|
+| Knock+ | KNOCK |
+| Knock- | AGND |
+
+## Software-Konfiguration
+
+### Base Tune laden
+```
+TunerStudio → Project → Open → tune/Busa/CurrentTune.msq
+Communications → Connect ECU
 ```
 
-##### Elektrische Verbindung
+### Grundeinstellungen
+| Parameter | Wert |
+|-----------|------|
+| Board | Dropbear v2 |
+| Zylinder | 4 |
+| Motortyp | 4-Takt |
+| Einspritzung | Sequential |
+| Zündung | Wasted Spark |
+| Trigger Pattern | Missing Tooth 36-1 |
 
-###### Pinout Mapping (Gen 2 Beispiel)
-```
-Original ECU Pin → Speeduino Pin
+### Sensor-Kalibrierung
 
-Power & Ground:
-Pin 1  (+12V Battery)    → VIN
-Pin 2  (+12V Switched)   → VIN_SW  
-Pin 3  (Ground)          → GND
-Pin 4  (Analog Ground)   → AGND
+#### MAP Sensor (MPX4250AP)
+| Parameter | Wert |
+|-----------|------|
+| Sensortyp | GM 1 Bar |
+| Minimum | 10 kPa |
+| Maximum | 250 kPa |
+| Spannung @ Min | 0,2 V |
+| Spannung @ Max | 4,8 V |
 
-Sensoren:
-Pin 5  (TPS Signal)      → A0 (TPS)
-Pin 6  (MAP Signal)      → A1 (MAP)
-Pin 7  (CLT Signal)      → A2 (CLT)
-Pin 8  (IAT Signal)      → A3 (IAT)
-Pin 9  (O2 Signal)       → A4 (O2)
-Pin 10 (Battery V)       → A5 (BAT)
-
-Trigger:
-Pin 15 (Crank Signal)    → D2 (RPM1)
-Pin 16 (Cam Signal)      → D3 (RPM2)
-
-Injektoren:
-Pin 20 (Injector 1)      → D6 (INJ1)
-Pin 21 (Injector 2)      → D7 (INJ2)  
-Pin 22 (Injector 3)      → D8 (INJ3)
-Pin 23 (Injector 4)      → D9 (INJ4)
-
-Zündung:
-Pin 25 (Ignition 1)      → D10 (IGN1)
-Pin 26 (Ignition 2)      → D11 (IGN2)
-Pin 27 (Ignition 3)      → D12 (IGN3)
-Pin 28 (Ignition 4)      → D13 (IGN4)
-
-CAN Bus (optional):
-Pin 45 (CAN High)        → CAN_H
-Pin 46 (CAN Low)         → CAN_L
-```
-
-#### Schritt 4: Verkabelung
-
-##### Adapter-Harness (Empfohlen)
-```bash
-# Professioneller Ansatz
-1. Original-Stecker am Adapter verwenden
-2. Neue Verkabelung zu Speeduino
-3. Individuelle Adern mit Original-Farben
-4. Vollständige Isolierung und Schrumpfschutz
-
-# Qualitätskontrolle
-1. Durchgangsprüfung jeder Verbindung
-2. Isolationsmessung zwischen den Adern
-3. Mechanische Prüfung aller Stecker
-4. Dokumentation der finalen Pinbelegung
-```
-
-##### Direkte Verdrahtung (Fortgeschritten)
-```bash
-# NUR für Experten
-1. Original-Stecker modifizieren
-2. Pin-Extraktion mit Spezialwerkzeug
-3. Neue Pins crimpen und einsetzen
-4. Stecker-Programmierung anpassen (Gen 3)
-
-# ACHTUNG: Irreversibel!
-```
-
-#### Schritt 5: Erste Inbetriebnahme
-
-##### System-Check vor Motorstart
-```bash
-# Spannungsprüfung
-1. Batteriespannung: 12.0-14.8V
-2. 5V Sensor Supply: 4.95-5.05V  
-3. Analog Ground: <0.05V
-4. ECU Ground: <0.1Ω zu Battery-Minus
-
-# Sensor-Test
-1. TPS: 0.5-4.5V über Bereich
-2. MAP: 1.0V (Vacuum) bis 4.5V (Boost)
-3. CLT: Variable je Temperatur
-4. IAT: Variable je Temperatur
-```
-
-##### Trigger-Signal Validierung
-```bash
-# Oszilloskop an Crank Signal
-1. Motor per Hand drehen
-2. Signal sollte saubere Rechteckwelle zeigen
-3. Amplitude: 0-5V oder 0-12V
-4. 36 Pulse pro Umdrehung mit 1 fehlenden Zahn
-
-# Cam Signal (falls vorhanden)
-1. 1 Puls pro 2 Kurbelwellenumdrehungen
-2. Synchronisation zu Crank prüfen
-```
-
-### ⚙️ Software-Konfiguration
-
-#### Base Tune laden
-```bash
-# TunerStudio Verbindung
-1. COM Port settings: 115200 baud, 8N1
-2. Project → Open → tune/Busa/CurrentTune.msq
-3. Communications → Connect ECU
-
-# Initial Settings
-1. Engine → Basic Settings
-   - Cylinders: 4
-   - Engine Type: 4-stroke
-   - Injection Mode: Sequential
-   - Ignition Mode: Wasted Spark
-
-2. Engine → Trigger Setup  
-   - Pattern: Missing Tooth
-   - Primary Teeth: 36
-   - Missing Teeth: 1
-```
-
-#### Sensor-Kalibrierung
-```bash
-# MAP Sensor (Hayabusa Standard: MPX4250AP)
-Sensor Type: GM 1 Bar
-Min Value: 10 kPa  
-Max Value: 250 kPa
-Voltage @ Min: 0.2V
-Voltage @ Max: 4.8V
-
-# TPS Kalibrierung
+#### TPS Kalibrierung
 1. Engine → Sensor Calibration → TPS
-2. Throttle geschlossen: Learn Closed
-3. Throttle voll offen: Learn WOT
-4. Prüfung: 0-100% über Bereich
+2. Drosselklappe geschlossen: Learn Closed
+3. Drosselklappe voll offen: Learn WOT
+4. Prüfung: 0-100% über gesamten Bereich
 
-# Temperature Sensors
-CLT/IAT Sensor: Standard NTC
-Pull-up Resistor: 2.7kΩ
-Bias Voltage: 5.0V
-```
+#### Temperatursensoren
+| Parameter | Wert |
+|-----------|------|
+| CLT/IAT Sensor | Standard NTC |
+| Pull-up Widerstand | 2,7 kΩ |
+| Bias-Spannung | 5,0 V |
 
-#### Fuel System Setup
-```bash
-# Injector Settings
-Injector Size: 318 cc/min (Standard Hayabusa)
-Number of Injectors: 4
-Injection Mode: Sequential
-Opening Time: 1.0ms
+#### Klopfsensor (geplant)
+| Parameter | Wert |
+|-----------|------|
+| Aktiviert | Ja |
+| Schwellwert | 50 |
+| Frequenz | 6-8 kHz |
+| Retard pro Klopfen | 3° |
+| Recovery | 0,5°/s |
 
-# Required Fuel Calculation
-Engine Displacement: 1340cc
-Target AFR: 13.5:1
-Req Fuel = (Displacement × 6.49) ÷ (AFR × Injector Size)
-Req Fuel = (1340 × 6.49) ÷ (13.5 × 318) = 2.03ms
-```
+### Kraftstoffsystem
+| Parameter | Wert |
+|-----------|------|
+| Injektorgröße | 318 cc/min (Standard) |
+| Anzahl Injektoren | 4 |
+| Einspritzung | Sequential |
+| Öffnungszeit | 1,0 ms |
+| Required Fuel | 2,0 ms (berechnet) |
 
-### 🧪 Funktionstest
+## Inbetriebnahme
 
-#### Statischer Test (Motor aus)
-```bash
-# Power-On Test
-1. Zündung AN
-2. Speeduino Status LEDs prüfen:
-   - Power LED: AN (grün)
-   - Activity LED: Blinkend (blau)
-   - Error LED: AUS (rot)
+### Statischer Test (Motor aus)
 
-# Sensor Reading Test  
-3. TunerStudio → Gauges
-4. Alle Sensor-Werte plausibel:
-   - RPM: 0
-   - MAP: ~100 kPa (atmospheric)
-   - TPS: 0%
-   - CLT: Ambient temp
-   - IAT: Ambient temp
-   - Battery: 12-13V
-```
+#### Spannungsprüfung
+| Parameter | Sollwert |
+|-----------|----------|
+| Batteriespannung | 12,0-14,8 V |
+| 5V Sensor Supply | 4,95-5,05 V |
+| Analog Ground | < 0,05 V |
+| ECU Ground | < 0,1 Ω zu Batterie-Minus |
 
-#### Cranking Test (Motor startet nicht)
-```bash
-# Fuel System deaktivieren
-1. Fuel Pump Relay entfernen ODER
-2. Injector Fuse entfernen ODER  
-3. Fuel Rail drucklos machen
+#### Sensor-Werte prüfen
+| Sensor | Erwartung |
+|--------|-----------|
+| RPM | 0 |
+| MAP | ca. 100 kPa (atmosphärisch) |
+| TPS | 0% |
+| CLT | Umgebungstemperatur |
+| IAT | Umgebungstemperatur |
+| Batterie | 12-13 V |
 
-# Crank Signal Test
-1. Motor kurz ankurbeln (5-10 Sekunden)
-2. RPM Signal in TunerStudio beobachten
-3. Erwartung: Smooth RPM reading
-4. Trigger Errors prüfen (sollten 0 sein)
+### Cranking-Test (Motor startet nicht)
 
-# Ignition Test (VORSICHT!)
-1. Zündkerzen entfernen
-2. Zündkabel mit Funkenstrecke testen
-3. Funke bei jedem 2. Crank-Impuls erwarten
-4. Timing grob prüfen (TDC Markierung)
-```
+1. Kraftstoffsystem deaktivieren (Relais oder Sicherung entfernen)
+2. Motor kurz ankurbeln (5-10 Sekunden)
+3. RPM-Signal in TunerStudio beobachten
+4. Trigger Errors prüfen (sollen 0 sein)
 
-#### Erster Start (KRITISCH!)
-```bash
-# Vorbereitung
-1. Feuerlöscher bereithalten
-2. Notaus-Schalter installieren
-3. Mechaniker vor Ort
-4. Laptop mit TunerStudio verbunden
+### Erster Start
 
-# Start-Prozedur
-1. Fuel System wieder aktivieren
-2. Cranking Pulsewidth: 6-10ms setzen
-3. Kurz ankurbeln und RPM stabilisieren lassen
-4. SOFORT TunerStudio Readings prüfen:
+**Vorbereitung:**
+- Feuerlöscher bereithalten
+- Notaus-Schalter installiert
+- Laptop mit TunerStudio verbunden
+
+**Prozedur:**
+1. Kraftstoffsystem aktivieren
+2. Cranking Pulsewidth: 6-10 ms
+3. Motor starten und sofort prüfen:
    - AFR: 12-15 (nicht lean!)
-   - CLT: Steigend
-   - MAP: Sinnvolle Werte
-   - Engine Load: <50%
+   - CLT: steigend
+   - MAP: sinnvolle Werte
 
-# Bei Problemen SOFORT stoppen!
-```
+**Bei Problemen sofort stoppen!**
 
-### 🔍 Troubleshooting
+## Troubleshooting
 
-#### Häufige Probleme
+### Motor startet nicht
 
-##### Motor startet nicht
-```bash
-Mögliche Ursachen:
-1. Trigger Signal fehlt oder falsch
-   → Oscilloscope an RPM1/RPM2
-   → Trigger Pattern überprüfen
-   
-2. Kein Fuel
-   → Fuel Pump Relay prüfen
-   → Injector Wiring prüfen
-   → Required Fuel zu niedrig
-   
-3. Kein Spark  
-   → Ignition Output Test
-   → Coil Primary Resistance
-   → Timing zu weit retarded
-```
+| Problem | Prüfung |
+|---------|---------|
+| Kein Trigger-Signal | Oszilloskop an CRANK/CAM, Pattern prüfen |
+| Kein Kraftstoff | Fuel Pump Relais, Injector Wiring, Required Fuel |
+| Kein Zündfunke | Ignition Output, Coil Widerstand, Timing |
 
-##### Motor läuft schlecht
-```bash
-Symptome → Mögliche Ursachen:
+### Motor läuft schlecht
 
-Rough Idle:
-- TPS nicht kalibriert
-- MAP Sensor defekt
-- Vacuum Lecks
-- Idle Fuel/Timing falsch
+| Symptom | Mögliche Ursache |
+|---------|------------------|
+| Unrunder Leerlauf | TPS nicht kalibriert, MAP Sensor defekt, Vacuum-Lecks |
+| Keine Leistung | Fuel Map zu mager, Zündung zu spät, MAP falsch |
+| Klopfen/Backfire | Timing zu früh, Gemisch zu mager |
 
-Keine Power:
-- Fuel Map zu lean
-- Ignition Timing zu retarded
-- MAP Reading falsch
-- Injector Size falsch konfiguriert
+### Sensor-Probleme
 
-Backfire/Knocking:
-- Timing zu advanced  
-- Fuel Map zu lean
-- Knock Sensor nicht connected
-- Poor fuel quality
-```
+| Symptom | Ursache |
+|---------|---------|
+| -40°C Anzeige | Offener Stromkreis (Kabel gebrochen) |
+| 150°C Anzeige | Kurzschluss |
+| Wert ändert sich nicht | Defekter Sensor oder Pull-up |
 
-##### Sensor-Probleme
-```bash
-TPS Issues:
-- Voltage nicht 0-5V → Wiring oder defekter Sensor
-- Noisy Signal → EMI, schlechte Erdung
-- Non-linear → Falsche Kalibrierung
+## Referenzdaten
 
-MAP Issues:  
-- Reading 0 oder max → Vacuum line oder Sensor defekt
-- Doesn't change → Vacuum line blocked
-- Noisy → Vibration oder EMI
+### Hayabusa Motor-Spezifikationen
 
-Temperature Issues:
-- Reading -40°C → Open circuit (Kabel gebrochen)
-- Reading 150°C → Short circuit (Kabel Kurzschluss)
-- Doesn't change → Defekter Sensor oder Pull-up
-```
+| Parameter | Gen 1 | Gen 2+ |
+|-----------|-------|--------|
+| Hubraum | 1299 cc | 1340 cc |
+| Verdichtung | 11:1 | 12,5:1 |
+| Max. Drehzahl | 11.000 | 11.000 |
+| Zündfolge | 1-2-4-3 | 1-2-4-3 |
+| Einspritzung | Sequential | Sequential |
+| Zündung | Wasted Spark | Wasted Spark |
 
-#### Diagnose-Tools
+### MAP Sensor (Standard)
 
-##### TunerStudio Error Log
-```bash
-Tools → Error Log
-Häufige Errors:
-- Trigger Sync Lost → Trigger Wiring/Configuration
-- MAP out of range → MAP Sensor/Vacuum
-- TPS out of range → TPS Kalibrierung  
-- Temperature Sensor Error → Temp Sensor Wiring
-```
+| Parameter | Wert |
+|-----------|------|
+| Teilenummer | MPX4250AP |
+| Typ | Absolutdruck |
+| Bereich | 20-250 kPa |
+| Ausgang | 0,2-4,8 V linear |
+| Versorgung | 5 V ±0,25 V |
 
-##### Real-time Data Analysis
-```bash
-Tools → Realtime Display
-Kritische Parameter überwachen:
-- Engine Load: <80% normal operation
-- AFR: 12.5-15.5 je nach Load
-- Ignition Advance: 10-35° je nach RPM/Load
-- Injection Pulse Width: 1-25ms typical
-```
+### Temperatursensoren (CLT/IAT)
 
-### 📚 Referenz-Daten
+| Parameter | Wert |
+|-----------|------|
+| Typ | NTC Thermistor |
+| Widerstand @ 20°C | 2,3 kΩ ±3% |
+| β (Beta) | 3435 K |
+| Bereich | -40°C bis +130°C |
 
-#### Hayabusa Sensor-Spezifikationen
+### Klopfsensor (geplant)
 
-##### MAP Sensor (Standard)
-```
-Part Number: MPX4250AP
-Type: Absolute Pressure
-Range: 20-250 kPa
-Output: 0.2-4.8V linear
-Supply: 5V ±0.25V
-Current: <10mA
-```
+| Parameter | Wert |
+|-----------|------|
+| Typ | Piezoelektrisch |
+| Kompatibel | Bosch 0 261 231 173 |
+| Resonanz | 6-8 kHz |
+| Montage | Motorblock, M8 Gewinde |
+| Drehmoment | 20 Nm |
 
-##### TPS (Throttle Position Sensor)
-```
-Type: Potentiometer
-Resistance: 5kΩ
-Range: 0-90° (mechanical)
-Output: 0.5-4.5V linear
-Linearity: ±2%
-```
+## Sicherheitsmaßnahmen
 
-##### Temperature Sensors (CLT/IAT)
-```
-Type: NTC Thermistor
-Resistance @ 20°C: 2.3kΩ ±3%
-β (Beta): 3435K
-Range: -40°C to +130°C
-Pull-up: 2.7kΩ to 5V
-```
+### Während Installation
+- Batterie abgeklemmt während Verkabelung
+- Keine offenen Flammen (Kraftstoffdämpfe)
+- ESD-Schutz für elektronische Komponenten
+- Doppelte Kontrolle aller Verbindungen
 
-#### Hayabusa Engine Specifications
-```
-Displacement: 1340cc (Gen 2+), 1299cc (Gen 1)
-Compression Ratio: 12.5:1
-Max RPM: 11,000 (stock)
-Firing Order: 1-2-4-3
-Injection: Sequential Multi-point
-Ignition: Wasted Spark (2 coils)
-```
+### Nach Installation
+- Vollständiger Systemcheck vor erstem Start
+- Notaus-Möglichkeit während Tests
+- Feuerlöscher griffbereit
+- Ersatzteile für Original-Zustand verfügbar
 
-### 🛡️ Sicherheitsmaßnahmen
-
-#### Während Installation
-- **Batterie abgeklemmt** während Verkabelung
-- **Keine offenen Flammen** (Kraftstoffdämpfe)
-- **ESD-Schutz** für elektronische Komponenten
-- **Doppelte Kontrolle** aller Verbindungen
-
-#### Nach Installation  
-- **Vollständiger System-Check** vor erstem Start
-- **Notaus-Möglichkeit** während Tests
-- **Feuerlöscher** griffbereit
-- **Ersatzteile** für Original-Zustand verfügbar
-
-#### Im Straßenverkehr
-- **Lokale Gesetze** beachten (TÜV/ABE)
-- **Versicherung** über Modifikationen informieren
-- **Backup-Tune** für Notfälle
-- **Diagnose-Laptop** für längere Fahrten
+### Straßenverkehr
+- Lokale Gesetze beachten (TÜV/ABE)
+- Versicherung über Modifikationen informieren
+- Backup-Tune für Notfälle
+- Diagnose-Laptop für längere Fahrten
 
 ---
 
-**⚠️ HAFTUNGSAUSSCHLUSS**  
-Diese Anleitung dient nur als Referenz. Jede Modifikation erfolgt auf eigene Verantwortung. Bei Unsicherheiten professionelle Werkstatt konsultieren.
+**Haftungsausschluss**: Diese Anleitung dient nur als Referenz. Jede Modifikation erfolgt auf eigene Verantwortung.
 
-**Letzte Aktualisierung**: Dezember 2025  
-**Version**: 2.0  
-**Status**: ✅ Production Ready
+**Version**: 2.0
+**Stand**: April 2026
