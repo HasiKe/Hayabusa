@@ -1,0 +1,18 @@
+.ISL9V5036P3-F085 :1 ;Logic Level Gate Drive; Industry Standard TO-220 package; SCIS Energy = 500mJ at TJ = 25; Qualified to AEC Q101; RoHS Compliant
+TO254P470X1016X2019-3P
+*STM Q
+*NGS
+*PLB 1="G" 2="C" 3="E"
+*MXP 3
+*DFN ISL9V5036P3-F085
+~!Manufacturer_Name (onsemi)
+~!Manufacturer_Part_Number (ISL9V5036P3-F085)
+~!Mouser Part Number (512-ISL9V5036P3-F085)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/ISL9V5036P3-F085?qs=0lQeLiL1qyZrd8MAKfN5lQ%3D%3D)
+~!Arrow Part Number (ISL9V5036P3-F085)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/isl9v5036p3-f085/on-semiconductor?utm_currency=USD&region=nac)
+~!Link Datasheet (https://www.onsemi.com/pub/Collateral/ISL9V5036S3ST-D.PDF)
+~!Height (4.7mm)
+~!3D_Model (ISL9V5036P3-F085)
+ISL9V5036P3-F085
+1.1!U 2.1!U 3.1!U 

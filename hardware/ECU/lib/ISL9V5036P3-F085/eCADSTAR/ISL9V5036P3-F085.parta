@@ -1,0 +1,72 @@
+(Japanese_coding: sjis)
+(function "ECS_1641339"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-07-22-13:30:05)
+    (utime 2025-01-22-16:53:39)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+        (port "3" (symbPinId 3) (portType INOUT))
+    )
+    (property "symbolName" "ISL9V5036P3-F085")
+)
+
+
+(pinAssign "ECS_1641339"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-07-22-13:30:05)
+    (utime 2025-01-22-16:53:39)
+    (interface
+        (port "1" (symbPinId 1) (portName "G") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "C") (portType INOUT))
+        (port "3" (symbPinId 3) (portName "E") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_1641339")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+                (port "3" (match "3"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "ISL9V5036P3-F085")
+)
+
+
+(part "ISL9V5036P3-F085"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-07-22-13:30:05)
+    (utime 2025-01-22-16:53:39)
+    (packageRef "ISL9V5036P3-F085")
+    (pinAssignRef "ECS_1641339")
+    (interface
+        (port "1" (symbPinId 1) (portName "G") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "C") (portType INOUT))
+        (port "3" (symbPinId 3) (portName "E") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "YES")
+    (property "refDesPrefix" "Q")
+    (property "description" "Logic Level Gate Drive; Industry Standard TO-220 package; SCIS Energy = 500mJ at TJ = 25; Qualified to AEC Q101; RoHS Compliant")
+    (property "Manufacturer_Name" "onsemi")
+    (property "Manufacturer_Part_Number" "ISL9V5036P3-F085")
+    (property "Mouser_Part_Number" "512-ISL9V5036P3-F085")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/ISL9V5036P3-F085?qs=0lQeLiL1qyZrd8MAKfN5lQ%3D%3D")
+    (property "Arrow_Part_Number" "ISL9V5036P3-F085")
+    (property "Arrow_Price/Stock" "https://www.arrow.com/en/products/isl9v5036p3-f085/on-semiconductor?utm_currency=USD&region=nac")
+    (property "Datasheet_Link" "https://www.onsemi.com/pub/Collateral/ISL9V5036S3ST-D.PDF")
+    (property "compAreaTopHeight" 4.7)
+)
+
+

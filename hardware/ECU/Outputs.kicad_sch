@@ -457,6 +457,180 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:LED"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -1433,17 +1607,6 @@
 		)
 		(uuid "3d7fe253-1964-45a1-acd2-09af18404f01")
 	)
-	(text "Tacho output"
-		(exclude_from_sim no)
-		(at 55.88 90.17 0)
-		(effects
-			(font
-				(size 1.9812 1.9812)
-			)
-			(justify left bottom)
-		)
-		(uuid "4c8c7364-4095-405b-b83d-65d4e951ed82")
-	)
 	(text "PWM Idle and Spare 2 outputs"
 		(exclude_from_sim no)
 		(at 48.26 24.13 0)
@@ -1466,22 +1629,28 @@
 		)
 		(uuid "9281f3c8-dce5-4928-9411-0f6200c0f35d")
 	)
-	(text "Fuel pump relay"
+	(text "Tacho and Fuel Pump relay"
 		(exclude_from_sim no)
-		(at 114.3 90.17 0)
+		(at 59.69 81.28 0)
 		(effects
 			(font
 				(size 1.9812 1.9812)
 			)
 			(justify left bottom)
 		)
-		(uuid "f4ba0d6b-b3f4-4931-b20d-d10487ae2a8e")
+		(uuid "97d7050c-db2f-4eaf-ae7f-37b5c968eff3")
 	)
 	(junction
 		(at 255.27 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0511b78c-76a3-4ebc-be5b-80ab6fd98f87")
+	)
+	(junction
+		(at 113.03 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "20cdbc24-cf69-4751-9ceb-10d424234d4a")
 	)
 	(junction
 		(at 242.57 46.99)
@@ -1508,12 +1677,6 @@
 		(uuid "4d5d6cd1-32c0-4593-bfd3-85f456fbb1a9")
 	)
 	(junction
-		(at 59.69 113.03)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4d6347c4-f137-4d60-89d4-e0af57d4927b")
-	)
-	(junction
 		(at 242.57 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1526,16 +1689,46 @@
 		(uuid "50c4228a-062b-4e77-a6f6-ce51c0d0ab31")
 	)
 	(junction
+		(at 100.33 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5939208b-2daf-4752-944a-d87d54b238de")
+	)
+	(junction
+		(at 50.8 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "640bf41b-8e4f-45c4-91bb-21ef06665065")
+	)
+	(junction
 		(at 242.57 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "67e2f8b6-3bc6-40c0-9cce-9062494c6fbc")
 	)
 	(junction
+		(at 113.03 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6dfb715b-3bba-48aa-a579-2fe39b0cb77a")
+	)
+	(junction
 		(at 71.12 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "759ebf5d-d50b-43be-8364-7db570abf2cc")
+	)
+	(junction
+		(at 119.38 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7a4187ce-6f41-4698-bfc6-0e02d58dadea")
+	)
+	(junction
+		(at 113.03 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "812fe876-cfbf-4cde-8c5f-d2177d86c8b3")
 	)
 	(junction
 		(at 242.57 125.73)
@@ -1562,6 +1755,12 @@
 		(uuid "ad3792eb-5b95-4e8c-9f11-e622bc2e471b")
 	)
 	(junction
+		(at 100.33 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "af60682f-33f6-478a-9433-a8517c7a0705")
+	)
+	(junction
 		(at 193.04 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1572,6 +1771,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "babb9236-956d-447f-996c-1df8863328cc")
+	)
+	(junction
+		(at 50.8 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c3356076-39ad-43a8-8dcf-efc69f3d336d")
 	)
 	(junction
 		(at 86.36 187.96)
@@ -1615,6 +1820,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.03 88.9) (xy 113.03 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02c05532-ad96-4459-af64-7fa16f121737")
+	)
+	(wire
+		(pts
 			(xy 242.57 52.07) (xy 242.57 55.88)
 		)
 		(stroke
@@ -1645,6 +1860,16 @@
 	)
 	(wire
 		(pts
+			(xy 119.38 93.98) (xy 119.38 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0de626ca-5b91-458f-b7e2-64c87b9b7b02")
+	)
+	(wire
+		(pts
 			(xy 240.03 52.07) (xy 242.57 52.07)
 		)
 		(stroke
@@ -1655,6 +1880,16 @@
 	)
 	(wire
 		(pts
+			(xy 96.52 105.41) (xy 100.33 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12e7e425-3cd4-4f2a-bcb9-624a79bec591")
+	)
+	(wire
+		(pts
 			(xy 240.03 46.99) (xy 242.57 46.99)
 		)
 		(stroke
@@ -1662,16 +1897,6 @@
 			(type default)
 		)
 		(uuid "13f78fdf-9ba5-43c4-9591-be0fb41e6bef")
-	)
-	(wire
-		(pts
-			(xy 59.69 113.03) (xy 72.39 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1610da31-1dba-4898-9f39-5337747a0fa2")
 	)
 	(wire
 		(pts
@@ -1695,6 +1920,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 110.49) (xy 55.88 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19628f7d-d23d-4dbd-a40f-a0b39186e9c4")
+	)
+	(wire
+		(pts
 			(xy 242.57 44.45) (xy 242.57 46.99)
 		)
 		(stroke
@@ -1702,6 +1937,26 @@
 			(type default)
 		)
 		(uuid "1cce5fcd-921a-41cd-92c4-e5864de2b1b8")
+	)
+	(wire
+		(pts
+			(xy 119.38 105.41) (xy 119.38 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d813987-498d-4145-8484-1a6ed153d734")
+	)
+	(wire
+		(pts
+			(xy 40.64 105.41) (xy 35.56 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1efd7eac-2d20-477c-af6f-50fe894b9864")
 	)
 	(wire
 		(pts
@@ -1725,6 +1980,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 121.92) (xy 50.8 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "286685e5-9a46-4c40-935b-6657525f6d84")
+	)
+	(wire
+		(pts
 			(xy 95.25 49.53) (xy 95.25 52.07)
 		)
 		(stroke
@@ -1732,6 +1997,16 @@
 			(type default)
 		)
 		(uuid "28c3566d-d032-4dbc-81b6-8195b521e24a")
+	)
+	(wire
+		(pts
+			(xy 50.8 101.6) (xy 50.8 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "293fe92c-fbd3-46b6-b48a-15092812b744")
 	)
 	(wire
 		(pts
@@ -1752,6 +2027,16 @@
 			(type default)
 		)
 		(uuid "2bc6b66e-b200-45de-bfd7-cbf40f83eb60")
+	)
+	(wire
+		(pts
+			(xy 100.33 110.49) (xy 100.33 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "317004de-5493-4f0c-966f-fa750ee14faa")
 	)
 	(wire
 		(pts
@@ -1782,6 +2067,26 @@
 			(type default)
 		)
 		(uuid "3669c42e-2bb3-4c82-a290-d0dad5a99417")
+	)
+	(wire
+		(pts
+			(xy 48.26 105.41) (xy 50.8 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3caa3214-9e80-4cf3-8d85-8c69e6458c76")
+	)
+	(wire
+		(pts
+			(xy 48.26 110.49) (xy 50.8 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d9a1d5f-f072-46b2-ad3c-e3ff924d23cd")
 	)
 	(wire
 		(pts
@@ -1895,6 +2200,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 114.3) (xy 50.8 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5662b162-002c-48fa-991e-7d72dc8225ec")
+	)
+	(wire
+		(pts
 			(xy 191.77 49.53) (xy 194.31 49.53)
 		)
 		(stroke
@@ -1905,13 +2220,13 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 113.03) (xy 59.69 113.03)
+			(xy 100.33 107.95) (xy 100.33 105.41)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "57ed5ea0-56b5-47d2-ad5a-2d7a73f8a191")
+		(uuid "5714b434-b68c-4621-bba4-c73ed88b1f98")
 	)
 	(wire
 		(pts
@@ -1985,6 +2300,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.03 129.54) (xy 113.03 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6100053b-a3b5-4665-b533-80e75829d021")
+	)
+	(wire
+		(pts
 			(xy 193.04 106.68) (xy 193.04 102.87)
 		)
 		(stroke
@@ -1992,6 +2317,16 @@
 			(type default)
 		)
 		(uuid "635428b3-f1b9-4fab-9ede-8dc4e0ff5441")
+	)
+	(wire
+		(pts
+			(xy 100.33 113.03) (xy 113.03 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63e6ba87-8c23-4b7e-9de9-33c72150ba0e")
 	)
 	(wire
 		(pts
@@ -2015,6 +2350,16 @@
 	)
 	(wire
 		(pts
+			(xy 35.56 110.49) (xy 40.64 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cbe5c24-8352-4ea8-b190-29cd5966dcf7")
+	)
+	(wire
+		(pts
 			(xy 95.25 52.07) (xy 95.25 55.88)
 		)
 		(stroke
@@ -2032,6 +2377,26 @@
 			(type default)
 		)
 		(uuid "6da894bc-bbd8-4381-ba73-fbdd40a82571")
+	)
+	(wire
+		(pts
+			(xy 119.38 105.41) (xy 124.46 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6de44135-7720-41c5-a2e5-5441f5e3f559")
+	)
+	(wire
+		(pts
+			(xy 113.03 129.54) (xy 111.76 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f08b317-4484-4215-8540-edfe3d3de015")
 	)
 	(wire
 		(pts
@@ -2065,6 +2430,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.03 105.41) (xy 119.38 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74c61c8e-1c9e-4847-ab27-5952af2b8be0")
+	)
+	(wire
+		(pts
 			(xy 255.27 137.16) (xy 255.27 138.43)
 		)
 		(stroke
@@ -2082,6 +2457,16 @@
 			(type default)
 		)
 		(uuid "78983a04-6c1d-415b-a5a8-cc050ec3a5fc")
+	)
+	(wire
+		(pts
+			(xy 50.8 105.41) (xy 55.88 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78a8e8df-b6bd-41f4-8e7a-7b53d525909d")
 	)
 	(wire
 		(pts
@@ -2155,16 +2540,6 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 96.52) (xy 59.69 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f25b5de-7da0-40ba-85f7-0ce8339cfea3")
-	)
-	(wire
-		(pts
 			(xy 251.46 107.95) (xy 255.27 107.95)
 		)
 		(stroke
@@ -2225,13 +2600,13 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 107.95) (xy 59.69 113.03)
+			(xy 96.52 110.49) (xy 100.33 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "999cae94-edd4-4428-adb9-7b5342f8e87d")
+		(uuid "9d45c244-1ce4-4411-a850-44ac0201f8c7")
 	)
 	(wire
 		(pts
@@ -2255,6 +2630,16 @@
 	)
 	(wire
 		(pts
+			(xy 96.52 113.03) (xy 100.33 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a71d0e0f-cc77-4b0e-b197-94f4de425fd3")
+	)
+	(wire
+		(pts
 			(xy 255.27 125.73) (xy 255.27 129.54)
 		)
 		(stroke
@@ -2262,6 +2647,16 @@
 			(type default)
 		)
 		(uuid "a78f4d60-ec19-4472-8191-819010db1246")
+	)
+	(wire
+		(pts
+			(xy 113.03 115.57) (xy 113.03 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a898b9a4-89dd-46d2-9889-8747f6e498fd")
 	)
 	(wire
 		(pts
@@ -2282,16 +2677,6 @@
 			(type default)
 		)
 		(uuid "a9be2c56-54aa-48a4-8c34-a4f3764846e1")
-	)
-	(wire
-		(pts
-			(xy 64.77 96.52) (xy 59.69 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad5ad1cd-9faf-40e5-890a-8cb9769498f4")
 	)
 	(wire
 		(pts
@@ -2435,6 +2820,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.03 113.03) (xy 124.46 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6dddcf4-241a-4d79-8ddd-87bfb2a7ef63")
+	)
+	(wire
+		(pts
 			(xy 72.39 170.18) (xy 74.93 170.18)
 		)
 		(stroke
@@ -2465,16 +2860,6 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 102.87) (xy 138.43 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce662dcc-e41a-4cb2-9ef3-691c638fcb3c")
-	)
-	(wire
-		(pts
 			(xy 242.57 125.73) (xy 255.27 125.73)
 		)
 		(stroke
@@ -2495,6 +2880,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 93.98) (xy 50.8 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd49a8b3-0182-40a7-bf2d-53dc585e5076")
+	)
+	(wire
+		(pts
 			(xy 193.04 123.19) (xy 198.12 123.19)
 		)
 		(stroke
@@ -2502,6 +2897,36 @@
 			(type default)
 		)
 		(uuid "dd69ddb4-bfbc-471b-9e94-8f866ca4804d")
+	)
+	(wire
+		(pts
+			(xy 96.52 107.95) (xy 100.33 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de2481de-fb2e-4a66-9c32-eb779547fc94")
+	)
+	(wire
+		(pts
+			(xy 119.38 87.63) (xy 113.03 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de4589e4-9fd2-4cae-b049-f1c66360ce0d")
+	)
+	(wire
+		(pts
+			(xy 100.33 105.41) (xy 113.03 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "def93365-34b7-45a3-81f0-fb74e72cf9f1")
 	)
 	(wire
 		(pts
@@ -2555,6 +2980,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.03 87.63) (xy 106.68 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7899f4c-dfd7-4095-881c-e25d08808343")
+	)
+	(wire
+		(pts
 			(xy 240.03 49.53) (xy 242.57 49.53)
 		)
 		(stroke
@@ -2562,6 +2997,16 @@
 			(type default)
 		)
 		(uuid "fac436bd-5d4f-4ad6-9495-14e3cd8bd1c3")
+	)
+	(wire
+		(pts
+			(xy 113.03 105.41) (xy 113.03 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb41db07-1a2d-4d90-baba-e4f091ee4b70")
 	)
 	(wire
 		(pts
@@ -2605,6 +3050,28 @@
 			)
 		)
 	)
+	(global_label "12V-SW"
+		(shape input)
+		(at 111.76 129.54 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0b253f21-d189-4947-ab05-d5f2c38d1103")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.7675 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "STEPPER-B1"
 		(shape input)
 		(at 97.79 170.18 0)
@@ -2618,50 +3085,6 @@
 		(uuid "0b66b316-322d-433e-80ef-ce342d3b0449")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 112.3786 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ROUT1"
-		(shape input)
-		(at 110.49 102.87 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1927e1c8-610b-4d90-91b5-f2f854488289")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.1303 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "FUELPUMP-OUT"
-		(shape input)
-		(at 138.43 102.87 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1b9fccb4-d796-4a6f-b51c-d741858d0945")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 155.8007 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2693,6 +3116,28 @@
 			)
 		)
 	)
+	(global_label "MCU-D8"
+		(shape input)
+		(at 35.56 110.49 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.9812 1.9812)
+			)
+			(justify right)
+		)
+		(uuid "3061ad03-0bf8-4910-8ada-3f22f00340cb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 18.2615 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "12V-SW"
 		(shape input)
 		(at 245.11 63.5 0)
@@ -2715,24 +3160,46 @@
 			)
 		)
 	)
-	(global_label "TACHO-OUT"
+	(global_label "MCU-D5"
 		(shape input)
-		(at 72.39 113.03 0)
+		(at 35.56 105.41 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.9812 1.9812)
+			)
+			(justify right)
+		)
+		(uuid "38556605-36ae-4c0e-87c8-f86767397a5d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 19.406 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "12V-SW"
+		(shape input)
+		(at 106.68 87.63 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "39177153-2871-4e98-a4f4-50dbd4b42929")
+		(uuid "3be5677d-33d9-40f1-934b-76f4d4730388")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 85.8298 113.03 0)
+			(at 96.6875 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -2750,6 +3217,50 @@
 		(uuid "3dcdb585-5368-4590-b2bf-6fb9505ac409")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 119.2125 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TACHO-OUT"
+		(shape input)
+		(at 124.46 113.03 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "45b6dc99-b36f-4cd0-8a38-014517838be2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 137.8998 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "FUELPUMP-OUT"
+		(shape input)
+		(at 124.46 105.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4ee161df-595f-4f24-b1a1-0a50cfbb54a9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 141.8307 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2935,28 +3446,6 @@
 			)
 		)
 	)
-	(global_label "12V-SW"
-		(shape input)
-		(at 64.77 96.52 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "815d55c0-05db-4500-a44b-8b86689bc240")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 74.7625 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "MCU-D25"
 		(shape input)
 		(at 179.07 44.45 180)
@@ -3063,28 +3552,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ROUT2"
-		(shape input)
-		(at 44.45 113.03 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a9431001-bf93-4e17-8608-ab01294b2d22")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 36.0903 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -3274,7 +3741,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00505396-6b42-4491-b7a1-6675ae228bd0")
-		(property "Reference" "R62"
+		(property "Reference" "R63"
 			(at 194.818 109.3216 0)
 			(effects
 				(font
@@ -3364,7 +3831,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "R62")
+					(reference "R63")
 					(unit 1)
 				)
 			)
@@ -3379,7 +3846,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0e12e986-a6da-43ca-a039-51afcbb0f920")
-		(property "Reference" "R58"
+		(property "Reference" "R59"
 			(at 186.69 112.8522 90)
 			(effects
 				(font
@@ -3467,7 +3934,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "R58")
+					(reference "R59")
 					(unit 1)
 				)
 			)
@@ -3482,7 +3949,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "18371c16-e984-40af-8d00-4c57fc92db2e")
-		(property "Reference" "R56"
+		(property "Reference" "R54"
 			(at 50.038 55.9816 0)
 			(effects
 				(font
@@ -3572,7 +4039,111 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "R56")
+					(reference "R54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 50.8 97.79 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1b4f60d9-11d9-471b-8efc-673b626285d5")
+		(property "Reference" "R55"
+			(at 52.578 96.6216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100k"
+			(at 52.578 98.933 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 52.578 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 50.8 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "Yageo"
+			(at 246.38 -11.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RC0805FR-07100KL"
+			(at 246.38 -11.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.digikey.com/product-detail/en/yageo/RC0805FR-07100KL/311-100KCRCT-ND/730491"
+			(at 246.38 -11.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "311-100KCRCT-ND"
+			(at 246.38 -11.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eb585cf1-32bd-4562-bbf0-f1bf9fd7b8e9")
+		)
+		(pin "2"
+			(uuid "0bd593c9-5aee-49b8-b397-9e00529142b1")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
+					(reference "R55")
 					(unit 1)
 				)
 			)
@@ -3587,7 +4158,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1da95ad3-829f-483d-834b-5dd01ca11da8")
-		(property "Reference" "#PWR092"
+		(property "Reference" "#PWR097"
 			(at 193.04 96.52 0)
 			(effects
 				(font
@@ -3637,7 +4208,112 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR092")
+					(reference "#PWR097")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 113.03 119.38 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "374d66b7-6909-4a1f-8312-3da1cf6a488f")
+		(property "Reference" "R58"
+			(at 114.808 120.5484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 114.808 118.237 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 114.808 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 113.03 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 113.03 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "Yageo"
+			(at 175.26 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RC0805JR-0710KL"
+			(at 175.26 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.digikey.com/product-detail/en/yageo/RC0805JR-0710KL/311-10KARCT-ND/731188"
+			(at 175.26 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "311-10KARCT-ND"
+			(at 175.26 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ee2ce0c1-e043-44dd-9f26-2434e5bfe8a8")
+		)
+		(pin "2"
+			(uuid "51f86455-ef16-430b-8bc5-3e3d190d763b")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
+					(reference "R58")
 					(unit 1)
 				)
 			)
@@ -3652,7 +4328,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3f31b60d-3be2-4b98-ba59-875cffdf43de")
-		(property "Reference" "D29"
+		(property "Reference" "D21"
 			(at 240.5634 60.8584 90)
 			(effects
 				(font
@@ -3742,7 +4418,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "D29")
+					(reference "D21")
 					(unit 1)
 				)
 			)
@@ -3757,7 +4433,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "40a64089-4895-4cb9-86df-6032080eee4b")
-		(property "Reference" "R63"
+		(property "Reference" "R64"
 			(at 194.818 129.6416 0)
 			(effects
 				(font
@@ -3847,41 +4523,40 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "R63")
+					(reference "R64")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 59.69 104.14 180)
+		(lib_id "Device:LED")
+		(at 113.03 100.33 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "445971bb-cddb-4db6-832c-a2e42aea11b4")
-		(property "Reference" "R57"
-			(at 61.468 102.9716 0)
+		(uuid "44be06e1-fb7e-4396-bf77-d3cf64ab387d")
+		(property "Reference" "D18"
+			(at 106.553 100.5078 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "10k"
-			(at 61.468 105.283 0)
+		(property "Value" "LED"
+			(at 108.8644 100.5078 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 61.468 104.14 90)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 113.03 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3890,7 +4565,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 59.69 104.14 0)
+			(at 113.03 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3899,7 +4574,15 @@
 			)
 		)
 		(property "Description" ""
-			(at 59.69 104.14 0)
+			(at 113.03 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "475-1410-2-ND"
+			(at 113.03 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3907,8 +4590,8 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Name" "Yageo"
-			(at 121.92 3.81 0)
+		(property "Manufacturer_Name" "OSRAM"
+			(at 113.03 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3916,8 +4599,8 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Part_Number" "RC0805JR-0710KL"
-			(at 121.92 3.81 0)
+		(property "Manufacturer_Part_Number" "LG R971-KN-1"
+			(at 113.03 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3925,17 +4608,8 @@
 				(hide yes)
 			)
 		)
-		(property "URL" "https://www.digikey.com/product-detail/en/yageo/RC0805JR-0710KL/311-10KARCT-ND/731188"
-			(at 121.92 3.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "311-10KARCT-ND"
-			(at 121.92 3.81 0)
+		(property "URL" "https://www.digikey.com/en/products/detail/osram-opto-semiconductors-inc/LG-R971-KN-1/1227925"
+			(at 113.03 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3944,15 +4618,79 @@
 			)
 		)
 		(pin "1"
-			(uuid "ca9f8319-48ac-441e-acad-55ad1e019df3")
+			(uuid "2f3f5fbf-ad5e-490a-bee8-fbd68aaa52c8")
 		)
 		(pin "2"
-			(uuid "e7192b62-f54d-42f2-81af-72199a3d9131")
+			(uuid "f45377dc-ff37-4b90-aa39-83a4183cd1d0")
 		)
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "R57")
+					(reference "D18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 50.8 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "457587f6-1804-400a-bd95-9632482a5898")
+		(property "Reference" "#PWR089"
+			(at 50.8 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 50.927 130.1242 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "976d2d21-34a1-46f8-9724-03ef2eb9c817")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
+					(reference "#PWR089")
 					(unit 1)
 				)
 			)
@@ -3967,7 +4705,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4c74f2c8-e6ba-4e8f-837f-db6fc94e2839")
-		(property "Reference" "IC4"
+		(property "Reference" "IC5"
 			(at 219.71 37.719 0)
 			(effects
 				(font
@@ -4086,7 +4824,73 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "IC4")
+					(reference "IC5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 55.88 113.03 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4dac119a-6449-4d31-8f96-b8f19363bad9")
+		(property "Reference" "#PWR093"
+			(at 49.53 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 52.6288 113.157 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 55.88 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0054a0e3-d8ca-4622-bd97-95d2a0851b8d")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
+					(reference "#PWR093")
 					(unit 1)
 				)
 			)
@@ -4101,7 +4905,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4f809d34-6c99-40e4-aaee-00097f4042eb")
-		(property "Reference" "D28"
+		(property "Reference" "D20"
 			(at 244.5766 38.2016 90)
 			(effects
 				(font
@@ -4191,7 +4995,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "D28")
+					(reference "D20")
 					(unit 1)
 				)
 			)
@@ -4206,7 +5010,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "50c9dd76-571d-492a-b15e-55fea9c17113")
-		(property "Reference" "D25"
+		(property "Reference" "D15"
 			(at 97.2566 38.2016 90)
 			(effects
 				(font
@@ -4296,7 +5100,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "D25")
+					(reference "D15")
 					(unit 1)
 				)
 			)
@@ -4311,7 +5115,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5a987217-5657-4325-ae1f-8cb52d8a6c53")
-		(property "Reference" "R53"
+		(property "Reference" "R49"
 			(at 41.91 39.1922 90)
 			(effects
 				(font
@@ -4399,7 +5203,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "R53")
+					(reference "R49")
 					(unit 1)
 				)
 			)
@@ -4414,7 +5218,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5c317701-13ca-4e09-bd8a-087e16aba877")
-		(property "Reference" "#PWR085"
+		(property "Reference" "#PWR086"
 			(at 48.26 22.86 0)
 			(effects
 				(font
@@ -4464,7 +5268,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR085")
+					(reference "#PWR086")
 					(unit 1)
 				)
 			)
@@ -4479,7 +5283,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5e35dd23-fae5-4bc0-922e-439de0c5b19b")
-		(property "Reference" "R64"
+		(property "Reference" "R65"
 			(at 196.088 35.6616 0)
 			(effects
 				(font
@@ -4569,7 +5373,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "R64")
+					(reference "R65")
 					(unit 1)
 				)
 			)
@@ -4584,7 +5388,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "633620ff-245f-44c4-925b-bf34baaea678")
-		(property "Reference" "#PWR095"
+		(property "Reference" "#PWR0100"
 			(at 194.31 71.12 0)
 			(effects
 				(font
@@ -4634,7 +5438,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR095")
+					(reference "#PWR0100")
 					(unit 1)
 				)
 			)
@@ -4649,7 +5453,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "697cfb9f-1796-47b5-9fc8-d5178ea5b2da")
-		(property "Reference" "IC3"
+		(property "Reference" "IC4"
 			(at 218.44 111.379 0)
 			(effects
 				(font
@@ -4768,7 +5572,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "IC3")
+					(reference "IC4")
 					(unit 1)
 				)
 			)
@@ -4783,7 +5587,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6f08dfcd-359e-45cc-ab67-1513707a8018")
-		(property "Reference" "#PWR088"
+		(property "Reference" "#PWR091"
 			(at 46.99 52.07 0)
 			(effects
 				(font
@@ -4835,7 +5639,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR088")
+					(reference "#PWR091")
 					(unit 1)
 				)
 			)
@@ -4850,7 +5654,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "73d87e79-bd3c-4c5c-8e50-db4b06610984")
-		(property "Reference" "#PWR090"
+		(property "Reference" "#PWR095"
 			(at 86.36 194.31 0)
 			(effects
 				(font
@@ -4900,7 +5704,175 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR090")
+					(reference "#PWR095")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 55.88 107.95 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8007131b-0f8a-40af-ae78-05e59c041942")
+		(property "Reference" "#PWR092"
+			(at 49.53 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 52.6288 108.077 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 55.88 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1236d02c-1b8e-4dbb-8009-3da96e2b5e77")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
+					(reference "#PWR092")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 44.45 105.41 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "822825af-d29a-4dbe-aff1-7534ca4d911c")
+		(property "Reference" "R51"
+			(at 44.45 100.1522 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 44.45 102.4636 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 44.45 103.632 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 44.45 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 44.45 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "Yageo"
+			(at -72.39 -83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RC0805FR-071KL"
+			(at -72.39 -83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.digikey.com/product-detail/en/yageo/RC0805FR-071KL/311-1.00KCRCT-ND/730391"
+			(at -72.39 -83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "311-1.00KCRCT-ND"
+			(at -72.39 -83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4ac41084-cab2-41bc-ac49-529d18a4c509")
+		)
+		(pin "2"
+			(uuid "3464241d-1843-4297-b871-c2f4ae3d27b7")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
+					(reference "R51")
 					(unit 1)
 				)
 			)
@@ -4915,7 +5887,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "82d69f86-57a5-444b-aa61-3ea048a53b91")
-		(property "Reference" "R54"
+		(property "Reference" "R50"
 			(at 41.91 54.61 90)
 			(effects
 				(font
@@ -5003,7 +5975,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "R54")
+					(reference "R50")
 					(unit 1)
 				)
 			)
@@ -5018,7 +5990,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "88dc3858-2597-42df-a356-030a4225496e")
-		(property "Reference" "#PWR099"
+		(property "Reference" "#PWR0104"
 			(at 193.04 52.07 0)
 			(effects
 				(font
@@ -5070,7 +6042,111 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR099")
+					(reference "#PWR0104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 50.8 118.11 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8a35042f-b284-43e1-8c2b-282785357b49")
+		(property "Reference" "R56"
+			(at 52.578 116.9416 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100k"
+			(at 52.578 119.253 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 52.578 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 50.8 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "Yageo"
+			(at 246.38 -13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RC0805FR-07100KL"
+			(at 246.38 -13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.digikey.com/product-detail/en/yageo/RC0805FR-07100KL/311-100KCRCT-ND/730491"
+			(at 246.38 -13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "311-100KCRCT-ND"
+			(at 246.38 -13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f127e4b1-1c49-40fc-89e4-aa6fc6e15cba")
+		)
+		(pin "2"
+			(uuid "5e3b789a-28f8-4d95-b57f-333356afe408")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
+					(reference "R56")
 					(unit 1)
 				)
 			)
@@ -5085,7 +6161,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "95011210-6833-4769-8723-303acd8faa66")
-		(property "Reference" "R60"
+		(property "Reference" "R61"
 			(at 187.96 39.1922 90)
 			(effects
 				(font
@@ -5173,7 +6249,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "R60")
+					(reference "R61")
 					(unit 1)
 				)
 			)
@@ -5188,7 +6264,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a1f164d5-cbec-4d39-b929-7e378fc37ff9")
-		(property "Reference" "#PWR096"
+		(property "Reference" "#PWR0101"
 			(at 191.77 120.65 0)
 			(effects
 				(font
@@ -5240,7 +6316,110 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR096")
+					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 113.03 92.71 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a67f68a7-7cbf-45f3-a7d4-b536eaf70af8")
+		(property "Reference" "R57"
+			(at 113.03 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 110.49 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 114.808 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 113.03 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 113.03 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "311-1.00KCRCT-ND"
+			(at 113.03 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Yageo"
+			(at 113.03 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RC0805FR-071KL"
+			(at 113.03 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.digikey.com/product-detail/en/yageo/RC0805FR-071KL/311-1.00KCRCT-ND/730391"
+			(at 113.03 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e5423832-837a-4550-a808-9bd3b36d7b75")
+		)
+		(pin "2"
+			(uuid "eb1ff681-cdb7-42e8-9d12-90c3e516897f")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
+					(reference "R57")
 					(unit 1)
 				)
 			)
@@ -5255,7 +6434,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a82c980b-8837-41c1-927a-b373cc7a5e56")
-		(property "Reference" "D26"
+		(property "Reference" "D16"
 			(at 97.2566 58.5216 90)
 			(effects
 				(font
@@ -5345,7 +6524,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "D26")
+					(reference "D16")
 					(unit 1)
 				)
 			)
@@ -5360,7 +6539,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "afdfe4a7-bdeb-4d83-9861-4b3813191217")
-		(property "Reference" "#PWR086"
+		(property "Reference" "#PWR087"
 			(at 48.26 71.12 0)
 			(effects
 				(font
@@ -5410,7 +6589,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR086")
+					(reference "#PWR087")
 					(unit 1)
 				)
 			)
@@ -5426,7 +6605,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b8e87761-7311-4a25-b060-2b2f94ee7610")
-		(property "Reference" "R55"
+		(property "Reference" "R53"
 			(at 50.038 37.9984 0)
 			(effects
 				(font
@@ -5516,7 +6695,112 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "R55")
+					(reference "R53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 119.38 97.79 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b9ce3fd7-cb7b-4885-ad04-cd387ad59c66")
+		(property "Reference" "D19"
+			(at 121.3866 98.9584 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D"
+			(at 121.3866 96.647 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 119.38 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 119.38 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "MCC"
+			(at 251.46 -144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1N4448WX-TP"
+			(at 251.46 -144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.digikey.com/product-detail/en/micro-commercial-co/1N4448WX-TP/1N4448WXTPMSCT-ND/789338"
+			(at 251.46 -144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "1N4448WXTPMSCT-ND"
+			(at 251.46 -144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "20846134-7731-4b5d-94da-0c3252fbe760")
+		)
+		(pin "2"
+			(uuid "8d148e21-2c69-4a19-b961-ab8b236476c3")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
+					(reference "D19")
 					(unit 1)
 				)
 			)
@@ -5657,6 +6941,139 @@
 		)
 	)
 	(symbol
+		(lib_id "IC_Automotive:ZXMS6006DT8")
+		(at 55.88 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bf0e2a88-bd5f-4cfc-b352-37ccd14c8834")
+		(property "Reference" "IC3"
+			(at 76.2 98.679 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ZXMS6006DT8"
+			(at 76.2 100.9904 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "ZXMS6006DT8TA:SOT153P700X170-8N"
+			(at 92.71 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 55.88 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "1.75"
+			(at 92.71 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Diodes Inc"
+			(at 92.71 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "ZXMS6006DT8TADICT-ND"
+			(at 55.88 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ZXMS6006DT8"
+			(at 55.88 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.digikey.com.au/en/products/detail/diodes-incorporated/ZXMS6006DT8TA/4250146?s=N4IgTCBcDaIFoA0CyBlAbABg2gIgFQA4QBdAXyA"
+			(at 55.88 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "da174566-4995-4f68-a6bc-c0652f68fd08")
+		)
+		(pin "2"
+			(uuid "29d9c263-1b0a-4921-b662-b1175dca2e74")
+		)
+		(pin "3"
+			(uuid "eb121dc6-6343-4c75-81cc-38191efd2ac9")
+		)
+		(pin "4"
+			(uuid "82d14eff-4e93-454d-8322-afa7b4acd0e6")
+		)
+		(pin "5"
+			(uuid "8686d93d-8938-4c5a-b9e1-6dea3307c775")
+		)
+		(pin "6"
+			(uuid "96532fa6-20f3-4400-8999-40781bff2b88")
+		)
+		(pin "7"
+			(uuid "7e7d26cb-3a9e-455b-a3c9-d929cb3bcdd7")
+		)
+		(pin "8"
+			(uuid "1ff8e1e8-c4b2-43fa-bbb4-8c9a4703da23")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
+					(reference "IC3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:CP")
 		(at 96.52 154.94 0)
 		(unit 1)
@@ -5665,7 +7082,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c4a4f857-03d3-4be1-a5f2-2ede1ec867f2")
-		(property "Reference" "C31"
+		(property "Reference" "C30"
 			(at 99.5172 153.7716 0)
 			(effects
 				(font
@@ -5755,7 +7172,71 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "C31")
+					(reference "C30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 50.8 90.17 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cab03159-c76e-470d-9314-75ba23491ac5")
+		(property "Reference" "#PWR088"
+			(at 50.8 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 50.673 85.7758 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7973f03d-6081-4838-beff-117d4e0b38ba")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
+					(reference "#PWR088")
 					(unit 1)
 				)
 			)
@@ -5770,7 +7251,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cb08c4a9-6651-454c-a5e2-96dd831a3ae0")
-		(property "Reference" "D27"
+		(property "Reference" "D17"
 			(at 102.87 144.3736 0)
 			(effects
 				(font
@@ -5858,7 +7339,109 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "D27")
+					(reference "D17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 44.45 110.49 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cc8ac76b-d4a7-44f9-a9b4-e838515fa501")
+		(property "Reference" "R52"
+			(at 44.45 113.03 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 44.45 115.57 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 44.45 108.712 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 44.45 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 44.45 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "Yageo"
+			(at -80.01 -78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RC0805FR-071KL"
+			(at -80.01 -78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.digikey.com/product-detail/en/yageo/RC0805FR-071KL/311-1.00KCRCT-ND/730391"
+			(at -80.01 -78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey Part Number" "311-1.00KCRCT-ND"
+			(at -80.01 -78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "327ff42d-170b-4061-ad29-1572afb7a342")
+		)
+		(pin "2"
+			(uuid "b880258f-c214-4006-a8f3-dcc2c7d8a353")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
+					(reference "R52")
 					(unit 1)
 				)
 			)
@@ -5873,7 +7456,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cd2f499c-78b8-4a1b-bac1-59dc1dba4011")
-		(property "Reference" "D31"
+		(property "Reference" "D23"
 			(at 257.2766 132.1816 90)
 			(effects
 				(font
@@ -5963,7 +7546,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "D31")
+					(reference "D23")
 					(unit 1)
 				)
 			)
@@ -5978,7 +7561,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d2582c41-1959-4d4e-81db-8aa83a0a72c6")
-		(property "Reference" "R59"
+		(property "Reference" "R60"
 			(at 186.69 125.73 90)
 			(effects
 				(font
@@ -6066,7 +7649,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "R59")
+					(reference "R60")
 					(unit 1)
 				)
 			)
@@ -6081,7 +7664,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d47a6089-ed6f-467e-8817-c4a68d9ebd50")
-		(property "Reference" "#PWR089"
+		(property "Reference" "#PWR094"
 			(at 74.93 158.75 0)
 			(effects
 				(font
@@ -6132,7 +7715,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR089")
+					(reference "#PWR094")
 					(unit 1)
 				)
 			)
@@ -6147,7 +7730,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d4a58437-dcca-4d73-a818-6a666eb74fb7")
-		(property "Reference" "#PWR091"
+		(property "Reference" "#PWR096"
 			(at 105.41 158.75 0)
 			(effects
 				(font
@@ -6198,7 +7781,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR091")
+					(reference "#PWR096")
 					(unit 1)
 				)
 			)
@@ -6213,7 +7796,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d9beb5e3-e00b-49fa-a4fd-8ca013e4392d")
-		(property "Reference" "D30"
+		(property "Reference" "D22"
 			(at 253.2634 112.9284 90)
 			(effects
 				(font
@@ -6303,7 +7886,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "D30")
+					(reference "D22")
 					(unit 1)
 				)
 			)
@@ -6318,7 +7901,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ddcc3442-3c7d-4a97-b35e-c7778261d31f")
-		(property "Reference" "#PWR098"
+		(property "Reference" "#PWR0103"
 			(at 193.04 46.99 0)
 			(effects
 				(font
@@ -6370,7 +7953,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR098")
+					(reference "#PWR0103")
 					(unit 1)
 				)
 			)
@@ -6385,7 +7968,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "dec9b3f8-7b7f-4102-9491-95744232903e")
-		(property "Reference" "#PWR087"
+		(property "Reference" "#PWR090"
 			(at 46.99 46.99 0)
 			(effects
 				(font
@@ -6437,7 +8020,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR087")
+					(reference "#PWR090")
 					(unit 1)
 				)
 			)
@@ -6452,7 +8035,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "decd56b2-9e39-415c-affb-3f04c2447115")
-		(property "Reference" "#PWR093"
+		(property "Reference" "#PWR098"
 			(at 193.04 144.78 0)
 			(effects
 				(font
@@ -6502,7 +8085,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR093")
+					(reference "#PWR098")
 					(unit 1)
 				)
 			)
@@ -6627,7 +8210,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "eb422a1c-c43a-4f42-8096-c422e5565494")
-		(property "Reference" "#PWR097"
+		(property "Reference" "#PWR0102"
 			(at 191.77 125.73 0)
 			(effects
 				(font
@@ -6679,7 +8262,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR097")
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -6694,7 +8277,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f1338b4b-f76b-4f27-b35b-a0ccb355285d")
-		(property "Reference" "R65"
+		(property "Reference" "R66"
 			(at 196.088 55.9816 0)
 			(effects
 				(font
@@ -6784,7 +8367,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "R65")
+					(reference "R66")
 					(unit 1)
 				)
 			)
@@ -6799,7 +8382,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f22867de-e60e-4e95-a007-f05669dbde32")
-		(property "Reference" "#PWR094"
+		(property "Reference" "#PWR099"
 			(at 194.31 22.86 0)
 			(effects
 				(font
@@ -6849,7 +8432,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "#PWR094")
+					(reference "#PWR099")
 					(unit 1)
 				)
 			)
@@ -6864,7 +8447,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f8057a02-565e-43a0-b8d3-daaaffc69c25")
-		(property "Reference" "R61"
+		(property "Reference" "R62"
 			(at 187.96 52.07 90)
 			(effects
 				(font
@@ -6952,7 +8535,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/fd75070f-6deb-45ad-a5b7-fb7ab02f43b4"
-					(reference "R61")
+					(reference "R62")
 					(unit 1)
 				)
 			)

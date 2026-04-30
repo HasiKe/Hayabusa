@@ -1,0 +1,190 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "ISL9V5036P3-F085"
+   (description "Logic Level Gate Drive; Industry Standard TO-220 package; SCIS Energy = 500mJ at TJ = 25; Qualified to AEC Q101; RoHS Compliant")
+   (family "TRX")
+   (package "TO254P470X1016X2019-3P")
+   (attribute "Datasheet Link" "https://www.onsemi.com/pub/Collateral/ISL9V5036S3ST-D.PDF")
+   (attribute "Geometry.Height" "4.7mm")
+   (attribute "Manufacturer_Name" "onsemi")
+   (attribute "Manufacturer_Part_Number" "ISL9V5036P3-F085")
+   (attribute "Mouser Part Number" "512-ISL9V5036P3-F085")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/ISL9V5036P3-F085?qs=0lQeLiL1qyZrd8MAKfN5lQ%3D%3D")
+   (attribute "Arrow Part Number" "ISL9V5036P3-F085")
+   (attribute "Arrow Price/Stock" "https://www.arrow.com/en/products/isl9v5036p3-f085/on-semiconductor?utm_currency=USD&region=nac")
+   (gate
+    (symbol "ISL9V5036P3-F085")
+    (pin "G" 1 PS)
+    (pin "C" 2 PS)
+    (pin "E" 3 PS)
+   )
+  )
+  (symbol "ISL9V5036P3-F085"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (circle (pt 400 50) (pt 100 50))
+   )
+   (graphic
+    (stroke 15)
+    (circle (pt 310 160) (pt 290 160))
+   )
+   (graphic
+    (stroke 15)
+    (circle (pt 310 -60) (pt 290 -60))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 300 -40) (pt 300 -100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 300 140) (pt 300 200))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 100 0) (pt 200 0) (pt 200 100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 230 -16) (pt 230 16))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 320 70) (pt 360 70))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 230 0) (pt 300 -40))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 300 140) (pt 230 100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 230 50) (pt 300 10))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 340 70) (pt 340 160) (pt 300 160))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 340 30) (pt 340 -60) (pt 300 -60))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 230 34) (pt 230 66))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 230 86) (pt 230 118))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 230 84) (pt 230 116))
+   )
+   (graphic
+    (stroke 10)
+    (path (closed true) (pt 340 70) (pt 320 30) (pt 360 30) (pt 340 70))
+   )
+   (graphic
+    (stroke 10)
+    (path (closed true) (pt 260 -30) (pt 270 -10) (pt 300 -40) (pt 260 -30))
+   )
+   (graphic
+    (stroke 10)
+    (path (closed true) (pt 270 110) (pt 260 130) (pt 230 100) (pt 270 110))
+   )
+   (terminal
+    (body (symbol "PINSHORT") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 0 -20) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 80 10) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PINSHORT") (pt 300 300) (rot 90) (mir X) (visible true))
+    (name (pt 0 -20) (rot 90) (just TOP RIGHT) (visible false))
+    (number (pt 0 20) (rot 90) (just TOP LEFT) (visible true)))
+   (terminal
+    (body (symbol "PINSHORT") (pt 300 -200) (rot 90) (mir 0) (visible true))
+    (name (pt 0 -20) (rot 90) (just TOP RIGHT) (visible false))
+    (number (pt 0 20) (rot 90) (just TOP LEFT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "TO254P470X1016X2019-3P"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.05)
+     (path
+      (closed true)
+      (pt -3.05 3.4)
+      (pt 8.12 3.4)
+      (pt 8.12 -1.8)
+      (pt -3.05 -1.8)
+      (pt -3.05 3.4))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2.8 3.15)
+      (pt 7.87 3.15)
+      (pt 7.87 -1.55)
+      (pt -2.8 -1.55)
+      (pt -2.8 3.15))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -2.8 1.882)
+      (pt -1.532 3.15))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 7.87 -1.55)
+      (pt 7.87 3.15)
+      (pt -2.8 3.15)
+      (pt -2.8 0))))
+   (leg 1 (pt 0 0) (padstack 1))
+   (leg 2 (pt 2.535 0) (padstack 0))
+   (leg 3 (pt 5.07 0) (padstack 0))
+   (padstack 0
+    (hole 1.37)
+    (plated true)
+    (pad (layer TCOP) (round 2.055))
+    (pad (layer INNER) (round 2.055))
+    (pad (layer BCOP) (round 2.055))
+   )
+   (padstack 1
+    (hole 1.37)
+    (plated true)
+    (pad (layer TCOP) (square 2.055))
+    (pad (layer INNER) (round 2.055))
+    (pad (layer BCOP) (square 2.055))
+   )
+   (model "ISL9V5036P3-F085.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

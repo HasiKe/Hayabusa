@@ -1,0 +1,9 @@
+Manufacturer=onsemi
+PartNumber=ISL9V5036P3-F085
+PartCategory=Transistor IGBT
+PackageCategory=Transistor Outline, Vertical
+PinCount=3
+Version=2.1
+Released=2020-07-22 13:30:05
+Downloaded=2026-04-28 12:53:15
+3D=Y

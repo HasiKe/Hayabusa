@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "ISL9V5036P3-F085"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2020-07-22-13:30:05)
+    (mountForm default
+        (footprintRef "TO254P470X1016X2019-3P")
+        (spec "System")
+    )
+)

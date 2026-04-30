@@ -1615,52 +1615,52 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "LIB_IRFB4110PBF:IRFB4110PBF"
+		(symbol "ISL9V5036P3-F085:ISL9V5036P3-F085"
 			(pin_names
-				(hide yes)
+				(offset 0.762)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "Q"
-				(at 11.43 3.81 0)
+				(at 11.43 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify left)
 				)
 			)
-			(property "Value" "IRFB4110PBF"
-				(at 11.43 1.27 0)
+			(property "Value" "ISL9V5036P3-F085"
+				(at 11.43 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify left)
 				)
 			)
-			(property "Footprint" "TO254P483X1016X1994-3P"
-				(at 11.43 -98.73 0)
+			(property "Footprint" "TO254P470X1016X2019-3P"
+				(at 11.43 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" ""
-				(at 11.43 -198.73 0)
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ISL9V5036S3ST-D.PDF"
+				(at 11.43 -5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Description" "MOSFET N-Ch 100V 180A HEXFET TO220AB Infineon IRFB4110PBF N-channel MOSFET Transistor, 180 A, 100 V, 3-Pin TO-220AB"
+			(property "Description" "Logic Level Gate Drive; Industry Standard TO-220 package; SCIS Energy = 500mJ at TJ = 25; Qualified to AEC Q101; RoHS Compliant"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1669,204 +1669,91 @@
 					(hide yes)
 				)
 			)
-			(property "Height" "4.83"
-				(at 11.43 -398.73 0)
+			(property "Description_1" "Logic Level Gate Drive; Industry Standard TO-220 package; SCIS Energy = 500mJ at TJ = 25; Qualified to AEC Q101; RoHS Compliant"
+				(at 11.43 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Mouser Part Number" "942-IRFB4110PBF"
-				(at 11.43 -498.73 0)
+			(property "Height" "4.7"
+				(at 11.43 -10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Infineon-Technologies/IRFB4110PBF?qs=9%252BKlkBgLFf1%2FkPV%252BuAP9EQ%3D%3D"
-				(at 11.43 -598.73 0)
+			(property "Manufacturer_Name" "onsemi"
+				(at 11.43 -12.7 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Manufacturer_Name" "Infineon"
-				(at 11.43 -698.73 0)
+			(property "Manufacturer_Part_Number" "ISL9V5036P3-F085"
+				(at 11.43 -15.24 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Manufacturer_Part_Number" "IRFB4110PBF"
-				(at 11.43 -798.73 0)
+			(property "Mouser Part Number" "512-ISL9V5036P3-F085"
+				(at 11.43 -17.78 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(symbol "IRFB4110PBF_1_1"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 5.08 0)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/ISL9V5036P3-F085?qs=0lQeLiL1qyZrd8MAKfN5lQ%3D%3D"
+				(at 11.43 -20.32 0)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
+					(justify left)
+					(hide yes)
 				)
-				(polyline
-					(pts
-						(xy 5.08 5.08) (xy 5.08 0)
+			)
+			(property "Arrow Part Number" "ISL9V5036P3-F085"
+				(at 11.43 -22.86 0)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
+					(justify left)
+					(hide yes)
 				)
-				(polyline
-					(pts
-						(xy 5.842 5.588) (xy 5.842 4.572)
+			)
+			(property "Arrow Price/Stock" "https://www.arrow.com/en/products/isl9v5036p3-f085/on-semiconductor?utm_currency=USD&region=nac"
+				(at 11.43 -25.4 0)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
+					(justify left)
+					(hide yes)
 				)
-				(polyline
-					(pts
-						(xy 5.842 2.54) (xy 6.858 3.048) (xy 6.858 2.032) (xy 5.842 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.842 2.032) (xy 5.842 3.048)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.842 0) (xy 7.62 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.842 -0.508) (xy 5.842 0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 6.35 2.54)
-					(radius 3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 5.08) (xy 5.842 5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 5.08) (xy 7.62 7.62)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 2.54) (xy 5.842 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 2.54) (xy 7.62 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			)
+			(symbol "ISL9V5036P3-F085_0_0"
 				(pin passive line
 					(at 0 0 0)
 					(length 2.54)
-					(name "G"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1882,9 +1769,9 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 10.16 270)
+					(at 7.62 7.62 270)
 					(length 2.54)
-					(name "D"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1902,7 +1789,7 @@
 				(pin passive line
 					(at 7.62 -5.08 90)
 					(length 2.54)
-					(name "S"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1915,6 +1802,233 @@
 								(size 1.27 1.27)
 							)
 						)
+					)
+				)
+			)
+			(symbol "ISL9V5036P3-F085_0_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 5.08 0) (xy 5.08 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.842 2.1844) (xy 5.842 2.9972)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.842 2.1336) (xy 5.842 2.9464)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.842 1.27) (xy 7.62 0.254)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.842 0.8636) (xy 5.842 1.6764)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.842 0) (xy 7.62 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.842 -0.4064) (xy 5.842 0.4064)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 6.35 1.27)
+					(radius 3.81)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.604 -0.762) (xy 6.858 -0.254) (xy 7.62 -1.016) (xy 6.604 -0.762)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.858 2.794) (xy 6.604 3.302) (xy 5.842 2.54) (xy 6.858 2.794)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 7.62 4.064)
+					(radius 0.254)
+					(stroke
+						(width 0.381)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 3.556) (xy 5.842 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 3.556) (xy 7.62 5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -1.016) (xy 7.62 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 7.62 -1.524)
+					(radius 0.254)
+					(stroke
+						(width 0.381)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.128 1.778) (xy 9.144 1.778)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.636 1.778) (xy 8.636 4.064) (xy 7.62 4.064)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.636 1.778) (xy 8.128 0.762) (xy 9.144 0.762) (xy 8.636 1.778)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.636 0.762) (xy 8.636 -1.524) (xy 7.62 -1.524)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
@@ -2865,7 +2979,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 44.45) (xy 171.45 44.45)
+			(xy 172.72 44.45) (xy 171.45 44.45)
 		)
 		(stroke
 			(width 0)
@@ -3667,7 +3781,7 @@
 	)
 	(global_label "IGN4"
 		(shape input)
-		(at 252.73 55.88 180)
+		(at 255.27 55.88 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3677,7 +3791,7 @@
 		)
 		(uuid "5601ca0b-ff3b-4437-9f65-d48c4caf3e2f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 245.33 55.88 0)
+			(at 247.87 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3711,7 +3825,7 @@
 	)
 	(global_label "IGN2"
 		(shape input)
-		(at 59.69 53.34 0)
+		(at 57.15 53.34 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3721,7 +3835,7 @@
 		)
 		(uuid "5e12c77f-f424-46cb-b6b4-a5b036fbb6c4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 66.3564 53.34 0)
+			(at 63.8164 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3865,7 +3979,7 @@
 	)
 	(global_label "IGN3"
 		(shape input)
-		(at 252.73 35.56 180)
+		(at 255.27 35.56 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3875,7 +3989,7 @@
 		)
 		(uuid "85ebf14e-1fc2-4f19-a8f4-4e1a296fe2f6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 246.0636 35.56 0)
+			(at 248.6036 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3887,7 +4001,7 @@
 	)
 	(global_label "IGN1"
 		(shape input)
-		(at 59.69 33.02 0)
+		(at 57.15 33.02 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3897,7 +4011,7 @@
 		)
 		(uuid "9a2c26df-88a9-4ccc-bc2d-b8774c1cb7c0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 66.3564 33.02 0)
+			(at 63.8164 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4039,6 +4153,28 @@
 			)
 		)
 	)
+	(global_label "12V-SW"
+		(shape input)
+		(at 172.72 44.45 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dec2dca4-cfa7-4626-9292-43f36a52d912")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 183.4461 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "IGN_V+"
 		(shape input)
 		(at 223.52 45.72 0)
@@ -4092,7 +4228,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "029a9377-7c2d-4f39-98ce-e60df987ddf8")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR047"
 			(at 127 55.88 0)
 			(effects
 				(font
@@ -4143,7 +4279,159 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR037")
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ISL9V5036P3-F085:ISL9V5036P3-F085")
+		(at 262.89 43.18 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "05ce5745-2630-44f8-b865-156000cc77f3")
+		(property "Reference" "Q4"
+			(at 261.62 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ISL9V5036P3-F085"
+			(at 261.62 30.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TO254P470X1016X2019-3P"
+			(at 265.43 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ISL9V5036S3ST-D.PDF"
+			(at 267.97 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Logic Level Gate Drive; Industry Standard TO-220 package; SCIS Energy = 500mJ at TJ = 25; Qualified to AEC Q101; RoHS Compliant"
+			(at 262.89 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "Logic Level Gate Drive; Industry Standard TO-220 package; SCIS Energy = 500mJ at TJ = 25; Qualified to AEC Q101; RoHS Compliant"
+			(at 270.51 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Height" "4.7"
+			(at 273.05 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "onsemi"
+			(at 275.59 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ISL9V5036P3-F085"
+			(at 278.13 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "512-ISL9V5036P3-F085"
+			(at 280.67 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/ISL9V5036P3-F085?qs=0lQeLiL1qyZrd8MAKfN5lQ%3D%3D"
+			(at 283.21 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" "ISL9V5036P3-F085"
+			(at 285.75 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/isl9v5036p3-f085/on-semiconductor?utm_currency=USD&region=nac"
+			(at 288.29 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c792066c-9ce4-4cbf-a192-fd99a0ffe628")
+		)
+		(pin "2"
+			(uuid "4469fc72-1216-4b07-84bb-b56e0beb9f6d")
+		)
+		(pin "3"
+			(uuid "4f43270e-5a3a-4612-9982-fa32fdbe4d5f")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
+					(reference "Q4")
 					(unit 1)
 				)
 			)
@@ -4158,7 +4446,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0e085e12-d126-4bc6-a249-7050237eaa93")
-		(property "Reference" "R9"
+		(property "Reference" "R12"
 			(at 85.09 34.4678 90)
 			(effects
 				(font
@@ -4246,7 +4534,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "R9")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -4261,7 +4549,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "10a7cd35-e18e-47bd-8f6d-0c62f702d460")
-		(property "Reference" "R17"
+		(property "Reference" "R16"
 			(at 137.668 50.9016 0)
 			(effects
 				(font
@@ -4351,129 +4639,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "R17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "LIB_IRFB4110PBF:IRFB4110PBF")
-		(at 49.53 45.72 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "11463a48-2237-4765-b901-9b2d51d5da48")
-		(property "Reference" "Q5"
-			(at 52.07 58.42 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "IRFB4110PBF"
-			(at 52.07 60.96 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TO254P483X1016X1994-3P"
-			(at -49.2 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at -149.2 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "MOSFET N-Ch 100V 180A HEXFET TO220AB Infineon IRFB4110PBF N-channel MOSFET Transistor, 180 A, 100 V, 3-Pin TO-220AB"
-			(at 49.53 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "4.83"
-			(at -349.2 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "942-IRFB4110PBF"
-			(at -449.2 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Infineon-Technologies/IRFB4110PBF?qs=9%252BKlkBgLFf1%2FkPV%252BuAP9EQ%3D%3D"
-			(at -549.2 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Infineon"
-			(at -649.2 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "IRFB4110PBF"
-			(at -749.2 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "dd8fb051-3dc0-46b5-a799-6e4e9c24b8df")
-		)
-		(pin "1"
-			(uuid "555f39df-bb27-4f57-8f92-557a8077a001")
-		)
-		(pin "3"
-			(uuid "84deb2ec-7bda-4775-8720-00976b04c47b")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "Q5")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -4488,7 +4654,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "14b19194-ae5d-4a60-b180-2f5cb99cb2c4")
-		(property "Reference" "D19"
+		(property "Reference" "D11"
 			(at 190.5 16.51 0)
 			(effects
 				(font
@@ -4576,7 +4742,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "D19")
+					(reference "D11")
 					(unit 1)
 				)
 			)
@@ -4697,7 +4863,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "17a5a770-a86b-4828-bc81-4dda1c307825")
-		(property "Reference" "R20"
+		(property "Reference" "R17"
 			(at 198.12 75.1078 90)
 			(effects
 				(font
@@ -4785,7 +4951,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "R20")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -4801,7 +4967,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "19025afa-a11c-405d-bc02-1abb183b2df5")
-		(property "Reference" "R13"
+		(property "Reference" "R14"
 			(at 113.03 76.3778 90)
 			(effects
 				(font
@@ -4889,7 +5055,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "R13")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -4904,7 +5070,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "21aea55f-1b5c-40a5-a5b4-c3b55c648966")
-		(property "Reference" "D5"
+		(property "Reference" "D4"
 			(at 121.92 73.66 0)
 			(effects
 				(font
@@ -4992,7 +5158,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "D5")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -5007,7 +5173,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2763245b-bc83-470e-ab70-a475763fc0e7")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR048"
 			(at 139.7 44.45 0)
 			(effects
 				(font
@@ -5058,73 +5224,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR039")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VDD")
-		(at 175.26 44.45 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2c475cf5-676d-4d7e-b18f-9e45bfa95b95")
-		(property "Reference" "#PWR043"
-			(at 171.45 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VDD"
-			(at 177.8 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 175.26 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 175.26 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 175.26 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "75de9d4c-a7db-44cf-a7bf-1641bacd4a4b")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR043")
+					(reference "#PWR048")
 					(unit 1)
 				)
 			)
@@ -5139,7 +5239,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3547b342-9f7b-4d84-bcec-754fbb8ae649")
-		(property "Reference" "D1"
+		(property "Reference" "D2"
 			(at 76.2 26.67 0)
 			(effects
 				(font
@@ -5227,7 +5327,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "D1")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -5242,7 +5342,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "35965f9b-df20-4611-a509-112fa56ea728")
-		(property "Reference" "D18"
+		(property "Reference" "D10"
 			(at 189.23 67.31 0)
 			(effects
 				(font
@@ -5330,7 +5430,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "D18")
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -5346,7 +5446,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3afa4b17-eb2f-4217-8501-707d43484a1c")
-		(property "Reference" "R16"
+		(property "Reference" "R22"
 			(at 240.03 53.5178 90)
 			(effects
 				(font
@@ -5434,7 +5534,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "R16")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -5449,7 +5549,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3c970c0f-0e8e-4ed9-984c-e54d874813d9")
-		(property "Reference" "D7"
+		(property "Reference" "D5"
 			(at 124.46 24.13 0)
 			(effects
 				(font
@@ -5537,7 +5637,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "D7")
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -5552,7 +5652,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3e01a655-d0e2-46d2-b394-99580f7e4945")
-		(property "Reference" "R23"
+		(property "Reference" "R19"
 			(at 227.33 26.4922 90)
 			(effects
 				(font
@@ -5640,7 +5740,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "R23")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -5655,7 +5755,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "41b8f65e-5c94-46a5-afaa-c2fe24517bf8")
-		(property "Reference" "D22"
+		(property "Reference" "D13"
 			(at 236.22 63.5 0)
 			(effects
 				(font
@@ -5743,7 +5843,159 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "D22")
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ISL9V5036P3-F085:ISL9V5036P3-F085")
+		(at 49.53 45.72 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "46a35147-abb3-46af-844f-b7d4424beeb8")
+		(property "Reference" "Q3"
+			(at 50.8 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ISL9V5036P3-F085"
+			(at 50.8 58.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TO254P470X1016X2019-3P"
+			(at 46.99 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ISL9V5036S3ST-D.PDF"
+			(at 44.45 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Logic Level Gate Drive; Industry Standard TO-220 package; SCIS Energy = 500mJ at TJ = 25; Qualified to AEC Q101; RoHS Compliant"
+			(at 49.53 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "Logic Level Gate Drive; Industry Standard TO-220 package; SCIS Energy = 500mJ at TJ = 25; Qualified to AEC Q101; RoHS Compliant"
+			(at 41.91 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Height" "4.7"
+			(at 39.37 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "onsemi"
+			(at 36.83 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ISL9V5036P3-F085"
+			(at 34.29 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "512-ISL9V5036P3-F085"
+			(at 31.75 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/ISL9V5036P3-F085?qs=0lQeLiL1qyZrd8MAKfN5lQ%3D%3D"
+			(at 29.21 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" "ISL9V5036P3-F085"
+			(at 26.67 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/isl9v5036p3-f085/on-semiconductor?utm_currency=USD&region=nac"
+			(at 24.13 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fe0dee08-a191-45df-b5b6-a86b6ebf0e46")
+		)
+		(pin "2"
+			(uuid "99f35302-3c0f-43c4-bb0a-4f4560d81abe")
+		)
+		(pin "3"
+			(uuid "f6749b3a-b2b5-41b2-a086-5af13ab2d4ae")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -5758,7 +6010,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "46a7b843-b896-45a3-887b-6caa88ed8e0e")
-		(property "Reference" "R21"
+		(property "Reference" "R18"
 			(at 199.39 24.3078 90)
 			(effects
 				(font
@@ -5846,7 +6098,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "R21")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -6069,7 +6321,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "503dc228-181a-4c27-b8b3-076cb3341ba9")
-		(property "Reference" "U5"
+		(property "Reference" "U6"
 			(at 103.505 32.639 0)
 			(effects
 				(font
@@ -6175,7 +6427,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "U5")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -6190,7 +6442,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5375fdb2-3c4c-4576-ab0d-7224e23e7fc9")
-		(property "Reference" "#PWR047"
+		(property "Reference" "#PWR052"
 			(at 248.92 31.75 0)
 			(effects
 				(font
@@ -6241,7 +6493,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR047")
+					(reference "#PWR052")
 					(unit 1)
 				)
 			)
@@ -6256,7 +6508,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "56b7620e-3c27-458a-ab6e-7d52bda87851")
-		(property "Reference" "D11"
+		(property "Reference" "D7"
 			(at 134.62 24.13 0)
 			(effects
 				(font
@@ -6344,7 +6596,160 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "D11")
+					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ISL9V5036P3-F085:ISL9V5036P3-F085")
+		(at 262.89 48.26 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5bf5956b-ed12-4587-8049-ea0fb1b2d2fb")
+		(property "Reference" "Q5"
+			(at 261.62 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ISL9V5036P3-F085"
+			(at 261.62 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TO254P470X1016X2019-3P"
+			(at 265.43 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ISL9V5036S3ST-D.PDF"
+			(at 267.97 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Logic Level Gate Drive; Industry Standard TO-220 package; SCIS Energy = 500mJ at TJ = 25; Qualified to AEC Q101; RoHS Compliant"
+			(at 262.89 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "Logic Level Gate Drive; Industry Standard TO-220 package; SCIS Energy = 500mJ at TJ = 25; Qualified to AEC Q101; RoHS Compliant"
+			(at 270.51 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Height" "4.7"
+			(at 273.05 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "onsemi"
+			(at 275.59 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ISL9V5036P3-F085"
+			(at 278.13 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "512-ISL9V5036P3-F085"
+			(at 280.67 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/ISL9V5036P3-F085?qs=0lQeLiL1qyZrd8MAKfN5lQ%3D%3D"
+			(at 283.21 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" "ISL9V5036P3-F085"
+			(at 285.75 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/isl9v5036p3-f085/on-semiconductor?utm_currency=USD&region=nac"
+			(at 288.29 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dcc2cc2e-1f49-46a6-9a4a-2c987695f899")
+		)
+		(pin "2"
+			(uuid "53b0a43f-0267-4f4a-9e1d-e4475d6bf4dd")
+		)
+		(pin "3"
+			(uuid "2fc447ee-b943-4cce-a0a8-96ba7691f3c4")
+		)
+		(instances
+			(project "ECU"
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
+					(reference "Q5")
 					(unit 1)
 				)
 			)
@@ -6359,7 +6764,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "643feeb5-ec18-4093-862a-8c32b45dfaf1")
-		(property "Reference" "SW4"
+		(property "Reference" "SW3"
 			(at 81.28 160.909 0)
 			(effects
 				(font
@@ -6504,7 +6909,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "SW4")
+					(reference "SW3")
 					(unit 1)
 				)
 			)
@@ -6519,7 +6924,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6486ee77-a079-41a6-8965-6f05c690b9ee")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR049"
 			(at 144.78 73.66 0)
 			(effects
 				(font
@@ -6570,7 +6975,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR041")
+					(reference "#PWR049")
 					(unit 1)
 				)
 			)
@@ -6585,7 +6990,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "68763040-a24a-4397-828f-723a5fa171cf")
-		(property "Reference" "D13"
+		(property "Reference" "D8"
 			(at 179.07 67.31 0)
 			(effects
 				(font
@@ -6673,7 +7078,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "D13")
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -6688,7 +7093,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "68efe6bc-898e-48aa-a1f1-555cd49fb6ab")
-		(property "Reference" "U9"
+		(property "Reference" "U8"
 			(at 208.915 32.639 0)
 			(effects
 				(font
@@ -6794,7 +7199,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "U9")
+					(reference "U8")
 					(unit 1)
 				)
 			)
@@ -6809,7 +7214,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6d8ec400-0db9-46a2-bd21-36ae0ae01dfc")
-		(property "Reference" "R10"
+		(property "Reference" "R13"
 			(at 85.09 62.4078 90)
 			(effects
 				(font
@@ -6897,7 +7302,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "R10")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -6913,7 +7318,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6ecf14dc-af05-4d52-a8e5-f55f3d51b095")
-		(property "Reference" "R12"
+		(property "Reference" "R10"
 			(at 71.12 35.3822 90)
 			(effects
 				(font
@@ -7001,7 +7406,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "R12")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -7016,7 +7421,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "708f89ba-3e39-4599-9adf-f43b5ee3ab97")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR044"
 			(at 81.28 185.42 0)
 			(effects
 				(font
@@ -7067,129 +7472,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR033")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "LIB_IRFB4110PBF:IRFB4110PBF")
-		(at 262.89 43.18 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "74e4f2af-9442-420c-acf0-a0cf8f418850")
-		(property "Reference" "Q6"
-			(at 260.35 30.48 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "IRFB4110PBF"
-			(at 260.35 27.94 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TO254P483X1016X1994-3P"
-			(at 361.62 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 461.62 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "MOSFET N-Ch 100V 180A HEXFET TO220AB Infineon IRFB4110PBF N-channel MOSFET Transistor, 180 A, 100 V, 3-Pin TO-220AB"
-			(at 262.89 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "4.83"
-			(at 661.62 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "942-IRFB4110PBF"
-			(at 761.62 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Infineon-Technologies/IRFB4110PBF?qs=9%252BKlkBgLFf1%2FkPV%252BuAP9EQ%3D%3D"
-			(at 861.62 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Infineon"
-			(at 961.62 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "IRFB4110PBF"
-			(at 1061.62 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f33fc4b5-a3a4-4ed1-a4db-f7f5ae976eb9")
-		)
-		(pin "1"
-			(uuid "c129938c-4dd0-4f77-918f-76bd0a25d28d")
-		)
-		(pin "3"
-			(uuid "fa9cc5a2-aeb0-415c-9f06-4be21ffd3796")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "Q6")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -7205,7 +7488,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7a5f8441-983d-4644-8254-ea21d6262e19")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR054"
 			(at 274.32 35.56 0)
 			(effects
 				(font
@@ -7256,130 +7539,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR036")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "LIB_IRFB4110PBF:IRFB4110PBF")
-		(at 262.89 48.26 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7bc10728-12eb-41cc-bbf7-18249d9cecb1")
-		(property "Reference" "Q7"
-			(at 260.35 60.96 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "IRFB4110PBF"
-			(at 260.35 63.5 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TO254P483X1016X1994-3P"
-			(at 361.62 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 461.62 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "MOSFET N-Ch 100V 180A HEXFET TO220AB Infineon IRFB4110PBF N-channel MOSFET Transistor, 180 A, 100 V, 3-Pin TO-220AB"
-			(at 262.89 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "4.83"
-			(at 661.62 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "942-IRFB4110PBF"
-			(at 761.62 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Infineon-Technologies/IRFB4110PBF?qs=9%252BKlkBgLFf1%2FkPV%252BuAP9EQ%3D%3D"
-			(at 861.62 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Infineon"
-			(at 961.62 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "IRFB4110PBF"
-			(at 1061.62 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "12dddd01-4e0d-4199-b41c-14dc4242dd18")
-		)
-		(pin "1"
-			(uuid "84d1487b-7fca-43be-b5b7-cf58a721981a")
-		)
-		(pin "3"
-			(uuid "7ead5a0e-6a40-488b-a298-61deceb47551")
-		)
-		(instances
-			(project "ECU"
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "Q7")
+					(reference "#PWR054")
 					(unit 1)
 				)
 			)
@@ -7394,7 +7554,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "807e3ac0-9402-455e-9460-981bfe561d15")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR042"
 			(at 63.5 29.21 0)
 			(effects
 				(font
@@ -7445,7 +7605,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR029")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -7565,7 +7725,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9268d217-b6a1-45cd-8f25-a7e0ae6ab64e")
-		(property "Reference" "D9"
+		(property "Reference" "D6"
 			(at 132.08 73.66 0)
 			(effects
 				(font
@@ -7653,7 +7813,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "D9")
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -7668,7 +7828,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9cc576dc-bb85-4c73-9bd4-1ea1a52fdc92")
-		(property "Reference" "D21"
+		(property "Reference" "D12"
 			(at 236.22 34.29 0)
 			(effects
 				(font
@@ -7756,7 +7916,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "D21")
+					(reference "D12")
 					(unit 1)
 				)
 			)
@@ -7874,7 +8034,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ae156365-507a-4823-9642-e9d306b3dfbd")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR040"
 			(at 38.1 33.02 0)
 			(effects
 				(font
@@ -7925,7 +8085,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR031")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -7940,7 +8100,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "be6f5d7d-f090-4e3d-b13b-6e1d60668492")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR051"
 			(at 186.69 45.72 0)
 			(effects
 				(font
@@ -7991,7 +8151,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR045")
+					(reference "#PWR051")
 					(unit 1)
 				)
 			)
@@ -8006,7 +8166,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c2006246-7084-47b2-97ed-b7de77691cd8")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR043"
 			(at 63.5 57.15 0)
 			(effects
 				(font
@@ -8057,7 +8217,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR030")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -8072,7 +8232,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c58fc224-6d8c-48ad-b3a0-6439d65c70f3")
-		(property "Reference" "R14"
+		(property "Reference" "R21"
 			(at 240.03 37.9222 90)
 			(effects
 				(font
@@ -8160,7 +8320,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "R14")
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -8175,7 +8335,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c6a9b0e9-ecc5-4a1b-8cbd-8ca4a523a8c7")
-		(property "Reference" "D2"
+		(property "Reference" "D3"
 			(at 76.2 54.61 0)
 			(effects
 				(font
@@ -8263,130 +8423,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "LIB_IRFB4110PBF:IRFB4110PBF")
-		(at 49.53 40.64 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ca76ab9e-3f5e-47b0-b000-127143e173ef")
-		(property "Reference" "Q4"
-			(at 52.07 27.94 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "IRFB4110PBF"
-			(at 52.07 25.4 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TO254P483X1016X1994-3P"
-			(at -49.2 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at -149.2 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "MOSFET N-Ch 100V 180A HEXFET TO220AB Infineon IRFB4110PBF N-channel MOSFET Transistor, 180 A, 100 V, 3-Pin TO-220AB"
-			(at 49.53 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "4.83"
-			(at -349.2 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "942-IRFB4110PBF"
-			(at -449.2 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Infineon-Technologies/IRFB4110PBF?qs=9%252BKlkBgLFf1%2FkPV%252BuAP9EQ%3D%3D"
-			(at -549.2 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Infineon"
-			(at -649.2 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "IRFB4110PBF"
-			(at -749.2 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "01a71825-c3bc-49f2-b47a-39cc88b8f054")
-		)
-		(pin "1"
-			(uuid "e58be56d-52a2-414b-9e4e-75c9c27607ea")
-		)
-		(pin "3"
-			(uuid "83893d19-71c0-4a83-855f-3dab6ead22f0")
-		)
-		(instances
-			(project ""
-				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "Q4")
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -8401,7 +8438,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "caea89ec-992c-4575-9187-9d50290f68cb")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR045"
 			(at 106.68 189.23 0)
 			(effects
 				(font
@@ -8451,7 +8488,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR034")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -8466,7 +8503,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d2d1cf45-ec2b-4a85-a3af-a77c56514644")
-		(property "Reference" "D15"
+		(property "Reference" "D9"
 			(at 180.34 16.51 0)
 			(effects
 				(font
@@ -8554,7 +8591,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "D15")
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -8569,7 +8606,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d5d58061-34a4-426b-9121-0857a7319a57")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR041"
 			(at 38.1 53.34 0)
 			(effects
 				(font
@@ -8620,7 +8657,160 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR032")
+					(reference "#PWR041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ISL9V5036P3-F085:ISL9V5036P3-F085")
+		(at 49.53 40.64 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "da146f01-073c-4108-81b5-223eddc17cac")
+		(property "Reference" "Q2"
+			(at 50.8 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ISL9V5036P3-F085"
+			(at 50.8 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TO254P470X1016X2019-3P"
+			(at 46.99 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ISL9V5036S3ST-D.PDF"
+			(at 44.45 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Logic Level Gate Drive; Industry Standard TO-220 package; SCIS Energy = 500mJ at TJ = 25; Qualified to AEC Q101; RoHS Compliant"
+			(at 49.53 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "Logic Level Gate Drive; Industry Standard TO-220 package; SCIS Energy = 500mJ at TJ = 25; Qualified to AEC Q101; RoHS Compliant"
+			(at 41.91 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Height" "4.7"
+			(at 39.37 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "onsemi"
+			(at 36.83 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ISL9V5036P3-F085"
+			(at 34.29 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "512-ISL9V5036P3-F085"
+			(at 31.75 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/ISL9V5036P3-F085?qs=0lQeLiL1qyZrd8MAKfN5lQ%3D%3D"
+			(at 29.21 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" "ISL9V5036P3-F085"
+			(at 26.67 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/isl9v5036p3-f085/on-semiconductor?utm_currency=USD&region=nac"
+			(at 24.13 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e299062f-f4cc-4fa6-a4c4-3c080245183d")
+		)
+		(pin "2"
+			(uuid "d00acf7f-9dba-4d8c-a0dd-0b19ac33c546")
+		)
+		(pin "3"
+			(uuid "d13d0087-b16c-4d22-84a3-d2444735d144")
+		)
+		(instances
+			(project ""
+				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -8822,7 +9012,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e5ff941d-3884-48f7-8b8c-4bfccfda4e24")
-		(property "Reference" "R24"
+		(property "Reference" "R20"
 			(at 227.33 55.7022 90)
 			(effects
 				(font
@@ -8910,7 +9100,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "R24")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -8925,7 +9115,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e6a48b45-7a5b-48c2-9545-97d80ff51d09")
-		(property "Reference" "#PWR048"
+		(property "Reference" "#PWR053"
 			(at 248.92 60.96 0)
 			(effects
 				(font
@@ -8976,7 +9166,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR048")
+					(reference "#PWR053")
 					(unit 1)
 				)
 			)
@@ -8992,7 +9182,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f462b7c7-5237-46e5-8782-b30c77b867f1")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR055"
 			(at 274.32 55.88 0)
 			(effects
 				(font
@@ -9043,7 +9233,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR038")
+					(reference "#PWR055")
 					(unit 1)
 				)
 			)
@@ -9058,7 +9248,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fb49012a-4caa-4a50-a101-cd87ea56116c")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR046"
 			(at 125.73 43.18 0)
 			(effects
 				(font
@@ -9109,7 +9299,7 @@
 		(instances
 			(project "ECU"
 				(path "/aaebd8f9-fdac-426b-87c0-a208167b6035/f946f5bb-d38b-4a5d-aa49-1c969ed1447f"
-					(reference "#PWR035")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
