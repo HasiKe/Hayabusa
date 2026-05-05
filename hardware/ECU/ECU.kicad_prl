@@ -10,7 +10,7 @@
       "unconnected-(J2-Pad34)",
       "unconnected-(J2-Pad13)"
     ],
-    "high_contrast_mode": 1,
+    "high_contrast_mode": 0,
     "net_color_mode": 1,
     "opacity": {
       "images": 0.6,
@@ -55,7 +55,7 @@
       "conflict_shadows",
       "shapes"
     ],
-    "visible_layers": "ffffffff_ffffffff_ffffffff_ffffffdf",
+    "visible_layers": "ffffffff_ffffffff_ffffffff_ffffffff",
     "zone_display_mode": 0
   },
   "git": {
@@ -102,7 +102,7 @@
       91,
       76,
       91,
-      472
+      914
     ],
     "custom_group_rules": [],
     "expanded_rows": [],

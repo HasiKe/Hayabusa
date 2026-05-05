@@ -1,0 +1,18 @@
+.TPIC8101DW :1 ;Vibration and Engine Knock Sensor Interface
+SOIC127P1030X265-20N
+*STM IC
+*NGS
+*PLB 1="VDD" 2="GND" 3="VREF" 4="OUT" 5="NC_1" 6="NC_2" 7="INT/HOLD" 8="'CS'" 9="XIN" 10="XOUT" 11="SDO" 12="SDI" 13="SCLK" 14="'TEST'" 15="CH2P" 16="CH2N" 17="CH2FB" 18="CH1FB" 19="CH1N" 20="CH1P"
+*MXP 20
+*DFN TPIC8101DW
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (TPIC8101DW)
+~!Mouser Part Number (595-TPIC8101DW)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPIC8101DW?qs=D8ivcil3VuwnjGabIL4Zzw%3D%3D)
+~!Arrow Part Number (TPIC8101DW)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/tpic8101dw/texas-instruments?region=nac)
+~!Link Datasheet (http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=TPIC8101&&fileType=pdf)
+~!Height (2.65mm)
+~!3D_Model (TPIC8101DW)
+TPIC8101DW
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 20.1!U 19.1!U 18.1!U 17.1!U 16.1!U 15.1!U 14.1!U 13.1!U 12.1!U 11.1!U 

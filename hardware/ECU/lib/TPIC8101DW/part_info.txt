@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=TPIC8101DW
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=20
+Version=1.1
+Released=2020-12-02 12:02:45
+Downloaded=2026-04-30 10:48:30
+3D=Y

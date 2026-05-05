@@ -1,4 +1,4 @@
-24818752916549351
+24820927397303257
 2999
 BAT_2999
 
@@ -93092,6 +93092,13 @@ Logo WEEE
 0
 0
 0
+TPIC8101DW
+SOIC127P1030X265-20N
+DW0020A
+Integrated Circuit
+0
+20
+20
 TerminalBlock
 TerminalBlock_Altech_AK300-2_P5.00mm
 Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf

@@ -11,4 +11,5 @@
   (lib (name "LIB_IRFB4110PBF")(type "KiCad")(uri "${KIPRJMOD}/lib/LIB_IRFB4110PBF")(options "")(descr ""))
   (lib (name "download")(type "KiCad")(uri "${KIPRJMOD}/lib/SamacSys_Parts.pretty")(options "")(descr ""))
   (lib (name "ISL9V5036P3-F085")(type "Legacy")(uri "${KIPRJMOD}/lib/ISL9V5036P3-F085/KiCad/ISL9V5036P3-F085.mod")(options "")(descr ""))
+  (lib (name "TPIC8101DW")(type "Legacy")(uri "${KIPRJMOD}/lib/TPIC8101DW/KiCad/TPIC8101DW.mod")(options "")(descr ""))
 )

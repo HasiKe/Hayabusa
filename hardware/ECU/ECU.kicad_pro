@@ -775,6 +775,10 @@
     [
       "2f6f0614-4ce2-41a7-8afd-b6d2f4ee90cb",
       "Power Regulator"
+    ],
+    [
+      "7d165be2-8134-454c-9265-29d4aae26269",
+      "Knock sensor"
     ]
   ],
   "text_variables": {}

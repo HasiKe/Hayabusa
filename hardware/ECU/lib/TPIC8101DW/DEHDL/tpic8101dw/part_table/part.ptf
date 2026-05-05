@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'TPIC8101DW'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "TPIC8101DW" (!) = "", "SOIC127P1030X265-20N", "Small Outline Packages", "595-TPIC8101DW", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPIC8101DW?qs=D8ivcil3VuwnjGabIL4Zzw%3D%3D", "TPIC8101DW", "https://www.arrow.com/en/products/tpic8101dw/texas-instruments?region=nac", "Vibration and Engine Knock Sensor Interface", "http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=TPIC8101&&fileType=pdf", "2.65 mm"
+END_PART
+
+END.

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TPIC8101DW
+D Vibration and Engine Knock Sensor Interface
+K
+F http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=TPIC8101&&fileType=pdf
+$ENDCMP
+#
+#End Doc Library
