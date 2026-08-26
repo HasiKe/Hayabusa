@@ -1,0 +1,20 @@
+#VRML V2.0 utf8
+# Murata CSTCR4M00G53-R0 ceramic resonator, simplified box 4.5 x 2.0 x 1.15 mm (placeholder, no vendor STEP available)
+Transform {
+  translation 0 0 0.22638
+  children [
+    Shape {
+      appearance Appearance { material Material { diffuseColor 0.30 0.25 0.20 specularColor 0.2 0.2 0.2 shininess 0.2 } }
+      geometry Box { size 0.78740 1.77165 0.45276 }
+    }
+  ]
+}
+Transform {
+  translation 0 0 0.01969
+  children [
+    Shape {
+      appearance Appearance { material Material { diffuseColor 0.85 0.85 0.85 } }
+      geometry Box { size 0.78740 1.81102 0.03937 }
+    }
+  ]
+}

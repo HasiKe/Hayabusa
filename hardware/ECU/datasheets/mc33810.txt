@@ -1,0 +1,2169 @@
+Freescale Semiconductor                                                                          Document Number: MC33810
+Advance Information                                                                                         Rev. 4.0, 2/2008
+
+
+Automotive Engine Control IC
+   The 33810 is an eight channel output driver IC intended for
+                                                                                                  33810
+automotive engine control applications. The IC consists of four
+integrated low side drivers and four low side gate pre-drivers. The low
+side drivers are suitable for driving fuel injectors, solenoids, lamps,
+and relays. The four gate pre-drivers can function either as ignition                         ENGINE CONTROL
+IGBT gate pre-drivers or as general purpose MOSFET gate pre-
+drivers.
+   When configured as ignition IGBT gate pre-drivers, additional
+features are enabled such as spark duration, dwell time, and ignition
+coil current sense. When configured as a general purpose gate pre-
+driver, the 33810 provides external MOSFETs with short circuit
+protection, inductive flyback protection and diagnostics. The device is
+packaged in a 32 pin (0.65mm pitch) exposed pad SOIC.
+                                                                                            EK SUFFIX (Pb-FREE)
+                                                                                               98ARL10543D
+Features
+                                                                                             32 PIN SOICW EP
+• Designed to operate over the range of 4.5V ≤ VPWR ≤ 36V
+• Quad ignition IGBT or MOSFET gate pre-driver with Parallel/SPI
+  and/or PWM control                                                                      ORDERING INFORMATION
+• Quad injector driver with Parallel/SPI control                                                 Temperature
+                                                                                 Device                                  Package
+• Interfaces directly to MCU using 3.3V / 5.0V SPI protocol                                       Range (TA)
+• Injector driver current limit - 4.5A max.
+                                                                              PCZ33810EK/R2      -40°C to 125°C      32 SOICW-EP
+• Independent fault protection and diagnostics
+• VPWR standby current 10µA max.
+• Pb-free packaging designated by suffix code EK
+
+                                                                                 VBAT
+               VBAT                                      33810
+                                                                                          VBAT
+                                               VPWR                  OUT0
+                                   VDD                                                                   VBAT
+                                                                     OUT1
+                                               VDD                                                                  VBAT
+                                                                     OUT2
+                 MCU
+                                                                     OUT3
+                          MOSI                 SI                                                                 VBAT
+                                                                      GND
+                          SCLK                 SCLK
+                                                                       FB0
+                             CS                CS
+                                                                      GD0                                         VBAT
+                          MISO                 SO
+                                                                       FB1
+                          ETPU                 DIN0
+                                                                      GD1                                         VBAT
+                          ETPU                 DIN3
+
+                          ETPU                 GIN0                    FB2
+                          ETPU                 GIN3                   GD2                                         VBAT
+
+                          GPIO                 OUT EN
+                                                                       FB3
+                          ETPU                 SPKDUR
+                                                                      GD3
+                          ETPU                 NOMI
+                                                                      RSP
+                          ETPU                 MAXI                   RSN
+
+
+                                         Figure 1. MC33810 Simplified Application Diagram
+
+
+
+
+* This document contains certain information on a new product.
+Specifications and information herein are subject to change without notice.
+© Freescale Semiconductor, Inc., 2006 - 2008. All rights reserved.
+INTERNAL BLOCK DIAGRAM
+
+
+
+
+                                            INTERNAL BLOCK DIAGRAM
+
+        VPWR                                                    VPWR, VDD
+         VDD                                                    V8.0 Analog
+                   VDD       VDD                                 V2.5 Logic
+                 ~50µA         ~50µA                          POR, Over-voltage
+                                                               Under-voltage
+           CS                       LOGIC CONTROL
+            SI                                                   Oscillator
+                                                                 Bandgap
+         SCLK                                                      Bias
+        OUTEN    ~15µA      ~15µA         SPI       V2.5
+                    VDD                INTERFACE                                            Outputs 0 to 3                                OUT0
+                                                                                                                                          OUT1
+          SO                                                                                                                              OUT2
+                                                                        Gate Control             VOC1                                     OUT3
+         DIN0
+                                                                                                                                 75µA
+                          ~50µA        PARALLEL                        Current Limit
+                                       CONTROL                       Temperature Limit
+                                                                       Short/Open
+         DIN1                                                                                                +      RS
+                                                                                                             –
+                          ~50µA
+                                                                                                        lLimit
+                                       PWM                                     Exposed
+         DIN2                       CONTROLLER                                   Pad
+                          ~50µA
+
+                                                                                                 +
+         DIN3                                                                                    –     SPI
+                          ~50µA        NOMI,MAXI
+                                         DAC               SPARK DURATION                        +                                        FB0
+                                                                                                 –     SPI                                FB1
+         GIN0                                                                                                                             FB2
+                                                                      Open Secondary
+                          ~50µA                                                                   +                                       FB3
+                                                                                             VPWR −                      100µA
+
+
+
+
+                                                                                                             VLVC
+                                        SPARK                                                                                      GPGD
+                                         DAC                                                                             VOC       Only
+         GIN1
+
+                          ~50µA
+                                                                                                       Low V
+                                                                                                       Clamp             GPGD
+         GIN2                                                                       GATE DRIVE                           Clamp
+                                                                                     CONTROL
+                          ~50µA
+                                                                                                                                          GD0
+         GIN3                                                                                                                             GD1
+                          ~50µA                                                                                                           GD2
+                           VDD                                                                                                            GD3
+                                                                          NOMI        +
+                                                                                      –   DAC
+                    ~50µA
+    SPKDUR
+                                                                          MAXI        +                                                   RSP
+                                                                                      –   DAC
+
+
+
+
+                                                                                                                                          RSN
+
+         NOMI
+
+
+
+         MAXI
+                                                                       Exposed Pad
+
+                                                                              GND
+
+
+
+
+                                       Figure 2. 33810 Simplified Internal Block Diagram
+
+
+
+33810
+
+                                                                                                     Analog Integrated Circuit Device Data
+2                                                                                                                Freescale Semiconductor
+                                                                                                                            PIN CONNECTIONS
+
+
+
+
+                                                       PIN CONNECTIONS
+
+                                         OUT0           1                          32         OUT2
+                                           FB0          2                          31         FB2
+                                          GD0           3                          30         GD2
+                                            CS          4                          29         MAXI
+                                         SCLK           5                          28         NOMI
+                                             SI         6                          27         RSN
+                                            SO          7                          26         RSP
+                                          VDD           8                          25         VPWR
+                                                                      GND          24         GIN0
+                                        OUTEN           9
+                                          DIN0          10                         23         GIN1
+                                          DIN1          11                         22         GIN2
+                                          DIN2          12                         21         GIN3
+                                          DIN3          13                         20         SPKDUR
+                                          GD1           14                         19         GD3
+                                           FB1          15                         18         FB3
+                                         OUT1           16                         17         OUT3
+
+
+
+                                                    Figure 3. 33810 Pin Connections
+Table 1. 33810 Pin Definitions
+  A functional description of each pin can be found in the Functional Pin Description section beginning on page 13.
+Pin Number     Pin Name     Pin Function          Formal Name                                         Definition
+
+     8           VDD           Input         Digital Logic Supply     The VDD input supply voltage determines the interface voltage levels
+                                                    Voltage           between the device and the MCU, and is used to supply power to the
+                                                                      Serial Out buffer (SO), SPKDUR buffer, MAXI, NOMI, and pull-up current
+                                                                      source for the Chip Select (CS).
+
+     6            SI           Input          Serial Input Data       The SI input pin is used to receive serial data from the MCU.
+
+     5           SCLK          Input          Serial Clock Input      The SCLK input pin is used to clock in and out the serial data on the SI
+                                                                      and SO pins, while being addressed by the CS.
+
+     4            CS           Input               Chip Select        The Chip Select input pin is an active low signal sent by the MCU to
+                                                                      indicate that the device is being addressed. This input requires CMOS
+                                                                      logic levels and has an internal active pull-up current source.
+
+     7            SO           Output        Serial Output Data       The SO output pin is used to transmit serial data from the device to the
+                                                                      MCU.
+
+10, 11, 12, 13 DIN0,DIN1,      Input        Driver Input 0, Driver    Active HIGH input control for injector outputs OUT0 - 3. The parallel input
+               DIN2,DIN3                   Input 1, Driver Input 2,   data is logically OR’d with the corresponding SPI input data register
+                                                Driver Input 3        contents.
+
+24, 23, 22, 21 GIN0,GIN1,      Input         Gate Driver Input 0      These pins are the active HIGH input control for IGBT/General Purpose
+               GIN2,GIN3                     Gate Driver Input 1      Gate Driver outputs 0 - 3. The parallel input data is logically OR'd with the
+                                             Gate Driver Input 2      corresponding SPI input data register contents in General Purpose Mode
+                                             Gate Driver Input 3      Only.
+
+     20        SPKDUR          Output      Spark Duration Output This pin is the Spark Duration Output. This open drain output is low while
+                                                                 feedback inputs FB0 through FB3 are above the programmed spark
+                                                                 detection threshold.
+
+     25         VPWR           Input       Analog Supply Voltage VPWR is the main voltage input for all internal analog bias circuitry.
+
+Exposed Pad      GND          Ground                 Ground           This exposed pad is the only ground reference for analog, digital and
+                                                                      power ground connections.
+ (bottom of
+  package)
+
+     9          OUTEN          Input              Output Enable       The Output Enable pin (OUTEN) is an active low input. When the OUTEN
+                                                                      pin is low, the device outputs are active. The outputs are disabled when
+                                                                      OUTEN is high.
+
+
+
+                                                                                                                                             33810
+
+Analog Integrated Circuit Device Data
+Freescale Semiconductor                                                                                                                           3
+PIN CONNECTIONS
+
+
+
+
+Table 1. 33810 Pin Definitions (continued)
+      A functional description of each pin can be found in the Functional Pin Description section beginning on page 13.
+Pin Number         Pin Name    Pin Function      Formal Name                                          Definition
+
+        29           MAXI         Output      Maximum Ignition Coil   This pin is the Maximum Ignition Coil Current output flag. This output is
+                                                    Current           asserted when the IGBT Collector-Emitter current exceeds the selected
+                                                                      level of the DAC. This signal also latches off the gate pre-drive outputs
+                                                                      when configured as a General Purpose Gate pre-Driver. The MAXI
+                                                                      current level is determined by the voltage drop across an external sense
+                                                                      resistor connected to pins RSP and RSN.
+
+        28          NOMI          Output      Nominal Ignition Coil   This pin is the Nominal Ignition Coil Current output flag. This output is
+                                                   Current            asserted when the IGBT Collector-Emitter current exceeds the level
+                                                                      selected by the DAC.
+
+2, 15, 31, 18      FB0 - FB3      Input        Feedback Voltage       In IGBT ignition gate pre-driver mode, these feedback inputs monitor the
+                                                    Sense             IGBT's collector voltage to provide the spark duration timer control signal.
+
+    3, 14, 30,19   GD0 -GD3       Output       Gate Drive Output      IGBT/General Purpose Gate pre-driver outputs are controlled by GIN0 -
+                                                                      GIN3. Pull-up and pull-down current sources are used to provide a
+                                                                      controlled slew rate to an external IGBT or MOSFET connected as a low
+                                                                      side driver.
+
+        26           RSP          Input          Resistor Sense       This pin is the Positive input of a current sense amplifier.
+                                                    Positive
+
+        27           RSN          Input          Resistor Sense       This pin is the Negative input of a current sense amplifier.
+                                                   Negative
+
+1, 16, 32, 17 OUT0 -OUT3          Output        Low Side Injector     These pin are the Open drain low side injector driver outputs.
+                                                  Driver Output
+
+
+
+
+33810
+
+                                                                                                      Analog Integrated Circuit Device Data
+4                                                                                                                 Freescale Semiconductor
+                                                                                             ELECTRICAL CHARACTERISTICS
+                                                                                                        MAXIMUM RATINGS
+
+
+
+                                           ELECTRICAL CHARACTERISTICS
+
+                                                        MAXIMUM RATINGS
+
+Table 2. Maximum Ratings
+  All voltages are with respect to ground unless otherwise noted.
+                                     Ratings                                Symbol               Value               Unit
+
+ELECTRICAL RATINGS
+
+ VPWR Supply Voltage(1)                                                      VPWR               -1.5 to 45           VDC
+ VDD Supply Voltage(1)                                                        VDD              -0.3 to 7.0           VDC
+ SPI Interface and Logic Input Voltage (CS, SI, SO, SCLK, OUTEN,               VIL             -0.3 to VDD           VDC
+ DIN0 - DIN3, GIN0 - GIN3, SPKDUR, NOMI, MAXI, RSP,RSN)
+                                                                               VIH
+ IGBT/General Purpose Gate Pre-driver Drain Voltage (VFB0 to VFB3)            VFB               -1.5 to 60           VDC
+ Injector Output Voltage (OUTx)                                              VOUTX              -1.5 to 60           VDC
+ General Purpose Gate Pre-driver Output Voltage (GDx)                         VGDx              -0.3 to 10           VDC
+ Output Clamp Energy (OUT0 to OUT3)(Single Pulse)                           ECLAMP                 100                mJ
+    TJUNCTION = 150°C, IOUT = 1.5A
+
+ Output Clamp Energy (OUT0 to OUT3)(Continuous Pulse)                       ECLAMP                 100                mJ
+    TJUNCTION = 125°C, IOUT = 1.0A (Max Injector frequency is 70Hz)
+
+ Output Continuous Current (OUT0 to OUT3)                                    IOSSSS                2.0                A
+    TJUNCTION = 150°C
+
+ Maximum Voltage for RSN and RSP inputs                                       VRSX             -0.3 - VDD            VDC
+ Frequency of SPI Operation (VDD = 5.0V)                                        –                  6.0               MHz
+                (2), (3)
+ ESD Voltage                                                                                                          V
+    Human Body Model (HBM)                                                   VESD1               ±2000
+                                                                             VESD2               ±200
+    Machine Model (MM)
+                                                                             VESD3               ±750
+    Charge Device Model (CDM)
+
+THERMAL RATINGS
+
+ Operating Temperature                                                                                                °C
+    Ambient                                                                    TA              -40 to 125
+    Junction2                                                                  TJ              -40 to 150
+    Case                                                                       TC              -40 to 125
+ Storage Temperature                                                          TSTG             -55 to 150             °C
+ Power Dissipation (TA = 25°C)                                                 PD                  1.7                W
+ Peak Package flow Temperature During Solder Mounting                       TSOLDER                                   °C
+    DWB Suffix                                                                                     240
+    EW Suffix                                                                                      245
+ Thermal Resistance                                                                                                  °C/W
+   Junction-to-Ambient                                                        RθJA                 75
+   Junction- to-Lead                                                          RθJL                 8.0
+   Junction-to-Flag                                                           RθJC                 1.2
+
+Notes
+  1. Exceeding these limits may cause malfunction or permanent damage to the device.
+  2. ESD data available upon request.
+  3. ESD testing is performed in accordance with the Human Body Model (HBM) (AEC-Q100-002), the Machine Model (MM) (AEC-Q100-
+      003), and the Charge Device Model (CDM), Robotic (AEC-Q100-011).
+
+
+                                                                                                                            33810
+
+Analog Integrated Circuit Device Data
+Freescale Semiconductor                                                                                                         5
+ELECTRICAL CHARACTERISTICS
+STATIC ELECTRICAL CHARACTERISTICS
+
+
+
+                                               STATIC ELECTRICAL CHARACTERISTICS
+
+Table 3. Static Electrical Characteristics
+  Characteristics noted under conditions of 3.0V ≤ VDD ≤ 5.5V, 9.0V ≤ VPWR ≤ 18V, -40°C ≤ TC ≤ 125°C, and calibrated timers,
+unless otherwise noted. Where typical values reflect the parameter’s approx. average value with VPWR = 13V, TA = 25°C.
+                                      Characteristic                                  Symbol           Min         Typ        Max        Unit
+
+POWER INPUT (VDD, VPWR)
+    Supply Voltage(4)
+       Fully Operational                                                             VPWR (FO)         4.5          –          36          V
+       Full Parameter Specification                                                                    9.0                     18
+    Supply Current                                                                   IVPWR (ON)                                           mA
+       All Outputs Disabled (Normal Mode)                                                               –         10.0        14.0
+    Sleep State Supply Current (Must have VDD ≤ 0.8V for sleep state),               IVPWR (SS)                                           µA
+    VPWR = 18V                                                                                          –          15          30
+    VPWR Over-voltage Shutdown Threshold Voltage(5)                                  VPWR(OV)          36.5        39          42          V
+    VPWR Over-voltage Shutdown Hysteresis Voltage                                  VPWR(OV-HYS)        0.5         1.5         3.0         V
+                                                       (6)
+    VPWR Under-voltage Shutdown Threshold Voltage                                    VPWR(UV)          3.0         4.0         4.4         V
+    VPWR Under-voltage Shutdown Hysteresis Voltage                                 VPWR(UV-HYS)        100         200        300         mV
+    VPWR Low Operating Voltage (Low-voltage reported via the SPI)(7)                 VPWR(LOV)         5.3          –         8.99         V
+    VDD Supply Voltage                                                                  VDD            3.0          –          5.5         V
+    VDD Supply Current                                                                  IVDD                                              mA
+       Static Condition and does not include VDD current out of device                                  –           –          1.0
+    VDD Supply Under-voltage (Sleep State) Threshold Voltage(8)                       VDD(UV)          0.8         2.5         2.8         V
+INJECTOR DRIVER OUTPUTS (OUT 0:3)
+    Drain-to-Source ON Resistance                                                     RDS (ON)                                             Ω
+       IOUT = 1.0A, TJ = 125°C, VPWR = 13V                                                              –           –          0.3
+       IOUT = 1.0A, TJ = 25°C, VPWR = 13V                                                               –          0.2          –
+       IOUT = 1.0A, TJ = -40°C, VPWR = 13V                                                              –           –           –
+
+    Output Self Limiting Current                                                      IOUT (LIM)       3.0          –          6.0         A
+    Output Fault Detection Voltage Threshold(9)                                     VOUT(FLT-TH)
+       Outputs Programmed OFF (Open Load)                                                              2.0         2.5         3.0         V
+       Outputs Programmed ON (Short to Battery)
+    Output OFF Open Load Detection Current                                           I(OFF)OCO                                            µA
+       VDRAIN = 18V, Outputs Programmed OFF                                                             40         75         100
+    Output ON Open Load Detection Current                                             I(ON)OCO                                            mA
+       Current less then specification value considered open                                            20         100        200
+Notes
+  4. These parameters are guaranteed by design, but not production tested. Fully operational means driver outputs will toggle as expected
+      with input toggling. SPI is guaranteed to be operational when VPWR > 4.5V. SPI may not report correctly when VPWR < 4.5V.
+  5. Over-voltage thresholds minimum and maximum include hysteresis.
+  6. Under-voltage thresholds minimum and maximum include hysteresis.
+  7. Device is functional provided TJ is less than 150°C. Some table parameters may be out of specification.
+     8.   Device in Sleep State, returns from sleep state with power on reset.
+     9.   Output fault detection thresholds with outputs programmed OFF. Output fault detect thresholds are the same for output open and shorts.
+
+
+
+
+33810
+
+                                                                                                    Analog Integrated Circuit Device Data
+6                                                                                                               Freescale Semiconductor
+                                                                                                             ELECTRICAL CHARACTERISTICS
+                                                                                                      STATIC ELECTRICAL CHARACTERISTICS
+
+
+
+Table 3. Static Electrical Characteristics
+  Characteristics noted under conditions of 3.0V ≤ VDD ≤ 5.5V, 9.0V ≤ VPWR ≤ 18V, -40°C ≤ TC ≤ 125°C, and calibrated timers,
+unless otherwise noted. Where typical values reflect the parameter’s approx. average value with VPWR = 13V, TA = 25°C.
+                                                    Characteristic                      Symbol            Min      Typ         Max         Unit
+
+INJECTOR DRIVER OUTPUTS (OUT 0:3) (Continued)
+ Output Clamp Voltage 1                                                                   VOC1                                              V
+    ID = 20mA                                                                                             48        53          58
+ Output Leakage Current                                                                 IOUT (LKG)                                         µA
+    VDD = 5.0V, VDRAIN = 24V, Open Load Detection Current Disabled                                         –         –          20
+    VDD = 5.0V, VDRAIN = VOC - 1.0V, Open Load Detection Current Disabled                                  –         –         3000
+    VDD = 0V, VDRAIN = 24V, Sleep State                                                                    –         –          10
+
+ Over-temperature Shutdown(10)                                                            TLIM            155        –          185        °C
+ Over-temperature Shutdown Hysteresis(10)                                               TLIM (HYS)        5.0       10          15         °C
+IGNITION (IGBT) GATE DRIVER PARAMETERS (GD 0:3 FB0:3)
+ Gate Drive Output Voltage
+    IGD = 500µA                                                                         V GS (ON)          5        7.0         9.0         V
+    IGD = -500µA                                                                        V GS (OFF)         0       0.375        0.5
+
+ Sleep Mode Gate to Source Resistor                                                   R GS (PULLDOW       100      200          300        KΩ
+                                                                                           N)
+ Sleep Mode FBx pin Leakage Current                                                     IFBX (LKG)                                         µA
+    VDD = 0V, VFBx = 24V,                                                                                  –         –          1.0
+ Feedback Sense Current (FBx Input Current)                                           IFBX(FLT-SNS)                                        µA
+ FBx = 18V, Outputs Programmed OFF                                                                                              1.0
+ Gate Drive Source Current (1 ≤ VGD ≤ 3)                                               I GATEDRIVE        685      780          875        µA
+ Gate Drive Turn Off Resistance                                                         RDS(ON)                                             Ω
+                                                                                                          500        –         1000
+SOFT SHUTDOWN FUNCTION (VOLTAGES REFERENCED TO IGBT COLLECTOR)
+ Low Voltage Flyback Clamp
+    Driver Command Off, Soft Shutdown Enabled, GDx = 2.0V                                 VLVC           VPWR     VPWR     VPWR + 13        V
+                                                                                                          +9.0     +11
+ Spark Duration Comparator Threshold (referenced to IC Ground Tab)                      VTH-RISE                                            V
+    Rising Edge Relative to VPWR                                                                          18        21          24
+ Spark Duration Comparator Threshold (referenced to IC Ground Tab)(11)                  VTH-FALL          2.0       2.75        3.5         V
+    Falling Edge Relative to VPWR, Default = 5.5V Assuming ideal external 10:1                            4.9        5.5        6.1
+    voltage divider. Voltage measured at high end of divider, not at pin. Tolerance                       7.4        8.2        9.1
+    of divider not included                                                                               9.9      11.00       12.1
+ Open Secondary Comparator Threshold (referenced from primary to                        VTH-RISE                                            V
+    Rising Edge Relative to GND. No hysteresis with 10:1 voltage divider.                                11.5        –         15.5
+CURRENT SENSE COMPARATOR (RSP, RSN)
+ NOMI Trip Threshold Accuracy - Steady State Condition                                 NOMITRIPTA                                           %
+    3.0A across 0.02Ω (RSP - RSN = 60mV)                                                                             –          4.0
+    10.75A across 0.04Ω (RSP - RSN = 430mV)                                                               -4.0
+Notes
+ 10. This parameter is guaranteed by design, however is not production tested.
+ 11. Assuming Ideal external 10:1 Voltage Divider. Tolerance of 10:1 Voltage Divider is not included. Voltage is measured on the High End of
+      Divider - not at the pin. 10:1 N.3.A 10:1 Voltage Divider is produced using two resistors with a 9:1 resistance ratio by the basic formula:
+                     VOUT                        R1
+                     ------------------ = ----------------------   Where R2 = 9XR1
+                         VIN              R1 + R2
+
+
+
+                                                                                                                                          33810
+
+Analog Integrated Circuit Device Data
+Freescale Semiconductor                                                                                                                         7
+ELECTRICAL CHARACTERISTICS
+STATIC ELECTRICAL CHARACTERISTICS
+
+
+
+Table 3. Static Electrical Characteristics
+  Characteristics noted under conditions of 3.0V ≤ VDD ≤ 5.5V, 9.0V ≤ VPWR ≤ 18V, -40°C ≤ TC ≤ 125°C, and calibrated timers,
+unless otherwise noted. Where typical values reflect the parameter’s approx. average value with VPWR = 13V, TA = 25°C.
+                                     Characteristic                          Symbol          Min       Typ       Max        Unit
+
+CURRENT SENSE COMPARATOR (RSP, RSN) (CONTINUED)
+    MAXI Trip Threshold Accuracy                                                                                  7.5        %
+       Steady State Condition                                              MAXITRIPTA                   –
+       6.0A across 0.02Ω (RSP - RSN = 120mV)
+                                                                                             -7.5
+       21A across 0.04Ω (RSP - RSN = 840mV)
+    MAXI Trip Point During Overlapping Dwell                               MAXITRIPOD         -15       –         +15        %
+    Input Bias Current                                                       IBIASRSX                   –         50         µA
+    RSP and RSN
+                                                                                              -50
+    Comparator Hysteresis Voltage
+    NOMI                                                                    NOMIHYS           40        –         60       % of VT
+    MAXI                                                                    MAXIIHYS          40        –         60
+    Input Voltage Range (Maximum voltage between RSN and RSP)              VCMVRCMVR          0.0       –         2.0        V
+    Ground Offset Voltage Range                                             VGNDOVR          -0.3       –         0.3        V
+    Maximum offset between RSN pin and IC Ground (Exposed Pad)
+
+GENERAL PURPOSE GATE DRIVER PARAMETERS (GD 0:3)
+    Gate Drive Sink and Source Current                                         IGD            1.0       2.0        5         mA
+    Gate Drive Output Voltage
+    IGD = 1mA                                                               V GS (ON)         5.0       7.0       9.0        V
+    IGD = -1mA                                                              V GS (OFF)        0.0       0.2       0.5        V
+    Short to Battery Fault Detection Voltage Threshold                     VDS(FLT-TH)                                       V
+       VDD = 5.0V, Outputs Programmed ON                                                     -20%                +20%
+       Programmable from 0.5V to 3.0V in 0.5V increments. (Table 14)
+    Open Fault Detection Voltage Threshold (referenced to IC ground tab)   VDS(FLT-TH)                                       V
+       VDD = 5.0V, Outputs Programmed OFF                                                     2.0       2.5       3.0
+    Output OFF Open Load Detection Current                                 IFBX(FLT-SNS)                                     µA
+    FBx = 18V, Outputs Programmed OFF                                                         40        75        100
+    Output Clamp Voltage                                                       VOC                                           V
+       Driver Command Off, Clamp Enabled, VGATE = 2.0V                                        48        53        58
+
+DIGITAL INTERFACE
+    Input Logic High-voltage Thresholds                                        VIH         0.7 x VDD    –      VDD + 0.3     V
+    Input Logic Low-voltage Thresholds                                          VIL        GND - 0.3    –      0.2 x VDD     V
+    Input Logic-voltage Hysteresis                                            VHYS           100        –         300        mV
+    Input Logic Capacitance                                                    CIN            –         –         20         pF
+    Sleep Mode Input Logic Current                                          I LOGIC_SS                                       µA
+       VDD = 0V                                                                               -10       –         10
+    Input Logic Pull-down Current                                                                                            µA
+       0.8V to 5.0V (DINX and GINX)                                         ILOGIC_PD         30        50        100
+    Input Logic Pull-down Current                                             ISI_PD                                         µA
+       0.8V to 5.0V (SI)                                                                      5.0       15        25
+    Input Logic Pull-up Current on OUT_EN                                  IOUT_EN_PU                                        µA
+       OUT_EN = 0.0V, VDD = 5.0V                                                              -30      -50       -100
+
+
+
+
+33810
+
+                                                                                           Analog Integrated Circuit Device Data
+8                                                                                                      Freescale Semiconductor
+                                                                                              ELECTRICAL CHARACTERISTICS
+                                                                                       STATIC ELECTRICAL CHARACTERISTICS
+
+
+
+Table 3. Static Electrical Characteristics
+  Characteristics noted under conditions of 3.0V ≤ VDD ≤ 5.5V, 9.0V ≤ VPWR ≤ 18V, -40°C ≤ TC ≤ 125°C, and calibrated timers,
+unless otherwise noted. Where typical values reflect the parameter’s approx. average value with VPWR = 13V, TA = 25°C.
+                                Characteristic                            Symbol           Min       Typ      Max       Unit
+
+DIGITAL INTERFACE (CONTINUED)
+ OUT_EN Leakage Current to VDD                                          IOUT_EN(LKG)                                    µA
+    OUT_EN = 5.0V, VDD = 0V                                                                 –         –        50
+ SCLK Pull-down Current                                                    I SCLK                                       µA
+    VSCLK = VDD                                                                             5        15        25
+ Tri-state SO Output                                                       I TRISO                                      µA
+    0V to 5.0V                                                                             -10        –        10
+ CS Input Current                                                           ICS                                         µA
+    CS = VDD                                                                               -10        –        10
+ CS Pull-up Current                                                        ICS_PU                                       µA
+    CS = 0V                                                                                -30       -50      -100
+ CS Leakage Current to VDD                                                ICS(LKG)                                      µA
+    CS = 5.0V, VDD = 0V                                                                     –         –        50
+ SO Input Capacitance in Tri-state Mode                                     CSO             –        20        –        pF
+ SO High State Output Voltage                                            VSO_HIGH                                        V
+    ISO-HIGH = -1.0mA                                                                    VDD - 0.4    –        –
+ SO Low State Output Voltage                                              VSO_LOW                                        V
+    ISO-LOW = 1.0mA                                                                         –         –       0.4
+ NOMI, MAXI in V10 Mode Pull-down Current                                   IPD                                         µA
+    NOMI, MAXI = 0.8V, VDD = 5.0V                                                           30       70       100
+ SPKDUR Output Voltage                                                  VSPKDUR_LO                                       V
+    ISPKDUR = 1.0mA                                                                         –         –       0.4
+ Output Pull-up Current for SPKDUR                                       ISPKDUR_PV         30       50       100       µA
+ NOMI, MAXI High State Output Voltage                                     VI_HIGH                                        V
+    INOMI-HIGH = -1.0mA                                                                  VDD - 0.4    –        –
+    IMAXI-HIGH = -1.0mA
+
+ NOMI, MAXI Low State Output Voltage                                       VI_LOW                                        V
+    INOMI-LOW = 250µA                                                                       –         –       0.4
+    IMAXI-LOW = 250µA
+
+
+
+
+                                                                                                                       33810
+
+Analog Integrated Circuit Device Data
+Freescale Semiconductor                                                                                                      9
+ELECTRICAL CHARACTERISTICS
+DYNAMIC ELECTRICAL CHARACTERISTICS
+
+
+
+                                         DYNAMIC ELECTRICAL CHARACTERISTICS
+
+
+Table 4. Dynamic Electrical Characteristics
+  Characteristics noted under conditions of 3.0V ≤ VDD ≤ 5.5V, 9.0V ≤ VPWR ≤ 18V, -40°C ≤ TC ≤ 125°C, and calibrated timers,
+unless otherwise noted. Where applicable, typical values reflect the parameter’s approximate average value with VPWR = 13V,
+TA = 25°C.
+                              Characteristic                                Symbol       Min           Typ         Max       Unit
+POWER INPUT
+
+ Required Low State Duration on VPWR for Under-voltage Detect                  tUV                                           µs
+     VPWR ≤ 0.2V                                                                         1.0            –           –
+
+ Required Low State Duration on VDD for Power On Reset                       t RESET                                         µs
+     VDD ≤ 0.2V                                                                          1.0            –           –
+
+INJECTOR DRIVERS
+
+ Output ON Current Limit Fault Filter Timer (Short to Battery Fault)           tSC       30             60         90        µs
+ Output ON Open Circuit Fault Filter Timer                                   t(ON)OC     3.0           7.5         12        ms
+ Output Retry Timer                                                           tREF        –             10         15        ms
+ Output OFF Open Circuit Fault Filter Timer                                 t(OFF)OC     100                       400       µs
+ Output Slew Rate (No faster than 1.5µs from off to on and on to off)       t SR(RISE)                                       V/µs
+     RLOAD = 14Ω, VLOAD = 14V                                                            1.0           5.0         10
+
+ Output Slew Rate                                                           t SR(FALL)                                       V/µs
+     RLOAD = 14Ω, VLOAD = 14V                                                            1.0           5.0         10
+
+ Propagation Delay (Input Rising Edge OR CS to Output Falling Edge)           tPHL                     1.0         5.0       µs
+     Input @ 50%VDD to Output voltage 90% of VLOAD
+
+ Propagation Delay (Input Falling Edge OR CS to Output Rising Edge)           tPLH                     1.0         5.0       µs
+     Input @ 50%VDD to Output voltage 10% of VLOAD
+
+IGNITION & GENERAL PURPOSE GATE DRIVER PARAMETERS
+
+ Propagation Delay (GINx Input Rising Edge OR CS to Output Rising Edge)       tPLH                     0.2         1.0       µs
+     Input @ 50%VDD to Output voltage 10% of V GS (ON)
+
+ Propagation Delay (Input Falling Edge OR CS to Output Falling Edge)          tPHL                     0.2         1.0       µs
+     Input @ 50%VDD to Output voltage 90% of V GS (ON)
+
+IGNITION PARAMETERS
+
+ Open Secondary Fault Timer accuracy (uncalibrated)                                      -35            –          35         %
+ Maximum Dwell Timer Accuracy (uncalibrated)                                             -35            –          35         %
+                                              (12)
+ End of Spark Filter Accuracy (uncalibrated)                                             -35            –          35         %
+
+Notes
+ 12. This parameter is guaranteed by design, however it is not production tested.
+
+
+
+
+33810
+
+                                                                                              Analog Integrated Circuit Device Data
+10                                                                                                        Freescale Semiconductor
+                                                                                                    ELECTRICAL CHARACTERISTICS
+                                                                                            DYNAMIC ELECTRICAL CHARACTERISTICS
+
+
+
+
+Table 4. Dynamic Electrical Characteristics (continued)
+  Characteristics noted under conditions of 3.0V ≤ VDD ≤ 5.5V, 9.0V ≤ VPWR ≤ 18V, -40°C ≤ TC ≤ 125°C, and calibrated timers,
+unless otherwise noted. Where applicable, typical values reflect the parameter’s approximate average value with VPWR = 13V,
+TA = 25°C.
+                              Characteristic                                 Symbol           Min           Typ          Max        Unit
+GENERAL PURPOSE GATE DRIVER PARAMETERS
+ Short to Battery Fault Detection Filter Timer Accuracy                      VDS(flt-th)                                             %
+    VDD = High, Outputs Programmed ON
+    Programmable from 30µs to 960µs in replicating increments
+    Tolerance of timer after using calibration command                                         -10                       +10
+    Tolerance of timer before using calibration command                                        -35                       +35
+ Output OFF Open Circuit Fault Filter Timer                                  t(OFF)OC                                                µs
+    VDD = 5.0V, Outputs Off
+    Tolerance of timer before using calibration command                                       100                        400
+ PWM Frequency 10Hz to 1.28kHz Tolerance after using calibration            PWMFREQ           -10%                       10%
+ command
+ PWM Frequency 10Hz to 1.28kHz Tolerance before using calibration
+                                                                            PWMFREQ           -35%                       35%
+ command
+
+ Gate Driver Short Fault Duty Cycle                                        GDSHRT_DC                        1.0           3.0        %
+
+SPI DIGITAL INTERFACE TIMING(13)
+
+ Falling Edge of CS to Rising Edge of SCLK                                    t LEAD                                                 ns
+    Required Setup Time                                                                       100            –             –
+ Falling Edge of SCLK to Rising Edge of CS                                     t LAG                                                 ns
+    Required Setup Time                                                                        50            –             –
+ SI to Rising Edge of SCLK                                                    t SI (SU)                                              ns
+    Required Setup Time                                                                        16            –             –
+ Rising Edge of SCLK to SI                                                   t SI (HOLD)                                             ns
+    Required Hold Time                                                                         20            –             –
+ SI, CS, SCLK Signal Rise Time(14)                                             t R (SI)         –           5.0            –         ns
+ SI, CS, SCLK Signal Fall Time(15)                                             t F (SI)         –           5.0            –         ns
+                                               (16)
+ Time from Falling Edge of CS Low-impedance                                  t SO (EN)          –            –            55         ns
+                                                             (17)
+ Time from Rising Edge off CS to SO High-impedance                           t SO (DIS)         –            –            55         ns
+                                                      (18)
+ Time from Falling Edge of SCLK to SO Data Valid                              t VALID           –            25           55         ns
+ Sequential Transfer Rate                                                       tSTR           1.0           –             –         µs
+    Time required between data transfers
+
+DIGITAL INTERFACE
+
+ Calibrated Timer Accuracy                                                    t TIMER           –            –            10         %
+ Un-calibrated Timer Accuracy                                                 t TIMER           –            –            35         %
+
+Notes
+ 13. These parameters are guaranteed by design. Production test equipment uses 1MHz, 5.0V SPI interface.
+ 14. This parameter is guaranteed by design, however it is not production tested.
+ 15. Rise and Fall time of incoming SI, CS and SCLK signals suggested for design consideration to prevent the occurrence of double pulsing.
+ 16. Time required for valid output status data to be available on SO pin.
+ 17. Time required for output states data to be terminated at SO pin.
+ 18. Time required to obtain valid data out from SO following the fall of SCLK with 200pF load.
+
+
+
+
+                                                                                                                                     33810
+
+Analog Integrated Circuit Device Data
+Freescale Semiconductor                                                                                                                   11
+ELECTRICAL CHARACTERISTICS
+TIMING DIAGRAMS
+
+
+
+                                                     TIMING DIAGRAMS
+
+
+
+         CS
+               0.2 VDD
+
+
+                           tLEAD                                                 tLAG
+
+
+                          0.7 VDD
+        SCLK              0.2 VDD
+
+                               tSI(SU)   tSI(HOLD)
+
+          SI         0.7 VDD
+                     0.2 VDD        MSB IN
+
+
+
+               tSO(EN)                                                 tVALID                       tSO(DIS)
+                     0.7 VDD
+         SO                        MSB OUT                                      LSB OUT
+                     0.2 VDD
+
+
+
+
+33810
+
+                                                                           Analog Integrated Circuit Device Data
+12                                                                                     Freescale Semiconductor
+                                                                                                      FUNCTIONAL DESCRIPTION
+                                                                                                   FUNCTIONAL PIN DESCRIPTION
+
+
+
+                                              FUNCTIONAL DESCRIPTION
+
+                                               FUNCTIONAL PIN DESCRIPTION
+
+ANALOG SUPPLY VOLTAGE (VPWR)                                        SERIAL INPUT DATA (SI)
+   The VPWR pin is the battery input to the 33810 IC. The               The SI pin is used for serial instruction data input. SI
+VPWR pin requires external reverse battery and transient            information is latched into the input register on the rising edge
+protection. All IC analog current and internal logic current is     of SCLK. A logic high state present on SI will program a one
+provided from the VPWR pin. With VDD applied to the IC, the         in the command word on the rising edge of the CS signal. To
+application of VPWR will perform a POR.                             program a complete word, 16 bits of information or multiples
+                                                                    of 8 there of must be entered into the device.
+DIGITAL LOGIC SUPPLY VOLTAGE (VDD)
+   The VDD input pin is used to determine communication             SERIAL OUTPUT DATA (SO)
+logic levels between the microprocessor and the 33810 IC.              The SO pin is the output from the shift register. The SO pin
+Current from VDD is used to drive SO output and the pull-up         remains tri-stated until the CS pin transitions to a logic low
+current for CS. VDD must be applied for normal mode                 state. All normal operating drivers are reported as zero, all
+operation. Removing VDD from the IC will place the device in        faulted drivers are reported as one. The negative transition of
+sleep mode. With VPWR applied to the IC, the application of         CS enables the SO driver.
+VDD will perform a POR.                                                The SI / SO shifting of the data follows a first-in-first-out
+                                                                    protocol, with both input and output words transferring the
+GROUND (GND)                                                        most significant bit (MSB) first.
+   The bottom pad or FLAG provides the only ground
+connection for the IC. The VPWR and VDD supplies are both           OUTPUT ENABLE (OUTEN)
+referenced to the GND pad. The GND pad is used for both                 The OUTEN pin is an active low input. When the OUTEN
+de-coupling the power supplies as well as power ground for          pin is low, all the device outputs are active. The outputs are
+the output drivers. Although the silicon die is epoxy attached      all disabled when OUTEN pin is high. SPI and parallel
+to the top side of the pad, the pad must be grounded for            communications are still active in either state of OUTEN.
+proper electrical operation.
+                                                                    FEEDBACK VOLTAGE SENSOR (FB0-FB3)
+SERIAL CLOCK INPUT (SCLK)
+                                                                       The FBx pin has multiple functions for control and
+   The system clock (SCLK) pin clocks the internal shift            diagnostics of the external MOSFET/IGBT Ignition gate
+register of the 33810. The SI data is latched into the input        driver.
+shift register on the rising edge of SCLK signal. The SO pin
+                                                                       In Ignition (IGBT) Gate Driver Mode, the feedback inputs
+shifts status bits out on the falling edge of SCLK. The SO data
+                                                                    monitor the IGBT's collector voltage to provide the spark
+is available for the MCU to read on the rising edge of SCLK.
+                                                                    duration timer control signal. The spark duration timer
+With CS in a logic high state, signals on the SCLK and SI pins
+                                                                    monitors this input to determine if the secondary clamp
+will be ignored and the SO pin is tri-state
+                                                                    function should be activated. In secondary clamp mode, the
+                                                                    IGBT's collector voltage is internally clamped to VPWR+11V.
+CHIP SELECT (CS)
+                                                                       In the General Purpose Gate Driver mode, this input
+   The system MCU selects the 33810 to receive                      monitors the drain of an external MOSFET to provide short-
+communication using the chip select (CS) pin. With the CS in        circuit and open circuit detection by monitoring the
+a logic low state, command words may be sent to the 33810           MOSFET's drain to source voltage. The filter timer and
+via the serial input (SI) pin, and status information is received   threshold voltage are easily programmed through SPI (See
+by the MCU via the serial output (SO) pin. The falling edge of      tables 18 and 19 for SPI messages).
+CS enables the SO output and transfers status information
+                                                                       In General Purpose Gate Driver mode the FBx pin also
+into the SO buffer.
+                                                                    provides a drain to gate clamp for fast turn off of inductive
+   Rising edge of the CS initiates the following operation:         loads and external MOSFET protection.
+   Disables the SO driver (high-impedance)
+   Activates the received command word, allowing the 33810          GATE DRIVER OUTPUT (GD0-GD3)
+to activate/deactivate output drivers.                                 The GDX pins are the gate drive outputs for an external
+   To avoid any spurious data, it is essential that the high-to-    MOSFET or IGBT. Internal to the device is a Gate to Source
+low and low-to-high transitions of the CS signal occur only         resistor designed to hold the external device in the OFF state
+when SCLK is in a logic low state. Internal to the 33810            while the device is in the POR or SLEEP state.
+device is an active pull-up to VDD on CS.
+
+
+
+                                                                                                                                33810
+
+Analog Integrated Circuit Device Data
+Freescale Semiconductor                                                                                                           13
+FUNCTIONAL DESCRIPTION
+FUNCTIONAL PIN DESCRIPTION
+
+
+
+LOW SIDE INJECTOR DRIVER OUTPUT (OUT0 -                            SPARK DURATION OUTPUT (SPKDUR)
+OUT3)                                                                 SPKDUR is the Spark Duration output. This open drain
+   OUT0 - OUT3 are the Open drain low side (Injector) driver       output is low while feedback inputs FB0 through FB3 are
+outputs. The drain voltage is actively clamped during turn off     above the programmed spark detection threshold. This
+of inductive loads. These outputs can be connected in              output indicates an ignition flyback event. Each feedback
+parallel for higher current loads provided the turn off energy     input (FB0 - FB3) is logically OR'd to drive the SPKDUR
+rating is not exceeded.                                            output. There is a 50µA pull up current source connected
+                                                                   internally to the SPKDUR pin.
+RESISTOR SENSE POSITIVE (RSP)
+   Resistor Sense Positive - Positive input of a current sense     MAXIMUM IGNITION COIL CURRENT (MAXI)
+amplifier. The ignition coil current is monitored by sensing the      Maximum ignition coil current output flag. This output is
+voltage across an external resistor connected between RSP          asserted when the output ignition coil current exceeds the
+and RSN. The output of the current sense amplifier feeds the       selected level of the DAC. This signal also latches off the gate
+inputs of the NOMI and MAXI comparators.                           drive outputs when configured as an ignition gate driver. The
+   Note: RSN and RSP must be grounded in V10 mode.                 MAXI current level is determined by the voltage drop across
+                                                                   an external sense resistor connected to pins RSP and RSN.
+RESISTOR SENSE NEGATIVE (RSN)                                         MAXI can be configured as an input pin for V10
+                                                                   applications where the gate drive needs to be latched off by
+   Resistor Sense Negative - Negative input of a current
+                                                                   another devices MAXI current sense amplifier output. The
+sense amplifier. The ignition coil current is monitored by
+                                                                   MAXI input will latch off gate drivers 7 and 8 when configured
+sensing the voltage across an external resistor connected to
+                                                                   as ignition gate drive outputs See Figure 10.
+RSP and RSN. The output of the current sense amplifier
+feeds the inputs of the NOMI and MAXI comparators.
+                                                                   DRIVER INPUT (DIN0-DIN3), GATE DRIVER INPUT
+   Note: RSN and RSP must be grounded in V10 mode.
+                                                                   (GIN0-GIN3)
+NOMINAL IGNITION COIL CURRENT (NOMI)                                  Parallel input pins for OUT0-OUT3 low side drivers and
+                                                                   GD0-GD3 gate drivers. Each parallel input control pin is
+   Nominal ignition coil current output flag. This output is       active high and has an internal pull-down current sink. The
+asserted when the output current exceeds the level selected        parallel input data is logically OR’d with the corresponding
+by the DAC.                                                        SPI input data register contents, except for the ignition mode
+   NOMI can be configured as an input pin for V10 mode             IGBT drivers. They are only controlled by the parallel inputs
+applications where the gate drive needs to be latched off by       GIN0-GIN3. In GPGD mode, GIN0-GIN3 are logically OR’d
+another device’s MAXI current sense amplifier output. The          with SPI input data. All outputs are disabled when the
+NOMI input will latch off gate drivers 5 and 6 when configured     OUTEN pin is HIGH, regardless of the state of the command
+as a V10 mode ignition gate driver See Figure 10.                  inputs.
+
+
+
+
+33810
+
+                                                                                           Analog Integrated Circuit Device Data
+14                                                                                                     Freescale Semiconductor
+                                                                                                 FUNCTIONAL DESCRIPTION
+                                                                                  FUNCTIONAL INTERNAL BLOCK DESCRIPTION
+
+
+
+                                     FUNCTIONAL INTERNAL BLOCK DESCRIPTION
+
+
+
+
+                                           Figure 4. Functional Internal Block Diagram
+
+POWER SUPPLY/POR                                                   with the corresponding SPI input data register contents. All
+   The 33810 is designed to operate from 4.5V to 36V on the        outputs are disabled when the OUTEN pin is HIGH,
+VPWR pin. The VPWR pin supplies power to all internal              regardless of the state of the command inputs.
+regulators, analog, and logic circuit blocks. The VDD supply
+is used for setting communication threshold levels and             INJECTOR DRIVERS: OUT0 – OUT3
+supplying power to the SO driver. This IC architecture                These pins are the Open drain low side (Injector) driver
+provides a low quiescent current sleep mode. Applying              outputs. The drain voltage is actively clamped during turn off
+VPWR and VDD to the device will generate a Power On                of inductive loads. These outputs can be connected in
+Reset (POR) and place the device in the Normal State. The          parallel for higher current loads, provided the turn off energy
+Power On Reset circuit incorporates a timer to prevent high        rating is not exceeded.
+frequency transients from causing a POR.
+                                                                   IGNITION GATE PRE-DRIVERS: GD0 – GD3
+MCU INTERFACE AND OUTPUT CONTROL                                      These pins are the gate drive outputs for an external
+  This component provides parallel input pins for OUT0-            MOSFET or IGBT. Internal to the device is a Gate to Source
+OUT3 low side drivers and GD0-GD3 gate drivers. Each               resistor designed to hold the external device in the OFF state
+parallel input control pin is active high and has an internal      while the device is in the POR or Sleep State.
+pulldown current sink. The parallel input data is logically OR’d
+
+
+
+
+                                                                                                                             33810
+
+Analog Integrated Circuit Device Data
+Freescale Semiconductor                                                                                                         15
+ FUNCTIONAL DEVICE OPERATION
+ OPERATIONAL MODES
+
+
+
+                                       FUNCTIONAL DEVICE OPERATION
+
+                                                   OPERATIONAL MODES
+
+POWER SUPPLY                                                         Control register settings from a Power-ON Reset (POR)
+   The 33810 is designed to operate from 4.5V to 36V on the       are as follows:
+VPWR pin. The VPWR pin supplies power to all internal             • All outputs off
+regulators, analog and logic circuit blocks. The VDD supply is    • IGNITION gate driver mode enabled (IGBT Ignition Mode).
+used for setting communication threshold levels and               • PWM frequency and duty cycle control disabled.
+supplying power to the SO driver. This IC architecture            • Off State open load detection enabled (LSD)
+provides flexible microprocessor interfacing and low              • MAXI dac set to 14A, NOMI DAC set to 5.5A
+quiescent current sleep mode.                                     • Spark detect level VIL DAC set to VPWR +5.5V
+                                                                  • Open secondary timer set to 100µs
+POWER-ON RESET (POR)                                              • Dwell timer set 32ms
+   Applying VPWR and VDD to the device will generate a            • Soft shutdown disabled
+Power On Reset (POR) and place the device in the Normal           • Low-voltage flyback clamp disabled
+State. The Power On Reset circuit incorporates a filter to        • Dwell overlap MAXI offset disabled
+prevent high frequency transients from causing a POR.
+   All outputs are disabled when the OUTEN input pin is           MODES OF OPERATION
+HIGH regardless of the SPI control registers or the logic level
+                                                                     In Normal State, the 33810 gate driver has three modes of
+on the parallel input pins. With the OUTEN pin high, SPI
+                                                                  operation, ignition Mode, GPGD (General Purpose Gate
+messages may be sent and received by the device. Upon
+                                                                  Driver) Mode and V10 mode.The operating mode of each
+enabling the device (OUTEN low), outputs will be activated
+based on the state of the command register or parallel input.     gate driver may be set individually and is programmed using
+                                                                  the Mode Select Command.
+
+Table 5. Operational States
+                                                                  MODE SELECT COMMAND
+     VPWR        VDD        OUTEN      OUTPUTS        STATE           The MODE Select Command is used to set the operating
+      L            L           X          OFF         Power       mode for the GDx gate driver outputs, over/under-voltage
+                                                       Off        operation and to enable V10 Mode and the PWM generators.
+                                                                  The Mode Select Command programmable features are
+      L            H           X          OFF          POR
+                                                                  listed below.
+      H            L           X          OFF         SLEEP       • Ignition/GPGD Mode select (gate drivers)
+      H                        X          OFF          POR        • V10 Mode enable
+                                                                  • Over/Under-voltage operation for all drivers
+                                                                  • GPGD PWM controller enable
+                   H           X          OFF          POR
+                                                                  IGNITION/GPGD MODE SELECT
+                                                                     The Ignition/General Purpose Gate Driver Mode select bits
+                   L           X          OFF         SLEEP       determine independently, the operating mode of each of the
+                                                                  GDx gate driver outputs. Bits 8,9,10,11 correspond to GD0,
+                                                                  GD1, GD2, GD3 respectively. Setting the bit to a logic 0 sets
+      H            H           L         ACTIVE     NORMAL
+                                                                  the GDx driver to the Ignition Mode. Setting the bit to a logic
+                                                                  1 commands the GDX driver to the General Purpose Mode
+      H            H           H          OFF       NORMAL        and disables the ignition features for that particular gate
+                                                                  driver (except the MAXI current shutdown feature). Further
+SLEEP STATE                                                       information on GDx gate driver in Ignition Mode and General
+                                                                  Purpose Mode is provided later in this section of the data
+  Sleep State is entered when the VDD supply voltage is
+                                                                  sheet.
+removed from the VDD pin. In Sleep State all outputs are off.
+Applying VDD will force the device to exit the Sleep State and
+generates a POR.                                                  V10 MODE ENABLE BIT
+                                                                     The V10 Enable bit allows the user to configure the device
+NORMAL STATE                                                      for 10 cylinder applications. When the V10 Mode is enabled,
+                                                                  the device configures the NOMI pin and MAXI pin as digital
+   The default Normal State is entered when power is applied
+                                                                  inputs rather than outputs. The new MAXI input pin receives
+to the VPWR and VDD pins.
+
+
+33810
+
+                                                                                         Analog Integrated Circuit Device Data
+16                                                                                                   Freescale Semiconductor
+                                                                                              FUNCTIONAL DEVICE OPERATION
+                                                                                                      OPERATIONAL MODES
+
+
+
+the MAXI shutdown signal for GD0 and GD2 and the new              IGNITION (IGBT) GATE DRIVER MODE
+NOMI input pin receives the MAXI shutdown signal for GD1              The MC33810 contains dedicated circuitry necessary for
+and GD3. Further information on V10 Mode is provided in the       automotive ignition control systems. Each gate driver may be
+V10 Application section.                                          individually configured as an Ignition Gate Driver with the
+   Note: RSN and RSP must be grounded in V10 Mode.                following features:
+
+OVER/UNDER-VOLTAGE SHUTDOWN/RETRY BIT                             •  Spark duration signal
+   The Over/Under-voltage Shutdown/Retry bit allows the           •  Open secondary timer
+user to select the global over and under-voltage fault strategy   •  Soft shutdown control
+for all the outputs. In an over-voltage or under-voltage          •  Low-voltage flyback clamp
+condition on the VPWR pin, all outputs are commanded off.         •  Ignition ignition coil current measurement
+The Over/Under-voltage control bit sets the operation of the      •  MAXI output and control
+outputs when returning from over/under- voltage. Setting the
+                                                                  •  NOMI output
+Over/Under-voltage bit to logic [1] will force all outputs to
+                                                                  •  Maximum dwell timer
+remain OFF when VPWR returns to normal level. To turn the
+output on again, the corresponding input pin or SPI bit must         In the Ignition Mode, several control strategies are in place
+be reactivated. Setting the Over/Under-voltage bit to logic [0]   to control the IGBT for enhanced system performance.
+will command all outputs to resume their previous state when      Information acquired from the FBx pin allows the device to
+VPWR returns to normal level. Table 6 below provides the          produce a spark duration signal output (SPKDUR) and detect
+output state when returning from over or under-voltage.           open secondary ignition coils. Based on the FBx signal and
+                                                                  Spark Command register settings, the device performs the
+Table 6. Over-voltage/Under-voltage Truth Table                   appropriate gate control (Low-voltage Flyback Clamp, Soft
+                                                                  Shutdown) and produces the SPKDUR output.
+                        Over/
+                       Under-                   State When           The FBx pin is connected to the collector of the IGBT
+GINx DINx      SPI                OUTEN
+                       voltage                Returning From      through an external 9:1 resistor divider network. The
+Input Pin      Bit               Input pin
+                       Control               Over/Under-voltage   recommended values for the resistor divider network is 36K
+                         Bit                                      and 4.02K, with the 36K resistor connected from the IGBT
+    X           X         X          1       OFF                  collector to the FBx pin and the 4.02K resistor connected
+                                                                  from the FBx pin to ground.
+    X           X         1          0       OFF                     Additional controls to the gate driver are achieved by
+    0           0         0*         0       OFF                  sensing the current through the external IGBT. The Resistor
+                                                                  Sense Positive (RSP) and Resistor Sense Negative (RSN)
+    X           1         0*         0       ON                   inputs are use to measure the voltage across an external
+                                                                  20mΩ or 40mΩ current sense resistor. A gain select bit in the
+    1           X         0*         0       ON
+                                                                  Spark Command SPI Command messages should be set to
+* Default Setting                                                 1 (gain of 2) when using a 20mΩ current sense resistor.
+                                                                  When using a 40mΩ current sense resistor, the gain select bit
+                                                                  should be set to 0 (gain of 1 is the default value).
+Note: The SPI bit does not control the Gate Driver outputs in
+the Ignition Mode, only in the GPGD Mode.                            The ignition coil current is compared with the output of the
+                                                                  DACs which have been programmed via the SPI Commands.
+                                                                  The comparison generates the Nominal Current signal
+An under-voltage condition on VDD results in the global
+                                                                  (NOMI) and the Maximum Current signal (MAXI). Both
+shutdown of all outputs and reset of all internal control
+                                                                  signals have a low output when the ignition coil current is
+registers. The VDD under-voltage threshold is between 0.8V
+                                                                  below the programmed DAC value and a high output when
+and 2.8V                                                          the current is above the programmed DAC value.
+                                                                     When the GDx output is shutdown because of the control
+PWMX ENABLE BIT                                                   strategy, the output may be activated again by toggling the
+  Gate Driver outputs programmed as General Purpose               input control.
+Gate Drivers may be used as low frequency PWM outputs.
+The PWM generators are enabled via bits 0 through 3 in the        SPARK COMMAND
+Mode Select Command. Bits 0 through 3 correspond to
+outputs GD0 through GD3 respectively. Once the frequency              The Spark Command is an ignition mode command used
+and duty cycle are programmed through the PWM Frequency           to program the parameters for the ignition mode features
+                                                                  listed below:
+& DC command, the PWM output may be turned ON and
+OFF through the PWM enable bit. Further information on
+PWM control is provided in the General Purpose Gate Driver        • End spark threshold (EndSparkTh bits)
+Mode section of this data sheet.                                  • Open secondary fault timer (OSFLT bits)
+
+
+
+                                                                                                                             33810
+
+Analog Integrated Circuit Device Data
+Freescale Semiconductor                                                                                                        17
+FUNCTIONAL DEVICE OPERATION
+OPERATIONAL MODES
+
+
+
+•    Secondary clamp (secondary clamp bit)                            VPWR = 16.0V
+•    Soft shutdown enable (SoftShutDn bit)                          Default settings
+•    Ignition ignition coil current amplifier gain (Gain Sel bit)   Begin spark threshold VIH = VPWR + 21V
+•    Overlapping dwell disable (Overlap Dwell Disable bit)          End spark threshold VIL = VPWR +5.5V
+•    Maximum dwell enable (MaxDwellEn bit)                            The pulse width of the SPKDUR signal is measured by the
+•    Maximum dwell timer (MaxDwellTimer bits)                       MCU timer/input capture port to determine the actual spark
+•    End of spark filter timer value                                duration. Spark duration information is then used by the MCU
+                                                                    spark control algorithm to optimize the dwell time.
+  Spark Command address and data bits are listed in
+Table 20
+                                                                    Table 7. End Spark Threshold
+  NOTE: Gate driver outputs programmed to be General
+Purpose Gate Drivers are not affected by the Spark                    Spark Command
+                                                                                                 End Spark Threshold (VIL)
+Commands.                                                               Bit<b1,b0>
+
+                                                                             00                         VPWR + 2.75
+SPARK DURATION SIGNAL
+   The Spark Duration is defined as the beginning of current                 01                          VPWR + 5.5
+flow to the end of current flow across the spark plug gap.                   10                          VPWR + 8.2
+Because the extremely high-voltage ignition coil secondary
+output is difficult to monitor, corresponding lower voltage                  11                         VPWR + 11.0
+signals generated on the ignition coil primary are often used.
+The FBx pins monitor the ignition coil primary voltage (IGBT        OPEN SECONDARY TIMER
+Collector) through a 10 to 1 voltage divider. When the IGBT
+is disabled, the rise in the FBx signal indicates a sparkout           A fault due to open in the ignition coil secondary circuit can
+condition is occurring at the spark plug gap.                       be determined by waveforms established on the ignition coil
+                                                                    primary during a spark event. The spark event is initiated by
+   The device considers the initial thresholds for spark
+                                                                    the turn off of the IGBT. The voltage on the collector of the
+duration to be VIH = VPWR + 21V for rising edge as measured
+                                                                    IGBT rises up to the IGBT’s internal collector to gate clamp
+on the collector of the IGBT. The spark duration falling edge
+                                                                    voltage (typically 400 volts). Collector to gate clamp events
+reference is programmable via SPI through the End Spark
+                                                                    normally last 5µs to 50µs. In an open ignition coil secondary
+Threshold bits 0 and 1 (See Table 7).
+                                                                    fault condition, the collector to gate clamp event lasts much
+   Figure 5 illustrates a typical ignition event with dwell time    longer. The oscilloscope waveform in Figure 6 and Figure 7
+and spark duration indicated.                                       compare a normal spark signature with that of an open
+      Figure 5. Ignition Coil Charge and Spark Event                secondary fault condition signature.
+                                                                                     Figure 6. Normal Spark Event
+
+
+
+
+                                         Ignition Coil Current,
+                                               5.0A/div
+
+
+
+
+                                             SPKDUR~3.0ms
+                     DWELL Time
+
+
+
+
+      Channel 1: GINx IGBT Gate Drive
+      Channel 2: IGBT Collector Voltage
+      Channel 3: IGBT Current @ 5.0A/Div
+
+
+
+
+33810
+
+                                                                                            Analog Integrated Circuit Device Data
+18                                                                                                      Freescale Semiconductor
+                                                                                                FUNCTIONAL DEVICE OPERATION
+                                                                                                        OPERATIONAL MODES
+
+
+
+                                                                       The Low-voltage Clamp spreads out the energy
+          Figure 7. Open Secondary Spark Event                      dissipation over a longer period of time, thus allowing the use
+                                                                    of a lower energy rated IGBTs. The internal low-voltage
+                                                                    clamp is connected between the IGBT's collector (through an
+                                                                    external resistor) and the IGBT's gate. The energy stored in
+                                                                    the ignition coil is dissipated by the IGBT, not the internal
+                                                                    clamp. The internal clamp only provides the bias to the IGBT.
+                                                                       Several logical signals are required as inputs to activate
+                                                                    the GDx Low-voltage Clamp feature. The GDx Low-voltage
+                                                                    Clamp feature may be disabled through bit 4 of the Spark
+                                                                    Command message.
+                                                                                     Figure 8. Low-voltage Clamp
+
+                                                                                               +
+                                                                                               –   SPI
+
+                                                                                               +                              FB0
+                                                                    SPARK DURATION             –   SPI                        FB1
+                                                                                                                100µA         FB2
+                                                                        Open Secondary
+                                                                                                                              FB3
+                                                                                               VPWR +
+                                                                                                    −
+                                                                                                         13V      53V
+
+
+    The Open Secondary timer is initiated on the rising edge         SPI input
+                                                                                                   Low V          GPGD
+of the ignition coil primary spark signal and terminated on the                                    Clamp          Clamp
+                                                                                  GATE DRIVE
+falling edge. The rising edge Open Secondary Threshold is                          CONTROL
+VIH= 135V at primary, no hysteresis. The falling edge Open
+Secondary threshold is VIL = 135V.                                                                                            GD0
+    Collector to gate clamp durations that last longer than the                                                               GD1
+selected Open Secondary Fault Time interval (Table 8)                                                                         GD2
+                                                                                                                              GD3
+indicates a failed spark event. When the Open Secondary
+Fault Time is exceeded and the Low-voltage Clamp is
+enabled, the GDx output will activate the Low-voltage Clamp
+                                                                                 Figure 9. Low-voltage Clamp Logic
+shown in figure 16. The Logic for this Low-voltage Clamp is
+defined in Figure 9                                                    OSFLT_En
+
+                                                                         IGN Mode
+Table 8. Open Secondary Timer
+                                                                                                                        Activate
+                                                                          OSFLT
+      Spark Command               Open Secondary Fault Timer                                                            Low-voltage
+        Bits<b3,b2>                      OSFLT (µs)                                                                     Clamp
+                                                                      MaxDwell
+             00                                10                   MaxDwellEn
+
+             01                                20                                              SoftShutDnEn
+
+             10                                50                                           IGN Mode
+
+             11                                100                      VPWR
+                                                                     OVER-VOLTAGE
+LOW-VOLTAGE CLAMP                                                        OUTEN
+   The Low-voltage Clamp is an internal clamp circuit which
+biases the IGBT's gate voltage in order to control the collector
+to emitter voltage to VPWR+11V. This technique is used to
+dissipate the energy stored in the ignition coil over a longer      SOFT SHUTDOWN ENABLE
+period of time than if the internal IGBT clamp were used.             The soft shutdown feature is enabled via the SPI by
+   In the open secondary fault condition, all of the stored         asserting control bit 5 in the Spark Command message.
+energy in the ignition coil is dissipated by the IGBT. This fault     When enabled, the following events initiate a soft
+condition requires the use of a higher energy rated IGBT than       shutdown control of the gate driver.
+would otherwise be needed.                                          • OUTEN = High (Outputs Disabled)
+                                                                    • Over-voltage on VPWR pin
+
+                                                                                                                              33810
+
+ Analog Integrated Circuit Device Data
+ Freescale Semiconductor                                                                                                        19
+ FUNCTIONAL DEVICE OPERATION
+ OPERATIONAL MODES
+
+
+
+• Max dwell time                                                      The Max Dwell gate turn off signal is a logically ANDed
+   Soft Shutdown is designed to prevent an ignition spark          with the Soft Shutdown bit to activate a Low-voltage Active
+while turning off the external IGBT. The Low-voltage Clamp         Clamp (See Figure 9).
+is activated to provide the mechanism for a soft shutdown.
+                                                                   Table 10. Maximum Dwell Timer
+GAIN SELECT BIT                                                          Spark Command                     MAX Dwell Timer
+   The ignition coil current comparators are used to compare             Bit<b11,b10,b9>                    MaxDwell (ms)
+the programmed NOMI and MAXI DAC value with voltage                             000                                2
+across the external current sense resistor. When selecting a
+                                                                                001                                4
+gain of two, the ignition coil current sense resistor must be
+reduced from 40mΩ to 20mΩ.                                                      010                                8
+                                                                                011                               16
+OVERLAPPING DWELL ENABLE BIT
+                                                                                100                           32 (default)
+   Overlapping dwell occurs when two or more ignition mode
+drivers are commanded ON at the same time. In this                              101                               64
+condition, with the Overlapping Dwell Bit enabled the MAXI                      110                               64
+DAC threshold value is increased as a percentage of the                         111                               64
+nominal programmed value. The percent increase is
+determined by bit 5 through bit 7 of the DAC Command.
+                                                                   DAC COMMAND (DIGITAL TO ANALOG
+Table 9. Overlapping Dwell Compensation
+                                                                   CONVERSION COMMAND)
+                                                                       The DAC Command is an ignition mode command that
+         DAC Command                Overlap Compensation
+                                                                   sets the nominal ignition coil current (NOMI) and maximum
+         Bits<b7,b6,b5>                      (%)
+                                                                   ignition coil current (MAXI) DAC values. Bits 0 through 4 set
+              000                             0%                   the NOMI threshold value and, bits 8 through 11 set the MAXI
+              001                             7%                   threshold values. The DAC command and default values are
+                                                                   listed in the SPI Command Summary Table 20. The NOMI
+              010                             15%
+                                                                   output is used by the MCU as a variable in dwell and spark
+              011                             24%                  control algorithms.
+              100                        35% (default)
+                                                                   NOMI DAC BITS
+              101                             47%
+                                                                       The NOMI output signal is generated by comparing the
+              110                             63%
+                                                                   external current sense resistor differential voltage (Resistor
+              111                             80%                  Sense Positive, Resistor Sense Negative) with the SPI
+                                                                   programmed NOMI DAC value. When the NOMI event
+MAXIMUM DWELL ENABLE BIT                                           occurs, the NOMI output pin is asserted (High). The NOMI
+                                                                   output is only a flag to the MCU and it’s output does not affect
+   Bit 8, the Maximum Dwell Enable bit allows the user to
+                                                                   the gate driver.
+enable the Maximum Dwell Gate Turnoff Feature. When the
+Max Dwell bit is programmed as logic 0 (disabled) the device           When using a 20 mΩ resistor as the current sense resistor,
+will not perform a Low-voltage Clamp due to Max Dwell (See         the gain select of the differential amplifier connected to RSP
+Figure 9).                                                         and RSN, should be set to a gain of 2, via the SPI Command
+                                                                   Message Spark Command (Command 0100, hex 4), Control
+                                                                   bit 6 =1.
+MAXIMUM DWELL GATE TURN OFF FEATURE
+                                                                       When using a 40mΩ resistor as the current sense resistor,
+   In automotive ignition systems, dwell time is defined as the
+                                                                   the gain select of the differential amplifier connected to RSP
+duration of time that an ignition coil is allowed to charge. The
+                                                                   and RSN, should be set to a gain of 1, via the SPI Command
+MC33810 starts the measure of time from the gate drive ON
+                                                                   Message Spark Command (Command 0100, hex 4), Control
+command. If the dwell time is greater than the Max Dwell
+                                                                   bit 6 =0. This is also the default value.
+Timer setting (Table 10), the offending ignition gate driver is
+commanded OFF. The Max Dwell Gate Turn Off Feature may                 The NOMI output provides a means to alert the MCU when
+be disabled via bit 8 of the Spark Command. When the               the ignition coil primary current equals the value programmed
+feature is disabled, the Max Dwell fault bits are always logic     into the NOMI DAC.
+0. The Max Dwell Timer feature pertains to Ignition Mode only          In V10 Mode, the NOMI pin is reconfigured as a MAXI
+and does not affect gate drivers configured as general             input pin from a third MC33810 device in the system. In this
+purpose gate drivers.                                              mode a NOMI input has effectively the same control as an
+                                                                   internal MAXI signal. Further information is provided in the
+                                                                   V10 Mode application section of this data sheet.
+
+
+ 33810
+
+                                                                                           Analog Integrated Circuit Device Data
+20                                                                                                     Freescale Semiconductor
+                                                                                                 FUNCTIONAL DEVICE OPERATION
+                                                                                                         OPERATIONAL MODES
+
+
+
+                                                                    Table 11. Nominal Current DAC Select
+Table 11. Nominal Current DAC Select
+                                                                                                             Differential   Differential
+                                      Differential   Differential                                             Voltage        Voltage
+                                       Voltage        Voltage           DAC Command              NOMI            (mV            (mV
+    DAC Command           NOMI            (mV            (mV            Bits<4,3,2,1,0>        Current (A)   Rs = 20mΩ      Rs = 40mΩ
+    Bits<4,3,2,1,0>     Current (A)   Rs = 20mΩ      Rs = 40mΩ
+                                                                                                             (Gain = 2)     (Gain = 1)
+                                      (Gain = 2)     (Gain = 1)
+                                                                             10100                8.00           160            320
+        00000               3.00          60             120
+                                                                             10101                8.25           165            330
+        00001               3.25          65             130
+                                                                             10110                8.50           170            340
+        00010               3.50          70             140
+                                                                             10111                8.75           175            350
+        00011               3.75          75             150
+                                                                             11000                9.00           180            360
+        00100               4.00          80             160
+                                                                             11001                9.25           185            370
+        00101               4.25          85             170
+                                                                             11010                9.50           190            380
+        00110               4.50          90             180
+                                                                             11011                9.75           195            390
+        00111               4.75          95             190
+                                                                             11100                10.00          200            400
+        01000               5.00          100            200
+                                                                             11101                10.25          205            410
+        01001               5.25          105            210
+                                                                             11110                10.50          210            420
+        01010               5.50          110            220
+                                                                             11111                10.75          215            430
+        01011               5.75          115            230
+
+        01100               6.00          120            240        MAXI DAC BITS
+        01101               6.25          125            250            The MAXI control block provides a means to shut off all the
+                                                                    ignition coil drivers if the current reaches a SPI
+        01110               6.50          130            260        programmable maximum level. Control is achieved by
+                                                                    comparing the output of the current sense amplifier with a SPI
+        01111               6.75          135            270
+                                                                    programmed DAC value.
+        10000               7.00          140            280            The MAXI comparator disables all gate drivers configured
+                                                                    as ignition drivers when the DAC MAXI setting is exceeded.
+        10001               7.25          145            290
+                                                                    When a MAXI event occurs, the MAXI bit in the fault status
+        10010               7.50          150            300        register is set and the MAXI pin is asserted (High).
+                                                                        When using a 20mΩ resistor as the current sense resistor,
+        10011               7.75          155            310
+                                                                    the gain select of the differential amplifier connected to RSP
+                                                                    and RSN, should be set to a gain of 2, via the SPI Command
+                                                                    Message Spark Command (Command 0100, hex 4), Control
+                                                                    bit 6 =1.
+                                                                        When using a 40mΩ resistor as the current sense resistor,
+                                                                    the gain select of the differential amplifier connected to RSP
+                                                                    and RSN, should be set to a gain of 1, via the SPI Command
+                                                                    Message Spark Command (Command 0100, hex 4), Control
+                                                                    bit 6 =0. This is also the default value.
+                                                                        The MAXI fault bit in the SPI fault status register is cleared
+                                                                    when the MAXI condition no longer exists and the SPI fault
+                                                                    status register has been read by the MCU.
+                                                                        In V10 Mode, the MAXI pin is configured as an input to
+                                                                    receive the MAXI signal from a second MC33810 device in
+                                                                    the system. In this mode a input MAXI signal has effectively
+                                                                    the same control as an internal MAXI signal. Further
+                                                                    information is provided in the V10 Mode application section
+                                                                    of this specification.
+
+
+
+                                                                                                                                  33810
+
+ Analog Integrated Circuit Device Data
+ Freescale Semiconductor                                                                                                              21
+ FUNCTIONAL DEVICE OPERATION
+ OPERATIONAL MODES
+
+
+
+                                                                  GENERAL PURPOSE GATE DRIVER MODE
+Table 12. Maximum Current DAC Select                                 Each gate driver can be individually configured as a
+                                     Differential Differential    General Purpose Gate Driver (GPGD) and controlled from
+    DAC Command            MAXI                                   the parallel GINx input pins, SPI Driver ON/OFF Command or
+                                     Voltage (mV Voltage (mV
+  Bit<b11,b10,b9,b8>     Current (A)                              may be programmed through the SPI for a specific frequency
+                                     Rs = 20mΩ Rs = 40mΩ
+                                                                  and duty cycle output (PWM).
+         0000                 6.0         120           240
+                                                                     In General Purpose Gate Driver mode the gate drivers
+         0001                 7.0         140           280       have the following features:
+
+         0010                 8.0         160           320
+                                                                  • Gate driver for discrete external MOSFET
+         0011                 9.0         180           360       • Off state open load detect
+                                                                  • On state short circuit protection
+         0100                 10.0        200           400
+                                                                  • Programmable drain threshold and duration timer for short
+         0101                 11.0        220           440         fault detection
+                                                                  • PWM frequency/duty cycle controller
+         0110                 12.0        240           480
+                                                                    In GPGD Mode the GDx output is a current controlled
+         0111                 13.0        260           520       output driver with slew rate control, gate to source clamp,
+                                                                  passive pull-down resistor and a drain to gate clamp for
+         1000                 14.0        280           560
+                                                                  switching inductive loads.
+         1001                 15.0        300           600
+                                                                  Driver ON /OFF Command
+         1010                 16.0        320           640
+                                                                      The Driver ON/OFF Command, bits 4 through 7 control
+         1011                 17.0        340           680       gate drivers that have been Mode Select Command
+                                                                  programmed as GPGD. A logic 1 in bits 4 through 7 will
+         1100                 18.0        360           720
+                                                                  command the specific output ON. A logic 0 in the appropriate
+         1101                 19.0        380           760       bit location commands the specific output Off. Also contained
+                                                                  in the Driver ON/OFF Command are SPI control bits for the
+         1110                 20.0        400           800       integrated LSD output drivers. Further information on LSD
+                                                                  control is provided in the Low Side Injector Driver section of
+         1111                 21.0        420           840
+                                                                  the data sheet.
+                                                                      NOTE: Gate drivers programmed to IGNITION mode have
+END OF SPARK FILTER BITS                                          parallel input control only, and cannot be turned off and on via
+   The ringing at the end of the Spark signatures waveform        SPI commands.
+can cause erroneous detection of the End of Spark event. To
+eliminate the effect of this ringing, a low pass filter with      GPGD Short Threshold Voltage Command
+variable time values can be selected. Four time values for the
+                                                                     Each GPGD driver is capable of detecting an open load in
+low pass filter have been provided with a zero value
+                                                                  the off state and shorted load in the on state. All faults are
+indicating that no low pass filtering is to be used. The End of
+                                                                  reported through the SPI communication. For open load
+Spark Filter bits specify a 0, 4µs, 16µs, or 32µs time interval
+                                                                  detection, a current source is placed between the FBx pin
+to sample the spark ignition coil primary current to ignore the
+                                                                  and ground of the IC. An open load fault is reported when the
+ringing at the end of spark.
+                                                                  FBx voltage is less than the 2.5V threshold. Open load fault
+                                                                  detect threshold is set internally to 2.5V and may not be
+            Table 13. End of Spark Filter Time Select             programmed. A shorted load fault is reported when the FBx
+                                                                  pin voltage is greater than the programmed short threshold
+                End of Spark Filter   Filter Time
+                                                                  voltage.
+                 Bits<11, 10, 9, 8>        µs
+                                                                     The short to battery fault threshold voltage of the external
+                       0000               0.0                     MOSFET is programmed via the GPGD Short Threshold
+                                                                  Voltage Command. Table 14 illustrates the bit pattern to
+                       0001               4.0
+                                                                  select a particular threshold. Drain voltages less than the
+                       0010               16.0                    selected threshold are considered normal operation. Drain
+                                                                  voltages greater than the selected threshold voltage are
+                       0011               32.0                    considered faulted.
+
+
+
+
+ 33810
+
+                                                                                          Analog Integrated Circuit Device Data
+22                                                                                                    Freescale Semiconductor
+                                                                                                   FUNCTIONAL DEVICE OPERATION
+                                                                                                           OPERATIONAL MODES
+
+
+
+                                                                           Each gate driver is individually set to either, restore to the
+Table 14. FBx Fault Threshold Select                                   pre-fault state, or shutdown when a short fault is declared. By
+                                                                       setting the Retry/Shutdown bit in the GPGD Fault Operation
+  GPGD VDS FLT
+                                                                       Command to logic 1 the specific output will try to go back to
+      Bits                    FBx Fault Threshold Select
+                                                                       the pre-fault state when the fault is no longer declared, after
+                                                                       a programmed “inhibit time”.
+       000                                 0.5V                            The retry strategy will cause the output to try to return to
+                                                                       the pre-fault state on a 1% duty cycle basis. For example: If
+       001                                 1.0V
+                                                                       the fault timer is set to 120µs and a fault is declared (drain
+       010                                 1.5V                        voltage greater than the programmed threshold for greater
+                                                                       than 120µs), the GDx output driver will be forced off for 12ms.
+       011                             2.0 (default)                   After 12 ms has elapsed, if the inputs, GINx or SPI, have not
+       100                                 2.5V                        tried to shut off the particular GDx output in the interim, the
+                                                                       GDx output will try to set the external driver on again (the pre-
+       101                                 3.0V                        fault state). A continued declared fault on the output would
+                                                                       result in another 12ms shutdown period.
+       110                             No Change
+                                                                           By setting the Retry/Shutdown bit in the GPGD Fault
+       111                             No Change                       Operation Command to logic 0 the specific output will
+                                                                       shutdown and remain off when the short fault is declared.
+GPGD SHORT TIMER COMMAND                                               Only a reissue of the turn on command, via SPI or GINx, will
+                                                                       force the output to try and turn on again.
+   The GPGD Short Timer Command allows the user to
+                                                                           In the event that a GPGD is selected as a PWM controller
+select the duration of time that the drain voltage is allowed to
+                                                                       and a short occurs on the output, the output retry strategy
+be greater than the programed threshold voltage without
+                                                                       forces the output to a 1% duty cycle based on the fault timer
+causing shutdown. External MOSFETS with drain voltages
+                                                                       setting. For example: If the fault timer is set to 120µs and a
+greater than the programed threshold for longer than the
+                                                                       fault is detected (drain voltage greater than programmed
+Fault Duration Timer are shutdown. Timer durations are listed
+                                                                       threshold), the PWM output will be commanded off for 12ms
+in Table 15.
+                                                                       and commanded ON again at the next PWM cycle.
+Table 15. FBx Short Fault Timer                                            Care should be taken to select a fault timer that is shorter
+                                                                       than the minimum duty cycle ON time of the PWM controller.
+ GPGD FLT Timer                                                        Selecting a fault timer that is longer will allow the PWM
+                                   Fault Timer Select
+      Bits                                                             controller to continue to drive the external MOSFET into a
+       000                                30µs                         shorted load.
+
+       001                                60µs                         PWM FREQUENCY/DUTY CYCLE COMMAND
+       010                                120µs                           The PWMx Freq & Duty Cycle command is use to program
+                                                                       the GDx outputs with a frequency and duty cycle. Table 16
+       011                           240µs (default)                   defines the user selectable output frequency. The frequency
+       100                                480µs                        and duty cycle may be updated at any time using the PWM
+                                                                       Freq&DC command, however the update will only begin on
+       101                                960µs                        the next PWM rising edge time.
+       110                             No Change                          Once the PWM Freq & DC registers are programmed and
+                                                                       the PWM controller is enabled through the Mode Command
+       111                             No Change                       the PWM outputs are turned ON and OFF via the GINx pin
+                                                                       OR the SPI GPGD ON/OFF Command control bit. All Parallel
+Notes: Tolerance on this fault timer setting is ±10% after using the   and serial On and Off command updates to the PWM
+Calibration Command.                                                   controller are synchronous with the rising edge of the
+                                                                       previous PWM period.
+GPGD FAULT OPERATION COMMAND                                              The truth table for GDx control in general purpose mode is
+   The GPGD Fault Operation Command sets the operating                 provided in Table 8.
+parameters for the gate drivers under faulted conditions. A                The duty cycle of the PWM outputs is controlled by bits 0-
+short fault is said to be “detected” when the drain source             6, inclusive. The duty cycle value is 1% per binary count from
+voltage, Vds, of the external MOSFET, exceeds the SPI                  1-100 with counts of 101-127 defaulting to 100%. For
+programmed short threshold voltage. The short fault is said            example, sending SPI command 101001000001100 would
+to be “declared” when the VDS over-voltage lasts longer than           set GD1, PWM output to 10Hz and 12% duty cycle.
+the SPI programmed “fault timer.” (short duration time > fault
+timer programmed value)
+
+
+                                                                                                                                   33810
+
+ Analog Integrated Circuit Device Data
+ Freescale Semiconductor                                                                                                              23
+FUNCTIONAL DEVICE OPERATION
+OPERATIONAL MODES
+
+
+
+  .                                                                    V10 MODE
+Table 16. Frequency Select                                                V10 Mode provides a method for monitoring 10 ignition
+  PWM Freq&DC                                                          events while using only two current sense resistors. This is
+   Command                           Frequency Hz                      achieved using three MC33810 devices. Two MC33810
+  Bit<b9,b8,b7>                                                        devices are programmed as Normal Ignition mode outputs
+                                                                       and one is programmed as a V10 ignition mode output. The
+          000                        10Hz (default)
+                                                                       ignition gate driver outputs are partitioned into two banks of
+          001                             20Hz                         five outputs each (See Figure 10). Each bank contains one or
+                                                                       two driver(s) from the V10 device.
+          010                             40Hz
+                                                                          Drivers in the V10 device are grouped in two’s (GD0&GD2,
+          011                             80Hz                         GD1&GD3). Current from each V10 mode IGBT group is
+                                                                       monitored by the appropriate Normal Mode device (See
+          100                            160Hz                         Figure 10). The MAXI signal from one Normal Mode device is
+                                                                       ported to the V10 Mode MAXI input pin. Likewise the MAXI
+          101                            320Hz
+                                                                       signal from the second Normal Mode device is ported to the
+          110                            640Hz                         V10 Mode NOMI input pin. The V10 Mode NOMI/MAXI inputs
+                                                                       are used as MAXI shutdown signals for the appropriate
+          111                            1.28kHz                       ignition gate drive group.
+                                                                          V10 Mode contains the same features as Ignition Mode
+Notes: Tolerance on selected frequency is ±10% after using the         gate drivers with the following exceptions:
+Calibration Command. Shorts to battery and open load faults will not
+be detected for frequency and duty cycle combinations inconsistent     • NOMI/MAXI configured as input pins
+with fault timers.                                                     • MAXI shutdown for GPGD disabled
+                                                                       • NOMI/MAXI comparators disabled
+           Table 17. Pre-driver GDx Output Control                        In V10 Mode, Spark Command bits 7 and 8 (Gain Select,
+  Mode            Driver                                               Overlapping Dwell) are disabled. These two features are
+                             PWMx            GINx          GDx
+Command          On/OFF                                                achieved through the Normal Mode devices.
+                            Enable Bit     terminal       Output
+IGN/GP Bit      GPGD Bit
+                                                                          RSN and RSP must be grounded in V10 Mode.
+      1            0             X               0         OFF
+      1            0             0               1          ON
+      1            1             0               X          ON
+      1            X             1               1       Freq/DC
+      1            1             1               X       Freq/DC
+
+
+
+
+33810
+
+                                                                                              Analog Integrated Circuit Device Data
+24                                                                                                        Freescale Semiconductor
+                                                                                                                                 FUNCTIONAL DEVICE OPERATION
+                                                                                                                                         OPERATIONAL MODES
+
+
+
+
+                                                                                  Bank 1       Bank 2
+
+                 IC 1 “Parent”                                                       IC 3 “Child”                                                IC 2 “Parent”
+
+          GIN0                  GO0                                               GO0                GIN0                                GO0                    GIN0
+                                                           IGBT14
+           Gate Drive 0                      IGBT1 (0-3)                                                             IGBT26
+                                                                                           Gate Drive 0
+          GIN1                  GO1                                               GIN1             GO1                                   GO1                    GIN1
+                                                                IGBT15
+            Gate Drive 1                                                           Gate Drive 1
+                                                                                                                        IGBT 2 (0-3)
+                                GO2                                               GO2                                                    GO2
+          GIN2                                                                                  GIN2                                                            GIN2
+           Gate Drive 2                                                                 Gate Drive 2
+          GIN3                  GO3                                               GIN3               GO3                                 GO3                    GIN3
+            Gate Drive 3                                                                                       IGBT27
+                                                                                   Gate Drive 3                                                           4
+                 4                                                                            4 GIN                                                             GIN (0-3)
+      GIN (0-3)                                                                                 (0-3)
+                        LOGIC                                                      LOGIC             NOMI                                 LOGIC                      NOMI
+     NOMI
+                   MAXI    RSP1                                           RSP                 MAXI                                                       MAXI
+                                                                                                                                         RSP2
+                        VtNI                                           Child       VtNI    NOMI
+                                       RS1      Ign 1               Comparator            disabled                      Ign 2             VtNI
+                    NOMI                                                                                                                           NOMI
+                  Comparator                                        Inputs Tied                                                    RS2
+                                                                                                                                                 Comparator
+                                                                      to GND      VtMI
+                                                                                     MAXI                                                VtMI
+                                                                                   disabled
+                                VtMI
+                                                                                                                                           MAXI
+                         MAXI                                                        Logic                  Logic                        Comparator
+                       Comparator                                                    Buffer                 Buffer
+
+                                                                                                                                                Logic                   Logic
+ Logic                 Logic
+                                                                                                                                                Buffer                  Buffer
+ Buffer                Buffer
+
+
+
+ NOMI       MAXI                                                                                                                                              MAXI     NOMI
+                                                                                     MAXI               NOMI
+    NOMI1 to uP
+
+
+    MAXI1 to uP
+
+
+    MAXI2 to uP
+
+
+    NOMI2 to uP
+
+
+                                                             Note: For “child” input NOMI is for channel 1&3, input MAXI is for channel 0&2
+
+                                                                          Figure 10. V10 Mode
+
+LOW SIDE INJECTOR DRIVER                                                                        ON /OFF CONTROL COMMAND
+   The four open drain low side injector drivers are designed                                       To program the individual output of the 33810 ON or OFF,
+to control various automotive loads such as injectors,                                          a 16-bit serial stream of data is entered into the SI pin. The
+solenoids, lamps, relays and unipolar stepper motors. Each                                      first 4 bits of the control word are used to identify the On / Off
+driver includes off and on state open load detection, short                                     Command. Bit 0 through bit 3 of the ON/OFF Control
+circuit protection and diagnostics. The injector drivers are                                    Command turn ON or OFF the specific output driver.
+individually controlled through the ON/OFF SPI input
+command Table 20 or parallel input pins DIN0 to DIN3. Serial                                    INJECTOR DRIVER FAULT COMMANDS
+and parallel control of the output state is determined by the                                      Fault protection strategies for the injector drivers are
+logical OR of the SPI serial bit and the DINx parallel input                                    programmed by the SPI LSD Fault Command. Bit 8 through
+pins. All four outputs are disabled when the OUTEN input pin                                    11 determine the type of short circuit protection to be used,
+is high regardless of the state of the SPI control bit or the                                   bits 0 through 7 set the open load strategy.
+state of the DINx pin. All four injector drivers are not affected
+by the selection of the gate driver’s three modes of operation                                     Short-circuit protection consists of three strategies. All
+(Ignition Mode, General Purpose Mode, V10 mode).                                                strategies utilize current limiting as an active element to
+                                                                                                protect the output driver from failure.The TLIM and Timer
+                                                                                                options are used to enhance the short circuit protection
+                                                                                                strategy of the Injector drivers. The timer protection scheme
+                                                                                                uses a low duty cycle in the event of a short-circuit. The TLIM
+
+
+                                                                                                                                                                            33810
+
+Analog Integrated Circuit Device Data
+Freescale Semiconductor                                                                                                                                                       25
+FUNCTIONAL DEVICE OPERATION
+OPERATIONAL MODES
+
+
+
+protection circuit uses the junction temperature of the output      Table 18. Injector Driver (OUTx) Fault Operation
+driver to determine the fault. Both methods may be used             Shutdn             Fault
+together or individually.                                            Retry    TLIM     Timer       Operation During Short Fault
+                                                                     Bit 11   Bit 10   Bit 9
+TIMER PROTECTION                                                      1         0       X      Timer only, Outputs will retry on period
+   The first protection scheme uses a low ON to OFF duty                                       OUT0-OUT3 = 60 µs ON, ~10ms OFF
+cycle to protect the output driver. The low duty cycle allows
+the device to cool so that the maximum junction temperatures          1         1       0      TLIM only, Outputs will retry on TLIM
+are not exceeded. During a short condition, the device enters                                  hysteresis.
+current limit. The driver will shutdown for short conditions                                   Timer and TLIM, Outputs will retry on
+                                                                      1         1       1
+lasting longer than the current limit timer (~60µs)                                            period and driver temperature below
+                                                                                               threshold.
+TEMPERATURE LIMIT (TLIM)                                                                       OUT0-OUT3= 60 µs ON, ~10ms OFF
+    The second scheme senses the temperature of the
+                                                                      0         0       X      Timer only, Outputs will not retry on
+individual output driver. During a short event the device
+                                                                                               period
+enters current limit and will remain in current limit until the
+                                                                                               OUT0-OUT3 = 60 µs ON, OFF
+output driver temperature limit is exceeded (TLIM). At this
+point, the device will shutdown until the junction temperature        0         1       0      TLIM only, Outputs will not retry on TLim
+falls below the hysteresis temperature value. The TLIM                                         hysteresis.
+hysteresis value is listed in the previous specification tables.
+                                                                      0         1       1      Timer and TLIM, Outputs will not retry on
+    The third method combines both protection schemes into
+                                                                                               period or TLIM.
+one. During a short event the device will enter current limit.
+                                                                                               OUT0-OUT3 = 60 µs ON, OFF
+The output driver will shutdown for short conditions lasting
+longer than the current limit timer. In the event that the output
+driver temperature is higher than maximum specified                 OUTPUT DRIVER DIAGNOSTICS.
+temperature the output will shutdown.
+                                                                       Short to battery, Temperature Limit (TLIM) and open load
+    The Shutdown/Retry bit allows the user to determine how         faults are reported through the All Status Response message
+the drivers will respond to each short circuit strategy.            Table 21.
+Table 18 provides fault operation for all three strategies.
+    Outputs may be used in parallel to drive higher current         OFF OPEN LOAD PULL-DOWN CURRENT ENABLE
+loads provided the turn-off energy of the load does not             BITS
+exceed the energy rating of a single output driver (100mJ
+                                                                       An open load on the output driver is detected by the
+maximum).
+                                                                    voltage level on the drain of the MOSFET in the off state.
+                                                                    Internal to the device is a 75µA pull-down current sink. In the
+                                                                    event of an open load the drain voltage is pulled low. When
+                                                                    the voltage crosses the threshold, and open load is detected.
+                                                                    The pull-down current source may be disabled by bit 0
+                                                                    through bit 3 in the LSD Fault Command. With the driver off
+                                                                    and the Off Open Load bit disabled, the Off Open Load fault
+                                                                    status bit will be logic 0.
+
+                                                                    ON OPEN LOAD ENABLE BITS
+                                                                       The On State Open Load enable bit allows the user to
+                                                                    determine an On State Open Load. When the On State Open
+                                                                    Load bit disabled, the On State Fault bit is always logic 0. On
+                                                                    Open Load is determined by monitoring the current through
+                                                                    the OUTx MOSFET. In the ON state, currents less than 20mA
+                                                                    to 200mA are considered open.
+
+
+
+
+33810
+
+                                                                                            Analog Integrated Circuit Device Data
+26                                                                                                      Freescale Semiconductor
+                                                                                                                           FUNCTIONAL DEVICE OPERATION
+                                                                                                                                   OPERATIONAL MODES
+
+
+
+ Table 19. InjectorDriver Diagnostics                                                          temperature, calibration is required for an accurate time
+     Program State         Fault             Fault Bits                                        base. The calibration command should be used to update the
+                                                                                               device on a periodic basis.
+ Off
+          On
+State                      Output    OUTx        OUTx        OUTx
+         State
+Open
+         Open
+                  Driver    STB       Batt       OFF          ON
+                                                                   Fault Reported              SPI COMMAND SUMMARY
+Load              On/Off    STG      Short       Open        Open
+         Load                                                                                     The SPI commands are defined as 16 bits with 4 address
+Pull                       OPEN      Fault       Fault       Fault
+         En Bit
+Dwn                                                                                            control bits and 12 command data bits. There are 12 separate
+     0     X       Off     STB          0         0           0        No Fault                commands that are used to set operational parameters of
+                                                                                               device. The operational parameters are stored internally in
+     0     X       Off     STG          0         0           0        No Fault                16 bit registers.
+     0     X       Off     OPEN         0         0           0        No Fault                   Table 20 defines the commands and default state of the
+                                                                                               internal registers at POR. SPI commands may be sent to the
+     1     X       Off     STB          0         0           0        No Fault                device at any time in NORMAL STATE.
+     1     X       Off     STG          0         1           0        Open Load                  Messages sent are acted upon on the rising edge of the
+                                                                                               CS input.
+     1     X       Off     OPEN         0         1           0        Open Load
+
+
+
+     X     0       On      STB          1         0           0        Short to Batt
+
+     X     0       On      STG          0         0           0        No Fault
+
+     X     0       On      OPEN         0         0           0        No Fault
+
+     X     1       On      STB          1         0           0        Short to Batt
+
+     X     1       On      STG          0         0           1        Open Load
+
+     X     1       On      OPEN         0         0           1        Open Load
+
+
+
+
+ CLOCK CALIBRATION COMMAND
+    In cases where an accurate time base is required, the user
+ must calibrate the internal timers using the clock calibration
+ command (refer to Table 20). After the 33810 device
+ receives the calibration command, the device expects to
+ receive a 32µs logic [0] calibration pulse on the CS pin. The
+ pulse is used to calibrate the internal clock. Any SPI message
+ may be sent during the 32µs calibration chip select. Because
+ the oscillator frequency may shift up to 35% with
+ .
+Table 20. SPI Command Message Set and Default State
+           Command                            Control Address Bits                                                Command Bits
+
+                                    hex      15       14          13     12       11      10      9      8    7      6      5     4        3     2    1     0
+ Read Registers Command             0        0           0        0       0       1        0      1      0            <0000>               0     0    0     0
+                                                                                                             Internal Register Address
+ All Status Command                 0        0           0        0       0       1        0      1      0    0      0      0     0        0     0    0     0
+ SPI Check Command                  0        0           0        0       0       1        1      1      1    0      0      0     0        0     0    0     0
+ Mode Select Command                1        0           0        0       1            <0000>                 <0> <0>       X     X       <0> <0> <0> <0>
+                                                                                  IGN/GP Mode Select          V10 OVR/                   pwm3 pwm2 pwm1 pwm0
+                                                                                                              En Undr                     EN   EN   EN   EN
+                                                                                                                   Vtg
+                                                                                       Set to IGN Mode       Disab                       Disab Disab Disab Disab
+
+
+
+
+                                                                                                                                                          33810
+
+ Analog Integrated Circuit Device Data
+ Freescale Semiconductor                                                                                                                                     27
+ FUNCTIONAL DEVICE OPERATION
+ OPERATIONAL MODES
+
+
+
+Table 20. SPI Command Message Set and Default State
+         Command              Control Address Bits                                    Command Bits
+                        hex   15   14     13    12   11     10      9       8     7      6       5      4      3      2      1      0
+LSD Fault Command       2     0     0     1      0        <10X>            X     <1> <1> <1> <1> <1> <1> <1> <1>
+                                                     LSD Flt Operation          OUT3 OUT2 OUT1 OUT0 OUT3 OUT2 OUT1 OUT0
+                                                     shutdn,Tlim,Timer           ON    ON    ON    ON OFF OFF OFF OFF
+                                                                                Open Open Open Open Open Open Open Open
+                                                      Retry on timer            Load Load Load Load Load Load Load Load
+                                                       and No Tlim              Enabl Enabl Enabl Enabl Enabl Enabl Enabl Enabl
+Driver ON/OFF Command   3     0     0     1      1    X      X      X      X             <0000>                       <0000>
+     0 = OFF, 1 = ON                                                                     GPGD                        OUTx Driver
+                                                                                          OFF                          OFF
+                                                                                (ignored in Ignition Mode)
+Spark Command           4     0     1     0      0        <100>            <0> <0> <0> <0> <0>         <11>                   <01>
+                                                     Max Dwell Timer       Max Over Gain Soft Open     Open                 End Spark
+                                                        MaxDwell          Dwell lap   Sel Shut 2ed Secondary                Threshold
+                                                      Default=32ms         En Dwell Gain Dn En Clmp   OSFLT
+                                                                          Disab Disab = 1 Disab Disab =100µs                  VPWR
+                                                     (In Ignition Mode
+                                                                                                                              +5.5V
+                                                           Only)
+End Spark Filter        5     0     1     0      1    X      X      X      X      X      X       X      X      X      X       <01>
+                                                                                                                            End Spark
+                                                                                                                             Thresh
+                                                                                                                              4.0 µs
+DAC Command             6     0     1     1      0          <1000>                    <100>                      <01010>
+                                                      MAXI DAC Threshold         Overlap Setting            NOMI DAC Threshold
+                                                          MAXI=14A                Overlap 50%                  NOMI=5.5A
+
+GPGD Short Threshold    7     0     1     1      1         <011>                <011>                 <011>                <011>
+Voltage Command                                      Short to Batt VFB3   Short to Batt VFB2    Short to Batt VFB1   Short to Batt VFB0
+                                                        Vth = 2.0V           Vth = 2.0V            Vth = 2.0V           Vth = 2.0V
+GPGD Short Duration     8     1     0     0      0        <011>                <011>                 <011>                <011>
+Timer Command                                        Short to Batt tFB3   Short to Batt tFB2    Short to Batt tFB1   Short to Batt tFB0
+                                                      Timer = 240µs        Timer = 240µs         Timer = 240µs        Timer = 240µs
+GPGD Fault Operation    9     1     0     0      1           <1111>               X      X       X      X            <0000>
+Select Command                                         Retry/Shutdown Bit                                    Shutdown Drivers on MAXI
+                                                        Retry on Fault                                              Disabled
+PWM0 to PWM3 Freq &     A     1     0     1      0      <00>          <000>                              <0000000>
+DC Command                                             PWMx        PWM Frequency                       PWM Duty Cycle
+                                                      address         10Hz                             0% Duty Cycle
+                                                       PWM0
+INVALID COMMAND         B     1     0     1      1    X      X      X      X      X      X       X      X      X      X      X      X
+INVALID COMMAND         C     1     0     1      1    X      X      X      X      X      X       X      X      X      X      X      X
+INVALID COMMAND         D     1     1     0      1    X      X      X      X      X      X       X      X      X      X      X      X
+Clock Calibration       E     1     1     1      0    X      X      X      X      X      X       X      X      X      X      X      X
+Command
+
+INVALID COMMAND         F     1     1     1      1    X      X      X      X      X      X       X      X      X      X      X      X
+
+
+
+
+33810
+
+                                                                                             Analog Integrated Circuit Device Data
+28                                                                                                       Freescale Semiconductor
+                                                                                                         FUNCTIONAL DEVICE OPERATION
+                                                                                                                 OPERATIONAL MODES
+
+
+
+ SPI RESPONSE REGISTERS                                                     faults. Timing between two write words must be greater than
+    Fault reporting is accomplished through the SPI interface.              the fault timer to allow adequate time to sense and report the
+ All logic [1]s received by the MCU via the SO pin indicate                 proper fault status.
+ faults. All logic [0]s received by the MCU via Pin indicate no                .
+Table 21. SPI Response Messages
+                             15      14      13      12      11     10      9      8      7       6      5      4      3       2      1      0
+ Next SO Response to:         0      0       0        0       1      1      0      1      0       0      0      0      1       0      1      0
+ SPI Check Command
+ Next SO Response to   Reset COR           SOR      NMF     IGN3 IGN2 IGN1 IGN0 GP3 GP2 GP1 GP0 OUT3 OUT2 OUT1 OUT0
+ HEX1 to HEX A                                              Fault Fault Fault Fault Fault Fault Fault Fault Fault Fault Fault Fault
+ Commands and Read All
+ Status Command
+ ALL STATUS
+ RESPONSE
+ Next SO Response to         15      14      13      12      11     10      9      8      7       6      5      4      3       2      1      0
+ READ REGISTER
+ COMMAND
+ Address <0000>             Reset COR      SOR      NMF     IGN3 IGN2 IGN1 IGN0 GP3 GP2 GP1 GP0 OUT3 OUT2 OUT1 OUT0
+ All Status Register                                        Fault Fault Fault Fault Fault Fault Fault Fault Fault Fault Fault Fault
+ 0 = No Fault, 1 = Fault
+ Address <0001>             Reset COR     OVER LOW            0      0      0      0    OUT1 OUT1 OUT1 OUT1 OUT0 OUT0 OUT0 OUT0
+ OUT1, OUT0 Fault                         Voltage Voltage                               TLIM Batter OFF ON TLIM Batter OFF ON
+ Register                                                                               Fault   y   Open Open Fault   y   Open Open
+ 0 = No Fault, 1 = Fault                                                                      Short Fault Fault     Short Fault Fault
+                                                                                              Fault                 Fault
+ Address <0010>             Reset COR     OVER LOW            0      0      0      0    OUT3 OUT3 OUT3 OUT3 OUT2 OUT2 OUT2 OUT2
+ OUT3, OUT2 Fault                         Voltage Voltage                               TLIM Batter OFF ON TLIM Batter OFF ON
+ Register                                                                               Fault   y   Open Open Fault   y   Open Open
+ 0 = No Fault, 1 = Fault                                                                      Short Fault Fault     Short Fault Fault
+                                                                                              Fault                 Fault
+ Address <0011>             Reset COR     OVER LOW            0      0      0      0     GP3 GP3 GP2 GP2 GP1 GP1 GP0 GP0
+ GPGD Mode Fault                          Voltage Voltage                               Short Open Short Open Short Open Short Open
+ Register                                                                               Circuit Load Circuit Load Circuit Load Circuit Load
+ 0 = No Fault, 1 = Fault                                                                Fault Fault Fault Fault Fault Fault Fault Fault
+ Address <0100>          Reset COR OVER LOW IGN3 IGN3 IGN3 IGN2 IGN2 IGN2 IGN1 IGN1 IGN1 IGN0 IGN0 IGN0
+ IGN Mode Fault Register           Voltage Voltage MAXI Max Open MAXI Max Open MAXI Max Open MAXI Max Open
+ 0 = No Fault, 1 = Fault                           Fault Dwell Secon Fault Dwell Secon Fault Dwell Secon Fault Dwell Secon
+                                                         Fault   d         Fault   d         Fault   d         Fault   d
+                                                               Fault             Fault             Fault             Fault
+ Address <0101>        Reset COR OVER LOW                     IGN/GP Mode Select         V10    OVR      X      X    PWM PWM PWM PWM
+ Mode Command Register           Voltage Voltage                                         En     Vtg                    3   2   1   0
+                                                                                                                      EN  EN  EN  EN
+ Address <0110>             Reset COR     OVER LOW LSD Flt Operation               X    OUT3 OUT2 OUT1 OUT0 OUT3 OUT2 OUT1 OUT0
+ LSD Fault Command                        Voltage Voltage shutdn,Tlim,Timer              ON   ON   ON   ON OFF OFF OFF OFF
+ Register                                                                               Open Open Open Open Open Open Open Open
+                                                                                        Load Load Load Load Load Load Load Load
+ Address <0111>             Reset COR     OVER LOW           X       X      X      X             GPGD(19)                  OUTx Driver(19)
+ Drvr ON/OFF Command                      Voltage Voltage
+ Reg
+ Address <1000>         Reset COR OVER LOW                   Max Dwell Timer     Max Over Gain Soft Open                Open         End Spark
+ Spark Command Register           Voltage Voltage              MaxDwell          Dwell lap Sel Shut 2ed               Secondary      Threshold
+                                                                                  En Dwell     Dn En Clmp
+Notes
+ 19. These bits refer to command On or Off state in the command registers, not the state of the respective output lines. These bits are not to be
+      confused with the ignition mode state which is controlled only by the parallel inputs and their state is not reflected in these bits.
+
+
+                                                                                                                                          33810
+
+ Analog Integrated Circuit Device Data
+ Freescale Semiconductor                                                                                                                     29
+ FUNCTIONAL DEVICE OPERATION
+ OPERATIONAL MODES
+
+
+
+Table 21. SPI Response Messages
+Address <0101>              Reset COR   OVER under        X       X      X         X   X      X        X      X      X      X
+End Spark filter Register               Voltage voltage                                                                           End spark
+                                                                                                                                     Filter
+Address <1010>       Reset COR OVER LOW                    MAXI DAC Threshold          Overlap Setting             NOMI DAC Threshold
+DAC Command Register           Voltage Voltage
+Address <1011>            Reset COR OVER LOW Short to Batt VFB3                Short to Batt VFB2     Short to Batt VFB1   Short to Batt VFB0
+GPGD FBx Short to                   Voltage Voltage
+Battery Threshold Voltage
+Register
+Address <1100>              Reset COR   OVER LOW          Short to Batt tFB3   Short to Batt tFB2     Short to Batt tFB1   Short to Batt tFB0
+GPGD FBx Short to                       Voltage Voltage
+Battery Threshold Timer
+Register
+Address <1101>              Reset COR   OVER LOW              Retry/Shutdown Bit       X      X        X      X    Shutdown Drivers on IMAX
+GPGD Fault Operation                    Voltage Voltage
+Register
+Address <1110>              Reset COR   OVER LOW           PWMx          PWM Frequency                       PWM Duty Cycle
+PWM Freq&DC Register                    Voltage Voltage   address
+(last channel
+programmed)
+Address <1111>              Reset COR    OVR  LOW                REV     ID                          CAL    CAL                  TRIM TRIM
+Revision ID, Trim, Clock                 Vtg Voltage      3        2     1         0   X      X       Too    Too     X      X    Parity Lock
+Cal.
+                                                                                                      HI    LOW                  Error    Out
+Legend
+COR = Command Out of Range
+SOR = Supply Out of Range
+NMF = Set When Faults Occur on V10 Mode MAXI and NOMI Inputs and V10 Mode Ignition Driver are OFF.
+
+
+
+
+ 33810
+
+                                                                                                    Analog Integrated Circuit Device Data
+ 30                                                                                                             Freescale Semiconductor
+                                                                                                             PACKAGING
+                                                                                                    PACKAGE DIMENSIONS
+
+
+
+                                                    PACKAGING
+
+                                              PACKAGE DIMENSIONS
+
+  For the most current package revision, visit www.freescale.com and perform a keyword search using the “98A” listed below.
+
+
+
+
+                                                   EK (Pb-FREE) SUFFIX
+                                                          32-PIN
+                                                       98ARL10543D
+                                                         ISSUE B
+
+
+
+
+                                                                                                                      33810
+
+Analog Integrated Circuit Device Data
+Freescale Semiconductor                                                                                                 31
+PACKAGING
+PACKAGE DIMENSIONS
+
+
+
+     .
+
+
+
+
+                     EK (Pb-FREE) SUFFIX
+                            32-PIN
+                         98ARL10543D
+                           ISSUE B
+
+
+
+
+33810
+
+                                           Analog Integrated Circuit Device Data
+32                                                     Freescale Semiconductor
+                                                                                                        REVISION HISTORY
+
+
+
+
+                                                  REVISION HISTORY
+
+
+
+REVISION    DATE              DESCRIPTION OF CHANGES
+
+    3.0      10/2007          • Initial Release
+    4.0      2/2008           • Fixed several typos throughout document
+                              • Changed Static Electrical Characteristics, Table 3, Digital Interface, OUT_EN Leakage
+                                Current to VDD, maximum from 10 to 50µA.
+                              • Reworded not to Table 15.
+                              • Added Table 16 back (it was inadvertently deleted.
+                              • Added “Ignition &” to tile in Table 4.
+
+
+
+
+                                                                                                                        33810
+
+Analog Integrated Circuit Device Data
+Freescale Semiconductor                                                                                                   33
+How to Reach Us:
+Home Page:
+www.freescale.com
+Web Support:
+http://www.freescale.com/support
+
+USA/Europe or Locations Not Listed:
+Freescale Semiconductor, Inc.
+Technical Information Center, EL516
+2100 East Elliot Road
+Tempe, Arizona 85284
++1-800-521-6274 or +1-480-768-2130
+www.freescale.com/support
+
+Europe, Middle East, and Africa:
+Freescale Halbleiter Deutschland GmbH                    Information in this document is provided solely to enable system and software
+Technical Information Center
+                                                         implementers to use Freescale Semiconductor products. There are no express or
+Schatzbogen 7
+81829 Muenchen, Germany                                  implied copyright licenses granted hereunder to design or fabricate any integrated
++44 1296 380 456 (English)                               circuits or integrated circuits based on the information in this document.
++46 8 52200080 (English)
++49 89 92103 559 (German)
+                                                         Freescale Semiconductor reserves the right to make changes without further notice to
++33 1 69 35 48 48 (French)
+www.freescale.com/support                                any products herein. Freescale Semiconductor makes no warranty, representation or
+                                                         guarantee regarding the suitability of its products for any particular purpose, nor does
+Japan:                                                   Freescale Semiconductor assume any liability arising out of the application or use of any
+Freescale Semiconductor Japan Ltd.                       product or circuit, and specifically disclaims any and all liability, including without
+Headquarters                                             limitation consequential or incidental damages. “Typical” parameters that may be
+ARCO Tower 15F                                           provided in Freescale Semiconductor data sheets and/or specifications can and do vary
+1-8-1, Shimo-Meguro, Meguro-ku,                          in different applications and actual performance may vary over time. All operating
+Tokyo 153-0064                                           parameters, including “Typicals”, must be validated for each customer application by
+Japan                                                    customer’s technical experts. Freescale Semiconductor does not convey any license
+0120 191014 or +81 3 5437 9125
+                                                         under its patent rights nor the rights of others. Freescale Semiconductor products are
+support.japan@freescale.com
+                                                         not designed, intended, or authorized for use as components in systems intended for
+Asia/Pacific:                                            surgical implant into the body, or other applications intended to support or sustain life,
+Freescale Semiconductor Hong Kong Ltd.                   or for any other application in which the failure of the Freescale Semiconductor product
+Technical Information Center                             could create a situation where personal injury or death may occur. Should Buyer
+2 Dai King Street                                        purchase or use Freescale Semiconductor products for any such unintended or
+Tai Po Industrial Estate                                 unauthorized application, Buyer shall indemnify and hold Freescale Semiconductor and
+Tai Po, N.T., Hong Kong                                  its officers, employees, subsidiaries, affiliates, and distributors harmless against all
++800 2666 8080                                           claims, costs, damages, and expenses, and reasonable attorney fees arising out of,
+support.asia@freescale.com                               directly or indirectly, any claim of personal injury or death associated with such
+                                                         unintended or unauthorized use, even if such claim alleges that Freescale
+For Literature Requests Only:
+                                                         Semiconductor was negligent regarding the design or manufacture of the part.
+Freescale Semiconductor Literature Distribution Center
+P.O. Box 5405
+Denver, Colorado 80217                                   Freescale™ and the Freescale logo are trademarks of Freescale Semiconductor, Inc.
+1-800-441-2447 or 303-675-2140                           All other product or service names are the property of their respective owners.
+Fax: 303-675-2150
+LDCForFreescaleSemiconductor@hibbertgroup.com            © Freescale Semiconductor, Inc., 2006 - 2008. All rights reserved.
+
+
+
+
+MC33810
+Rev. 4.0
+2/2008
+

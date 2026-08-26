@@ -1,0 +1,20 @@
+#VRML V2.0 utf8
+# Littelfuse SM8S (DO-218AB) TVS, simplified: body 9.3x8.1x2.4 mm over anode tab, cathode lead to pad 2. Placeholder (no vendor STEP).
+Transform {
+  translation 0.00000 1.12205 0.53150
+  children [ Shape {
+    appearance Appearance { material Material { diffuseColor 0.10 0.10 0.10 specularColor 0.15 0.15 0.15 shininess 0.15 } }
+    geometry Box { size 3.18898 3.66142 0.94488 } } ]
+}
+Transform {
+  translation 0.00000 1.12205 0.02953
+  children [ Shape {
+    appearance Appearance { material Material { diffuseColor 0.80 0.80 0.80 specularColor 0.15 0.15 0.15 shininess 0.15 } }
+    geometry Box { size 3.18898 3.66142 0.05906 } } ]
+}
+Transform {
+  translation 0.00000 -1.90945 0.09843
+  children [ Shape {
+    appearance Appearance { material Material { diffuseColor 0.80 0.80 0.80 specularColor 0.15 0.15 0.15 shininess 0.15 } }
+    geometry Box { size 1.33858 2.40157 0.19685 } } ]
+}

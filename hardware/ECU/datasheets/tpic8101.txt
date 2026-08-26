@@ -1,0 +1,1533 @@
+                             Product              Sample &             Technical                         Tools &                     Support &
+                             Folder               Buy                  Documents                         Software                    Community
+
+
+
+                                                                                                                                                            TPIC8101
+                                                                                                                        SLIS110C – APRIL 2003 – REVISED MARCH 2015
+
+                                          TPIC8101 Knock Sensor Interface
+1 Features                                                                           3 Description
+•
+1   Qualified for Automotive Applications                                            The TPIC8101 is a dual-channel signal processing IC
+                                                                                     for detection of premature detonation in combustion
+•   AEC-Q100 Qualified With the Following Results:                                   engine. The two sensor channels are selectable
+    – Device Temperature Grade 1: –40°C to 125°C                                     through the SPI bus. The knock sensor typically
+       Ambient Operating Temperature Range                                           provides an electrical signal to the amplifier inputs.
+    – Device HBM Classification Level 3A                                             The sensed signal is processed through a
+                                                                                     programmable band-pass filter to extract the
+    – Device CDM Classification Level C6                                             frequency of interest (engine knock or ping signals).
+•   Dual-Channel Knock Sensor Interface                                              The band-pass filter eliminates any engine
+•   Programmable Input Frequency Prescaler                                           background noise associated with combustion. The
+    (OSCIN)                                                                          engine background noise is typically low in amplitude
+                                                                                     compared to the predetonation noise.
+•   Serial Interface With Microprocessor (SPI)
+•   Programmable Gain                                                                The detected signal is full-wave rectified and
+                                                                                     integrated by use of the INT/HOLD signal. The digital
+•   Programmable Band-Pass Filter Center                                             output from the integration stage is either converted
+    Frequency                                                                        to an analog signal, passed through an output buffer,
+•   External Clock Frequencies up to 24 MHz                                          or be read directly by the SPI.
+    – 4, 5, 6, 8, 10, 12, 16, 20, and 24 MHz                                         This analog buffered output may be interfaced to an
+•   Programmable Integrator Time Constants                                           A/D converter and read by the microprocessor. The
+•   Operating Temperature Range −40°C to 125°C                                       digital output may be directly interfaced to the
+                                                                                     microprocessor.
+2 Applications                                                                                                         Device Information(1)
+•   Engine Knock Detector Signal Processing                                               PART NUMBER                         PACKAGE              BODY SIZE (NOM)
+•   Analog Signal Processing With Filter                                              TPIC8101                          SOIC (20)                 7.50 mm × 12.80 mm
+    Characteristics                                                                   (1) For all available packages, see the orderable addendum at
+                                                                                          the end of the data sheet.
+
+                                                          Simplified Schematic
+                                                                       Vref
+                                              VDD / 2        +
+                                                             −
+
+                          CH1P                +
+                          CH1N                −
+                         CH1FB                                   Mux                                             SAR
+                                                                               rd
+                                                                              3 Order AAF                     10-Bit ADC <1:10>
+                          CH2P                +                                                               fS = 200 kHz
+
+                          CH2N                −
+                         CH2FB
+
+                                          Programmable            Programmable                                  Programmable
+                                              Gain                  Band-Pass                   Rectifier         Integrator
+                                                                      Filter
+
+                                                                                    DSP
+
+                                           R2R
+                                        10-Bit DAC                                                  SPI
+                                        fS = 200 kHz         +
+                                                                                                  Test Mode
+                                                             −                                   DSP Control
+                                                                                          SDI
+
+
+
+
+                                                                                                                                     XIN
+                                                                                                                          INT/HOLD
+                                                    GND
+
+
+
+
+                                                                                    SDO
+                                        VDD
+
+
+
+
+                                                                        OUT
+
+
+
+
+                                                                                                                                           XOUT
+                                                                                                  SCLK
+                                                                                                         CS
+
+                                                                                                                TEST
+
+
+
+
+1
+
+
+
+
+      An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+      intellectual property matters and other important disclaimers. PRODUCTION DATA.
+TPIC8101
+SLIS110C – APRIL 2003 – REVISED MARCH 2015                                                                                                                          www.ti.com
+
+
+                                                                           Table of Contents
+    1   Features .................................................................. 1               8.2    Functional Block Diagram ......................................... 9
+    2   Applications ........................................................... 1                  8.3    Feature Description................................................... 9
+    3   Description ............................................................. 1                 8.4    Device Functional Modes........................................ 12
+                                                                                                    8.5    Programming........................................................... 14
+    4   Revision History..................................................... 2
+    5   Description (continued)......................................... 3                    9    Application and Implementation ........................ 16
+                                                                                                    9.1 Application Information............................................ 16
+    6   Pin Configuration and Functions ......................... 3
+                                                                                                    9.2 Typical Application ................................................. 16
+    7   Specifications......................................................... 4
+                                                                                              10 Power Supply Recommendations ..................... 19
+         7.1    Absolute Maximum Ratings ...................................... 4
+         7.2    ESD Ratings.............................................................. 4   11 Layout................................................................... 19
+                                                                                                    11.1 Layout Guidelines ................................................. 19
+         7.3    Recommended Operating Conditions....................... 4
+                                                                                                    11.2 Layout Example .................................................... 19
+         7.4    Thermal Information .................................................. 4
+         7.5    Electrical Characteristics........................................... 5       12 Device and Documentation Support ................. 20
+         7.6    Timing Requirements ............................................... 7               12.1 Trademarks ........................................................... 20
+         7.7    Typical Characteristics .............................................. 8            12.2 Electrostatic Discharge Caution ............................ 20
+                                                                                                    12.3 Glossary ................................................................ 20
+    8   Detailed Description .............................................. 9
+         8.1 Overview ................................................................... 9   13 Mechanical, Packaging, and Orderable
+                                                                                                 Information ........................................................... 20
+
+
+
+4 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+
+Changes from Revision B (December 2014) to Revision C                                                                                                                       Page
+
+•   Added qualification for automotive applications to Features ................................................................................................. 1
+•   Added the ESD Ratings table with HBM and CDM ratings ................................................................................................... 4
+
+
+Changes from Revision A (May 2005) to Revision B                                                                                                                            Page
+
+•   Added Feature Description section, Device Functional Modes, Application and Implementation section, Power
+    Supply Recommendations section, Layout section, Device and Documentation Support section, and Mechanical,
+    Packaging, and Orderable Information section. ..................................................................................................................... 1
+
+
+
+
+2        Submit Documentation Feedback                                                                          Copyright © 2003–2015, Texas Instruments Incorporated
+
+                                                                         Product Folder Links: TPIC8101
+                                                                                                                                         TPIC8101
+www.ti.com                                                                                              SLIS110C – APRIL 2003 – REVISED MARCH 2015
+
+
+5 Description (continued)
+The data from the A/D enables the system to analyze the amount of retard timing for the next spark ignition
+timing cycle. With the microprocessor closed-loop system, advancing and retarding the spark timing optimizes
+the load/RPM conditions for a particular engine (data stored in RAM).
+
+6 Pin Configuration and Functions
+                                                                         SOIC Package
+                                                                          (Top View)
+
+                                                        VDD          1                     20   CH1P
+                                                     GND             2                     19   CH1N
+                                                        Vref         3                     18   CH1FB
+                                                        OUT          4                     17   CH2FB
+                                                        NC           5                     16   CH2N
+                                                        NC           6                     15   CH2P
+                                                 INT/HOLD            7                     14   TEST
+                                                        CS           8                     13   SCLK
+                                                        XIN          9                     12   SDI
+                                                    XOUT             10                    11   SDO
+
+
+
+                                                                     Pin Functions
+           PIN                    TYPE
+                                                                                                DESCRIPTION
+      NAME        NO.      (PULLUP/PULLDOWN)
+VDD                1                   I                   5-V input supply
+GND                2                   I                   Ground connection
+Vref               3                   O                   Supply reference generator with external bypass capacitor
+OUT                4                   O                   Buffered integrator output
+                   5
+NC (1)                                 —                   No connection
+                   6
+INT/HOLD           7              I (pulldown)             Selectable for integrate (high) or hold (low) mode (with internal pulldown)
+CS                 8               I (pullup)              Chip select for SPI communications (active low with internal pullup)
+XIN                9                   I                   Inverter input for oscillator
+XOUT               10                  O                   Inverter output for oscillator
+SDO                11                  O                   Serial data output for SPI bus
+SDI                12              I (pullup)              Serial data input line
+SCLK               13              I (pullup)              SPI clock
+TEST               14              I (pullup)              Test mode (active low), open for normal operation
+CH2P               15                  I                   Positive input for amplifier 2
+CH2N               16                  I                   Negative input for amplifier 2
+CH2FB              17                  O                   Output of amplifier 2, for feedback connection
+CH1FB              18                  O                   Output of amplifier 1, for feedback connection
+CH1N               19                  I                   Negative input for amplifier 1
+CH1P               20                  I                   Positive input for amplifier 1
+
+(1)    These terminals are to be used for test purposes only and are not connected in the system application. No signal traces should be
+       connected to the NC terminals.
+
+
+
+
+Copyright © 2003–2015, Texas Instruments Incorporated                                                       Submit Documentation Feedback       3
+                                                               Product Folder Links: TPIC8101
+TPIC8101
+SLIS110C – APRIL 2003 – REVISED MARCH 2015                                                                                              www.ti.com
+
+
+7 Specifications
+7.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted) (1)
+                                                                                                       MIN                MAX            UNIT
+VDD              Regulated input voltage (2) (3)                                                       −0.3                7              V
+                                  (2) (3)
+VO               Output voltage                                                                        −0.3                7              V
+VIN              Input voltage (2) (3)                                                                 −0.3                7              V
+IIN              DC input current on terminals CH1P, CH1N, CH2P, and CH2N (2) (3)                                          2              mA
+VDCIN            DC input voltage on terminals CH1P, CH1N, CH2P and CH2N (2) (3)                                          14              V
+RθJA             Junction-to-ambient thermal impedance                                                                    120            °C/W
+PD               Continuous power dissipation                                                                             200            mW
+TA               Operating ambient temperature                                                         –40                125             °C
+Tstg             Storage temperature                                                                   –65                150             °C
+
+(1)    Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings
+       only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under Recommended
+       Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+(2)    All voltage values are with respect to GND.
+(3)    Absolute negative voltage on these terminals is not to go < –0.5 V.
+
+7.2 ESD Ratings
+                                                                                                                               VALUE       UNIT
+                                            Human-body model (HBM) (1)                                                          4000
+V(ESD)        Electrostatic discharge                                                                                                          V
+                                            Charged-device model (CDM)                                                          1500
+
+(1)    The human body model is a 100-pF capacitor discharged through a 1.5-kΩ resistor into each terminal.
+
+7.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)
+                                                                                                           MIN                  MAX       UNIT
+VDD         Regulated input voltage                                                                        −0.3                   5.5       V
+VO          Output voltage                                                                                 −0.3                   5.5       V
+VIN         Input voltage                                                                                  0.05           VDD − 0.05        V
+IIN         DC input current on terminals CH1P, CH1N, CH2P, and CH2N                                          –1                   1       µA
+VDCIN       DC input voltage on terminals CH1P, CH1N, CH2P, and CH2N                                                Vref, (VDD / 2)         V
+PD          Continuous power dissipation                                                                                         100      mW
+
+
+7.4 Thermal Information
+                                                                                                              TPIC8101
+                                                                 (1)
+                                              THERMAL METRIC                                                  DW [SOIC]                 UNIT
+                                                                                                               20 PINS
+RθJA                Junction-to-ambient thermal resistance                                                         66.2
+RθJC(top)           Junction-to-case (top) thermal resistance                                                      29.6
+RθJB                Junction-to-board thermal resistance                                                           34.4                 °C/W
+ψJT                 Junction-to-top characterization parameter                                                     7.1
+ψJB                 Junction-to-board characterization parameter                                                   33.8
+
+(1)    For more information about traditional and new thermal metrics, see the IC Package Thermal Metrics application report, SPRA953.
+
+
+
+
+4         Submit Documentation Feedback                                                     Copyright © 2003–2015, Texas Instruments Incorporated
+
+                                                           Product Folder Links: TPIC8101
+                                                                                                                                 TPIC8101
+www.ti.com                                                                                         SLIS110C – APRIL 2003 – REVISED MARCH 2015
+
+
+7.5 Electrical Characteristics
+VDD = 5 V ±5%, input frequency before prescaler = 4 to 20 MHz (±0.5%), TA = −40°C to 125°C (unless otherwise specified)
+                    PARAMETER                                    TEST CONDITIONS                       MIN        TYP         MAX     UNIT
+IDD(Q)       Quiescent current                          VDD = 5 V                                                  7.5                mA
+IDD(OP)      Operating current                          VDD = 5 V, XIN = 8 MHz                                                  20    mA
+Vmid0        Midpoint voltage                           VDD = 5 V, ISource = 2 mA                       2.3        2.5         2.55    V
+Vmid1        Midpoint voltage                           VDD = 5 V, ISink = 2 mA                         2.4        2.5          2.7    V
+Vmid2        Midpoint voltage                           VDD = 5 V, IL = 0 mA                            2.4        2.5          2.6    V
+             Internal pullup resistor CS, SDI, SCLK,
+Rpull0                                               VIN = GND                                          30                             kΩ
+             TEST
+Rpull1       Internal pulldown resistor INT/HOLD        VIN = VDD                                       20                             kΩ
+             Input leakage current CS, SDI, SCLK,       Measured at GND and VDD,
+Ilkg                                                                                                                            ±3     µA
+             INT/HOLD, TEST                             VDD = 5.5 V = VIN
+             Low-level input voltage INT/HOLD, CS,                                                                          30% of
+VIL
+             TEST, SDI, SCLK                                                                                                  VDD
+             High-level input voltage INT/HOLD,                                                     70% of
+VIH
+             CS, TEST, SDI, SCLK                                                                      VDD
+VOL          Low-level output voltage SDO               ISink = 4 mA, VDD = 5V                                                  0.7    V
+VOH          High-level output voltage SDO              ISource = 100 µA, VDD = 5 V                     4.4                            V
+                                                        Measured at GND and VDD = 5 V,
+Ilkg(OL)     Low-level leakage current SDO                                                             −10                      10     µA
+                                                        SDO in high impedance
+VOL(XOUT) Low-level output voltage                      ISink = 500 µA, VDD = 4.5 V                                             1.5    V
+VOH(XOUT
+             High-level output voltage                  ISource = 500 µA, VDD = 5 V                     4.4                            V
+)
+             Hysteresis voltage INT/HOLD, CS,
+Vhyst                                                                                                   0.4                            V
+             XIN, SDI, SCLK, TEST
+INPUT AMPLIFIERS
+             CH1FB and CH2FB high-level output          VDD = 5 V, ISource = 100 µA              VDD – 0.05 VDD – 0.02
+VOH (1)                                                                                                                                V
+             voltage                                    VDD = 5 V, ISource = 2 mA                 VDD – 0.5
+             CH1FB and CH2FB low-level output           ISink = 100 µA                                              15          50
+VOL (1)                                                                                                                               mV
+             voltage                                    ISink = 2 mA                                                           500
+             Cross-coupling attenuation CH1FB and ƒin max(ch1) = 20 kHz, measured on
+CATTEN                                                                                                  40                             dB
+             CH2FB                                channel 2
+Av           Open-loop gain                                                                             60         100                 dB
+GBW          Gain bandwidth product                     Input range 0.5 to 4.5 V                         1         2.6                MHz
+VIN          Input voltage range                                                                      0.05               VDD – 0.05    V
+V(offset)    Offset voltage at input                                                                   −10                      10    mV
+CMRR         Common-mode rejection ratio                Inputs at Vmid ƒin = 0 to 20 kHz                60          80                 dB
+PM           Phase margin                               Gain = 1, CL = 200 pF, RL = 100 kΩ              45                             °
+PRESCALER, XIN
+                                                        VDD = Vmin, oscillator inverter biased
+VOSC         Minimum input peak amplitude (1)                                                          150                            mV
+                                                        feedback resistor 1 MΩ, ƒosc = 24 MHz
+CIN          Input capacitance                          Assured by design                                                        7     pF
+Ilkg(XIN)    Leakage current                                                                            −1                       1     µA
+MULTIPLEXER
+             Cross-coupling attenuation (assured by ƒin max(ch1) = 20 kHz, measured on
+CATTEN                                                                                                  40                             dB
+             design)                                channel 2
+
+(1)    150-mV input amplitude on the 4-MHz clock input only applies if the feedback network is completed. Without the feedback network, the
+       4-MHz signal should be at 0- to 5-V levels.
+
+
+
+
+Copyright © 2003–2015, Texas Instruments Incorporated                                                Submit Documentation Feedback            5
+                                                         Product Folder Links: TPIC8101
+TPIC8101
+SLIS110C – APRIL 2003 – REVISED MARCH 2015                                                                                           www.ti.com
+
+
+Electrical Characteristics (continued)
+VDD = 5 V ±5%, input frequency before prescaler = 4 to 20 MHz (±0.5%), TA = −40°C to 125°C (unless otherwise specified)
+                    PARAMETER                                  TEST CONDITIONS                         MIN          TYP          MAX     UNIT
+ANTI-ALIASING FILTER
+ƒc (2)       Cut-off frequency at –3 dB                                                                 35            45           55     kHz
+             Response 1 to 20 kHz referenced to 1     70-mV RMS, input: CH1FB or CH2FB,
+BW                                                                                                      −1          −0.5             1     dB
+             kHz                                      output: OUT
+             Attenuation at 100 kHz referenced to 1   70-mV RMS, input: CH1FB or CH2FB,
+ATTEN                                                                                                  −10          −15                    dB
+             kHz                                      output: OUT
+ANALOG-TO-DIGITAL CONVERTER
+ƒs           Sampling frequency                       For all frequencies stated                       198           200          202     kHz
+AR           Analog resolution                                                                          10                                 bit
+ADNL         Differential linearity error (DNL)                                                                        1                   bit
+AINL         Linearity error (INL)                                                                                     1                   bit
+DIGITAL-TO-ANALOG CONVERTER
+ƒs(DA)       Sampling frequency                                                                        198           200          202     kHz
+DR           Resolution at 200 kHz                                                                      10                                 bit
+DDNL         Differential linearity error (DNL)       (Vreset < DACout < 0.98 VDD)                      −1                           1    LSB
+DINL         Linearity error (INL)                    (Vreset < DACout < 0.98 VDD)                    −2.5                         2.5    LSB
+             Repeatability (for characterization
+DRNIL                                                                                                   −1                           1    LSB
+             purposes only)
+OUTPUT BUFFER
+VOH          High-level output voltage                VDD = 5 V, ISource = 2 mA                  VDD – 0.2 VDD – 0.15                      V
+VOL          Low-level output voltage                 VDD = 5 V, ISink = 2 mA                                        120          175     mV
+Av           Open-loop gain                           IO = ±2 mA                                        60           100                   dB
+G            Output gain                              IO = ±2 mA                                                       1
+                                                      CL = 0 to 22 nF, max slew rate,
+Vripple      Ripple voltage                                                                                                        10     mV
+                                                      12 mV/µs from Vreset to 4 V
+                                                      CL = 0 to 22 nF, max slew rate,
+ts           Settling time                            12 mV/µs from Vreset to 4 V, output:                                         20      µs
+                                                      ±0.5 LSB
+
+(2)   ƒc is programmable (see Table 3).
+
+
+
+
+6         Submit Documentation Feedback                                                      Copyright © 2003–2015, Texas Instruments Incorporated
+
+                                                       Product Folder Links: TPIC8101
+                                                                                                                                  TPIC8101
+www.ti.com                                                                                    SLIS110C – APRIL 2003 – REVISED MARCH 2015
+
+
+7.6 Timing Requirements
+VDD = 5 V ±5%, TA = −40°C to 125°C (unless otherwise specified)
+                                                                                                       MIN       NOM        MAX     UNIT
+ƒSPI       SPI frequency                                                                                                      5     MHz
+t1         Time from CS falling edge to SCLK rising edge                                                 10                          ns
+t2         Time from CS falling edge to SCLK falling edge                                                80                          ns
+t3         Time for SCLK to go high                                                                      60                          ns
+t4         Time for SCLK to go low                                                                       60                          ns
+t5         Time from last SCLK falling edge to CS rising edge                                            80                          ns
+t6         Time from SDI valid to falling edge of SCLK                                                   60                          ns
+t7         Time for SDI valid after falling edge of SCLK                                                 10                          ns
+t8         Time after CS rises until INT/HOLD to go high                                                     8                       ns
+t9         Time between two words for transmitting                                                      170                          ns
+t10        Time for SDO valid after SDI on bus, at VDD = 5 V and load = 20 pF                                                40      ns
+
+
+                                t2                                                                                     t9
+
+                                             t3                                                         t8
+                   t1                                                                         t5                                      t1
+
+                                                  t4
+         CS
+
+
+
+
+       SCLK
+
+
+
+
+        SDI                XXX MSB                6        5       4       3        2     1          LSB
+
+                                                  t7
+                                             t6
+INT/HOLD
+
+
+
+       SDO                XXX        MSB          6        5       4       3       2      1          LSB
+
+                                       t10
+
+                                             Figure 1. Serial Peripheral Interface (SPI)
+
+
+
+
+Copyright © 2003–2015, Texas Instruments Incorporated                                              Submit Documentation Feedback           7
+                                                         Product Folder Links: TPIC8101
+TPIC8101
+SLIS110C – APRIL 2003 – REVISED MARCH 2015                                                                                 www.ti.com
+
+
+7.7 Typical Characteristics
+
+
+                        Input Signal                                                           Input Signal
+
+
+
+
+                     Int/Hold Signal                                                        Int/Hold Signal
+
+
+
+
+                                                                                             Output Signal
+                      Output Signal
+
+
+
+
+               Figure 2. Amplified Input Signal Process                            Figure 3. Input Signal Processing
+
+
+
+
+8      Submit Documentation Feedback                                               Copyright © 2003–2015, Texas Instruments Incorporated
+
+                                                  Product Folder Links: TPIC8101
+                                                                                                                                       TPIC8101
+www.ti.com                                                                                               SLIS110C – APRIL 2003 – REVISED MARCH 2015
+
+
+8 Detailed Description
+
+8.1 Overview
+The TPIC8101 is designed for knock sensor signal conditioning in automotive applications. The device is an
+analog interface between the engine acoustical sensors or accelerometers and the fuel management systems of
+a gasoline engine. The two wide-band amplifiers process signals from the piezoelectric sensors. Outputs of the
+amplifiers feed a channel select MUX switch and then a third-order antialiasing filter. This signal is converted
+using an analog-to-digital conversion (10 bits with a sampling frequency of 200 kHz) prior to the gain stage.
+
+8.2 Functional Block Diagram
+
+                                                                   Vref
+
+                                   VDD/2                +
+
+                                                        −
+
+
+     CH1P                      +
+
+     CH1N                      −
+
+   CH1FB                                                    Mux                                                 SAR
+                                                                                                                        <1:10>
+                                                                            3rd Order AAF                   10-Bit ADC
+     CH2P                      +                                                                           fs = 200 kHz
+
+     CH2N                      −
+
+   CH2FB
+
+
+
+                                                              Programmable
+                               Programmable                                                                     Programmable
+                                                                Band-Pass               Rectifier
+                                    Gain                                                                          Integrator
+                                                                  Filter
+
+
+                                                                              DSP
+
+
+
+                               R2R
+                           10-Bit DAC                   +                                       SPI
+                          fs = 200 kHz                                                       Test Mode
+                                                        −                                   DSP Control
+
+
+
+
+                         VDD         GND                           OUT      SDO SDI     SCLK        CS     TEST     INT/HOLD XIN        XOUT
+
+
+8.3 Feature Description
+The gain stage is adjustable through the SPI to compensate for the knock energies. The gain setting is
+selectable up to 64 values ranging from 0.111 to 2.0.
+The output of the gain stage feeds a band-pass filter circuit to process the particular frequency component
+associated with the engine and transducer.
+The band-pass filter has a gain of two and a center frequency range between 1.22 and 19.98 kHz (64-bit
+selection). The output from this stage is internally clamped.
+The output from the band-pass filter is full-wave rectified with its output clamped below VDD.
+
+
+
+
+Copyright © 2003–2015, Texas Instruments Incorporated                                                      Submit Documentation Feedback         9
+                                                             Product Folder Links: TPIC8101
+TPIC8101
+SLIS110C – APRIL 2003 – REVISED MARCH 2015                                                                            www.ti.com
+
+
+Feature Description (continued)
+The full-wave rectified signals are integrated using an integrator time constant set by the SPI and integration time
+window set by the pulse duration of INT/HOLD. At the start of each knock window, the integrator output is reset.
+The output of the integrator is internally clamped and the digital output may be directly interfaced to the
+microprocessor.
+The integrated signal is converted to an analog format by a 10-bit DAC. The microprocessor may interface to this
+signal, read this data, and adjust the spark ignition timing to optimize fuel efficiency related to load versus engine
+RPM.
+
+8.3.1 Functional Terminal Description
+
+8.3.1.1 Supply Voltage (VDD)
+The VDD terminal is the input supply for the IC, typically 5-V ±5% tolerant. A noise filter capacitor of 4.7 µF
+(typical) is required on this terminal to ensure stability of the internal circuits.
+
+8.3.1.2 Ground (GND)
+The GND terminal is connected to the system ground rail.
+
+8.3.1.3 Reference Supply (Vref)
+The Vref is an internally generated supply reference voltage for biasing the amplifier inputs. The terminal is used
+to decouple any noise in the system by placing an external capacitor of 22 nF (typical).
+
+8.3.1.4 Buffered Integrator Output (OUT)
+The OUT terminal is the output of the integrated signal. This is an analog signal interfaced to the microprocessor
+A/D channel for data acquisition. A capacitor of 2.2 nF is used to stabilize the signal output.
+
+8.3.1.5 Integration/Hold Mode Selection (INT/HOLD)
+The INT/HOLD is an input control signal from the microprocessor to select either to integrate the sensed signal
+or to hold the data for acquisition. There is an internal pulldown on this terminal (default HOLD mode).
+
+8.3.1.6 Chip Select for SPI (CS)
+The CS terminal allows serial communication to the IC through the SPI from a master controller. The chip select
+is active low with an internal pullup (default inactive).
+
+8.3.1.7 Oscillator Input (XIN)
+The XIN terminal is the input to the inverter used for the oscillator circuit. An external clock signal from the MCU,
+crystal, or ceramic resonator is configured with resistors and capacitors. To bias the inverter, place a resistor (1
+MΩ typical) across XIN and XOUT.
+This clock signal is prescaled to set the internal sampling frequency of the A/D converter.
+
+8.3.1.8 Oscillator Output (XOUT)
+The XOUT terminal is the output of the inverter used for the oscillator circuit.
+
+8.3.1.9 Data Output (SDO)
+The SDO output is the SPI data bus reporting information back to the microprocessor. This is a tri-state output
+with the output set to high-impedance mode when CS is pulled to VDD. The high-impedance state can also be
+programmed by setting a bit in the prescale word, which takes precedence over the CS setting. The output is
+disabled when the CS terminal is pulled high (VDD).
+
+8.3.1.10 Data Input (SDI)
+The SDI terminal is the communication interface for data transfer between the master and slave components.
+The SDI has an internal pullup to VDD; the data stream is in 8-bit word format.
+
+10     Submit Documentation Feedback                                          Copyright © 2003–2015, Texas Instruments Incorporated
+
+                                             Product Folder Links: TPIC8101
+                                                                                                                           TPIC8101
+www.ti.com                                                                                   SLIS110C – APRIL 2003 – REVISED MARCH 2015
+
+
+Feature Description (continued)
+8.3.1.11 Serial Clock (SCLK)
+The SCLK output signal is used for synchronous communication of data. Typically, the output from the master
+clock is low with the IC having an internal pullup resistor to VDD. The data is clocked to the internal shift register
+on the falling clock edge.
+
+8.3.1.12 Test (TEST)
+The TEST terminal, when pulled low, allows the IC to enter the test mode. During normal operation, this terminal
+is left open or tied high (VDD). There is an internal pullup to VDD (default).
+
+8.3.1.13 Feedback Output for Amplifiers (CH1FB and CH2FB)
+The CHXFB are amplifier outputs for the sensor signals. The gain of the respective amplifiers is set using the
+CHXFB and CHX input terminals (see Figure 1).
+
+8.3.1.14 Input Amplifiers (CH1P, CH1N, CH2P, and CH2N)
+CH1P, CH1N, CH2P, and CH2N are the inputs for the two amplifiers which interface to the external knock
+sensors.
+The gain is set by external resistors R1 and R2. The inputs and outputs of the amplifier are rail-to-rail compatible
+to the supply VDD.
+An internal multiplexer selects the desired sensor signal to process, which is programmable through the SPI.
+                                                                                   R2
+
+
+                                                                  C
+                                                                           CH1N
+                                                                                         −
+                                                                      R1
+                              Knock Sensor 1                             CH1P            +    CH1FB
+
+                                                                           Vref
+
+
+
+
+                                                                         CH2P            +    CH2FB
+                                                                  C   R1
+                                                                                         −
+                                                                           CH2N
+                              Knock Sensor 2
+
+                                                                                   R2
+
+   NOTE: The series capacitor C is not mandatory and may be removed in some application circuits
+
+                                                 Figure 4. Input Signal Configuration
+
+8.3.2 Timing Information
+This is an 8-bit SPI protocol used to communicate with the microcontroller in the system for setting various
+operating parameters.
+When CS is held high, the signals on the SCLK and SDI lines are ignored and SDO is forced into a high-
+impedance state. SCLK must be low when CS is asserted low.
+On each falling edge of the SCLK pulse after CS is asserted low, the new byte is serially shifted into the register.
+The most significant bit (MSB) is shifted first. Only eight bits in a frame are acceptable. When a number of bits
+shifted varies from the value eight, the information is ignored and the register retains the old setting.
+
+
+Copyright © 2003–2015, Texas Instruments Incorporated                                          Submit Documentation Feedback        11
+                                                        Product Folder Links: TPIC8101
+TPIC8101
+SLIS110C – APRIL 2003 – REVISED MARCH 2015                                                                                  www.ti.com
+
+
+Feature Description (continued)
+The shift register transfers the data into a latch register after the eighth SCLK clock pulse and when CS
+transitions from low to high (see Figure 1).
+The function of the integration mode is to ignore any SPI frame transmission when the INT/HOLD bit = 1. In the
+hold mode with INT/HOLD = 0, all necessary bytes may be transmitted.
+
+8.4 Device Functional Modes
+8.4.1 System Transfer Equation
+The output voltage may be derived from:
+                                        t
+     VO = VIN ´ AIN ´ AP ´ ABP ´ AINT ´ INT ´ A O + VRESET
+                                         tC
+      where
+           •   VIN = Input voltage peak (amplitude)
+           •   VO = Output voltage
+           •   AIN = Input amplifier gain setting
+           •   AP = Programmable gain setting
+           •   ABP = Gain of band-pass filter
+           •   AINT = Gain of integrator
+           •   tINT = Integration time from 0.5 to 10 ms
+           •   AO = Output buffer gain
+           •   τC = Programmable integrator time constant
+           •   VRESET = Reset voltage from which the integration operation starts                                                    (1)
+If ABP = AINT = 2 and AIN = AO = 1, then:
+                      8 t
+      VO = VIN ´ AP ´ ´ INT + VRESET
+                      P tC                                                                                                           (2)
+
+8.4.2 Programming in Normal Mode (TEST = 1)
+To enable programming in the normal mode, the TEST terminal must be high. Communication is through the SPI
+and the CS terminal is used to enable the IC. The information on the SDI line consists of two parts: address and
+data.
+After power up, the SPI is in default mode (see Table 1).
+
+8.4.3 Default SPI Mode
+The SPI is in the default mode on the power-up sequence. In this case, the SDO directly equals the SDI (echo
+function). In this mode, five commands can be transmitted by the master controller to configure the IC (see
+Table 1).
+
+
+
+
+12     Submit Documentation Feedback                                                Copyright © 2003–2015, Texas Instruments Incorporated
+
+                                                Product Folder Links: TPIC8101
+                                                                                                                                  TPIC8101
+www.ti.com                                                                                        SLIS110C – APRIL 2003 – REVISED MARCH 2015
+
+
+Device Functional Modes (continued)
+                                                          Table 1. Default SPI Mode
+ NO.             Code                             Command (t)                                      Data                      Response (t)
+                                                                                   OSCIN frequency
+                                                                                   D[4:1] = 0000 → 4 MHz
+                                                                                   D[4:1] = 0001 → 5 MHz
+                                                                                   D[4:1] = 0010 → 6 MHz
+                                                                                   D[4:1] = 0011 → 8 MHz
+                                                                                   D[4:1] = 0100 → 10 MHz                 SDI
+      1     010 D[4:0]       Set the prescaler and SDO status                      D[4:1] = 0101 → 12 MHz                 (010 D[4:0])
+                                                                                   D[4:1] = 0110 → 16 MHz
+                                                                                   D[4:1] = 0111 → 20 MHz
+                                                                                   D[4:1] = 1000 → 24 MHz
+                                                                                   D[0] = 0 → SDO active
+                                                                                   D[1] = 1 → SDO high impedance
+                                                                                   D[0] = 0 → Channel 1 selected          SDI
+      2     1110 000 D[0]    Select the channel
+                                                                                   D[1] = 1 → Channel 2 selected          (1110 000 D[0])
+                                                                                                                          SDI
+      3     00 D[5:0]        Set the band-pass center frequency                    D[5:0] (see Table 3)
+                                                                                                                          (00 D[5:0])
+                                                                                                                          SDI
+      4     10 D[5:0]        Set the gain                                          D[5:0] (see Table 3)
+                                                                                                                          (10 D[5:0])
+                                                                                                                          SDI
+      5     110 D[4:0]       Set the integration time constant                     D[4:0] (see Table 3)
+                                                                                                                          (100 D[4:0])
+                                                                                                                          SDI
+      6     0111 0001        Set SPI configuration to the advanced mode (1)        None
+                                                                                                                          (0111 0001)
+
+(1)       Command number 6 is to enter into the advanced mode.
+
+8.4.4 Advanced SPI Mode
+The advanced SPI mode has additional features to the default SPI mode. A control byte is written to the SDI and
+shifted with the MSB first. The response byte on the SDO is shifted out with the MSB first. The response byte
+corresponds to the previous command. Therefore, the SDI shifts in a control byte n and shifts out a response
+command byte n − 1. Each control/response pair of commands requires two full 8-bit shift cycles to complete a
+transmission. Table 2 shows the control bytes with the expected response.
+In the advanced SPI mode, only a power-down condition may reset the SPI mode to the default state on the
+subsequent power-up cycle.
+
+                             Table 2. Advanced SPI Mode Control Bytes and Expected Response
+ NO.            Code                        Command (t)                                Data                           Response (t)
+                                                                         OSCIN frequency
+                                                                         D[4:1] = 0000 → 4 MHz
+                                                                         D[4:1] = 0001 → 5 MHz
+                                                                         D[4:1] = 0010 → 6 MHz
+                                                                         D[4:1] = 0011 → 8 MHz
+                                                                         D[4:1] = 0100 → 10 MHz             Byte 1 (D7 to D0) of the digital
+      1     010 D[4:0]      Set the prescaler and SDO status             D[4:1] = 0101 → 12 MHz             integrator output
+                                                                         D[4:1] = 0110 → 16 MHz
+                                                                         D[4:1] = 0111 → 20 MHz
+                                                                         D[4:1] = 1000 → 24 MHz
+                                                                         D[0] = 0 → SDO active
+                                                                         D[1] = 1 → SDO high impedance
+                                                                         D[0] = 0 → Channel 1 selected      D9 to D8 of digital integrator
+      2     1110 000 D[0]   Select the channel
+                                                                         D[1] = 1 → Channel 2 selected      output followed by six zeros
+      3     00 D[5:0]       Set the band-pass center frequency           D[5:0] (see Table 3)               Byte 1 (MSB) of the 00000001
+      4     10 D[5:0]       Set the gain                                 D[5:0] (see Table 3)               Byte 2 (LSB) 11100000
+                                                                                                            SPI configuration (MSB)
+      5     110 D[4:0]      Set the integration time constant            D[4:0] (see Table 3)
+                                                                                                            01110001(LSB)
+
+Copyright © 2003–2015, Texas Instruments Incorporated                                                Submit Documentation Feedback             13
+                                                          Product Folder Links: TPIC8101
+TPIC8101
+SLIS110C – APRIL 2003 – REVISED MARCH 2015                                                                                        www.ti.com
+
+
+                 Table 2. Advanced SPI Mode Control Bytes and Expected Response (continued)
+ NO.          Code                      Command (t)                                Data                                Response (t)
+                                                                                                          Inverted SPI configuration
+     6   0111 0001     Set SPI configuration to the advanced mode None
+                                                                                                          (MSB)10001110(LSB)
+
+
+8.4.5 Digital Data Output from the TPIC8101
+Digital output:
+• Digital integrator output (10 bits, D[9:0])
+• First response byte (MSB): 8 bits for D7 to D0 of the integrator output
+• Second response byte (LSB): 2 bits for D9 to D8 of the integrator output followed by six zeros
+
+8.5 Programming
+                                                Table 3. Integrator Programming
+                      Integrator Time         Band-Pass                                                      Band-Pass
+  Decimal Value                                                                   Decimal Value
+                         Constant             Frequency             Gain                                     Frequency                Gain
+     (D4:D0)                                                                         (D5:D0)
+                            (µs)                 (kHz)                                                          (kHz)
+          0                 40                   1.22                 2                   32                     4.95              0.421
+          1                 45                   1.26               1.882                 33                     5.12                 0.4
+          2                 50                   1.31               1.778                 34                     5.29              0.381
+          3                 55                   1.35               1.684                 35                     5.48              0.364
+          4                 60                   1.4                 1.6                  36                     5.68              0.348
+          5                 65                   1.45               1.523                 37                     5.9               0.333
+          6                 70                   1.51               1.455                 38                     6.12                 0.32
+          7                 75                   1.57               1.391                 39                     6.37              0.308
+          8                 80                   1.63               1.333                 40                     6.64              0.296
+          9                 90                   1.71               1.28                  41                     6.94              0.286
+         10                 100                  1.78               1.231                 42                     7.27              0.276
+         11                 110                  1.87               1.185                 43                     7.63              0.267
+         12                 120                  1.96               1.143                 44                     8.02              0.258
+         13                 130                  2.07               1.063                 45                     8.46                 0.25
+         14                 140                  2.18                 1                   46                     8.95              0.236
+         15                 150                  2.31               0.944                 47                     9.5               0.222
+         16                 160                  2.46               0.895                 48                    10.12              0.211
+         17                 180                  2.54               0.85                  49                    10.46                 0.2
+         18                 200                  2.62               0.81                  50                    10.83                 0.19
+         19                 220                  2.71               0.773                 51                    11.22              0.182
+         20                 240                  2.81               0.739                 52                    11.65              0.174
+         21                 260                  2.92               0.708                 53                     12.1              0.167
+         22                 280                  3.03               0.68                  54                     12.6                 0.16
+         23                 300                  3.15               0.654                 55                    13.14              0.154
+         24                 320                  3.28               0.63                  56                    13.72              0.148
+         25                 360                  3.43               0.607                 57                    14.36              0.143
+         26                 400                  3.59               0.586                 58                    15.07              0.138
+         27                 440                  3.76               0.567                 59                    15.84              0.133
+         28                 480                  3.95               0.548                 60                    16.71              0.129
+         29                 520                  4.16                0.5                  61                    17.67              0.125
+         30                 560                  4.39               0.471                 62                    18.76              0.118
+         31                 600                  4.66               0.444                 63                    19.98              0.111
+
+
+
+
+14       Submit Documentation Feedback                                                    Copyright © 2003–2015, Texas Instruments Incorporated
+
+                                                      Product Folder Links: TPIC8101
+                                                                                                                                   TPIC8101
+www.ti.com                                                                                         SLIS110C – APRIL 2003 – REVISED MARCH 2015
+
+
+8.5.1 Programming Examples
+• Prescaler/SDO status:
+   – 01000101 programs an input frequency of 6 MHz with SDO terminal in high impedance.
+• Channel selection:
+   – 1110001 selects channel 2.
+• Band-pass frequency:
+   – 00100111 programs a band-pass filter with center frequency of 6.37 kHz.
+• Gain control:
+   – 10010100 programs the gain with attenuation of 0.739.
+• Integrator time constant:
+   – 11000011 programs integrator time constant of 55 µs. Table 1 through Table 3 show the binary values.
+
+8.5.2 Programming in TEST Mode (TEST = 0)
+To enter test mode, the TEST terminal must be low. See Table 4 for the signal that may be accessed in this
+mode.
+
+                                                  Table 4. Programming in TEST Mode
+                                         SDI
+  NO.    Test Description              Command           Response                                  Description
+                                       MSB, LSB
+                                                                     Deactivates the input and output operational amplifiers
+   T1    AAF individual test         1111, 0000         ADC clock    AAF input connected to CH1FB terminal
+                                                                     AAF output connected to OUT terminal
+         In-line test to AAF                                         Deactivates the output operational amplifier
+   T2                                1111, 0000         None
+         output                                                      AAF output connected to OUT terminal
+                                                                     Opens the feedback loop of the output buffer and deactivates the input
+         Output buffer individual                                    operational amplifier and AAF
+   T3                                1111, 0010         None
+         test                                                        CH1FB connected to positive input terminal of operational amplifier
+                                                                     CH2FB connected to negative input terminal of operational amplifier
+                                                                     Deactivates the input operational amplifiers and AAF INT/HOLD =
+         ADC/DAC individual                                          ADC_Sync
+   T4    test (with the output       1111, 0011         ADC data
+                                                                     OSCIN = ADC_SCLK
+         buffer)
+                                                                     DAC shifted in from SDI terminal
+                                                                     Deactivates the input operational amplifiers, AAF, and output buffer
+         ADC/DAC individual                                          INT/HOLD = ADC_Sync
+   T5    test (without the output    1111, 0100         ADC data
+         buffer)                                                     OSCIN = ADC_SCLK
+                                                                     DAC is shifted in from SDI terminal
+                                                                     INT/HOLD = ADC_Sync
+         In-line test to ADC
+   T6                                1111, 0011         ADC data     OSCIN = ADC_SCLK
+         output
+                                                                     DAC shifted in from SDI terminal
+                                                                     Implies command number 6 (advanced SPI mode)
+                                                                     D[0]: Gain stage clamp status
+         Reading of digital                             Clamp flag   D[1]: BPF stage clamp status
+   T7                                1111, 1000
+         clamp flag                                     D[2:0]       D[2]: INT stage clamp status
+                                                                     D = 0 → No clamp activated
+                                                                     D = 1 → Clamp activated
+
+
+
+
+Copyright © 2003–2015, Texas Instruments Incorporated                                                Submit Documentation Feedback            15
+                                                          Product Folder Links: TPIC8101
+TPIC8101
+SLIS110C – APRIL 2003 – REVISED MARCH 2015                                                                                   www.ti.com
+
+
+9 Application and Implementation
+
+                                                         NOTE
+             Information in the following applications sections is not part of the TI component
+             specification, and TI does not warrant its accuracy or completeness. TI’s customers are
+             responsible for determining suitability of components for their purposes. Customers should
+             validate and test their design implementation to confirm system functionality.
+
+
+9.1 Application Information
+The TPIC8101 can interface with one or two flat type or resonant knock sense elements. Flat type (non-resonant)
+sensors have a wider frequency bandwidth than resonant type sensors. A microprocessor must also interface
+with the TPIC8101 as shown in Figure 5. The microprocessor may sample the output data either through SPI or
+by sampling the analog OUT signal.
+
+9.2 Typical Application
+
+                                              VDD
+                                                                     OUT
+                          4.7 µF
+                                                                                                          A/D
+                                       R2
+                                              CH1FB
+                        3.3 nF
+                                                                       CS
+                                              CH1N
+                                 R1                                 SCLK
+ Knock Sensor 1
+                                                       TPIC8101       SDI
+                                              CH1P
+                                                                     SDO
+                                                                                                                Microprocessor
+                                              Vref                  TEST
+                       100 nF
+                                                                INT/HOLD
+                                              CH2P
+                                                                                         470 pF
+                                                                      XIN
+                                       R2
+                                              CH2FB                                            1 kΩ
+                        3.3 nF                                      XOUT
+                                              CH2N                                1 MΩ
+                                 R1
+ Knock Sensor 2                               GND
+
+
+
+                                             Figure 5. Application Schematic
+
+9.2.1 Design Requirements
+After the knock sense element and the microprocessor are chosen, the designer can choose the TPIC8101
+settings. The settings that must be programmed through SPI are: ƒbp, ƒosc, AP, τC, and channel. If the analog
+output is used, then the INT/HOLD signal must be supplied by the microprocessor.
+The input amplifier gain (AIN) is typically set to 1 by setting R1 = R2. R1 and R2 should be chosen to be greater
+than 25 kΩ.
+
+
+
+
+16     Submit Documentation Feedback                                                 Copyright © 2003–2015, Texas Instruments Incorporated
+
+                                                 Product Folder Links: TPIC8101
+                                                                                                                                      TPIC8101
+www.ti.com                                                                                              SLIS110C – APRIL 2003 – REVISED MARCH 2015
+
+
+Typical Application (continued)
+                                                   Table 5. System Design Constraints
+  PARAMETER                                       CONSTRAINT                                  VALUE FOR DESIGN EXAMPLE
+                       Amplitude of input signal from knock sensor; determined by knock
+        VIN                                                                             300 mVpp
+                       sensor specification
+                       Bandpass center frequency; determined by knock sensor
+        ƒbp                                                                                   7.3 kHz
+                       specification
+        ƒosc           Oscillator frequency; determined by microprocessor                     6 MHz
+                       Integration window; determined by system specification. This is
+        tINT           half the period of the INT/HOLD signal (when using a 50% duty          3 ms
+                       cycle) which is generated by the microprocessor.
+       VOUT            Maximum voltage on the OUT pin for the maximum VIN                     4.5 V
+
+
+9.2.2 Detailed Design Procedure
+Design parameters to set:
+AIN: Input amplifier gain, typically set to 1
+AP: Programmable gain
+τC: Integration time constant
+Design equations:
+          R2
+     AIN
+          R1                                                                                                                                   (3)
+              tINT
+     WC
+         2 u S u VOUT                                                                                                                          (4)
+Use Equation 2 to solve for AP:
+           S        V      VRESET
+    AP ( ) u WC u OUT
+           8           VIN u tINT                                                                                                              (5)
+
+For this design example, use the parameters specified in Table 5. This example is for a resonant knock sensor.
+Using Equation 4:
+            3 ms
+     WC                        106 Ps
+         2 u S u 4.5                                                                                                                           (6)
+Using Equation 5:
+          S               4.5 V  0.125 V
+     AP ( ) u (106 Ps) u
+          8              (0.15 V) u (3 ms)                                                                                                     (7)
+AP = 0.38
+Table 6 lists the parameters to program.
+
+                                                    Table 6. Parameters to Program
+                                                                   Programmed                  Code
+                        Parameter         Calculated Value                                                               SPI
+                                                                      Value              DEC          HEX
+                  Oscillator             6 MHz                 6 MHz                                            1000010
+                  Channel                1                     1                                                11100000
+                  ƒC0                    7.3 kHz               7.27 kHz                  42             2A      101010
+                  AP                     0.38                  0.381                     34             22      10100010
+                  τC                     106 µs                100 µs                    10             0A      10001010
+
+
+
+
+Copyright © 2003–2015, Texas Instruments Incorporated                                                        Submit Documentation Feedback     17
+                                                        Product Folder Links: TPIC8101
+TPIC8101
+SLIS110C – APRIL 2003 – REVISED MARCH 2015                                                                                       www.ti.com
+
+
+Figure 6 shows the input and output signals for this design example.
+For a resonant knock sensor (as in the design example), the center frequency of the bandpass filter is set to the
+resonant frequency of the knock sensor. For a flat-type knock sensor, the bandpass filter design equation can be
+used to determine where the center frequency should be set.
+The transfer function of the biquadratic bandpass IIR filter is:
+                               b0  b2 u z 2
+      HBP (z)    GBP u
+                         a0  a1 u z 1  a2 u z 2
+
+                                                                                        sin(Z)
+      With b0     D , b2      Da0     1  D , a1   2 u cos(Z) , a2    1 D , D
+                                                                                        2uQ                                               (8)
+                   fcenter               fcenter
+      Z   u Su               ,Q                  , and G(fc2 )   G(fc1)   G(fcenter )  3 dB
+                  fsampling             fc2  fc1
+
+      With GBP      2, Q      2.3                                                                                                         (9)
+
+9.2.3 Application Curve
+
+
+
+                      7270 kHz,
+                      300 mVpp
+
+
+
+
+                      INT, 3 ms
+
+                                                                                                              4.48 V
+
+                      Output
+
+
+
+
+                                                   Figure 6. TPIC8101 Waveform
+
+
+
+
+18     Submit Documentation Feedback                                                     Copyright © 2003–2015, Texas Instruments Incorporated
+
+                                                       Product Folder Links: TPIC8101
+                                                                                                                                  TPIC8101
+www.ti.com                                                                                          SLIS110C – APRIL 2003 – REVISED MARCH 2015
+
+
+10 Power Supply Recommendations
+A 5-V ±0.25 V power supply should be used to power the TPIC8101. It can operate on 5 V ±0.5 V; however, the
+electrical characteristics are not specified in that case. The maximum operating current consumption is 20 mA.
+
+11 Layout
+
+11.1 Layout Guidelines
+The layout of the TPIC8101 can be routed as a two layer board, with the top layer primarily used for routing
+signals and the second layer used primarily as a ground plane.
+The capacitors on VDD and VREF should be kept close to their respective pins and tie immediately through vias
+to ground. VREF should be connected to CH1P and CH2P in as tight a loop as possible. It can be routed on the
+second layer if necessary.
+The resistor between Ch1N and CH1FB and CH2N and CH2FB should be kept close to the respective pins. The
+rest of the input signal chain should be routed cleanly to avoid noise interference.
+The filter on XIN and XOUT for the input clock should be kept close to the XIN and XOUT pins.
+
+11.2 Layout Example
+
+                                                         VDD                              CH1P
+                                                                                                                               To channel 1 sensor
+                                                         GND                              CH1N
+Expand GND plane to second                               VREF                             CH1FB
+layer through vias, and use to
+fill in spaces on top layer                              OUT                              CH2FB
+
+                                                          NC                              CH2N
+                                                                                                                               To channel 2 sensor
+                                                          NC                              CH2P
+
+                                                        INT/HOLD                          /TEST
+
+   To clock input                                         /CS                             SCLK
+
+                                                          XIN                                 SDI
+
+                                                         XOUT                                 SDO
+
+
+
+
+                                                        Figure 7. PCB Layout Example
+
+
+
+
+Copyright © 2003–2015, Texas Instruments Incorporated                                                 Submit Documentation Feedback            19
+                                                             Product Folder Links: TPIC8101
+TPIC8101
+SLIS110C – APRIL 2003 – REVISED MARCH 2015                                                                                      www.ti.com
+
+
+12 Device and Documentation Support
+12.1 Trademarks
+All trademarks are the property of their respective owners.
+12.2 Electrostatic Discharge Caution
+         These devices have limited built-in ESD protection. The leads should be shorted together or the device placed in conductive foam
+         during storage or handling to prevent electrostatic damage to the MOS gates.
+
+
+12.3 Glossary
+SLYZ022 — TI Glossary.
+   This glossary lists and explains terms, acronyms, and definitions.
+
+13 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+
+
+
+
+20     Submit Documentation Feedback                                                    Copyright © 2003–2015, Texas Instruments Incorporated
+
+                                                    Product Folder Links: TPIC8101
+                                                                                                                                                                      PACKAGE OPTION ADDENDUM
+
+       www.ti.com                                                                                                                                                                                                   10-Nov-2025
+
+
+
+
+PACKAGING INFORMATION
+
+       Orderable part number          Status     Material type      Package | Pins      Package qty | Carrier        RoHS             Lead finish/              MSL rating/               Op temp (°C)          Part marking
+                                        (1)            (2)                                                             (3)            Ball material             Peak reflow                                           (6)
+                                                                                                                                            (4)                      (5)
+
+            TPIC8101DW               Obsolete     Production        SOIC (DW) | 20                 -                    -                 Call TI                  Call TI                 -40 to 125           TPIC8101DW
+           TPIC8101DWR                Active      Production        SOIC (DW) | 20       2000 | LARGE T&R             Yes                NIPDAU           Level-3-260C-168 HR/             -40 to 125           TPIC8101DW
+                                                                                                                                                           Level-1-235C-UNLIM
+          TPIC8101DWR.A               Active      Production        SOIC (DW) | 20       2000 | LARGE T&R             Yes                NIPDAU           Level-3-260C-168 HR/             -40 to 125           TPIC8101DW
+                                                                                                                                                           Level-1-235C-UNLIM
+
+(1)
+      Status: For more details on status, see our product life cycle.
+
+(2)
+   Material type: When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+
+(3)
+      RoHS values: Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+
+(4)
+   Lead finish/Ball material: Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+
+(5)
+  MSL rating/Peak reflow: The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+
+(6)
+      Part marking: There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+
+
+
+                                                                                                          Addendum-Page 1
+                                                                               PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                                                        20-Apr-2024
+
+
+
+TAPE AND REEL INFORMATION
+
+       REEL DIMENSIONS                                                                      TAPE DIMENSIONS
+                                                                                       K0       P1
+
+
+
+                                                                                                                       B0 W
+                                        Reel
+                                      Diameter
+                                                                                    Cavity           A0
+                                                                A0   Dimension designed to accommodate the component width
+                                                                B0   Dimension designed to accommodate the component length
+                                                                K0   Dimension designed to accommodate the component thickness
+                                                                W    Overall width of the carrier tape
+                                                                P1   Pitch between successive cavity centers
+
+
+                                       Reel Width (W1)
+                              QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+
+                                                                                                      Sprocket Holes
+
+
+                                                 Q1        Q2          Q1    Q2
+
+                                                 Q3        Q4          Q3    Q4                  User Direction of Feed
+
+
+
+                                                            Pocket Quadrants
+
+
+*All dimensions are nominal
+             Device           Package Package Pins              SPQ       Reel   Reel   A0                   B0         K0     P1     W     Pin1
+                               Type Drawing                             Diameter Width (mm)                 (mm)       (mm)   (mm)   (mm) Quadrant
+                                                                          (mm) W1 (mm)
+      TPIC8101DWR              SOIC      DW           20        2000        330.0        24.4        10.8   13.3       2.7    12.0   24.0    Q1
+
+
+
+
+                                                                      Pack Materials-Page 1
+                                                                PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                              20-Apr-2024
+
+
+
+ TAPE AND REEL BOX DIMENSIONS
+
+
+
+
+                                                               Width (mm)
+                                                                              H
+                      W
+
+
+
+
+                                                          L
+
+
+
+
+*All dimensions are nominal
+             Device           Package Type   Package Drawing   Pins         SPQ    Length (mm)   Width (mm)   Height (mm)
+      TPIC8101DWR                SOIC             DW           20           2000      350.0        350.0         43.0
+
+
+
+
+                                                       Pack Materials-Page 2
+                                                                                                           PACKAGE OUTLINE
+DW0020A                                                         SCALE 1.200
+                                                                                                       SOIC - 2.65 mm max height
+                                                                                                                                          SOIC
+
+
+
+                                                                                                                           C
+
+                                    10.63                                                                  SEATING PLANE
+                                          TYP
+                                    9.97
+                                           PIN 1 ID                                                                  0.1 C
+         A
+                                           AREA
+                                                                                     18X 1.27
+                                                                              20
+               1
+
+
+
+
+       13.0                                                                          2X
+       12.6                                                                         11.43
+      NOTE 3
+
+
+
+
+               10
+                                                               11
+                                                                                         0.51
+                                                                                   20X
+                                       7.6                                               0.31                2.65 MAX
+                    B                                                                     0.25     C A B
+                                       7.4
+                                      NOTE 4
+
+
+
+
+                                                                                    0.33
+                                                                                         TYP
+                                                                                    0.10
+
+
+                                                                                           0.25
+                                 SEE DETAIL A                                       GAGE PLANE
+
+
+
+                                                                                                                        1.27              0.3
+                                                                                            0 -8                        0.40              0.1
+
+                                                                                                                        DETAIL A
+                                                                                                                          TYPICAL
+
+
+                                                                                                                               4220724/A 05/2016
+
+NOTES:
+
+1. All linear dimensions are in millimeters. Dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+   per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+   exceed 0.15 mm per side.
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.43 mm per side.
+5. Reference JEDEC registration MS-013.
+
+
+
+
+                                                                              www.ti.com
+                                                                               EXAMPLE BOARD LAYOUT
+DW0020A                                                                                 SOIC - 2.65 mm max height
+                                                                                                                           SOIC
+
+
+
+
+                               20X (2)                           SYMM
+
+                                           1
+                                                                                              20
+
+                          20X (0.6)
+
+
+
+                             18X (1.27)
+
+
+
+                                                                                                     SYMM
+
+
+
+
+                            (R0.05)
+                            TYP
+
+
+
+
+                                          10                                                  11
+
+
+                                                                 (9.3)
+
+
+                                                    LAND PATTERN EXAMPLE
+                                                               SCALE:6X
+
+
+
+
+                SOLDER MASK                                         METAL UNDER                             SOLDER MASK
+                                                   METAL                                                    OPENING
+                OPENING                                             SOLDER MASK
+
+
+
+
+                                      0.07 MAX                                           0.07 MIN
+                                      ALL AROUND                                         ALL AROUND
+
+                              NON SOLDER MASK                                            SOLDER MASK
+                                  DEFINED                                                  DEFINED
+
+                                                         SOLDER MASK DETAILS
+                                                                                                                4220724/A 05/2016
+NOTES: (continued)
+
+6. Publication IPC-7351 may have alternate designs.
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+
+
+
+
+                                                                www.ti.com
+                                                                               EXAMPLE STENCIL DESIGN
+DW0020A                                                                                   SOIC - 2.65 mm max height
+                                                                                                                                SOIC
+
+
+
+
+                                 20X (2)
+                                                                  SYMM
+                                            1
+                                                                                               20
+
+                           20X (0.6)
+
+
+
+                              18X (1.27)
+
+
+
+                                                                                                    SYMM
+
+
+
+
+                                           10                                                  11
+
+                                                                   (9.3)
+
+
+
+                                                     SOLDER PASTE EXAMPLE
+                                                   BASED ON 0.125 mm THICK STENCIL
+                                                              SCALE:6X
+
+
+
+
+                                                                                                                  4220724/A 05/2016
+NOTES: (continued)
+
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+   design recommendations.
+9. Board assembly site may have different recommendations for stencil design.
+
+
+
+
+                                                                 www.ti.com
+                                         IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+
+                                                Copyright © 2025, Texas Instruments Incorporated
+                                                                Last updated 10/2025
+

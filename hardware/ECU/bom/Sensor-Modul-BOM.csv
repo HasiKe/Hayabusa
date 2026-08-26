@@ -1,0 +1,47 @@
+Reference,Qty,Value,Footprint,MPN,Manufacturer,DigiKey,DK_Stock,Mouser,MO_Stock,Chosen_Distributor,Datasheet,Validated,DNP,Notes
+"C7,C5,C3,C14,C17,C18,C15,C16,C13,C4,C6,C8",12,10nF,0805,CC0805KRX7R9BB103,Yageo,311-1136-1-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-1136-1-ND,,,
+"C11,C12,C1,C2",4,0.01uF,0805,CC0805KRX7R9BB103,Yageo,311-1136-1-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-1136-1-ND,,,
+C23,1,100uF,1206,CL31A107MQHNNNE,Samsung Electro-Mechanics,1276-1782-1-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=1276-1782-1-ND,,,
+C33,1,4.7uF,0805,CC0805KKX7R7BB475,Yageo,311-1883-1-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-1883-1-ND,,,
+"C39,C24,C27,C28",4,1uF,0805,CC0805KKX7R7BB105,Yageo,311-1365-1-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-1365-1-ND,,,
+"C43,C45",2,2.2uF/50V,1210,C3225X7R1H225K250AB,TDK,445-1431-1-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=445-1431-1-ND,,,
+C44,1,4.7nF,0805,CC0805KRX7R9BB472,Yageo,311-1133-1-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-1133-1-ND,,,
+C46,1,100nF/100V,0805,C0805C104K1RACTU,KEMET,399-C0805C104K1RACTUCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=399-C0805C104K1RACTUCT-ND,,,
+"C47,C36,C37,C38,C50,C53,C41,C40,C34,C42,C26,C29",12,0.1uF,0805,CC0805KRX7R9BB104,Yageo,311-1140-1-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-1140-1-ND,,,
+"C48,C49",2,33uF,CP_Elec_6.3x7.7,EEE-1HA330XP,Panasonic,PCE3925CT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=PCE3925CT-ND,,,
+"C51,C52",2,22 µF,EEE1AA221P,EEE-FK1H220P,Panasonic,PCE3811CT-ND,,,,DigiKey,http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1142.pdf,,,Ersatz: EEE-1HA220AP war 8mm-Durchmesser (Footprint 6.3mm) + NRND
+C54,1,22uF/10V,1210,GRM32ER71A226KE20L,Murata,490-1876-1-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=490-1876-1-ND,,,
+"C55,C35,C21,C22,C25,C9,C10,C19,C20,C32,C31,C30",12,100nF,0805,CC0805KRX7R9BB104,Yageo,311-1140-1-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-1140-1-ND,,,
+"D1,D7,D5,D6",4,SMAJ5.0A,SMA,SMAJ5.0A,Littelfuse,SMAJ5.0ALFCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=SMAJ5.0ALFCT-ND,,,3.3V-SMA-TVS nicht lieferbar (MCC 16 Wo.); 5V-Standoff klemmt vergleichbar
+D2,1,SK510L,SMC,SK510L-TP,MCC,SK510L-TPMSCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=SK510L-TPMSCT-ND,,,Ersatz fuer SS5P10 (TO-277-Package passte nicht zu SMC-Footprint)
+D3,1,SMBJ33A,SMB,SMBJ33A,Littelfuse,SMBJ33ALFCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=SMBJ33ALFCT-ND,,,
+D4,1,NUP2105L,SOT-23,NUP2105LT1G,onsemi,NUP2105LT1GOSCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=NUP2105LT1GOSCT-ND,,,
+D8,1,SMCJ18A,SMC,SMCJ18A,Littelfuse,SMCJ18ALFCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=SMCJ18ALFCT-ND,,,
+D9,1,SL310A,SMA_Handsoldering,SL310A-TP,MCC,SL310A-TPMSCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=SL310A-TPMSCT-ND,,,
+"F3,F2,F1",3,50mA,1206,0ZCJ0005FF2E,Bel Fuse,5923-0ZCJ0005FF2ECT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=5923-0ZCJ0005FF2ECT-ND,,,
+F4,1,0.5A/30V,1812,1812L050/60MR,Littelfuse,F8132CT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=F8132CT-ND,,,
+"IC1,IC4,IC2,IC3",4,MAX31855KASA+,SOIC127P600X175-8N,MAX31855KASA+T,Analog Devices,MAX31855KASA+TCT-ND,,700-MAX31855KASA+,,DigiKey,https://datasheets.maximintegrated.com/en/ds/MAX31855.pdf,,,
+IC5,1,STM32G474RBT6,QFP50P1200X1200X160-64N,STM32G474RBT6,STMicroelectronics,STM32G474RBT6-ND,,511-STM32G474RBT6,,DigiKey,https://www.st.com/resource/en/datasheet/stm32g474cb.pdf,,,Aktuell 0 Lager bei DigiKey - Beschaffung pruefen (Alternative STM32G474RET6 pinkompatibel)
+IC6,1,LD1117S33C,LD1117S33C,LD1117S33CTR,STMicroelectronics,497-1241-1-ND,,N/A,,DigiKey,https://www.st.com/resource/en/datasheet/ld1117.pdf,,,
+"J2,J1",2,MX23A12NF1,MX23A12NF1,MX23A12NF1,JAE Electronics,670-1683-ND,,656-MX23A12NF1,,DigiKey,https://www.jae.com/direct/topics/topics_file_download/topics_id=64755&ext_no=06&_lang=en&v=,,,Gegenstecker MX23A12SF1 + Kontakte separat
+J3,1,1-776266-1,17762661,1-776266-1,TE Connectivity,A128219-ND,,571-1-776266-1,,DigiKey,https://componentsearchengine.com/Datasheets/1/1-776266-1.pdf,,,AMPSEAL 14-pol; Gegenstecker+Kontakte separat beschaffen
+J4,1,Conn_01x06_Pin,PinHeader_1x06_P2.54mm_Vertical,61300611121,Würth Elektronik,732-5319-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=732-5319-ND,,,
+L1,1,BLM18AG601SN1,0603,BLM18AG601SN1D,Murata,490-1014-1-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=490-1014-1-ND,,,
+L2,1,10uH/1A,1210,LQH32PN100MNCL,Murata,490-LQH32PN100MNCLCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=490-LQH32PN100MNCLCT-ND,,,Irms 900mA / Isat 1A
+L3,1,10uH/1.8A,Bourns_SRN6045TA,SRN6045TA-100M,Bourns,SRN6045TA-100MCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=SRN6045TA-100MCT-ND,,,
+Q1,1,SQM120N06-3M5L,TO-263-2,SQM120N06-3M5L_GE3,Vishay Siliconix,SQM120N06-3M5L_GE3CT-ND,,942-IRLB8721PBF,,DigiKey,http://uk.rs-online.com/web/p/products/7259322,,,Ersatz: IPB80N06S4L-07 discontinued (Infineon PCN 2023)
+"R1,R4,R12,R14,R13,R11,R3,R2",8,100R,ERJ6ENF1000V,ERJ-6ENF1000V,Panasonic,P100CCT-ND,,,,DigiKey,http://docs-europe.electrocomponents.com/webdocs/13ba/0900766b813ba21b.pdf,,,
+"R24,R23,R30",3,2k,RESC2012X60N,RC0805FR-072KL,Yageo,311-2.00KCRCT-ND,,603-RC0805FR-072KL,,DigiKey,http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_10.pdf,,,
+"R32,R38,R40",3,10k,1206,RC1206FR-7W10KL,Yageo,13-RC1206FR-7W10KLTR-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=13-RC1206FR-7W10KLTR-ND,,,
+R41,1,100,ERJ6ENF1000V,ERJ-6ENF1000V,Panasonic,P100CCT-ND,,,,DigiKey,http://docs-europe.electrocomponents.com/webdocs/13ba/0900766b813ba21b.pdf,,,
+"R42,R50,R7,R20,R17,R19,R8,R10,R9,R18",10,10k,0805,RC0805FR-0710KL,Yageo,311-10.0KCRCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-10.0KCRCT-ND,,,
+R43,1,15k,0805,RC0805FR-0715KL,Yageo,311-15.0KCRCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-15.0KCRCT-ND,,,
+"R44,R33,R37,R29,R22,R25,R36,R35,R26,R34,R31,R28,R21,R39,R27",15,1k,0805,RC0805FR-071KL,Yageo,311-1.00KCRCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-1.00KCRCT-ND,,,
+R45,1,10k,0805,RC0805JR-0710KL,Yageo,311-10KARCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-10KARCT-ND,,,
+"R47,R46",2,60R4,0805,RC0805FR-0760R4L,Yageo,311-60.4CRCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-60.4CRCT-ND,,,
+"R48,R6,R15,R16,R5",5,0R,0805,RC0805JR-070RL,Yageo,311-0.0ARCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-0.0ARCT-ND,,,
+R49,1,40k2,0805,RC0805FR-0740K2L,Yageo,311-40.2KCRCT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=311-40.2KCRCT-ND,,,
+U1,1,SP720,SOIC-16_3.9x9.9mm_P1.27mm,SP720ABTG,Littelfuse,F3162CT-ND,,,,DigiKey,https://m.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sp720_datasheet.pdf.pdf,,,
+U2,1,CSTNE16M0V530000R0,CSTNE16M0V530000R0,CSTNE16M0V530000R0,Murata,490-17948-1-ND,,81-CSTNE16M0V530000R,,DigiKey,https://www.murata.com/products/productdata/8801160822814/SPEC-CSTNE16M0V530000R0.pdf,,,
+U3,1,MCP2562FD-E/SN,SOIC-8_3.9x4.9mm_P1.27mm,MCP2562FD-E/SN,Microchip Technology,MCP2562FD-E/SN-ND,,,,DigiKey,http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf,,,
+U4,1,TPS560430Y-Q1,SOT-23-6,TPS560430YQDBVRQ1,Texas Instruments,296-TPS560430YQDBVRQ1CT-ND,,,,DigiKey,https://www.digikey.de/de/products/result?keywords=296-TPS560430YQDBVRQ1CT-ND,,,X-Q1-Variante existiert nicht; Y=2.1MHz passt zu 10uH-Spule

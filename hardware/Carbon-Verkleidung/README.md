@@ -245,4 +245,34 @@ Statt gewebtes Carbon wird **Forged Carbon** (Hacksel/Carbon-Chips) verwendet f�
 ---
 
 **Erstellt:** 20.04.2026  
-**Letzte Änderung:** -
+**Letzte Änderung:** 10.07.2026
+
+---
+
+## Bestellungen
+
+### 2026-07-09 (eBay)
+
+| Artikel | Menge | Preis | Artikelnr. | Lieferung | Zweck |
+|---------|-------|-------|-----------|-----------|-------|
+| Carbon Komplett-Set 1,0m² (Gewebe Köper 500g + Epoxidharz + Härter) | 1 | 54,80 € | 351950274329 | 10.-11.07. | Sichtseite Laminat |
+| Reparaturset 1,5 kg Epoxidharz + Härter + 2 m² Glasfasermatte 300g | 1 | 29,95 € | — | 09.07. | Form-Aufbau (GFK) |
+| Carbon Fasern Forged Carbon 10mm (Hacksel) | 1 | 23,99 € | 147353947624 | 11.-14.07. | Forged Carbon Optik |
+| 12V Vakuumpumpe / Kompressor (Mini) | 1 | 14,94 € | 156106557152 | 13.-14.07. | Vakuum-Setup |
+| Polyethylen Folie (Gewächshausfolie, als Vakuumfolie) | 1 | 26,95 € | 336632493222 | offen | Vakuum-Sack |
+| Mini Folienschweißgerät / Bag Sealer | 1 | 19,39 € | 317547652872 | 14.-21.07. | Vakuumfolie verschweißen |
+
+**Gesamt:** **170,02 €**
+
+### Liefertermine (Stand 10.07.2026)
+
+| Artikel | Fenster | Status |
+|---------|---------|--------|
+| Carbon Komplett-Set | Fr 10.07. – Sa 11.07. | heute/morgen |
+| Reparaturset (Epoxid+GFK) | ~10.-13.07. | verschickt 09.07. |
+| PE-Folie (Vakuumsack) | ~11.-14.07. | verschickt, Tracking verfügbar |
+| Forged Carbon 10mm | Sa 11.07. – Di 14.07. | verschickt |
+| 12V Vakuumpumpe | Mo 13.07. – Di 14.07. | bestätigt |
+| Mini Folienschweißgerät | Di 14.07. – Di 21.07. | verschickt (ohne Tracking) |
+
+**Alles zwischen 10.–21.07. da.** Erstes Teil zum Anfangen: Carbon-Set + Reparaturset heute/morgen — GFK-Form kannst du direkt starten während Rest ankommt.

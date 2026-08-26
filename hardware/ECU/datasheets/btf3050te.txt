@@ -1,0 +1,2767 @@
+HITFET - BTF3050TE                                                                                  BTF3050TE
+Smart Low-Side Power Switch
+
+
+
+
+1             Overview
+Application
+•   Suitable for resistive, inductive and capacitive loads
+•   Replaces electromechanical relays, fuses and discrete circuits
+•   Most suitable for inductive loads as well as loads with inrush currents
+
+Features
+•   Single channel device
+•   Very low power DMOS leakage current in OFF state
+•   3.3 V and 5 V compatible logic inputs                                               PG-TO252-5
+•   Electrostatic discharge protection (ESD)
+•   Adjustable switching speed
+•   Digital Feedback
+•   Green Product (RoHS compliant)
+•   AEC Qualified
+
+Description
+The BTF3050TE is a 50 mΩ single channel Smart Low-Side Power Switch in a PG-TO252-5 package providing
+embedded protective functions. The power transistor is built by a N-channel vertical power MOSFET.
+The device is monolithically integrated. The BTF3050TE is automotive qualified and is optimized for 12V
+automotive and industrial applications.
+
+Table 1       Product Summary
+Operating voltage range                                            VOUT                 3 .. 28 V
+Maximum load voltage                                               VBAT(LD)             40 V
+Operating supply voltage range                                     VDD                  3.0 .. 5.5 V
+Maximum input voltage                                              VIN                  5.5 V
+Maximum On-State resistance at TJ = 150°C, VDD = 5V                RDS(ON)              100 mΩ
+Nominal load current                                               IL(NOM)              3.0 A
+Minimum current limitation trigger level                           IL(LIM)_TRIGGER      30 A
+Maximum OFF state load current at TJ ≤ 85 °C                       IL(OFF)              2 µA
+Maximum stand-by supply current at TJ = 25 °C                      IDD(OFF)             6 µA
+
+
+
+
+Type                                   Package                                Marking
+BTF3050TE                              PG-TO252-5
+
+Datasheet                                                1                                  Rev. 1.1, 2018-08-28
+                                                                                   HITFET - BTF3050TE
+                                                                           Smart Low-Side Power Switch
+
+                                                                                                         Overview
+
+
+Diagnostic Functions
+•   Short circuit to battery
+•   Over temperature
+•   Stable latching diagnostic signal
+
+Protection Functions
+•   Over temperature shutdown with auto-restart
+•   Active clamp over voltage protection of the output
+•   Current limitation
+•   Enhanced short circuit protection
+
+Detailed Description
+The device is able to switch all kind of resistive, inductive and capacitive loads, limited by clamping energy (EAS)
+and maximum current capabilities.
+The BTF3050TE offers dedicated ESD protection on the IN, VDD and SRP pins which refers to the Ground pin,
+as well as an over voltage clamping of the output to Source/GND.
+The over voltage protection gets activated during inductive turn off conditions or other over voltage events (e.g.
+load dump). The power MOSFET is limiting the drain-source voltage, if it rises above the VOUT(CLAMP).
+The over temperature protection prevents the device from overheating due to overload and/or bad cooling
+conditions.
+The BTF3050TE has a thermal-restart function. The device will turn on again, if input is still high, after the
+measured temperature has dropped below the thermal hysteresis.
+
+
+
+
+Datasheet                                                2                                    Rev. 1.1, 2018-08-28
+                                                                                                               HITFET - BTF3050TE
+                                                                                                       Smart Low-Side Power Switch
+
+                                                                                                                                     Table of Contents
+
+
+Table of Contents
+
+1       Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+2       Block Diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+3       Pin Configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3.1     Pin Assignment BTF3050TE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3.2     Pin Definitions and Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3.3     Voltage and Current Definition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+4       General Product Characteristics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+4.1     Absolute Maximum Ratings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+4.2     Functional Range . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+4.3     Thermal Resistance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+4.3.1    PCB set up . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+4.3.2    Transient Thermal Impedance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+5       Power Stage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+5.1     Output On-state Resistance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+5.2     Resistive Load Output Timing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+5.3     Inductive Load . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+5.3.1     Output Clamping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+5.3.2     Maximum Load Inductance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+5.4     Reverse/Inverse Current Capability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+5.5     Adjustable Swtiching Speed / Slew Rate . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+5.6     Characteristics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+6       Protection Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+6.1     Over Voltage Clamping on OUTput . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+6.2     Thermal Protection with Latched Fault Signal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+6.3     Overcurrent Limitation / Short Circuit Behavior . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+6.4     Characteristics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+7       Diagnostics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+7.1     Functional Description of the SRP Pin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+7.2     Characteristics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+8       Supply and Input Stage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+8.1     Supply Circuit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+8.1.1     Undervoltage Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+8.2     Input Circuit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+8.3     Characteristics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+9       Electrical Characteristics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+9.1     Power Stage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+9.2     Protection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+9.3     Diagnostics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+9.4     Supply and Input Stage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+10      Characterisation Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+10.1    Power Stage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+10.2    Dynamic charactersitics: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+10.3    Protection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+10.4    Supply and Input Stage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+11      Application Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+
+
+Datasheet                                                                   3                                                     Rev. 1.1, 2018-08-28
+                                                                                                           HITFET - BTF3050TE
+                                                                                                   Smart Low-Side Power Switch
+
+                                                                                                                               Table of Contents
+
+
+11.1    Design and Layout Recommendations/Considerations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+12      Package Outlines BTF3050TE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+13      Revision History . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+
+
+
+
+Datasheet                                                                4                                                  Rev. 1.1, 2018-08-28
+                                                                                        HITFET - BTF3050TE
+                                                                                Smart Low-Side Power Switch
+
+                                                                                                 Block Diagram
+
+
+2           Block Diagram
+
+                            VDD
+
+
+
+                                                                                                     OUT
+                                   Supply                   Over          Over-
+                                    Unit                   Voltage     temperature
+                                                          Protection    Protection
+                                                 Gate
+    IN                                          Driving
+                                                 Unit
+                         Status
+                        Feedback
+                                         Slewrate
+ SRP                                    adjustment
+                                                                Short circuit
+                                           Unit
+                                                                detection /
+                 ESD                                              Current
+               Protection                                        limitation
+
+                                                                                                     GND
+
+
+                                                                                               BlockDiagram_5pin.emf
+
+Figure 1    Block Diagram
+
+
+
+
+Datasheet                                                 5                                 Rev. 1.1, 2018-08-28
+                                                                                              HITFET - BTF3050TE
+                                                                                      Smart Low-Side Power Switch
+
+                                                                                                        Pin Configuration
+
+
+3                 Pin Configuration
+
+3.1               Pin Assignment BTF3050TE
+
+                                                           (top view)
+
+
+                                                                                  5      GND
+                                                                                  4      SRP
+                                      OUT                   6 (Tab)               3      OUT
+                                                                                  2      VDD
+                                                                                  1      IN
+
+                                                                                                     PinConfig_DPAK5.emf
+Figure 2          Pin Configuration PG-TO252-5
+
+3.2               Pin Definitions and Functions
+
+Pin   Symbol            Function
+1     IN                Input pin
+2     VDD               5V supply pin
+3,6   OUT               Drain, Load connection for power DMOS
+4     SRP               Slew rate adjustment and digital status feedback
+5     GND               Ground, Source of power DMOS
+
+3.3               Voltage and Current Definition
+Figure 3 shows all external terms used in this data sheet, with associated convention for positive values.
+
+
+           VBAT
+                                                                                                               V BAT
+
+           VDD
+                       VDD
+                                                                            IDD
+
+                                                                                                         ZL
+                             R IN                                       VDD
+                                                    I IN
+                                                            IN
+                                    VIN                                                   I L, I D
+                                                                                  OUT
+                                           I SRP
+                                                            SRP
+                                                   VSRP                                                VOUT,
+                                                                                                       VDS
+                                                                        GND
+
+
+                                          R SRP
+        GND
+                                                                                                        Terms_5pin.emf
+
+Figure 3          Naming Definition of electrical parameters
+
+
+Datasheet                                                               6                             Rev. 1.1, 2018-08-28
+                                                                                             HITFET - BTF3050TE
+                                                                                     Smart Low-Side Power Switch
+
+                                                                                          General Product Characteristics
+
+
+4             General Product Characteristics
+
+4.1           Absolute Maximum Ratings
+
+Table 2       Absolute Maximum Ratings1)
+TJ = -40 °C to +150 °C; all voltages with respect to ground, positive current flowing into pin
+(unless otherwise specified)
+Pos.      Parameter                                       Symbol         Limit Values     Unit   Note /
+                                                                     Min.      Max.              Test Condition
+Voltages
+4.1.1     Supply voltage                                  VDD      -0.3        5.5        V      –
+4.1.2     Output voltage                                  VOUT     -0.3        40         V      internally clamped
+                                                                                                 1)
+4.1.3     Battery voltage for short circuit               VBAT(SC) –           28         V
+          protection                                                                             l = 0 ... 5m
+                                                                                                 RSC = 30 mΩ + RCABLE
+                                                                                                 RCABLE = l * 16 mΩ/m
+                                                                                                 LSC = 5 µH + LCABLE
+                                                                                                 LCABLE = l * 1 µH/m
+                                                                                                 2)
+4.1.4     Battery voltage for load dump protection VBAT(LD)          –         40         V
+          (VBAT(LD) = VA + VS with VA = 13.5V)                                                   RI = 2 Ω,
+                                                                                                 RL = 4.5 Ω,
+                                                                                                 tD = 400 ms,
+                                                                                                 suppressed pulse
+Input and SRP Pins
+4.1.5     Input Voltage                                   VIN        -0.3      5.5        V      –
+4.1.6     SRP pin Voltage                                 VSRP       -0.3      5.5        V      VSRP < VDD
+Power Stage
+4.1.7     Load current                                    |IL|       –         IL(LIM)_   A      TJ < 150 °C
+                                                                               TRIGGER
+Energies
+4.1.8     Unclamped single inductive energy               EAS        –         120        mJ     IL(0) = IL(NOM)
+          single pulse                                                                           VBAT = 13.5 V
+                                                                                                 TJ(0) = 150 °C
+4.1.9     Unclamped repetitive inductive energy           EAR(100k) –          80         mJ     IL(0) = 4.5A
+          pulse with 100k cycles                                                                 VBAT = 13.5 V
+                                                                                                 TJ(0) = 105 °C
+Temperatures
+4.1.10    Operating temperature                           TJ         -40       +150       °C     –
+4.1.11    Storage temperature                             TSTG       -55       +150       °C     –
+ESD Susceptibility
+4.1.12    ESD susceptibility (all pins)                   VESD       -2        2          kV     HBM3)
+4.1.13    ESD susceptibility OUT pin vs. GND              VESD       -4        4          kV     HBM3)
+4.1.14    ESD susceptibility                              VESD       -750      750        V      CDM4)
+1) Not subject to production test, specified by design.
+
+
+
+
+Datasheet                                                        7                                     Rev. 1.1, 2018-08-28
+                                                                                            HITFET - BTF3050TE
+                                                                                    Smart Low-Side Power Switch
+
+                                                                                        General Product Characteristics
+
+
+2)   VBAT(LD) is setup without the DUT connected to the generator per ISO7637-1;
+     RI is the internal resistance of the load dump test pulse generator;
+     tD is the pulse duration time for load dump pulse (pulse 5) according ISO 7637-1, -2.
+3) ESD susceptibility, HBM according to ANSI/ESDA/JEDEC JS-001 (1.5 kΩ, 100 pF)
+4) ESD susceptibility, Charged Device Model “CDM” ESDA STM5.3.1 or ANSI/ESD S.5.3.1
+
+Note: Stresses above the ones listed here may cause permanent damage to the device. Exposure to absolute
+      maximum rating conditions for extended periods may affect device reliability.
+Note: Integrated protection functions are designed to prevent IC destruction under fault conditions described in the
+      data sheet. Fault conditions are considered as “outside” normal operating range. Protection functions are
+      not designed for continuous repetitive operation
+
+4.2            Functional Range
+
+Table 3        Functional Range1)
+
+
+Pos. Parameter                                            Symbol            Limit Values
+                                                                                       Unit Note /
+                                                                        Min. Typ. Max.      Test Condition
+4.2.1 Supply Voltage Range for Normal                     VDD(NOR)      3.0     5.0    5.5   V    –
+      Operation
+4.2.2 Supply current continuous ON operation              IDD           –       2.5    6     mA   –
+4.2.3 Standby supply current (ambient)                    IDD(OFF)_25 –         1.5    6     µA   TJ = 25 °C
+4.2.4 Maximum standby supply current (hot)                IDD(OFF)_150 –        6      14    µA   TJ = 150°C
+4.2.5 Battery Voltage Range for Nominal                   VBAT(NOR) 8           13.5   18    V    –
+      Operation
+4.2.6 Extended Battery Voltage Range for                  VBAT(EXT)     3       –      28    V    parameter deviations
+      Operation                                                                                   possible
+4.2.7 SRP pin resistor for normal operation               RSRP(NOR)     5       –      70    kΩ   –
+4.2.8 SRP pin resistor for extended operation             RSRP(EXT)     0       –      600   Ω    no latched fault
+                                                                                                  available
+1) Not subject to production test, specified by design.
+
+Note: Within the functional range the IC operates as described in the circuit description. The electrical
+      characteristics are specified within the conditions given in the related electrical characteristics table.
+
+
+
+
+Datasheet                                                       8                                  Rev. 1.1, 2018-08-28
+                                                                                          HITFET - BTF3050TE
+                                                                                  Smart Low-Side Power Switch
+
+                                                                                        General Product Characteristics
+
+
+4.3            Thermal Resistance
+Note: This thermal data was generated in accordance with JEDEC JESD51 standards.
+      For more information, go to www.jedec.org.
+Table 4        Thermal resistance
+
+
+Pos.       Parameter                               Symbol             Limit Values            Unit     Note /
+                                                               Min.       Typ.      Max.               Test Condition
+                                                                                                       1) 2)
+4.3.1      Junction to Case                        RthJC       –          1.9       –         K/W
+                                                                                                       1) 3)
+4.3.2      Junction to Ambient (2s2p)              RthJA(2s2p) –          25        –         K/W
+                                                                                                       1) 4)
+4.3.3      Junction to Ambient                     RthJA(1s0p) –          38        –         K/W
+           (1s0p+600mm2 Cu)
+1) Not subject to production test, specified by design
+2) Specified RthJC value is simulated at natural convection on a cold plate setup (all pins are fixed to ambient temperature).
+   TC = 85 °C. Device is loaded with 1W power.
+3) Specified RthJA value is according to Jedec JESD51-2,-5,-7 at natural convection on FR4 2s2p board;
+   The product (Chip+Package) was simulated on a 76.2 x 114.3 x 1.5 mm board with 2 inner copper layers (2 x 70µm Cu, 2
+   x 35µm Cu). Where applicable a thermal via array under the exposed pad contacted the first inner copper layer.
+   Ta = 85 °C, Device is loaded with 1W power.
+4) Specified RthJA value is according to Jedec JESD51-2,-5,-7 at natural convection on FR4 1s0p board;
+   The product (Chip+Package) was simulated on a 76.2 x 114.3 x 1.5 mm board with additional heatspreading copper area
+   of 600mm2 and 70 μm thickness. Ta = 85°C, Device is loaded with 1W power.
+
+
+4.3.1          PCB set up
+The following PCB set up was implemented to determine the transient thermal impedance.
+
+
+                                                                   70μm modelled (traces)
+              1,5 mm
+
+
+
+
+                                                                   35μm, 100% metalization*
+                                                                   70μm, 5% metalization*
+
+Figure 4       Cross section JEDEC2s2p.
+
+
+
+                                                                  70μm modelled (traces, cooling area)
+              1,5 mm
+
+
+
+
+                                                                  70μm; 5% metalization*
+
+Figure 5       Cross section JEDEC1s0p.
+
+
+
+
+Datasheet                                                     9                                       Rev. 1.1, 2018-08-28
+                                                                                                     HITFET - BTF3050TE
+                                                                                             Smart Low-Side Power Switch
+
+                                                                                                General Product Characteristics
+
+
+
+
+                                                 JEDEC 1s0p / Footprint
+           JEDEC 1s0p / 600 mm²                                                                        Detail: Solder area
+                                                     JEDEC 2s2p
+
+Figure 6            PCB layout
+
+4.3.2               Transient Thermal Impedance
+
+                           30
+
+
+
+                           25
+
+
+
+                           20
+            Zth-JA [K/W]
+
+
+
+
+                           15
+
+
+
+                           10
+
+
+
+                            5
+
+
+
+                            0
+                           0,00001   0,0001   0,001        0,01            0,1      1   10       100         1000            10000
+
+
+                                                                          tp. [s]
+
+Figure 7            Typical transient thermal impedance ZthJA = f(tp), Ta = 85 °C
+                    Value is according to Jedec JESD51-2,-7 at natural convection on FR4 2s2p board; The
+                    product (Chip+Package) was simulated on a 76.2 x 114.3 x 1.5 mm³ board with 2 inner copper
+                    layers (2 x 70 mm Cu, 2 x 35 mm Cu). Where applicable a thermal via array under the ex posed
+                    pad contacted the first inner copper layer. Device is dissipating 1 W power.
+
+
+
+
+Datasheet                                                                     10                                   Rev. 1.1, 2018-08-28
+                                                                                                 HITFET - BTF3050TE
+                                                                                         Smart Low-Side Power Switch
+
+                                                                                            General Product Characteristics
+
+
+
+
+                           110
+
+                           100
+
+                           90
+
+                           80
+                                                                                                            600mm
+                           70                                                                               300mm
+            Zth-JA [K/W]
+
+
+
+
+                                                                                                            Footprint
+                           60
+
+                           50
+
+                           40
+
+                           30
+
+                           20
+
+                           10
+
+                             0
+                            0,00001   0,0001   0,001   0,01   0,1         1   10   100     1000   10000
+
+
+                                                                    tp. [s]
+
+Figure 8             Typical transient thermal impedance ZthJA = f(tp), Ta = 85 °C
+                     Value is according to Jedec JESD51-3 at natural convection on FR4 1s0p board. Device is
+                     dissipating 1 W power.
+
+
+
+
+Datasheet                                                               11                                Rev. 1.1, 2018-08-28
+                                                                                                                          HITFET - BTF3050TE
+                                                                                                                  Smart Low-Side Power Switch
+
+                                                                                                                                             Power Stage
+
+
+5                Power Stage
+
+5.1              Output On-state Resistance
+The on-state resistance depends on the supply voltage as well as on the junction temperature TJ. Figure 9 shows
+this dependencies in terms of temperature and voltage for the typical on-state resistance RDS(ON). The behavior in
+reverse polarity is described in chapter“Reverse/Inverse Current Capability” on Page 14.
+
+                                  130
+
+
+
+
+                                  110
+
+
+                                                                                                                                        3V
+
+                                   90
+                   RDS(ON) [mΩ}
+
+
+
+
+                                                                                                                                        5V
+                                   70
+
+
+
+
+                                   50
+
+
+
+
+                                   30
+
+
+
+
+                                   10
+                                        -40          -20          0     20     40        60           80          100   120   140
+                                                                                    Tj [⁰C]
+
+
+Figure 9         Typical On-State Resistance,
+                 RDS(ON) = f(TJ), VDD = 5 V, VDD = 3V, VIN = high
+A high signal at the input pin causes the power DMOS to switch ON with a dedicated slope.
+To achieve a reasonable RDS(ON) and the specified switching speed a 5V supply is required.
+
+5.2              Resistive Load Output Timing
+Figure 10 shows the typical timing when switching a resistive load.
+
+       VIN
+       V IN(H)
+       V IN(L)
+                                                                                                                                    t
+      VOUT
+        V BAT
+       90 %
+                                                                 -(ΔV/Δt) ON                   ( ΔV/Δt) OFF
+       50 %
+
+
+       10 %
+                                              tDON               tF                           tDOFF           tR                t
+                                                           tON                                             tOFF                          Switching.emf
+
+Figure 10        Definition of Power Output Timing for Resistive Load
+
+
+
+
+Datasheet                                                                           12                                              Rev. 1.1, 2018-08-28
+                                                                                 HITFET - BTF3050TE
+                                                                         Smart Low-Side Power Switch
+
+                                                                                                         Power Stage
+
+
+5.3         Inductive Load
+
+5.3.1       Output Clamping
+When switching off inductive loads with low side switches, the drain-source voltage VOUT rises above battery
+potential, because the inductance intends to continue driving the current. To prevent unwanted high voltages the
+device has a voltage clamping mechanism to keep the voltage at VOUT(CLAMP). During this clamping operation mode
+the device heats up as it dissipates the energy from the inductance. Therefore the maximum allowed load
+inductance is limited. See Figure 11 and Figure 12 for more details.
+
+
+                                                                                        VBAT
+
+
+                                                                                 ZL
+
+
+                                                                IL
+
+
+                                                            OUT (DMOS Drain)
+                                                                               VOUT
+
+
+
+
+                                                            GND ( DMOS Source)
+
+                                                                                 IGND
+
+
+
+Figure 11   Output Clamp Circuitry
+.
+
+
+
+
+                VIN
+
+
+
+               IOUT                                                                              t
+
+
+
+
+              VOUT                                                                                   t
+
+         VOUT( CLAMP)
+
+
+
+
+              VBAT
+
+
+                                                                                                 t
+
+Figure 12   Switching an Inductive Load
+
+
+Datasheet                                             13                                       Rev. 1.1, 2018-08-28
+                                                                                                                                                                HITFET - BTF3050TE
+                                                                                                                                                        Smart Low-Side Power Switch
+
+                                                                                                                                                                           Power Stage
+
+
+Note: Repetitive switching of inductive load by VDD instead of using the input is a not recommended operation and
+      may affect the device reliability and reduce the lifetime.
+
+5.3.2                     Maximum Load Inductance
+While demagnetization of inductive loads, energy has to be dissipated in the BTF3050TE.
+This energy can be calculated by the following equation:
+
+                   V BAT – V OUT(CLAMP) ⎛                                                          RL ⋅ IL                           ⎞           L
+E = V OUT(CLAMP) ⋅ ---------------------------------------------------
+                                                                     - ⋅ ln ⎜1 – ---------------------------------------------------
+                                                                                                                                   - ⎟ + I L ⋅ ------
+                                          RL                                ⎝    V   BAT        –   V    OUT(CLAMP) ⎠                          R   L
+
+
+Following equation simplifies under assumption of RL = 0
+
+    1       2 ⎛                          V BAT                           ⎞
+E = --- LI L ⋅ ⎜ 1 – ---------------------------------------------------
+                                                                       -⎟
+    2          ⎝     V BAT – V OUT(CLAMP) ⎠
+
+
+
+
+Figure 13 shows the inductance / current combination the BTF3050TE can handle.
+For maximum single avalanche energy please also refer to EAS value in “Energies” on Page 7
+
+             1000000
+
+
+
+
+             100000
+
+
+
+
+               10000
+    L [mH]
+
+
+
+
+               1000
+
+
+
+
+                100
+
+
+
+
+                  10
+
+
+
+
+                    1
+                        0,1                                                                                                 1                                                       10
+                                                                                                                        IL [A]
+
+Figure 13                 Maximum load inductance for single pulse
+                          L = f(IL), TJ,start = 150 °C, VBAT = 13.5 V
+
+5.4                       Reverse/Inverse Current Capability
+A reverse battery situation means the OUT pin is pulled below GND potential to -VBAT via the load ZL.
+In this situation the load is driven by a current through the intrinsic body diode of the BTF3050TE and all protection,
+such as current limitation, over temperature or over voltage clamping, are inactive.
+In certain application cases (for example, usage in a bridge or half-bridge configuration) the intrinsic reverse body
+diode is used for freewheeling of an inductive load. In this case the device is still supplied but an inverse current
+is flowing from GND to OUT(drain) and the OUT will be pulled below GND.
+
+
+Datasheet                                                                                                       14                                                  Rev. 1.1, 2018-08-28
+                                                                                    HITFET - BTF3050TE
+                                                                            Smart Low-Side Power Switch
+
+                                                                                                          Power Stage
+
+
+In inverse or reverse operation via the reverse body diode, the device is dissipating a power loss which is defined
+by the driven current and the voltage drop on the body diode -VDS.
+During inverse current, an increased supply current IDD flowing into VDD needs to be considered . The device might
+be reset by inverse current.
+
+5.5          Adjustable Swtiching Speed / Slew Rate
+In order to optimize electromagnetic emission, the switching speed of the MOSFET can be adjusted by connecting
+an external resistor between SRP pin and GND. This allows for balancing between electromagnetic emissions and
+power dissipation. Shorting the SRP pin to GND represents the fastest switching speed. Open SRP pin represents
+the slowest switching speed. It is recommended to put a high ohmic resistor like 200kΩ on this SRP pin to GND.
+The accuracy of the switching speed adjustment is dependent on the precision of the external resistor used. It’s
+recommended to use accurate resistors.
+Figure 14 shows the simplified relation between the resistor value and the switching times.
+
+
+
+
+          tON,                                                              undefined range
+          tOFF                                                              (not recommended for
+                                                                            operation)
+
+
+
+
+                       Undefined
+                       range for
+                       fault
+                       feedback
+
+
+
+
+                 0   600       5k   5.8k                            58k   70k                 160k      RSRP [Ω]
+
+Figure 14    Typical simplified relation between switching time and RSRP resistor values used on SRP pin
+             (VBAT = 13.5V)
+It is not recommended to change the slew rate resistance during switching (supplied device, VDD > VDD(UV_ON)).
+Otherwise undefined switching behavior can occur.
+
+Slew Rate in Fault mode (fault signal set):
+Beside the normal slew rate function the SRP pin is also used as fault feedback output. In case of a latched fault
+caused by over temperature detection the SRP pin will be internally pulled to VDD. For details please refer to
+“Functional Description of the SRP Pin” on Page 21. In this operation mode (latched fault signal) the slew rate
+control by RSRP will be ignored and the switching speed (dynamic characteristics) will be set to fault mode default
+values . As long as the fault signal is set and the SRP-pin is not shorted to GND a fast default slew rate adjustment
+(like for RSRP = 5.8kΩ) will be applied to the device.
+
+
+
+
+Datasheet                                                15                                        Rev. 1.1, 2018-08-28
+                                                                                   HITFET - BTF3050TE
+                                                                           Smart Low-Side Power Switch
+
+                                                                                                  Power Stage
+
+
+If the SRP pin will be externally pulled up above the normal SRP pin voltage VSRP(NOR) (e.g. to VDD) the slowest
+slew rate settings will be applied.
+
+
+
+5.6         Characteristics
+Please see “Power Stage” on Page 25 for electrical characteristic table.
+
+
+
+
+Datasheet                                             16                                  Rev. 1.1, 2018-08-28
+                                                                                     HITFET - BTF3050TE
+                                                                             Smart Low-Side Power Switch
+
+                                                                                              Protection Functions
+
+
+6            Protection Functions
+The device provides embedded protection functions. Integrated protection functions are designed to prevent IC
+destruction under fault conditions described in the datasheet. Fault conditions are considered as “outside” normal
+operating range. Protection functions are not to be used for continuous or repetitive operation. Over temperature
+is indicated by a high-logic active fault signal on the SRP pin.
+
+6.1          Over Voltage Clamping on OUTput
+The BTF3050TE is equipped with a voltage clamp circuitry that keeps the drain-source voltage VDS at a certain
+level VOUT(CLAMP). The over voltage clamping is overruling the other protection functions. Power dissipation has to
+be limited to keep the maximum allowed junction temperature.
+This function is also used in terms of inductive clamping. Please see also “Output Clamping” on Page 13 for
+more details.
+
+6.2          Thermal Protection with Latched Fault Signal
+The device is protected against over temperature due to overload and/or bad cooling conditions by an integrated
+temperature sensor. The thermal protection is available if the device is active. .
+The device incorporates an absolute (TJ(SD)) and a dynamic temperature limitation (ΔTJ(SW)). Triggering one of
+them will cause the output to switch off.
+The switch off will be done with the fastest possible slew rate. The BTF3050TE has a thermal-restart function. If
+input (IN) is still high the device will turn on again after the junction temperature has dropped below the thermal
+hysteresis.
+In case of detected over temperature the fault signal will be set and the SRP pin will be internally pulled up to VDD.
+This state is latched independent on the IN signal, providing a stable fault signal to be read out by a micro
+controller. The latched fault signal needs to be reset by low signal (VSRP < VSRP(RESET)_MIN) at the SRP pin, provided
+that the junction temperature has decreased at least below the thermal hysteresis in the meantime. To reliably
+reset the latch the SRP pin needs to be pulled down with a minimum length of tRESET.
+As long as the fault signal is set and the SRP-pin is not shorted to GND a fast default slew rate adjustment (like
+for RSRP = 5.8kΩ) will be applied to the device.
+If the latched fault signal is not reset, the device logic stays active (also if IN = low) not entering the quiescent
+current mode and therefore reaching upper limits of normal supply current IDD.
+Please see “Diagnostics” on Page 21 for details on the feedback and reset function.
+
+
+
+
+Datasheet                                                17                                    Rev. 1.1, 2018-08-28
+                                                                                                         HITFET - BTF3050TE
+                                                                                                 Smart Low-Side Power Switch
+
+                                                                                                                  Protection Functions
+
+
+                                        Dynamic                       Absolute over
+                                        thermal shutdown              temperature shutdown
+                                           Auto restart                  Auto restart     no overload
+            IN
+        VIN(H )
+
+              0
+          Tj(DM OS )                                                                                                              t
+
+           Tj(SD )
+                         ΔTj (SD )_HY
+
+
+
+
+                                                          ΔTj (SW )
+                       ΔTj(SW)
+              Ta
+
+          VSR P                                                                                                                   t
+
+  V SR P(FAULT)
+  VSR P (R ESET )
+    VSR P (NOR)
+           ISR P                                                                                                                  t
+   ISPR (FAULT )
+
+              0
+                                                                                                                                  t
+                                        Error Status Latch ;                           Status Latched    Status Latch reset
+                                        (SRP pulled up internal )                      also at IN =low   (by external pull
+                                                                                                         down of SRP )
+                                                                                                                    Thermal _fault _autores tart. emf
+
+
+Figure 15              Thermal protective switch OFF scenario for case of overload or short circuit
+Note: For better understanding, the time scale is not linear. The real timing of this drawing is application
+      dependant.
+
+6.3                    Overcurrent Limitation / Short Circuit Behavior
+This device is providing a smart overcurrent limitation which provides protection against short circuit conditions
+while allowing also load inrush currents higher than the current limitation level. To achieve this the device has a
+current limitation level IL(LIM) which is triggered by a higher trigger level IL(LIM)_TRIGGER.
+The condition short circuit is an overload condition to the device.
+If the load current IL reaches the current limitation trigger level IL(LIM)_TRIGGER the internal current limitation will be
+activated and the device limits the current to a lower value IL(LIM). The device starts heating up. When the thermal
+shutdown temperature TJ(SD) is reached, the device turns off. The time from the beginning of current limitation until
+the over temperature switch off depends strongly on the cooling conditions.
+If input is still high the device will turn on again after the measured temperature has dropped below the thermal
+hysteresis. The current limitation trigger is a latched signal. It will be only reset by input (IN) pin low and resetting
+the fault latch (SRP-pin = low (below reset threshold)) at the same time. This means if the input stays high all the
+time during short circuit the current will be limited to IL(LIM) the following pulses (during thermal restart). It also
+means that the output current is limited to the current limitation level IL(LIM) until the current limitation trigger is not
+reset.
+Figure 16 shows this behavior.
+
+
+
+
+Datasheet                                                                    18                                     Rev. 1.1, 2018-08-28
+                                                                                                                            HITFET - BTF3050TE
+                                                                                                                    Smart Low-Side Power Switch
+
+                                                                                                                                               Protection Functions
+
+
+                                          Occurrence of low-ohmic short circuit
+                                                                                                                           Reset fault and current limit by
+                                                 Drain current triggering IL (LIM )_T RIGGER -> current limit to IL( LIM ) „fault latch reset by SRP=low(external
+                                                                                                                           pulled down)“ and
+                                                        Thermal shut-down (dynamic); setting fault latch
+                                                                                                                           „IN=low“ and
+                                                                Thermal restart after thermal shut down           ;        „DMOS off (ID=0A)“
+                                                                limited to current limitation level                                                     Restart into
+                                                                                                                               Restart into short
+                                                                       Thermal shut-down (over temp.)                          circuit                  normal load condition
+               IN
+            VIN(H)
+               0
+                                                                                                                                                                     t
+               ID
+
+         VBAT /Zs c
+
+    IL(LIM )_TRIGGER
+
+
+
+          IL(LIM)
+
+
+
+
+                                                                                                                                                                     t
+            Tj( DM OS)
+             Tj(SD)
+                         ΔTj(SD)_HY
+                                      ΔTj(SW )
+
+                    Ta
+           VSRP                                                                                                                                                      t
+     V SRP(FAULT )
+    VSRP (NOR)
+               0
+                                                                                                                                                                    t
+                                                                                                                    tRESET
+                                                                                                                                                         S hort_c ircuit.emf
+
+
+Figure 16           Short circuit protection via current limitation and thermal switch off , with latched fault signal
+                    on SRP (valid for RSRP = 5...70 kΩ)
+Note: For better understanding, the time scale is not linear. The real timing of this drawing is application
+      dependant.
+
+Behavior with overload current below current limitation trigger level
+The lower current limitation level IL(LIM) will be also triggered by an thermal shutdown. This could be the case in
+terms of overload with a current still below the overcurrent limitation trigger level (IL < IL(LIM)_TRIGGER).
+
+
+
+
+Datasheet                                                                             19                                                         Rev. 1.1, 2018-08-28
+                                                                                                                               HITFET - BTF3050TE
+                                                                                                                       Smart Low-Side Power Switch
+
+                                                                                                                                             Protection Functions
+
+
+                                           Occurrence of overload (below current limitation trigger level)             Reset fault and current limit by
+                                                         Thermal shut-down (e.g. dynamic);                             „IN=low“ and
+                                                         setting fault latch and current limitation trigger            „fault latch reset by
+                                                                 Thermal restart;                                      SRP=low(external pulled down)“
+                                                                 limited to current limitation level IL (LIM )                                     Thermal restart into
+                                                                                                                                                   normal load condition
+                                                                         Thermal shut- down(over temp.)
+                  IN
+               VIN(H)
+                  0
+                                                                                                                                                                   t
+                  ID
+
+
+
+      IL(LIM )_TRIGGER
+          V BAT /Zsc
+
+               IL(LIM)
+
+
+
+               Tj(DM OS)
+                Tj(SD)
+                              ΔTj(SD)_HY
+                                     ΔTj(SW)
+
+
+                         Ta
+              VSRP                                                                                                                                                t
+       V SRP(FAULT )
+        VSRP (NOR)
+                  0                                                                         external pull -down
+                                                                                            (VSR P < V SR P(R ESET )    tRESET                                    t
+                                                                                                                                                          Overload.emf
+
+Figure 17         Example of overload behavior with thermal shutdown
+Note: For better understanding, the time scale is not linear. The real timing of this drawing is application
+      dependant.
+
+6.4               Characteristics
+Figure 18         Please see “Protection” on Page 26 for electrical characteristic table.
+
+
+
+
+Datasheet                                                                            20                                                        Rev. 1.1, 2018-08-28
+                                                                                    HITFET - BTF3050TE
+                                                                            Smart Low-Side Power Switch
+
+                                                                                                      Diagnostics
+
+
+7            Diagnostics
+The BTF3050TE provides a latching digital fault feedback signal on the SRP pin triggered by an over temperature
+shutdown.
+Additionally the device features an adjustable slew rate via the SRP pin.
+
+7.1          Functional Description of the SRP Pin
+The BTF3050TE provides digital status information via the combined status and Slew-Rate-Preset pin (SRP). This
+pin has three modes of operation:
+
+Normal operation mode (slew rate mode; low signal)
+The pin is used to define the switching speed of the BTF3050TE.
+A resistor to ground defines the strength of the gate driver stage used to switch the power DMOS. The SRP pin
+works as a controlled low voltage output with a normal voltage up to VSRP(NOR), driving from VDD a current out of
+the SRP-pin through the slew rate adjustment resistor.
+For details on this function please refer to “Adjustable Swtiching Speed / Slew Rate” on Page 15.
+The voltage on the SRP pin in normal operation mode is VSRP(NOR), signaling a low signal to the micro controller.
+
+Latched Feedback mode (internal pull-up to VDD; high signal)
+The pin is used to give an alarming feedback to the micro controller after an over temperature shut down.
+The SRP pin is pulled to VDD by an active internal pull-up source providing typical a current ISRP(FAULT), intend to
+signal a logic high to the micro controller. This mode stays active independent from the input pin state or internal
+restarts until it will be reset (see below).
+During this mode the slew rate of the device is set to a fast “fault” mode slew rate (similar to the switching times
+at RSRP = 5.8kΩ.)The latched fault/feedback mode and signal is available at slew rate resistors of 5kΩ < RSRP <
+70kΩ. (please see also Figure 21 “Availability of latched fault/feedback mode in dependency of slew rate
+resistor RSRP” on Page 22)
+
+Reset Latch (external pull-down)
+The pin is used as an input pin to set the device back to normal mode and reset the fault latch.
+To reset the device the voltage on the SRP pin needs to be forced below the reset threshold VSRP(RESET) by an
+external pull down (e.g. using the micro controller I/O as pull-down).
+If the SRP pin will be pulled down below VSRP(RESET) for a minimum time of tRESET the logic resets the feedback
+latch, provided that its temperature has decreased at least the thermal hysteresis ΔTj(SW)_HYS in the meantime.
+If INput is pulled down as well the current limitation trigger level will be also reset (enabling high peak currents
+again).
+Figure 19 is showing the simplified circuitry used.
+
+
+As long as the latched fault signal is not reset, the device logic stays active (also if IN = low) not entering the
+quiescent current mode.
+
+
+
+
+Datasheet                                               21                                    Rev. 1.1, 2018-08-28
+                                                                                                                           HITFET - BTF3050TE
+                                                                                                                   Smart Low-Side Power Switch
+
+                                                                                                                                                           Diagnostics
+
+.
+
+
+                  V DD                                                                                                                      V BAT
+
+                                                                                                                  I DD
+
+                                                                                                                                                     ZL
+                                                                         RIN
+                                                                                                               VDD
+                               I/O                                                           IN                                                IL
+                           Micro
+                                                   RIO                                                                          OUT
+                         controller                                                   ISRP
+                               I/O                                                           SRP
+                                                                                                                                                    VOUT
+
+                                                                                                               GND
+                                                                               RSLEWRATE
+                                                                                                                   IGND
+                 GND
+                                                                                                                                                SRP.emf
+
+Figure 19       Feedback and control of BTF3050TE
+Alternatively to a bidirectional pin, the micro controller can use a input and a output in parallel to drive the SRP pin.
+
+
+.
+
+
+                                                                                                   VDD
+
+
+
+
+                                                                                                                                  Fault
+                                                                                                                                  latch
+                                                   R IO
+                                                                     I SRP
+                                                                                                             Slew                 Gate
+                             I/O                                                                             rate                 driver
+                    Micro
+                  controller                                   R SLEWRATE
+                                                                                 ZD
+                                                                                                                                  Reset
+                                                                                                                                  Fault Latch
+                                                                                                         VSRP (RESET )
+
+
+
+
+                                                                                                   GND
+
+            GND                                                                                                                             SRP_detail.emf
+
+Figure 20       Simplified functional block diagram of SRP pin
+
+
+
+
+                                   No
+                         latched fault
+                             feedback
+                                                                                  Latched fault feedback
+                                                                                        available
+
+                                           undefined                                                                            undefined
+
+
+
+            0                        600                  5k                                                              70k                  RSRP [Ω]
+
+Figure 21       Availability of latched fault/feedback mode in dependency of slew rate resistor RSRP
+
+7.2             Characteristics
+Please see “Diagnostics” on Page 27 for electrical characteristic table.
+
+
+
+Datasheet                                                                               22                                                   Rev. 1.1, 2018-08-28
+                                                                                     HITFET - BTF3050TE
+                                                                             Smart Low-Side Power Switch
+
+                                                                                           Supply and Input Stage
+
+
+8            Supply and Input Stage
+
+8.1          Supply Circuit
+The supply pin VDD is protected against ESD pulses as shown in Figure 22.
+The device supply is not internal regulated but directly taken from a external supply. Therefore a reverse polarity
+protected and buffered 5V (or 3.3V) voltage supply is required. To achieve a reasonable RDS(ON) and the specified
+switching speed, a 5V (or 3.3V) supply is required.
+
+
+                                  3.0V .. 5.5 V
+
+
+
+
+                                              VDD
+                                                                   Logic &
+                                                                   Driver
+                                                      ESD
+                                                      protection
+
+
+
+
+                                                                         GND
+                                                                                          Supply_Stage.emf
+
+Figure 22    Supply Circuit
+
+
+
+8.1.1        Undervoltage Shutdown
+In order to ensure a stable and defined device behavior under all allowed conditions the supply voltage VDD is
+monitored.
+The output switches off, if the supply voltage VDD drops below the switch-off threshold VDD(TH). In this case also all
+latches will be reset. The device functions are only given for supply voltages above the supply voltage threshold
+VDD(TH). There is no failure feedback ensured for VDD < VDD(TH).
+
+8.2          Input Circuit
+Figure 23 shows the input circuit of the BTF3050TE. Due to an internal pull-down it is ensured that the device
+switches off in case of open input pin. A Zener structure protects the input circuit against ESD pulses. As the
+BTF3050TE has a supply pin, the RDS(ON) of the power MOS is independent of the voltage on the IN pin (assumed
+VDD is sufficient).
+
+
+
+
+Datasheet                                                   23                                 Rev. 1.1, 2018-08-28
+                                                                               HITFET - BTF3050TE
+                                                                       Smart Low-Side Power Switch
+
+                                                                                      Supply and Input Stage
+
+
+
+
+                      RIN             IN                             Logic
+                                                                  ON/OFF
+                                    I IN
+
+
+                                           ESD
+
+                                                      RIN(GND)
+             V uC            V IN
+
+
+
+
+                                                 GND
+                                                                                           Input.emf
+
+Figure 23   Simplified input circuitry
+
+8.3         Characteristics
+Please see “Supply and Input Stage” on Page 29 for electrical characteristic table.
+
+
+
+
+Datasheet                                            24                                  Rev. 1.1, 2018-08-28
+                                                                                        HITFET - BTF3050TE
+                                                                                Smart Low-Side Power Switch
+
+                                                                                            Electrical Characteristics
+
+
+9            Electrical Characteristics
+Note: Characteristics show the deviation of parameter at given input voltage and junction temperature.
+      Typical values show the typical parameters expected from manufacturing and in typical application
+      condition.
+      All voltages and currents naming and polarity in accordance to
+      Figure 3 “Naming Definition of electrical parameters” on Page 6
+
+9.1          Power Stage
+Please see Chapter “Power Stage” on Page 12 for parameter description and further details.
+
+
+Table 5      Electrical Characteristics: Power Stage
+TJ = -40 °C to +150 °C, VDD = 3.0 V to 5.5 V, VBAT = 8 V to 18 V, all voltages with respect to ground, positive current
+flowing into pin (unless otherwise specified)
+Pos. Parameter                                    Symbol               Limit Values
+                                                                                  Unit Note /
+                                                                   Min. Typ. Max.      Test Condition
+Power Stage - Static Characteristics
+9.1.1 On-State resistance                         RDS(ON)          –      40      –     mΩ     IL = IL(NOM);
+                                                                                               VDD = 5V;
+                                                                                               Tj = 25 °C
+                                                                   –      80      100   mΩ     IL = IL(NOM);
+                                                                                               VDD = 5V;
+                                                                                               Tj = 150 °C
+                                                                                               1)
+9.1.2 Nominal load current                        IL(NOM)          –      3.0     –     A
+                                                                                               TJ < 150 °C;
+                                                                                               VDD = 5 V;
+                                                                                               2)
+9.1.3 OFF state load current, Output leakage IL(OFF)               –      –       2     μA
+      current                                                                                  VOUT = VBAT= 13.5 V;
+                                                                                               VIN = 0 V;
+                                                                                               VDD = 5 V;
+                                                                                               TJ ≤ 85 °C
+       OFF state load current, Output leakage IL(OFF)              –      –       1     μA     VOUT = VBAT = 13.5 V;
+       current                                                                                 VIN = 0 V;
+                                                                                               VDD = 5 V;
+                                                                                               TJ = 25 °C
+       OFF state load current, Output leakage IL(OFF)              –      1.5     4     μA     VOUT = VBAT;
+       current                                                                                 VIN = 0 V;
+                                                                                               VDD = 5 V;
+                                                                                               TJ = 150 °C
+Reverse Diode
+9.1.4 Reverse diode forward voltage               -VDS             –      1.0     –     V      TJ = -40°C
+                                                                                               ID = - IL(NOM); VIN = 0 V
+                                                                   –      0.8     –            TJ = 25°C
+                                                                                               ID = - IL(NOM); VIN = 0 V
+                                                                   –      0.7     1.0          TJ = 150°C
+                                                                                               ID = - IL(NOM); VIN = 0 V
+
+
+
+
+Datasheet                                                   25                                      Rev. 1.1, 2018-08-28
+                                                                                              HITFET - BTF3050TE
+                                                                                      Smart Low-Side Power Switch
+
+                                                                                                 Electrical Characteristics
+
+
+Table 5        Electrical Characteristics: Power Stage (cont’d)
+TJ = -40 °C to +150 °C, VDD = 3.0 V to 5.5 V, VBAT = 8 V to 18 V, all voltages with respect to ground, positive current
+flowing into pin (unless otherwise specified)
+Pos. Parameter                                         Symbol               Limit Values
+                                                                                       Unit Note /
+                                                                        Min. Typ. Max.      Test Condition
+Power Stage - Dynamic characteristics - switching time adjustment
+VBAT = 13.5 V; VDD = 5 V; resistive load: RL = 4.7 Ω;CSRP-GND < 100 pF;
+see Figure 10 “Definition of Power Output Timing for Resistive Load” on Page 12 for definition details
+
+9.1.5 Turn-on delay time                               tDON             2       4       7.5   μs      RSRP = 0 Ω
+                                                                        2.5     5       8.5   μs      RSRP = 5.8 kΩ
+                                                                        5       10      15    μs      RSRP = 58 kΩ
+9.1.6 Turn-off delay time                              tDOFF            2       4       7.5   μs      RSRP = 0 Ω
+                                                                        2.5     5       8.5   μs      RSRP = 5.8 kΩ
+                                                                        10      20      30    μs      RSRP = 58 kΩ
+9.1.7 Turn-on output fall time                         tF               0.65 1.3        2.0   μs      RSRP = 0 Ω
+                                                                        1       2       3     μs      RSRP = 5.8 kΩ
+                                                                        10      20      30    μs      RSRP = 58 kΩ
+9.1.8 Turn-off output rise time                        tR               0.65 1.3        2.0   μs      RSRP = 0 Ω
+                                                                        1       2       3     μs      RSRP = 5.8 kΩ
+                                                                        10      20      30    μs      RSRP = 58 kΩ
+                            3)
+9.1.9 Turn-on Slew rate                                -(ΔV/Δt)ON       11      22      33    V/µs RSRP = 0 Ω
+                                                                        7       13      21    V/µs RSRP = 5.8 kΩ
+                                                                        0.7     1.4     2     V/µs RSRP = 58 kΩ
+                            3)
+9.1.10 Turn-off Slew rate                              (ΔV/Δt)OFF       11      22      33    V/µs RSRP = 0 Ω
+                                                                        7       13      21    V/µs RSRP = 5.8 kΩ
+                                                                        0.7     1.4     2     V/µs RSRP = 58 kΩ
+Power Stage - Dynamic characteristics - Failure mode (latched fault signal set) 4); 5)
+VBAT = 13.5V; VDD = 5V; resistive load: RL = 4.7 Ω;latched fault set;
+see Figure 10 “Definition of Power Output Timing for Resistive Load” on Page 12 for definition details;
+ please refer to the Power Stage - Dynamic characteristics - switching time adjustment at RSRP = 5.8 kΩ (see
+ above)
+1) Not subject to production test, calculated by RthJA and RDS(ON).
+2)   Not subject to production test, specified by design; tested at 25°C
+3)   Not subject to production test, calculated slew rate between 90% and 50%; ΔV/Δt = (VOUT(90%) - VOUT(50%)) / |(t90% - t50%)|
+4)   Not subject to production test, specified by design.
+5)   In case of over temperature switch-off the fast slew rate like RSRP = 5.8 kΩ will be applied.
+
+
+9.2            Protection
+Please see Chapter “Protection Functions” on Page 17 for parameter description and further details.
+Note: Integrated protection functions are designed to prevent IC destruction under fault conditions described in the
+      data sheet. Fault conditions are considered as “outside” normal operating range. Protection functions are
+      not designed for continuous repetitive operation
+
+
+
+
+Datasheet                                                      26                                       Rev. 1.1, 2018-08-28
+                                                                                           HITFET - BTF3050TE
+                                                                                   Smart Low-Side Power Switch
+
+                                                                                               Electrical Characteristics
+
+
+Table 6       Electrical characteristics: Protection
+TJ = -40 °C to +150 °C, VDD = 3.0 V to 5.5 V, VBAT = 8 V to 18 V, all voltages with respect to ground, positive current
+flowing into pin (unless otherwise specified)
+
+Pos. Parameter                                       Symbol               Limit Values    Unit     Note /
+                                                                    Min.     Typ. Max.             Test Condition
+                        1)
+Thermal shut down
+                                                                                                   1)
+9.2.1 Thermal shut down                              TJ(SD)         150      175    200   °C
+      junction temperature
+                                                                                                   1)
+9.2.2 Thermal hysteresis                             ΔTJ(SD)_HYS    –        15     –     K
+                                                                                                   1)
+9.2.3 Dynamic temperature limitation                 ΔTJ(SW)        –        70     –     K
+Over Voltage Protection / Clamping
+9.2.4 Drain clamp voltage                            VOUT(CLAMP)    40       –      –     V        VIN = 0 V; ID = 10 mA;
+                                                                                                   VDD = 5V
+Current limitation
+9.2.5 Current limitation trigger level               IL(LIM)_TRIGGER 30      45     60    A        VIN = 5 V;
+                                                                                                   VDD = 5V;
+                                                                                                   VDS = VBAT
+9.2.6 Current limitation level                       IL(LIM)        8        15     20    A        VIN = 5 V;
+                                                                                                   VDD = 5V;
+                                                                                                   settled value;
+                                                                                                   VDS = VBAT
+1) Not subject to production test, specified by design.
+
+
+9.3           Diagnostics
+Please see Chapter “Diagnostics” on Page 21 for description and further details.
+
+Table 7       Electrical Characteristics: Diagnostics
+TJ = -40 °C to +150 °C, VDD = 3.0 V to 5.5 V, VBAT = 8 V to 18 V, all voltages with respect to ground, positive current
+flowing into pin (unless otherwise specified)
+Pos. Parameter                                        Symbol              Limit Values    Unit    Note /
+                                                                    Min. Typ. Max.                Test Condition
+Feedback pin
+9.3.1 allowed SRP pin voltage operation               VSRP          -0.3     –      5.5   V       VSRP < VDD
+      range
+9.3.2 SRP voltage in normal operation                 VSRP(NOR)     –        0.6    0.8   V       –
+      during slew rate adjustment mode
+9.3.3 SRP voltage in fault feedback mode              VSRP(FAULT)   0.7      –      1     xVDD RSRP > 5 kΩ;
+      (latched)                                                                                   see also 9.3.4
+                                                                                                  fault feedback latched
+9.3.4 SRP pull-up current in fault feedback           ISRP(FAULT)   –        1.8    –     mA      VDD = 5 V;
+      mode                                                                                        VBAT > 13.5 V
+                                                                                                  internal limited
+                                                                                                  1)
+9.3.5 Slew rate resistor range for normal             RSRP(NOR)     5        –      70    kΩ
+      operation,                                                                                  latched fault available
+      latched fault feedback available
+
+
+Datasheet                                                      27                                      Rev. 1.1, 2018-08-28
+                                                                                         HITFET - BTF3050TE
+                                                                                 Smart Low-Side Power Switch
+
+                                                                                             Electrical Characteristics
+
+
+Table 7       Electrical Characteristics: Diagnostics (cont’d)
+TJ = -40 °C to +150 °C, VDD = 3.0 V to 5.5 V, VBAT = 8 V to 18 V, all voltages with respect to ground, positive current
+flowing into pin (unless otherwise specified)
+Pos. Parameter                                        Symbol            Limit Values    Unit    Note /
+                                                                    Min. Typ. Max.              Test Condition
+                                                                                                1)
+9.3.6 Slew rate resistor range for extended           RSRP(EXT)     0      –      600   Ω
+      operation,                                                                                no latched fault
+      no latched fault feedback available                                                       available
+9.3.7 Fault feedback reset threshold                  VSRP(RESET)   –      1.8    –     V       –
+9.3.8 Fault feedback reset time                       tRESET        100    –      –     µs      1)
+
+                                                                                                VSRP < VSRP(RESET);
+                                                                                                no over temperature
+1) Not subject to production test, specified by design.
+
+
+
+
+Datasheet                                                      28                                    Rev. 1.1, 2018-08-28
+                                                                                         HITFET - BTF3050TE
+                                                                                 Smart Low-Side Power Switch
+
+                                                                                            Electrical Characteristics
+
+
+9.4           Supply and Input Stage
+Please see Chapter “Supply and Input Stage” on Page 23 for description and further details.
+
+
+Table 8       Electrical Characteristics: Supply and Input
+TJ = -40 °C to +150 °C, VDD = 3.0 V to 5.5 V, VBAT = 8 V to 18 V, all voltages with respect to ground, positive current
+flowing into pin (unless otherwise specified)
+Pos. Parameter                                      Symbol              Limit Values
+                                                                                   Unit Note /
+                                                                    Min. Typ. Max.      Test Condition
+Supply
+9.4.1 Nominal supply voltage                        VDD(NOM)        3.0    5.0   5.5   V     –
+9.4.2 Supply Undervoltage Shutdown                  VDD(TH)         1.3    1.7   3.0   V     VIN = 5.0 V
+      Switch-on/off threshold voltage
+9.4.3 Supply current,                               IDD(ON)         –      2.5   4     mA    device on-state
+      continuos ON operation                                                                 VDD = 5.0 V
+                                                                                             RSRP = 0 Ω
+                                                                                             IL(0) = IL(NOM)
+                                                                                             no fault signal
+9.4.4 Supply current,                               IDD(FAULT)      –      4.5   6     mA    DC condition,
+      continuos on operation                                                                 VDD = 5.0 V
+      with latched fault signal                                                              with fault signal
+                                                                                             1)
+9.4.5 Supply current,                               IDD(-VOUT)      –      33    –     mA         ; VOUT < -0.3 V;
+      inverse condition on OUT to GND
+9.4.6 Standby supply current                        IDD(OFF)        –      1.5   6     µA    VIN = 0 V
+                                                                                             VDD = 5.0 V
+                                                                                             RSRP = 0 Ω
+                                                                                             Tj < 85 °C
+                                                                                             no fault signal
+9.4.7 Standby supply current,                       IDD(OFF)_150    –      6     14    µA    VIN = 0 V
+      maximum at 150°C                                                                       VDD = 5.0 V
+                                                                                             RSRP = 0 Ω
+                                                                                             Tj = 150 °C
+                                                                                             no fault signal
+Input
+9.4.8 Low level input voltage                       VIN(L)          -0.3   –     0.8   V     –
+9.4.9 High level input voltage                      VIN(H)          2.0    –     VDD   V     –
+9.4.10 Input voltage hysteresis                     VIN(HYS)        –      200   –     mV    –
+9.4.11 Input pull down current                      IIN             –      –     160   µA    2.7V < VIN < 5.5V
+                                                                                             -0.3V < VDD < 5.5V
+9.4.12 Internal Input pull down resistor            RIN(GND)        25     50    100   kΩ    –
+1) Not subject to production test, specified by design.
+
+
+
+
+Datasheet                                                      29                                    Rev. 1.1, 2018-08-28
+                                                                                                                             HITFET - BTF3050TE
+                                                                                                                     Smart Low-Side Power Switch
+
+                                                                                                                                       Characterisation Results
+
+
+10                                Characterisation Results
+Typical performance characteristics
+
+10.1                              Power Stage
+
+                160,00
+
+
+
+                140,00
+
+
+
+                120,00
+
+
+
+                100,00
+ RDS(ON) [mΩ]
+
+
+
+
+                 80,00
+                                                                                                                                                                    150°C
+
+
+                 60,00
+                                                                                                                                                                    85°C
+
+
+
+                 40,00                                                                                                                                              25°C
+
+
+
+                                                                                                                                                                    -40°C
+                 20,00
+
+
+
+                  0,00
+                               2,00              2,50           3,00         3,50             4,00         4,50          5,00               5,50           6,00
+                                                                                          VDD [V]
+
+Figure 24                         Typical RDS(ON) vs. VDD @ IL=3A
+
+
+                                 1,6E-06
+
+
+                                                                                                                                                                  18V
+                                 1,4E-06
+
+                                                                                                                                                                  13.5V
+                                 1,2E-06
+
+
+
+                                 1,0E-06
+                 IL(OFF) [A]
+
+
+
+
+                                 8,0E-07
+
+
+
+                                 6,0E-07
+
+
+
+                                 4,0E-07
+
+
+
+                                 2,0E-07
+
+
+
+                                 0,0E+00
+                                           -40   -30    -20   -10   0   10   20     30   40    50    60   70   80   90   100    110   120    130    140   150
+                                                                                                Tj [°C]
+
+
+Figure 25                         Typical IL(OFF) vs. Tj @ VIN = 0V, VBAT = 13.5V and 18V
+
+
+
+
+Datasheet                                                                                     30                                                   Rev. 1.1, 2018-08-28
+                                                                                HITFET - BTF3050TE
+                                                                        Smart Low-Side Power Switch
+
+                                                                                Characterisation Results
+
+
+
+               10
+
+
+
+
+                1
+    EAS [J]
+
+
+
+
+               0,1
+
+
+
+
+              0,01
+                     1                                                                          10
+                                                               IL [A]
+
+Figure 26                Maximum EAS vs. IL @ Tj(0)=150°C, VBAT=13.5V
+
+
+
+
+Datasheet                                                     31                    Rev. 1.1, 2018-08-28
+                                                                                                                                                                                  HITFET - BTF3050TE
+                                                                                                                                                                          Smart Low-Side Power Switch
+
+                                                                                                                                                                                                   Characterisation Results
+
+
+10.2                                    Dynamic charactersitics:
+                   30
+                                                              delay ON, SRP 58 kOhm                           delay OFF, SRP 58 kOhm                        fall time, SRP 58 kOhm                   rise time, SRP 58 kOhm
+
+                                                              delay ON, SRP 5.8 kOhm                          delay OFF, 5.8 kOhm                           fall time, SRP 5.8 kOhm                  rise time, SRP 5.8 kOhm
+
+                   25
+
+
+
+
+                   20
+       time [us]
+
+
+
+
+                   15
+
+
+
+
+                   10
+
+
+
+
+                    5
+
+
+
+
+                    0
+                             -40                  -30         -20         -10         0       10        20      30       40         50            60   70        80       90          100    110     120      130     140      150
+                                                                                                                                         Tj [C]
+
+Figure 27                               Typical fall time, rise time, delay on time, delay off time vs. Tj (-40..150°C) @ RSRP=5.8kΩ and
+                                        58kΩ) VDD=5V, VBAT=13.5, VIN=5V
+
+                                       18
+
+                                                                    Slew rate ON, SRP 58 kOhm                  Slew rate OFF, SRP 58 kOhm               Slew rate ON, SRP 5.8 kOhm                 Slew rate OFF, 5.8 kOhm
+
+                                       16
+
+
+
+                                       14
+
+
+
+                                       12
+                    Slew rate [V/us]
+
+
+
+
+                                       10
+
+
+
+                                        8
+
+
+
+                                        6
+
+
+
+                                        4
+
+
+
+                                        2
+
+
+
+                                        0
+                                            -40         -30         -20         -10       0        10    20       30      40        50            60   70        80      90      100        110    120     130      140      150
+                                                                                                                                         Tj [C]
+
+Figure 28                               Typical slew rate vs. Tj (-40..150°C) @ RSRP=5.8kΩ and 58kΩ
+
+
+
+
+Datasheet                                                                                                                           32                                                                     Rev. 1.1, 2018-08-28
+                                                                                                                        HITFET - BTF3050TE
+                                                                                                                Smart Low-Side Power Switch
+
+                                                                                                                              Characterisation Results
+
+
+
+                    15
+                                   delay ON, -40°C, SRP 5.8 kOhm          delay ON, 25°C, SRP 5.8 kOhm              delay ON, 150°C, SRP 5.8 kOhm
+                                   delay OFF, -40°C, SRP 5.8 kOhm         delay OFF, 25°C, SRP 5.8 kOhm             delay OFF, 150°C, SRP 5.8 kOhm
+                    13
+
+
+
+                    11
+
+
+
+                       9
+        time [us]
+
+
+
+
+                       7
+
+
+
+                       5
+
+
+
+                       3
+
+
+
+                       1
+
+
+                           0,5      1,5             2,5             3,5    4,5               5,5          6,5       7,5            8,5               9,5
+                    -1
+                                                                                     IL [A]
+
+
+
+Figure 29                  Typical delay on time, delay off time vs. IL @ Tj (-40..150°C) RSRP=5.8kΩ
+
+                       5
+                                   fall time, -40°C, SRP 5.8 kOhm         fall time, 25°C, SRP 5.8 kOhm             fall time, 150°C, SRP 5.8 kOhm
+                                   rise time, -40°C, SRP 5.8 kOhm         rise time, 25°C, SRP 5.8 kOhm             rise time, 150°C, SRP 5.8 kOhm
+
+
+
+                       4
+
+
+
+
+                       3
+           time [us]
+
+
+
+
+                       2
+
+
+
+
+                       1
+
+
+
+
+                       0
+                           0,5      1,5            2,5              3,5   4,5            5,5              6,5      7,5            8,5            9,5
+                                                                                    IL [A]
+
+Figure 30                  Typical fall time, rise time vs. IL @ Tj (-40..150°C) RSRP=5.8kΩ
+
+
+
+
+Datasheet                                                                        33                                                      Rev. 1.1, 2018-08-28
+                                                                                                                                        HITFET - BTF3050TE
+                                                                                                                                Smart Low-Side Power Switch
+
+                                                                                                                                               Characterisation Results
+
+
+                                25
+                                            slew rate ON, -40°C, SRP 5.8 kOhm          slew rate ON, 25°C, SRP 5.8 kOhm            slew rate ON, 150°C, SRP 5.8 kOhm
+                                            slew rate OFF, -40°C, SRP 5.8 kOhm         slew rate OFF, 25°C, SRP 5.8 kOhm           slew rate OFF, 150°C, SRP 5.8 kOhm
+
+
+
+                                20
+
+
+
+
+                                15
+         Slew rate [V/us]
+
+
+
+
+                                10
+
+
+
+
+                                  5
+
+
+
+
+                                  0
+                                      0,5           1,5            2,5           3,5       4,5             5,5            6,5        7,5           8,5           9,5
+                                                                                                      IL [A]
+
+Figure 31                       Typical slew rate vs. IL @ Tj (-40..150°C) RSRP=5.8kΩ
+
+                      35
+                                             delay ON, -40°C, SRP 58 kOhm               delay ON, 25°C, SRP 58 kOhm                 delay ON, 150°C, SRP 58 kOhm
+                                             delay OFF, -40°C, SRP 58 kOhm              delay OFF, 25°C, SRP 58 kOhm                delay OFF, 150°C, SRP 58 kOhm
+
+                      30
+
+
+
+
+                      25
+       time [us]
+
+
+
+
+                      20
+
+
+
+
+                      15
+
+
+
+
+                      10
+
+
+
+
+                            5
+                                0,5           1,5            2,5             3,5        4,5              5,5           6,5          7,5           8,5            9,5
+                                                                                                  IL [A]
+
+Figure 32                       Typical delay on time, delay off time vs. IL @ Tj (-40..150°C) RSRP=58kΩ
+
+
+
+
+Datasheet                                                                                        34                                                      Rev. 1.1, 2018-08-28
+                                                                                                                                    HITFET - BTF3050TE
+                                                                                                                            Smart Low-Side Power Switch
+
+                                                                                                                                          Characterisation Results
+
+
+
+                         40
+                                          fall time, -40°C, SRP 58 kOhm              fall time, 25°C, SRP 58 kOhm                fall time, 150°C, SRP 58 kOhm
+                                          rise time, -40°C, SRP 58 kOhm              rise time, 25°C, SRP 58 kOhm                rise time, 150°C, SRP 58 kOhm
+
+
+
+
+                         30
+       time [us]
+
+
+
+
+                         20
+
+
+
+
+                         10
+
+
+
+
+                          0
+                              0,5          1,5            2,5               3,5      4,5            5,5              6,5        7,5           8,5            9,5
+                                                                                               IL [A]
+
+Figure 33                      Typical rise time, fall time vs. IL @ Tj (-40..150°C) RSRP=58kΩ
+
+                              3
+                                        slew rate ON, -40°C, SRP 58 kOhm           slew rate ON, 25°C, SRP 58 kOhm            slew rate ON, 150°C, SRP 58 kOhm
+                                        slew rate OFF, -40°C, SRP 58 kOhm          slew rate OFF, 25°C, SRP 58 kOhm           slew rate OFF, 150°C, SRP 58 kOhm
+
+                          2,5
+
+
+
+
+                              2
+      Slew rate [V/us]
+
+
+
+
+                          1,5
+
+
+
+
+                              1
+
+
+
+
+                          0,5
+
+
+
+
+                              0
+                                  0,5         1,5           2,5              3,5       4,5              5,5           6,5       7,5           8,5            9,5
+                                                                                                IL [A]
+
+Figure 34                      Typical slew rate vs. IL @ Tj (-40..150°C) RSRP=58kΩ
+
+
+
+
+Datasheet                                                                                    35                                                     Rev. 1.1, 2018-08-28
+                                                                                                                           HITFET - BTF3050TE
+                                                                                                                   Smart Low-Side Power Switch
+
+                                                                                                                                   Characterisation Results
+
+
+
+
+                              delay ON, -40°C    delay ON, 25°C     delay ON, 150°C             delay OFF, -40°C     delay OFF, 25°C    delay OFF, 150°C
+
+                     40
+
+
+
+                     35
+
+
+
+                     30
+
+
+
+                     25
+        Time [us]
+
+
+
+
+                     20
+
+
+
+                     15
+
+
+
+                     10
+
+
+
+                      5
+                          0          5             10              15                      20              25              30           35                  40
+                                                                                     VBAT [V]
+
+Figure 35             Typical delay on time, delay off time vs. VBAT @ Tj (-40..150°C), IL=I(NOM), RSRP=58kΩ
+
+
+                              fall time, -40°C   fall time, 25°C        fall time, 150°C        rise time, -40°C     rise time, 25°C   rise time, 150°C
+                     40
+
+
+                     35
+
+
+                     30
+
+
+                     25
+         Time [us]
+
+
+
+
+                     20
+
+
+                     15
+
+
+                     10
+
+
+                      5
+
+
+                      0
+                          0          5             10              15                      20             25              30           35                  40
+                                                                                     VBAT [V]
+
+Figure 36             Typical rise time, fall time vs. VBAT @ Tj (-40..150°C), IL=I(NOM), RSRP=58kΩ
+
+
+
+
+Datasheet                                                                          36                                                  Rev. 1.1, 2018-08-28
+                                                                                                                 HITFET - BTF3050TE
+                                                                                                         Smart Low-Side Power Switch
+
+                                                                                                                      Characterisation Results
+
+
+
+                                            slew rate ON, -40°C             slew rate ON, 25°C                    slew rate ON, 150°C
+                                            slew rate OFF, -40°C            slew rate OFF, 25°C                   slew rate OFF, 150°C
+                           5,0
+
+
+                           4,5
+
+
+                           4,0
+
+
+                           3,5
+        Slew rate [V/us]
+
+
+
+
+                           3,0
+
+
+                           2,5
+
+
+                           2,0
+
+
+                           1,5
+
+
+                           1,0
+
+
+                           0,5
+
+
+                           0,0
+                                 0          5                10    15             20                25       30               35         40
+                                                                               VBAT [V]
+
+Figure 37                        Typical slew rate vs. VBAT @ Tj (-40..150°C), IL=I(NOM), RSRP=58kΩ
+
+
+                                                delay ON, -40°C             delay ON, 25°C                    delay ON, 150°C
+                                                delay OFF, -40°C            delay OFF, 25°C                   delay OFF, 150°C
+                            25
+
+
+
+                            20
+
+
+
+                            15
+       Time [us]
+
+
+
+
+                            10
+
+
+
+                                 5
+
+
+
+                                 0
+                                     3                 3,5              4                         4,5                5                   5,5
+                                                                               VDD [V]
+
+Figure 38                        Typical delay on time, delay off time vs. VDD @ Tj (-40..150°C), RL=4.5 Ω, RSRP=58kΩ
+
+
+
+
+Datasheet                                                                    37                                                Rev. 1.1, 2018-08-28
+                                                                                           HITFET - BTF3050TE
+                                                                                   Smart Low-Side Power Switch
+
+                                                                                              Characterisation Results
+
+
+
+                                      fall time, -40°C          fall, 25°C                 fall, 150°C
+                                      rise, -40°C               rise, 25°C                 rise, 150°C
+                        40
+
+                        35
+
+                        30
+
+                        25
+            Time [us]
+
+
+
+
+                        20
+
+                        15
+
+                        10
+
+                         5
+
+                         0
+                             3              3,5             4                4,5              5                 5,5
+                                                                  VDD [V]
+
+Figure 39               Typical rise time, fall time vs. VDD @ Tj (-40..150°C), RL=4.5 Ω, RSRP=58kΩ
+
+
+
+
+Datasheet                                                       38                                    Rev. 1.1, 2018-08-28
+                                                                               HITFET - BTF3050TE
+                                                                       Smart Low-Side Power Switch
+
+                                                                               Characterisation Results
+
+
+10.3               Protection
+
+                              190
+
+
+
+
+                              180
+            Tj(SD) [°C]
+
+
+
+
+                              170
+
+
+
+
+                              160
+
+
+
+
+                              150
+                                        3            4                 5                     6
+                                                              VDD[V]
+
+Figure 40          Typical Tj(SD) vs VDD @ IL=10mA
+
+                              20
+
+
+
+
+                              15
+             Tj(SD)_HY [°C]
+
+
+
+
+                              10
+
+
+
+
+                               5
+
+
+
+
+                               0
+                                    3                4                 5                     6
+                                                              VDD[V]
+Figure 41          Typical Tj(SD)_HYS vs VDD @ IL=10mA
+
+
+
+
+Datasheet                                                39                        Rev. 1.1, 2018-08-28
+                                                                                                       HITFET - BTF3050TE
+                                                                                               Smart Low-Side Power Switch
+
+                                                                                                                 Characterisation Results
+
+
+
+                           60
+                                                                                                   10 mA                   1 mA
+                           55
+
+
+                           50
+     VOUT(CLAMP) [V]
+
+
+
+
+                           45
+
+
+                           40
+
+
+                           35
+
+
+                           30
+                                     -50                       0                    50                     100                          150
+                                                                                   Tj [C]
+
+Figure 42                            Typical VOUT(CLAMP) vs Tj
+
+                                     20
+
+
+
+
+                                     18
+
+                                                                                                                             VDD = 6V
+
+                                     16
+                                                                                                                             VDD = 5.5V
+                       IL(LIM) [A]
+
+
+
+
+                                                                                                                             VDD = 5V
+                                     14
+
+                                                                                                                             VDD = 4V
+
+
+                                     12
+
+
+
+
+                                     10
+                                          -40    -20       0        20     40            60   80           100       120
+                                                                          Tj [C]
+
+Figure 43                            Typical IL(LIM) vs Tj @ VDD=4...6V
+
+
+
+
+Datasheet                                                                    40                                      Rev. 1.1, 2018-08-28
+                                                                                                         HITFET - BTF3050TE
+                                                                                                 Smart Low-Side Power Switch
+
+                                                                                                         Characterisation Results
+
+
+
+                                 20
+
+
+
+                                 18
+
+
+
+                                 16
+       IL(LIM) [A]
+
+
+
+
+                                 14
+
+
+
+                                 12
+
+
+
+                                 10
+                                      3             3,5                  4                 4,5           5             5,5
+                                                                                 VDD [V]
+
+Figure 44                        Typical IL(LIM) vs.VDD @ Tj=25°C
+
+                                  80
+
+                                  70
+
+                                  60
+          ID(lLIM)_TRIGGER [A]
+
+
+
+
+                                  50                                                                                 -40°C
+
+                                                                                                                     25°C
+                                  40
+                                                                                                                     150°C
+                                  30
+
+                                  20
+
+                                  10
+
+                                      0
+                                          0         2               4                 6            8         10
+                                                                        L [uH]
+Figure 45                        Typical IL(LIM)_TRIGGER vs. L @ Tj = (-40, 25, 150°C)
+
+
+
+
+Datasheet                                                                    41                              Rev. 1.1, 2018-08-28
+                                                                                             HITFET - BTF3050TE
+                                                                                     Smart Low-Side Power Switch
+
+                                                                                              Characterisation Results
+
+
+10.4                       Supply and Input Stage
+
+                 5
+
+
+
+                 4
+
+
+
+                 3
+   VDD(TH) [V]
+
+
+
+
+                                                                                                                      fall
+                 2
+                                                                                                                      rise
+
+                 1
+
+
+
+                 0
+                     -40                   0                 40             80          120             160
+                                                                  Tj [C]
+Figure 46                  Typical VDD(TH) vs Tj @ RL=4.5Ω
+
+                                1,00
+
+
+
+
+                                0,80
+
+
+
+
+                                0,60
+                     IDD [mA]
+
+
+
+
+                                                                                                              150°C
+                                                                                                              25°C
+                                0,40
+                                                                                                              -40°C
+
+
+
+
+                                0,20
+
+
+
+
+                                0,00
+                                       0       1         2           3           4       5          6
+                                                                  VDD [V]
+
+Figure 47                  Typical IDD(ON) vs. VDD @ Tj = (-40, 25, 150°C), VIN=5V
+
+
+
+
+Datasheet                                                            42                           Rev. 1.1, 2018-08-28
+                                                                                    HITFET - BTF3050TE
+                                                                            Smart Low-Side Power Switch
+
+                                                                                        Characterisation Results
+
+
+
+
+                            14
+                                                                                                  Vdd=6V
+
+                            12
+
+                                                                                                  Vdd=5.5V
+                            10
+            IDD(OFF) [uA]
+
+
+
+
+                             8
+                                                                                                  Vdd=5V
+
+                             6
+
+                                                                                                  Vdd=4V
+                             4
+
+
+                             2
+                                                                                                  Vdd=3V
+
+                             0
+                                 -40       0        40             80         120           160
+                                                         Tj [°C]
+
+Figure 48        Typical IDD(OFF) vs. Tj @ VDD = 3, 4, 5V, RRSP=0Ω
+
+                        150
+                                                                                                    150°C
+                                                                                                    25°C
+                                                                                                    -40°C
+                        120
+
+
+
+                            90
+            IIN [uA]
+
+
+
+
+                            60
+
+
+
+                            30
+
+
+
+                             0
+                                 0     1       2           3            4           5        6
+                                                         VIN [V]
+
+Figure 49        Typical IIN vs. VIN @ Tj = (-40, 25, 150°C)
+
+
+
+
+Datasheet                                                  43                               Rev. 1.1, 2018-08-28
+                                                                                                            HITFET - BTF3050TE
+                                                                                                    Smart Low-Side Power Switch
+
+                                                                                                                Characterisation Results
+
+
+                                           50
+
+
+
+
+                                           48
+
+
+
+
+                                           46
+                           RIN(GND) [K:]
+
+
+
+
+                                           44
+
+
+
+
+                                           42
+
+
+
+
+                                           40
+                                                -40         0              40                 80          120                  160
+                                                                                    Tj [°C]
+
+Figure 50                              Typical RIN(GND) vs. Tj
+
+                          3,0
+                                                                                                                         Vdd=5V, (H)
+
+                          2,5
+                                                                                                                         Vdd=4V, (H)
+
+
+                          2,0
+      VIN [V] Threshold
+
+
+
+
+                                                                                                                         Vdd=3V, (H)
+
+
+                          1,5
+                                                                                                                         Vdd=5V, (L)
+
+
+                          1,0
+                                                                                                                         Vdd=4V, (L)
+
+
+                          0,5
+                                                                                                                         Vdd=3V, (L)
+
+
+                          0,0
+                                     -40              0             40              80             120          160
+                                                                         Tj [°C]
+Figure 51                              Typical VIN(TH) vs. Tj @ VDD = 3V, 4V, 5V
+
+
+
+
+Datasheet                                                                          44                                 Rev. 1.1, 2018-08-28
+                                                                                                                     HITFET - BTF3050TE
+                                                                                                             Smart Low-Side Power Switch
+
+                                                                                                                                      Application Information
+
+
+11           Application Information
+Note: The following information is given as a hint for the implementation of the device only and shall not be
+      regarded as a description or warranty of a certain functionality, condition or quality of the device.
+
+Application Diagram
+An application example with the BTF3050TE is shown below.
+                   VBAT
+
+
+
+                     Voltage     IN                                                                                            Load
+                     Regulator
+                                 OUT
+
+
+
+
+                                 Micro           VDD                optional:
+                                                                   e.g. 100nF
+                                 controller                                                 VDD
+                                                                                                                         OUT
+                                                              RX                       IN
+                                                I/O
+                                               PWM
+                                                        RuC-SRP                        SRP
+                                                  I/O
+                                              Status/   < 470R
+                                               Reset
+                                   GND                             *                                                    GND
+                                                                          RSRP
+
+
+                                                                   *   Consider design recomendations for parasitic CSRP-GND
+
+
+
+
+Figure 52    Simplified application diagram
+Note: This is a very simplified example of an application circuit. The function must be verified in the real application.
+
+11.1         Design and Layout Recommendations/Considerations
+As consequence of the fast switching times for high currents, special care has to be taken to the PCB layout. Stray
+inductances have to be minimized. The BTF3050TE has no separate pin for power ground and logic ground.
+Therefore it is recommended to assure that the offset between the ground connection of the slew rate resistor and
+ground pin of the device (GND/SOURCE) is minimized. The resistor RSRP should be placed near to the device and
+directly connected to the GND pin of the device to avoid any influence of GND shift to the functionality of the SRP
+pin.
+
+
+In order to avoid influence on SRP functionality (e.g. switching times) the maximum parasitic capacitance between
+the SRP line and GND (CSRP-GND) has to be less than 100pF. It is strongly recommended to not let the SRP pin
+floating. A maximum resistor of 200 kohm to GND is recommended.
+
+
+
+
+Datasheet                                                               45                                                               Rev. 1.1, 2018-08-28
+                                                                                     HITFET - BTF3050TE
+                                                                             Smart Low-Side Power Switch
+
+                                                                                 Package Outlines BTF3050TE
+
+
+12           Package Outlines BTF3050TE
+
+
+
+
+PG-TO252-5 (Transistor Outline Package)
+
+
+
+
+Green Product (RoHS compliant)
+To meet the world-wide customer requirements for environmentally friendly products and to be compliant with
+government regulations the device is available as a green product. Green products are RoHS-Compliant (i.e
+Pb-free finish on leads and suitable for Pb-free soldering according to IPC/JEDEC J-STD-020).
+
+
+
+
+For further information on alternative packages, please visit our website:
+http://www.infineon.com/packages.                                                         Dimensions in mm
+
+Datasheet                                               46                               Rev. 1.1, 2018-08-28
+                                                                        HITFET - BTF3050TE
+                                                                Smart Low-Side Power Switch
+
+                                                                                    Revision History
+
+
+13          Revision History
+
+Revision     Date         Changes
+Rev. 1.1     2018-08-28   Figure 24. Typo corrected on “x” axis. RDS(ON) VS VDD
+                          Figure 25 and 26 duplicated. Figure 26 deleted
+                          Figure 49. remove 85°C from conditions
+                          Package Outlines corrected according to PG-TO252-5-11 dimensions
+                          Added Ω symbol for RSRP and RL unit in characterisation chapter
+                          Update front cover and back cover page templates
+Rev. 1.0     2014-07-21   Datasheet released
+
+
+
+
+Datasheet                                       47                               Rev. 1.1, 2018-08-28
+Trademarks
+All referenced product or service names and trademarks are the property of their respective owners.
+
+
+
+                                          IMPORTANT NOTICE
+Edition 2018-08-28                        The information given in this document shall in no         For further information on technology, delivery terms
+                                          event be regarded as a guarantee of conditions or          and conditions and prices, please contact the nearest
+Published by
+                                          characteristics ("Beschaffenheitsgarantie").               Infineon Technologies Office (www.infineon.com).
+Infineon Technologies AG                  With respect to any examples, hints or any typical
+81726 Munich, Germany                     values stated herein and/or any information regarding
+                                          the application of the product, Infineon Technologies      WARNINGS
+                                          hereby disclaims any and all warranties and liabilities
+© 2018 Infineon Technologies AG.          of any kind, including without limitation warranties of    Due to technical requirements products may contain
+All Rights Reserved.                      non-infringement of intellectual property rights of any    dangerous substances. For information on the types
+                                          third party.                                               in question please contact your nearest Infineon
+                                          In addition, any information given in this document is     Technologies office.
+Do you have a question about any          subject to customer's compliance with its obligations
+aspect of this document?                  stated in this document and any applicable legal           Except as otherwise explicitly approved by Infineon
+Email: erratum@infineon.com               requirements, norms and standards concerning               Technologies in a written document signed by
+                                          customer's products and any use of the product of          authorized representatives of Infineon Technologies,
+                                          Infineon Technologies in customer's applications.          Infineon Technologies’ products may not be used in
+                                          The data contained in this document is exclusively         any applications where a failure of the product or any
+Document reference                                                                                   consequences of the use thereof can reasonably be
+                                          intended for technically trained staff. It is the
+                                          responsibility of customer's technical departments to      expected to result in personal injury.
+                                          evaluate the suitability of the product for the intended
+                                          application and the completeness of the product
+                                          information given in this document with respect to
+                                          such application.
+

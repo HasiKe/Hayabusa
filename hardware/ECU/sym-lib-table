@@ -14,4 +14,5 @@
   (lib (name "SamacSys_Parts")(type "KiCad")(uri "${KIPRJMOD}/lib/SamacSys_Parts.kicad_sym")(options "")(descr ""))
   (lib (name "ISL9V5036P3-F085")(type "Legacy")(uri "${KIPRJMOD}/lib/ISL9V5036P3-F085/KiCad/ISL9V5036P3-F085.lib")(options "")(descr ""))
   (lib (name "TPIC8101DW")(type "Legacy")(uri "${KIPRJMOD}/lib/TPIC8101DW/KiCad/TPIC8101DW.lib")(options "")(descr ""))
+  (lib (name "Rev3")(type "KiCad")(uri "${KIPRJMOD}/lib/Rev3.kicad_sym")(options "")(descr "Rev 3.0 neue Symbole (LM74700, TPS54360B, TPS7B6950, TPS3823, 74LVC1G00/125, BTF3050TE, DRV8434A, USBLC6, NUP2105L)"))
 )

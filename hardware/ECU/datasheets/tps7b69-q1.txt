@@ -1,0 +1,1350 @@
+                               Product       Sample &         Technical           Tools &           Support &
+                               Folder        Buy              Documents           Software          Community
+
+
+
+                                                                           TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+                                                                                    SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015
+
+                  TPS7B69xx-Q1 High-Voltage Ultra-Low IQ Low-Dropout Regulator
+1 Features                                                            2 Applications
+•
+1   Qualified for Automotive Applications                             •   Automotive
+•   AEC-Q100 Qualified With the Following Results:                    •   Infotainment Systems With Sleep Mode
+    – Device Temperature Grade 1: –40°C to 125°C                      •   Always-On Battery Applications
+        Ambient Operating Temperature Range                               – Door Modules
+    – Device HBM ESD Classification Level 2                               – Remote Keyless-Entry Systems
+    – Device CDM ESD Classification Level C4B                             – Immobilizers
+•   4 to 40-V Wide VI Input Voltage Range With up to
+    45-V Transient                                                    3 Description
+•   Maximum Output Current: 150 mA                                    The TPS7B69xx-Q1 device is a low-dropout linear
+•   Low Quiescent Current (IQ):                                       regulator designed for up to 40-V VI operations. With
+                                                                      only 15-µA (typical) quiescent current at light load,
+    – 15 µA Typical at Light Loads                                    the device is suitable for standby microcontrol-unit
+    – 25 µA Maximum Under Full Temperature                            systems especially in automotive applications.
+•   450-mV Typical Low Dropout Voltage at 100 mA                      The devices feature an integrated short-circuit and
+    Load Current                                                      overcurrent protection. The TPS7B69xx-Q1 device
+•   Stable With Low ESR Ceramic Output Capacitor                      operates over a –40°C to 125°C temperature range.
+    (2.2 to 100 µF)                                                   Because of these features, the TPS7B6925-Q1,
+                                                                      TPS7B6933-Q1, and TPS7B6950-Q1 devices are
+•   Fixed 2.5-V, 3.3-V, and 5-V Output Voltage
+                                                                      well suited in power supplies for various automotive
+    Options                                                           applications.
+•   Integrated Fault Protection:
+    – Thermal Shutdown                                                                       Device Information(1)
+    – Short-Circuit Protection                                            PART NUMBER               PACKAGE        BODY SIZE (NOM)
+                                                                       TPS7B6925-Q1             SOT-223 (4)       6.50 mm × 3.50 mm
+•   Packages:                                                          TPS7B6933-Q1
+    – 4-Pin SOT-223 Package                                            TPS7B6950-Q1             SOT-23 (5)        2.90 mm × 1.60 mm
+
+    – 5-Pin SOT-23 Package                                             (1) For all available packages, see the orderable addendum at
+                                                                           the end of the datasheet.
+
+
+4 Typical Application Schematic
+
+                                                               TPS7B69xx-Q1
+                                                      IN                             OUT
+                                             VI                                                VO
+                        Vbat                                                                              Vreg
+
+
+
+                                                  10 µF                                          4.7 µF
+                                                                    GND
+
+
+
+
+1
+
+
+
+
+      An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+      intellectual property matters and other important disclaimers. PRODUCTION DATA.
+TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015                                                                                                                      www.ti.com
+
+
+                                                                          Table of Contents
+    1   Features .................................................................. 1              8.3 Feature Description................................................. 10
+    2   Applications ........................................................... 1                 8.4 Device Functional Modes........................................ 11
+    3   Description ............................................................. 1          9    Application and Implementation ........................ 12
+    4   Typical Application Schematic............................. 1                               9.1 Application Information............................................ 12
+                                                                                                   9.2 Typical Application .................................................. 12
+    5   Revision History..................................................... 2
+    6   Pin Configuration and Functions ......................... 3                          10 Power Supply Recommendations ..................... 14
+    7   Specifications......................................................... 4            11 Layout................................................................... 14
+                                                                                                   11.1 Layout Guidelines ................................................. 14
+        7.1    Absolute Maximum Ratings ...................................... 4
+                                                                                                   11.2 Layout Example .................................................... 14
+        7.2    ESD Ratings.............................................................. 4
+        7.3    Recommended Operating Conditions....................... 4                     12 Device and Documentation Support ................. 15
+        7.4    Thermal Information .................................................. 4            12.1    Documentation Support ........................................ 15
+        7.5    Electrical Characteristics........................................... 5             12.2    Related Links ........................................................ 15
+        7.6    Typical Characteristics .............................................. 6            12.3    Trademarks ........................................................... 15
+                                                                                                   12.4    Electrostatic Discharge Caution ............................ 15
+    8   Detailed Description ............................................ 10
+                                                                                                   12.5    Glossary ................................................................ 15
+        8.1 Overview ................................................................. 10
+        8.2 Functional Block Diagram ....................................... 10              13 Mechanical, Packaging, and Orderable
+                                                                                                Information ........................................................... 15
+
+
+
+5 Revision History
+Changes from Revision A (December 2014) to Revision B                                                                                                                         Page
+
+•   Changed the TPS7B6933-Q1 device status from Product Preview to Production Data ....................................................... 1
+•   Added the TPS7B6933-Q1 device test results to the Typical Characteristics section .......................................................... 6
+
+
+Changes from Original (November 2014) to Revision A                                                                                                                           Page
+
+•   Changed the device status from Product Preview to Production Data ................................................................................. 1
+
+
+
+
+2       Submit Documentation Feedback                                                                         Copyright © 2014–2015, Texas Instruments Incorporated
+
+                                            Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+                                                                                  TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+www.ti.com                                                                              SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015
+
+
+6 Pin Configuration and Functions
+
+                            DCY Package                                                              DBV Package
+                            4-Pin SOT-223                                                            5-Pin SOT-23
+                              Top View                                                                 Top View
+                                   GND
+                                    4                                                    IN      1                  5     OUT
+
+
+
+
+                                                                                        NC       2
+
+
+
+
+                                                                                      GND        3                  4     GND
+
+                       1            2            3
+                                                                                      NC - No internal connection
+
+
+
+                       IN          GND          OUT
+
+
+                                                                      Pin Functions
+                 PIN
+                        NO.               TYPE                                        DESCRIPTION
+NAME
+              SOT-223       SOT-23
+                  2            3
+GND                                         G        Ground reference
+                  4            4
+IN                1            1            P        Input power-supply voltage
+NC                —            2            —        Not connected pin
+OUT               3            5            P        Output voltage
+
+
+
+
+Copyright © 2014–2015, Texas Instruments Incorporated                                                Submit Documentation Feedback   3
+                                        Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015                                                                                       www.ti.com
+
+
+7 Specifications
+7.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted) (1)
+                                                                                                           MIN          MAX            UNIT
+Unregulated input voltage                    IN (2) (3) (4)                                                –0.3          45              V
+                                                      (2) (3)
+Regulated output voltage                     OUT                                                           –0.3           7              V
+Operating junction temperature range, TJ                                                                   –40          150              °C
+Storage temperature, Tstg                                                                                  –65          150              °C
+
+(1)   Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings
+      only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under Recommended
+      Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+(2)   All voltage values are with respect to the GND terminal.
+(3)   Absolute negative voltage on these pins must not to go below –0.3 V.
+(4)   Absolute maximum voltage, withstands 45 V for 200 ms.
+
+7.2 ESD Ratings
+                                                                                                                       VALUE              UNIT
+                                   Human body model (HBM), per AEC Q100-002 (1)                                         ±2000
+             Electrostatic                                                   Other pins                                  ±500
+V(ESD)                             Charged device model (CDM), per                                                                            V
+             discharge
+                                   AEC Q100-011                              Corner pins (4 pin: 1, 3, and 4;
+                                                                                                                         ±750
+                                                                             5 pin: 1, 3, 4, and 5)
+
+(1)   AEC Q100-002 indicates HBM stressing is done in accordance with the ANSI/ESDA/JEDEC JS-001 specification.
+
+7.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)
+                                                                                                             MIN              MAX      UNIT
+VI             Unregulated input voltage                                                                          4             40       V
+VO             Output voltage                                                                                     0            5.5       V
+                                                (1)
+CO             Output capacitor requirements                                                                    2.2           100        µF
+ESRCO          Output ESR requirements (2)                                                                  0.001               2        Ω
+TJ             Operating junction temperature range                                                             –40           150        °C
+
+(1)   The output capacitance range specified in this table is the effective value.
+(2)   Relevant ESR value at ƒ = 10 kHz.
+
+7.4 Thermal Information
+                                                                                                    DCY                DBV
+                                  THERMAL METRIC (1) (2)                                                                                UNIT
+                                                                                                   4 PINS             5 PINS
+RθJA            Junction-to-ambient thermal resistance                                              64.2              210.4
+RθJC(top)       Junction-to-case (top) thermal resistance                                           46.8              126.1
+RθJB            Junction-to-board thermal resistance                                                13.3               38.4             °C/W
+ψJT             Junction-to-top characterization parameter                                           6.3                16
+ψJB             Junction-to-board characterization parameter                                        13.2               37.5
+
+(1)   The thermal data is based on the JEDEC standard high-K profile, JESD 51-7, 2s2p four layer board with 2-oz copper. The copper pad is
+      soldered to the thermal land pattern. Also correct attachment procedure must be incorporated.
+(2)   For more information about traditional and new thermal metrics, see the IC Package Thermal Metrics application report, SPRA953.
+
+
+
+
+4        Submit Documentation Feedback                                                        Copyright © 2014–2015, Texas Instruments Incorporated
+
+                                    Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+                                                                                   TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+www.ti.com                                                                                   SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015
+
+
+7.5 Electrical Characteristics
+VIN = 14 V, 1 mΩ < ESR < 2 Ω, TJ = –40°C to 150 °C (unless otherwise noted)
+                 PARAMETER                                          TEST CONDITIONS                            MIN     TYP     MAX       UNIT
+SUPPLY VOLTAGE AND CURRENT (IN)
+                                                 Fixed 2.5-V output, IO = 1 mA                                   4               40
+VI             Input voltage                     Fixed 3.3-V output, IO = 1 mA                                   4               40       V
+                                                 Fixed 5-V output, IO = 1 mA                                   5.5               40
+                                                 Fixed 2.5-V and 3.3-V version, VI = 4 to 40 V,
+IQ             Quiescent current                                                                                         15      25      µA
+                                                 Fixed 5-V version, VI = 5.5 to 40 V, IO = 0.2 mA
+                                                 Ramp VI up until the output turns on                         3.65
+VIN(UVLO)      IN undervoltage detection                                                                                                  V
+                                                 Ramp VI down until the output turns OFF                                          3
+REGULATED OUTPUT (OUT)
+                                                 Fixed 2.5-V version, VI = 4 to 40 V, IO = 1 to 150 mA        –3%                3%
+VO             Regulated output                  Fixed 3.3-V version, VI = 5 to 40 V, IO = 1 to 150 mA        –3%                3%
+                                                 Fixed 5-V version, VI = 6.5 to 40 V, IO = 1 to 150 mA        –3%                3%
+ΔVO(ΔVI)       Line regulation                   VI = 6 to 40 V, ∆VO, IO = 10 mA                                                 10      mV
+ΔVO(ΔIL)       Load regulation                   IO = 1 to 150 mA, ∆VO                                                           20      mV
+                                                 Fixed 2.5-V version, VI – VO, IO = 50 mA                                      1.575
+                                                                                                                                          V
+                                                 Fixed 2.5-V version, VI – VO, IO = 100 mA                                     1.575
+                                                 Fixed 3.3-V version, VI – VO, IO = 50 mA                                       799
+VDROP          Dropout voltage
+                                                 Fixed 3.3-V version, VI – VO, IO = 100 mA                                      800
+                                                                                                                                         mV
+                                                 Fixed 5-V version, VI – VO, IO = 50 mA                                 220     400
+                                                 Fixed 5-V version, VI – VO, IO = 100 mA                                450     800
+IO             Output current                    VO in regulation                                                0              150      mA
+IOCL           Output current-limit              OUT short to ground                                           150              500      mA
+               Power supply ripple
+PSRR                                             Vrip = 0.5 Vpp, Load = 10 mA, ƒ = 100 Hz, CO = 2.2 µF                   60              dB
+               rejection (1)
+OPERATING TEMPERATURE RANGE
+               Junction shutdown
+Tsd                                                                                                                     175               °C
+               temperature
+               Hysteresis of thermal
+Thys                                                                                                                     25               °C
+               shutdown
+
+(1)    Design Information—Not tested, ensured by characterization.
+
+
+
+
+Copyright © 2014–2015, Texas Instruments Incorporated                                                    Submit Documentation Feedback          5
+                                      Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015                                                                                                                                                        www.ti.com
+
+
+7.6 Typical Characteristics
+
+                          6                                                                                                        3.8
+                                                                                  IO = 1 mA                                                                                                     IO = 1 mA
+                         5.8                                                      IO = 80 mA                                       3.7                                                          IO = 80 mA
+                         5.6                                                                                                       3.6
+                         5.4                                                                                                       3.5
+    Output Voltage (V)
+
+
+
+
+                                                                                                      Output Voltage (V)
+                         5.2                                                                                                       3.4
+                          5                                                                                                        3.3
+                         4.8                                                                                                       3.2
+                         4.6                                                                                                       3.1
+                         4.4                                                                                                        3
+                         4.2                                                                                                       2.9
+                          4                                                                                                        2.8
+                          -55           -25         5       35      65       95          125                                         -55            -25           5       35      65       95          125
+                                                   Junction Temperature (qC)                   D001
+                                                                                                                                                                 Junction Temperature (qC)                    D011
+                                                                                                                                                                      VI = 14 V
+
+
+                          Figure 1. 5-V Output Voltage vs Junction Temperature                                                     Figure 2. 3.3-V Output Voltage vs Junction Temperature
+                          3                                                                                                        6
+                                                                                  IO = 1 mA
+                         2.9                                                      IO = 80 mA
+                                                                                                                                   5
+                         2.8
+                         2.7
+    Output Voltage (V)
+
+
+
+
+                                                                                                              Output Voltage (V)
+
+
+                                                                                                                                   4
+                         2.6
+                         2.5                                                                                                       3
+                         2.4
+                                                                                                                                   2
+                         2.3
+                         2.2
+                                                                                                                                   1
+                         2.1
+                          2                                                                                                        0
+                          -55           -25         5       35      65       95       125                                              0        5          10      15     20      25     30      35          40
+                                                   Junction Temperature (qC)                   D008
+                                                                                                                                                                   Supply Voltage (V)                        D002
+                                                        VI = 14 V                                                                                                    IO = 0 mA
+
+
+                         Figure 3. 2.5-V Output Voltage vs Junction Temperature                                                              Figure 4. 5-V Output Voltage vs Supply Voltage
+                          4                                                                                                         3
+
+                         3.5
+                                                                                                                                   2.5
+                          3
+    Output Voltage (V)
+
+
+
+
+                                                                                                      Output Voltage (V)
+
+
+
+
+                                                                                                                                    2
+                         2.5
+
+                          2                                                                                                        1.5
+
+                         1.5
+                                                                                                                                    1
+                          1
+                                                                                                                                   0.5
+                         0.5
+
+                          0                                                                                                         0
+                               0       5      10      15     20      25    30       35         40                                        0       5          10      15     20      25    30       35         40
+                                                      Supply Voltage (V)                       D012
+                                                                                                                                                                    Supply Voltage (V)                        D009
+                                                       IO = 0 mA                                                                                                     IO = 0 mA
+
+
+                                   Figure 5. 3.3-V Output Voltage vs Supply Voltage                                                          Figure 6. 2.5-V Output Voltage vs Supply Voltage
+
+
+
+
+6                        Submit Documentation Feedback                                                                                                    Copyright © 2014–2015, Texas Instruments Incorporated
+
+                                                           Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+                                                                                                                                                                                TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+www.ti.com                                                                                                                                                                                    SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015
+
+
+Typical Characteristics (continued)
+                                                   160                                                                                                                         30
+                                                                                                                                                                                                                                         40qC
+                                                   140                                                                                                                                                                                   25qC
+                                                                                                                                                                               25                                                        125qC
+                                                   120
+         Qiescent Current (PA)
+
+
+
+
+                                                                                                                                           Qiescent Current (PA)
+                                                                                                                                                                               20
+                                                   100
+
+                                                    80                                                                                                                         15
+
+                                                    60
+                                                                                                                                                                               10
+                                                    40
+                                                                                                                   40qC                                                        5
+                                                    20                                                             25qC
+                                                                                                                   125qC
+                                                     0                                                                                                                          0
+                                                         0          30              60         90         120        150                                                            0        5      10      15     20      25     30    35      40
+                                                                                   Output Current (mA)                     D003
+                                                                                                                                                                                                            Supply Voltage (V)                   D010
+                                                                                                                                                                                                            IO = 0.2 mA
+
+
+                                                              Figure 7. Quiescent Current vs Output Current                                                                             Figure 8. Quiescent Current vs Supply Voltage
+                                                   1100                                                                                                                        80
+                                                   1000
+
+                                                                                                                                           Power Supply Rejection Ratio (dB)
+                                                                                                                                                                               70
+                                                    900
+                                                                                                                                                                               60
+   Dropout Voltage (mV)
+
+
+
+
+                                                    800
+                                                    700                                                                                                                        50
+                                                    600
+                                                                                                                                                                               40
+                                                    500
+                                                    400                                                                                                                        30
+                                                    300                                                                                                                        20
+                                                    200                                                             40qC
+                                                                                                                    25qC                                                       10
+                                                    100
+                                                                                                                    125qC
+                                                      0                                                                                                                         0
+                                                          0            30            60          90         120            150                                                  1E+1         1E+2    1E+3      1E+4    1E+5      1E+6   1E+7 5E+7
+                                                                                   Output Current (mA)                      D004
+                                                                                                                                                                                                             Frequency (Hz)                      D005
+                                                                                                                                                                                    IO = 100 mA                     VI = 14 V                TA = 25°C
+                                                                                                                                                                                     CO = 2.2 µF
+
+                                                              Figure 9. Dropout Voltage vs Output Current                                                                                    Figure 10. Power Supply Rejection Ratio
+                                                    90                                                                                                                         100
+
+                                                    80
+               Power Supply Rejection Ratio (dB)
+
+
+
+
+                                                    70                                                                                                                          80
+                                                                                                                                   Load Capacitance (µF)
+
+
+
+
+                                                    60
+                                                                                                                                                                                60
+                                                    50
+
+                                                    40                                                                                                                                                        Stable Region
+                                                                                                                                                                                40
+                                                    30
+
+                                                    20                                                                                                                          20
+                                                    10
+                                                                                                                                                                               2.2
+                                                    0
+                                                    1E+1        1E+2        1E+3      1E+4    1E+5       1E+6     1E+7 5E+7                                                          0.001          0.5            1            1.5              2
+                                                                                    Frequency (Hz)                         D006
+                                                                                                                                                                                                     ESR of Output Capacitance (Ω)               D007
+                                                          IO = 10 mA                       VI = 14 V                TA = 25°C
+                                                         CO = 2.2 µF
+
+                                                                Figure 11. Power Supply Rejection Ratio                                                                                 Figure 12. ESR Stability vs Output Capacitance
+
+
+
+
+Copyright © 2014–2015, Texas Instruments Incorporated                                                                                                                                                       Submit Documentation Feedback                7
+                                                                                         Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015                                                                                       www.ti.com
+
+
+Typical Characteristics (continued)
+
+
+                                                                         VO (AC)
+                                                                         100 mV/div
+
+
+    VO (AC)
+    100 mV/div
+
+
+
+
+     IO (DC)
+     50 mA/div                                                           IO (DC)
+                                                                         50 mA/div
+
+
+
+
+                  VI = 14 V         CO = 2.2 µF               1 ms/div                 VI = 14 V           CO = 2.2 µF                  1 ms/div
+                  VO = 5 V                                                            VO = 3.3 V
+
+                   Figure 13. Load Transient (1 to 100 mA, 5 V)                        Figure 14. Load Transient (1 to 100 mA, 3.3 V)
+
+
+
+
+    VO (AC)                                                              VO (AC)
+    100 mV/div                                                           100 mV/div
+
+
+
+
+    IO (DC)
+                                                                         IO (DC)
+    50 mA/div                                                            50 mA/div
+
+
+
+
+                  VI = 14 V         CO = 2.2 µF               1 ms/div                 VI = 14 V           CO = 2.2 µF                  1 ms/div
+                 VO = 2.5 V                                                            VO = 5 V
+
+
+                  Figure 15. Load Transient (1 to 100 mA, 2.5 V)                        Figure 16. Load Transient (1 to 150 mA, 5 V)
+
+
+
+    VO (AC)
+    100 mV/div                                                           VO (AC)
+                                                                         100 mV/div
+
+
+
+
+                                                                         IO (DC)
+    IO (DC)                                                              50 mA/div
+    50 mA/div
+
+
+
+
+                  VI = 14 V         CO = 2.2 µF               1 ms/div                 VI = 14 V           CO = 2.2 µF                  1 ms/div
+                 VO = 3.3 V                                                           VO = 2.5 V
+
+                  Figure 17. Load Transient (1 to 150 mA, 3.3 V)                       Figure 18. Load Transient (1 to 150 mA, 2.5 V)
+
+
+
+
+8         Submit Documentation Feedback                                                       Copyright © 2014–2015, Texas Instruments Incorporated
+
+                                     Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+                                                                                     TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+www.ti.com                                                                                    SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015
+
+
+Typical Characteristics (continued)
+
+
+
+                                                                            VO
+   VO
+   20 mV/div                                                                20 mV/div
+
+
+
+
+    VI                                                                      VI
+    5 V/div                                                                 5 V/div
+
+
+
+
+              VI = 9 to 16 V            CO = 2.2 µF             1 ms/div             VI = 9 to 16 V            CO = 2.2 µF             1 ms/div
+                 IO = 10 mA                                                             IO = 10 mA
+
+
+                        Figure 19. Line Transient (VO = 5 V)                                  Figure 20. Line Transient (VO = 3.3 V)
+
+
+
+    VO
+    20 mV/div
+
+
+
+                                                                           VI
+                                                                           5 V/div
+
+
+
+     VI
+     5 V/div
+
+
+
+                                                                           VO
+                                                                           2 V/div
+
+
+
+              VI = 9 to 16 V            CO = 2.2 µF             1 ms/div                              CO = 2.2 µF, 400 µs/div
+                 IO = 10 mA
+
+
+                       Figure 21. Line Transient (VO = 2.5 V)                                          Figure 22. 5-V Power Up
+
+
+
+
+    VI                                                                     VI
+    5 V/div                                                                5 V/div
+
+
+
+
+    VO                                                                     VO
+    1 V/div                                                                1 V/div
+
+
+
+
+                               CO = 2.2 µF, 400 µs/div                                                CO = 2.2 µF, 400 µs/div
+
+
+
+
+                               Figure 23. 3.3-V Power Up                                              Figure 24. 2.5-V Power Up
+
+
+
+
+Copyright © 2014–2015, Texas Instruments Incorporated                                                     Submit Documentation Feedback           9
+                                         Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015                                                                      www.ti.com
+
+
+8 Detailed Description
+
+8.1 Overview
+The TPS7B69xx-Q1 high-voltage linear regulator operates over a 4-V to 40-V input voltage range. The device
+has an output current capability of 150 mA and offers fixed output voltages of 2.5 V (TPS7B6925-Q1), 3.3 V
+(TPS7B6933-Q1) or 5 V (TPS7B6950-Q1). The device features a thermal shutdown and short-circuit protection
+to prevent damage during over-temperature and overcurrent conditions.
+
+8.2 Functional Block Diagram
+
+
+
+
+               IN                                                                                        OUT
+
+                                                           Overcurrent
+                                                            detection
+                         UVLO
+                                                             Regulator         Thermal
+                                                              control         shutdown
+
+                        Band gap
+                                                                              +
+                                                                                    Vref
+
+
+
+
+                                                                                            GND
+
+8.3 Feature Description
+8.3.1 Input (IN)
+The IN pin is a high-voltage-tolerant pin. A capacitor with a value higher than 0.1 µF is recommended to be
+connected close to this pin to better the transient performance.
+
+8.3.2 Output (OUT)
+The OUT pin is the regulated output based on the required voltage. The output has current limitation. During the
+initial power up, the regulator has a soft start incorporated to control the initial current through the pass element
+and the output capacitor.
+In the event that the regulator drops out of regulation, the output tracks the input minus a drop based on the load
+current. When the input voltage drops below the UVLO threshold, the regulator shuts down until the input voltage
+recovers above the minimum startup level.
+
+8.3.3 Output Capacitor Selection
+For stable operation over the full temperature range and with load currents up to 150 mA, use a capacitor with an
+effective value between 2.2 µF and 100 µF and ESR smaller than 2 Ω. To better the load transient performance,
+an output capacitor, such as a ceramic capacitor with low ESR, is recommended.
+
+8.3.4 Low-Voltage Tracking
+At low input voltages, the regulator drops out of regulation and the output voltage tracks input minus a voltage
+based on the load current (IL) and switch resistor. This tracking allows for a smaller input capacitor and can
+possibly eliminate the need for a boost converter during cold-crank conditions.
+10     Submit Documentation Feedback                                         Copyright © 2014–2015, Texas Instruments Incorporated
+
+                              Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+                                                                        TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+www.ti.com                                                                      SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015
+
+
+Feature Description (continued)
+8.3.5 Thermal Shutdown
+The TPS7B69xx-Q1 family of devices incorporates a thermal-shutdown (TSD) circuit as a protection from
+overheating. For continuous normal operation, the junction temperature should not exceed the TSD trip point. If
+the junction temperature exceeds the TSD trip point, the output turns off. When the junction temperature falls
+below the TSD trip point minus the hysteresis of TSD, the output turns on again. This cycling limits the
+dissipation of the regulator, protecting it from damage as a result of overheating.
+The purpose of the design of the internal protection circuitry of the TPS7B69xx-Q1 family of devices is for
+protection against overload conditions, not as a replacement for proper heat-sinking. Continuously running the
+TPS7B69xx-Q1 family of devices into thermal shutdown degrades device reliability.
+
+8.4 Device Functional Modes
+8.4.1 Operation With VI Less Than 4 V
+The TPS7B69xx-Q1 family of devices operates with input voltages above 4 V. The maximum UVLO voltage is 3
+V and the device operates at an input voltage above 4 V. The device can also operate at lower input voltages; no
+minimum UVLO voltage is specified. At input voltages below the actual UVLO, the device shuts down.
+
+8.4.2 Operation With VI Greater Than 4 V
+When VI is greater than 4 V, if the input voltage is higher than VO plus the dropout voltage, the output voltage is
+equal to the set value. Otherwise, the output voltage is equal to VI minus the dropout voltage.
+
+
+
+
+Copyright © 2014–2015, Texas Instruments Incorporated                                     Submit Documentation Feedback     11
+                                    Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015                                                                               www.ti.com
+
+
+9 Application and Implementation
+
+                                                         NOTE
+             Information in the following applications sections is not part of the TI component
+             specification, and TI does not warrant its accuracy or completeness. TI’s customers are
+             responsible for determining suitability of components for their purposes. Customers should
+             validate and test their design implementation to confirm system functionality.
+
+
+9.1 Application Information
+The TPS7B69xx-Q1 family of devices is a 150-mA low-dropout linear regulator designed for up to 40-V VI
+operation with only 15-µA quiescent current at light loads. Use the PSpice transient model to evaluate the base
+function of the device. To download the PSpice transient model, go to the device product folder on www.TI.com.
+In addition to this model, specific evaluation modules (EVM) are available for these devices. For the EVM and
+the EVM user guide, go to the device product folder.
+
+9.2 Typical Application
+Figure 25 shows the typical application circuit for the TPS7B69xx-Q1 family of devices. Based on the end-
+application, different values of external components can be used. An application can require a larger output
+capacitor during fast load steps to achieve better load transient response. TI recommends a low-ESR ceramic
+capacitor with a dielectric of type X5R or X7R for better load transient response.
+
+                                                              TPS7B69xx-Q1
+                                                       IN                            OUT
+                                              VI                                             VO
+                         Vbat                                                                            Vreg
+
+
+
+                                                   10 µF                                       4.7 µF
+                                                                  GND
+
+
+
+
+                                Figure 25. Typical Application Schematic for TPS7B69xx-Q1
+
+9.2.1 Design Requirements
+For this design example, use the parameters listed in Table 1.
+
+                                                     Table 1. Design Parameters
+DESIGN PARAMETER                                                 EXAMPLE VALUES
+Input voltage range                                              4 to 40 V
+Output voltage                                                   2.5 V, 3.3 V, 5 V
+Output current rating                                            150 mA
+Output capacitor range                                           2.2 to 100 µF
+Output capacitor ESR range                                       1 mΩ to 2 Ω
+
+
+9.2.2 Detailed Design Procedure
+To begin the design process, determine the following:
+• Input voltage range
+• Output Voltage
+• Output current rating
+
+
+
+12     Submit Documentation Feedback                                                  Copyright © 2014–2015, Texas Instruments Incorporated
+
+                                   Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+                                                                           TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+www.ti.com                                                                          SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015
+
+
+9.2.2.1 Input Capacitor
+The device requires an input decoupling capacitor, the value of which depends on the application. The typical
+recommend value for the decoupling capacitor is higher than 0.1 µF. The voltage rating must be greater than the
+maximum input voltage.
+
+9.2.2.2 Output Capacitor
+The device requires an output capacitor to stabilize the output voltage. The output capacitor value should be
+between 2.2 µF and 100 µF. The ESR value range should be between 1 mΩ and 2 Ω. TI recommends a ceramic
+capacitor with low ESR to improve the load transient response.
+
+9.2.2.3 Power Dissipation and Thermal Considerations
+Use Equation 1 to calculate the power dissipated in the device.
+       PD = IO × (VI – VO) + IQ × VI
+       where
+             •   PD = continuous power dissipation
+             •   IO = output current
+             •   VI = input voltage
+             •   VO = output voltage                                                                                            (1)
+Because IQ « IO, the term IQ × VI in Equation 1 can be ignored.
+For a device under operation at a given ambient air temperature (TA), use Equation 2 to calculate the junction
+temperature (TJ).
+       TJ = TA + (ZθJA × PD)
+       where
+             •   ZθJA = junction-to-ambient air thermal impedance                                                               (2)
+Use Equation 3 to calculate the rise in junction temperature because of power dissipation.
+       ΔT = TJ – TA = (ZθJA × PD)                                                                                               (3)
+For a given maximum junction temperature (TJmax), use Equation 4 to calculate the maximum ambient air
+temperature (TAmax) at which the device can operate.
+       TAmax = TJmax – (ZθJA × PD)                                                                                              (4)
+
+9.2.3 Application Curve
+
+
+
+
+                                     VI
+                                     5 V/div
+
+
+
+
+                                    VO
+                                    2 V/div
+
+
+
+
+                                                         CO = 2.2 µF, 400 µs/div
+
+                                                        Figure 26. Power Up (5 V)
+
+
+Copyright © 2014–2015, Texas Instruments Incorporated                                        Submit Documentation Feedback      13
+                                    Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015                                                                      www.ti.com
+
+
+10 Power Supply Recommendations
+The device is designed to operate from an input-voltage supply range between 4 V and 40 V. This input supply
+must be well regulated. If the input supply is located more than a few inches from the TPS7B69xx-Q1 device, TI
+recommends adding an electrolytic capacitor with a value of 10 µF and a ceramic bypass capacitor at the input.
+
+11 Layout
+
+11.1 Layout Guidelines
+For the layout of TPS7B69xx-Q1 family of devices, place the input and output capacitors close to the devices as
+shown in Figure 27 and Figure 28. To enhance the thermal performance, TI recommends surrounding the device
+with some vias.
+Minimize equivalent series inductance (ESL) and ESR to maximize performance and ensure stability. Place
+every capacitor as close as possible to the device and on the same side of the PCB as the regulator.
+Do not place any of the capacitors on the opposite side of the PCB from where the regulator is installed. TI
+strongly discourages the use of long traces because they can impact system performance negatively and even
+cause instability.
+If possible, and to ensure the maximum performance specified in this product data sheet, use the same layout
+pattern used for the TPS7B69xx-Q1 evaluation board.
+
+11.2 Layout Example
+
+                                                          GND
+
+                                                           4
+
+
+
+
+                                                  1        2          3
+
+
+
+
+                                                  IN     GND         OUT
+
+
+                                 Figure 27. Layout Example for SOT-223 Package
+
+
+
+
+14     Submit Documentation Feedback                                         Copyright © 2014–2015, Texas Instruments Incorporated
+
+                              Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+                                                                             TPS7B6925-Q1, TPS7B6933-Q1, TPS7B6950-Q1
+www.ti.com                                                                               SLVSCJ8B – NOVEMBER 2014 – REVISED JANUARY 2015
+
+
+Layout Example (continued)
+
+
+                                                             1                   5
+                                                   IN                                    OUT
+
+                                                             2
+                                                  NC
+
+                                                             3                  4
+                                                GND                                   GND
+                                         Figure 28. Layout Example for SOT-23 Package
+
+
+12 Device and Documentation Support
+
+12.1 Documentation Support
+12.1.1 Related Documentation
+For related documentation see the following:
+    TPS7B6950EVM User's Guide, SLVUAC0.
+
+12.2 Related Links
+The table below lists quick access links. Categories include technical documents, support and community
+resources, tools and software, and quick access to sample or buy.
+
+                                                             Table 2. Related Links
+                                                                          TECHNICAL                TOOLS &              SUPPORT &
+        PARTS             PRODUCT FOLDER                SAMPLE & BUY
+                                                                          DOCUMENTS               SOFTWARE              COMMUNITY
+    TPS7B6925-Q1                Click here                Click here        Click here              Click here            Click here
+    TPS7B6933-Q1                Click here                Click here        Click here              Click here            Click here
+    TPS7B6950-Q1                Click here                Click here        Click here              Click here            Click here
+
+
+12.3 Trademarks
+All trademarks are the property of their respective owners.
+12.4 Electrostatic Discharge Caution
+          These devices have limited built-in ESD protection. The leads should be shorted together or the device placed in conductive foam
+          during storage or handling to prevent electrostatic damage to the MOS gates.
+
+
+12.5 Glossary
+SLYZ022 — TI Glossary.
+   This glossary lists and explains terms, acronyms, and definitions.
+
+13 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+
+Copyright © 2014–2015, Texas Instruments Incorporated                                             Submit Documentation Feedback         15
+                                    Product Folder Links: TPS7B6925-Q1 TPS7B6933-Q1 TPS7B6950-Q1
+                                                                                                                                                                     PACKAGE OPTION ADDENDUM
+
+       www.ti.com                                                                                                                                                                                                   10-Nov-2025
+
+
+
+
+PACKAGING INFORMATION
+
+       Orderable part number          Status     Material type      Package | Pins      Package qty | Carrier       RoHS             Lead finish/               MSL rating/          Op temp (°C)               Part marking
+                                        (1)            (2)                                                            (3)            Ball material              Peak reflow                                           (6)
+                                                                                                                                          (4)                       (5)
+
+       TPS7B6925QDBVRQ1               Active      Production       SOT-23 (DBV) | 5      3000 | LARGE T&R            Yes                  SN            Level-2-260C-1 YEAR            -40 to 125                   ZBE2
+      TPS7B6925QDBVRQ1.A              Active      Production       SOT-23 (DBV) | 5      3000 | LARGE T&R            Yes                  SN            Level-2-260C-1 YEAR            -40 to 125                   ZBE2
+       TPS7B6925QDCYRQ1               Active      Production      SOT-223 (DCY) | 4      2500 | LARGE T&R            Yes                  SN             Level-3-260C-168 HR           -40 to 125                  7B6925
+      TPS7B6925QDCYRQ1.A              Active      Production      SOT-223 (DCY) | 4      2500 | LARGE T&R            Yes                  SN             Level-3-260C-168 HR           -40 to 125                  7B6925
+       TPS7B6933QDBVRQ1               Active      Production       SOT-23 (DBV) | 5      3000 | LARGE T&R            Yes                  SN            Level-2-260C-1 YEAR            -40 to 125                   ZBF2
+      TPS7B6933QDBVRQ1.A              Active      Production       SOT-23 (DBV) | 5      3000 | LARGE T&R            Yes                  SN            Level-2-260C-1 YEAR            -40 to 125                   ZBF2
+       TPS7B6933QDCYRQ1               Active      Production      SOT-223 (DCY) | 4      2500 | LARGE T&R            Yes                  SN             Level-3-260C-168 HR           -40 to 125                  7B6933
+      TPS7B6933QDCYRQ1.A              Active      Production      SOT-223 (DCY) | 4      2500 | LARGE T&R            Yes                  SN             Level-3-260C-168 HR           -40 to 125                  7B6933
+       TPS7B6950QDBVRQ1               Active      Production       SOT-23 (DBV) | 5      3000 | LARGE T&R            Yes                  SN            Level-2-260C-1 YEAR            -40 to 125                   ZAZ2
+      TPS7B6950QDBVRQ1.A              Active      Production       SOT-23 (DBV) | 5      3000 | LARGE T&R            Yes                  SN            Level-2-260C-1 YEAR            -40 to 125                   ZAZ2
+       TPS7B6950QDCYRQ1               Active      Production      SOT-223 (DCY) | 4      2500 | LARGE T&R            Yes                  SN             Level-3-260C-168 HR           -40 to 125                  7B6950
+      TPS7B6950QDCYRQ1.A              Active      Production      SOT-223 (DCY) | 4      2500 | LARGE T&R            Yes                  SN             Level-3-260C-168 HR           -40 to 125                  7B6950
+
+(1)
+      Status: For more details on status, see our product life cycle.
+
+(2)
+   Material type: When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+
+(3)
+      RoHS values: Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+
+(4)
+   Lead finish/Ball material: Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+
+(5)
+  MSL rating/Peak reflow: The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+
+(6)
+      Part marking: There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+
+
+
+                                                                                                          Addendum-Page 1
+                                                                                                                                                                      PACKAGE OPTION ADDENDUM
+
+    www.ti.com                                                                                                                                                                                                   10-Nov-2025
+
+
+
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+OTHER QUALIFIED VERSIONS OF TPS7B69-Q1 :
+
+• Catalog : TPS7B69
+
+NOTE: Qualified Version Definitions:
+
+        • Catalog - TI's standard catalog product
+
+
+
+
+                                                                                                          Addendum-Page 2
+                                                                   PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                                  24-Apr-2020
+
+
+
+TAPE AND REEL INFORMATION
+
+
+
+
+*All dimensions are nominal
+             Device           Package Package Pins   SPQ       Reel   Reel   A0            B0     K0     P1     W     Pin1
+                               Type Drawing                  Diameter Width (mm)          (mm)   (mm)   (mm)   (mm) Quadrant
+                                                               (mm) W1 (mm)
+  TPS7B6925QDBVRQ1            SOT-23    DBV    5     3000      178.0      9.0      3.3    3.2    1.4    4.0    8.0     Q3
+  TPS7B6925QDCYRQ1            SOT-223   DCY    4     2500      330.0     12.4      7.05   7.4    1.9    8.0    12.0    Q3
+  TPS7B6933QDBVRQ1            SOT-23    DBV    5     3000      178.0      9.0      3.3    3.2    1.4    4.0    8.0     Q3
+  TPS7B6933QDCYRQ1            SOT-223   DCY    4     2500      330.0     12.4      7.05   7.4    1.9    8.0    12.0    Q3
+  TPS7B6950QDBVRQ1            SOT-23    DBV    5     3000      178.0      9.0      3.3    3.2    1.4    4.0    8.0     Q3
+  TPS7B6950QDCYRQ1            SOT-223   DCY    4     2500      330.0     12.4      7.05   7.4    1.9    8.0    12.0    Q3
+
+
+
+
+                                                           Pack Materials-Page 1
+                                                                PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                           24-Apr-2020
+
+
+
+
+*All dimensions are nominal
+             Device           Package Type   Package Drawing   Pins     SPQ     Length (mm)   Width (mm)   Height (mm)
+  TPS7B6925QDBVRQ1              SOT-23            DBV           5       3000       190.0        190.0         30.0
+  TPS7B6925QDCYRQ1              SOT-223           DCY           4       2500       340.0        340.0         38.0
+  TPS7B6933QDBVRQ1              SOT-23            DBV           5       3000       190.0        190.0         30.0
+  TPS7B6933QDCYRQ1              SOT-223           DCY           4       2500       340.0        340.0         38.0
+  TPS7B6950QDBVRQ1              SOT-23            DBV           5       3000       180.0        180.0         18.0
+  TPS7B6950QDCYRQ1              SOT-223           DCY           4       2500       340.0        340.0         38.0
+
+
+
+
+                                                        Pack Materials-Page 2
+                                                                                                                MECHANICAL DATA
+
+                                                                                                    MPDS094A – APRIL 2001 – REVISED JUNE 2002
+
+DCY (R-PDSO-G4)                                                                                            PLASTIC SMALL-OUTLINE
+
+
+
+
+                                  6,70 (0.264)
+                                  6,30 (0.248)
+                                                           3,10 (0.122)
+                                                           2,90 (0.114)
+                                         4
+                                                                0,10 (0.004) M
+
+
+
+
+            7,30 (0.287)                                   3,70 (0.146)
+            6,70 (0.264)                                   3,30 (0.130)
+
+
+
+                                                                                                  Gauge Plane
+                                 1           2        3
+                                                                                                                             0,25 (0.010)
+                                                             0,84 (0.033)                  0°–10°
+               2,30 (0.091)
+                                                             0,66 (0.026)
+                                                                 0,10 (0.004) M
+                                  4,60 (0.181)                                                                            0,75 (0.030) MIN
+
+
+
+
+                                                               1,70 (0.067)
+ 1,80 (0.071) MAX                                              1,50 (0.059)
+                                                                                                                               0,35 (0.014)
+                                                                                                                               0,23 (0.009)
+                                                                   Seating Plane
+
+        0,10 (0.0040)                                                     0,08 (0.003)
+        0,02 (0.0008)
+
+
+
+
+                                                                                                                         4202506/B 06/2002
+
+NOTES: A.   All linear dimensions are in millimeters (inches).
+       B.   This drawing is subject to change without notice.
+       C.   Body dimensions do not include mold flash or protrusion.
+       D.   Falls within JEDEC TO-261 Variation AA.
+
+
+
+
+                                                 POST OFFICE BOX 655303   • DALLAS, TEXAS 75265
+                                                                                                            PACKAGE OUTLINE
+DBV0005A                                                          SCALE 4.000
+                                                                                                     SOT-23 - 1.45 mm max height
+                                                                                                              SMALL OUTLINE TRANSISTOR
+
+
+
+
+                                            3.0                                                                       C
+                                            2.6
+                                          1.75                                                                0.1 C
+                                                           B                               A
+                                          1.45
+            PIN 1
+      INDEX AREA
+
+                        1                                        5
+
+
+              2X 0.95                                            (0.1)
+                                                                                          3.05
+                                                                                          2.75
+        1.9                                                                         1.9
+                        2
+                                                                 (0.15)
+
+
+
+                                                                 4
+                            3
+              0.5
+           5X
+              0.3
+                                                                                                                             0.15
+               0.2      C A B                                                   NOTE 5           4X 0 -15      (1.1)              TYP
+                                                                                                                             0.00
+                                                                                                                1.45
+                                                                                                                0.90
+                                                               4X 4 -15
+
+
+
+          0.25
+ GAGE PLANE                                                                          0.22
+                                                                                          TYP
+                                                                                     0.08
+
+
+
+   8
+     TYP                          0.6
+   0                                  TYP            SEATING PLANE
+                                  0.3
+
+
+
+
+                                                                                                                          4214839/K 08/2024
+
+NOTES:
+
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+   per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. Refernce JEDEC MO-178.
+4. Body dimensions do not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+   exceed 0.25 mm per side.
+5. Support pin may differ or may not be present.
+
+
+
+
+                                                                                www.ti.com
+                                                                               EXAMPLE BOARD LAYOUT
+DBV0005A                                                                             SOT-23 - 1.45 mm max height
+                                                                                                     SMALL OUTLINE TRANSISTOR
+
+
+
+
+                                                                 PKG
+                                                 5X (1.1)
+                                             1
+                                                                                         5
+                                  5X (0.6)
+
+
+                                                                                             SYMM
+                                                                                                     (1.9)
+                                             2
+                              2X (0.95)
+
+
+                                             3                                           4
+
+                             (R0.05) TYP                         (2.6)
+
+
+                                                     LAND PATTERN EXAMPLE
+                                                       EXPOSED METAL SHOWN
+                                                            SCALE:15X
+
+
+
+
+                                                                                                         SOLDER MASK
+                 SOLDER MASK                     METAL                   METAL UNDER                     OPENING
+                 OPENING                                                 SOLDER MASK
+
+
+
+
+         EXPOSED METAL                                        EXPOSED METAL
+
+                                          0.07 MAX                                           0.07 MIN
+                                          ARROUND                                            ARROUND
+
+                                NON SOLDER MASK                                        SOLDER MASK
+                                    DEFINED                                              DEFINED
+                                  (PREFERRED)
+
+                                                      SOLDER MASK DETAILS
+
+
+
+
+                                                                                                               4214839/K 08/2024
+
+NOTES: (continued)
+
+6. Publication IPC-7351 may have alternate designs.
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+
+
+
+
+                                                                www.ti.com
+                                                                               EXAMPLE STENCIL DESIGN
+ DBV0005A                                                                              SOT-23 - 1.45 mm max height
+                                                                                                       SMALL OUTLINE TRANSISTOR
+
+
+
+
+                                                                 PKG
+                                                 5X (1.1)
+                                             1
+                                                                                         5
+                                  5X (0.6)
+
+
+
+                                                                                             SYMM
+                                             2                                                      (1.9)
+                             2X(0.95)
+
+
+                                             3                                           4
+
+                            (R0.05) TYP
+                                                                (2.6)
+
+
+                                                   SOLDER PASTE EXAMPLE
+                                                 BASED ON 0.125 mm THICK STENCIL
+                                                            SCALE:15X
+
+
+
+
+                                                                                                                   4214839/K 08/2024
+
+NOTES: (continued)
+
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.
+9. Board assembly site may have different recommendations for stencil design.
+
+
+
+
+                                                                  www.ti.com
+                                         IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+
+                                                Copyright © 2025, Texas Instruments Incorporated
+                                                                Last updated 10/2025
+

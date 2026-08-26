@@ -1,0 +1,1946 @@
+                                                                                                                                                                                        TPS3430
+                                                                                                                                          SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+                TPS3430 Window Watchdog Timer with Programmable Reset Delay
+
+1 Features                                                                3 Description
+•   Factory-programmed precision watchdog timers:                         The TPS3430 is a standalone window watchdog
+    – ±2.5% Accurate watchdog timeout and                                 timer with programmable watchdog window and
+       watchdog reset delays typical at 25°C                              programmable watchdog reset delay for a wide variety
+•   Watchdog disable feature                                              of applications. The TPS3430 window watchdog
+•   User-programmable watchdog timeout                                    achieves 2.5% timing accuracy (typical at 25°C) and
+•   User-programmable watchdog reset delay                                the watchdog output ( WDO) reset delay can be
+•   Input voltage range: VDD = 1.6 V to 6.5 V                             set by factory-programmed default delay settings, or
+•   Low supply current: IDD = 10 µA (typical)                             programmed by an external capacitor. The watchdog
+•   Open-drain output                                                     can be disabled via the SET pins to avoid undesired
+•   Small 3-mm × 3-mm, 10-Pin VSON package                                watchdog timeouts during the development process or
+•   Junction operating temperature range:                                 during power on.
+    –40°C to +125°C                                                       The TPS3430 is available in a small 3.00-mm ×
+2 Applications                                                            3.00-mm, 10-pin VSON package.
+•   Smart display                                                                                                                         Device Information
+•   Battery pack: e-bike/e-scooter/light electric vehicle                       PART NUMBER                                                      PACKAGE (1)              BODY SIZE (NOM)
+    (LEV)                                                                 TPS3430                                                           VSON (10)                     3.00 mm × 3.00 mm
+•   Circuit breaker (ACB, MCCB, VCB)
+•   eBike / pedelec                                                       (1)    For all available packages, see the orderable addendum at
+                                                                                 the end of the data sheet.
+•   AC charging (pile) station
+•   Multifunction relay
+•   Vision computer
+
+
+                                                                                                                            10
+                                                                                  Normalized Window Watchdog Timeout (%)
+
+
+
+
+3.3V                                                                                                                                Lower Boundary (t WDL)
+                                                                                                                           7.5      Upper Boundary (t WDL)
+
+
+                  TPS3430                           VCORE                                                                    5
+
+               VDD2       VDD1                                                                                             2.5
+                                                     Microcontroller
+              SET1              NC                                                                                           0
+
+                                                                                                                           -2.5
+              SET0            WDO                NMI
+                                                                                                                            -5
+       NC      CRST            WDI               GPIO
+                                                                                                                           -7.5
+       NC      CWD            GND
+                                                          GND                                                              -10
+                                                                                                                              -50   -25      0      25      50       75     100   125
+                                                                                                                                                  Temperature (qC)                TPS3
+
+
+               Window Watchdog Timer Circuit                               Normalized Watchdog Timeout Accuracy Over
+                                                                           Temperature (SET0 = 1, SET1 = 1, CWD = NC)
+
+
+
+
+        An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+        intellectual property matters and other important disclaimers. PRODUCTION DATA.
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                                                                      www.ti.com
+
+
+                                                                        Table of Contents
+1 Features............................................................................1     7.4 Device Functional Modes..........................................15
+2 Applications..................................................................... 1     8 Application and Implementation.................................. 16
+3 Description.......................................................................1       8.1 Application Information............................................. 16
+4 Revision History.............................................................. 2          8.2 Typical Applications.................................................. 19
+5 Pin Configuration and Functions...................................3                     9 Power Supply Recommendations................................26
+6 Specifications.................................................................. 4      10 Layout...........................................................................27
+  6.1 Absolute Maximum Ratings........................................ 4                    10.1 Layout Guidelines................................................... 27
+  6.2 ESD Ratings............................................................... 4          10.2 Layout Example...................................................... 27
+  6.3 Recommended Operating Conditions.........................4                          11 Device and Documentation Support..........................28
+  6.4 Thermal Information....................................................5              11.1 Device Support........................................................28
+  6.5 Electrical Characteristics.............................................5              11.2 Documentation Support.......................................... 28
+  6.6 Timing Requirements.................................................. 6               11.3 Receiving Notification of Documentation Updates.. 28
+  6.7 Timing Diagrams ........................................................ 7            11.4 Support Resources................................................. 28
+  6.8 Typical Characteristics................................................ 9             11.5 Trademarks............................................................. 28
+7 Detailed Description......................................................10              11.6 Electrostatic Discharge Caution.............................. 28
+  7.1 Overview................................................................... 10        11.7 Glossary.................................................................. 28
+  7.2 Functional Block Diagrams....................................... 10                 12 Mechanical, Packaging, and Orderable
+  7.3 Feature Description...................................................10              Information.................................................................... 28
+
+
+
+4 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision * (July 2018) to Revision A (October 2021)                                                                                          Page
+• Updated the numbering format for tables, figures, and cross-references throughout the document..................1
+• Removed "±15% Accurate Watchdog Timeout and Watchdog Reset Delays Over Temperature"..................... 1
+• Removed "15% timing accuracy (–40°C to +125°C), "....................................................................................... 1
+• Updated ESD Ratings.........................................................................................................................................4
+• Updated ICWD min and max spec........................................................................................................................5
+• Updated VCWD min and max spec...................................................................................................................... 5
+• Added a footnote to for tINIT ............................................................................................................................... 6
+• Changed minimum and maximum specifications of 2nd, 5th, 6th, and 8th rows of tWDL parameter ................. 6
+• Changed minimum and maximum specifications of 2nd and last rows of tWDU parameter ............................... 6
+• Updated WDO delay time values for various capacitors in Watchdog Reset Delay Time for Common Ideal
+  Capacitor Values table......................................................................................................................................16
+• Changed minimum and maximum specifications for NC SETx 01 setting for both upper and lower watchdog
+  boundaries, 10 kΩ to VDD SETx 00 and 01 settings for lower watchdog boundary, and 10 kΩ to VDD SETx
+  11 setting for both upper and lower watchdog boundaries in Factory-Programmed Watchdog Timing table...18
+• Updated tWDU min and max values for all capacitors........................................................................................18
+• Updated tWDU min and max boundry values from 0.85 and 1.15 to 0.905 and 1.095 respectively...................18
+
+
+
+
+2       Submit Document Feedback                                                                                           Copyright © 2021 Texas Instruments Incorporated
+
+                                                                      Product Folder Links: TPS3430
+                                                                                                                                      TPS3430
+www.ti.com                                                                                        SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+
+5 Pin Configuration and Functions
+
+
+                                                   VDD1         1                   10     VDD2
+
+                                                   CWD          2                    9     NC
+
+                                                   SET0         3        Thermal     8     WDO
+                                                                           Pad
+                                                   CRST         4                    7     WDI
+
+                                                    GND         5                    6     SET1
+
+
+
+
+                                                          Not to scale
+
+                                                          Figure 5-1. DRC Package
+                                                           3-mm × 3-mm VSON-10
+                                                                  Top View
+
+                                                          Table 5-1. Pin Functions
+          PIN
+                          I/O                                                       DESCRIPTION
+   NAME         NO.
+ VDD1             1         I   Supply voltage pin. For noisy systems, connecting a 0.1-µF bypass capacitor is recommended.
+                                Programmable watchdog timeout input. Watchdog timeout is set by connecting a capacitor between this pin
+                                and ground. Furthermore, this pin can also be connected by a 10-kΩ resistor to VDD, or leaving unconnected
+                                (NC) further enables the selection of the preset watchdog timeouts; see the Section 6.6 table.
+ CWD              2         I
+                                When using a capacitor, the TPS3430 determines the window watchdog upper boundary with Equation 4. The
+                                lower watchdog boundary is set by the SET pins, see andTable 8-5 the Section 8.1.2 section for additional
+                                information.
+                                Logic input. SET0, SET1, and CWD select the watchdog window ratios, timeouts, and disable the watchdog;
+ SET0             3         I
+                                see the Section 6.6 table.
+                                Programmable watchdog reset delay pin. Connect a capacitor between this pin and GND to program the
+                                watchdog reset delay period. This pin can also be connected by a 10-kΩ pull-up resistor to VDD, or left
+ CRST             4         I   unconnected (NC) for various factory programmed watchdog reset delay options; see the Section 8.1.1
+                                section.
+                                When using an external capacitor, use Equation 1 to determine the watchdog reset delay.
+ GND              5        —    Ground pin
+                                Logic input. SET0, SET1, and CWD select the watchdog window ratios, timeouts, and disable the watchdog;
+ SET1             6         I
+                                see the Section 6.6 table.
+                                Watchdog input. A falling transition (edge) must occur at this pin within the watchdog timeout between the
+                                lower (tWDL(max)) and upper (tWDU(min)) window boundaries in order for WDO to not assert. During power up, all
+                                pulses to WDI are ignored before tRST expires and the watchdog is disabled.
+ WDI              7         I
+                                When the watchdog is not in use, the SET pins can be used to disable the watchdog. The input at WDI is
+                                ignored when WDO is low (asserted) and also when the watchdog is disabled. If the watchdog is disabled,
+                                then WDI cannot be left unconnected and must be driven to either VDD or GND.
+                                Watchdog open-drain active-low output. Connect WDO with a 1-kΩ to 100-kΩ resistor to VDD or another
+                                power supply. WDO goes low (asserts) when a watchdog timeout occurs. When a watchdog timeout occurs,
+ WDO              8        O
+                                WDO goes low (asserts) for the set WDO reset delay (tRST). When the watchdog is disabled, WDO remains
+                                logic high regardless of WDI.
+ NC               9       NC    This pin is no-connect and must be left floating.
+                                Connect this pin to VDD1. The device will not function properly if VDD1 and VDD2 are not externally
+ VDD2            10         I
+                                connected.
+ Thermal pad               —    Connect the thermal pad to a large-area ground plane. The thermal pad is internally connected to GND.
+
+
+
+
+Copyright © 2021 Texas Instruments Incorporated                                                               Submit Document Feedback           3
+                                                          Product Folder Links: TPS3430
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                                             www.ti.com
+
+
+6 Specifications
+6.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+                                                                                                         MIN             MAX              UNIT
+    Supply voltage range                             VDD1, VDD2                                          –0.3              7                V
+    Output voltage range                             WDO                                                 –0.3              7                V
+                                                     SET0, SET1, WDI,                                    –0.3              7
+    Voltage ranges                                                                                                                          V
+                                                     CWD, CRST                                           –0.3        VDD + 0.3(3)
+    Output pin current                               WDO                                                                 ±20               mA
+    Input current (all pins)                                                                                             ±20               mA
+    Continuous total power dissipation                                                                     See Section 6.4
+                                                     Operating junction, TJ (2)                          –40             150
+    Temperature                                      Operating free-air temperature, TA (2)              –40             150               °C
+                                                     Storage, Tstg                                       –65             150
+
+(1)        Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress
+           ratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under
+           Recommended Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device
+           reliability.
+(2)        TJ = TA as a result of the low dissipated power in this device.
+(3)        The absolute maximum rating is VDD + 0.3 V or 7.0 V, whichever is smaller.
+
+6.2 ESD Ratings
+                                                                                                                       VALUE             UNIT
+                                                         Human-body model (HBM), per ANSI/ESDA/JEDEC
+                                                                                                                       ±4000
+                                                         JS-001(1)
+    V(ESD)        Electrostatic discharge                                                                                                  V
+                                                         Charged-device model (CDM), per JEDEC
+                                                                                                                       ±1000
+                                                         specification JESD22-C101(2)
+
+(1)        JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process. Manufacturing with
+           less than 500-V HBM is possible with the necessary precautions.
+(2)        JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process. Manufacturing with
+           less than 250-V CDM is possible with the necessary precautions.
+
+6.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)
+                                                                                               MIN             NOM             MAX        UNIT
+    VDD1, VDD2       Supply pin voltage                                                         1.6                             6.5         V
+    VSET0            SET0 pin voltage                                                             0                             6.5         V
+    VSET1            SET1 pin voltage                                                             0                             6.5         V
+    CCRST            WD reset delay capacitor                                                 0.1(1)                        1000(1)        nF
+    RCRST            Pull-up resistor to VDD                                                      9             10               11        kΩ
+    CCWD             Watchdog timing capacitor                                                0.1(2)                        1000(2)        nF
+    CWD              Pull-up resistor to VDD                                                      9             10               11        kΩ
+    RPU              Pull-up resistor, WDO                                                        1             10             100         kΩ
+    IWDO             Watchdog output current                                                                                     10        mA
+    TJ               Junction Temperature                                                      –40                             125         °C
+
+(1)        Using a CCRST capacitor of 0.1 nF or 1000 nF gives a reset delay of 703 µs or 3.22 seconds, respectively.
+(2)        Using a CCWD capacitor of 0.1 nF or 1000 nF gives a tWDU(typ) of 62.74 ms or 77.45 seconds, respectively.
+
+
+
+
+4           Submit Document Feedback                                                                     Copyright © 2021 Texas Instruments Incorporated
+
+                                                            Product Folder Links: TPS3430
+                                                                                                                                       TPS3430
+www.ti.com                                                                                     SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+
+6.4 Thermal Information
+                                                                                                              TPS3430
+                                               THERMAL METRIC(1)                                            DRC (VSON)             UNIT
+                                                                                                               10 PINS
+ RθJA                Junction-to-ambient thermal resistance                                                      50.9
+ RθJC(top)           Junction-to-case (top) thermal resistance                                                   50.6
+ RθJB                Junction-to-board thermal resistance                                                        25.4
+                                                                                                                                   °C/W
+ ψJT                 Junction-to-top characterization parameter                                                  1.2
+ ψJB                 Junction-to-board characterization parameter                                                25.5
+ RθJC(bot)           Junction-to-case (bottom) thermal resistance                                                7.3
+
+(1)        For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application
+           report, SPRA953.
+
+6.5 Electrical Characteristics
+at 1.6 V ≤ VDD ≤ 6.5 V over the operating temperature range of –40°C ≤ TJ ≤ +125°C (unless otherwise noted); typical values
+are at TJ = 25°C
+                        PARAMETER                                 TEST CONDITIONS                   MIN         TYP            MAX      UNIT
+ GENERAL CHARACTERISTICS
+ VDD1,VDD2
+ (1) (3)          Supply voltage                                                                     1.6                         6.5      V
+
+ IDD              Supply current                                                                                  10             19      µA
+ VPOR (2)         Power-on reset voltage                  VOL(MAX) = 0.25 V                                                      0.8      V
+ ICRST            CRST pin charge current                 CRST = 0.5 V                              337         375             413      nA
+ VCRST            CRST pin threshold voltage                                                      1.192         1.21          1.228       V
+ WINDOW WATCHDOG FUNCTION
+ ICWD             CWD pin charge current                  CWD = 0.5 V                               347         375             403      nA
+ VCWD             CWD pin threshold voltage                                                       1.196         1.21          1.224       V
+ VOL              WDO output low                          VDD = 5 V, ISINK = 3 mA                                                0.4      V
+ ID               WDO output leakage current              VDD = 1.6 V, VWDO = 6.5 V                                               1      µA
+ VIL              Low-level input voltage (SET0, SET1)                                                                         0.25       V
+ VIH              High-level input voltage (SET0, SET1)                                              0.8                                  V
+ VIL(WDI)         WDO output low                                                                                           0.3 × VDD      V
+ VIH(WDI)         WDO output leakage current                                                   0.8 × VDD                                  V
+
+(1)        When VDD falls below VUVLO, WDI is ignored
+(2)        When VDD falls below VPOR, WDO is undefined.
+(3)        During power-on, VDD must be a minimum 1.6 V for at least 300 µs.
+
+
+
+
+Copyright © 2021 Texas Instruments Incorporated                                                              Submit Document Feedback            5
+                                                             Product Folder Links: TPS3430
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                                         www.ti.com
+
+6.6 Timing Requirements
+at 1.6 V ≤ VDD ≤ 6.5 V over the operating temperature range of –40°C ≤ TA, TJ ≤ +125°C (unless otherwise noted); the
+open-drain pullup resistors are 10 kΩ for each output; typical values are at TJ = 25°C
+                                                                                                     MIN         TYP        MAX       UNIT
+    GENERAL
+    tINIT        CWD, CRST pin evaluation period(1)                                                              381                   µs
+    tSET         Time required between changing SET0 and SET1 pins                                               500                   µs
+                 SET0, SET1 pin setup time                                                                          1                  µs
+                 Startup delay (3)                                                                               300                   µs
+    DELAY FUNCTION
+                                                CRST = NC                                            170         200          230      ms
+    tRST         Watchdog reset delay
+                                                CRST = 10 kΩ to VDD                                   8.5          10        11.5      ms
+    WINDOW WATCHDOG FUNCTION
+                                                CWD = programmable, SET0 = 0, SET1 = 0(2)                         1/8
+                 Window watchdog ratio of
+    WD ratio     lower boundary to upper        CWD = programmable, SET0 = 1, SET1 = 1(2)                         1/2
+                 boundary
+                                                CWD = programmable, SET0 = 0, SET1 = 1(2) (4)                     3/4
+                                                CWD = NC, SET0 = 0, SET1 = 0                         19.1        22.5        25.9      ms
+                                                CWD = NC, SET0 = 0, SET1 = 1                         1.48        1.85        2.22      ms
+                                                CWD = NC, SET0 = 1, SET1 = 0                                 Watchdog disabled
+
+                 Window watchdog lower          CWD = NC, SET0 = 1, SET1 = 1                         680         800          920      ms
+    tWDL
+                 boundary                       CWD = 10 kΩ to VDD, SET0 = 0, SET1 = 0               7.65         9.0       10.35      ms
+                                                CWD = 10 kΩ to VDD, SET0 = 0, SET1 = 1               7.65         9.0       10.35      ms
+                                                CWD = 10 kΩ to VDD, SET0 = 1, SET1 = 0                       Watchdog disabled
+                                                CWD = 10 kΩ to VDD, SET0 = 1, SET1 = 1               1.48        1.85        2.22      ms
+                                                CWD = NC, SET0 = 0, SET1 = 0                         46.8        55.0        63.3      ms
+                                                CWD = NC, SET0 = 0, SET1 = 1                       23.375        27.5     31.625       ms
+                                                CWD = NC, SET0 = 1, SET1 = 0                                 Watchdog disabled
+
+                 Window watchdog upper          CWD = NC, SET0 = 1, SET1 = 1                        1360        1600        1840       ms
+    tWDU
+                 boundary                       CWD = 10 kΩ to VDD, SET0 = 0, SET1 = 0               92.7      109.0        125.4      ms
+                                                CWD = 10 kΩ to VDD, SET0 = 0, SET1 = 1              165.8      195.0        224.3      ms
+                                                CWD = 10 kΩ to VDD, SET0 = 1, SET1 = 0                       Watchdog disabled
+                                                CWD = 10 kΩ to VDD, SET0 = 1, SET1 = 1               9.35        11.0       12.65      ms
+    tWD-setup    Setup time required for device to respond to changes on WDI after being enabled                 150                   µs
+                 Minimum WDI pulse duration                                                                        50                  ns
+    tWD-del      WDI to WDO delay                                                                                  50                  ns
+
+(1)         Refer to Section 8.1.2.2
+(2)         0 refers to VSET ≤ VIL, 1 refers to VSET ≥ VIH.
+(3)         During power-on, VDD must be a minimum 1.6 V for at least 300 µs
+(4)         If this watchdog ratio is used, then tWDL(max) can overlap tWDU(min).
+
+
+
+
+6           Submit Document Feedback                                                               Copyright © 2021 Texas Instruments Incorporated
+
+                                                           Product Folder Links: TPS3430
+                                                                                                                                                TPS3430
+www.ti.com                                                                                                     SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+
+6.7 Timing Diagrams
+                                                                                                                    (1)
+                              VDD1 = VDD2
+                                                                                                  tWDL < t < tWDU
+                                                            t < tWDU                        t < tWDU
+
+                                      WDI         X                                   X
+
+
+                                                                                                           t < tWDL
+                                     WDO
+
+
+                                                                                                                      tRST
+
+A.    See Figure 6-2 for WDI timing requirements.
+
+                                                       Figure 6-1. Timing Diagram
+
+
+
+                                     WDI                                  Early Fault
+
+
+                                    WDO
+
+
+
+                                                                      Correct Operation
+                                     WDI
+
+
+
+
+                                    WDO
+
+
+
+
+                                     WDI                                   Late Fault
+
+
+                                    WDO
+
+
+
+
+                                   Window                                              Valid
+                                    Timing                                            Window
+                                                      tWDL(min)
+                                                          tWDL(typ)
+                                                              tWDL(max)
+
+                                                                          tWDU(min)
+                                                                             tWDU(typ)
+                                                                                tWDU(max)
+
+
+
+
+                                                                      = Tolerance Window
+
+
+                                            Figure 6-2. TPS3430 Window Watchdog Timing
+
+
+
+Copyright © 2021 Texas Instruments Incorporated                                                                              Submit Document Feedback        7
+                                                          Product Folder Links: TPS3430
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                         www.ti.com
+
+
+          VDD1 = VDD2
+
+
+
+              SET0
+
+
+                                                                              tSET
+
+                                                     tWD-setup
+              SET1
+
+
+
+
+             RATIO          1:8                                                1:8                        1:2
+                                                 Disabled
+
+
+                                      Figure 6-3. Changing SET0 and SET1 Pins
+
+
+
+
+8     Submit Document Feedback                                                       Copyright © 2021 Texas Instruments Incorporated
+
+                                              Product Folder Links: TPS3430
+                                                                                                                                                                                                               TPS3430
+www.ti.com                                                                                                                                                              SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+
+6.8 Typical Characteristics
+all curves are taken at TA = 25°C with 1.6 V ≤ VDD ≤ 6.5 V (unless otherwise noted)
+
+                                             380                                                                                                        16
+    CWD Charging Current (nA)
+
+
+
+
+                                             376                                                                                                        12
+
+
+
+
+                                                                                                                  Supply Current (PA)
+                                             372                                                                                                         8
+
+
+
+                                             368                                                                                                                                                               -40qC
+                                                                                                                                                         4                                                     0qC
+                                                                                                                                                                                                               25qC
+                                                                                                    1.6 V
+                                                                                                                                                                                                               105qC
+                                                                                                    6.5 V
+                                                                                                                                                                                                               125qC
+                                             364
+                                                                                                                                                         0
+                                               -50    -25       0      25      50       75    100       125
+                                                                     Temperature (qC)
+                                                                                                                                                             0    1        2       3      4         5      6           7
+                                                                                                                                                                                    VDD (V)
+  Figure 6-4. CWD Charging Current vs Temperature                                                                                                      Figure 6-5. Supply Current vs Power-Supply
+                                                                                                                                                                         Voltage
+                                              10                                                                                                        10
+    Normalized Window Watchdog Timeout (%)
+
+
+
+
+                                                      Lower Boundary (t WDL)                                  Normalized Window Watchdog Timeout (%)             Lower Boundary (t WDL)
+                                             7.5      Upper Boundary (t WDL)                                                                            7.5      Upper Boundary (t WDL)
+
+                                               5                                                                                                          5
+
+                                             2.5                                                                                                        2.5
+
+                                               0                                                                                                          0
+
+                                             -2.5                                                                                                      -2.5
+
+                                              -5                                                                                                         -5
+
+                                             -7.5                                                                                                      -7.5
+
+                                             -10                                                                                                        -10
+                                                -50   -25      0      25      50        75   100      125                                                  -50   -25      0      25      50        75   100      125
+                                                                    Temperature (qC)                   TPS3
+                                                                                                                                                                               Temperature (qC)                   TPS3
+
+      Figure 6-6. Normalized Watchdog Timeout                                                                    Figure 6-7. Normalized Watchdog Timeout
+   Accuracy Over Temperature (SET0 = 1, SET1 = 1,                                                             Accuracy Over Temperature (SET0 = 1, SET1 = 1,
+                     CWD = NC)                                                                                              CWD = 10kΩ to VDD)
+
+
+
+
+Copyright © 2021 Texas Instruments Incorporated                                                                                                                                           Submit Document Feedback         9
+                                                                                             Product Folder Links: TPS3430
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                                     www.ti.com
+
+
+7 Detailed Description
+7.1 Overview
+The TPS3430 is a high-accuracy programmable window watchdog timer with watchdog disable feature that
+achieves 15% watchdog timing accuracy over the specified temperature range of –40°C to +125°C.
+7.2 Functional Block Diagrams
+                                                                             (1)
+                                                                      VDD1
+
+
+
+               (1)
+                                                                        Precision
+         VDD2                                                            Clock
+
+
+
+
+                              VDD
+                                                                                                                                 WDO
+
+                                                                         State
+                                         Cap                            Machine
+           CWD
+                                        Control
+
+
+
+
+                              VDD
+
+
+
+
+                                         Cap
+          CRST                          Control
+
+
+
+
+                                                                   WDI SET0 SET1                      GND
+
+A.   VDD1 and VDD2 are not internally connected and must be connected externally for the device to function.
+
+                                             Figure 7-1. TPS3430 Block Diagram
+
+7.3 Feature Description
+7.3.1 CRST
+The CRST pin provides the user the functionality of both high-precision, factory-programmed watchdog reset
+delay timing options and user-programmable watchdog reset delay timing. The CRST pin can be pulled up to
+VDD through a resistor, have an external capacitor to ground, or can be left unconnected. The configuration
+of the CRST pin is re-evaluated by the device every time the voltage on VDD comes up. The pin evaluation
+is controlled by an internal state machine that determines which option is connected to the CRST pin. The
+sequence of events takes 381 μs (tINIT) to determine if the CRST pin is left unconnected, pulled up through a
+resistor, or connected to a capacitor. If the CRST pin is being pulled up to VDD, then a
+10-kΩ pull-up resistor is required.
+7.3.2 Window Watchdog
+7.3.2.1 SET0 and SET1
+When changing the SET0 or SET1 pins, there are two cases to consider: enabling and disabling the watchdog,
+and changing the SET0 or SET1 pins when the watchdog is enabled. In case 1 where the watchdog is being
+enabled or disabled, the changes take effect immediately. However, in case 2, a WDO fault event must occur in
+order for the changes to take place.
+
+10    Submit Document Feedback                                                                   Copyright © 2021 Texas Instruments Incorporated
+
+                                                     Product Folder Links: TPS3430
+                                                                                                                                     TPS3430
+www.ti.com                                                                                       SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+
+7.3.2.1.1 Enabling the Window Watchdog
+The TPS3430 features the ability to enable and disable the watchdog timer. This feature allows the user to start
+with the watchdog timer disabled and then enable the watchdog timer using the SET0 and SET1 pins. The
+ability to enable and disable the watchdog is useful to avoid undesired watchdog trips during initialization and
+shutdown. When the SETx pins are changed to disable the watchdog timer, changes on the pins are responded
+to immediately (as shown in Figure 7-2). When the watchdog goes from disabled to enabled, there is a 150 μs
+(tWD-setup) transition period where the device does not respond to changes on WDI. After this 150-μs period, the
+device begins to respond to changes on WDI again.
+
+
+                                VDD1 = VDD2
+
+
+
+
+                                    SET0
+
+
+
+
+                                                                                                      tWD-setup
+                                    SET1
+
+
+
+
+                                   RATIO                  1:8                         Disabled            1:8
+
+
+                                                  Figure 7-2. Enabling the Watchdog Timer
+
+7.3.2.1.2 Disabling the Watchdog Timer When Using the CRST Capacitor
+When using the TPS3430 with fixed timing options, if the watchdog is disabled and reenabled while WDO is
+asserted (logic low) the watchdog performs as described in the Section 7.3.2.1.1 section. However, if there is
+a capacitor on the CRST pin, and the watchdog is disabled and reenabled when WDO is asserted (logic low),
+then the watchdog behaves as shown in Figure 7-3. When the watchdog is disabled, WDO goes high impedance
+(logic high). However, when the watchdog is enabled again, the tRST period must expire before the watchdog
+resumes normal operation.
+
+
+            VDD1 = VDD2
+
+                                                                               tWDU
+                                                   tWDU
+
+
+                WDO
+
+
+                                                                        tRST
+
+
+
+                                                                           Disabling and
+                SET1                                                         Enabling
+                                                                             watchdog
+
+
+                SET0
+
+
+
+      There is no WDI signal in this figure, WDI is always at GND.
+
+                Figure 7-3. Enabling and Disabling the Watchdog Timer During a WDO Reset Event
+
+
+
+
+Copyright © 2021 Texas Instruments Incorporated                                                                   Submit Document Feedback   11
+                                                                Product Folder Links: TPS3430
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                    www.ti.com
+
+7.3.2.1.3 SET0 and SET1 During Normal Watchdog Operation
+The SET0 and SET1 pins can be used to control the window watchdog ratio of the lower boundary to the upper
+boundary. There are four possible modes for the watchdog (see Table 8-5 ): disabled, 1:8 ratio, 3:4 ratio, and
+1:2 ratio. If SET0 = 1 and SET1 = 0, then the watchdog is disabled. When the watchdog is disabled WDO does
+not assert, and the TPS3430 ignores all inputs to WDI. The SET0 and SET1 pins can be changed when the
+device is operational, but cannot be changed at the same time. If these pins are changed when the device is
+operational, then there must be a 500-µs (tSET) delay between switching the two pins. If the SET0 and SET1 are
+used to change the reset timing, then a reset event must occur before the new timing condition is latched. This
+reset can be triggered by bringing VDD below VUVLO. Figure 7-4 shows how the SET0 and SET1 pins do not
+change the watchdog timing option until a reset event has occurred.
+
+                          VDD 1 = VDD 2
+
+
+
+                           SET0
+
+
+                                                                   tSET
+
+
+                           SET1
+
+
+
+
+                          RATIO                              1:8                  1:2
+
+
+                                      Figure 7-4. Changing SET0 and SET1 Pins
+
+
+
+
+12    Submit Document Feedback                                                  Copyright © 2021 Texas Instruments Incorporated
+
+                                              Product Folder Links: TPS3430
+                                                                                                                             TPS3430
+www.ti.com                                                                                  SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+
+7.3.3 Window Watchdog Timer
+This section provides information for the window watchdog modes of operation. A window watchdog is typically
+employed in safety critical applications where a traditional watchdog timer is inadequate. In a traditional
+watchdog, there is a maximum time in which a pulse must be issued to prevent the reset from occurring.
+However, in a window watchdog the pulse must be issued between a maximum lower window time (tWDL(max))
+and the minimum upper window time (tWDU(min)) set by the CWD pin and the SET0 and SET1 pins. Table 8-5
+describes how tWDU can be used to calculate the timing of tWDL. The tWDL timing can also be changed by
+adjusting the SET0 and SET1 pins. Figure 7-5 shows the valid region for a WDI pulse to be issued to prevent the
+WDO from being triggered and being pulled low.
+
+
+
+                                     WDI                               Early Fault
+
+
+                                    WDO
+
+
+
+                                                                   Correct Operation
+                                     WDI
+
+
+
+
+                                    WDO
+
+
+
+
+                                     WDI                                Late Fault
+
+
+                                    WDO
+
+
+
+
+                                   Window                                           Valid
+                                    Timing                                         Window
+                                                   tWDL(min)
+                                                       tWDL(typ)
+                                                           tWDL(max)
+
+                                                                       tWDU(min)
+                                                                          tWDU(typ)
+                                                                             tWDU(max)
+
+
+
+
+                                                                   = Tolerance Window
+
+
+                                           Figure 7-5. TPS3430 Window Watchdog Timing
+
+
+
+
+Copyright © 2021 Texas Instruments Incorporated                                                         Submit Document Feedback      13
+                                                       Product Folder Links: TPS3430
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                      www.ti.com
+
+7.3.3.1 CWD
+The CWD pin provides the user the functionality of both high-precision, factory-programmed watchdog timeout
+options and user-programmable watchdog timeout. The TPS3430 features three options for setting the watchdog
+window: connecting a capacitor to the CWD pin, connecting CWD to a pull-up resistor to VDD, and leaving the
+CWD pin unconnected. The configuration of the CWD pin is evaluated by the device every time the voltage on
+VDD rises above VDD (min). The pin evaluation is controlled by an internal state machine that determines which
+option is connected to the CWD pin. The sequence of events takes 381 μs (tINIT) to determine if the CWD pin is
+left unconnected, pulled up through a resistor, or connected to a capacitor. If the CWD pin is being pulled up to
+VDD using a pull-up resistor, then a 10-kΩ resistor is required.
+7.3.3.2 WDI Functionality
+WDI is the watchdog timer input that controls the WDO output. The WDI input is triggered by the falling edge
+of the input signal. For the first pulse, the watchdog acts as a traditional watchdog timer; thus, the first pulse
+must be issued before tWDU(min). After the first pulse, to ensure proper functionality of the watchdog timer, always
+issue the WDI pulse within the window of tWDL(max) and tWDU(min). If the pulse is issued in this region, then WDO
+remains unasserted. Otherwise, the device asserts WDO, putting the WDO pin into a low-impedance state.
+The watchdog input (WDI) is a digital pin. To ensure there is no increase in IDD, drive the WDI pin to either
+VDD or GND at all times. Putting the pin to an intermediate voltage can cause an increase in supply current
+(IDD) because of the architecture of the digital logic gates. When WDO is asserted, the watchdog is disabled and
+all signals input to WDI are ignored until the WDO reset delay expires. When WDO is no longer asserted, the
+device resumes normal operation and no longer ignores the signal on WDI. If the watchdog is disabled, drive the
+WDI pin to either VDD or GND.
+7.3.3.3 WDO Functionality
+The TPS3430 features a programmable window watchdog timer with an programmable watchdog output
+( WDO). The watchdog output can flag a fault whenever the watchdog input is outside of the watchdog window.
+When WDO is not asserted (high), the WDO signal maintains normal operation. When asserted, WDO remains
+down for tRST and WDI is ignored during the watchdog reset delay. When the watchdog is disabled, WDO
+remains high regardless of WDI.
+
+
+
+
+14    Submit Document Feedback                                                    Copyright © 2021 Texas Instruments Incorporated
+
+                                              Product Folder Links: TPS3430
+                                                                                                                              TPS3430
+www.ti.com                                                                                   SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+
+7.4 Device Functional Modes
+Table 7-1 summarizes the functional modes of the TPS3430.
+                                                  Table 7-1. Device Functional Modes
+                 VDD                                                    WDI                                          WDO
+             VDD < VPOR                                                  —                                            —
+       VPOR < VDD< VDD (min)                                          Ignored                                        High
+                                                        tWDL(max) ≤ tpulse (1) ≤ tWDU(min)                           High
+           VDD ≥ VDD (min)                                      tWDL(max) > tpulse   (1)                             Low
+                                                                tWDU(min) < tpulse (1)                               Low
+
+(1)    Where tpulse is the time between falling edges on WDI.
+
+7.4.1 VDD is Below VPOR ( VDD < VPOR)
+When VDD is less than VPOR, WDO is undefined and can be either high or low. The state of WDO largely
+depends on the load that the WDO pin is experiencing.
+7.4.2 VDD is Above VPOR And Below VDD (min)( VPOR < VDD < VDD (min))
+When VDD is above VPOR and below VDD (min), the watchdog is disabled, WDO is logic high and WDI is ignored.
+7.4.3 Normal Operation (VDD ≥ VDD (min))
+When VDD is greater than or equal to VDD (min), the WDO signal is determined by WDI if the watchdog is enabled.
+During power up, the watchdog is disabled until tRST expires. While the watchdog is enabled, the first falling edge
+on WDI must occur before tWDU(max) to prevent WDO from asserting. If the first falling edge on WDI occurs after
+tWDU(max), WDO is asserted (active and low) for tRST. If any falling edge after the first falling edge occurs on WDI
+before tWDU(min) or after tWDU(max), WDO is asserted (active and low) for tRST.
+
+
+
+
+Copyright © 2021 Texas Instruments Incorporated                                                          Submit Document Feedback      15
+                                                       Product Folder Links: TPS3430
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                                    www.ti.com
+
+
+8 Application and Implementation
+                                                                  Note
+      Information in the following applications sections is not part of the TI component specification,
+      and TI does not warrant its accuracy or completeness. TI’s customers are responsible for
+      determining suitability of components for their purposes, as well as validating and testing their design
+      implementation to confirm system functionality.
+
+8.1 Application Information
+The following sections describe in detail proper device implementation, depending on the final application
+requirements.
+8.1.1 CRST Delay
+The TPS3430 features three options for setting the reset delay (tRST): connecting a capacitor to the CRST pin,
+connecting a pull-up resistor to VDD, and leaving the CRST pin unconnected. Figure 8-1 shows a schematic
+drawing of all three options. To determine which option is connected to the CRST pin, an internal state machine
+controls the internal pulldown device and measures the pin voltage. This sequence of events takes 381 μs (tINIT)
+to determine which timing option is used. Every time WDO is asserted, the state machine determines what is
+connected to the pin.
+                                          VDD                                         VDD                           VDD
+                           TPS3430                                      TPS3430                      TPS3430
+                                                           VDD
+                   VDD                                                                      VDD
+                                                                 10 k
+
+
+
+
+                                375 nA                                      375 nA                         375 nA
+
+
+                  CRST
+                                                                                            CRST
+                                                           CRST
+
+                   CCRST
+
+                             Cap                                         Cap                            Cap
+                            Control                                     Control                        Control
+
+
+
+
+                      User Programmable                          10 NŸ 5HVLVWRU                       CRST
+                       Capacitor to GND                              to VDD                        Unconnected
+
+                                                Figure 8-1. CRST Charging Circuit
+
+8.1.1.1 Factory-Programmed Watchdog Reset Delay Timing
+To use the factory-programmed timing options, the CRST pin must either be left unconnected or pulled up to
+VDD through a 10-kΩ pull-up resistor. Using these options enables a high-precision, 15% accurate reset delay
+timing, as shown in Table 8-1.
+                     Table 8-1. Watchdog Reset Delay Time for Factory-Programmed Timing
+                                                            WDO DELAY TIME (tRST)
+                 CRST                                                                                                 UNIT
+                                                          MIN                     TYP              MAX
+ NC                                                       170                        200            230                   ms
+ 10 kΩ to VDD                                              8.5                       10             11.5                  ms
+
+
+8.1.1.2 CRST Programmable Watchdog Reset Delay
+The TPS3430 uses a CRST pin charging current (ICRST) of 375 nA. When using an external capacitor, the rising
+WDO delay time can be set to any value between 700 µs (CCRST = 100 pF) and 3.2 seconds (CCRST = 1 µF).
+
+
+16    Submit Document Feedback                                                                 Copyright © 2021 Texas Instruments Incorporated
+
+                                                     Product Folder Links: TPS3430
+                                                                                                                                               TPS3430
+www.ti.com                                                                                              SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+The typical ideal capacitor value needed for a given delay time can be calculated using Equation 1, where CCRST
+is in microfarads and tRST is in seconds:
+
+      tRST = 3.22 × CCRST + 0.000381                                                                                                             (1)
+
+To calculate the minimum and maximum watchdog reset delay time use Equation 2 and Equation 3, respectively.
+
+      tRST(min) = 2.8862 × CCRST + 0.000324                                                                                                      (2)
+
+      tRST(max) = 3.64392 × CCRST + 0.000438                                                                                                     (3)
+
+The slope of Equation 1 is determined by the time the CRST charging current (ICRST) takes to charge the
+external capacitor up to the CRST comparator threshold voltage (VCRST). When WDO is asserted, the capacitor
+is discharged through the internal CRST pulldown resistor. When the WDO conditions are cleared, the internal
+precision current source is enabled and begins to charge the external capacitor; when VCRST = 1.21 V, WDO
+is unasserted. Note to minimize the difference between the calculated WDO delay time and the actual WDO
+delay time, use a use a high-quality ceramic dielectric COG, X5R, or X7R capacitor and minimize parasitic board
+capacitance around this pin. Table 8-2 lists the watchdog reset delay time ideal capacitor values for CCRST.
+                       Table 8-2. Watchdog Reset Delay Time for Common Ideal Capacitor Values
+                                                                            WDO DELAY TIME (tRST)
+                      CCRST                                                                                                               UNIT
+                                                                 MIN(1)                          TYP                   MAX(1)
+ 100 pF                                                           0.61                           0.70                     0.80            ms
+ 1 nF                                                             3.21                           3.61                     4.08            ms
+ 10 nF                                                            29.2                           32.6                     36.8            ms
+ 100 nF                                                            289                            323                         364         ms
+ 1 μF                                                             2886                           3227                    3644             ms
+
+(1)     Minimum and maximum values are calculated using ideal capacitors.
+
+8.1.2 CWD Functionality
+The TPS3430 features three options for setting the watchdog window: connecting a capacitor to the CWD pin,
+connecting a pull-up resistor to VDD, and leaving the CWD pin unconnected. Figure 8-2 shows a schematic
+drawing of all three options. If this pin is connected to VDD through a 10-kΩ pull-up resistor or left unconnected
+(high impedance), then the factory-programmed watchdog timeouts are enabled; see the Section 6.6 table.
+Otherwise, the watchdog timeout can be adjusted by placing a capacitor from the CWD pin to ground.
+                                               VDD                                         VDD                                      VDD
+                                TPS3430                                      TPS3430                              TPS3430
+                                                               VDD
+                       VDD                                                                                VDD
+                                                                     10 k
+
+
+
+
+                                      375 nA                                      375 nA                                375 nA
+
+
+                       CWD
+                                                                                                         CWD
+                                                               CWD
+
+                       CCWD
+
+                                   Cap                                         Cap                                   Cap
+                                  Control                                     Control                               Control
+
+
+
+
+                          User Programmable                          10 NŸ 5HVLVWRU                                CWD
+                           Capacitor to GND                              to VDD                                 Unconnected
+
+                                                     Figure 8-2. CWD Charging Circuit
+
+
+
+Copyright © 2021 Texas Instruments Incorporated                                                                      Submit Document Feedback          17
+                                                         Product Folder Links: TPS3430
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                                                                       www.ti.com
+
+8.1.2.1 Factory-Programmed Timing Options
+If using the factory-programmed timing options (listed in Table 8-3), the CWD pin must either be unconnected
+or pulled up to VDD through a 10-kΩ pull-up resistor. Using these options enables high-precision, factory-
+programmed watchdog timing.
+                                               Table 8-3. Factory-Programmed Watchdog Timing
+                     INPUT                              WATCHDOG LOWER BOUNDARY (tWDL)                      WATCHDOG UPPER BOUNDARY (tWDU)
+                                                                                                                                                                     UNIT
+              CWD                    SET0     SET1                MIN              TYP             MAX                 MIN              TYP              MAX
+                                      0         0                 19.1             22.5             25.9               46.8             55.0             63.3          ms
+                                      0         1                 1.48             1.85             2.22         23.375                 27.5           31.625          ms
+ NC
+                                      1         0                    Watchdog disabled                                    Watchdog disabled
+                                      1         1                 680               800             920              1360              1600              1840          ms
+                                      0         0                 7.65               9.0           10.35               92.7            109.0            125.4          ms
+                                      0         1                 7.65               9.0           10.35           165.8               195.0            224.3          ms
+ 10 kΩ to VDD
+                                      1         0                    Watchdog disabled                                    Watchdog disabled
+                                      1         1                 1.48             1.85             2.22               9.35             11.0            12.65          ms
+
+
+8.1.2.2 CWD Adjustable Capacitor Watchdog Timeout
+Adjustable capacitor timing is achievable by connecting a capacitor to the CWD pin. If a capacitor is connected
+to CWD, then a 375-nA constant-current source charges CCWD until VCWD = 1.21 V. The TPS3430 determines
+the window watchdog upper boundary with the formula given in Equation 4, where CCWD is in microfarads and
+tWDU is in seconds.
+
+      tWDU(typ) = 77.4 × CCWD + 0.055                                                                                                                                  (4)
+
+The TPS3430 is designed and tested using CCWD capacitors between 100 pF and 1 µF. Note that Equation
+4 is for ideal capacitors, capacitor tolerances cause the actual device timing to vary. For the most accurate
+timing, use ceramic capacitors with COG dielectric material. As shown in Table 8-4, when using the minimum
+capacitor of 100 pF, the watchdog upper boundary is 62.74 ms; whereas with a 1-µF capacitor, the watchdog
+upper boundary is 77.455 seconds. If a CCWD capacitor is used, Equation 4 can be used to set tWDU the window
+watchdog upper boundary. The window watchdog lower boundary is dependent on the SET0 and SET1 pins
+because these pins set the window watchdog ratio of the lower boundary to upper boundary; Table 8-5 shows
+how tWDU can be used to calculate tWDL based on the SET0 and SET1 pins.
+                                      Table 8-4. tWDU Values for Common Ideal Capacitor Values
+                                                                           WATCHDOG UPPER BOUNDARY (tWDU)
+                          CCWD                                                                                                                                  UNIT
+                                                                               MIN (1)                        TYP                        MAX (1)
+ 100 pF                                                                          56.77                      62.74                              68.7             ms
+ 1 nF                                                                          119.82                       132.4                         144.98                ms
+ 10 nF                                                                              750                        829                             908              ms
+ 100 nF                                                                           7054                       7795                           8536                ms
+ 1 µF                                                                            70096                      77455                          84814                ms
+
+(1)     Minimum and maximum values are calculated using ideal capacitors.
+
+                                                        Table 8-5. Programmable CWD Timing
+              INPUT                           WATCHDOG LOWER BOUNDARY (tWDL)                            WATCHDOG UPPER BOUNDARY (tWDU)
+                                                                                                                                                                     UNIT
+        CWD         SET0     SET1                    MIN                 TYP                 MAX               MIN                  TYP                MAX
+                      0          0     tWDU(min)x 0.125         tWDU x 0.125     tWDU(max) x 0.125 0.905 x tWDU(typ)          tWDU(typ) (1) 1.095 x tWDU(typ)          s
+                      0          1        tWDU(min) x 0.75       tWDU x 0.75      tWDU(max) x 0.75 0.905 x tWDU(typ)          tWDU(typ) (1) 1.095 x tWDU(typ)          s
+ CCWD
+                      1          0                           Watchdog disabled                                       Watchdog disabled
+                      1          1         tWDU(min) x 0.5        tWDU x 0.5       tWDU(max) x 0.5 0.905 x tWDU(typ)          tWDU(typ) (1) 1.095 x tWDU(typ)          s
+
+(1)     Calculated from Equation 4 using ideal capacitors.
+
+
+18      Submit Document Feedback                                                                                              Copyright © 2021 Texas Instruments Incorporated
+
+                                                                     Product Folder Links: TPS3430
+                                                                                                                                      TPS3430
+www.ti.com                                                                                        SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+
+8.2 Typical Applications
+8.2.1 Monitoring Microcontroller with Watchdog Timer - Design 1
+A basic application for the TPS3430 is shown in Figure 8-8. The TPS3430 is used to monitor the activity of the
+microcontroller via the WDI pin. Design 1 utilizes the simplest TPS3430 configuration with factory-programmed
+timing options by leaving the CRST and CWD timing pins floating (NC - no connect)
+
+                            3.3V
+
+
+                                                     TPS3430                                  VCORE
+                                                  VDD2       VDD1
+                                                                                              Microcontroller
+                                                  SET1              NC
+
+                                                  SET0            WDO                      NMI
+                                   NC             CRST             WDI                     GPIO
+                                   NC             CWD             GND
+                                                                                                     GND
+
+
+                        Figure 8-3. Monitoring Microcontroller using a Window Watchdog Timer
+
+8.2.1.1 Design Requirements - Design 1
+            PARAMETER                                DESIGN REQUIREMENT                                     DESIGN RESULT
+                                                                                            Use factory-programmed timing option by leaving
+ Watchdog Reset delay                   Reset delay of 200 ms                               CRST as NC. Watchdog reset delay: 170 ms (min),
+                                                                                            200 ms (typ), 230 ms (max)
+                                                                                            Leaving the CWD pin unconnected with SET0 = 1
+                                        Functions with a 1-Hz pulse-width modulation
+ Watchdog window                                                                            and SET1 = 1 produces a window with a tWDL(max)
+                                        (PWM) signal with a 20% duty cycle
+                                                                                            of 920 ms and a tWDU(min) of 1360 ms
+ Output logic voltage                   3.3-V Open-Drain                                    3.3-V Open-Drain
+ Maximum device current                                                                     10 µA of current consumption, typical worst-case of
+                                        200 µA
+ consumption                                                                                199 µA when WDO is asserted
+
+
+8.2.1.2 Detailed Design Procedure - Design 1
+8.2.1.2.1 Meeting the Minimum Watchdog Reset Delay - Design 1
+To achieve the 200 ms Watchdog Reset Delay requirement, this design simply leaves CRST pin floating (NC
+- No Connect) to set the Watchdog Reset Delay (tRST) to the factory-programmed delay of 200 ms. Refer to
+section 8.1.1 CRST Delay to learn more about the factory-programmed timing options and how to program the
+Watchdog Reset Delay using an external capacitor.
+In Figure 8-4 below, the Watchdog Reset Delay of 200 ms is shown by causing a watchdog timing fault. No
+watchdog pulse comes on WDI within the Watchdog Timeout so WDO activates for tRST of 200 ms. Then after
+three watchdog faults, a watchdog pulse at 1Hz and 20% duty cycle arrives on WDI causing WDO to deactive
+and remain high.
+
+
+
+
+Copyright © 2021 Texas Instruments Incorporated                                                                Submit Document Feedback           19
+                                                           Product Folder Links: TPS3430
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                           www.ti.com
+
+
+
+
+  VDD
+                                              No pulse on WDI before WDU(max) so WDO asserts
+
+
+
+
+                                                              Falling edge on WDI occurs within WDL and WDU
+  WDI
+
+
+                                                                                  WDO remains unasserted while
+                                                                                  WDI is within watchdog window
+ WDO
+     Figure 8-4. Watchdog Fault Caused by Missing WDI Pulse Until WDI pulses Arrive Within Watchdog
+                                    Window to Deactivate WDO Fault
+
+8.2.1.2.2 Setting the Watchdog Window - Design 1
+The Watchdog Window is set via the CWD, SET0, and SET1 pin configurations. To achieve a Watchdog Timeout
+of 1 second, this design simply leaves CWD pin floating (NC - No Connect) and ties SET0 and SET1 to
+VDD to set these SET pins to logic high. With this configuration, the Watchdog Lower Boundary tWDL (typ) is
+set for 800ms and the Watchdog Upper Boundary tWDU (typ) is set for 1.6 seconds. Refer to Table 6.6 Timing
+Requirements to see the factory-programmed window watchdog timing configurations.
+In Figure 8-5 and Figure 8-6 below, the watchdog window timing is shown by causing watchdog faults from
+pulses on WDI arriving too early and too late, respectively. When a pulse on WDI arrives too early, that is before
+tWDL (min) or too late, that is after tWDU (max), a watchdog fault occurs and WDO activates to logic low.
+
+
+
+
+20    Submit Document Feedback                                                         Copyright © 2021 Texas Instruments Incorporated
+
+                                                  Product Folder Links: TPS3430
+                                                                                                                        TPS3430
+ www.ti.com                                                                            SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+
+
+
+VDD                                           Ignore all pulses that occur before tRST
+                                                   First falling edge must occur before WDU
+                                                         Second falling edge occurs before WDL triggering a watchdog reset
+
+
+
+
+WDI
+
+
+
+
+WDO                                                            WDO resets for tRST
+
+               Figure 8-5. Watchdog Fault Caused by WDI Pulse Arriving Too Early (Before tWDL (min))
+
+
+
+
+VDD                                         Ignore all pulses that occur before t RST
+                                                      First falling edge must occur before WDU
+
+                                                       Second falling edge occurs after WDU(max) triggering a watchdog reset
+
+
+
+
+WDI
+
+
+
+
+WDO
+                                                                                           WDO resets for tRST
+
+                 Figure 8-6. Watchdog Fault Caused by WDI Pulse Arriving Too Late (After tWDU (max))
+
+
+
+
+ Copyright © 2021 Texas Instruments Incorporated                                                   Submit Document Feedback      21
+                                                       Product Folder Links: TPS3430
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                                           www.ti.com
+
+8.2.1.2.3 Calculating the WDO Pull-up Resistor - Design 1
+Figure 8-7 shows the TPS3430 uses an open-drain configuration for the WDO circuit. When the FET is off, the
+resistor pulls the drain of the transistor to VDD and when the FET is turned on, the FET attempts to pull the
+drain to ground, thus creating an effective resistor divider. The resistors in this divider must be chosen to ensure
+that VOL is below its maximum value. To choose the proper pull-up resistor, there are three key specifications
+to keep in mind: the pull-up voltage (VPU), the recommended maximum WDO pin current (IWDO), and VOL. The
+maximum VOL is 0.4 V, meaning that the effective resistor divider created must be able to bring the voltage on
+the reset pin below 0.4 V with IWDO kept below 10 mA. For this example, with a VPU of 3.3 V, a resistor must be
+chosen to keep IWDO below 200 μA because this value is the maximum consumption current allowed. To ensure
+this specification is met, a pull-up resistor value of 16.5 kΩ is selected, which sinks a maximum of 200 μA when
+WDO is asserted. WDO current is at 200 μA and the low-level output voltage is approximately zero.
+                                                                                   VDD
+
+
+                                                                         WDO
+
+
+
+                                                     WATCHDOG
+                                                      CONTROL
+
+
+
+                                         Figure 8-7. Open-Drain WDO Configuration
+
+8.2.2 Monitoring Microcontroller with a Programmed Window Watchdog Timer - Design 2
+A typical application for the TPS3430 is shown in Figure 8-8. The TPS3430 is used to monitor the activity of the
+microcontroller via the WDI pin.
+                                 1.8 V
+                                                                           10 kŸ
+
+
+
+
+                                                     TPS3430                         VCORE
+                                              VDD2             VDD1                      Microcontroller
+
+                                              SET1              NC
+
+                                              SET0             WDO                 NMI
+
+                                              CRST             WDI                 GPIO
+                                     0.1 µF
+                                              CWD              GND
+                                                                                             GND
+
+
+
+  Figure 8-8. Monitoring Microcontroller Using a Window Watchdog Timer with Programmable Watchdog
+                                               Reset Delay
+
+8.2.2.1 Design Requirements - Design 2
+          PARAMETER                           DESIGN REQUIREMENT                                             DESIGN RESULT
+                                                                                          Minimum reset delay of 260 ms, reset delay of 322
+ Watchdog Reset delay            Minimum reset delay of 250 ms
+                                                                                          ms (typical)
+                                                                                          Leaving the CWD pin unconnected with SET0 = 0
+                                 Functions with a 30-Hz pulse-width modulation
+ Watchdog window                                                                          and SET1 = 0 produces a window with a tWDL(max)
+                                 (PWM) signal with a 50% duty cycle
+                                                                                          of 25.9 ms and a tWDU(min) of 46.8 ms
+ Output logic voltage            1.8-V CMOS                                               1.8-V CMOS
+ Maximum device current                                                                   10 µA of current consumption, typical worst-case of
+                                 200 µA
+ consumption                                                                              199 µA when WDO is asserted
+
+
+
+
+22    Submit Document Feedback                                                                         Copyright © 2021 Texas Instruments Incorporated
+
+                                                     Product Folder Links: TPS3430
+                                                                                                                              TPS3430
+www.ti.com                                                                                   SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+
+8.2.2.2 Detailed Design Procedure - Design 2
+8.2.2.2.1 Meeting the Minimum Watchdog Reset Delay - Design 2
+The TPS3430 features three options for setting the watchdog reset delay: connecting a capacitor to the CRST
+pin, connecting a pull-up resistor, and leaving the CRST pin unconnected. If the CRST pin is either unconnected
+or pulled up the minimum timing requirement cannot be met, thus an external capacitor must be connected
+to the CRST pin. Because a minimum time is required, the worst-case scenario is a supervisor with a high
+CRST charging current (ICRST) and a low CRST comparator threshold (VCRST). For applications with ambient
+temperatures ranging from –40°C to +125°C, CCRST can be calculated using ICRST(MAX), VCRST(MIN), and solving
+for CCRST in Equation 5:
+
+                            I CRST (MAX)
+         C RST (MIN) =                        x   (t RST - t INIT )
+                            V CRST (MIN)
+                                                                                                                               (5)
+
+When solving Equation 5, the minimum capacitance required at the CRST pin is 0.086 μF. If standard capacitors
+with ±10% tolerances are used, then the minimum CRST capacitor required can be found in Equation 6:
+
+                     CRST(min) _ ideal      0.086 PF
+      CRST(min)
+                       1 Ctolerance          1 0.1                                                                             (6)
+
+Solving Equation 6 where Ctolerance is 0.1 or 10%, the minimum CCRST capacitor is 0.096 μF. This value is
+then rounded up to the nearest standard capacitor value, so a 0.1-μF capacitor must be used to achieve this
+reset delay timing. If voltage and temperature derating are being considered, then also include these values in
+Ctolerance.
+8.2.2.2.2 Setting the Watchdog Window - Design 2
+In this application, the window watchdog timing options are based on the PWM signal that is provided to the
+TPS3430. A window watchdog setting must be chosen such that the falling edge of the PWM signal always falls
+within the window. A nominal window must be designed with tWDL(max) less than 33.33 ms and tWDU(min) greater
+than 33.33 ms. There are several options that satisfy this window option. An external capacitor can be placed on
+the CWD pin and calculated to have a sufficient window. Another option is to use one of the factory-programmed
+timing options. An additional advantage of choosing one of the factory-programmed options is the ability to
+reduce the number of components required, thus reducing overall BOM cost. Leaving the CWD pin unconnected
+(NC) with SET0 = 0 and SET1 = 0 produces a tWDL(max) of 25.9 ms and a tWDU(min) of 46.8 ms; see Section 8.1.2.
+8.2.2.2.3 Calculating the WDO Pull-up Resistor - Design 2
+The TPS3430 uses an open-drain configuration for the WDO circuit, as shown in Figure 8-7. When the FET is
+off, the resistor pulls the drain of the transistor to VDD and when the FET is turned on, the FET attempts to
+pull the drain to ground, thus creating an effective resistor divider. The resistors in this divider must be chosen
+to ensure that VOL is below its maximum value. To choose the proper pull-up resistor, there are three key
+specifications to keep in mind: the pull-up voltage (VPU), the recommended maximum WDO pin current (IWDO),
+and VOL. The maximum VOL is 0.4 V, meaning that the effective resistor divider created must be able to bring
+the voltage on the reset pin below 0.4 V with IWDO kept below 10 mA. For this example, with a VPU of 1.8
+V, a resistor must be chosen to keep IWDO below 200 μA because this value is the maximum consumption
+current allowed. To ensure this specification is met, a pull-up resistor value of 10 kΩ was selected, which sinks a
+maximum of 180 μA when WDO is asserted.
+8.2.3 Monitoring Microcontroller with a Latching Window Watchdog Timer - Design 3
+A safety critical application for the TPS3430 is shown in Figure 8-9. The TPS3430 is used to monitor the activity
+of the microcontroller via the WDI pin and upon a watchdog fault, this design latches the WDO pin until the
+device VDD drops below VDD (min).
+
+
+
+
+Copyright © 2021 Texas Instruments Incorporated                                                          Submit Document Feedback      23
+                                                             Product Folder Links: TPS3430
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                                    www.ti.com
+
+                          3.3V
+
+
+                                             TPS3430                                   VCORE
+                                          VDD2       VDD1
+                                                                                       Microcontroller
+                                       SET1                    NC
+
+                                          SET0              WDO                     NMI
+
+                                          CRST               WDI                    GPIO
+                                 NC       CWD                GND
+                                                                                             GND
+
+
+
+                                           5nF
+                                                    Open-drain Buffer
+                                           GND
+
+                Figure 8-9. Monitoring Microcontroller Using a Latching Window Watchdog Timer
+
+8.2.3.1 Design Requirements - Design 3
+          PARAMETER                           DESIGN REQUIREMENT                                      DESIGN RESULT
+                                                                                     Latching watchdog functionality that keeps WDO
+ Watchdog Reset delay            Latch WDO upon watchdog fault
+                                                                                     logic low when fault occurs
+                                                                                     Leaving the CWD pin unconnected with SET0 = 1
+                                 Functions with a 1-Hz pulse-width modulation
+ Watchdog window                                                                     and SET1 = 1 produces a window with a tWDL(max)
+                                 (PWM) signal with a 50% duty cycle
+                                                                                     of 920 ms and a tWDU(min) of 1360 ms
+ Output logic voltage            3.3-V Open-Drain                                    3.3-V Open-Drain
+ Maximum device current                                                              10 µA of current consumption, typical worst-case of
+                                 200 µA
+ consumption                                                                         199 µA when WDO is asserted
+
+
+8.2.3.2 Detailed Design Procedure - Design 3
+8.2.3.2.1 Meeting the Latching Output Requirement - Design 3
+To achieve the latching watchdog feature, an open-drain buffer is connected from WDO to CRST with a small
+value capacitor connected from the Anode of the buffer connected to CRST to GND. The capacitor must be a
+small value to prevent additional delay when triggering WDO to active low during watchdog fault. A capacitor
+between 150 pF and 5 nF is recommended.
+In Figure 8-10 below, the latching watchdog feature is shown by causing a watchdog fault and observing WDO.
+Because no pulse arrived on WDI within the Watchdog Timeout, WDO activates and goes logic low and remains
+low. To reset the watchdog, the device must be restarted by dropping VDD below VDD (min).
+8.2.3.2.2 Setting the Watchdog Window - Design 3
+The Watchdog Window is set via the CWD, SET0, and SET1 pin configurations. To achieve a Watchdog Timeout
+of 1 second corresponding to a 1-Hz WDI signal, this design simply leaves CWD pin floating (NC - No Connect)
+and ties SET0 and SET1 to VDD to set the SET pins to logic high. With this configuration, the Watchdog Lower
+Boundary tWDL (typ) is set for 800 ms and the Watchdog Upper Boundary tWDU (typ) is set for 1.6 seconds. Refer to
+Table 6.6 Timing Requirements to see the factory-programmed window watchdog timing configurations.
+
+
+
+
+24    Submit Document Feedback                                                                  Copyright © 2021 Texas Instruments Incorporated
+
+                                                    Product Folder Links: TPS3430
+                                                                                                                     TPS3430
+www.ti.com                                                                          SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+
+8.2.3.3 Application Curve - Design 3
+
+
+
+
+ VDD
+
+
+                                         No WDI falling edge occurs before WDU(max) so WDO asserts and latches
+
+
+
+
+ WDI
+
+
+
+
+WDO
+                  Figure 8-10. Watchdog Fault Caused by Missing WDI Pulse Shows WDO Latching
+
+
+
+
+Copyright © 2021 Texas Instruments Incorporated                                                 Submit Document Feedback      25
+                                                    Product Folder Links: TPS3430
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                       www.ti.com
+
+
+9 Power Supply Recommendations
+This device is designed to operate from an input supply with a voltage range between 1.6 V and 6.5 V. An input
+supply capacitor is not required for this device; however, if the input supply is noisy, then good analog practice is
+to place a 0.1-µF capacitor between the VDD pin and the GND pin. Please be sure to externally connect VDD1
+to VDD2 as the device will not function if these pins are not connected.
+
+
+
+
+26    Submit Document Feedback                                                     Copyright © 2021 Texas Instruments Incorporated
+
+                                              Product Folder Links: TPS3430
+                                                                                                                                   TPS3430
+www.ti.com                                                                                        SBVS366A – JULY 2018 – REVISED OCTOBER 2021
+
+
+10 Layout
+10.1 Layout Guidelines
+Make sure that the connection to the VDD pin is low impedance. Good analog design practice recommends
+placing a 0.1-µF ceramic capacitor as near as possible to the VDD pin. If a capacitor is not connected to the
+CRST pin, then minimize parasitic capacitance on this pin so the WDO delay time is not adversely affected.
+• Make sure that the connection to the VDD pin is low impedance. Good analog design practice is to place a
+   0.1-µF ceramic capacitor as near as possible to the VDD pin.
+• If a CCRST capacitor or pull-up resistor is used, place these components as close as possible to the CRST
+   pin. If the CRST pin is left unconnected, make sure to minimize the amount of parasitic capacitance on the
+   pin.
+• If a CCWD capacitor or pull-up resistor is used, place these components as close as possible to the CWD pin.
+   If the CWD pin is left unconnected, make sure to minimize the amount of parasitic capacitance on the pin.
+• Place the pull-up resistor on WDO as close to the pin as possible.
+10.2 Layout Example
+
+                                                  CVDD                  GND Plane
+
+
+
+                                         Vin              VDD1      1                  10   VDD2
+
+                                      CCWD                 CWD      2                  9    NC
+
+                                                          SET0      3                  8    WDO
+
+                                               CCRST      CRST      4                  7    WDI         RPU2
+
+                                                           GND      5                  6    SET1
+
+                                                                                                         Vin
+
+                                                   Denotes a via.
+
+                                               Figure 10-1. Typical Layout for the TPS3430
+
+
+
+
+Copyright © 2021 Texas Instruments Incorporated                                                                Submit Document Feedback     27
+                                                            Product Folder Links: TPS3430
+TPS3430
+SBVS366A – JULY 2018 – REVISED OCTOBER 2021                                                                                    www.ti.com
+
+
+11 Device and Documentation Support
+11.1 Device Support
+11.2 Documentation Support
+11.2.1 Related Documentation
+For related documentation see the following:
+• TPS3430EVM Window Watchdog Timer with Programmable Timeout Delay User Guide
+11.3 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on
+Subscribe to updates to register and receive a weekly digest of any product information that has changed. For
+change details, review the revision history included in any revised document.
+11.4 Support Resources
+TI E2E™ support forums are an engineer's go-to source for fast, verified answers and design help — straight
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do
+not necessarily reflect TI's views; see TI's Terms of Use.
+11.5 Trademarks
+TI E2E™ is a trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+11.6 Electrostatic Discharge Caution
+                 This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled
+                 with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+                 ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may
+                 be more susceptible to damage because very small parametric changes could cause the device not to meet its published
+                 specifications.
+
+
+11.7 Glossary
+ TI Glossary         This glossary lists and explains terms, acronyms, and definitions.
+
+12 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+
+
+
+
+28    Submit Document Feedback                                                                  Copyright © 2021 Texas Instruments Incorporated
+
+                                                    Product Folder Links: TPS3430
+                                                                                                                                                                      PACKAGE OPTION ADDENDUM
+
+       www.ti.com                                                                                                                                                                                                   18-Jun-2026
+
+
+
+
+PACKAGING INFORMATION
+
+       Orderable part number          Status     Material type      Package | Pins      Package qty | Carrier        RoHS             Lead finish/              MSL rating/               Op temp (°C)          Part marking
+                                        (1)            (2)                                                             (3)            Ball material             Peak reflow                                           (6)
+                                                                                                                                            (4)                      (5)
+
+          TPS3430WDRCR                Active      Production       VSON (DRC) | 10       3000 | LARGE T&R             Yes                  SN              Level-1-260C-UNLIM              -40 to 125               430AA
+         TPS3430WDRCR.A               Active      Production       VSON (DRC) | 10       3000 | LARGE T&R             Yes                  SN              Level-1-260C-UNLIM              -40 to 125               430AA
+        TPS3430WDRCRG4                Active      Production       VSON (DRC) | 10       3000 | LARGE T&R             Yes                NIPDAU            Level-1-260C-UNLIM              -40 to 125               430AA
+       TPS3430WDRCRG4.A               Active      Production       VSON (DRC) | 10       3000 | LARGE T&R             Yes                NIPDAU            Level-1-260C-UNLIM              -40 to 125               430AA
+
+(1)
+      Status: For more details on status, see our product life cycle.
+
+(2)
+   Material type: When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+
+(3)
+      RoHS values: Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+
+(4)
+   Lead finish/Ball material: Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+
+(5)
+  MSL rating/Peak reflow: The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+
+(6)
+      Part marking: There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+OTHER QUALIFIED VERSIONS OF TPS3430 :
+
+
+
+
+                                                                                                          Addendum-Page 1
+                                                                                                                          PACKAGE OPTION ADDENDUM
+
+   www.ti.com                                                                                                                               18-Jun-2026
+
+
+
+
+• Automotive : TPS3430-Q1
+
+NOTE: Qualified Version Definitions:
+
+       • Automotive - Q100 devices qualified for high-reliability automotive applications targeting zero defects
+
+
+
+
+                                                                                                        Addendum-Page 2
+                                                                               PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                                                       18-Jun-2025
+
+
+
+TAPE AND REEL INFORMATION
+
+       REEL DIMENSIONS                                                                      TAPE DIMENSIONS
+                                                                                       K0       P1
+
+
+
+                                                                                                                      B0 W
+                                        Reel
+                                      Diameter
+                                                                                    Cavity           A0
+                                                                A0   Dimension designed to accommodate the component width
+                                                                B0   Dimension designed to accommodate the component length
+                                                                K0   Dimension designed to accommodate the component thickness
+                                                                W    Overall width of the carrier tape
+                                                                P1   Pitch between successive cavity centers
+
+
+                                       Reel Width (W1)
+                              QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+
+                                                                                                     Sprocket Holes
+
+
+                                                 Q1        Q2          Q1    Q2
+
+                                                 Q3        Q4          Q3    Q4                  User Direction of Feed
+
+
+
+                                                            Pocket Quadrants
+
+
+*All dimensions are nominal
+             Device           Package Package Pins              SPQ       Reel   Reel   A0                  B0         K0     P1     W     Pin1
+                               Type Drawing                             Diameter Width (mm)                (mm)       (mm)   (mm)   (mm) Quadrant
+                                                                          (mm) W1 (mm)
+    TPS3430WDRCR               VSON     DRC           10        3000        330.0        12.4        3.3    3.3       1.1    8.0    12.0    Q2
+   TPS3430WDRCRG4              VSON     DRC           10        3000        330.0        12.4        3.3    3.3       1.1    8.0    12.0    Q2
+
+
+
+
+                                                                      Pack Materials-Page 1
+                                                                PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                              18-Jun-2025
+
+
+
+ TAPE AND REEL BOX DIMENSIONS
+
+
+
+
+                                                               Width (mm)
+                                                                              H
+                      W
+
+
+
+
+                                                          L
+
+
+
+
+*All dimensions are nominal
+             Device           Package Type   Package Drawing   Pins         SPQ    Length (mm)   Width (mm)   Height (mm)
+     TPS3430WDRCR                VSON             DRC           10          3000      367.0        367.0         35.0
+   TPS3430WDRCRG4                VSON             DRC           10          3000      367.0        367.0         35.0
+
+
+
+
+                                                        Pack Materials-Page 2
+                                                                  GENERIC PACKAGE VIEW
+DRC 10                                                                     VSON - 1 mm max height
+3 x 3, 0.5 mm pitch                                                         PLASTIC SMALL OUTLINE - NO LEAD
+
+
+
+
+               This image is a representation of the package family, actual package may vary.
+                             Refer to the product data sheet for package details.
+
+
+
+
+                                                                                                   4226193/A
+
+
+
+
+                                                    www.ti.com
+                                                                                                                          PACKAGE OUTLINE
+ DRC0010J                                                              SCALE 4.000
+                                                                                                                       VSON - 1 mm max height
+                                                                                                                          PLASTIC SMALL OUTLINE - NO LEAD
+
+
+
+
+                                                       3.1                                       B
+                                 A
+                                                       2.9
+
+
+
+
+              PIN 1 INDEX AREA
+                                                                                                 3.1
+                                                                                                 2.9
+
+
+
+
+                          1.0                                                                                C
+                          0.8
+
+                                                                                                                 SEATING PLANE
+                         0.05
+                         0.00                                                                                    0.08 C
+
+                                                    1.65 0.1
+                                                                               2X (0.5)
+                                                                                                                                        (0.2) TYP
+                       EXPOSED                                                       4X (0.25)
+                    THERMAL PAD
+
+                                     5                                                    6
+
+
+
+                            2X                       11                                          SYMM
+                             2
+                                                                                                             2.4 0.1
+
+
+
+                                                                                          10
+                                     1
+                       8X 0.5                                                                                0.30
+                                                                                                       10X
+                                                                                                             0.18
+                             PIN 1 ID                SYMM
+                                                                                                             0.1     C A B
+                          (OPTIONAL)
+                                                                 0.5                                         0.05     C
+                                                             10X
+                                                                 0.3
+
+
+                                                                                                                                         4218878/B 07/2018
+
+NOTES:
+
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+   per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. The package thermal pad must be soldered to the printed circuit board for optimal thermal and mechanical performance.
+
+
+
+
+                                                                       www.ti.com
+                                                                                        EXAMPLE BOARD LAYOUT
+ DRC0010J                                                                                             VSON - 1 mm max height
+                                                                                                          PLASTIC SMALL OUTLINE - NO LEAD
+
+
+
+                                                                     (1.65)
+                                                                        (0.5)
+
+
+                               10X (0.6)
+
+                                           1
+                                                                                                     10
+
+                         10X (0.24)
+                                                                   11
+                                  SYMM                                                                             (2.4)
+                                                                                                                           (3.4)
+
+
+                                                                                                          (0.95)
+                               8X (0.5)
+
+                                           5                                                         6
+
+                         (R0.05) TYP
+
+                                 ( 0.2) VIA
+                                 TYP
+                                                       (0.25)
+                                                                           (0.575)
+                                                                    SYMM
+
+                                                                        (2.8)
+
+                                                      LAND PATTERN EXAMPLE
+                                                          EXPOSED METAL SHOWN
+                                                               SCALE:20X
+
+
+
+                                                                                                              0.07 MIN
+                    0.07 MAX                        EXPOSED METAL                                             ALL AROUND
+                ALL AROUND
+                                                                                EXPOSED METAL
+
+
+
+                  SOLDER MASK                       METAL                            METAL UNDER                            SOLDER MASK
+                  OPENING                                                            SOLDER MASK                            OPENING
+                                 NON SOLDER MASK
+                                                                                                         SOLDER MASK
+                                     DEFINED
+                                                                                                           DEFINED
+                                   (PREFERRED)
+
+                                                           SOLDER MASK DETAILS
+                                                                                                                                   4218878/B 07/2018
+
+NOTES: (continued)
+
+4. This package is designed to be soldered to a thermal pad on the board. For more information, see Texas Instruments literature
+   number SLUA271 (www.ti.com/lit/slua271).
+5. Vias are optional depending on application, refer to device data sheet. If any vias are implemented, refer to their locations shown
+   on this view. It is recommended that vias under paste be filled, plugged or tented.
+
+
+
+
+                                                                         www.ti.com
+                                                                                     EXAMPLE STENCIL DESIGN
+ DRC0010J                                                                                     VSON - 1 mm max height
+                                                                                                PLASTIC SMALL OUTLINE - NO LEAD
+
+
+
+
+                                                                     2X (1.5)
+                                                                      (0.5)
+                                                                     SYMM
+                                                                                           EXPOSED METAL
+                                                                11                         TYP
+
+
+                                     10X (0.6)
+                                 1
+                                                                                                   10
+                                                                                                                    (1.53)
+                 10X (0.24)                                                                                  2X
+                                                                                                           (1.06)
+
+
+
+                       SYMM
+
+
+
+                                                                                                        (0.63)
+
+
+                      8X (0.5)
+
+                                                                                                   6
+                                 5
+
+                (R0.05) TYP
+                                                    4X (0.34)
+
+
+                                                                         4X (0.25)
+                                                                      (2.8)
+
+
+                                                     SOLDER PASTE EXAMPLE
+                                                   BASED ON 0.125 mm THICK STENCIL
+
+                                                           EXPOSED PAD 11:
+                                                 80% PRINTED SOLDER COVERAGE BY AREA
+                                                               SCALE:25X
+
+
+
+
+                                                                                                                       4218878/B 07/2018
+
+NOTES: (continued)
+
+6. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+   design recommendations.
+
+
+
+
+                                                                        www.ti.com
+                                         IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+
+                                                Copyright © 2026, Texas Instruments Incorporated
+                                                                Last updated 10/2025
+
