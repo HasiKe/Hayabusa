@@ -86,3 +86,5 @@ api_keys.txt
 *.lck
 ~*.docx
 ~*.xlsx
+# Excluded per Kevin
+hardware/ECU/verbesserungen/
