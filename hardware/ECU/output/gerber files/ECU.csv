@@ -1,108 +1,104 @@
-"Reference","Qty","Value","DNP","Exclude from BOM","Exclude from Board","Footprint","Datasheet"
-"BT1","1","ML2032","","","","Battery:BatteryHolder_Keystone_3034_1x20mm",""
-"C1,C7,C21,C22,C23,C24,C25,C30,C31,C32,C34,C35,C36,C37,C38,C41,C42,C43,C67,C68,C74,C77","22","100nF","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C2,C3,C13,C15,C17","5","0.1uF","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C4","1","4.7nF","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C5","1","10uF","","","","Capacitor_SMD:C_1206_3216Metric",""
-"C6","1","100nF 100V","","","","Capacitor_SMD:C_1206_3216Metric",""
-"C8,C9","2","470pF","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C10,C12,C26","3","1nF","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C11,C75","2","0.01uF","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C14","1","1uF","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C16,C18","2","33uF","","","","Capacitor_SMD:CP_Elec_6.3x7.7",""
-"C19,C20,C51,C52","4","100n","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C27,C28,C29,C33,C39,C40","6","10nF","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C44,C45","2","10n","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C46","1","100u/50V","","","","Capacitor_SMD:CP_Elec_8x10",""
-"C47","1","1u","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C48","1","220n","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C49","1","22n","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C50","1","1n","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C53,C54,C65,C73","4","100nF/100V","","","","Capacitor_SMD:C_1210_3225Metric",""
-"C55,C56","2","4.7uF/100V","","","","Capacitor_SMD:C_1210_3225Metric",""
-"C57","1","1uF/50V","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C58,C63","2","10uF/10V","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C59,C66","2","100nF/25V","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C60","1","39pF","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C61,C69","2","100uF/50V","","","","Capacitor_SMD:CP_Elec_8x10",""
-"C62","1","6800pF","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C64","1","22uF/10V","","","","Capacitor_SMD:C_1210_3225Metric",""
-"C70,C72","2","47uF/10V X7R","","","","Capacitor_SMD:C_1210_3225Metric",""
-"C71","1","10uF/50V X7R","","","","Capacitor_SMD:C_1210_3225Metric",""
-"C76,C78,C80","3","CC0805KRX7R9BB104","","","","Capacitor_SMD:C_0805_2012Metric","https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_X7R_6.3V-to-50V_20.pdf"
-"C79","1","CC0805KKX7R7BB475","","","","Capacitor_SMD:C_0805_2012Metric",""
-"C81,C82","2","CC0805JRX7R9BB332","","","","Capacitor_SMD:C_0805_2012Metric","https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_X7R_6_3V-TO-250V"
-"D1","1","D_Schottky","","","","Diode_SMD:D_PowerDI-123",""
-"D2","1","SMAJ5.0A","","","","Diode_SMD:D_SMA",""
-"D3","1","NUP2105L","","","","Package_TO_SOT_SMD:SOT-23",""
-"D4,D5,D6,D7,D16,D17,D18,D19,D20,D21,D23,D24,D25,D26,D27,D28,D29,D30,D46,D47","20","BAV199","","","","Package_TO_SOT_SMD:SOT-23",""
-"D8,D9,D14,D15","4","LED","","","","LED_SMD:LED_0805_2012Metric",""
-"D10,D11,D12,D13","4","D","","","","Diode_SMD:D_SOD-323",""
-"D22","1","3V6 1W (SMA)","","","","Diode_SMD:D_SMA",""
-"D31,D32,D33,D34,D35,D36,D39,D40","8","SS34","","","","Diode_SMD:D_SMA",""
-"D37,D38","2","1N4148W","","","","Diode_SMD:D_SOD-123",""
-"D41","1","SM8S24A","","","","Rev3:D_DO-218AB",""
-"D42","1","B560C","","","","Diode_SMD:D_SMC",""
-"D43,D44,D45","3","LED grn","","","","LED_SMD:LED_0805_2012Metric",""
-"F1","1","150mA","","","","Fuse:Fuse_1812_4532Metric",""
-"F2","1","3A / 63V","","","","Fuse:Fuse_1206_3216Metric",""
-"IC1","1","MAX9926UAEE_V+","","","","Package_SO:QSOP-16_3.9x4.9mm_P0.635mm","https://componentsearchengine.com/Datasheets/1/MAX9926UAEE_V+.pdf"
-"IC2,IC3,IC4","3","ZXMS6006DT8","","","","ZXMS6006DT8TA:SOT153P700X170-8N",""
-"IC5","1","LD1117S33","","","","Package_TO_SOT_SMD:SOT-223-3_TabPin2",""
-"IC6","1","74AHCT125T14-13","","","","Package_SO:TSSOP-14_4.4x5mm_P0.65mm","https://www.diodes.com/assets/Datasheets/74AHCT125.pdf"
-"IC7","1","TPIC8101DW","","","","Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm","http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=TPIC8101&&fileType=pdf"
-"J1","1","Conn_01x04","","","","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",""
-"J2","1","","","","","connector:6437288-3",""
-"L1","1","10uH / 3.3A","","","","Inductor_SMD:L_Bourns_SRR1260",""
-"L2","1","8.2uH / 5A","","","","Inductor_SMD:L_Bourns_SRR1260",""
-"Q1,Q2,Q3,Q4","4","ISL9V5036P3-F085","","","","ISL9V5036P3-F085:TO254P470X1016X2019-3P","https://www.onsemi.com/pub/Collateral/ISL9V5036S3ST-D.PDF"
-"Q5","1","BSS138","","","","Package_TO_SOT_SMD:SOT-23",""
-"Q6","1","SQM120N06-3M5L","","","","Package_TO_SOT_SMD:TO-263-2",""
-"R1,R17,R18,R40,R41,R51,R52,R63,R75,R92,R93,R94,R95,R96,R97,R98,R122,R124","18","1k","","","","Resistor_SMD:R_0805_2012Metric",""
-"R2,R3,R4,R5,R8,R27,R31,R32,R33,R34,R35,R71,R73,R74,R78,R79,R80,R81,R89,R106,R110,R111,R113,R123","24","10k","","","","Resistor_SMD:R_0805_2012Metric",""
-"R6,R7","2","60.4R","","","","Resistor_SMD:R_0805_2012Metric",""
-"R9,R10,R21,R22","4","0R DNP","Nicht bestücken","","","Resistor_SMD:R_0805_2012Metric",""
-"R11,R13,R19,R20","4","0R","","","","Resistor_SMD:R_0805_2012Metric",""
-"R12,R14,R58,R59,R60,R61,R62,R70,R76,R77,R86,R120","12","470R","","","","Resistor_SMD:R_0805_2012Metric",""
-"R15,R16","2","10k DNP","Nicht bestücken","","","Resistor_SMD:R_0805_2012Metric",""
-"R23,R24,R25,R26","4","10k","","","","Resistor_SMD:R_1206_3216Metric",""
-"R28,R29,R53,R54","4","33","","","","Resistor_SMD:R_0805_2012Metric",""
-"R30","1","20m","","","","Resistor_SMD:R_2512_6332Metric",""
-"R36,R37,R38,R39,R42,R43,R44,R45","8","18k","","","","Resistor_SMD:R_1206_3216Metric",""
-"R46,R47,R48,R49","4","4.02k","","","","Resistor_SMD:R_0805_2012Metric",""
-"R50,R99,R100,R101,R102,R103,R104,R108,R109,R112","10","100k","","","","Resistor_SMD:R_0805_2012Metric",""
-"R55,R56","2","2k49","","","","Resistor_SMD:R_0805_2012Metric",""
-"R57,R121","2","2k2","","","","Resistor_SMD:R_0805_2012Metric",""
-"R64,R65,R66,R82,R83,R87,R88","7","12k","","","","Resistor_SMD:R_0805_2012Metric",""
-"R67,R68,R69,R84,R85","5","20k","","","","Resistor_SMD:R_0805_2012Metric",""
-"R72","1","47k","","","","Resistor_SMD:R_0805_2012Metric",""
-"R90","1","5k6","","","","Resistor_SMD:R_0805_2012Metric",""
-"R91","1","1M","","","","Resistor_SMD:R_0805_2012Metric",""
-"R105","1","15k","","","","Resistor_SMD:R_0805_2012Metric",""
-"R107","1","330k","","","","Resistor_SMD:R_0805_2012Metric",""
-"R114","1","237k","","","","Resistor_SMD:R_0805_2012Metric",""
-"R115","1","56k2","","","","Resistor_SMD:R_0805_2012Metric",""
-"R116","1","162k","","","","Resistor_SMD:R_0805_2012Metric",""
-"R117","1","53k6","","","","Resistor_SMD:R_0805_2012Metric",""
-"R118","1","10k2","","","","Resistor_SMD:R_0805_2012Metric",""
-"R119","1","13k","","","","Resistor_SMD:R_0805_2012Metric",""
-"R125","1","2k","","","","Resistor_SMD:R_0805_2012Metric","http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_10.pdf"
-"R126,R131,R132","3","RC0805FR-071ML","","","","Resistor_SMD:R_0805_2012Metric","https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_11.pdf"
-"R127,R128,R129,R130","4","RC0805FR-07100KL","","","","Resistor_SMD:R_0805_2012Metric","http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_10.pdf"
-"U1","1","Teensy4.1","","","","kicad:Teensy41",""
-"U2","1","W25Q32JVSS","","","","Package_SO:SOIC-8_5.3x5.3mm_P1.27mm","http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf"
-"U3","1","MCP2562-E-SN","","","","Package_SO:SOIC-8_3.9x4.9mm_P1.27mm","http://ww1.microchip.com/downloads/en/DeviceDoc/25167A.pdf"
-"U4","1","74AHC1G32","","","","Package_TO_SOT_SMD:SOT-353_SC-70-5","http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf"
-"U5","1","ADXL343","","","","Package_LGA:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y","https://www.analog.com/media/en/technical-documentation/data-sheets/ADXL343.pdf"
-"U6","1","USBLC6-2SC6","","","","Package_TO_SOT_SMD:SOT-23-6",""
-"U7","1","MC33810","","","","IC_Automotive:SOIC32-P0.65-33N",""
-"U8","1","TPS3823-33DBV","","","","Package_TO_SOT_SMD:SOT-23-5",""
-"U9","1","74LVC1G00","","","","Package_TO_SOT_SMD:SOT-353_SC-70-5",""
-"U10,U11","2","LMV324","","","","Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",""
-"U12","1","DRV8434A","","","","Package_SO:HTSSOP-28-1EP_4.4x9.7mm_P0.65mm_EP2.85x5.4mm_ThermalVias",""
-"U13,U14","2","BTF3050TE","","","","Package_TO_SOT_SMD:TO-252-5_TabPin3",""
-"U15","1","LM74700-Q1","","","","Package_TO_SOT_SMD:SOT-23-6",""
-"U16","1","TPS54360B-Q1","","","","Package_SO:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm_ThermalVias",""
-"U17","1","TPS7B6950-Q1","","","","Package_TO_SOT_SMD:SOT-223-3_TabPin2",""
-"U18","1","74LVC1G125","","","","Package_TO_SOT_SMD:SOT-353_SC-70-5",""
-"Y1","1","CSTCR4M00G53-R0","","","","Crystal:Resonator_SMD_Murata_CSTCR_4.5x2x1.15mm",""
+"ID";"Bezeichner";"Footprint";"Stückzahl";"Bezeichnung";"Anbieter und Referenz";
+1;"BT1";"BatteryHolder_Keystone_3034_1x20mm";1;"ML2032";;;
+2;"C1, C7, C21, C22, C23, C24, C25, C30, C31, C32, C34, C35, C36, C37, C38, C41, C42, C43, C67, C68, C74, C77";"C_0805_2012Metric";22;"100nF";;;
+3;"C2, C3, C13, C15, C17";"C_0805_2012Metric";5;"0.1uF";;;
+4;"C4";"C_0805_2012Metric";1;"4.7nF";;;
+5;"C5";"C_1206_3216Metric";1;"10uF";;;
+6;"C6";"C_1206_3216Metric";1;"100nF 100V";;;
+7;"C8, C9";"C_0805_2012Metric";2;"470pF";;;
+8;"C10, C12, C26";"C_0805_2012Metric";3;"1nF";;;
+9;"C11, C75";"C_0805_2012Metric";2;"0.01uF";;;
+10;"C14";"C_0805_2012Metric";1;"1uF";;;
+11;"C16, C18";"CP_Elec_6.3x7.7";2;"33uF";;;
+12;"C19, C20, C51, C52";"C_0805_2012Metric";4;"100n";;;
+13;"C27, C28, C29, C33, C39, C40";"C_0805_2012Metric";6;"10nF";;;
+14;"C44, C45";"C_0805_2012Metric";2;"10n";;;
+15;"C46";"CP_Elec_8x10";1;"100u/50V";;;
+16;"C47";"C_0805_2012Metric";1;"1u";;;
+17;"C48";"C_0805_2012Metric";1;"220n";;;
+18;"C49";"C_0805_2012Metric";1;"22n";;;
+19;"C50";"C_0805_2012Metric";1;"1n";;;
+20;"C53, C54, C65, C73";"C_1210_3225Metric";4;"100nF/100V";;;
+21;"C55, C56";"C_1210_3225Metric";2;"4.7uF/100V";;;
+22;"C57";"C_0805_2012Metric";1;"1uF/50V";;;
+23;"C58, C63";"C_0805_2012Metric";2;"10uF/10V";;;
+24;"C59, C66";"C_0805_2012Metric";2;"100nF/25V";;;
+25;"C60";"C_0805_2012Metric";1;"39pF";;;
+26;"C61, C69";"CP_Elec_8x10";2;"100uF/50V";;;
+27;"C62";"C_0805_2012Metric";1;"6800pF";;;
+28;"C64";"C_1210_3225Metric";1;"22uF/10V";;;
+29;"C70, C72";"C_1210_3225Metric";2;"47uF/10V X7R";;;
+30;"C71";"C_1210_3225Metric";1;"10uF/50V X7R";;;
+31;"C76, C78, C80";"C_0805_2012Metric";3;"CC0805KRX7R9BB104";;;
+32;"C79";"C_0805_2012Metric";1;"CC0805KKX7R7BB475";;;
+33;"C81, C82";"C_0805_2012Metric";2;"CC0805JRX7R9BB332";;;
+34;"D1";"D_PowerDI-123";1;"D_Schottky";;;
+35;"D2";"D_SMA";1;"SMAJ5.0A";;;
+36;"D3";"SOT-23";1;"NUP2105L";;;
+37;"D4, D5, D6, D7, D16, D17, D18, D19, D20, D21, D23, D24, D25, D26, D27, D28, D29, D30, D46, D47";"SOT-23";20;"BAV199";;;
+38;"D8, D9, D14, D15";"LED_0805_2012Metric";4;"LED";;;
+39;"D10, D11, D12, D13";"D_SOD-323";4;"D";;;
+40;"D22";"D_SMA";1;"3V6 1W (SMA)";;;
+41;"D31, D32, D33, D34, D35, D36, D39, D40";"D_SMA";8;"SS34";;;
+42;"D37, D38";"D_SOD-123";2;"1N4148W";;;
+43;"D41";"D_DO-218AB";1;"SM8S24A";;;
+44;"D42";"D_SMC";1;"B560C";;;
+45;"D43, D44, D45";"LED_0805_2012Metric";3;"LED grn";;;
+46;"F1";"Fuse_1812_4532Metric";1;"150mA";;;
+47;"F2";"Fuse_1206_3216Metric";1;"3A / 63V";;;
+48;"IC1";"QSOP-16_3.9x4.9mm_P0.635mm";1;"MAX9926UAEE_V+";;;
+49;"IC2, IC3, IC4";"SOT153P700X170-8N";3;"ZXMS6006DT8";;;
+50;"IC5";"SOT-223-3_TabPin2";1;"LD1117S33";;;
+51;"IC6";"TSSOP-14_4.4x5mm_P0.65mm";1;"74AHCT125T14-13";;;
+52;"IC7";"SOIC-20W_7.5x12.8mm_P1.27mm";1;"TPIC8101DW";;;
+53;"J1";"PinHeader_1x04_P2.54mm_Vertical";1;"Conn_01x04";;;
+54;"L1";"L_Bourns_SRR1260";1;"10uH / 3.3A";;;
+55;"L2";"L_Bourns_SRR1260";1;"8.2uH / 5A";;;
+56;"Q5";"SOT-23";1;"BSS138";;;
+57;"Q6";"TO-263-2";1;"SQM120N06-3M5L";;;
+58;"R1, R17, R18, R40, R41, R51, R52, R63, R75, R92, R93, R94, R95, R96, R97, R98, R122, R124";"R_0805_2012Metric";18;"1k";;;
+59;"R2, R3, R4, R5, R8, R27, R31, R32, R33, R34, R35, R71, R73, R74, R78, R79, R80, R81, R89, R106, R110, R111, R113, R123";"R_0805_2012Metric";24;"10k";;;
+60;"R6, R7";"R_0805_2012Metric";2;"60.4R";;;
+61;"R9, R10, R21, R22";"R_0805_2012Metric";4;"0R DNP";;;
+62;"R11, R13, R19, R20";"R_0805_2012Metric";4;"0R";;;
+63;"R12, R14, R58, R59, R60, R61, R62, R70, R76, R77, R86, R120";"R_0805_2012Metric";12;"470R";;;
+64;"R15, R16";"R_0805_2012Metric";2;"10k DNP";;;
+65;"R23, R24, R25, R26";"R_1206_3216Metric";4;"10k";;;
+66;"R28, R29, R53, R54";"R_0805_2012Metric";4;"33";;;
+67;"R30";"R_2512_6332Metric";1;"20m";;;
+68;"R36, R37, R38, R39, R42, R43, R44, R45";"R_1206_3216Metric";8;"18k";;;
+69;"R46, R47, R48, R49";"R_0805_2012Metric";4;"4.02k";;;
+70;"R50, R99, R100, R101, R102, R103, R104, R108, R109, R112";"R_0805_2012Metric";10;"100k";;;
+71;"R55, R56";"R_0805_2012Metric";2;"2k49";;;
+72;"R57, R121";"R_0805_2012Metric";2;"2k2";;;
+73;"R64, R65, R66, R82, R83, R87, R88";"R_0805_2012Metric";7;"12k";;;
+74;"R67, R68, R69, R84, R85";"R_0805_2012Metric";5;"20k";;;
+75;"R72";"R_0805_2012Metric";1;"47k";;;
+76;"R90";"R_0805_2012Metric";1;"5k6";;;
+77;"R91";"R_0805_2012Metric";1;"1M";;;
+78;"R105";"R_0805_2012Metric";1;"15k";;;
+79;"R107";"R_0805_2012Metric";1;"330k";;;
+80;"R114";"R_0805_2012Metric";1;"237k";;;
+81;"R115";"R_0805_2012Metric";1;"56k2";;;
+82;"R116";"R_0805_2012Metric";1;"162k";;;
+83;"R117";"R_0805_2012Metric";1;"53k6";;;
+84;"R118";"R_0805_2012Metric";1;"10k2";;;
+85;"R119";"R_0805_2012Metric";1;"13k";;;
+86;"R125";"R_0805_2012Metric";1;"2k";;;
+87;"R126, R131, R132";"R_0805_2012Metric";3;"RC0805FR-071ML";;;
+88;"R127, R128, R129, R130";"R_0805_2012Metric";4;"RC0805FR-07100KL";;;
+89;"U2";"SOIC-8_5.3x5.3mm_P1.27mm";1;"W25Q32JVSS";;;
+90;"U3";"SOIC-8_3.9x4.9mm_P1.27mm";1;"MCP2562-E-SN";;;
+91;"U4";"SOT-353_SC-70-5";1;"74AHC1G32";;;
+92;"U5";"LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y";1;"ADXL343";;;
+93;"U6";"SOT-23-6";1;"USBLC6-2SC6";;;
+94;"U8";"SOT-23-5";1;"TPS3823-33DBV";;;
+95;"U9";"SOT-353_SC-70-5";1;"74LVC1G00";;;
+96;"U10, U11";"SOIC-14_3.9x8.7mm_P1.27mm";2;"LMV324";;;
+97;"U12";"HTSSOP-28-1EP_4.4x9.7mm_P0.65mm_EP2.85x5.4mm_ThermalVias";1;"DRV8434A";;;
+98;"U13, U14";"TO-252-5_TabPin3";2;"BTF3050TE";;;
+99;"U15";"SOT-23-6";1;"LM74700-Q1";;;
+100;"U16";"HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm_ThermalVias";1;"TPS54360B-Q1";;;
+101;"U17";"SOT-223-3_TabPin2";1;"TPS7B6950-Q1";;;
+102;"U18";"SOT-353_SC-70-5";1;"74LVC1G125";;;
+103;"Y1";"Resonator_SMD_Murata_CSTCR_4.5x2x1.15mm";1;"CSTCR4M00G53-R0";;;
