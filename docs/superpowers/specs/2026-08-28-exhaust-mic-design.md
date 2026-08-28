@@ -48,13 +48,13 @@ gedrehtem Videomaterial synchronisieren lassen.
                                                                  ▼
 ┌─ Hauptplatine (unter Sitzbank) ─────────────────────────────────────────┐
 │                                                                          │
-│  CMC + Klemmung ─► PCM1861  ──I2S(Master)──►  ESP32-S3-WROOM-1-N8R2     │
+│  CMC + Klemmung ─► PCM1863  ──I2S(Master)──►  ESP32-S3-WROOM-1-N8R2     │
 │                    24 bit, PGA                 │                         │
 │                       ▲                        ├─ microSD (SDMMC 4 bit)  │
 │              24,576 MHz XO                     ├─ USB-C (nativ)          │
 │                                                ├─ DS3231SN + CR2032      │
 │  12 V ─ Schutz ─ Buck 4,2 V ─┬─ LDO 3V3_D ────┤   (I²C + 1 Hz SQW)      │
-│                              └─ LDO 3V3_A      ├─ TCAN1051 (optional)    │
+│                              └─ LDO 3V3_A      ├─ SN65HVD230 (optional)  │
 │                                                ├─ Sync-LED + Piezo       │
 │                                                └─ Taster REC / MARK      │
 └──────────────────────────────────────────────────────────────────────────┘
@@ -64,16 +64,20 @@ gedrehtem Videomaterial synchronisieren lassen.
 
 ## 3. Korrekturen gegenüber der ersten Auslegung
 
-Nach Auswertung der Originaldatenblätter sind drei Annahmen falsch gewesen. Die
+Nach Auswertung der Originaldatenblätter waren mehrere Annahmen falsch. Die
 Korrekturen sind in dieser Spec bereits eingearbeitet.
 
 | # | Annahme vorher | Datenblatt | Konsequenz |
 |---|---|---|---|
 | K1 | Mikrofon-VDD 3,3 V | **2,3–3,0 V**, typ. 2,75 V | Lokaler 2,8-V-LDO im Mikrofonkopf nötig |
 | K2 | Mikrofon treibt Kabel direkt | **Cload ≤ 100 pF**, Rload ≥ 25 kΩ | Buffer im Mikrofonkopf nötig, sonst Kabellänge auf ~1 m begrenzt |
-| K3 | PCM1861 diff. Vollausschlag 2,1 Vrms, SNR 103 dB, PGA 0…+32 dB in 0,5-dB-Schritten | **4,2 Vrms**, **SNR 110 dB**, PGA **−12…+12 dB in 1-dB-Schritten plus 20 dB und 32 dB** | Mehr Headroom und ~8 dB besserer Rauschabstand als angenommen; Gain-Raster gröber |
-| K4 | PCM1861 CMRR ~65 dB (Schätzung) | **56 dB** | Schlechter als geschätzt; wird durch niederohmig gepufferte symmetrische Übertragung kompensiert |
-| K5 | Mikrofon-AOP 133 dB SPL | **135 dB SPL @ 10 % THD**, 132 dB SPL @ 1 % THD | Auslegung auf 132 dB SPL Vollaussteuerung |
+| K3 | ADC-Baustein PCM1861 mit I²C-PGA | **PCM1861 ist pingesteuert** und bietet nur 0 / 12 / 32 dB, für beide Kanäle gemeinsam | Verletzt R3. Wechsel auf **PCM1863** — gleiche Familie, gleiches Gehäuse, Pins 1–18 identisch, I²C/SPI, PGA **−12…+32 dB in 0,5-dB-Schritten je Kanal** |
+| K4 | diff. Vollausschlag 2,1 Vrms, SNR 103 dB | **4,2 Vrms**, **SNR 110 dB** (PCM1861/63/65) | Mehr Headroom, ~8 dB besserer Rauschabstand als angenommen |
+| K5 | CMRR ~65 dB (Schätzung) | **56 dB** | Schlechter als geschätzt; wird durch niederohmig gepufferte symmetrische Übertragung kompensiert |
+| K6 | Mikrofon-AOP 133 dB SPL | **135 dB SPL @ 10 % THD**, 132 dB SPL @ 1 % THD | Auslegung auf 132 dB SPL Vollaussteuerung |
+| K8 | PCM1863 hat einen Reset-Pin | Die softwaregesteuerten PCM186x haben **keinen** Reset-Pin; Rücksetzen erfolgt über Register oder Power-Cycle | GPIO17 wird stattdessen als Interrupt-Eingang an GPIO1/INTA (Pin 21) geführt |
+| K9 | Abschaltung über `PWR_HOLD` am Buck-Enable | Der ESP32-S3 kommt im Deep-Sleep auf rund 20 µA, der LM5164 auf 10,5 µA | Die Abschaltlogik entfällt ersatzlos. Der Buck läuft dauerhaft mit einer Unterspannungsabschaltung bei 11,5 V, der ESP32 schläft. Spart Bauteile **und** beseitigt die Gefahr, dass sich das Gerät selbst aussperrt |
+| K7 | ESP32-S3 kann CAN-FD, Transceiver TCAN1051 | ESP32-S3 hat **TWAI = CAN 2.0B, kein FD**; TCAN1051 braucht 4,5–5,5 V VCC, die Platine führt nur 4,2 V und 3,3 V | Transceiver **SN65HVD230D** (3,3 V, bis 1 Mbit/s), passt zu TWAI |
 
 ---
 
@@ -105,7 +109,7 @@ Mikrofon sieht nur noch die ~5 pF Eingangskapazität des OPA2325.
 
 Zusätzlich präsentiert der Buffer dem Kabel eine sehr niedrige Quellimpedanz an beiden
 Zweigen. Da beide Zweige identisch getrieben werden, ist die Impedanzsymmetrie
-exzellent — eingekoppelte Störungen bleiben Gleichtakt und werden vom PCM1861
+exzellent — eingekoppelte Störungen bleiben Gleichtakt und werden vom PCM1863
 unterdrückt, trotz dessen nur 56 dB CMRR.
 
 Der lokale 2,8-V-LDO erfüllt K1 und verbessert gleichzeitig die Versorgungsentkopplung
@@ -144,32 +148,35 @@ Mikrofonempfindlichkeit −38 dBV @ 94 dB SPL = **12,6 mV/Pa differentiell**.
 | 132 dB (1 % THD) | 79,6 Pa | **1,003 V rms** |
 | 135 dB (10 % THD, AOP) | 112,5 Pa | 1,418 V rms |
 
-PCM1861 differentieller Vollausschlag: **4,2 Vrms** bei 0 dB PGA.
+PCM1863 differentieller Vollausschlag: **4,2 Vrms** bei 0 dB PGA.
 
 ### 5.2 Gain-Einstellung (Software, I²C)
 
+PGA-Bereich −12…+32 dB in 0,5-dB-Schritten, je Kanal getrennt (Register
+`PGA_VAL_CH1_L` / `PGA_VAL_CH1_R`).
+
 | Kanal | PGA | Vollausschlag | entspricht SPL |
 |---|---|---|---|
-| A — Endrohr | **+12 dB** | 1,055 Vrms | **132,4 dB SPL** |
-| B — Airbox | **+20 dB** | 0,420 Vrms | **124,4 dB SPL** |
+| A — Endrohr | **+12,5 dB** | 0,996 Vrms | **132,0 dB SPL** |
+| B — Airbox | **+20,0 dB** | 0,420 Vrms | **124,4 dB SPL** |
 
 Beide per I²C zur Laufzeit änderbar. Firmware implementiert zusätzlich eine
 Übersteuerungsanzeige und optional automatische Absenkung.
 
 ### 5.3 Rauschbudget
 
-A-bewertet, 20 Hz–20 kHz. PCM1861-Rauschmodell aus zwei Datenblattpunkten
+A-bewertet, 20 Hz–20 kHz. PCM1863-Rauschmodell aus zwei Datenblattpunkten
 (110 dB SNR @ 0 dB PGA, 90 dB SNR @ 32 dB PGA) → PGA-Eigenrauschen 3,33 µV,
 ADC-Kern 12,88 µV eingangsbezogen.
 
-| Beitrag | Kanal A (+12 dB) | Kanal B (+20 dB) |
+| Beitrag | Kanal A (+12,5 dB) | Kanal B (+20 dB) |
 |---|---|---|
 | Mikrofon (−111 dBV(A)) | 2,82 µV | 2,82 µV |
 | OPA2325-Buffer (2 Zweige) | 1,38 µV | 1,38 µV |
-| PCM1861 eingangsbezogen | 4,64 µV | 3,57 µV |
-| **Summe (RSS)** | **5,60 µV** | **4,75 µV** |
-| Dynamikumfang | 105,5 dB | 98,9 dB |
-| **Ersatzrauschpegel** | **26,9 dB(A) SPL** | **25,5 dB(A) SPL** |
+| PCM1863 eingangsbezogen | 4,52 µV | 3,57 µV |
+| **Summe (RSS)** | **5,50 µV** | **4,75 µV** |
+| Dynamikumfang | 105,2 dB | 98,9 dB |
+| **Ersatzrauschpegel** | **26,8 dB(A) SPL** | **25,5 dB(A) SPL** |
 
 Zum Vergleich: Eigenrauschen des Mikrofons allein entspricht 21,0 dB(A) SPL. Die
 Elektronik addiert also 4,5–6 dB. Da ein laufender Motor bei >70 dB(A) liegt, ist
@@ -182,10 +189,10 @@ Je Kanal, vom Stecker zum ADC:
 1. TVS-Diodenarray gegen ESD und Harnischfehler
 2. Gleichtaktdrossel (Audio-CMC, ~1 mH)
 3. 100 Ω Serie + 33 pF gegen AGND je Zweig — HF-Filter, Eckfrequenz ~48 MHz, audioneutral
-4. AC-Kopplung 1 µF (Mikrofon-VCM 1,3 V ≠ PCM1861-VCM)
-5. Bias auf PCM1861-VCM
+4. AC-Kopplung 1 µF (Mikrofon-VCM 1,3 V ≠ PCM1863-VCM)
+5. Bias auf PCM1863-VCM
 
-⚠️ **Bekannte Grenzwertverletzung:** PCM1861 hat 20 kΩ Eingangsimpedanz pro Pin, das
+⚠️ **Bekannte Grenzwertverletzung:** PCM1863 hat 20 kΩ Eingangsimpedanz pro Pin, das
 Mikrofon fordert Rload ≥ 25 kΩ. Durch den Buffer im Mikrofonkopf ist das entschärft —
 der Buffer treibt die 20 kΩ mühelos, das Mikrofon selbst sieht die 47 kΩ Lastwiderstände.
 
@@ -195,16 +202,18 @@ der Buffer treibt die 20 kΩ mühelos, das Mikrofon selbst sieht die 47 kΩ Last
 
 | Parameter | Wert |
 |---|---|
-| Baustein | **TI PCM1861** (TSSOP-30 oder VQFN-32) |
+| Baustein | **TI PCM1863** (TSSOP-30 DBT oder VQFN-32 RHB) |
 | Auflösung | 24 bit |
 | Abtastrate | 48 kHz Standard, 96 kHz optional |
 | Eingang | 2× differentiell, VINL1±/VINR1± |
 | SNR (diff., 0 dB PGA) | 110 dB typ, 97 dB min |
 | THD+N (diff., 0 dB PGA) | −93 dB typ |
-| Steuerung | I²C (softwaregesteuerte Variante) |
+| Steuerung | I²C, Adresse per Pin 25 (MS/AD); Pin 26 (MD0) low = I²C |
+| PGA | −12…+32 dB, 0,5-dB-Schritte, je Kanal getrennt |
+| Betriebstemperatur | −40…+125 °C |
 | Versorgung | AVDD/DVDD/IOVDD 3,3 V, AVDD-Strom 18 mA |
 
-**Taktkonzept:** PCM1861 arbeitet als **I2S-Master**. Ein externer 24,576-MHz-CMOS-
+**Taktkonzept:** PCM1863 arbeitet als **I2S-Master**. Ein externer 24,576-MHz-CMOS-
 Oszillator speist SCKI. Damit:
 
 - 48 kHz = 512 × fs ✓
@@ -231,16 +240,16 @@ UART, ADC1.
 | Funktion | GPIO | Anmerkung |
 |---|---|---|
 | SD_CLK / CMD / D0 / D1 / D2 / D3 | 14 / 13 / 12 / 11 / 10 / 9 | SDMMC 4 bit |
-| I2S BCK / LRCK / DIN | 5 / 6 / 7 | Slave-RX von PCM1861 |
-| I²C SDA / SCL | 8 / 18 | PCM1861 + DS3231 |
-| PCM1861 RST | 17 | |
+| I2S BCK / LRCK / DIN | 5 / 6 / 7 | Slave-RX von PCM1863 |
+| I²C SDA / SCL | 8 / 18 | PCM1863 + DS3231 |
+| PCM1863 Interrupt (GPIO1/INTA) | 17 | |
 | DS3231 1 Hz SQW | 15 | Interrupt, Sample-Latch |
-| CAN TX / RX | 4 / 16 | TWAI, optional bestückt |
+| CAN TX / RX | 4 / 16 | TWAI = CAN 2.0B bis 1 Mbit/s, **kein CAN-FD**; optional bestückt |
 | IGN-Sense / U-Batt | 1 / 2 | ADC1_CH0 / CH1 |
 | Taster REC / MARK | 21 / 47 | |
 | LED REC / ERR | 48 / 38 | |
 | Sync-Blitz-LED / Piezo | 39 / 40 | Videosynchronisation |
-| PWR_HOLD | 41 | hält Buck-EN |
+| PGOOD des Buck-Reglers | 41 | Eingang |
 | GPS UART TX / RX / PPS | 35 / 36 / 37 | Header, unbestückt |
 | USB D− / D+ | 19 / 20 | fest verdrahtet |
 | UART0 TX / RX | 43 / 44 | Konsole, auf Testpads |
@@ -309,18 +318,30 @@ Position dazu. Kostet jetzt nur den Footprint.
 ## 9. Stromversorgung
 
 ```
-+12V ─ Sicherung 2 A ─ P-FET Verpolschutz ─ TVS SMBJ36A ─ π-Filter
-     └─ LMR36015 Buck (60 V Eingang) ──► 4,2 V
++12V ─ Sicherung 2 A ─ P-FET Verpolschutz ─ TVS SMBJ36A
+     └─ LM5164 Buck (100 V Eingang, synchron, 10,5 µA Ruhestrom) ──► 4,6 V
              │
-             ├─ Schottky ◄─ USB-C VBUS (5 V, Programmierung/Download)
+             ├─ Schottky-Verodung mit USB-C VBUS (Programmierung/Download)
              │
-             ├─ AP2114H-3.3 (SOT-223) ──► +3V3_D  ESP32, SD, PCM1861 DVDD/IOVDD, XO
-             └─ TPS7A2033 (rauscharm)  ──► +3V3_A  PCM1861 AVDD, 2× Mikrofonkopf
+             ├─ TLV1117LV33 (SOT-223, 1 A)  ──► +3V3_D  ESP32, SD, PCM1863 DVDD/IOVDD, XO
+             └─ TPS7A2033 (rauscharm)       ──► +3V3_A  PCM1863 AVDD, 2× Mikrofonkopf
 ```
 
-**Warum 4,2 V Zwischenspannung statt 5 V:** senkt die Verlustleistung im
-Digital-LDO von 0,85 W auf 0,45 W bei 500 mA WiFi-Spitze. SOT-223 mit Kupferfläche
-bleibt damit im grünen Bereich.
+**Warum LM5164 statt LMR36015:** 100 V Eingangsfestigkeit statt 60 V, damit ist der
+Load-Dump auch ohne perfekt greifende TVS unkritisch. Ruhestrom 10,5 µA — Voraussetzung
+für den Dauerplus-Betrieb.
+
+**Warum 4,6 V Zwischenspannung:** nach den beiden Verodungsdioden bleiben 4,3 V. Der
+TLV1117LV33 braucht bei 1 A nur 455 mV Dropout, es bleibt also knapp 1 V Reserve.
+Gleichzeitig ist die Verlustleistung mit 1,0 V × 0,5 A = 0,5 W im SOT-223 beherrschbar.
+
+⚠️ **Der LM5164 ist ein COT-Regler und braucht mindestens 20 mV Rippel am
+FB-Knoten**, sonst schaltet er in Bursts. Umgesetzt als Type-2 nach Datenblatt
+Tabelle 6-1: R7 = 0,1 Ω in Reihe zu den Ausgangskondensatoren, C5 = 100 pF parallel
+zum oberen FB-Widerstand. Beide Werte sind am Aufbau zu verifizieren.
+
+Schaltfrequenz nach Datenblattformel: f = V_out × 2500 / R_RON = 4,6 × 2500 / 28,7 kΩ
+= **401 kHz**.
 
 **Warum ein Buck plus LDOs statt zweier Bucks:** ein einziger Schaltregler, dessen
 Störungen von beiden LDOs weggefiltert werden. Der Analogzweig bekommt einen
@@ -332,25 +353,31 @@ rauscharmen LDO mit hoher PSRR.
 |---|---|---|
 | ESP32-S3 (WiFi aus) | 60 mA | 355 mA (WiFi TX) |
 | microSD Schreiben | 40 mA | 100 mA |
-| PCM1861 (AVDD + DVDD) | 28 mA | 30 mA |
+| PCM1863 (AVDD + DVDD) | 28 mA | 30 mA |
 | Oszillator 24,576 MHz | 15 mA | 20 mA |
 | 2× Mikrofonkopf | 3,2 mA | 4 mA |
-| TCAN1051 (optional) | 5 mA | 70 mA |
+| SN65HVD230 (optional) | 10 mA | 60 mA |
 | **Summe @3,3 V** | **~150 mA** | ~580 mA |
 | **Eingangsstrom @12 V** | ~55 mA | ~210 mA |
-| Ruhezustand (Buck gesperrt) | <50 µA | |
+| Ruhezustand (ESP32 im Deep-Sleep) | ~65 µA | |
 
 ### 9.2 Zündungslogik
 
-Das Gerät hängt an **Dauerplus**, `IGN` dient nur als Sense-Eingang über Teiler und
-Klemmung auf ADC1_CH0.
+Das Gerät hängt an **Dauerplus**, `IGN` dient nur als Sense-Eingang.
 
-1. Zündung an → IGN steigt → Buck-EN über Pullup → System startet
-2. ESP32 zieht `PWR_HOLD` (GPIO41) high und hält Buck-EN selbst
-3. Zündung aus → IGN fällt → Firmware schließt WAV und CSV sauber
-4. Nach ~5 s gibt die Firmware `PWR_HOLD` frei → Buck sperrt → <50 µA
+Der Buck läuft dauerhaft; abgeschaltet wird über den Schlafzustand des ESP32, nicht
+über die Versorgung. Das spart die gesamte Halte- und Abschaltlogik und kann das
+Gerät nicht aussperren.
 
-Damit wird die Fahrzeugbatterie nicht belastet und keine Datei bricht ab.
+1. Zündung aus → IGN fällt → Firmware schließt WAV und CSV sauber
+2. ESP32 geht in Deep-Sleep, Weckquelle ist die IGN-Flanke auf GPIO1 (RTC-fähig)
+3. Zündung an → IGN steigt → ESP32 wacht auf und nimmt den Betrieb wieder auf
+
+**Unterspannungsabschaltung:** Der UVLO-Teiler R2/R3 (1 M / 150 k) sperrt den Buck
+unterhalb von rund 11,5 V. Damit kann das Gerät die Fahrzeugbatterie nicht tiefentladen.
+
+Ruhestrom im Schlaf: LM5164 10,5 µA + ESP32-S3 Deep-Sleep ~20 µA + Spannungsteiler
+22 µA + LDOs und RTC ~10 µA ≈ **65 µA**, also rund 1,6 mAh pro Tag.
 
 ---
 
@@ -374,14 +401,14 @@ Damit wird die Fahrzeugbatterie nicht belastet und keine Datei bricht ab.
 | Risiko | Maßnahme |
 |---|---|
 | Zündspulen-Transienten auf Mikrofonkabel | Symmetrische Übertragung, niederohmig gepuffert, Gesamtschirm, Gleichtaktdrossel, TVS |
-| PCM1861-CMRR nur 56 dB | Wird durch obige Maßnahmen aufgefangen. Rückfalloption: INA1650-Empfänger (90 dB CMRR) in Rev. B, ~+5 € inkl. 5-V-Schiene |
+| PCM1863-CMRR nur 56 dB | Wird durch obige Maßnahmen aufgefangen. Rückfalloption: INA1650-Empfänger (90 dB CMRR) in Rev. B, ~+5 € inkl. 5-V-Schiene |
 | Load-Dump am Bordnetz | 60-V-Buck, TVS SMBJ36A, Verpolschutz-P-FET |
 | **WiFi-Sender neben 5-µV-Analogpfad** | Funk in Firmware hart abgeschaltet während Aufnahme. Antenne an gegenüberliegender Platinenkante, durchgehende Massefläche, Analogteil auf eigener AGND-Insel |
 | Vibration | Gummi-entkoppelte Gehäusemontage, keine schweren Bauteile ohne Klebung |
 | Hitze am Mikrofonkopf A | Hitzeschild, Abstandshalter, 85-°C-Grenze des Mikrofons einhalten |
 | Feuchtigkeit | Gehäuse IP65+, gedichtete Steckverbinder, Mikrofonkapsel selbst IP57 |
 
-**Layout:** 4 Lagen. Signal/AGND-Insel unter Analogteil und PCM1861, sternförmig am
+**Layout:** 4 Lagen. Signal/AGND-Insel unter Analogteil und PCM1863, sternförmig am
 ADC mit DGND verbunden. Schaltregler räumlich getrennt, Schleifenfläche minimal.
 
 ---
@@ -396,12 +423,12 @@ Nur Anforderungen, keine Implementierung — diese folgt in einem eigenen Plan.
 | F2 | Schreiben nach SD mit vorallokierter Datei; WAV-Header beim Schließen gepatcht — Stromausfall kostet maximal einen Block |
 | F3 | BWF/BEXT-Chunk mit RTC-Zeit beim Dateianlegen |
 | F4 | 1-Hz-SQW-Interrupt latcht Samplezähler, Ausgabe in Sidecar-CSV |
-| F5 | PCM1861-Konfiguration per I²C: PGA je Kanal, differentieller Eingangsmodus, Abtastrate |
+| F5 | PCM1863-Konfiguration per I²C: PGA je Kanal, differentieller Eingangsmodus (VIN1P/M und VIN2P/M), Master-Mode, Abtastrate |
 | F6 | Übersteuerungserkennung mit LED-Anzeige, optional automatische Gain-Absenkung |
 | F7 | Zündungs-Zustandsautomat inklusive sauberem Herunterfahren und `PWR_HOLD`-Freigabe |
 | F8 | Sync-Marker: LED-Blitz plus Piezo, Samplenummer protokolliert |
 | F9 | WiFi ausschließlich außerhalb der Aufnahme; NTP-Abgleich der RTC |
-| F10 | CAN-Empfang, Frames mit Samplenummer in Sidecar-CSV (nur bei bestücktem TCAN1051) |
+| F10 | CAN-Empfang über TWAI, Frames mit Samplenummer in Sidecar-CSV (nur bei bestücktem SN65HVD230) |
 | F11 | Download über USB-MSC oder WiFi |
 
 ---
@@ -413,21 +440,21 @@ Nur Anforderungen, keine Implementierung — diese folgt in einem eigenen Plan.
 | Position | € |
 |---|---|
 | ESP32-S3-WROOM-1-N8R2 | 4,00 |
-| PCM1861 | 4,00 |
+| PCM1863 | 5,00 |
 | Oszillator 24,576 MHz | 0,80 |
 | DS3231SN + CR2032-Halter | 2,50 |
 | LMR36015 + Induktivität + Passive | 3,50 |
 | 2× LDO | 1,50 |
 | Schutzbeschaltung (P-FET, TVS, Sicherung) | 1,50 |
-| TCAN1051 (optional) | 1,50 |
+| SN65HVD230D (optional) | 1,20 |
 | microSD-Sockel, USB-C, ESD | 1,80 |
 | Sync-LED, Piezo, Taster, LEDs | 1,50 |
 | Passive, CMC, Stecker J1–J3 | 9,00 |
 | Leiterplatte 4 Lagen (5 Stück) | 2,50 |
-| **Hauptplatine gesamt** | **~34** |
+| **Hauptplatine gesamt** | **~35** |
 | 2× Mikrofonkopf (Mikrofon 2,50 + LDO + OPA2325 + Passive + PCB) | ~12 |
 | Kabel, Alu-Röhrchen, Windschutz, Gehäuse | ~30 |
-| **Gesamt** | **~76** |
+| **Gesamt** | **~77** |
 
 Referenz Teensy-4.1-Variante: ~110 €.
 
@@ -437,11 +464,12 @@ Referenz Teensy-4.1-Variante: ~110 €.
 
 | # | Punkt | Umgang |
 |---|---|---|
-| O1 | PCM1861-Preis und Verfügbarkeit nicht verifiziert | Vor Bestellung bei LCSC/Mouser/DigiKey prüfen |
-| O2 | Lokale KiCad-Installation ist 7.0.11, Repo-Dateien sind KiCad-10-Format | Schaltplan wird im KiCad-7-Format erzeugt, damit lokal per `kicad-cli` verifizierbar. KiCad 10 öffnet und migriert das problemlos |
+| O1 | PCM1863-Preis und Verfügbarkeit nicht verifiziert | Vor Bestellung bei LCSC/Mouser/DigiKey prüfen. PCM1863 ist teurer und schlechter verfügbar als PCM1861 |
+| O2 | Lokale KiCad-Installation ist 7.0.11, die übrigen Repo-Dateien sind KiCad-10-Format | Schaltplan wird im KiCad-7-Format (20230121) erzeugt, damit er lokal per `kicad-cli` prüfbar ist. KiCad 10 öffnet und migriert ihn beim ersten Speichern |
+| O7 | Werte für R7 (Rippel) und C5 (Feedforward) sind gerechnet, nicht gemessen | Am ersten Aufbau Schaltverhalten des LM5164 am Oszilloskop prüfen |
 | O3 | CMRR 56 dB in realer Zündumgebung unerprobt | Nach Aufbau messen. Rückfall: INA1650 in Rev. B |
 | O4 | Zulässige Einbauposition Mikrofon A bezüglich 85 °C | Vor Endmontage mit Thermoelement ausmessen |
-| O5 | Kein Symbol/Footprint für IM73A135V01, PCM1861, ESP32-S3-WROOM-1 im Repo | Projektlokale Bibliothek anlegen |
+| O5 | Kein Symbol/Footprint für IM73A135V01, PCM1863, LMR36015, LDOs im Repo | Projektlokale Bibliothek `lib/exhaust-mic.kicad_sym`. ESP32-S3-WROOM-1, DS3231M, OPA2325, SN65HVD230, Micro-SD und USB-C kommen aus den KiCad-Standardbibliotheken |
 | O6 | 96-kHz-Betrieb erhöht SD-Durchsatz auf 576 kB/s | Unkritisch für SDMMC 4 bit, aber verifizieren |
 
 ---
@@ -454,7 +482,7 @@ Referenz Teensy-4.1-Variante: ~110 €.
 | Schaltplan | PDF-Plot, visuelle Prüfung aller Blätter |
 | Schaltplan | Pinbelegung ESP32-S3 gegen Abschnitt 7.1 abgleichen; Strapping-Pins prüfen |
 | Bestückung | Spannungen aller Schienen vor Einsetzen des Moduls |
-| Inbetriebnahme | I²C-Scan findet PCM1861 und DS3231 |
+| Inbetriebnahme | I²C-Scan findet PCM1863 und DS3231 |
 | Audio | Sinus über Kalibrator, Pegelplan gegen Abschnitt 5.2 verifizieren |
 | Audio | Rauschmessung bei abgeschlossenem Eingang, Vergleich mit Abschnitt 5.3 |
 | EMV | Aufnahme bei laufendem Motor, Zündticken im Spektrum suchen |
