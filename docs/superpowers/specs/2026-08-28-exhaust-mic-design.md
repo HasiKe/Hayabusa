@@ -77,6 +77,13 @@ Korrekturen sind in dieser Spec bereits eingearbeitet.
 | K6 | Mikrofon-AOP 133 dB SPL | **135 dB SPL @ 10 % THD**, 132 dB SPL @ 1 % THD | Auslegung auf 132 dB SPL Vollaussteuerung |
 | K8 | PCM1863 hat einen Reset-Pin | Die softwaregesteuerten PCM186x haben **keinen** Reset-Pin; Rücksetzen erfolgt über Register oder Power-Cycle | GPIO17 wird stattdessen als Interrupt-Eingang an GPIO1/INTA (Pin 21) geführt |
 | K9 | Abschaltung über `PWR_HOLD` am Buck-Enable | Der ESP32-S3 kommt im Deep-Sleep auf rund 20 µA, der LM5164 auf 10,5 µA | Die Abschaltlogik entfällt ersatzlos. Der Buck läuft dauerhaft mit einer Unterspannungsabschaltung bei 11,5 V, der ESP32 schläft. Spart Bauteile **und** beseitigt die Gefahr, dass sich das Gerät selbst aussperrt |
+| K10 | Superseal 1.0 gibt es als 5- und 6-poligen Platinenheader | Die Baureihe hat **nur Platinenheader mit 26, 34 und 60 Wegen**. Die kleinen 1- bis 6-poligen Superseal-1.0-Steckverbinder sind reine Wire-to-Wire-Gehäuse | J1/J2/J3 sind nicht platinenmontierbar. Auf der Platine sitzen jetzt **JST XH** (liegend, verriegelnd); Superseal 1.0 bleibt als Kabelsteckverbinder am Kabelbaum, wenige Zentimeter hinter der Kabeldurchführung |
+| K11 | PCM1863 im TSSOP-30, 4,4 × 9,7 mm, 0,65 mm Raster | Datenblatt SLAS831D nennt **7,80 × 4,40 mm** für das DBT-Gehäuse, also **0,5 mm Raster** (JEDEC MO-153 BC-1) | Der bisher eingetragene Footprint `TSSOP-30_4.4x9.7mm_P0.65mm` existiert nicht — auch nicht in der offiziellen KiCad-Bibliothek. Richtig ist `TSSOP-30_4.4x7.8mm_P0.5mm` |
+| K12 | microSD-Symbol `Micro_SD_Card_Det1` passt zum DM3D-SF | Bei Det1 heißt **Pin 10 SHIELD**, im Footprint des DM3D-SF liegt Pad 10 aber auf einem Kontakt des Kartenschalters. Der Metallrahmen sitzt auf **Pad 11** | Der Rahmen wäre unverbunden geblieben. Symbol auf `Micro_SD_Card_Det2` gewechselt (9 = DET_B, 10 = DET_A, 11 = SHIELD), Rahmen liegt jetzt auf Masse |
+| K13 | CR2032-Halter für die Uhrenstützung | Der DS3231 zieht typisch 0,84 µA; ein CR1220 mit 40 mAh trägt rechnerisch über fünf Jahre, und die Platine hängt ohnehin am Bordnetz | Halter Keystone 3034 (24 × 21 mm) durch Keystone 3000 (20 × 14 mm) ersetzt — spart rund 210 mm² auf einer Platine, bei der die Fläche knapp ist |
+| K14 | R5 im Mikrofonkopf trennt Schirm und Masse, solange er unbestückt bleibt | Kabelmasse und Schirm liegen im Mikrofonkopf ohnehin auf demselben Knoten, und KiCad führt unbestückte Bauteile in der Netzliste weiterhin als Verbindung | R5 war wirkungslos und die Notiz daneben falsch — entfernt. Der Schirm liegt bewusst beidseitig auf Masse, Gleichtaktanteile fängt die Drossel auf der Hauptplatine ab |
+| K15 | Piezo als 12,5-mm-Durchsteckbauteil (`Buzzer_12x9.5RM7.6`) | Auf der fertig bestückten Platine gibt es **keine einzige Position**, an der seine Drahtanschlüsse nicht auf der Gegenseite auf Pads treffen — alle rund 700 Rasterpunkte durchprobiert | **Murata PKMCS0909E** (SMD, 10,6 × 9,6 mm). Etwas leiser, für Sync-Ton und Bedienrückmeldung ausreichend |
+| K16 | Durchsteckpads belegen nur ihre eigene Bestückungsseite | Sie ragen durch die Platine. Bordnetzstecker J1, GPS-Leiste J6 und USB-Buchse J4 standen über rückseitigen Bauteilen | Vier echte Kurzschlüsse, u. a. GPS_PPS gegen Masse an der Knopfzelle. Gefunden erst von `kicad-cli pcb drc`; die eigene Prüfung verglich nur gleiche Seiten und wurde entsprechend erweitert |
 | K7 | ESP32-S3 kann CAN-FD, Transceiver TCAN1051 | ESP32-S3 hat **TWAI = CAN 2.0B, kein FD**; TCAN1051 braucht 4,5–5,5 V VCC, die Platine führt nur 4,2 V und 3,3 V | Transceiver **SN65HVD230D** (3,3 V, bis 1 Mbit/s), passt zu TWAI |
 
 ---
@@ -118,8 +125,13 @@ Der lokale 2,8-V-LDO erfüllt K1 und verbessert gleichzeitig die Versorgungsentk
 ### 4.3 Kabel und Stecker
 
 - 4 Adern + Gesamtschirm, 2× Twisted Pair: `3V3` / `GND`, `OUT+` / `OUT−`
-- Schirm nur hauptplatinenseitig auf GND (kein Brummschleife)
-- Steckverbinder: **TE Superseal 1.0, 5-polig** (Pin 5 = Schirm)
+- Schirm **beidseitig** auf Masse. Im Mikrofonkopf liegen Kabelmasse und
+  Schirm auf einem Knoten (siehe K14), auf der Hauptplatine ebenso. Für die
+  Gleichtaktunterdrückung sorgt die Drossel L2/L3, nicht die Schirmführung
+- Am Mikrofonkopf keine Steckverbindung: die Adern werden direkt in
+  Lötpads mit Zugentlastung eingelötet und der Kopf vergossen
+- Trennstelle im Kabelbaum: **TE Superseal 1.0, 5-polig** (Wire-to-Wire),
+  wenige Zentimeter hinter der Gehäusedurchführung
 - Länge: bis 3 m unkritisch dank Buffer
 
 ### 4.4 Mechanik und Temperatur
@@ -385,14 +397,18 @@ Ruhestrom im Schlaf: LM5164 10,5 µA + ESP32-S3 Deep-Sleep ~20 µA + Spannungste
 
 | Ref | Typ | Belegung |
 |---|---|---|
-| J1 | TE Superseal 1.0, 6-polig | +12V, GND, IGN, CANH, CANL, EXT_BTN |
-| J2 | TE Superseal 1.0, 5-polig | Mikrofon A: 3V3, GND, OUT+, OUT−, Schirm |
-| J3 | TE Superseal 1.0, 5-polig | Mikrofon B: identisch |
+| J1 | JST XH, 6-polig, liegend | +12V, GND, IGN, CANH, CANL, EXT_BTN |
+| J2 | JST XH, 5-polig, liegend | Mikrofon A: 3V3, GND, OUT+, OUT−, Schirm |
+| J3 | JST XH, 5-polig, liegend | Mikrofon B: identisch |
 | J4 | USB-C, 16-polig | Programmierung, Datendownload |
 | J5 | microSD Push-Push | Platinenkante |
 | J6 | Stiftleiste 5-polig, 2,54 mm | GPS: TX, RX, PPS, 3V3, GND — unbestückt |
 | J7 | Stiftleiste 4-polig, 2,54 mm | I²C-Erweiterung: SDA, SCL, 3V3, GND |
-| BT1 | CR2032-Halter | RTC-Backup |
+| BT1 | CR1220-Halter (Keystone 3000) | RTC-Backup, Rückseite |
+
+Die Dichtheit übernimmt das Gehäuse, nicht die Platinensteckverbinder
+(siehe K10): IP67-Kasten mit Kabelverschraubungen, dahinter kurze Pigtails
+auf die JST-Stecker. Die Trennstellen zum Kabelbaum sind Superseal 1.0.
 
 ---
 
@@ -465,7 +481,11 @@ Referenz Teensy-4.1-Variante: ~110 €.
 | # | Punkt | Umgang |
 |---|---|---|
 | O1 | PCM1863-Preis und Verfügbarkeit nicht verifiziert | Vor Bestellung bei LCSC/Mouser/DigiKey prüfen. PCM1863 ist teurer und schlechter verfügbar als PCM1861 |
-| O2 | Lokale KiCad-Installation ist 7.0.11, die übrigen Repo-Dateien sind KiCad-10-Format | Schaltplan wird im KiCad-7-Format (20230121) erzeugt, damit er lokal per `kicad-cli` prüfbar ist. KiCad 10 öffnet und migriert ihn beim ersten Speichern |
+| O2 | ~~Lokale KiCad-Installation ist 7.0.11~~ — seit 2026-08-31 ist KiCad 10.0.6 installiert | Erledigt. Generator erzeugt weiterhin KiCad-7-Format, `kicad-cli sch upgrade` hebt es danach auf v10. Damit stehen erstmals `sch erc` und `pcb drc --schematic-parity` zur Verfügung |
+| O11 | KiCad hält die Schaltpläne im Speicher und schreibt sie beim Speichern zurück | Einmal wurden so alle Generatorkorrekturen überschrieben. Vor `build_main.py` KiCad schließen, danach neu öffnen |
+| O8 | Der Buck-Schaltknoten (U1 SW → L1) liegt nicht auf einer Fläche und wird vom Autorouter in Standardbreite verlegt | Nach dem Routen gezielt verbreitert, siehe `route.py widen_nets()`. Vor Fertigung im Layout ansehen: kurz und schmalflächig halten, nicht unter die Analogseite ziehen |
+| O9 | Die Antenne des WROOM-1 ragt 6 mm über die linke Platinenkante | Gehäuse muss dort ausgespart und metallfrei sein. Bei einem Metallgehäuse stattdessen ESP32-S3-WROOM-1**U** mit externer Antenne bestücken — pinkompatibel |
+| O10 | Autorouter-Ergebnis ist nicht handoptimiert | Differenzpaare A_P/A_N und B_P/B_N sowie USB D+/D− sind nicht längengleich geführt. Für 48 kHz Audio und USB 2.0 Full Speed unkritisch, vor Rev. B aber nachsehen |
 | O7 | Werte für R7 (Rippel) und C5 (Feedforward) sind gerechnet, nicht gemessen | Am ersten Aufbau Schaltverhalten des LM5164 am Oszilloskop prüfen |
 | O3 | CMRR 56 dB in realer Zündumgebung unerprobt | Nach Aufbau messen. Rückfall: INA1650 in Rev. B |
 | O4 | Zulässige Einbauposition Mikrofon A bezüglich 85 °C | Vor Endmontage mit Thermoelement ausmessen |
@@ -481,6 +501,13 @@ Referenz Teensy-4.1-Variante: ~110 €.
 | Schaltplan | `kicad-cli sch export netlist` — Parsebarkeit und Netzliste; manuelle Netzlistendurchsicht gegen diese Spec |
 | Schaltplan | PDF-Plot, visuelle Prüfung aller Blätter |
 | Schaltplan | Pinbelegung ESP32-S3 gegen Abschnitt 7.1 abgleichen; Strapping-Pins prüfen |
+| Layout | `build_pcb.py` — Courtyard-Überschneidungen, Teile über Kontur oder Bohrung, Pads ohne Netz |
+| Layout | `connectivity_report()` — getrennte Kupferinseln je Netz; Sollwert null |
+| Layout | `drc_report()` — Abstände Kupfer/Kupfer und Kupfer/Kante; Sollwert null bei 0,15 mm |
+| Layout | Konturprüfung: jeder Endpunkt auf Edge.Cuts gehört zu genau zwei Elementen |
+| Schaltplan | `kicad-cli sch erc --severity-error` — seit KiCad 10 verfügbar, Sollwert null |
+| Layout | `kicad-cli pcb drc --severity-error --schematic-parity` — prüft zusätzlich, ob Platine und Schaltplan noch zusammenpassen |
+| Fertigung | Gerber in einem Betrachter gegenlesen, besonders Bohrbild und Lagenzuordnung |
 | Bestückung | Spannungen aller Schienen vor Einsetzen des Moduls |
 | Inbetriebnahme | I²C-Scan findet PCM1863 und DS3231 |
 | Audio | Sinus über Kalibrator, Pegelplan gegen Abschnitt 5.2 verifizieren |
@@ -497,5 +524,136 @@ Referenz Teensy-4.1-Variante: ~110 €.
 3. Hauptplatine, hierarchisch: Power → Analog → ADC → MCU → I/O
 4. Netzliste und PDF verifizieren
 5. BOM mit echten Distributorpreisen
-6. PCB-Layout (eigener Plan)
-7. Firmware (eigener Plan)
+6. PCB-Layout — erledigt, siehe Abschnitt 17
+7. Gehäuse und Kabelbaum (eigener Plan)
+8. Firmware (eigener Plan)
+
+---
+
+## 17. Layout
+
+### 17.1 Abmessungen und Lagenaufbau
+
+| | |
+|---|---|
+| Hauptplatine | 72 × 55 mm, vier Lagen, 1,6 mm |
+| Mikrofonkopf | 22 × 40 mm, zwei Lagen, 2× identisch |
+| Befestigung | 4× M2,5 in den Ecken der Hauptplatine, 2× M2 im Kopf |
+| Leiterbahn | 0,18 mm Grundbreite, 0,15 mm Mindestabstand |
+| Durchkontaktierung | 0,5 mm Pad, 0,25 mm Bohrung |
+| Mindestbohrung | 0,2 mm (das ESP32-Modul bringt in seinem Wärmepad 0,2-mm-Vias mit) |
+
+Die Netzklasse ist bewusst enger als KiCads Vorgabe (0,2/0,2 mm, 0,6/0,3-mm-Via).
+Mit den Vorgabewerten bleiben rund ein Dutzend Verbindungen offen — die
+Steckerreihen und das Funkmodul lassen dem Autorouter zu wenig Luft. 0,18/0,15 mm
+liegt weit über dem, was JLCPCB und PCBWay können (0,127 mm), und kostet keinen
+Aufpreis. Bordnetz-, Schalt- und Versorgungsknoten werden nach dem Routen auf
+0,4 mm verbreitert, soweit der Platz reicht.
+
+Lagenbelegung der Hauptplatine:
+
+| Lage | Inhalt |
+|---|---|
+| F.Cu | Signale und Bestückung |
+| In1.Cu | **durchgehende Massefläche**, nicht aufgetrennt und nicht beroutet |
+| In2.Cu | Signale |
+| B.Cu | Signale und Bestückung |
+
+Auf F.Cu und B.Cu liegen ebenfalls Masseflächen — sie binden die
+Masse-Pads lokal an. Ein Versuch ohne sie ließ 69 statt 12 Verbindungen
+offen: jedes Masse-Pad braucht dann eine eigene Durchkontaktierung, und die
+setzt der Autorouter nicht. Beide sind auf **automatische Inselentfernung**
+gestellt. Die Leiterbahnen zerlegen sie in Stücke; ohne Anbindung sind das
+schwebende Kupferflächen — elektrisch nutzlos, als Antenne schädlich. Die
+Verbindung zur durchgehenden Fläche auf In1 stellen Nähvias im 2,5-mm-Raster
+her (`stitch.py vernaehen`), was nebenbei die Impedanz des Rückstrompfads
+senkt.
+
+In2 trug zuerst Versorgungsinseln für +3V3A und +3V3D. Das kostet die dritte
+Verdrahtungslage, und der Autorouter wich daraufhin auf die Massefläche aus.
+Jetzt läuft die Versorgung als Leiterbahn und wird nachträglich verbreitert —
+bei rund 150 mA Gesamtstrom trägt das mühelos, und die Massefläche bleibt
+ganz.
+
+Die Masse bleibt bewusst ungeteilt. Eine Trennung zwischen Analog- und
+Digitalmasse bringt hier nichts, weil der Rückstrom dann um den Schlitz
+herum muss und genau die Schleife aufspannt, die man vermeiden will. Die
+Trennung passiert stattdessen über die Anordnung: Analogseite und
+Schaltregler liegen räumlich auseinander, ihre Rückströme kreuzen sich nicht.
+
+⚠️ Das gilt nur, wenn der Autorouter die Lage in Ruhe lässt. KiCad
+exportiert im Specctra-DSN **alle** Kupferlagen als `signal`; freerouting
+hatte daraufhin 140 Segmente aus 30 Netzen quer über In1 gelegt —
+USB-Datenleitungen, I²S-Takt, I²C. Jede davon schlitzt die Fläche auf. Der
+DSN-Export in `route.py` schreibt In1 deshalb auf `(type power)` um. In2
+bleibt beroutbar: dort liegen ohnehin nur Versorgungsinseln, und Signale
+dort haben In1 als Bezugsfläche direkt darüber.
+
+### 17.2 Aufteilung
+
+    y  0..14   Mikrofonstecker J2/J3 links, USB-C rechts, Stiftleisten dazwischen
+    y 14..28   Gleichtaktdrosseln, Klemmdioden, Koppelglieder, PCM1863,
+               Analog-LDO U3; microSD am rechten Rand
+    y 28..40   ESP32-S3 links (Antenne über die linke Kante), LM5164 mit
+               Speicherdrossel rechts, CAN-Transceiver in der Mitte
+    y 40..55   Uhr DS3231, Digital-LDO U2, Bordnetzstecker J1 rechts unten,
+               Leuchtdioden an der Unterkante
+
+Auf der Rückseite sitzen Knopfzelle, Piezo, die vier Taster und der größte
+Teil der Abblockung — jeweils unter dem zugehörigen Baustein. Beidseitige
+Bestückung ist bei dieser Teilezahl unvermeidlich: die Courtyard-Fläche
+aller Bauteile beträgt rund 3250 mm², eine Seite hat 3960 mm².
+
+### 17.3 Zwei Punkte, die beim Aufbau zählen
+
+**Die Antenne des WROOM-1 ragt 6 mm über die linke Kante.** Der Footprint
+verlangt sonst eine Sperrfläche von 21 × 48 mm mitten auf der Platine — mehr,
+als hier zur Verfügung steht. Das Gehäuse muss an dieser Stelle ausgespart
+und metallfrei sein. Bei einem Metallgehäuse stattdessen den ESP32-S3-WROOM-1**U**
+mit externer Antenne bestücken, der ist pinkompatibel.
+
+**Die Versorgungsinseln folgen der Bestückung, nicht umgekehrt.** Beim ersten
+Entwurf lagen sie nach Augenmaß auf In2 — mit dem Ergebnis, dass von den neun
++4V6-Pads kein einziges auf seiner eigenen Insel lag und der Autorouter alles
+als Leiterbahn verlegen musste. Deshalb sitzt der Analog-LDO U3 jetzt im
+Analogband statt beim Buck-Ausgang, der Digital-LDO U2 unten rechts bei J1,
+und die Inseln decken nachweislich alle Pads ihres Netzes ab (8/8 und 37/37).
++4V6 und VBAT12 haben nur je neun Pads und laufen als verbreiterte
+Leiterbahnen; eine eigene Insel dafür würde den beiden großen Netzen die
+Fläche wegnehmen.
+
+**Der Regelkreis des LM5164 sitzt unter dem Regler.** Auch das war im ersten
+Entwurf falsch: Bootstrap-Kondensator C4 und der Rückkopplungsteiler R5/R6
+landeten in einer Sammelregion rund 20 mm entfernt. Bei einem Regler mit
+konstanter Einschaltzeit ist das nicht tragbar — C4 gehört unmittelbar an
+BST/SW, der Teiler kurz an FB. Beide liegen jetzt auf der Rückseite direkt
+unter U1; der Piezo, der dort vorher saß, ist nach oben links gewandert.
+D3/D4 führen den vollen Laststrom und stehen neben der Speicherdrossel.
+
+### 17.4 Bestückungsdruck
+
+Die Referenzbezeichner der Kleinteile stehen nur auf der Fab-Lage, nicht im
+Bestückungsdruck. Zwischen zwei 0603-Bauteilen liegen 0,5 mm; ein lesbarer
+Bezeichner (0,8 mm, KiCads Mindestmaß) passt dort nicht hin, ohne das
+Nachbarpad zu überdrucken — über 300 Regelmeldungen. Bedruckt bleiben die
+Steckverbinder: die braucht man beim Anschließen, und dort ist Platz.
+
+Für die Bestückung ist die Fab-Lage im PDF (`output/hauptplatine-pcb.pdf`)
+maßgeblich, nicht der Siebdruck.
+
+Dasselbe gilt für die Beschaffungsfelder: `pcbgen.place()` setzt sie beim
+Übernehmen aus der Netzliste unsichtbar und auf die Fab-Lage. Ohne das
+landen die Herstellernummern sichtbar im Siebdruck und überdecken die halbe
+Platine — 151 der ursprünglich 214 Regelwarnungen.
+
+### 17.5 Gehäuse und Kabelbaum
+
+Die Dichtheit übernimmt das Gehäuse, nicht die Platinensteckverbinder — der
+Grund steht in K10. Vorgesehen ist ein IP67-Kunststoffkasten von etwa
+80 × 62 × 25 mm mit Kabelverschraubungen; dahinter kurze Pigtails auf die
+JST-XH-Stecker. Die Trennstellen zum Kabelbaum sind Superseal 1.0, wie
+ursprünglich geplant, nur eben im Kabel statt auf der Platine.
+
+Kunststoff ist Pflicht, solange die Platinenantenne genutzt wird. Die
+microSD-Karte ist nur bei geöffnetem Deckel erreichbar; für den laufenden
+Betrieb ist der Download über WLAN vorgesehen.
