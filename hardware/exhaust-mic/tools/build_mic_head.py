@@ -2,7 +2,7 @@
 """Generate the mic-head schematic (mic-head/mic-head.kicad_sch).
 
 Two identical boards are built from this: channel A at the exhaust tip and
-channel B at the airbox. See docs/superpowers/specs/2026-08-28-exhaust-mic-design.md
+channel B at the airbox. See docs/specs/2026-08-28-exhaust-mic-design.md
 section 4.
 """
 
@@ -41,12 +41,14 @@ def build() -> Schematic:
     # Steckverbinder zum Hauptboard
     # ------------------------------------------------------------------
     sch.text("Steckverbinder zum Hauptboard", 330, 40, 2.0)
-    sch.text("TE Superseal 1.0, 5-polig. Kabel: 2x Twisted Pair + Gesamtschirm.", 330, 45)
-    sch.text("Schirm nur hauptplatinenseitig auf GND - R5 hier bleibt unbestueckt.", 330, 49)
+    sch.text("Kabel direkt einloeten, Pads zweireihig versetzt. 2x Twisted Pair + Schirm.", 330, 45)
+    sch.text("Keine Zugentlastung auf der Platine - Kabel vergiessen oder im Roehrchen klemmen.", 330, 41)
+    sch.text("Schirm liegt beidseitig auf Masse, siehe Hinweis unten rechts.", 330, 49)
 
-    j1 = sch.part("Connector_Generic:Conn_01x05", "J1", "Superseal_1.0_5pol",
-                  340, 75, footprint="Connector_TE:TE_Superseal_1.0_5way",
-                  fields={"MPN": "TE 282108-1"})
+    j1 = sch.part("Connector_Generic:Conn_01x05", "J1", "Loetpads_Kabel_5x",
+                  340, 75,
+                  footprint="exhaust-mic:SolderWire-0.1sqmm_1x05_2reihig_P2.6mm",
+                  fields={"MPN": "-"})
     sch.stub(j1, "1", "VIN_3V3", 15.24, glob=True, shape="input")
     sch.stub(j1, "2", "GND_CBL", 15.24)
     sch.stub(j1, "3", "OUT_P", 15.24, glob=True, shape="output")
@@ -133,7 +135,7 @@ def build() -> Schematic:
     sch.text("C5 laut Datenblatt so dicht wie moeglich an Pin 2.", 40, 134)
 
     mk1 = sch.part("exhaust-mic:IM73A135V01", "MK1", "IM73A135V01", 76.2, 160,
-                   footprint="exhaust-mic:Infineon_PG-LLGA-5-1_4x3mm_BottomPort",
+                   footprint="exhaust-mic:Infineon_PG-LLGA-5-1",
                    fields={"MPN": "IM73A135V01XTSA1"})
     vx, vy = mk1.pin("2")
     sch.wire(vx, vy, vx - 10.16, vy)
@@ -226,23 +228,37 @@ def build() -> Schematic:
     sch.stub(r2, "2", "OUT_N", 5.08, glob=True, shape="output")
 
     # ------------------------------------------------------------------
-    # Schirmanbindung, standardmaessig offen
+    # Schirmanbindung
     # ------------------------------------------------------------------
-    r5 = sch.part("Device:R", "R5", "0R", 342.9, 215, footprint=FP_R, dnp=True)
-    sch.stub(r5, "1", "SHIELD", 5.08, glob=True, shape="passive")
-    gx, gy = r5.pin("2")
-    sch.wire(gx, gy, gx, gy + 5.08)
-    sch.power("GND", gx, gy + 5.08)
-    sch.text("R5 unbestueckt. Schirm liegt am Hauptboard auf GND;", 355, 212)
-    sch.text("hier nur bestuecken, wenn das Alu-Roehrchen mit auf", 355, 216)
-    sch.text("Schirmpotential gelegt werden soll.", 355, 220)
+    # Frueher stand hier ein 0R als abschaltbare Bruecke zwischen Schirm und
+    # Masse, unbestueckt. Das war wirkungslos: Kabelmasse und Schirm liegen
+    # ohnehin auf demselben Knoten, und ein unbestuecktes Bauteil trennt in
+    # der Netzliste nichts - KiCad fuehrt DNP-Teile weiterhin als Verbindung.
+    # Die Kupferflaeche waere also in jedem Fall durchgaengig gewesen.
+    sch.text("Schirm und Kabelmasse liegen hier auf einem Knoten und sind", 330, 212)
+    sch.text("damit beidseitig geerdet - so wirkt der Schirm auch bei hohen", 330, 216)
+    sch.text("Frequenzen. Gleichtaktanteile faengt die Drossel auf der", 330, 220)
+    sch.text("Hauptplatine ab, nicht die Schirmfuehrung.", 330, 224)
 
     return sch
+
+
+
+def load_sourcing() -> dict:
+    """tools/parts.json einlesen, falls vorhanden."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "parts.json")
+    if not os.path.exists(path):
+        return {}
+    import json
+    return json.load(open(path, encoding="utf-8"))
 
 
 def write_project() -> None:
     os.makedirs(PROJ_DIR, exist_ok=True)
     sch = build()
+    quellen = load_sourcing()
+    if quellen:
+        print(f"Beschaffungsdaten auf {sch.apply_sourcing(quellen)} Bauteile angewandt")
     path = sch.write(PROJ_DIR)
     print("wrote", path)
 

@@ -4,7 +4,7 @@
 Root sheet plus five child sheets. Cross-sheet connectivity is by global
 label, so the sheets carry no hierarchical pins.
 
-Reference: docs/superpowers/specs/2026-08-28-exhaust-mic-design.md
+Reference: docs/specs/2026-08-28-exhaust-mic-design.md
 """
 
 from __future__ import annotations
@@ -78,10 +78,15 @@ def build_power(lib, root_uuid) -> Schematic:
     s.text("rund 90 uA, das haelt die Fahrzeugbatterie problemlos aus.", 30, 44)
 
     # ---- Harness-Steckverbinder -------------------------------------
-    j1 = s.part("Connector_Generic:Conn_01x06", "J1", "Superseal_1.0_6pol",
-                40, 70, footprint="Connector_TE:TE_Superseal_1.0_6way")
+    j1 = s.part("Connector_Generic:Conn_01x06", "J1", "XH-6pol_Power_CAN",
+                40, 70,
+                footprint="Connector_JST:JST_XH_S6B-XH-A_1x06_P2.50mm_Horizontal",
+                fields={"MPN": "S6B-XH-A(LF)(SN)"})
     s.stub(j1, "1", "V12_IN", 12.7)
-    s.stub(j1, "2", "GND_CHASSIS", 12.7)
+    # Kein eigenes Label: Pin 2 liegt direkt auf GND. Der fruehere Name
+    # GND_CHASSIS suggerierte eine Trennung, die es nicht gibt - auf dem
+    # Motorrad ist der Rahmen der Minuspol.
+    s.wire(*j1.pin("2"), j1.pin("2")[0] - 12.7, j1.pin("2")[1])
     s.stub(j1, "3", "IGN_IN", 12.7, glob=True, shape="input")
     s.stub(j1, "4", "CANH", 12.7, glob=True, shape="bidirectional")
     s.stub(j1, "5", "CANL", 12.7, glob=True, shape="bidirectional")
@@ -144,7 +149,7 @@ def build_power(lib, root_uuid) -> Schematic:
     # Steckverbinderpins herein, die als "passiv" gelten.
     s.text("Speiseflags fuer ERC", 250, 118, 2.0)
     for i, (rail, xx) in enumerate((("VBAT12", 250.0), ("GND", 275.0),
-                                    ("USB_VBUS", 300.0))):
+                                    ("USB_VBUS", 300.0), ("+4V6", 325.0))):
         fl = s.part("power:PWR_FLAG", f"#FLG{i:04d}", "PWR_FLAG", xx, 132.0,
                     in_bom=False)
         s.wire(xx, 132.0, xx, 138.0)
@@ -320,12 +325,10 @@ def build_power(lib, root_uuid) -> Schematic:
     gx, gy = u2.pin("1")
     s.wire(gx, gy, gx, gy + 6.35)
     s.power("GND", gx, gy + 6.35)
+    # Pin 2 fuehrt zugleich die Kuehlfahne, ein separater Fahnen-Pin
+    # entfaellt (siehe Symbol).
     ox, oy = u2.pin("2")
     s.wire(ox, oy, ox + 12.7, oy)
-    ox2, oy2 = u2.pin("4")
-    s.wire(ox2, oy2, ox + 12.7, oy2)
-    s.wire(ox + 12.7, oy, ox + 12.7, oy2)
-    s.junction(ox + 12.7, oy)
     cap_to_gnd(s, "C11", "22u/10V", ox + 25.4, oy + 12.7, ox + 12.7, oy, C1210)
     cap_to_gnd(s, "C12", "100n", ox + 38.1, oy + 12.7, ox + 25.4, oy, C0603)
     s.wire(ox + 38.1, oy, ox + 50.8, oy)
@@ -424,8 +427,9 @@ def build_analog(lib, root_uuid) -> Schematic:
 
         # ---------------- Steckverbinder ----------------
         j = s.part("Connector_Generic:Conn_01x05", jref,
-                   f"Superseal_1.0_5pol_Mic{ch}", 45, y0, 180,
-                   footprint="Connector_TE:TE_Superseal_1.0_5way")
+                   f"XH-5pol_Mic{ch}", 45, y0, 180,
+                   footprint="Connector_JST:JST_XH_S5B-XH-A_1x05_P2.50mm_Horizontal",
+                   fields={"MPN": "S5B-XH-A(LF)(SN)"})
         p1, p2 = j.pin("1"), j.pin("2")
         p5 = j.pin("5")
 
@@ -460,7 +464,7 @@ def build_analog(lib, root_uuid) -> Schematic:
 
         # ---------------- Gleichtaktdrossel mit Klemmung ----------------
         cmc = s.part("Device:L_Ferrite_Coupled", lref, "1mH_CMC", 140, y0 + 7.62,
-                     footprint="Inductor_SMD:L_CommonModeChoke_Wuerth_WE-SL2",
+                     footprint="Inductor_SMD:L_CommonMode_Wuerth_WE-SL2",
                      fields={"MPN": "744232222"})
         in_p, in_n = cmc.pin("1"), cmc.pin("3")
 
@@ -527,7 +531,7 @@ def build_adc(lib, root_uuid) -> Schematic:
     s.text("512 x fs = 24,576 MHz -> 48 kHz;  256 x fs -> 96 kHz. Beides aus einem Quarz.", 25, 44)
 
     u5 = s.part("exhaust-mic:PCM1863", "U5", "PCM1863DBT", 190.5, 150,
-                footprint="Package_SO:TSSOP-30_4.4x9.7mm_P0.65mm",
+                footprint="exhaust-mic:TSSOP-30_4.4x7.8mm_P0.5mm",
                 fields={"MPN": "PCM1863DBTR",
                         "Datasheet": "https://www.ti.com/lit/ds/symlink/pcm1863.pdf"})
 
@@ -577,6 +581,13 @@ def build_adc(lib, root_uuid) -> Schematic:
     s.wire(ax, node_y, *fb4.pin("2"))
     s.wire(ax, fb4.pin("1")[1], ax, fb4.pin("1")[1] - 7.62)
     s.power("+3V3A", ax, fb4.pin("1")[1] - 7.62)
+    # AVDD wird nur ueber den Ferrit gespeist, der als passiv gilt.
+    # Das Flag haengt links an derselben Leitung wie C33/C34; nach rechts
+    # laege es im Bausteinkoerper und wuerde fremde Pins kreuzen.
+    s.part("power:PWR_FLAG", "#FLG0100", "PWR_FLAG", ax - 53.34,
+           node_y - 7.62, in_bom=False)
+    s.wire(ax - 53.34, node_y - 7.62, ax - 53.34, node_y)
+    s.wire(ax - 53.34, node_y, ax - 38.1, node_y)
     for ref, val, dx, fp in (("C33", "10u/10V", -22.86, C0805),
                              ("C34", "100n", -38.1, C0603)):
         c = s.part("Device:C", ref, val, ax + dx, node_y + 8.89, footprint=fp)
@@ -675,7 +686,7 @@ def build_mcu(lib, root_uuid) -> Schematic:
     s.text("WLAN muss waehrend der Aufnahme per Firmware aus bleiben.", 25, 42)
 
     u6 = s.part("RF_Module:ESP32-S3-WROOM-1", "U6", "ESP32-S3-WROOM-1-N8R2",
-                165, 145, footprint="RF_Module:ESP32-S2-WROOM",
+                165, 145, footprint="RF_Module:ESP32-S3-WROOM-1",
                 fields={"MPN": "ESP32-S3-WROOM-1-N8R2", "LCSC": "C2913204"})
 
     # Versorgung. Die Abblockkondensatoren haengen in einer Reihe oberhalb
@@ -793,7 +804,10 @@ def build_mcu(lib, root_uuid) -> Schematic:
     s.text("microSD", 300, 150, 2.2)
     s.text("SDMMC 4 bit. 48 kHz/24 bit stereo sind 288 kB/s - reichlich Reserve.", 300, 156)
 
-    j5 = s.part("Connector:Micro_SD_Card_Det1", "J5", "microSD_PushPush", 340, 200,
+    # Det2 statt Det1: nur dessen Nummerierung passt zum DM3D-SF. Bei Det1
+    # heisst Pin 10 SHIELD, liegt im Footprint aber auf einem Kontakt des
+    # Kartenschalters - der Metallrahmen (Pad 11) bliebe unverbunden.
+    j5 = s.part("Connector:Micro_SD_Card_Det2", "J5", "microSD_PushPush", 340, 200,
                 footprint="Connector_Card:microSD_HC_Hirose_DM3D-SF")
     sd_map = [("CLK", "SD_CLK"), ("CMD", "SD_CMD"), ("DAT0", "SD_D0"),
               ("DAT1", "SD_D1"), ("DAT2", "SD_D2"), ("DAT3/CD", "SD_D3")]
@@ -802,7 +816,9 @@ def build_mcu(lib, root_uuid) -> Schematic:
     # Alle Pins liegen auf derselben Kante. Versorgung und Masse bekommen
     # darum kurze Stichleitungen mit Symbol direkt am Ende, statt an den
     # Datenleitungen entlangzulaufen.
-    for pin, off in (("VSS", 8.89), ("DET", 8.89), ("SHIELD", -8.89)):
+    # Kartenerkennung wird nicht ausgewertet, beide Schalterkontakte auf Masse.
+    for pin, off in (("VSS", 8.89), ("DET_A", 8.89), ("DET_B", 12.7),
+                     ("SHIELD", -8.89)):
         gx, gy = j5.pin(pin)
         s.wire(gx, gy, gx - off, gy)
         s.power("GND", gx - off, gy)
@@ -854,10 +870,14 @@ def build_io(lib, root_uuid) -> Schematic:
     bx, by = u7.pin("14")
     s.wire(bx, by, bx, by - 12.7)
     s.wire(bx, by - 12.7, bx + 33.02, by - 12.7)
-    bt1 = s.part("Device:Battery_Cell", "BT1", "CR2032", bx + 33.02, by - 4.0,
-                 footprint="Battery:BatteryHolder_Keystone_3034_1x20mm")
+    bt1 = s.part("Device:Battery_Cell", "BT1", "CR1220", bx + 33.02, by - 4.0,
+                 footprint="Battery:BatteryHolder_Keystone_3000_1x12mm",
+                 fields={"MPN": "Keystone 3000"})
     s.wire(bx + 33.02, by - 12.7, *bt1.pin("1"))
     s.power("GND", *bt1.pin("2"))
+    flg = s.part("power:PWR_FLAG", "#FLG0101", "PWR_FLAG", bx + 33.02,
+                 by - 25.4, in_bom=False)
+    s.wire(bx + 33.02, by - 25.4, bx + 33.02, by - 12.7)
     c51 = s.part("Device:C", "C51", "100n", bx + 17.78, by - 4.0, footprint=C0603)
     s.wire(bx + 17.78, by - 12.7, *c51.pin("1"))
     s.power("GND", *c51.pin("2"))
@@ -991,8 +1011,12 @@ def build_io(lib, root_uuid) -> Schematic:
 
     # Piezo
     bx = 345.0
-    bz = s.part("Device:Buzzer", "LS1", "Piezo", bx, 200,
-                footprint="Buzzer_Beeper:Buzzer_12x9.5RM7.6")
+    # SMD statt Durchsteckausfuehrung: fuer den 12,5-mm-Piezo mit
+    # Drahtanschluessen gibt es auf dieser Platine keinen Platz mehr, an
+    # dem seine Pins nicht auf der Gegenseite auf Pads treffen.
+    bz = s.part("Device:Buzzer", "LS1", "Piezo_SMD", bx, 200,
+                footprint="Buzzer_Beeper:Buzzer_Murata_PKMCS0909E",
+                fields={"MPN": "PKMCS0909E4000-R1"})
     p1x, p1y = bz.pin("1")
     s.wire(p1x, p1y, p1x - 10.16, p1y)
     s.wire(p1x - 10.16, p1y, p1x - 10.16, p1y - 10.16)
@@ -1070,7 +1094,7 @@ def build_root(lib, root_uuid) -> Schematic:
     s.text("aufgezeichnet von einem ESP32-S3 auf microSD.", 30, 65)
     s.text("Der Mikrofonkopf ist ein eigenes Projekt: mic-head/mic-head.kicad_sch", 30, 73)
     s.text("Auslegung, Rauschbudget und Pegelplan:", 30, 81)
-    s.text("docs/superpowers/specs/2026-08-28-exhaust-mic-design.md", 30, 86)
+    s.text("docs/specs/2026-08-28-exhaust-mic-design.md", 30, 86)
 
     sheets = [
         ("Versorgung", "01-power.kicad_sch", 30, 110, "2"),
@@ -1094,6 +1118,16 @@ def build_root(lib, root_uuid) -> Schematic:
 
 # ==========================================================================
 
+
+def load_sourcing() -> dict:
+    """tools/parts.json einlesen, falls vorhanden."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "parts.json")
+    if not os.path.exists(path):
+        return {}
+    import json
+    return json.load(open(path, encoding="utf-8"))
+
+
 def main():
     from kigen import uuid_for
     lib = new_lib()
@@ -1105,6 +1139,11 @@ def main():
              build_adc(lib, root_uuid),
              build_mcu(lib, root_uuid),
              build_io(lib, root_uuid)]
+
+    quellen = load_sourcing()
+    if quellen:
+        n = sum(sh.apply_sourcing(quellen) for sh in built)
+        print(f"Beschaffungsdaten auf {n} Bauteile angewandt")
 
     problems = []
     for s in built:
