@@ -88,3 +88,7 @@ api_keys.txt
 ~*.xlsx
 # Excluded per Kevin
 hardware/ECU/verbesserungen/
+
+# Externe Werkzeuge gehoeren nicht ins Repo. freerouting wird fuer route.py
+# gebraucht, aber selbst heruntergeladen und lokal abgelegt.
+*.jar
