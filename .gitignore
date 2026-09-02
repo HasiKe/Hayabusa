@@ -92,3 +92,10 @@ hardware/ECU/verbesserungen/
 # Externe Werkzeuge gehoeren nicht ins Repo. freerouting wird fuer route.py
 # gebraucht, aber selbst heruntergeladen und lokal abgelegt.
 *.jar
+
+# Ausgaben des Netzlisten-Analysewerkzeugs: je Lauf rund 5 MB, und sie
+# enthalten absolute Pfade von der Entwicklungsmaschine.
+hardware/ECU/pcb-work/*.analyzer.json
+hardware/ECU/pcb-work/**/*.analyzer.json
+hardware/ECU/pcb-work/capability_mode.json
+hardware/ECU/pcb-work/**/capability_mode.json
