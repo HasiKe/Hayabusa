@@ -4,3 +4,6 @@
 [submodule "speeduino"]
 	path = speeduino
 	url = https://github.com/HasiKe/speeduino.git
+[submodule "hardware/exhaust-mic"]
+	path = hardware/exhaust-mic
+	url = https://github.com/HasiKe/Exhaust-Mic.git

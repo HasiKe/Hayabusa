@@ -122,8 +122,8 @@ Zeitstempeln zur Synchronisation mit Videomaterial.
 Schaltpläne, Layout, Gehäuse und Firmware entstehen aus Python-Generatoren —
 Pinbelegung und Netznamen stehen dadurch nur an einer Stelle.
 
-[`hardware/exhaust-mic/README.md`](hardware/exhaust-mic/README.md) ·
-[Auslegung und Rauschbudget](docs/specs/2026-08-28-exhaust-mic-design.md)
+Eigenes Repository, hier als Submodul eingebunden:
+[HasiKe/Exhaust-Mic](https://github.com/HasiKe/Exhaust-Mic)
 
 ---
 
