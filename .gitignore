@@ -93,12 +93,9 @@ hardware/ECU/verbesserungen/
 # gebraucht, aber selbst heruntergeladen und lokal abgelegt.
 *.jar
 
-# Ausgaben des Netzlisten-Analysewerkzeugs: je Lauf rund 5 MB, und sie
-# enthalten absolute Pfade von der Entwicklungsmaschine.
-hardware/ECU/pcb-work/*.analyzer.json
-hardware/ECU/pcb-work/**/*.analyzer.json
-hardware/ECU/pcb-work/capability_mode.json
-hardware/ECU/pcb-work/**/capability_mode.json
+# Werkbank fuer das Layout: Router-Skripte, Zwischenstaende, Analysator-
+# Ausgaben mit absoluten Pfaden. Bleibt lokal.
+hardware/ECU/pcb-work/
 
 # Nicht ins Repository: Papiere/Gutachten und Medien liegen nur lokal.
 /TÜV/
