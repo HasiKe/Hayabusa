@@ -99,3 +99,12 @@ hardware/ECU/pcb-work/*.analyzer.json
 hardware/ECU/pcb-work/**/*.analyzer.json
 hardware/ECU/pcb-work/capability_mode.json
 hardware/ECU/pcb-work/**/capability_mode.json
+
+# Nicht ins Repository: Papiere/Gutachten und Medien liegen nur lokal.
+/TÜV/
+/content/
+
+# In hardware/ gehoeren nur die beiden Elektronikprojekte ins Repository.
+hardware/*
+!hardware/ECU/
+!hardware/exhaust-mic/

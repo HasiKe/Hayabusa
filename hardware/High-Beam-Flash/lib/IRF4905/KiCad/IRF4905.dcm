@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP IRF4905
-D MOSFET Transistor, P-Channel, TO-220AB
-K
-F https://www.infineon.com/dgdl/irf4905pbf.pdf?fileId=5546d462533600a4015355e329b1197e
-$ENDCMP
-#
-#End Doc Library

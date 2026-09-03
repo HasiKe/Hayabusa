@@ -1,9 +1,0 @@
-Manufacturer=Rochester Electronics
-PartNumber=BC547
-PartCategory=Transistor BJT NPN
-PackageCategory=Other
-PinCount=3
-Version=1.3
-Released=2021-08-18 06:16:37
-Downloaded=2026-02-04 07:46:41
-3D=Y

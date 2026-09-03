@@ -1,9 +1,0 @@
-Manufacturer=Sharp Microelectronics
-PartNumber=PC817X2NSZ9F
-PartCategory=Phototransistor
-PackageCategory=Dual-In-Line Packages
-PinCount=4
-Version=1.1
-Released=2021-11-03 09:54:19
-Downloaded=2026-02-04 07:05:23
-3D=Y
