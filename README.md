@@ -19,7 +19,7 @@ eigene Arbeit.
 | [`speeduino/`](https://github.com/HasiKe/speeduino/tree/Hayabusa/ECU-R3) | Motorsteuerungs-Firmware und Sensor-Modul-Firmware, Submodul auf den eigenen Fork |
 | [`hardware/exhaust-mic/`](hardware/exhaust-mic) | Zweikanalige Tonaufnahme von Motor und Auspuff |
 | [`hardware/`](hardware) | Airbox, Turbo, Bremsen, Quickshifter, Verkleidung, Sitz |
-| [`tune/`](tune) | TunerStudio-Projekte und Kennfelder |
+| [`tune/`](tune) | TunerStudio-Projekt [`Hayabusa-R3`](tune/Hayabusa-R3) (generiert aus den Serienkennfeldern in `tune/setup/`) |
 | [`docs/`](docs) | Dokumentation und Spezifikationen |
 | [`TÜV/`](TÜV) | Gutachten und Betriebserlaubnisse der verbauten Teile |
 
@@ -91,6 +91,8 @@ Was über den Serienstand von Speeduino hinausgeht:
   läuft — bleibt sie hängen, fallen Einspritzung und Zündung ab.
 - **Motorrad-Ein- und Ausgänge**: Neutral, Kupplung, Gangsensor,
   Kippschalter, FI-Lampe, Lambdaheizung.
+- **Kanalzuordnung nach Zündfolge 1-2-4-3** am Serienstecker, der nach
+  Zylindern belegt ist.
 - **Kennfelder im SPI-Flash** statt in der EEPROM-Emulation des Teensy, die
   für vier Sätze zu klein ist.
 
@@ -149,11 +151,12 @@ Eigenes Repository, hier als Submodul eingebunden:
 | Sensor-Modul, Hardware | Revision 3.0 im Entwurf |
 | Sensor-Modul, Firmware | Übersetzt, noch nicht am Fahrzeug erprobt |
 | Exhaust-Mic | Schaltplan und Layout fertig, Fertigung offen |
-| Grundabstimmung | In Arbeit |
+| Grundabstimmung | Erststart-Tune erzeugt (`tune/Hayabusa-R3`), Motor damit noch nicht gelaufen |
 | Turbo-Umbau | In Planung |
 
-Was vor der ersten Fahrt noch geprüft werden muss — Polarität des
-Kippschalters, Kennlinien der Temperaturgeber, Klopfschwellen — steht in
+Was vor dem ersten Start geprüft werden muss — Trigger-Winkel, Kalibrierungen,
+Kanalzuordnung, Polarität des Kippschalters, Klopfschwellen — steht in
+[`tune/Hayabusa-R3/README.md`](tune/Hayabusa-R3/README.md),
 [HAYABUSA_ECU_R3.md](https://github.com/HasiKe/speeduino/blob/Hayabusa/ECU-R3/HAYABUSA_ECU_R3.md)
 und im [README des Sensor-Moduls](https://github.com/HasiKe/speeduino/blob/Hayabusa/ECU-R3/sensor-module/README.md).
 

@@ -6,6 +6,13 @@ Das Format basiert auf [Keep a Changelog](https://keepachangelog.com/de/1.0.0/) 
 
 ## [Unreleased]
 
+### Hinzugefügt
+- TunerStudio-Projekt `tune/Hayabusa-R3` für die Rev 3 (Board 57), generiert aus den Serienkennfeldern in `tune/setup/maps.ods` (`tools/gen_tune.py`), Erststart-Konfiguration mit Checkliste im README
+- Firmware-Fork: Kanalzuordnung nach Zündfolge 1-2-4-3 am Serienstecker, Batteriespannungs-Skalierung für den 47k/10k-Teiler, TunerStudio-INI korrigiert (ignTrim auf Seite 13, Load-Achsen der Kennfeldsätze 3/4, boostTable3/4)
+
+### Geändert
+- Dokumentation (HARDWARE, SOFTWARE, INSTALLATION, TUNING, PROJECT_STRUCTURE) komplett auf die Rev 3 und das neue Tune-Projekt umgeschrieben; die Dropbear-Beschreibungen der Rev 1 entfallen
+
 ### Geplant
 - CAN Bus Dashboard-Integration
 - Bluetooth Datenlogger

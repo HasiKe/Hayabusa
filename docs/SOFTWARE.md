@@ -1,278 +1,121 @@
 # Software-Dokumentation
 
-## Speeduino Firmware
+## Firmware
 
-### Übersicht
-
-Das Speeduino Engine Management System ist eine Open-Source ECU-Firmware, hier auf dem Teensy 4.1 (Dropbear v2) ausgeführt.
-
-### Version
+Fork von [Speeduino](https://github.com/speeduino/speeduino), Stand 2025.04-dev
+(TunerStudio-Signatur `speeduino 202504-dev`).
 
 | Parameter | Wert |
-|-----------|------|
-| Fork | [HasiKe/speeduino](https://github.com/HasiKe/speeduino) |
-| Board | Dropbear v2 / Teensy 4.1 |
-| Plattform | PlatformIO |
+|---|---|
+| Repository | [HasiKe/speeduino](https://github.com/HasiKe/speeduino), Branch `Hayabusa/ECU-R3` (lokal `Hayabusa/ECU-R3-v2`) |
+| Einbindung | Submodul `speeduino/` |
+| Board | Teensy 4.1, TunerStudio-Board **57 „Gen1 Hayabusa ECU R3"** |
+| PlatformIO-Umgebung | `teensy41_hayabusa` (`-DUSE_SPI_EEPROM -DSPI_FLASH_ATOMIC_TRANSFERS -DHAYABUSA_ECU_R3`) |
 | Lizenz | GPL v3 |
-| Pfad | `speeduino/` (Git Submodule) |
-
-### Teensy 4.1 Vorteile
-
-- 600 MHz ARM Cortex-M7 (37x schneller als Mega 2560)
-- Native CAN Bus (kein MCP2515 nötig)
-- 8 MB Flash, 1 MB RAM
-- Bessere Timing-Präzision
-- Mehr I/O für zukünftige Erweiterungen
-
-### Funktionen
-
-#### Motor-Management
-- **Einspritzung**: Sequential, Semi-Sequential, Batch
-- **Zündung**: Advance/Retard Maps, Klopferkennung
-- **Leerlauf**: PWM-Ventil, Schrittmotor, Closed-Loop
-
-#### Erweiterte Funktionen
-- Native CAN Bus
-- Datenlogger (SD-Card)
-- Echtzeit-Tuning
-- Staged Injection
-- Launch Control
-- Boost Control
-- Klopfregelung (geplant)
-
-## Konfiguration
-
-### Hayabusa-Einstellungen
-
-#### Motor
-```cpp
-configPage2.nCylinders = 4;           // 4 Zylinder
-configPage2.engineType = 0;           // 4-Takt
-configPage2.fuelAlgorithm = 1;        // Speed Density
-configPage4.sparkMode = 2;            // Wasted Spark
-configPage2.nInjectors = 4;           // Sequential
-```
-
-#### Trigger
-```cpp
-configPage4.TrigPattern = 1;          // Missing Tooth
-configPage4.triggerTeeth = 36;        // 36-1 Geberrad
-configPage4.triggerMissingTeeth = 1;  // 1 fehlender Zahn
-```
-
-#### Sensoren
-```cpp
-configPage2.mapType = 1;              // MPX4250
-configPage2.mapMin = 10;              // kPa
-configPage2.mapMax = 250;             // kPa
-configPage2.tpsMin = 150;             // ADC Counts
-configPage2.tpsMax = 850;             // ADC Counts
-```
-
-#### Klopfsensor (geplant)
-```cpp
-configPage10.knock_enabled = 1;       // Aktiviert
-configPage10.knock_threshold = 50;    // Schwellwert
-configPage10.knock_retard = 3;        // Rücknahme in °
-configPage10.knock_recovery = 0.5;    // °/s Erholung
-```
-
-## Build-System
-
-### PlatformIO Konfiguration
-
-```ini
-[platformio]
-default_envs = teensy41
-src_dir = speeduino
-
-[common]
-lib_deps =
-    SD
-    SPI
-    FlexCAN_T4
-
-[env:teensy41]
-platform = teensy
-board = teensy41
-framework = arduino
-lib_deps = ${common.lib_deps}
-build_flags =
-    -DCORE_TEENSY
-    -DBOARD_DROPBEAR
-monitor_speed = 115200
-```
-
-### Befehle
+| Notizen | `speeduino/HAYABUSA_ECU_R3.md` |
 
 ```bash
-# Build für Teensy 4.1
-pio run -e teensy41
-
-# Build und Upload
-pio run -e teensy41 -t upload
-
-# Tests
-pio test
-
-# Clean
-pio run -t clean
+git submodule update --init
+cd speeduino
+pio run -e teensy41_hayabusa            # bauen
+pio run -e teensy41_hayabusa -t upload  # flashen
 ```
 
-## Code-Struktur
+Nach dem ersten Brennen eines Tunes mit Board 57 die ECU aus- und einschalten: Pinmapping,
+MC33810-Initialisierung und Watchdog werden nur beim Start übernommen.
 
-### Hauptkomponenten
+## Was der Fork gegenüber Speeduino ergänzt
 
-```
-speeduino/speeduino/
-├── speeduino.ino      # Haupteinstiegspunkt
-├── globals.h/.cpp     # Globale Variablen
-├── init.h/.cpp        # Initialisierung
-├── auxiliaries.h/.cpp # Hilfsausgänge
-├── comms.h/.cpp       # Kommunikation
-├── corrections.h/.cpp # Korrekturen
-├── decoders.h/.cpp    # Trigger-Decoder
-├── idle.h/.cpp        # Leerlaufregelung
-├── scheduler.h/.cpp   # Event-Scheduling
-├── sensors.h/.cpp     # Sensorverarbeitung
-├── storage.h/.cpp     # EEPROM
-├── table2d.h/.cpp     # 2D Tabellen
-└── table3d.h/.cpp     # 3D Kennfelder
-```
+Alles in `speeduino/speeduino/src/hayabusa/` und nur aktiv mit `HAYABUSA_ECU_R3` und
+Board 57.
 
-### Trigger-Decoder
+| Funktion | Umsetzung |
+|---|---|
+| Pinmapping | `src/pins/pinMapping.cpp`, `getHayabusaR3Mapping()`: alle Pins fest, Injektoren und Spulen über MC33810-Bits; Kanal 3 → Zylinder 4, Kanal 4 → Zylinder 3 (Zündfolge 1-2-4-3) |
+| Kennfeldspeicher | W25Q32 statt EEPROM-Emulation (`board_teensy41.cpp`): 264 Sektoren × 31 Byte = 8184 Byte, Standardlayout unverändert, Zusatztabellen ab Adresse 4096 |
+| Watchdog | `hayabusa_r3.cpp`: TPS3823 wird aus dem 1-kHz-Timer bedient, aber nur wenn die Hauptschleife seit dem letzten Kick gelaufen ist; während `initialiseAll()` bedingungslos |
+| Ausgabefreigabe | D2 mit Watchdog-Reset über NAND auf MC33810-OUTEN; Kippschalter (D34, 500 ms entprellt) nimmt die Freigabe weg |
+| Klopfen | `knock_tpic8101.cpp`: TPIC8101 per SPI konfiguriert, Fenster am Zündfunken, Wert auf 2-ms-Fenster normiert an Speeduinos analoge Klopfrücknahme; Build-Flags `HAYABUSA_KNOCK_BANDPASS_INDEX`, `_GAIN_INDEX`, `_INTEGRATOR_INDEX`, `_WINDOW_US` |
+| Motorrad-I/O | Neutral, Kupplung, Gangsensor (Schwellen `HAYABUSA_GEAR_THRESHOLDS`), Kippschalter (`HAYABUSA_TIPOVER_INVERTED`), FI-Lampe, Lambdaheizung (3 s nach Drehzahl > 0 an), Treiberfehler-Eingang |
+| Kennfeldsätze | vier Sätze Kraftstoff/Zündung/Ladedruck; Satz 1 = Standardtabellen, Satz 2 = Speeduinos Zweittabellen, Sätze 3/4 = Seiten 16–21; Auswahl in `mapselection.cpp` (`speeduino.ino`: `getActiveFuelTable()`) |
+| Batteriespannung | `sensors.cpp readBat()`: Vollausschlag 18,8 V für den 47 k/10 k-Teiler (`HAYABUSA_R3_BATTERY_FULL_SCALE_10`) |
+| SPI-Bus | vier Teilnehmer mit eigenen Transaktionen; Flash und Klopf-IC sperren Interrupts, solange ihr CS aktiv ist |
 
-```cpp
-void triggerPri_missingTooth() {
-    curTime = micros();
-    curGap = curTime - lastTooth;
+### Kennfeldsatz wählen
 
-    if (curGap < triggerFilterTime) { return; }
+Zündung einschalten mit Vollgas und gezogener Kupplung. FI-Lampe blinkt die Satznummer,
+Drehzahlmesser zeigt Satz × 1000. Jeder Kupplungszug schaltet weiter (4 → 1), drei
+Sekunden gehalten bestätigt (nach mindestens einem Loslassen), zehn Sekunden ohne
+Eingabe = Satz 1. Die Auswahl wird nicht gespeichert. Satz 2 schaltet Speeduinos
+Zweittabellen-Blending ab; `fuel2Mode` und `spark2Mode` bleiben Aus.
 
-    // Missing Tooth Erkennung
-    if (curGap > (triggerSecFilterTime * 3)) {
-        toothCurrentCount = 1;
-        currentStatus.hasSync = true;
-    }
-}
-```
-
-### Kraftstoffberechnung
-
-```cpp
-uint16_t calculatePW() {
-    uint16_t pw = table3D_getValue(&fuelTable,
-                                   currentStatus.MAP,
-                                   currentStatus.RPM);
-    pw = correctionsFuel(pw);
-    return pw;
-}
-```
+Voraussetzung ist ein gültiger Low-Pegel am Kupplungseingang, siehe Befund 1 in
+[HARDWARE.md](HARDWARE.md).
 
 ## TunerStudio
 
-### Projektstruktur
+- INI: `speeduino/reference/speeduino.ini`. Im Projekt unter *Project Properties →
+  Settings* „Hayabusa multi map switching = Enabled" wählen, sonst fehlen die Seiten
+  16–21. Nicht mit dem seriellen Kompatibilitätsmodus kombinierbar.
+- Setting-Groups des Projekts: `mcu_teensy`, `HAYABUSA_MULTIMAP`, `CELSIUS`, `AFR`,
+  `pressure_bar`, `enablehardware_test`, `resetcontrol_standard`.
+- Korrekturen der INI auf diesem Branch (September 2026): `ignTrim1..8` von Seite 6 (dort
+  überschrieben sie `airDenRates`, `boostFreq`, `vvtFreq`, `idleFreq` und das Launch-Byte)
+  auf Seite 13 Offset 42; Load-Achsen der Kennfeldsätze 3/4 folgen dem Last-Algorithmus
+  statt fester kPa-Skalierung; `boostTable3/4` mit Skalierung 2,0; `unused0_126` auf
+  Bit 0–1.
+- Klopfmodus **Analog**; Pin-Einstellung wird auf diesem Board ignoriert.
+- Kalibrierungen (Thermistoren, AFR-Sonde, TPS) liegen im Kennfeldspeicher, nicht in der
+  .msq. Sie müssen nach jedem Neubeschreiben des Flashs erneut gesendet werden.
 
-```
-tune/Busa/
-├── CurrentTune.msq      # Aktuelle Tune-Datei
-├── projectCfg/          # Projektkonfiguration
-├── dashboard/           # Custom Dashboards
-├── restorePoints/       # Backup Tunes
-└── DataLogs/            # Datenlogger
-```
+## Tune-Projekt und Generator
 
-### Kommunikation
+`tune/Hayabusa-R3/` (siehe dortiges README): `CurrentTune.msq`,
+`projectCfg/mainController.ini` (Kopie der Fork-INI), `project.properties`,
+`tools/gen_tune.py`. Das Tune wird generiert:
 
-```ini
-[Communications]
-port = COM3
-baud = 115200
-protocol = ms2
-```
-
-## Datenlogger
-
-### Echtzeit-Parameter
-
-```cpp
-struct statuses {
-    uint16_t RPM;           // Drehzahl
-    uint16_t MAP;           // Saugrohrdruck (kPa)
-    uint8_t  TPS;           // Drosselklappe (%)
-    int16_t  IAT;           // Ansaugluft (°C)
-    int16_t  CLT;           // Kühlmittel (°C)
-    uint16_t AFR;           // Lambda × 100
-    int8_t   advance;       // Zündwinkel (°)
-    uint16_t PW1;           // Einspritzzeit (µs)
-    uint8_t  dutyCycle;     // Tastgrad (%)
-    uint16_t battery;       // Spannung (V × 10)
-    uint8_t  knockLevel;    // Klopfpegel (geplant)
-};
+```bash
+python3 tune/Hayabusa-R3/tools/gen_tune.py
+python3 tune/Hayabusa-R3/tools/dumptables.py tune/Hayabusa-R3/CurrentTune.msq veTable advTable1
 ```
 
-### SD-Card Format
+- `stockmaps.py` liest die Serienkennfelder aus `tune/setup/maps.ods` (Blätter `VE_org`,
+  `IGN_org`), korrigiert die Tippfehler der Drehzahlachsen und interpoliert bilinear.
+- `iniparse.py` liest die INI mit `#if`-Auswertung; `gen_tune.py` prüft jede Konstante
+  gegen Optionsliste, Bereich und Auflösung und schreibt alle 21 Seiten.
+- Parameter (Düsen, VE-Skalierung, Zündrücknahme, Trigger, Dwell, Begrenzer) im Dict `P`,
+  Einzelwerte im Dict `E`. Änderungen dort, nicht in der .msq von Hand.
 
-```csv
-Time,RPM,MAP,TPS,IAT,CLT,AFR,ADV,PW1,DUTY,BATT,KNOCK
-0,800,30,0,25,80,14.7,15,2000,25,13.2,0
-100,850,32,2,25,82,14.5,14,2100,27,13.1,0
+## Code-Orientierung
+
+```
+speeduino/speeduino/
+├── speeduino.ino                 Hauptschleife, getActiveFuelTable()/getActiveIgnitionTable()
+├── src/hayabusa/hayabusa_r3.*    Watchdog, OUTEN, Schalter, Gangsensor, Lampe, Heizung
+├── src/hayabusa/knock_tpic8101.* Klopf-IC
+├── src/hayabusa/mapselection.*   Kennfeldwahl beim Einschalten
+├── src/pins/pinMapping.cpp       getHayabusaR3Mapping() (Board 57)
+├── acc_mc33810.cpp               MC33810-Treiber, übernimmt die Bit-Arrays aus dem Pinmapping
+├── board_teensy41.*              SPI-Flash als EEPROM
+├── storage.cpp / pages.cpp       Seiten 16–21 ab Adresse 4096
+├── decoders.cpp                  Dual-Wheel-Decoder (8 Zähne + Nockenpuls)
+├── sensors.cpp                   readBat() mit Board-57-Skalierung
+└── fuel_calcs.cpp                reqFuel = Kraftstoff je Zylinder und Arbeitsspiel bei VE 100 %
+speeduino/sensor-module/          STM32G474-Firmware des Sensor-Moduls, CAN-Protokoll im README
+speeduino/reference/speeduino.ini TunerStudio-Definition
 ```
 
-## Sicherheitsparameter
+## Offene Punkte
 
-### Motorschutz
-
-```cpp
-#define CLT_WARN_TEMP     95    // °C
-#define CLT_CUTOFF_TEMP   105   // °C
-#define MAP_MAX_KPA       250   // kPa
-#define RPM_HARD_LIMIT    11500 // U/min
-#define RPM_SOFT_LIMIT    11000 // U/min
-```
-
-### Klopfschutz (geplant)
-
-```cpp
-#define KNOCK_RETARD_MAX    15   // Max. Rücknahme in °
-#define KNOCK_RECOVERY_RATE 0.5  // °/s Erholung
-#define KNOCK_WINDOW_START  10   // ° nach ZOT
-#define KNOCK_WINDOW_END    70   // ° nach ZOT
-```
-
-### Fail-Safe
-
-```cpp
-if (MAP > 300 || MAP < 10) {
-    MAP = 100;  // Atmosphärisch
-    setError(ERR_MAP_SENSOR);
-}
-
-if (CLT > 150 || CLT < -40) {
-    CLT = 80;   // Normaltemperatur
-    setError(ERR_CLT_SENSOR);
-}
-```
-
-## Performance
-
-### Speichernutzung (Teensy 4.1)
-
-| Bereich | Nutzung |
-|---------|---------|
-| Flash | 15% (1,2 MB / 8 MB) |
-| RAM | 25% (256 KB / 1 MB) |
-
-### Timing
-
-| Parameter | Wert |
-|-----------|------|
-| Trigger Jitter | < ±0,1° |
-| Injection Accuracy | ±10 µs |
-| Ignition Accuracy | ±0,05° |
-| Loop Time | 20 µs |
+- Kippschalter-Polarität am Fahrzeug prüfen (`HAYABUSA_TIPOVER_INVERTED`); falsch
+  gepolt schaltet die Firmware während der Fahrt ab.
+- Gangsensor-Schwellen kalibrieren (`hayabusaStatus.gearRaw` beobachten).
+- Klopfparameter gegen eine Klopfaufzeichnung prüfen, bevor die Rücknahme scharf ist.
+- `hayabusaStatus` (umgekippt, Freigabe, Treiberfehler, Gang) ist in TunerStudio nicht
+  sichtbar; ein Statusbyte in den Ausgabekanälen wäre sinnvoll.
+- Sensor-Modul-Firmware übersetzt, am Fahrzeug nicht erprobt; CAN-Eingänge im Tune Aus.
 
 ---
 
-**Version**: 2.0
-**Stand**: April 2026
+**Version**: 4.0
+**Stand**: September 2026

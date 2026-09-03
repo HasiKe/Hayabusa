@@ -4,41 +4,47 @@
 
 ```
 hayabusa/
-├── README.md                     # Haupt-Projektdokumentation
-├── CHANGELOG.md                  # Versionshistorie
-├── .gitmodules                   # Git Submodule-Konfiguration
+├── README.md                     Projektübersicht
+├── CHANGELOG.md                  Versionshistorie
+├── .gitmodules                   drei Submodule
 │
-├── docs/                         # Dokumentation
-│   ├── HARDWARE.md               # Hardware-Dokumentation
-│   ├── SOFTWARE.md               # Software-Dokumentation
-│   ├── INSTALLATION.md           # Installationsanleitung
-│   ├── TUNING.md                 # Tuning-Guide
-│   ├── PROJECT_STRUCTURE.md      # Diese Datei
-│   └── Kabelplan.png             # Verkabelungsdiagramm
+├── docs/                         Dokumentation
+│   ├── HARDWARE.md               Steuergerät Rev 3, Stecker, Eingangsbeschaltung
+│   ├── SOFTWARE.md               Firmware-Fork, Board 57, TunerStudio, Generator
+│   ├── INSTALLATION.md           Einbau, Verkabelung, Inbetriebnahme
+│   ├── TUNING.md                 Kennfelder, Kalibrierung, Abstimmung
+│   ├── PROJECT_STRUCTURE.md      diese Datei
+│   ├── BESTELLUNG.ods            Bestell- und Teilelisten
+│   └── explosionszeichnung/      Suzuki-Ersatzteilzeichnungen
 │
-├── hardware/                     # Hardware Design
-│   ├── ECU/                      # ECU Elektronik
-│   │   ├── *.kicad_*             # KiCad Projektdateien
-│   │   ├── lib/                  # KiCad Bibliotheken
-│   │   ├── docs/                 # Hardware-Dokumentation
-│   │   └── output/               # Produktionsdateien (Gerber, BOM)
-│   ├── Airbox/                   # Luftbox mit Kühlung
-│   ├── Ram-Air-Seal/             # Ram-Air Dichtungen
-│   └── ...                       # Weitere mechanische Projekte
+├── hardware/
+│   ├── ECU/                      Steuergerät und Sensor-Modul (KiCad), im Repository
+│   │   ├── *.kicad_*             Schaltpläne und Layouts beider Platinen
+│   │   ├── bom/                  Stücklisten (CSV)
+│   │   ├── case/                 Gehäuse (Fusion 360, STL)
+│   │   ├── docs/                 Pinout.ods (Serienstecker), Datenblätter
+│   │   ├── lib/                  Bibliotheken, teensy.pretty als Submodul
+│   │   ├── output/pcbway/        Fertigungspakete
+│   │   └── verbesserungen/       Review-Ergebnisse und Umsetzungsprotokoll Rev 3
+│   ├── exhaust-mic/              Submodul HasiKe/Exhaust-Mic
+│   └── Airbox/, Turbo/, ...      nur lokal (.gitignore)
 │
-├── speeduino/                    # Speeduino Firmware (Git Submodule)
-│   ├── speeduino/                # Haupt-Firmware
-│   ├── test/                     # Unit Tests
-│   └── platformio.ini            # Build-Konfiguration
+├── speeduino/                    Submodul HasiKe/speeduino, Branch Hayabusa/ECU-R3
+│   ├── speeduino/                Firmware, src/hayabusa/ für die Board-Funktionen
+│   ├── reference/speeduino.ini   TunerStudio-Definition
+│   ├── sensor-module/            STM32G474-Firmware des Sensor-Moduls
+│   ├── HAYABUSA_ECU_R3.md        Firmware-Notizen zur Rev 3
+│   └── platformio.ini            Umgebung teensy41_hayabusa
 │
-├── tune/                         # TunerStudio Konfigurationen
-│   ├── Busa/                     # Standard Hayabusa
-│   │   ├── CurrentTune.msq       # Aktuelle Tune-Datei
-│   │   ├── dashboard/            # Custom Dashboards
-│   │   └── DataLogs/             # Datenlogger-Aufzeichnungen
-│   └── Hayabusa-R1/              # R1 Hybrid Konfiguration
+├── tune/
+│   ├── Hayabusa-R3/              TunerStudio-Projekt (generiert)
+│   │   ├── CurrentTune.msq
+│   │   ├── README.md             Herkunft, Checkliste vor dem ersten Start
+│   │   ├── projectCfg/           mainController.ini (Kopie der Fork-INI), project.properties
+│   │   └── tools/                gen_tune.py und Helfer
+│   └── setup/                    Serienkennfelder (maps.ods), ECUeditor-Screenshot
 │
-└── TÜV/                          # TÜV-Gutachten und Zertifikate
+└── TÜV/                          Gutachten, nur lokal
 ```
 
 ## Architektur
@@ -52,10 +58,10 @@ hayabusa/
 │  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐      │
 │  │  Sensoren   │    │  ECU Board  │    │  Aktuatoren │      │
 │  │             │    │             │    │             │      │
-│  │  TPS        │◄──►│  Arduino    │◄──►│  Injektoren │      │
+│  │  TPS        │◄──►│  Teensy 4.1 │◄──►│  Injektoren │      │
 │  │  MAP        │    │  Speeduino  │    │  Zündung    │      │
-│  │  CLT/IAT    │    │  CAN        │    │  Kraftstoff │      │
-│  │  O2         │    │  I/O        │    │  Leerlauf   │      │
+│  │  CLT/IAT    │    │  MC33810    │    │  Kraftstoff │      │
+│  │  O2 (LC-2)  │    │  CAN        │    │  Lampe/Tach │      │
 │  │  RPM/Cam    │    │             │    │             │      │
 │  └─────────────┘    └─────────────┘    └─────────────┘      │
 └─────────────────────────────────────────────────────────────┘
@@ -92,7 +98,8 @@ hayabusa/
 
 | Typ | Beschreibung | Software |
 |-----|--------------|----------|
-| .ino | Arduino Sketch | PlatformIO, Arduino IDE |
+| .ino, .cpp, .h | Firmware | PlatformIO |
+| .py | Tune-Generator | Python 3, odfpy |
 | .msq | TunerStudio Tune | TunerStudio |
 | .ini | ECU Definition | TunerStudio |
 | .dash | Dashboard | TunerStudio |
@@ -110,19 +117,19 @@ hayabusa/
 ### Voraussetzungen
 
 **Hardware:**
-- KiCad 7.0+
-- FreeCAD oder SolidWorks
+- KiCad 10 (Dateien der Rev 3), Fusion 360 für das Gehäuse
 
 **Software:**
-- PlatformIO (VS Code Extension)
-- TunerStudio MS
+- PlatformIO
+- TunerStudio MS Ultra
+- Python 3 mit odfpy (Tune-Generator)
 - Git
 
 ### Repository klonen
 
 ```bash
 # Mit Submodules
-git clone --recursive https://github.com/user/hayabusa.git
+git clone --recursive https://github.com/HasiKe/Hayabusa.git
 
 # Submodules aktualisieren
 git submodule update --init --recursive
@@ -134,34 +141,21 @@ git pull --recurse-submodules
 ### Build-Prozess
 
 ```bash
-# Firmware kompilieren
+# Firmware kompilieren und flashen
 cd speeduino
-pio run -e megaatmega2560
+pio run -e teensy41_hayabusa
+pio run -e teensy41_hayabusa -t upload
 
-# Firmware hochladen
-pio run -e megaatmega2560 -t upload
-
-# Tests ausführen
-pio test
+# Tune neu erzeugen
+python3 tune/Hayabusa-R3/tools/gen_tune.py
 ```
 
 ## Commit-Konventionen
 
-```
-feat(hardware): CAN Bus Interface hinzugefügt
-fix(firmware): Trigger-Timing korrigiert
-docs(install): Verkabelungsdiagramm aktualisiert
-```
-
-| Präfix | Verwendung |
-|--------|------------|
-| feat | Neue Features |
-| fix | Bugfixes |
-| docs | Dokumentation |
-| style | Formatierung |
-| test | Tests |
+Kurze, sachliche Betreffzeile ohne Präfix: im Hauptrepository deutsch, im Firmware-Fork
+englisch. Der Text erklärt das Warum. Keine Werkzeug- oder Sitzungsverweise.
 
 ---
 
-**Version**: 2.0
-**Stand**: April 2026
+**Version**: 3.0
+**Stand**: September 2026
