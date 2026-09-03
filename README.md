@@ -16,8 +16,7 @@ eigene Arbeit.
 | Pfad | Inhalt |
 |---|---|
 | [`hardware/ECU/`](hardware/ECU) | Steuergerät: Schaltplan, Layout, Fertigungsdaten, Gehäuse |
-| [`sensor-module/`](sensor-module) | Firmware des Sensor-Moduls (STM32G474) |
-| [`speeduino/`](https://github.com/HasiKe/speeduino/tree/Hayabusa/ECU-R3) | Motorsteuerungs-Firmware, Submodul auf den eigenen Fork |
+| [`speeduino/`](https://github.com/HasiKe/speeduino/tree/Hayabusa/ECU-R3) | Motorsteuerungs-Firmware und Sensor-Modul-Firmware, Submodul auf den eigenen Fork |
 | [`hardware/exhaust-mic/`](hardware/exhaust-mic) | Zweikanalige Tonaufnahme von Motor und Auspuff |
 | [`hardware/`](hardware) | Airbox, Turbo, Bremsen, Quickshifter, Verkleidung, Sitz |
 | [`tune/`](tune) | TunerStudio-Projekte und Kennfelder |
@@ -109,7 +108,7 @@ ab, was langsam ist, und meldet es über CAN.
 - Regelung des Ladeluftkühler-Lüfters, lokal und damit unabhängig vom CAN-Bus
 
 Firmware, CAN-Protokoll und die Zuordnung zu Speeduinos Eingangskanälen:
-[`sensor-module/README.md`](sensor-module/README.md)
+[`speeduino/sensor-module/README.md`](https://github.com/HasiKe/speeduino/blob/Hayabusa/ECU-R3/sensor-module/README.md)
 
 ---
 
@@ -156,7 +155,7 @@ Pinbelegung und Netznamen stehen dadurch nur an einer Stelle.
 Was vor der ersten Fahrt noch geprüft werden muss — Polarität des
 Kippschalters, Kennlinien der Temperaturgeber, Klopfschwellen — steht in
 [HAYABUSA_ECU_R3.md](https://github.com/HasiKe/speeduino/blob/Hayabusa/ECU-R3/HAYABUSA_ECU_R3.md)
-und im [README des Sensor-Moduls](sensor-module/README.md).
+und im [README des Sensor-Moduls](https://github.com/HasiKe/speeduino/blob/Hayabusa/ECU-R3/sensor-module/README.md).
 
 ---
 
