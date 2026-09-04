@@ -1,0 +1,10 @@
+#Project Attributes.
+#TunerStudio by EFI Analytics, Inc
+#Last Saved on: Thu Sep 03 16:57:15 CEST 2026
+#Thu Sep 03 16:57:15 CEST 2026
+useCommonDashboardDir=false
+ecuSettings=AFR|CELSIUS|HAYABUSA_MULTIMAP|enablehardware_test|mcu_teensy|pressure_bar|resetcontrol_standard|
+projectName=Temp
+dashBoardFile=\\dashboard\\\\dashboard.dash
+ecuConfigFile=speeduino.ini
+projectDescription=Temporary Project for viewing msq files

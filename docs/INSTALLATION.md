@@ -63,7 +63,7 @@ Zylinder 1 ist links (Generatorseite), Zylinder 4 rechts (Kupplungsseite).
 | Kühlmittel, Ansaugluft (NTC) | 51, 50 | 2,49 kΩ an 3,3 V | 2,3–2,6 kΩ bzw. 2,2–2,7 kΩ bei 20 °C |
 | Gangsensor | 57 | 1 kΩ, Teiler | Widerstandsleiter gegen Masse |
 | Kippschalter | 59 | Komparator | ≈ 2,5 V aufrecht (Gen-1-Typ 60–64 kΩ) |
-| Neutral, Kupplung | 20, 19 | 10 k Pull-up 3,3 V, Teiler | Schalter nach Masse; Low-Pegel nur 1,65 V (Befund 1) |
+| Neutral, Kupplung | 20, 19 | Teiler 10 k/10 k an 3,3 V | Schalter nach Masse; Low-Pegel nur 1,65 V (Befund 1) |
 | Sensorversorgung | 48 (+5 V), 54 (Masse) | TPS7B6950, Polyfuse 150 mA | |
 
 Die Kurbelsensor-Leitungen teilen sich in der Serie den Kabelbaum mit dem Generator.

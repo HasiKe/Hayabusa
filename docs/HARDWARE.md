@@ -124,7 +124,7 @@ nichts getauscht. Zylinder 1 liegt links auf der Generatorseite.
 | Lambda | LMV324-Folger an 3,3 V | Sensor 0–3,3 V, LC-2 Ausgang entsprechend programmieren |
 | Batterie | 47 k/10 k von 12V-PROT | Vollausschlag 18,8 V; Firmware skaliert für Board 57 |
 | Flex | 2,2 kΩ Pull-up 3V3, 1 kΩ + 1 nF + BAV199 | Frequenzeingang |
-| Neutral, Kupplung, Spare-Digital | 10 kΩ Pull-up 3V3, Teiler 12 k/20 k, 100 nF, BAV199 | siehe Befund 1 |
+| Neutral, Kupplung, Spare-Digital | Teiler 10 k/10 k zwischen Steckerpin und 3V3 (R78/R80, R71/R73, R79/R81), 100 nF, BAV199 | geschlossener Schalter ergibt nur 1,65 V, siehe Befund 1 |
 | Kippschalter | LMV324 als Komparator, Schwelle 1,2 V nach Teiler 0,5 | Polarität am Fahrzeug prüfen |
 
 Kurbel und Nocke: MAX9926 datenblattkonform, differenziell bis zum IC, Serienwiderstände

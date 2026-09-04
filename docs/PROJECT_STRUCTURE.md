@@ -15,19 +15,21 @@ hayabusa/
 │   ├── TUNING.md                 Kennfelder, Kalibrierung, Abstimmung
 │   ├── PROJECT_STRUCTURE.md      diese Datei
 │   ├── BESTELLUNG.ods            Bestell- und Teilelisten
+│   ├── Berechnungen.ods          Auslegungsrechnungen
+│   ├── Drehmoment.pdf            Anzugsdrehmomente, dazu ARP- und Wössner-Anleitungen
+│   ├── Speeduino_manual.pdf      Speeduino-Handbuch
 │   └── explosionszeichnung/      Suzuki-Ersatzteilzeichnungen
 │
-├── hardware/
-│   ├── ECU/                      Steuergerät und Sensor-Modul (KiCad), im Repository
+├── hardware/                     nur die beiden Elektronikprojekte
+│   ├── ECU/                      Steuergerät und Sensor-Modul (KiCad)
 │   │   ├── *.kicad_*             Schaltpläne und Layouts beider Platinen
-│   │   ├── bom/                  Stücklisten (CSV)
-│   │   ├── case/                 Gehäuse (Fusion 360, STL)
-│   │   ├── docs/                 Pinout.ods (Serienstecker), Datenblätter
-│   │   ├── lib/                  Bibliotheken, teensy.pretty als Submodul
-│   │   ├── output/pcbway/        Fertigungspakete
-│   │   └── verbesserungen/       Review-Ergebnisse und Umsetzungsprotokoll Rev 3
-│   ├── exhaust-mic/              Submodul HasiKe/Exhaust-Mic
-│   └── Airbox/, Turbo/, ...      nur lokal (.gitignore)
+│   │   ├── bom/                  Stücklisten (CSV): ECU 107, Sensor-Modul 46 Positionen
+│   │   ├── case/                 Gehäuse (Fusion 360, STL, Kühlkörper)
+│   │   ├── datasheets/           Datenblätter der Hauptbausteine
+│   │   ├── docs/                 Pinout.ods (Serienstecker), Kabelplan, Altunterlagen
+│   │   ├── lib/                  Symbole, Footprints, 3D — teensy.pretty als Submodul
+│   │   └── output/               Schaltplan-PDFs, Gerber, STEP; Fertigungspakete in pcbway/
+│   └── exhaust-mic/              Submodul HasiKe/Exhaust-Mic
 │
 ├── speeduino/                    Submodul HasiKe/speeduino, Branch Hayabusa/ECU-R3
 │   ├── speeduino/                Firmware, src/hayabusa/ für die Board-Funktionen
@@ -36,15 +38,13 @@ hayabusa/
 │   ├── HAYABUSA_ECU_R3.md        Firmware-Notizen zur Rev 3
 │   └── platformio.ini            Umgebung teensy41_hayabusa
 │
-├── tune/
-│   ├── Hayabusa-R3/              TunerStudio-Projekt (generiert)
-│   │   ├── CurrentTune.msq
-│   │   ├── README.md             Herkunft, Checkliste vor dem ersten Start
-│   │   ├── projectCfg/           mainController.ini (Kopie der Fork-INI), project.properties
-│   │   └── tools/                gen_tune.py und Helfer
-│   └── setup/                    Serienkennfelder (maps.ods), ECUeditor-Screenshot
-│
-└── TÜV/                          Gutachten, nur lokal
+└── tune/
+    ├── Hayabusa-R3/              TunerStudio-Projekt (generiert)
+    │   ├── CurrentTune.msq
+    │   ├── README.md             Herkunft, Checkliste vor dem ersten Start
+    │   ├── projectCfg/           mainController.ini (Kopie der Fork-INI), project.properties
+    │   └── tools/                gen_tune.py und Helfer
+    └── setup/                    Serienkennfelder (maps.ods), ECUeditor-Screenshot
 ```
 
 ## Architektur
@@ -102,7 +102,6 @@ hayabusa/
 | .py | Tune-Generator | Python 3, odfpy |
 | .msq | TunerStudio Tune | TunerStudio |
 | .ini | ECU Definition | TunerStudio |
-| .dash | Dashboard | TunerStudio |
 
 ### Dokumentation
 
@@ -157,5 +156,5 @@ englisch. Der Text erklärt das Warum. Keine Werkzeug- oder Sitzungsverweise.
 
 ---
 
-**Version**: 3.0
+**Version**: 4.0
 **Stand**: September 2026

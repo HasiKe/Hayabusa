@@ -3,11 +3,10 @@
 Eigenbau-Motorsteuerung und Umbauprojekte für die Suzuki Hayabusa der ersten
 Generation (1999–2007).
 
-Das Repository hält alles an einer Stelle: die Schaltpläne und Layouts der
-Steuergeräte, die Firmware, die Abstimmung, die mechanischen Umbauten und die
-Papiere dazu. Die Speeduino-Firmware ist dabei der Ausgangspunkt, nicht das
-Ergebnis — Platinen, Sensorik und die Motorrad-spezifischen Funktionen sind
-eigene Arbeit.
+Das Repository enthält die Elektronik des Umbaus: Schaltpläne und Layouts der
+Steuergeräte, die Firmware, die Abstimmung und die Dokumentation dazu. Die
+Speeduino-Firmware ist dabei der Ausgangspunkt, nicht das Ergebnis — Platinen,
+Sensorik und die Motorrad-spezifischen Funktionen sind eigene Arbeit.
 
 ---
 
@@ -18,10 +17,8 @@ eigene Arbeit.
 | [`hardware/ECU/`](hardware/ECU) | Steuergerät: Schaltplan, Layout, Fertigungsdaten, Gehäuse |
 | [`speeduino/`](https://github.com/HasiKe/speeduino/tree/Hayabusa/ECU-R3) | Motorsteuerungs-Firmware und Sensor-Modul-Firmware, Submodul auf den eigenen Fork |
 | [`hardware/exhaust-mic/`](hardware/exhaust-mic) | Zweikanalige Tonaufnahme von Motor und Auspuff |
-| [`hardware/`](hardware) | Airbox, Turbo, Bremsen, Quickshifter, Verkleidung, Sitz |
 | [`tune/`](tune) | TunerStudio-Projekt [`Hayabusa-R3`](tune/Hayabusa-R3) (generiert aus den Serienkennfeldern in `tune/setup/`) |
 | [`docs/`](docs) | Dokumentation und Spezifikationen |
-| [`TÜV/`](TÜV) | Gutachten und Betriebserlaubnisse der verbauten Teile |
 
 ---
 
@@ -129,19 +126,6 @@ Eigenes Repository, hier als Submodul eingebunden:
 
 ---
 
-## Mechanik
-
-| Projekt | Inhalt |
-|---|---|
-| [Airbox](hardware/Airbox) | Airbox mit integriertem Ladeluftkühler, CAD |
-| [Turbo](hardware/Turbo) | Aufladung mit GT3071R, Auslegung und Teileplanung |
-| [Bremsen](hardware/brakes) | Brembo-Umbau |
-| [Quickshifter](hardware/quick-shifter) | Schaltautomat |
-| [Carbon-Verkleidung](hardware/Carbon-Verkleidung) · [Sitz](hardware/sitz) · [Reifen](hardware/Reifen) | Fahrwerk und Aufbau |
-| [Wireless Charging](hardware/wireless%20charging) · [High-Beam-Flash](hardware/High-Beam-Flash) | Kleinigkeiten |
-
----
-
 ## Stand
 
 | Bereich | Stand |
@@ -152,7 +136,6 @@ Eigenes Repository, hier als Submodul eingebunden:
 | Sensor-Modul, Firmware | Übersetzt, noch nicht am Fahrzeug erprobt |
 | Exhaust-Mic | Schaltplan und Layout fertig, Fertigung offen |
 | Grundabstimmung | Erststart-Tune erzeugt (`tune/Hayabusa-R3`), Motor damit noch nicht gelaufen |
-| Turbo-Umbau | In Planung |
 
 Was vor dem ersten Start geprüft werden muss — Trigger-Winkel, Kalibrierungen,
 Kanalzuordnung, Polarität des Kippschalters, Klopfschwellen — steht in
